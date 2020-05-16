@@ -1,0 +1,42 @@
+import fetch from 'node-fetch'
+import dice from 'fast-dice-coefficient'
+
+
+// TODO:
+//  improve algorithm
+
+
+/**
+ * Get all post from DB and select the ones that their slug best match `str`,
+ *  using the Sørensen-Dice similarity coefficient
+ * 
+ * @param  {string} str  string to math
+ * @param  {string} host webserver host url
+ * @return {Object[]}      [description]
+ */
+export async function getBestMatch(str, host){
+	const res = await fetch(`http://${host}/api/post/list?fields=title slug`);
+	const data = await res.json()
+
+	if (!data.length)
+		return [];
+
+	let posts = [];	
+	for (let post of data) {
+		posts.push({
+			sdc: dice(str, post.slug),
+			slug: post.slug,
+			title: post.title
+		});
+	}
+
+	// sort in descending order of similarity,
+	//  best match to least match
+	posts.sort((x,y) => y.sdc - x.sdc);
+
+	// select results with at least 30% match
+	posts = posts.filter(x => x.sdc > 0.3);
+
+	return posts.slice(0, 4); // the top 4 result
+}
+

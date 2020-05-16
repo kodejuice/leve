@@ -1,0 +1,204 @@
+const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {ssr: false});
+
+import {useEffect} from 'react'
+
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import Head from 'next/head'
+import fetch from 'node-fetch'
+
+import _ from 'underscore';
+import {format} from 'date-fns'
+import { setCookie } from 'nookies'
+
+
+import { DiscussionEmbed } from 'disqus-react'
+import MarkdownIt from 'markdown-it'
+import tm from 'markdown-it-texmath'
+import hljs from 'highlight.js'
+import 'react-markdown-editor-lite/lib/index.css'
+import 'highlight.js/styles/github.css'
+
+import PageNotFound from '../components/PageNotFound'
+
+import {getBestMatch} from '../utils/string-similarity';
+import { site_details as details } from '../site_config.js'
+
+
+// Initialize a markdown parser
+const mdParser = new MarkdownIt({
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>'+hljs.highlight(lang, str, true).value+'</code></pre>';
+      } catch (__) {return '<pre><code>'+mdParser.utils.escapeHtml(str)+'</code></pre>'}
+    }
+    return '<pre class="hljs"><code>' + mdParser.utils.escapeHtml(str) + '</code></pre>';
+  }
+});
+
+// MarkdownIt plugin
+//  for math text processing
+mdParser.use(tm, {
+	engine: require('katex'),
+	delimiters:'dollars',
+	katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
+});
+
+
+
+// DEBUG
+global.log = (...x) => console.log(...x)
+
+
+function PostView(props) {
+	// props passed from getServerSideProps()
+	const {id, post, corrections} = props;
+
+	// invalid post id, render 404 page
+	if (!post) {
+		return <PageNotFound id={id} corrections={corrections} />;
+	}
+
+	useEffect(_=>{
+		if (location.search=="?dark")
+			document.querySelector("body").classList.add('dark');
+
+		// store cookie so the 'views' field of this post gets updated once
+		setCookie(null, post.slug, '1', {
+			path: '/',
+			maxAge: 86400 * 31 /* 31 days */
+		});
+	});
+
+
+	return (
+		<>
+  		<Head>
+				<title> {post.title} </title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
+				<meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+				<script dangerouslySetInnerHTML={{__html:`
+					var disqus_config = function () {
+						this.page.url = "http://${process.env.HOST}/${props.post.slug}";  // page canonical URL variable
+						this.page.identifier = "${props.post.slug}"; // page unique identifier variable
+						this.page.title = "${props.post.title}"; // page title
+					};
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://kodejuice.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();`}}/>
+			</Head>
+
+			<div className='container'>
+				<div className='position-fixed back-btn'>
+					<Link href="/">
+						<a title='Go home' className='home-link btn btn-link'><b>&lt;&lt;&lt;</b></a>
+					</Link>
+				</div>
+				<div className='home-main mt-5 post-view'>
+					<h1 className='post-title'> {post.title} </h1>
+					<p className='info ml-3'>
+						<Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
+						 <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
+					</p>
+
+					<div className='article'>
+						<em className='pub_date'> {post.pub_date} </em>
+
+						<blockquote className="blockquote text-right mt-4">
+							<p className="mb-0 post-quote">{post.post_quote.quote}</p>
+							<footer className="blockquote-footer p-quote"><cite title="Source Title">{post.post_quote.author}</cite></footer>
+						</blockquote>
+
+						<div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content)}}/>
+						<p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
+
+						<div className='row mb-5 _post_footer'>
+							{/* subsribe to newsletter */}
+							<div className='col'>
+								<legend id='subscribe' className='visible-text'>Get an email whenever theres new content</legend>
+								<form title='Subscribe to newsletter'>
+								  <div className="form-row">
+									<div className="col">
+									  <input type="text" className="email-input" placeholder="Your email address"/>
+										<button type="submit" className="btn submit visible-text">Subscribe</button>
+									</div>
+								  </div>
+								</form>
+							</div>
+
+							{/* next post >> */}
+							{!_.isEmpty(post.next_post)?
+								<div className='col-12 col-sm-6 text-right next-post-link'>
+									<Link href={`/${post.next_post.slug}`}><a className='next-post-link'>{post.next_post.title} &gt;&gt;</a></Link>
+								</div>
+							: ""}
+						</div>
+
+						{/*<!-- DISQUS HERE -->*/}
+						<div className='comments'>
+							{
+								(!post.allow_comments) ?
+									<b> <em> Comments Disabled </em> </b>
+									: (
+											<DiscussionEmbed
+											    shortname={post.title}
+											    config={{
+											        url: `http://${process.env.HOST}/${post.slug}`,
+											        identifier: post.slug,
+											        title: post.title,
+											    }}
+											/>
+									)
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+}
+
+
+
+// fetch Article information from database
+export async function getServerSideProps(ctx) {
+	const host = process.env.HOST;
+	const baseUrl = `http://${host}`;
+
+	const post_id = ctx.query.id[0];
+	const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments`, {
+		headers: { cookie: ctx.req.headers.cookie }
+	});
+	const data = await res.json()
+
+	const props = {
+		post: null,
+		id: ctx.query.id
+	};
+
+	if (data.error) {
+		// no post with slug '${post_id}'
+		return {
+			props: _.extend(props, {
+				corrections: await getBestMatch(props.id.join('/'), host)
+			})
+		}
+	}
+
+	// formate date in post
+	let {pub_date, last_modified} = data;
+	data.pub_date = (data.pub_date && format(new Date(pub_date), "MMMM dd, yyyy")) || null;
+	data.last_modified = (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) || null;
+	// ...
+
+	return { props: _.extend(props, {post: data}) }
+}
+
+export default PostView;

@@ -1,0 +1,20 @@
+
+
+/* dark theme */
+body.dark {
+	/* dark-bg */
+	* {color: #dcddde;}
+	background-color: #282c34 !important;
+
+	.visible-text {
+		color: #f1f1f1 !important;
+	}
+
+	a, a.link {
+		color: #0dfffc !important;
+	}
+
+	.p-quote cite, em cite {
+		color: #ddd;
+	}
+}
