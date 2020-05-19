@@ -85,6 +85,13 @@ div.editor-container {
   background: #f8f8f8 !important; /* github theme */
 }
 
+code {
+	font-family: Fira !important;
+	font-size: 15px !important;
+}
+
+
+/* post edit block(s) */
 div.sub-block {
 	margin: 4px 0;
 	margin-bottom: 9px;
@@ -104,10 +111,6 @@ input.post-in {
 	border: 1px solid #ccc;
 }
 
-code {
-	font-family: Fira !important;
-	font-size: 15px !important;
-}
 
 
 /**
@@ -121,6 +124,12 @@ code {
 	background: #f1f1f1 !important;
 	font-size: 19px !important;
 }
+button.btn-danger.close-modal {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
 
 /*
  * Sidebar

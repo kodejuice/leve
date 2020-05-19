@@ -18,10 +18,6 @@ const sidebarLinks = [{
 		icon: 'floppy-disk',
 		href: 'import',
 		name: 'Import Data'
-	},{
-		icon: 'comment',
-		href: 'comments',
-		name: 'Comments'
 }];
 
 const Header = (props) => {
@@ -38,7 +34,7 @@ const Header = (props) => {
 					<a title="Visit website" className="navbar-brand col-sm-3 col-md-2 mr-0" href={`http://${process.env.HOST}`}>{details.name}</a>
 					<ul className="navbar-nav px-3">
 						<li className="nav-item text-nowrap">
-							<a className="nav-link" href="#"> Comments </a>
+							<a className="nav-link" href="../../api/auth/signout"> Sign Out </a>
 						</li>
 					</ul>
 				</nav>
@@ -63,7 +59,6 @@ const Header = (props) => {
 					</nav>
 
 					<main style={{paddingTop:'60px'}} role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 position-relative">
-
 						<div className="position-relative main mb-4">
 							{
 								props.quick_draft && 

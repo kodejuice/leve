@@ -1,4 +1,4 @@
-[
+module.exports = [
 	{
 		"quote": "Truth is the offspring of silence and unbroken meditation.",
 		"author": "Isaac Newton"
@@ -2051,4 +2051,4 @@
     "author": "Gottfried Wilhelm Leibniz",
     "quote": "Even in the games of children there are things to interest the greatest mathematician."
   }
-]
+];

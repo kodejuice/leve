@@ -1,3 +1,42 @@
+import stopwords from "../data/quotes/indexer/stopwords";
+
+let stop = new Set(stopwords);
+
+/**
+ * Get keywords from a large string
+ * @param  {String}			String
+ * @return {String[]}		keywords from string
+ */
+export function getKeywords(string) {
+	let freq = {};
+
+	// remove https? links (may be buggy)
+	string = string.replace(/(https?:\/\/[^)]+)/g, "");
+
+	let words = new Set(
+		string
+			.split(/[^a-zA-Z]/)
+			.filter(w => w.length>1)
+			.map(w => w.toLowerCase())
+			.filter(w => !stop.has(w))
+	);
+
+	for (let word of words) {
+		if (word in freq) freq[word] += 1;
+		else freq[word] = 1;
+	}
+
+	// convert Set to Array
+	words = Array.from(words);
+	
+	// sort words in descending order of their frequency
+	words.sort((x, y)=>freq[y] - freq[x]);
+
+	// get best 10
+	return words.slice(0, 10);
+}
+
+
 /**
  * Delete Post from DB
  * @param  {Object}          post slug
@@ -112,3 +151,4 @@ export const scrollToTop = (cb, delay=300, top=0) => {
 	});
 	setTimeout(cb, delay); // call cb() after delay-ms
 }
+

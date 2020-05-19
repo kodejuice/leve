@@ -82,16 +82,17 @@ function PostView(props) {
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
 				<script dangerouslySetInnerHTML={{__html:`
+					// Disqus config
 					var disqus_config = function () {
-						this.page.url = "http://${process.env.HOST}/${props.post.slug}";  // page canonical URL variable
-						this.page.identifier = "${props.post.slug}"; // page unique identifier variable
-						this.page.title = "${props.post.title}"; // page title
+						this.page.url = "http://${process.env.HOST}/${props.post.slug}";
+						this.page.identifier = "${props.post.slug}";
+						this.page.title = "${props.post.title}";
 					};
 					(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = 'https://kodejuice.disqus.com/embed.js';
+						var d=document, s=d.createElement('script');
+						s.src='https://kodejuice.disqus.com/embed.js';
 						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
+						(d.head||d.body).appendChild(s);
 					})();`}}/>
 			</Head>
 
@@ -113,7 +114,7 @@ function PostView(props) {
 
 						<blockquote className="blockquote text-right mt-4">
 							<p className="mb-0 post-quote">{post.post_quote.quote}</p>
-							<footer className="blockquote-footer p-quote"><cite title="Source Title">{post.post_quote.author}</cite></footer>
+							<footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
 						</blockquote>
 
 						<div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content)}}/>
@@ -142,13 +143,13 @@ function PostView(props) {
 						</div>
 
 						{/*<!-- DISQUS HERE -->*/}
-						<div className='comments'>
+						<div className='comments' id='comments'>
 							{
 								(!post.allow_comments) ?
 									<b> <em> Comments Disabled </em> </b>
 									: (
 											<DiscussionEmbed
-											    shortname={post.title}
+											    shortname={post.slug}
 											    config={{
 											        url: `http://${process.env.HOST}/${post.slug}`,
 											        identifier: post.slug,

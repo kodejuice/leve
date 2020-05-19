@@ -8,7 +8,7 @@ import fetch from 'node-fetch'
 import _ from 'underscore'
 import {format} from 'date-fns'
 
-
+import { CommentCount } from 'disqus-react'
 import Modal from 'react-modal'
 import ClipLoader from "react-spinners/ClipLoader"
 import { setCookie } from 'nookies'
@@ -22,7 +22,8 @@ import 'highlight.js/styles/github.css'
 
 import Header from '../../../components/admin/Header';
 import PreviewPost from '../../../components/admin/PreviewPost';
-import { WordCount, LineCount, addPostToDB, deleteDBPost } from '../../../utils';
+import QuoteSelect from '../../../components/admin/QuoteSelect';
+import { WordCount, LineCount, addPostToDB, deleteDBPost, getKeywords } from '../../../utils';
 import { site_details as details } from '../../../site_config.js';
 
 
@@ -65,6 +66,7 @@ export default function Edit(props) {
 
 	// modal states
 	const [previewOpen, openPreview] = useState(false);
+	const [quotesOpen, openQuotes] = useState(false);
 
 	// post states
 	let post_topic = (post.topic || []).join(",");
@@ -75,7 +77,7 @@ export default function Edit(props) {
 	const [postquote, setQuote] = useState(post.post_quote);
 	const [topic, setTopic] = useState(post_topic);
 	const [draft, setVisibility] = useState(post.draft);
-	const [allow_comments, setComment] = useState(Boolean(post.allow_comments));
+	const [allow_comments, allowComment] = useState(Boolean(post.allow_comments));
 	const [isSaving, setSaveState] = useState(false);
 
 	const post_data = {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
@@ -85,9 +87,10 @@ export default function Edit(props) {
 	const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
 	return (
 		<>
-			<HotKeys keyMap={{SAVE: "ctrl+s"}}>
+			<HotKeys keyMap={{SAVE: "ctrl+s", PREVIEW: "ctrl+b"}}>
 			<HotKeys handlers={{
-				SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState)}
+				SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState)},
+				PREVIEW: ev=>{ev.preventDefault(); if(!quotesOpen) openPreview(!previewOpen)}
 			}}>
 
 			<Head>
@@ -96,16 +99,25 @@ export default function Edit(props) {
 				<meta name="robots" content="noindex"/>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+				<script id="dsq-count-scr" src="//kodejuice.disqus.com/count.js" async></script>
 			</Head>
 
 			<div className='admin'>
 				<Modal
 					ariaHideApp={false}
-          isOpen={previewOpen}
-          contentLabel="Modal">
-          <button style={{position:"fixed",right:10,top:10}} className="btn btn-danger" onClick={_=>openPreview(false)}><b>X</b></button>
-          <PreviewPost post={post_data} content={mdParser.render(content)} />
-        </Modal>
+					isOpen={previewOpen || quotesOpen}
+					contentLabel="Modal">
+						{previewOpen ? 
+							(<>
+								<button className="btn btn-danger close-modal" onClick={_=>openPreview(false)}><b>X</b></button>
+								<PreviewPost post={post_data} content={mdParser.render(content)} />
+							</>):
+							(<>
+								<button className="btn btn-danger close-modal" onClick={_=>openQuotes(false)}><b>X</b></button>
+								<QuoteSelect selected={postquote} keywords={getKeywords((content||"")+" "+(excerpt||"")).join(", ")} setQuote={setQuote} />
+							</>)
+						}
+				</Modal>
 
 
 				<Header dark={false} quick_draft={false} page='edit'>
@@ -139,12 +151,21 @@ export default function Edit(props) {
 								</div>
 							</form>
 
+
+							{/* markdown editor */}
 							<div className="mt-5">
 								<MdEditor
 									value={content}
 									html={false}
 									style={{ height: "500px" }}
-									renderHTML={(text) => {if (!isSaving){setContent(text)} return mdParser.render(text)}}
+									renderHTML={(text) => {
+										if (!isSaving){
+											setContent(text);
+											return mdParser.render(text)
+										}
+										setContent(content);
+										return mdParser.render(content);
+									}}
 								/>
 							</div>
 						</div>
@@ -159,23 +180,24 @@ export default function Edit(props) {
 								<button
 									disabled={isSaving==true}
 									className='btn btn-link'
-									onClick={_=>confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${process.env.HOST}/${slug}`)}>
+									onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${process.env.HOST}/${slug}`)}>
 									<a> View Post Page </a>
 								</button>
 
 								<div className="btn btn-group">
 									{/* Preview post */}
 									<button
+										onClick={_ => openPreview(true)}
+										title="Ctrl-b to preview"
 										disabled={isSaving==true}
-										className='btn btn-outline-secondary'
-										onClick={_ => openPreview(true)}>
+										className='btn btn-outline-secondary'>
 										Preview <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
 									</button>
 		
 									{/* Save Post */}
 									<button
 										onClick={_ => {savePost(post_data, all_posts, setSaveState);}}
-										title="Ctrl-S to save"
+										title="Ctrl-s to save"
 										disabled={isSaving == true}
 										className='btn btn-outline-primary'>
 											<ClipLoader size={14} color={"#123abc"} loading={isSaving}/>
@@ -187,18 +209,33 @@ export default function Edit(props) {
 
 							{/*2nd block (readonly info)*/}
 							<div className='block-2 border-bottom' style={{fontSize: '14px'}}>
+								{/*views|comments|revisions*/}
 								{!post.draft?
 									<>
 										<div className='row'><div className='col-4'>Views: </div> <div className='col'>{post.views|0}</div> </div>
-										<div className='row'><div className='col-4'>Comments: </div> <div className='col comment-div'>...</div> </div>
+										<div className='row'><div className='col-4'>Comments: </div>
+											<div className='col comment-div'>
+												{/* disqus commentcount */}
+												<CommentCount shortname={slug} config={{
+														url: `http://${process.env.HOST}/${slug}`,
+														identifier: slug,
+														title,
+													}}>
+												</CommentCount>
+											</div>
+										</div>
 									</>
 								: <div className='row'> <div className='col-4'>Revisions:</div> <div className='col'>{post.draft_revisions|0} </div>
 								</div>}
+
+								{/*publication date*/}
 								{(!post.draft && post.pub_date)?
 									<div className='row mt-2'><div className='col-4'>Published: </div>
 										<div className='col-8'>{format(new Date(post.pub_date), "MMM d, yyyy HH:mm a")}</div>
 									</div>
 								: ""}
+
+								{/*last modified date*/}
 								{(!post.draft && post.last_modified)?
 									<div className='row mt-2'><div className='col-4'>Last Modified: </div>
 										<div className='col-8'>{format(new Date(post.last_modified), "MMM d, yyyy HH:mm a")}</div>
@@ -209,6 +246,7 @@ export default function Edit(props) {
 
 							{/*3rd block (post-info settings) */}
 							<div className='block-3 mt-1 border-bottom'>
+
 								{/*slug*/}
 								<div className='sub-block'>
 									<label htmlFor="Post slug">URL slug</label>
@@ -236,13 +274,17 @@ export default function Edit(props) {
 								<div className='sub-block'>
 									<label htmlFor="Post Quote">Post Quote</label>
 
-									{post.post_quote.quote?
-									<blockquote style={post.post_quote.quote != postquote.quote ? highlight : {}}>
-										{postquote.quote} - <cite>{postquote.author}</cite>
-									</blockquote>
+									{ postquote.quote ?
+										<blockquote style={post.post_quote.quote != postquote.quote ? highlight : {}}>
+											<p className="mb-0 post-quote">{postquote.quote}.</p>
+											<footer className="blockquote-footer p-quote text-right"><cite>{postquote.author}</cite></footer>
+										</blockquote>	
 									: <div>Not set</div>}
 
-									<button disabled={isSaving==true} className='btn btn-outline-secondary'>
+									<button
+										disabled={isSaving==true}
+										className='btn btn-outline-secondary'
+										onClick={_=>openQuotes(true)}>
 										Change Quote <span className="glyphicon glyphicon-eye-edit" aria-hidden="true"></span>
 									</button>
 								</div>
@@ -265,7 +307,7 @@ export default function Edit(props) {
 									<select
 										disabled={isSaving==true}
 										style={post.allow_comments!=Boolean(allow_comments)?highlight:{}}
-										className='custom-select' defaultValue={allow_comments} onChange={e=>setComment(e.target.value=="true")}>
+										className='custom-select' defaultValue={allow_comments} onChange={e=>allowComment(e.target.value=="true")}>
 										<option value={true}> Yes </option>
 										<option value={false}> No </option>
 									</select>
@@ -307,12 +349,8 @@ export default function Edit(props) {
 
 
 
-function J(o) {
-	return JSON.stringify(o);
-}
 
 // TODO:
-//~ work on quotes
 //~  do auth
 //~   require auth for (viewing draft post (page), admin #board, creating post, listing drafts, quick draft, import/export)
 //~		  delete post, edit post
@@ -349,8 +387,8 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null) {
 	};
 
 	let res;
-	// create/update post ?
 	try {
+		// create/update post
 		res = await addPostToDB(data, isNew);
 	} catch(e) {
 		alert(e);
@@ -433,3 +471,4 @@ export async function getServerSideProps(ctx) {
 		}
 	};
 }
+
