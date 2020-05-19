@@ -86,8 +86,8 @@ export default function Edit(props) {
 
 		// before unload event
 		window.onbeforeunload = function (e) {
-				// Save action, no need to prompt
-				if (isSaving) return null;
+				// Saving? or New Post?, no need to prompt
+				if (isSaving || !slug) return null;
 
 				e = e || window.event;
 

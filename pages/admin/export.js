@@ -12,6 +12,7 @@ import { site_details as details } from '../../site_config.js';
 function Home(props) {
 	let is_dark = props.is_dark;
 	useEffect(_=>{
+		window.onbeforeunload = ()=>null;
 		if (is_dark)
 			document.querySelector("body").classList.add('dark');
 	});
