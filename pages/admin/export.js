@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
 
-import Header from '../../../components/admin/Header'
+import Header from '../../components/admin/Header'
 
-import { site_details as details } from '../../../site_config.js';
+import { site_details as details } from '../../site_config.js';
 
 
 function Home(props) {

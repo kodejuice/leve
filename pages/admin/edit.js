@@ -20,11 +20,11 @@ import hljs from 'highlight.js'
 import 'react-markdown-editor-lite/lib/index.css'
 import 'highlight.js/styles/github.css'
 
-import Header from '../../../components/admin/Header';
-import PreviewPost from '../../../components/admin/PreviewPost';
-import QuoteSelect from '../../../components/admin/QuoteSelect';
-import { WordCount, LineCount, addPostToDB, deleteDBPost, getKeywords } from '../../../utils';
-import { site_details as details } from '../../../site_config.js';
+import Header from '../../components/admin/Header';
+import PreviewPost from '../../components/admin/PreviewPost';
+import QuoteSelect from '../../components/admin/QuoteSelect';
+import { WordCount, LineCount, addPostToDB, deleteDBPost, getKeywords } from '../../utils';
+import { site_details as details } from '../../site_config.js';
 
 
 // Initialize a markdown parser

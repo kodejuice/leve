@@ -13,7 +13,7 @@ handle('get', async (req, res, {Article})=>{
 	return new Promise(resolve=> {
 		let fields = req.query.fields || 'title excerpt slug pub_date';
 		let need_draft = req.query.draft;
-		
+
 		let db_query = Article
 						.find()
 						.select(fields)

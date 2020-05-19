@@ -6,10 +6,10 @@ import fetch from 'node-fetch'
 
 import {format} from 'date-fns'
 
-import Posts from '../../../components/admin/Posts'
-import Header from '../../../components/admin/Header'
+import Posts from '../../components/admin/Posts'
+import Header from '../../components/admin/Header'
 
-import { site_details as details } from '../../../site_config.js';
+import { site_details as details } from '../../site_config.js';
 
 
 function Home(props) {
