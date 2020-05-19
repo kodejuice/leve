@@ -55,15 +55,6 @@ export default function Edit(props) {
 	let {post, all_posts} = props;
 	const isNew = (post.slug == null);
 
-	useEffect(_=>{
-		document.querySelector("body").classList.remove('dark');
-		// store cookie so the 'views' field of this post gets updated only once
-		setCookie(null, post.slug, '1', {
-			path: '/',
-			maxAge: 86400 * 86400 /* 86400 days, 236 years(LoL) */
-		});
-	});
-
 	// modal states
 	const [previewOpen, openPreview] = useState(false);
 	const [quotesOpen, openQuotes] = useState(false);
@@ -83,6 +74,31 @@ export default function Edit(props) {
 	const post_data = {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
 	//...
 
+
+	useEffect(_=>{
+		document.querySelector("body").classList.remove('dark');
+
+		// store cookie so the 'views' field of this post gets updated only once
+		setCookie(null, post.slug, '1', {
+			path: '/',
+			maxAge: 86400 * 86400 /* 86400 days, 236 years(LoL) */
+		});
+
+		// before unload event
+		window.onbeforeunload = function (e) {
+				// Save action, no need to prompt
+				if (isSaving) return null;
+
+				e = e || window.event;
+
+				// For IE and Firefox prior to version 4
+				if (e) {
+					e.returnValue = 'Leave page ?';
+				}
+				// For Safari
+				return 'Leave page ?';
+		};
+	});
 
 	const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
 	return (
@@ -401,8 +417,11 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null) {
 		setSaveState(false);
 		return false;
 	}
-
-	setSaveState(false);
+	
+	// no need for this, the page gets reloaded anyways
+	// and we also need to check if the reload was caused by a Save action
+	// so we dont ask the user if they want to leave
+	// setSaveState(false);
 
 	if (redirect_url) location.href = redirect_url;
 	else location.search = '?slug=' + slug;
