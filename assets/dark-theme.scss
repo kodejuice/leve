@@ -20,103 +20,79 @@ body.dark {
 	}
 
 
-	// highlight.js
-	/* vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid) */
-	/*background color*/
-	.hljs {
-	  display: block;
-	  overflow-x: auto;
-	  padding: 0.5em;
-	  background: #1d1f21;
-	}
+	/* highlight.js
+	  Ocean color scheme*/
 
-	/*selection color*/
-	.hljs::selection,
-	.hljs span::selection {
-	  background: #373b41;
-	}
-
-	.hljs::-moz-selection,
-	.hljs span::-moz-selection {
-	  background: #373b41;
-	}
-
-	/*foreground color*/
-	.hljs {
-	  color: #c5c8c6;
-	}
-
-	/*color: fg_yellow*/
-	.hljs-title,
-	.hljs-name {
-	  color: #f0c674;
-	}
-
-	/*color: fg_comment*/
+	/* Ocean Comment */
 	.hljs-comment,
-	.hljs-meta,
-	.hljs-meta .hljs-keyword {
-	  color: #707880;
+	.hljs-quote {
+		color: #65737e;
 	}
 
-	/*color: fg_red*/
-	.hljs-number,
-	.hljs-symbol,
-	.hljs-literal,
-	.hljs-deletion,
-	.hljs-link {
-	 color: #cc6666
-	}
-
-	/*color: fg_green*/
-	.hljs-string,
-	.hljs-doctag,
-	.hljs-addition,
-	.hljs-regexp,
-	.hljs-selector-attr,
-	.hljs-selector-pseudo {
-	  color: #b5bd68;
-	}
-
-	/*color: fg_purple*/
-	.hljs-attribute,
-	.hljs-code,
-	.hljs-selector-id {
-	 color: #b294bb;
-	}
-
-	/*color: fg_blue*/
-	.hljs-keyword,
-	.hljs-selector-tag,
-	.hljs-bullet,
-	.hljs-tag {
-	 color: #81a2be;
-	}
-
-	/*color: fg_aqua*/
-	.hljs-subst,
+	/* Ocean Red */
 	.hljs-variable,
-	.hljs-template-tag,
-	.hljs-template-variable {
-	  color: #8abeb7;
+	.hljs-template-variable,
+	.hljs-tag,
+	.hljs-name,
+	.hljs-selector-id,
+	.hljs-selector-class,
+	.hljs-regexp,
+	.hljs-deletion {
+		color: #bf616a;
 	}
 
-	/*color: fg_orange*/
-	.hljs-type,
+	/* Ocean Orange */
+	.hljs-number,
 	.hljs-built_in,
 	.hljs-builtin-name,
-	.hljs-quote,
-	.hljs-section,
-	.hljs-selector-class {
-	  color: #de935f;
+	.hljs-literal,
+	.hljs-type,
+	.hljs-params,
+	.hljs-meta,
+	.hljs-link {
+		color: #d08770;
+	}
+
+	/* Ocean Yellow */
+	.hljs-attribute {
+		color: #ebcb8b;
+	}
+
+	/* Ocean Green */
+	.hljs-string,
+	.hljs-symbol,
+	.hljs-bullet,
+	.hljs-addition {
+		color: #a3be8c;
+	}
+
+	/* Ocean Blue */
+	.hljs-title,
+	.hljs-section {
+		color: #8fa1b3;
+	}
+
+	/* Ocean Purple */
+	.hljs-keyword,
+	.hljs-selector-tag {
+		color: #b48ead;
+	}
+
+	.hljs {
+		display: block;
+		overflow-x: auto;
+		background: #2b303b;
+		color: #c0c5ce;
+		padding: 0.5em;
 	}
 
 	.hljs-emphasis {
-	  font-style: italic;
+		font-style: italic;
 	}
 
 	.hljs-strong {
-	  font-weight: bold;
+		font-weight: bold;
 	}
+
 }
 
