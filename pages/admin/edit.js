@@ -281,6 +281,7 @@ export default function Edit(props) {
 									<label htmlFor="Post topic">Post keywords</label>
 									<input
 										style={post_topic!=topic?highlight:{}}
+										name='topic'
 										type='text' title="used for search engines"
 										disabled={isSaving==true}
 										className='form-control' value={topic||""} onChange={e=>setTopic(e.target.value)} placeholder="separate by commas (, )"/>
