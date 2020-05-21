@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
-import {useEffect} from 'react';
+import {useEffect} from 'react'
+import { parseCookies, setCookie } from 'nookies'
 
 import Posts from '../components/home/Posts'
 import Header from '../components/home/Header'
@@ -11,6 +12,7 @@ import { site_details as details } from '../site_config.js';
 
 function Home(props) {
 	useEffect(_=>{
+		window.onbeforeunload = ()=>null;
 		if (location.search=="?dark")
 			document.querySelector("body").classList.add('dark');
 	});
@@ -24,15 +26,36 @@ function Home(props) {
 
 	return (
 		<>
-	  		<Head>
+  		<Head>
 				<title> {details.name} </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta name="description" content={details.description}/>
 			</Head>
 
 			<div className='container'>
-				<div className='home-main mb-5'>
+				<div className='position-fixed back-btn'>
+					{
+						parseCookies(null).__token ?
+						(
+							<div className="mt-4">
+								<div title="Dashboard">
+									<Link href={"admin/list"}>
+										<a className="btn btn-link"><span className='glyphicon glyphicon-dashboard'></span></a>
+									</Link>
+								</div>
 
+								<div title="Add new post">
+									<Link href="admin/edit">
+										<a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
+									</Link>
+								</div>
+							</div>
+						)
+						: ""
+					}
+				</div>
+
+				<div className='home-main mb-5'>
 					<Header details={details} />
 					<Posts recent_posts={recent_posts} all_posts={posts} />
 
