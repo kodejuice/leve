@@ -12,7 +12,8 @@ export default async function verifyAuth(ctx) {
   } catch (err) {
 		// Error occured (invalid/expired token)
     // redirect to login
-		ctx.res.writeHead(302, { Location: 'login' });
+    // set redirect url `rdr` to this page
+		ctx.res.writeHead(302, { Location: 'login?rdr='+encodeURIComponent(ctx.req.url) });
 		ctx.res.end();
   }
 }
