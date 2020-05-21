@@ -99,7 +99,7 @@ function PostView(props) {
 			<div className='container'>
 				<div className='position-fixed back-btn'>
 					<p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
-						<small>{details.name}</small>
+						<small style={{fontSize: "14px"}}>{details.name}</small>
 					</p>
 					<Link href="/">
 						<a title='Go home' className='home-link btn btn-link'><b>&lt;&lt;&lt;</b></a>
