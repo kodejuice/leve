@@ -9,7 +9,7 @@ import fetch from 'node-fetch'
 
 import _ from 'underscore';
 import {format} from 'date-fns'
-import { setCookie } from 'nookies'
+import { parseCookies, setCookie } from 'nookies'
 
 
 import { DiscussionEmbed } from 'disqus-react'
@@ -61,6 +61,8 @@ function PostView(props) {
 	}
 
 	useEffect(_=>{
+		window.onbeforeunload = ()=>null;
+
 		if (location.search=="?dark")
 			document.querySelector("body").classList.add('dark');
 
@@ -102,8 +104,29 @@ function PostView(props) {
 						<small style={{fontSize: "14px"}}>{details.name}</small>
 					</p>
 					<Link href="/">
-						<a title='Go home' className='home-link btn btn-link'><b>&lt;&lt;&lt;</b></a>
+						<div title="Go Home">
+							<a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
+						</div>
 					</Link>
+					{
+						parseCookies(null).__token ?
+						(
+							<div className="mt-4">
+								<div title="Edit post">
+									<Link href={"admin/edit?slug="+post.slug}>
+										<a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
+									</Link>
+								</div>
+
+								<div title="Add new post">
+									<Link href="admin/edit">
+										<a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
+									</Link>
+								</div>
+							</div>
+						)
+						: ""
+					}
 				</div>
 				<div className='home-main mt-5 post-view'>
 					<h1 className='post-title'> {post.title} </h1>
@@ -140,7 +163,9 @@ function PostView(props) {
 							{/* next post >> */}
 							{!_.isEmpty(post.next_post)?
 								<div className='col-12 col-sm-6 text-right next-post-link'>
-									<Link href="[...id].js" as={`/${post.next_post.slug}`}><a className='next-post-link'>{post.next_post.title} &gt;&gt;</a></Link>
+									<Link href="[...id].js" as={`/${post.next_post.slug}`}>
+										<a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
+									</Link>
 								</div>
 							: ""}
 						</div>
