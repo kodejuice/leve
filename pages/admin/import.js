@@ -10,7 +10,7 @@ import { site_details as details } from '../../site_config.js';
 import verifyAuth from '../../utils/auth.js';
 
 
-function Home(props) {
+function Import(props) {
 	let is_dark = props.is_dark;
 	useEffect(_=>{
 		window.onbeforeunload = ()=>null;
@@ -102,4 +102,4 @@ export async function getServerSideProps(ctx) {
 	};
 }
 
-export default Home;
+export default Import;
