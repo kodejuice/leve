@@ -1,28 +1,24 @@
+import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
 import {useEffect, useState} from 'react'
 import { parseCookies, setCookie } from 'nookies'
 import ClipLoader from "react-spinners/ClipLoader"
-import url from 'url'
+import queryString from 'query-string'
 
 import { site_details as details } from '../../site_config.js';
 
-// TODO:
-//~ remove duplicate quotes
-//~ get url parser
 
-//~  add "Edit post" link to (posts page) if auth()ed
-
-
-function Home(props) {
+function LoginPage(props) {
 	const [pwd, setPwd] = useState("");
 	const [isLoading, beginAuth] = useState(false);
 
-	// TODO: parse query from url
 	// redirect url
-	const rdr = "/";
+	const {url} = props;
+	const {rdr} = queryString.parse(url);
 
 	useEffect(_=>{
+		window.onbeforeunload = ()=>null;
 		if (location.search=="?dark")
 			document.querySelector("body").classList.add('dark');
 	});
@@ -37,6 +33,12 @@ function Home(props) {
 			</Head>
 
 			<div className='container'>
+				<div className='position-fixed back-btn'>
+					<Link href="../">
+						<a title='Go home' className='home-link btn btn-link'><b>&lt;&lt;&lt;</b></a>
+					</Link>
+				</div>
+
 				<div className='home-main mb-5'>
 					<h1> LOGIN </h1>
 					<div className="mt-5">
@@ -44,7 +46,7 @@ function Home(props) {
 								<div className="form-group mt-5">
 									<input
 										type="text"
-										className="form-control w-50 mr-2"
+										className="form-control w-50 mr-2 input-login-pwd"
 										placeholder="Enter password"
 										value={pwd}
 										onChange={ev=>setPwd(ev.target.value)}
@@ -78,7 +80,7 @@ async function Login(ev, pwd, beginAuth, rdr) {
 
 	//
 	if (json.success != true) {
-		// lol, lets troll a little bit
+		// lol, lets troll a likkle bit
 		alert("Correct!");
 	} else {
 		// password correct
@@ -93,12 +95,13 @@ async function Login(ev, pwd, beginAuth, rdr) {
 		window.location = rdr;
 	}
 
+	// stops spinner (if page not redirected)
 	beginAuth(false);
 }
 
 
 export function getServerSideProps(ctx) {
-	return {props: {url: ctx.req.url}}
+	return {props: {url: ctx.req.url.split('?')[1]}}
 }
 
-export default Home;
+export default LoginPage;
