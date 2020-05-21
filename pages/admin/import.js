@@ -4,9 +4,10 @@ import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
 
-import Header from '../../components/admin/Header'
+import Header from '../../components/admin/Header';
 
 import { site_details as details } from '../../site_config.js';
+import verifyAuth from '../../utils/auth.js';
 
 
 function Home(props) {
@@ -92,6 +93,8 @@ function Home(props) {
 
 
 export async function getServerSideProps(ctx) {
+	await verifyAuth(ctx);
+
 	return {
 		props: {
 			is_dark: ctx.req.url.includes('?dark')

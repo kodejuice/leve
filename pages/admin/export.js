@@ -4,9 +4,10 @@ import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
 
-import Header from '../../components/admin/Header'
-
+import Header from '../../components/admin/Header';
 import { site_details as details } from '../../site_config.js';
+
+import verifyAuth from '../../utils/auth.js';
 
 
 function Home(props) {
@@ -39,13 +40,17 @@ function Home(props) {
 
 
 export async function getServerSideProps(ctx) {
+	await verifyAuth(ctx);
+
 	const baseUrl = `http://${process.env.HOST}`;
-	const res = await fetch(`${baseUrl}/api/post/import_export?size_only=true&type=export`);
+	const res = await fetch(`${baseUrl}/api/post/import_export?size_only=true&type=export`, {
+		headers: {cookie: ctx.req.headers.cookie}
+	});
 	const json = (await res.json());
 
 	return {
 		props: {
-			total_size: json.size,
+			total_size: json.size || null,
 			is_dark: ctx.req.url.includes('?dark')
 		}
 	};

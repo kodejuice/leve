@@ -8,8 +8,9 @@ import {format} from 'date-fns'
 
 import Posts from '../../components/admin/Posts'
 import Header from '../../components/admin/Header'
-
 import { site_details as details } from '../../site_config.js';
+
+import verifyAuth from '../../utils/auth.js';
 
 
 function Home(props) {
@@ -55,10 +56,16 @@ function Home(props) {
 
 
 export async function getServerSideProps(ctx) {
+	await verifyAuth(ctx);
+
 	const baseUrl = `http://${process.env.HOST}`;
 
-	const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`);
-	const draft_res= await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt creation_date topic draft_revisions&draft=true`);
+	const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`, {
+		headers: {cookie: ctx.req.headers.cookie}
+	});
+	const draft_res= await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt creation_date topic draft_revisions&draft=true`, {
+		headers: {cookie: ctx.req.headers.cookie}
+	});
 
 	// format date in posts
 	const published = (await pub_res.json()).map(post => {

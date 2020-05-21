@@ -161,8 +161,8 @@ handle('post', async (req, res, {Article})=>{
 export default connectDB((req, res, DB_Models) => {
 	let method = req.method;
 
-	if (!(method in handlers))
-		return res.send("You can't do that");
+	if (!(req.isAuthenticated && method in handlers))
+		return res.json({msg: "You can't do that"});
 
 	return handlers[method](req, res, DB_Models);
 });

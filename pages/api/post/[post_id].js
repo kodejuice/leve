@@ -7,6 +7,7 @@ const handlers = {};
 const handle = (method, fn)=> handlers[method.toUpperCase()]=fn;
 
 
+
 /* handle API calls to manage posts, create/update/delete */
 
 
@@ -53,7 +54,7 @@ handle('get', (req, res, slug/*post_id*/, {Article})=>{
 			}
 			// ...
 
-			if (post.draft == true && !(true /*isAuth()*/)) {
+			if (post.draft == true && !req.isAuthenticated) {
 				return res.json({error: true, msg: "Not found"}), resolve();
 			}
 			return res.json(post), resolve();
@@ -68,6 +69,11 @@ handle('get', (req, res, slug/*post_id*/, {Article})=>{
 // create new post
 handle('put', (req, res, post_id, {Article}) => {
 	return new Promise(resolve => {
+
+		if (!req.isAuthenticated) {
+			return res.json({error: true, msg: "Authentication required"}), resolve();
+		}
+
 		const {title} = req.body;
 		if (!title || !title.length) {
 			res.json({error: true, msg: "empty title!"});
@@ -111,6 +117,11 @@ handle('put', (req, res, post_id, {Article}) => {
 handle('post',  (req, res, post_id, {Article}) => {
 	// let { title, excerpt, content, draft, topic, post_quote, next_post } = req.body;
 	return new Promise(resolve => {
+
+		if (!req.isAuthenticated) {
+			return res.json({error: true, msg: "Authentication required"}), resolve();
+		}
+
 		let { title } = req.body;
 		if (title!=undefined && !title.length) return res.json({error: true, msg: "empty title!"}), resolve();
 
@@ -142,8 +153,6 @@ handle('post',  (req, res, post_id, {Article}) => {
 			resolve();
 		});
 	});
-
-
 });
 
 
@@ -151,6 +160,11 @@ handle('post',  (req, res, post_id, {Article}) => {
 // delete post
 handle('delete', (req, res, post_id, {Article})=>{
 	return new Promise(resolve => {
+
+		if (!req.isAuthenticated) {
+			return res.json({error: true, msg: "Authentication required"}), resolve();
+		}
+
 		Article.findOneAndDelete({slug: post_id}, (err, doc)=>{
 			if (err) res.json({error: true, msg: err});
 			else res.json({success: true});
@@ -166,7 +180,7 @@ export default connectDB((req, res, DB_Models) => {
 
 	const method = req.method;
 	if (!(method in handlers))
-		return res.send("You can't do that");
+		return res.json({msg: "You can't do that"});
 
 	return handlers[method](req, res, post_id, DB_Models);
 });

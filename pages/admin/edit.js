@@ -23,8 +23,10 @@ import 'highlight.js/styles/github.css'
 import Header from '../../components/admin/Header';
 import PreviewPost from '../../components/admin/PreviewPost';
 import QuoteSelect from '../../components/admin/QuoteSelect';
-import { WordCount, LineCount, addPostToDB, deleteDBPost, getKeywords } from '../../utils';
+import { WordCount, LineCount, toSlug, addPostToDB, deleteDBPost, getKeywords } from '../../utils';
 import { site_details as details } from '../../site_config.js';
+
+import verifyAuth from '../../utils/auth.js';
 
 
 // Initialize a markdown parser
@@ -65,6 +67,7 @@ export default function Edit(props) {
 	const [excerpt, setExcerpt] = useState(post.excerpt);
 	const [content, setContent] = useState(post.content);
 	const [slug, setSlug] = useState(post.slug);
+	const [auto_slug, setAutoSlug] = useState("");
 	const [postquote, setQuote] = useState(post.post_quote);
 	const [topic, setTopic] = useState(post_topic);
 	const [draft, setVisibility] = useState(post.draft);
@@ -99,6 +102,7 @@ export default function Edit(props) {
 				return 'Leave page ?';
 		};
 	});
+
 
 	const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
 	return (
@@ -149,10 +153,18 @@ export default function Edit(props) {
 										placeholder="Post title"
 										value={title}
 										disabled={isSaving==true}
-										onChange={v=>setTitle(v.target.value)}
+										onChange={v => {
+											setTitle(v.target.value)
+											// set a slug if there isnt one already
+											const _slug = slug || "";
+											if (_slug.length == 0) {
+												setAutoSlug(toSlug(v.target.value));
+											}
+										}}
 										style={post.title!=title?highlight:{}}
 									/>
 								</div>
+
 								<div className="form-group">
 									<label htmlFor="Post excerpt" style={{fontSize: "18px"}}>Post excerpt</label>
 									<input
@@ -269,10 +281,15 @@ export default function Edit(props) {
 									{isNew ?
 										<input
 											style={post.slug!=slug?highlight:{}}
+											id="slug-input"
 											type='text'
 											disabled={isSaving==true}
 											title={`http://${process.env.HOST}/[post_slug]`}
-											className='form-control' value={slug||""} placeholder="post slug" onChange={e=>setSlug(e.target.value)}/>
+											className='form-control' value={slug || auto_slug} placeholder="post slug"
+											onChange={e=>{
+												setSlug(e.target.value);
+												setAutoSlug("")
+											}} />
 									: <input type='text' className='form-control' value={post.slug||""} readOnly={true}/> }
 								</div>
 
@@ -367,14 +384,6 @@ export default function Edit(props) {
 
 
 
-// TODO:
-//~  do auth
-//~   require auth for (viewing draft post (page), admin #board, creating post, listing drafts, quick draft, import/export)
-//~		  delete post, edit post
-//~  add "Edit post" link to (posts page) if auth()ed
-
-
-
 /**
  * Saves Post to DB
  */
@@ -445,6 +454,8 @@ async function deletePost(slug) {
 
 
 export async function getServerSideProps(ctx) {
+	await verifyAuth(ctx);
+
 	const host = process.env.HOST;
 	const baseUrl = `http://${host}`;
 

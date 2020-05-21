@@ -3,6 +3,25 @@ import stopwords from "../data/quotes/indexer/stopwords";
 let stop = new Set(stopwords);
 
 /**
+ * Convert a string to a slug
+ * replaces non alphabetic characters with '-'
+ * and removes stopwords
+ * @param		{String}		string to process
+ * @return	{String} 		slug
+ */
+export function toSlug(str) {
+	str = str.replace(/[^A-Z0-9_]+/gi, '-').toLowerCase();
+	str = str.replace(/^[-]+|[-]+$/g, '');
+
+	str = str.split('-')
+		.filter(w=>!stop.has(w)) // remove stopwords
+		.join('-');
+
+	return str;
+}
+
+
+/**
  * Get keywords from a large string
  * @param  {String}			String
  * @return {String[]}		keywords from string

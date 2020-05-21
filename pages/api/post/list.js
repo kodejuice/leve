@@ -19,7 +19,7 @@ handle('get', async (req, res, {Article})=>{
 						.select(fields)
 						.sort({views: 'desc'});
 
-		if (need_draft=='true' /* && isAuth() */)
+		if (need_draft=='true' && req.isAuthenticated )
 			db_query.where('draft', true);
 		else
 			db_query.where('draft', false)
@@ -28,10 +28,13 @@ handle('get', async (req, res, {Article})=>{
 		db_query.exec();
 
 		db_query.then(posts => {
-			if (need_draft=='true' && !(true /*isAuth()*/) )
-				res.json([]);
-			else
-				res.json(posts);
+			if (need_draft=='true' && !req.isAuthenticated) {
+				// respond with empty rather returning non-drafts
+				res.json([])
+			}
+			else {
+				res.json(posts)
+			}
 
 			resolve();
 		})
@@ -42,27 +45,6 @@ handle('get', async (req, res, {Article})=>{
 	});
 });
 
-
-
-
-// get post listing (admin-level access, includes drafts)
-/*handle('get', (req, res)=>{
-	let limit = req.query.limit|0;
-
-	let db_query = Article.where('draft', false)
-					   .sort({pub_date: 'desc'})
-					   .exec();
-
-	db_query.then(posts => {
-
-	})
-	.catch(_=>{
-
-	});
-
-	res.send('damn! gal => '+JSON.stringify(req.query));
-});
-*/
 
 
 export default connectDB((req, res, DB_Models) => {

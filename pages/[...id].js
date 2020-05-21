@@ -140,7 +140,7 @@ function PostView(props) {
 							{/* next post >> */}
 							{!_.isEmpty(post.next_post)?
 								<div className='col-12 col-sm-6 text-right next-post-link'>
-									<Link href={`/${post.next_post.slug}`}><a className='next-post-link'>{post.next_post.title} &gt;&gt;</a></Link>
+									<Link href="[...id].js" as={`/${post.next_post.slug}`}><a className='next-post-link'>{post.next_post.title} &gt;&gt;</a></Link>
 								</div>
 							: ""}
 						</div>

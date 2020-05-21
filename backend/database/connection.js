@@ -1,4 +1,6 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
+import jwt from 'jsonwebtoken'
+import { parseCookies } from 'nookies'
 
 let DB_Models = require('./model.js');
 
@@ -24,7 +26,20 @@ const connectDB = function(handler) {
 
 
 const connectDB = handler => async (req, res) => {
-	// a connection exists already
+
+	// firstly check for authentication token in cookie,
+	// if valid, set req.isAuthenticated = true
+	const token = parseCookies({req}).__token;
+	try {
+		var decoded = jwt.verify(token, process.env.JWT_SECRET);
+		req.isAuthenticated = true;
+	} catch (err) {
+		res.isAuthenticated = false;
+	}
+	// ...
+
+
+	// mongoose connection already acquired
 	if (mongoose.connections[0].readyState)
 		return handler(req, res, mongoose.connections.DB_Models);
 

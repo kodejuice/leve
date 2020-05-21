@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Link from 'next/link'
 import ClipLoader from "react-spinners/ClipLoader"
+import { destroyCookie } from 'nookies'
 
 import {addPostToDB} from '../../utils';
 import { site_details as details } from '../../site_config.js';
@@ -24,7 +25,6 @@ const Header = (props) => {
 	const [saving, setSaving] = useState(false);
 	const theme = props.dark ? 'bg-dark' : 'bg-light';
 	const {page} = props;
-	//~ console.log(theme);
 	
 	return (
 		<>
@@ -34,7 +34,12 @@ const Header = (props) => {
 					<a title="Visit website" className="navbar-brand col-sm-3 col-md-2 mr-0" href={`http://${process.env.HOST}`}>{details.name}</a>
 					<ul className="navbar-nav px-3">
 						<li className="nav-item text-nowrap">
-							<a className="nav-link" href="../../api/auth/signout"> Sign Out </a>
+							<a className="nav-link btn btn-link" onClick={ev => {
+								if (confirm("Sign out?")) {
+									document.cookie = "__token=; path=/; maxAge=0;"
+									location.reload();
+								}
+							}}> Sign Out </a>
 						</li>
 					</ul>
 				</nav>
@@ -116,7 +121,7 @@ const saveDraft = async (ev, setSaving) => {
 
 	// set SavingState
 	setSaving(true);
-	
+
 	let res = await addPostToDB({
 		slug,
 		title,
