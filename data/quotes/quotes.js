@@ -1,4 +1,8 @@
 module.exports = [
+	{
+		"author": "Vladimir Vapnik",
+		"quote": "The most practical thing in the world is good theory"
+	},
   {
     "author": "Edward Teller",
     "quote": "The science of today is the technology of tomorrow."
