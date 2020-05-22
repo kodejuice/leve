@@ -19,8 +19,8 @@ module.exports = withCSS(withSass(withFonts({
 
 	enableSvg: true,
 
-  webpack (config, options) {
-    config.module.rules.push({
+	webpack (config, options) {
+		config.module.rules.push({
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
       use: {
         loader: 'url-loader',
@@ -32,4 +32,6 @@ module.exports = withCSS(withSass(withFonts({
 
     return config
   }
+
 })))
+
