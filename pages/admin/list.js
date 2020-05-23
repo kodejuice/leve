@@ -27,7 +27,7 @@ function List(props) {
 				<title> Posts &lsaquo; {details.description} - Admin </title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta name="robots" content="noindex"/>
-				<script id="dsq-count-scr" src="//kodejuice.disqus.com/count.js" async></script>
+				<script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
 			</Head>
 
 			<div className='admin'>

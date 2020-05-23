@@ -5,7 +5,6 @@ const withFonts = require('next-fonts');
 module.exports = withCSS(withSass(withFonts({
 	env: {
 		HOST: "localhost:3000",
-		//~ HOST: "localtest.me:3000",
 
 		MONGODB_URI: "mongodb://localhost/levecms",
 
@@ -15,6 +14,9 @@ module.exports = withCSS(withSass(withFonts({
 
 		// JWT token secret
 		JWT_SECRET: "MY_JWT_SECRET"
+
+		// url host of your disqus domain
+		DISQUS_HOST: "kodejuice.disqus.com",
 	},
 
 	enableSvg: true,

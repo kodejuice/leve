@@ -119,7 +119,7 @@ export default function Edit(props) {
 				<meta name="robots" content="noindex"/>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-				<script id="dsq-count-scr" src="//kodejuice.disqus.com/count.js" async></script>
+				<script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
 			</Head>
 
 			<div className='admin'>
@@ -134,7 +134,12 @@ export default function Edit(props) {
 							</>):
 							(<>
 								<button className="btn btn-danger close-modal" onClick={_=>openQuotes(false)}><b>X</b></button>
-								<QuoteSelect selected={postquote} keywords={getKeywords((content||"")+" "+(excerpt||"")).join(", ")} setQuote={setQuote} />
+								<QuoteSelect
+									setQuote={setQuote}
+									selected={postquote}
+									keywords={getKeywords((content||"")+" "+(excerpt||"")))}
+									fullText_kwrds={getKeywords((content||"")+" "+(excerpt||""), false)}
+								/>
 							</>)
 						}
 				</Modal>
@@ -155,6 +160,7 @@ export default function Edit(props) {
 										disabled={isSaving==true}
 										onChange={v => {
 											setTitle(v.target.value)
+
 											// set a slug if there isnt one already
 											const _slug = slug || "";
 											if (_slug.length == 0) {
