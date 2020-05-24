@@ -2,6 +2,26 @@ import stopwords from "../data/quotes/indexer/stopwords";
 
 let stop = new Set(stopwords);
 
+
+/** Set site theme
+ * @param		{String}		theme to switch to
+ */
+// set site theme
+export function setTheme(which) {
+	// 0=>light, 1=>dark
+	which = Number(which);
+
+	let list = document.querySelector("body").classList;
+
+	if (which == 0) {
+		if (list.contains('dark')) list.remove('dark'); // let there be light
+	}
+	else {
+		if (!list.contains('dark')) list.add('dark'); // let there be darkness
+	}
+}
+
+
 /**
  * Convert a string to a slug
  * replaces non alphabetic characters with '-'

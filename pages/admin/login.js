@@ -18,9 +18,9 @@ function LoginPage(props) {
 	const {rdr} = queryString.parse(url);
 
 	useEffect(_=>{
-		window.onbeforeunload = ()=>null;
-		if (location.search=="?dark")
+		if (parseCookies(null).__dark == "1")
 			document.querySelector("body").classList.add('dark');
+		window.onbeforeunload = ()=>null;
 	});
 
 	return (
@@ -45,7 +45,7 @@ function LoginPage(props) {
 						<form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr)}>
 								<div className="form-group mt-5">
 									<input
-										type="text"
+										type="password"
 										className="form-control w-50 mr-2 input-login-pwd"
 										placeholder="Enter password"
 										value={pwd}
@@ -92,7 +92,7 @@ async function Login(ev, pwd, beginAuth, rdr) {
 		});
 
 		// redirect page
-		window.location = rdr;
+		window.location = rdr || `http://${process.env.HOST}`;
 	}
 
 	// stops spinner (if page not redirected)

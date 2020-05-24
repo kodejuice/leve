@@ -4,17 +4,19 @@ import fetch from 'node-fetch'
 import {useEffect} from 'react'
 import { parseCookies, setCookie } from 'nookies'
 
-import Posts from '../components/home/Posts'
-import Header from '../components/home/Header'
+import Posts from '../components/home/Posts';
+import Header from '../components/home/Header';
+import Toggle from '../components/home/Toggle';
 
 import { site_details as details } from '../site_config.js';
 
 
 function Home(props) {
 	useEffect(_=>{
-		window.onbeforeunload = ()=>null;
-		if (location.search=="?dark")
+		if (parseCookies(null).__dark == "1")
 			document.querySelector("body").classList.add('dark');
+
+		window.onbeforeunload = ()=>null;
 	});
 
 	let {posts} = props;
@@ -33,11 +35,15 @@ function Home(props) {
 			</Head>
 
 			<div className='container'>
-				<div className='position-fixed back-btn'>
+				<div className='position-fixed action-btn'>
+					<div className='toggler'>
+						<Toggle />
+					</div>
+
 					{
 						parseCookies(null).__token ?
 						(
-							<div className="mt-4">
+							<div className="mt-4 hide-on-mobile">
 								<div title="Dashboard">
 									<Link href={"admin/list"}>
 										<a className="btn btn-link"><span className='glyphicon glyphicon-dashboard'></span></a>
@@ -67,7 +73,6 @@ function Home(props) {
 		</>
 	);
 }
-
 
 
 

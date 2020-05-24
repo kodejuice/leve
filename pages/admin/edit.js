@@ -80,6 +80,8 @@ export default function Edit(props) {
 
 	useEffect(_=>{
 		document.querySelector("body").classList.remove('dark');
+		document.querySelector("nav.navbar.fixed-top").classList.remove('bg-dark');
+		document.querySelector("nav.navbar.fixed-top").classList.add('bg-light');
 
 		// store cookie so the 'views' field of this post gets updated only once
 		setCookie(null, post.slug, '1', {

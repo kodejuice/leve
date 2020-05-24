@@ -1,5 +1,3 @@
-const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {ssr: false});
-
 import {useEffect} from 'react'
 
 import dynamic from 'next/dynamic'
@@ -7,9 +5,10 @@ import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
 
-import _ from 'underscore';
+import _ from 'underscore'
 import {format} from 'date-fns'
 import { parseCookies, setCookie } from 'nookies'
+import Toggle from '../components/home/Toggle';
 
 
 import { DiscussionEmbed } from 'disqus-react'
@@ -21,8 +20,10 @@ import 'highlight.js/styles/github.css'
 
 import PageNotFound from '../components/PageNotFound'
 
+
+import {setTheme} from '../utils';
 import {getBestMatch} from '../utils/string-similarity';
-import { site_details as details } from '../site_config.js'
+import { site_details as details } from '../site_config.js';
 
 
 // Initialize a markdown parser
@@ -61,10 +62,10 @@ function PostView(props) {
 	}
 
 	useEffect(_=>{
-		window.onbeforeunload = ()=>null;
-
-		if (location.search=="?dark")
+		if (parseCookies(null).__dark == "1")
 			document.querySelector("body").classList.add('dark');
+
+		window.onbeforeunload = ()=>null;
 
 		// store cookie so the 'views' field of this post gets updated once
 		setCookie(null, post.slug, '1', {
@@ -92,42 +93,49 @@ function PostView(props) {
 					};
 					(function() { // DON'T EDIT BELOW THIS LINE
 						var d=document, s=d.createElement('script');
-						s.src='https://kodejuice.disqus.com/embed.js';
+						s.src="https://${process.env.DISQUS_HOST}/embed.js";
 						s.setAttribute('data-timestamp', +new Date());
 						(d.head||d.body).appendChild(s);
 					})();`}}/>
 			</Head>
 
 			<div className='container'>
-				<div className='position-fixed back-btn'>
-					<p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
-						<small style={{fontSize: "14px"}}>{details.name}</small>
-					</p>
-					<Link href="/">
-						<div title="Go Home">
-							<a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
-						</div>
-					</Link>
-					{
-						parseCookies(null).__token ?
-						(
-							<div className="mt-4">
-								<div title="Edit post">
-									<Link href={"admin/edit?slug="+post.slug}>
-										<a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
-									</Link>
-								</div>
+				<div className='position-fixed action-btn'>
+					<div className='toggler'>
+						<Toggle />
+					</div>
 
-								<div title="Add new post">
-									<Link href="admin/edit">
-										<a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
-									</Link>
-								</div>
+					<div className='hide-on-mobile'>
+						<p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
+							<small style={{fontSize: "14px"}}>{details.name}</small>
+						</p>
+						<Link href="/">
+							<div title="Go Home">
+								<a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
 							</div>
-						)
-						: ""
-					}
+						</Link>
+						{
+							parseCookies(null).__token ?
+							(
+								<div className="mt-4">
+									<div title="Edit post">
+										<Link href={"admin/edit?slug="+post.slug}>
+											<a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
+										</Link>
+									</div>
+
+									<div title="Add new post">
+										<Link href="admin/edit">
+											<a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
+										</Link>
+									</div>
+								</div>
+							)
+							: ""
+						}
+					</div>
 				</div>
+
 				<div className='home-main mt-5 post-view'>
 					<h1 className='post-title'> {post.title} </h1>
 					<p className='info ml-3'>
@@ -152,17 +160,17 @@ function PostView(props) {
 								<legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
 								  <div className="form-row">
 									<div className="col" dangerouslySetInnerHTML={{__html:`
-										<div id="signupFormContainer_7EKNW">
-										<div id="signupFormContent_7EKNW">
-										<div class="formbox-editor_7EKNW"><div id="formbox_screen_subscribe_7EKNW" style="display:block;" name="frmLB_7EKNW">
-										<input type=hidden name=token_7EKNW id=token_7EKNW value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
-										<input type=hidden name=successurl_7EKNW id=successurl_7EKNW value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
-										<input type=hidden name=errorurl_7EKNW id=errorurl_7EKNW value="http://lb.benchmarkemail.com//Code/Error" />
-										<input type=email placeholder="Email Address" class="email-input formbox-field_7EKNW text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_7EKNW" name="fldemail_7EKNW" maxlength=100/>
-										<button id="btnSubmit_7EKNW" onClick="javascript:return submit_7EKNWClick();" class="btn submit visible-text formbox-button_7EKNW">Subscribe</div></div>
-										</div>
-										</div>
-										</div>
+<div id="signupFormContainer_7EKNW">
+<div id="signupFormContent_7EKNW">
+<div class="formbox-editor_7EKNW"><div id="formbox_screen_subscribe_7EKNW" style="display:block;" name="frmLB_7EKNW">
+<input type=hidden name=token_7EKNW id=token_7EKNW value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
+<input type=hidden name=successurl_7EKNW id=successurl_7EKNW value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
+<input type=hidden name=errorurl_7EKNW id=errorurl_7EKNW value="http://lb.benchmarkemail.com//Code/Error" />
+<input type=email placeholder="Email Address" class="email-input formbox-field_7EKNW text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_7EKNW" name="fldemail_7EKNW" maxlength=100/>
+<button id="btnSubmit_7EKNW" onClick="javascript:return submit_7EKNWClick();" class="btn submit visible-text formbox-button_7EKNW">Subscribe</div></div>
+</div>
+</div>
+</div>
 									`}} />
 								  </div>
 							</div>
@@ -197,7 +205,6 @@ function PostView(props) {
 					</div>
 				</div>
 			</div>
-			<script src="../js/benchmarkemail-form.js" />
 		</>
 	);
 }

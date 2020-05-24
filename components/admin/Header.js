@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Link from 'next/link'
 import ClipLoader from "react-spinners/ClipLoader"
-import { destroyCookie } from 'nookies'
+import { parseCookies, destroyCookie } from 'nookies'
 
 import {addPostToDB} from '../../utils';
 import { site_details as details } from '../../site_config.js';
@@ -23,7 +23,7 @@ const sidebarLinks = [{
 
 const Header = (props) => {
 	const [saving, setSaving] = useState(false);
-	const theme = props.dark ? 'bg-dark' : 'bg-light';
+	const theme = (parseCookies(null).__dark == '1') ? 'bg-dark' : 'bg-light';
 	const {page} = props;
 	
 	return (

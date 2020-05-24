@@ -3,6 +3,7 @@ import {useEffect} from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
+import { parseCookies } from 'nookies'
 
 import {format} from 'date-fns'
 
@@ -17,7 +18,7 @@ function List(props) {
 	let is_dark = props.is_dark;
 	useEffect(_=>{
 		window.onbeforeunload = ()=>null;
-		if (is_dark)
+		if (parseCookies(null).__dark == "1")
 			document.querySelector("body").classList.add('dark');
 	});
 
