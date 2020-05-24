@@ -1,7 +1,7 @@
 
 export const site_details = {
 	"name":"Sochima Biereagu",
-	"email": "kodejuice@gmail.com",
+	"email": "sochima.agu1@gmail.com",
 	"description": "Sochima Biereagu's website",
 
 	"links": {
