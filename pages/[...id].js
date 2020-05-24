@@ -73,7 +73,6 @@ function PostView(props) {
 		});
 	});
 
-
 	return (
 		<>
   		<Head>
@@ -83,6 +82,7 @@ function PostView(props) {
 				<meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+				<script src="./js/benchmarkemail-signupform.js"/>
 				<script dangerouslySetInnerHTML={{__html:`
 					// Disqus config
 					var disqus_config = function () {
@@ -149,15 +149,22 @@ function PostView(props) {
 						<div className='row mb-5 _post_footer'>
 							{/* subsribe to newsletter */}
 							<div className='col'>
-								<legend id='subscribe' className='visible-text'>Get an email whenever theres new content</legend>
-								<form title='Subscribe to newsletter'>
+								<legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
 								  <div className="form-row">
-									<div className="col">
-									  <input type="text" className="email-input" placeholder="Your email address"/>
-										<button type="submit" className="btn submit visible-text">Subscribe</button>
-									</div>
+									<div className="col" dangerouslySetInnerHTML={{__html:`
+										<div id="signupFormContainer_7EKNW">
+										<div id="signupFormContent_7EKNW">
+										<div class="formbox-editor_7EKNW"><div id="formbox_screen_subscribe_7EKNW" style="display:block;" name="frmLB_7EKNW">
+										<input type=hidden name=token_7EKNW id=token_7EKNW value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
+										<input type=hidden name=successurl_7EKNW id=successurl_7EKNW value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
+										<input type=hidden name=errorurl_7EKNW id=errorurl_7EKNW value="http://lb.benchmarkemail.com//Code/Error" />
+										<input type=email placeholder="Email Address" class="email-input formbox-field_7EKNW text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_7EKNW" name="fldemail_7EKNW" maxlength=100/>
+										<button id="btnSubmit_7EKNW" onClick="javascript:return submit_7EKNWClick();" class="btn submit visible-text formbox-button_7EKNW">Subscribe</div></div>
+										</div>
+										</div>
+										</div>
+									`}} />
 								  </div>
-								</form>
 							</div>
 
 							{/* next post >> */}
@@ -190,6 +197,7 @@ function PostView(props) {
 					</div>
 				</div>
 			</div>
+			<script src="../js/benchmarkemail-form.js" />
 		</>
 	);
 }
