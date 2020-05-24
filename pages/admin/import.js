@@ -49,11 +49,6 @@ function Import(props) {
     *content: String,
     topic: [String],
 
-    next_post: {
-        slug: String,
-        title: String
-    },
-
     views: {type: Number, default: 0},
     draft: {type: Boolean, default: true},  
     draft_revisions: {type: Number, default: 0},
