@@ -6,6 +6,7 @@ import {setTheme} from '../../utils';
 
 export default function Toggle(props) {
     return (
+    	<div title="toggle">
         <_Toggle
         leftBackgroundColor="#ccc"
         rightBackgroundColor="#333"
@@ -25,6 +26,7 @@ export default function Toggle(props) {
                 setTheme(parseCookies(null).__dark);
             }}
         />
+      </div>
     );
 }
 
