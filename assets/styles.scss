@@ -14,7 +14,7 @@
 
 /* printers */
 @media print {
-	.home-link, ._post_footer {
+	.home-link, ._post_footer, .position-fixed.action-btn {
 		display: none !important;
 	}
 }
@@ -41,8 +41,13 @@
 		margin: 0.667em; /*12px*/
 	}
 
-	div.position-fixed.back-btn {
-		display: none;
+	div.position-fixed.action-btn {
+		position: static !important;
+		float: right;
+
+		.hide-on-mobile {
+			display: none;
+		}
 	}
 
 	.next-post-link {
@@ -52,7 +57,7 @@
 	.page-not-found-div {
 		h1 { font-size: 30px; }
 	}
-	
+
 	input.input-login-pwd {
 		width: 100% !important;
 	}
