@@ -96,7 +96,15 @@ function PostView(props) {
 						s.src="https://${process.env.DISQUS_HOST}/embed.js";
 						s.setAttribute('data-timestamp', +new Date());
 						(d.head||d.body).appendChild(s);
-					})();`}}/>
+					})();
+				`}} />
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75709223-4"/>
+				<script dangerouslySetInnerHTML={{__html:`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-75709223-4');
+				`}} />
 			</Head>
 
 			<div className='container'>
