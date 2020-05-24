@@ -101,7 +101,7 @@ async function Login(ev, pwd, beginAuth, rdr) {
 
 
 export function getServerSideProps(ctx) {
-	return {props: {url: ctx.req.url.split('?')[1]}}
+	return {props: {url: ctx.req.url.split('?')[1] || null}}
 }
 
 export default LoginPage;
