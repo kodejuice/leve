@@ -3,7 +3,7 @@ const withSass = require('@zeit/next-sass')
 const withFonts = require('next-fonts');
 
 module.exports = withCSS(withSass(withFonts({
-    env: {
+/*    env: {
         HOST: "localhost:3000",
 
         MONGODB_URI: "mongodb://localhost/levecms",
@@ -21,7 +21,7 @@ module.exports = withCSS(withSass(withFonts({
         // google analytics track code
         GA_TRACK_CODE: "UA-75709223-4",
     },
-
+*/
     enableSvg: true,
 
     webpack (config, options) {
