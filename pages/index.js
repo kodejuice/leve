@@ -60,7 +60,7 @@ function Home(props) {
 					<Posts recent_posts={recent_posts} all_posts={posts} />
 
 					<div className='mt-5 pl-0 ml-0' title='Get an email whenever theres new content'>
-						<a> <em> Subscribe to newsletter ! </em> </a>
+						<a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ"> <em> Subscribe to newsletter ! </em> </a>
 					</div>
 				</div>
 			</div>
