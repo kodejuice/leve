@@ -2,35 +2,35 @@ import { Schema, model } from 'mongoose';
 
 // Article Schema
 const ArticleSchema = new Schema({
-	author: String,
-	author_email: String,
+    author: String,
+    author_email: String,
 
-	title: String,
-	slug: String,
-	excerpt: String,
-	post_quote: {author: String, quote: String},
+    title: String,
+    slug: String,
+    excerpt: String,
+    post_quote: {author: String, quote: String},
 
-	pub_date: Date,
-	creation_date: Date,
-	last_modified: Date,
+    pub_date: Date,
+    creation_date: Date,
+    last_modified: Date,
 
-	content: String,
-	topic: [String],
+    content: String,
+    topic: [String],
 
-	next_post: {
-		slug: String,
-		title: String
-	},
+    next_post: {
+        slug: String,
+        title: String
+    },
 
-	views: {type: Number, default: 0},
-	draft: {type: Boolean, default: true},	
-	draft_revisions: {type: Number, default: 0},
+    views: {type: Number, default: 0},
+    draft: {type: Boolean, default: true},  
+    draft_revisions: {type: Number, default: 0},
 
-	allow_comments: {type: Boolean, default: true}
+    allow_comments: {type: Boolean, default: true}
 });
 
 
 module.exports = {
-	Admin(){return model('admin', AdminSchema)},
-	Article(){return model('article', ArticleSchema)}
+    Admin(){return model('admin', AdminSchema)},
+    Article(){return model('article', ArticleSchema)}
 };

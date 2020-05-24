@@ -15,84 +15,84 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function List(props) {
-	let is_dark = props.is_dark;
-	useEffect(_=>{
-		window.onbeforeunload = ()=>null;
-		if (parseCookies(null).__dark == "1")
-			document.querySelector("body").classList.add('dark');
-	});
+    let is_dark = props.is_dark;
+    useEffect(_=>{
+        window.onbeforeunload = ()=>null;
+        if (parseCookies(null).__dark == "1")
+            document.querySelector("body").classList.add('dark');
+    });
 
-	return (
-		<>
-			<Head>
-				<title> Posts &lsaquo; {details.description} - Admin </title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="robots" content="noindex"/>
-				<script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
-			</Head>
+    return (
+        <>
+            <Head>
+                <title> Posts &lsaquo; {details.description} - Admin </title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="robots" content="noindex"/>
+                <script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
+            </Head>
 
-			<div className='admin'>
-				<Header dark={is_dark} quick_draft={true} page='list'>
-					<div className='row' style={{width: '250px'}}>
-						<div className='col-6'> <h2> Posts </h2> </div>
-						<div className='col-6'>
-							<h2>
-								<Link href="edit">
-									<a className="btn btn-sm btn-outline-secondary">Add New</a>
-								</Link>
-							</h2>
-						</div>
-					</div>
+            <div className='admin'>
+                <Header dark={is_dark} quick_draft={true} page='list'>
+                    <div className='row' style={{width: '250px'}}>
+                        <div className='col-6'> <h2> Posts </h2> </div>
+                        <div className='col-6'>
+                            <h2>
+                                <Link href="edit">
+                                    <a className="btn btn-sm btn-outline-secondary">Add New</a>
+                                </Link>
+                            </h2>
+                        </div>
+                    </div>
 
-					<div className='posts'>
-						<Posts posts={props.posts} show_draft_on_load={props.show_draft_on_load} />
-					</div>
-				</Header>
-			</div>
-		</>
-	);
+                    <div className='posts'>
+                        <Posts posts={props.posts} show_draft_on_load={props.show_draft_on_load} />
+                    </div>
+                </Header>
+            </div>
+        </>
+    );
 }
 
 
 
 
 export async function getServerSideProps(ctx) {
-	await verifyAuth(ctx);
+    await verifyAuth(ctx);
 
-	const baseUrl = `http://${process.env.HOST}`;
+    const baseUrl = `http://${process.env.HOST}`;
 
-	const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`, {
-		headers: {cookie: ctx.req.headers.cookie}
-	});
-	const draft_res= await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt creation_date topic draft_revisions&draft=true`, {
-		headers: {cookie: ctx.req.headers.cookie}
-	});
+    const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`, {
+        headers: {cookie: ctx.req.headers.cookie}
+    });
+    const draft_res= await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt creation_date topic draft_revisions&draft=true`, {
+        headers: {cookie: ctx.req.headers.cookie}
+    });
 
-	// format date in posts
-	const published = (await pub_res.json()).map(post => {
-		post.pub_date = (post.pub_date && format(new Date(post.pub_date), "MMMM dd, yyyy")) || null;
-		return post;
-	});
-	const drafts = (await draft_res.json())
-		.sort((x,y) => new Date(y.creation_date) - new Date(x.creation_date)) // sort in desceding order of creation
-		.map(post => {
-			post.creation_date = (post.creation_date && format(new Date(post.creation_date), "MMMM dd, yyyy")) || null;
-			return post;
-		});
-	// ...
+    // format date in posts
+    const published = (await pub_res.json()).map(post => {
+        post.pub_date = (post.pub_date && format(new Date(post.pub_date), "MMMM dd, yyyy")) || null;
+        return post;
+    });
+    const drafts = (await draft_res.json())
+        .sort((x,y) => new Date(y.creation_date) - new Date(x.creation_date)) // sort in desceding order of creation
+        .map(post => {
+            post.creation_date = (post.creation_date && format(new Date(post.creation_date), "MMMM dd, yyyy")) || null;
+            return post;
+        });
+    // ...
 
-	const posts = {
-		drafts,
-		published
-	};
+    const posts = {
+        drafts,
+        published
+    };
 
-	return {
-		props: {
-			posts,
-			is_dark: ctx.req.url.includes('?dark'),
-			show_draft_on_load: ctx.req.url.includes('draft=1')
-		}
-	};
+    return {
+        props: {
+            posts,
+            is_dark: ctx.req.url.includes('?dark'),
+            show_draft_on_load: ctx.req.url.includes('draft=1')
+        }
+    };
 }
 
 export default List;

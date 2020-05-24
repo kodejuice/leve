@@ -10,98 +10,98 @@ import { site_details as details } from '../../site_config.js';
 
 
 function LoginPage(props) {
-	const [pwd, setPwd] = useState("");
-	const [isLoading, beginAuth] = useState(false);
+    const [pwd, setPwd] = useState("");
+    const [isLoading, beginAuth] = useState(false);
 
-	// redirect url
-	const {url} = props;
-	const {rdr} = queryString.parse(url);
+    // redirect url
+    const {url} = props;
+    const {rdr} = queryString.parse(url);
 
-	useEffect(_=>{
-		if (parseCookies(null).__dark == "1")
-			document.querySelector("body").classList.add('dark');
-		window.onbeforeunload = ()=>null;
-	});
+    useEffect(_=>{
+        if (parseCookies(null).__dark == "1")
+            document.querySelector("body").classList.add('dark');
+        window.onbeforeunload = ()=>null;
+    });
 
-	return (
-		<>
-  		<Head>
-				<title> Admin Login - {details.description} </title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="robots" content="noindex"/>
-				<meta name="description" content={details.name}/>
-			</Head>
+    return (
+        <>
+        <Head>
+                <title> Admin Login - {details.description} </title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="robots" content="noindex"/>
+                <meta name="description" content={details.name}/>
+            </Head>
 
-			<div className='container'>
-				<div className='position-fixed back-btn'>
-					<Link href="../">
-						<a title='Go home' className='home-link btn btn-link'><b>&lt;&lt;&lt;</b></a>
-					</Link>
-				</div>
+            <div className='container'>
+                <div className='position-fixed back-btn'>
+                    <Link href="../">
+                        <a title='Go home' className='home-link btn btn-link'><b>&lt;&lt;&lt;</b></a>
+                    </Link>
+                </div>
 
-				<div className='home-main mb-5'>
-					<h1> LOGIN </h1>
-					<div className="mt-5">
-						<form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr)}>
-								<div className="form-group mt-5">
-									<input
-										type="password"
-										className="form-control w-50 mr-2 input-login-pwd"
-										placeholder="Enter password"
-										value={pwd}
-										onChange={ev=>setPwd(ev.target.value)}
-										style={{display:"inline-block"}}
-									/>
-									<ClipLoader size={15} color={"#123abc"} loading={isLoading}/>
-								</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+                <div className='home-main mb-5'>
+                    <h1> LOGIN </h1>
+                    <div className="mt-5">
+                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr)}>
+                                <div className="form-group mt-5">
+                                    <input
+                                        type="password"
+                                        className="form-control w-50 mr-2 input-login-pwd"
+                                        placeholder="Enter password"
+                                        value={pwd}
+                                        onChange={ev=>setPwd(ev.target.value)}
+                                        style={{display:"inline-block"}}
+                                    />
+                                    <ClipLoader size={15} color={"#123abc"} loading={isLoading}/>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
 
 
 async function Login(ev, pwd, beginAuth, rdr) {
-	ev.preventDefault();
+    ev.preventDefault();
 
-	// render spinner active
-	beginAuth(true);
+    // render spinner active
+    beginAuth(true);
 
-	const baseUrl = `http://${process.env.HOST}`;
-	const res = await fetch(`${baseUrl}/api/auth/login`, {
-		method: "POST",
-		body: JSON.stringify({password: pwd}),
-		headers: { 'Content-type': 'application/json' }
-	});
-	const json = (await res.json());
+    const baseUrl = `http://${process.env.HOST}`;
+    const res = await fetch(`${baseUrl}/api/auth/login`, {
+        method: "POST",
+        body: JSON.stringify({password: pwd}),
+        headers: { 'Content-type': 'application/json' }
+    });
+    const json = (await res.json());
 
-	//
-	if (json.success != true) {
-		// lol, lets troll a likkle bit
-		alert("Correct!");
-	} else {
-		// password correct
-		// set token in cookie
+    //
+    if (json.success != true) {
+        // lol, lets troll a likkle bit
+        alert("Correct!");
+    } else {
+        // password correct
+        // set token in cookie
 
-		setCookie(null, '__token', json.token, {
-			path: '/',
-			maxAge: 86400 * 31 // 31 days
-		});
+        setCookie(null, '__token', json.token, {
+            path: '/',
+            maxAge: 86400 * 31 // 31 days
+        });
 
-		// redirect page
-		window.location = rdr || `http://${process.env.HOST}`;
-	}
+        // redirect page
+        window.location = rdr || `http://${process.env.HOST}`;
+    }
 
-	// stops spinner (if page not redirected)
-	beginAuth(false);
+    // stops spinner (if page not redirected)
+    beginAuth(false);
 }
 
 
 export function getServerSideProps(ctx) {
-	return {props: {url: ctx.req.url.split('?')[1] || null}}
+    return {props: {url: ctx.req.url.split('?')[1] || null}}
 }
 
 export default LoginPage;

@@ -41,9 +41,9 @@ const mdParser = new MarkdownIt({
 // MarkdownIt plugin
 //  for math text processing
 mdParser.use(tm, {
-	engine: require('katex'),
-	delimiters:'dollars',
-	katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
+    engine: require('katex'),
+    delimiters:'dollars',
+    katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
 });
 
 
@@ -53,121 +53,121 @@ global.log = (...x) => console.log(...x)
 
 
 function PostView(props) {
-	// props passed from getServerSideProps()
-	const {id, post, corrections} = props;
+    // props passed from getServerSideProps()
+    const {id, post, corrections} = props;
 
-	// invalid post id, render 404 page
-	if (!post) {
-		return <PageNotFound id={id} corrections={corrections} />;
-	}
+    // invalid post id, render 404 page
+    if (!post) {
+        return <PageNotFound id={id} corrections={corrections} />;
+    }
 
-	useEffect(_=>{
-		if (parseCookies(null).__dark == "1")
-			document.querySelector("body").classList.add('dark');
+    useEffect(_=>{
+        if (parseCookies(null).__dark == "1")
+            document.querySelector("body").classList.add('dark');
 
-		window.onbeforeunload = ()=>null;
+        window.onbeforeunload = ()=>null;
 
-		// store cookie so the 'views' field of this post gets updated once
-		setCookie(null, post.slug, '1', {
-			path: '/',
-			maxAge: 86400 * 31 /* 31 days */
-		});
-	});
+        // store cookie so the 'views' field of this post gets updated once
+        setCookie(null, post.slug, '1', {
+            path: '/',
+            maxAge: 86400 * 31 /* 31 days */
+        });
+    });
 
-	return (
-		<>
-  		<Head>
-				<title> {post.title} </title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
-				<meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-				<script src="./js/benchmarkemail-signupform.js"/>
-				<script dangerouslySetInnerHTML={{__html:`
-					// Disqus config
-					var disqus_config = function () {
-						this.page.url = "http://${process.env.HOST}/${props.post.slug}";
-						this.page.identifier = "${props.post.slug}";
-						this.page.title = "${props.post.title}";
-					};
-					(function() { // DON'T EDIT BELOW THIS LINE
-						var d=document, s=d.createElement('script');
-						s.src="https://${process.env.DISQUS_HOST}/embed.js";
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head||d.body).appendChild(s);
-					})();
-				`}} />
-				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75709223-4"/>
-				<script dangerouslySetInnerHTML={{__html:`
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'UA-75709223-4');
-				`}} />
-			</Head>
+    return (
+        <>
+        <Head>
+                <title> {post.title} </title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
+                <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+                <script src="./js/benchmarkemail-signupform.js"/>
+                <script dangerouslySetInnerHTML={{__html:`
+                    // Disqus config
+                    var disqus_config = function () {
+                        this.page.url = "http://${process.env.HOST}/${props.post.slug}";
+                        this.page.identifier = "${props.post.slug}";
+                        this.page.title = "${props.post.title}";
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d=document, s=d.createElement('script');
+                        s.src="https://${process.env.DISQUS_HOST}/embed.js";
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head||d.body).appendChild(s);
+                    })();
+                `}} />
+                <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
+                <script dangerouslySetInnerHTML={{__html:`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.GA_TRACK_CODE}');
+                `}} />
+            </Head>
 
-			<div className='container'>
-				<div className='position-fixed action-btn'>
-					<div className='toggler'>
-						<Toggle />
-					</div>
+            <div className='container'>
+                <div className='position-fixed action-btn'>
+                    <div className='toggler'>
+                        <Toggle />
+                    </div>
 
-					<div className='hide-on-mobile'>
-						<p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
-							<small style={{fontSize: "14px"}}>{details.name}</small>
-						</p>
-						<Link href="/">
-							<div title="Go Home">
-								<a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
-							</div>
-						</Link>
-						{
-							parseCookies(null).__token ?
-							(
-								<div className="mt-4">
-									<div title="Edit post">
-										<Link href={"admin/edit?slug="+post.slug}>
-											<a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
-										</Link>
-									</div>
+                    <div className='hide-on-mobile'>
+                        <p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
+                            <small style={{fontSize: "14px"}}>{details.name}</small>
+                        </p>
+                        <Link href="/">
+                            <div title="Go Home">
+                                <a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
+                            </div>
+                        </Link>
+                        {
+                            parseCookies(null).__token ?
+                            (
+                                <div className="mt-4">
+                                    <div title="Edit post">
+                                        <Link href={"admin/edit?slug="+post.slug}>
+                                            <a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
+                                        </Link>
+                                    </div>
 
-									<div title="Add new post">
-										<Link href="admin/edit">
-											<a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
-										</Link>
-									</div>
-								</div>
-							)
-							: ""
-						}
-					</div>
-				</div>
+                                    <div title="Add new post">
+                                        <Link href="admin/edit">
+                                            <a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            )
+                            : ""
+                        }
+                    </div>
+                </div>
 
-				<div className='home-main mt-5 post-view'>
-					<h1 className='post-title'> {post.title} </h1>
-					<p className='info ml-3'>
-						<Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
-						 <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
-					</p>
+                <div className='home-main mt-5 post-view'>
+                    <h1 className='post-title'> {post.title} </h1>
+                    <p className='info ml-3'>
+                        <Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
+                         <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
+                    </p>
 
-					<div className='article'>
-						<em className='pub_date'> {post.pub_date} </em>
+                    <div className='article'>
+                        <em className='pub_date'> {post.pub_date} </em>
 
-						<blockquote className="blockquote text-right mt-4">
-							<p className="mb-0 post-quote">{post.post_quote.quote}</p>
-							<footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
-						</blockquote>
+                        <blockquote className="blockquote text-right mt-4">
+                            <p className="mb-0 post-quote">{post.post_quote.quote}</p>
+                            <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
+                        </blockquote>
 
-						<div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content)}}/>
-						<p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
+                        <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content)}}/>
+                        <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
 
-						<div className='row mb-5 _post_footer'>
-							{/* subsribe to newsletter */}
-							<div className='col'>
-								<legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
-								  <div className="form-row">
-									<div className="col" dangerouslySetInnerHTML={{__html:`
+                        <div className='row mb-5 _post_footer'>
+                            {/* subsribe to newsletter */}
+                            <div className='col'>
+                                <legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
+                                  <div className="form-row">
+                                    <div className="col" dangerouslySetInnerHTML={{__html:`
 <div id="signupFormContainer_7EKNW">
 <div id="signupFormContent_7EKNW">
 <div class="formbox-editor_7EKNW"><div id="formbox_screen_subscribe_7EKNW" style="display:block;" name="frmLB_7EKNW">
@@ -179,78 +179,78 @@ function PostView(props) {
 </div>
 </div>
 </div>
-									`}} />
-								  </div>
-							</div>
+                                    `}} />
+                                  </div>
+                            </div>
 
-							{/* next post >> */}
-							{!_.isEmpty(post.next_post)?
-								<div className='col-12 col-sm-6 text-right next-post-link'>
-									<Link href="[...id].js" as={`/${post.next_post.slug}`}>
-										<a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
-									</Link>
-								</div>
-							: ""}
-						</div>
+                            {/* next post >> */}
+                            {!_.isEmpty(post.next_post)?
+                                <div className='col-12 col-sm-6 text-right next-post-link'>
+                                    <Link href="[...id].js" as={`/${post.next_post.slug}`}>
+                                        <a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
+                                    </Link>
+                                </div>
+                            : ""}
+                        </div>
 
-						{/*<!-- DISQUS HERE -->*/}
-						<div className='comments' id='comments'>
-							{
-								(!post.allow_comments) ?
-									<b> <em> Comments Disabled </em> </b>
-									: (
-											<DiscussionEmbed
-											    shortname={post.slug}
-											    config={{
-											        url: `http://${process.env.HOST}/${post.slug}`,
-											        identifier: post.slug,
-											        title: post.title,
-											    }}
-											/>
-									)
-							}
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+                        {/*<!-- DISQUS HERE -->*/}
+                        <div className='comments' id='comments'>
+                            {
+                                (!post.allow_comments) ?
+                                    <b> <em> Comments Disabled </em> </b>
+                                    : (
+                                            <DiscussionEmbed
+                                                shortname={post.slug}
+                                                config={{
+                                                    url: `http://${process.env.HOST}/${post.slug}`,
+                                                    identifier: post.slug,
+                                                    title: post.title,
+                                                }}
+                                            />
+                                    )
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
 
 
 // fetch Article information from database
 export async function getServerSideProps(ctx) {
-	const host = process.env.HOST;
-	const baseUrl = `http://${host}`;
+    const host = process.env.HOST;
+    const baseUrl = `http://${host}`;
 
-	const post_id = ctx.query.id[0];
-	const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments`, {
-		headers: { cookie: ctx.req.headers.cookie }
-	});
-	const data = await res.json()
+    const post_id = ctx.query.id[0];
+    const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments`, {
+        headers: { cookie: ctx.req.headers.cookie }
+    });
+    const data = await res.json()
 
-	const props = {
-		post: null,
-		id: ctx.query.id
-	};
+    const props = {
+        post: null,
+        id: ctx.query.id
+    };
 
-	if (data.error) {
-		// no post with slug '${post_id}'
-		return {
-			props: _.extend(props, {
-				corrections: await getBestMatch(props.id.join('/'), host)
-			})
-		}
-	}
+    if (data.error) {
+        // no post with slug '${post_id}'
+        return {
+            props: _.extend(props, {
+                corrections: await getBestMatch(props.id.join('/'), host)
+            })
+        }
+    }
 
-	// formate date in post
-	let {pub_date, last_modified} = data;
-	data.pub_date = (data.pub_date && format(new Date(pub_date), "MMMM dd, yyyy")) || null;
-	data.last_modified = (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) || null;
-	// ...
+    // formate date in post
+    let {pub_date, last_modified} = data;
+    data.pub_date = (data.pub_date && format(new Date(pub_date), "MMMM dd, yyyy")) || null;
+    data.last_modified = (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) || null;
+    // ...
 
-	return { props: _.extend(props, {post: data}) }
+    return { props: _.extend(props, {post: data}) }
 }
 
 export default PostView;

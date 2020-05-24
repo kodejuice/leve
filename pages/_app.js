@@ -8,10 +8,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
 
-	// add style <body> tag
-	useEffect(_=>{
-		document.querySelector("body").classList.add('body');
-	});
+    // add style <body> tag
+    useEffect(_=>{
+        document.querySelector("body").classList.add('body');
+    });
 
-	return <Component {...pageProps} />;
+    return <Component {...pageProps} />;
 }

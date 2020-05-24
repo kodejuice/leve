@@ -19,45 +19,45 @@ const uri = process.env.MONGODB_URI;
 
 /*
 const connectDB = function(handler) {
-	return async function(req, res) {
-		return handler(req, res);
-	}
+    return async function(req, res) {
+        return handler(req, res);
+    }
 }*/
 
 
 const connectDB = handler => async (req, res) => {
 
-	// firstly check for authentication token in cookie,
-	// if valid, set req.isAuthenticated = true
-	const token = parseCookies({req}).__token;
-	try {
-		var decoded = jwt.verify(token, process.env.JWT_SECRET);
-		req.isAuthenticated = true;
-	} catch (err) {
-		res.isAuthenticated = false;
-	}
-	// ...
+    // firstly check for authentication token in cookie,
+    // if valid, set req.isAuthenticated = true
+    const token = parseCookies({req}).__token;
+    try {
+        var decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.isAuthenticated = true;
+    } catch (err) {
+        res.isAuthenticated = false;
+    }
+    // ...
 
 
-	// mongoose connection already acquired
-	if (mongoose.connections[0].readyState)
-		return handler(req, res, mongoose.connections.DB_Models);
+    // mongoose connection already acquired
+    if (mongoose.connections[0].readyState)
+        return handler(req, res, mongoose.connections.DB_Models);
 
-	// else create new connection
-	await mongoose.connect(uri, {
-		useNewUrlParser: true,
-		useFindAndModify: false,
-		useCreateIndex: true,
-		useUnifiedTopology: true,
-		autoIndex: false
-	});
+    // else create new connection
+    await mongoose.connect(uri, {
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+        autoIndex: false
+    });
 
-	mongoose.connections.DB_Models = {
-		Article: DB_Models.Article(),
-		Admin: DB_Models.Admin()
-	};
+    mongoose.connections.DB_Models = {
+        Article: DB_Models.Article(),
+        Admin: DB_Models.Admin()
+    };
 
-	return handler(req, res, mongoose.connections.DB_Models);
+    return handler(req, res, mongoose.connections.DB_Models);
 }
 
 export default connectDB;

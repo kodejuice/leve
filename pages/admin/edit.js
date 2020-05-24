@@ -46,347 +46,347 @@ const mdParser = new MarkdownIt({
 // MarkdownIt plugin
 //  for math text processing
 mdParser.use(tm, {
-	engine: require('katex'),
-	delimiters:'dollars',
-	katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
+    engine: require('katex'),
+    delimiters:'dollars',
+    katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
 });
 
 
 
 export default function Edit(props) {
-	let {post, all_posts} = props;
-	const isNew = (post.slug == null);
+    let {post, all_posts} = props;
+    const isNew = (post.slug == null);
 
-	// modal states
-	const [previewOpen, openPreview] = useState(false);
-	const [quotesOpen, openQuotes] = useState(false);
+    // modal states
+    const [previewOpen, openPreview] = useState(false);
+    const [quotesOpen, openQuotes] = useState(false);
 
-	// post states
-	let post_topic = (post.topic || []).join(",");
-	const [title, setTitle] = useState(post.title);
-	const [excerpt, setExcerpt] = useState(post.excerpt);
-	const [content, setContent] = useState(post.content);
-	const [slug, setSlug] = useState(post.slug);
-	const [auto_slug, setAutoSlug] = useState("");
-	const [postquote, setQuote] = useState(post.post_quote);
-	const [topic, setTopic] = useState(post_topic);
-	const [draft, setVisibility] = useState(post.draft);
-	const [allow_comments, allowComment] = useState(Boolean(post.allow_comments));
-	const [isSaving, setSaveState] = useState(false);
+    // post states
+    let post_topic = (post.topic || []).join(",");
+    const [title, setTitle] = useState(post.title);
+    const [excerpt, setExcerpt] = useState(post.excerpt);
+    const [content, setContent] = useState(post.content);
+    const [slug, setSlug] = useState(post.slug);
+    const [auto_slug, setAutoSlug] = useState("");
+    const [postquote, setQuote] = useState(post.post_quote);
+    const [topic, setTopic] = useState(post_topic);
+    const [draft, setVisibility] = useState(post.draft);
+    const [allow_comments, allowComment] = useState(Boolean(post.allow_comments));
+    const [isSaving, setSaveState] = useState(false);
 
-	const post_data = {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
-	//...
-
-
-	useEffect(_=>{
-		document.querySelector("body").classList.remove('dark');
-		document.querySelector("nav.navbar.fixed-top").classList.remove('bg-dark');
-		document.querySelector("nav.navbar.fixed-top").classList.add('bg-light');
-
-		// store cookie so the 'views' field of this post gets updated only once
-		setCookie(null, post.slug, '1', {
-			path: '/',
-			maxAge: 86400 * 86400 /* 86400 days, 236 years(LoL) */
-		});
-
-		// before unload event
-		window.onbeforeunload = function (e) {
-				// Saving? or New Post?, no need to prompt
-				if (isSaving || !slug) return null;
-
-				e = e || window.event;
-
-				// For IE and Firefox prior to version 4
-				if (e) {
-					e.returnValue = 'Leave page ?';
-				}
-				// For Safari
-				return 'Leave page ?';
-		};
-	});
+    const post_data = {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
+    //...
 
 
-	const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
-	return (
-		<>
-			<HotKeys keyMap={{SAVE: "ctrl+s", PREVIEW: "ctrl+b"}}>
-			<HotKeys handlers={{
-				SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState)},
-				PREVIEW: ev=>{ev.preventDefault(); if(!quotesOpen) openPreview(!previewOpen)}
-			}}>
+    useEffect(_=>{
+        document.querySelector("body").classList.remove('dark');
+        document.querySelector("nav.navbar.fixed-top").classList.remove('bg-dark');
+        document.querySelector("nav.navbar.fixed-top").classList.add('bg-light');
 
-			<Head>
-				<title> Edit Post &lsaquo; {details.description} - Admin </title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="robots" content="noindex"/>
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-				<script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
-			</Head>
+        // store cookie so the 'views' field of this post gets updated only once
+        setCookie(null, post.slug, '1', {
+            path: '/',
+            maxAge: 86400 * 86400 /* 86400 days, 236 years(LoL) */
+        });
 
-			<div className='admin'>
-				<Modal
-					ariaHideApp={false}
-					isOpen={previewOpen || quotesOpen}
-					contentLabel="Modal">
-						{previewOpen ? 
-							(<>
-								<button className="btn btn-danger close-modal" onClick={_=>openPreview(false)}><b>X</b></button>
-								<PreviewPost post={post_data} content={mdParser.render(content)} />
-							</>):
-							(<>
-								<button className="btn btn-danger close-modal" onClick={_=>openQuotes(false)}><b>X</b></button>
-								<QuoteSelect
-									setQuote={setQuote}
-									selected={postquote}
-									keywords={getKeywords((content||"")+" "+(excerpt||""))}
-									fullText_kwrds={getKeywords((content||"")+" "+(excerpt||""), false)}
-								/>
-							</>)
-						}
-				</Modal>
+        // before unload event
+        window.onbeforeunload = function (e) {
+                // Saving? or New Post?, no need to prompt
+                if (isSaving || !slug) return null;
+
+                e = e || window.event;
+
+                // For IE and Firefox prior to version 4
+                if (e) {
+                    e.returnValue = 'Leave page ?';
+                }
+                // For Safari
+                return 'Leave page ?';
+        };
+    });
 
 
-				<Header dark={false} quick_draft={false} page='edit'>
-					<div className='row'>
-						<div className='col-12 col-sm-9 border-right'>
+    const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
+    return (
+        <>
+            <HotKeys keyMap={{SAVE: "ctrl+s", PREVIEW: "ctrl+b"}}>
+            <HotKeys handlers={{
+                SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState)},
+                PREVIEW: ev=>{ev.preventDefault(); if(!quotesOpen) openPreview(!previewOpen)}
+            }}>
 
-							<form className='post_create'>
-								<div className="form-group">
-									<label htmlFor="Post title" style={{fontSize: "18px"}}>Post title</label>
-									<input
-										type="text"
-										className="form-control w-50 in"
-										placeholder="Post title"
-										value={title}
-										disabled={isSaving==true}
-										onChange={v => {
-											setTitle(v.target.value)
+            <Head>
+                <title> Edit Post &lsaquo; {details.description} - Admin </title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="robots" content="noindex"/>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+                <script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
+            </Head>
 
-											// set a slug if there isnt one already
-											const _slug = slug || "";
-											if (_slug.length == 0) {
-												setAutoSlug(toSlug(v.target.value));
-											}
-										}}
-										style={post.title!=title?highlight:{}}
-									/>
-								</div>
-
-								<div className="form-group">
-									<label htmlFor="Post excerpt" style={{fontSize: "18px"}}>Post excerpt</label>
-									<input
-										type="text"
-										className="form-control w-50 in"
-										placeholder="Post Excerpt"
-										value={excerpt}
-										disabled={isSaving==true}
-										onChange={v=>setExcerpt(v.target.value)}
-										style={post.excerpt!=excerpt?highlight:{}}
-									/>
-								</div>
-							</form>
-
-
-							{/* markdown editor */}
-							<div className="mt-5">
-								<MdEditor
-									value={content}
-									html={false}
-									style={{ height: "500px" }}
-									renderHTML={(text) => {
-										if (!isSaving){
-											setContent(text);
-											return mdParser.render(text)
-										}
-										setContent(content);
-										return mdParser.render(content);
-									}}
-								/>
-							</div>
-						</div>
+            <div className='admin'>
+                <Modal
+                    ariaHideApp={false}
+                    isOpen={previewOpen || quotesOpen}
+                    contentLabel="Modal">
+                        {previewOpen ? 
+                            (<>
+                                <button className="btn btn-danger close-modal" onClick={_=>openPreview(false)}><b>X</b></button>
+                                <PreviewPost post={post_data} content={mdParser.render(content)} />
+                            </>):
+                            (<>
+                                <button className="btn btn-danger close-modal" onClick={_=>openQuotes(false)}><b>X</b></button>
+                                <QuoteSelect
+                                    setQuote={setQuote}
+                                    selected={postquote}
+                                    keywords={getKeywords((content||"")+" "+(excerpt||""))}
+                                    fullText_kwrds={getKeywords((content||"")+" "+(excerpt||""), false)}
+                                />
+                            </>)
+                        }
+                </Modal>
 
 
-						{/* Second column */}
-						<div className='col-12 col-sm-3 visible-text'>
-							{/*1st block (action block)*/}
-							<div className='block-1 border-bottom pb-2 mt-3'>
+                <Header dark={false} quick_draft={false} page='edit'>
+                    <div className='row'>
+                        <div className='col-12 col-sm-9 border-right'>
 
-								{/* view post link */}
-								<button
-									disabled={isSaving==true}
-									className='btn btn-link'
-									onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${process.env.HOST}/${slug}`)}>
-									<a> View Post Page </a>
-								</button>
+                            <form className='post_create'>
+                                <div className="form-group">
+                                    <label htmlFor="Post title" style={{fontSize: "18px"}}>Post title</label>
+                                    <input
+                                        type="text"
+                                        className="form-control w-50 in"
+                                        placeholder="Post title"
+                                        value={title}
+                                        disabled={isSaving==true}
+                                        onChange={v => {
+                                            setTitle(v.target.value)
 
-								<div className="btn btn-group">
-									{/* Preview post */}
-									<button
-										onClick={_ => openPreview(true)}
-										title="Ctrl-b to preview"
-										disabled={isSaving==true}
-										className='btn btn-outline-secondary'>
-										Preview <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-									</button>
-		
-									{/* Save Post */}
-									<button
-										onClick={_ => {savePost(post_data, all_posts, setSaveState);}}
-										title="Ctrl-s to save"
-										disabled={isSaving == true}
-										className='btn btn-outline-primary'>
-											<ClipLoader size={14} color={"#123abc"} loading={isSaving}/>
-											Save <span className="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
+                                            // set a slug if there isnt one already
+                                            const _slug = slug || "";
+                                            if (_slug.length == 0) {
+                                                setAutoSlug(toSlug(v.target.value));
+                                            }
+                                        }}
+                                        style={post.title!=title?highlight:{}}
+                                    />
+                                </div>
 
-
-							{/*2nd block (readonly info)*/}
-							<div className='block-2 border-bottom' style={{fontSize: '14px'}}>
-								{/*views|comments|revisions*/}
-								{!post.draft?
-									<>
-										<div className='row'><div className='col-4'>Views: </div> <div className='col'>{post.views|0}</div> </div>
-										<div className='row'><div className='col-4'>Comments: </div>
-											<div className='col comment-div'>
-												{/* disqus commentcount */}
-												<CommentCount shortname={slug} config={{
-														url: `http://${process.env.HOST}/${slug}`,
-														identifier: slug,
-														title,
-													}}>
-												</CommentCount>
-											</div>
-										</div>
-									</>
-								: <div className='row'> <div className='col-4'>Revisions:</div> <div className='col'>{post.draft_revisions|0} </div>
-								</div>}
-
-								{/*publication date*/}
-								{(!post.draft && post.pub_date)?
-									<div className='row mt-2'><div className='col-4'>Published: </div>
-										<div className='col-8'>{format(new Date(post.pub_date), "MMM d, yyyy HH:mm a")}</div>
-									</div>
-								: ""}
-
-								{/*last modified date*/}
-								{(!post.draft && post.last_modified)?
-									<div className='row mt-2'><div className='col-4'>Last Modified: </div>
-										<div className='col-8'>{format(new Date(post.last_modified), "MMM d, yyyy HH:mm a")}</div>
-									</div>
-								: ""}
-							</div>
+                                <div className="form-group">
+                                    <label htmlFor="Post excerpt" style={{fontSize: "18px"}}>Post excerpt</label>
+                                    <input
+                                        type="text"
+                                        className="form-control w-50 in"
+                                        placeholder="Post Excerpt"
+                                        value={excerpt}
+                                        disabled={isSaving==true}
+                                        onChange={v=>setExcerpt(v.target.value)}
+                                        style={post.excerpt!=excerpt?highlight:{}}
+                                    />
+                                </div>
+                            </form>
 
 
-							{/*3rd block (post-info settings) */}
-							<div className='block-3 mt-1 border-bottom'>
-
-								{/*slug*/}
-								<div className='sub-block'>
-									<label htmlFor="Post slug">URL slug</label>
-									{isNew ?
-										<input
-											style={post.slug!=slug?highlight:{}}
-											id="slug-input"
-											type='text'
-											disabled={isSaving==true}
-											title={`http://${process.env.HOST}/[post_slug]`}
-											className='form-control' value={slug || auto_slug} placeholder="post slug"
-											onChange={e=>{
-												setSlug(e.target.value);
-												setAutoSlug("")
-											}} />
-									: <input type='text' className='form-control' value={post.slug||""} readOnly={true}/> }
-								</div>
-
-								{/*topic*/}
-								<div className='sub-block'>
-									<label htmlFor="Post topic">Post keywords</label>
-									<input
-										style={post_topic!=topic?highlight:{}}
-										name='topic'
-										type='text' title="used for search engines"
-										disabled={isSaving==true}
-										className='form-control' value={topic||""} onChange={e=>setTopic(e.target.value)} placeholder="separate by commas (, )"/>
-								</div>
-
-								{/* post quote*/}
-								<div className='sub-block'>
-									<label htmlFor="Post Quote">Post Quote</label>
-
-									{ postquote.quote ?
-										<blockquote style={post.post_quote.quote != postquote.quote ? highlight : {}}>
-											<p className="mb-0 post-quote">{postquote.quote}.</p>
-											<footer className="blockquote-footer p-quote text-right"><cite>{postquote.author}</cite></footer>
-										</blockquote>	
-									: <div>Not set</div>}
-
-									<button
-										disabled={isSaving==true}
-										className='btn btn-outline-secondary'
-										onClick={_=>openQuotes(true)}>
-										Change Quote <span className="glyphicon glyphicon-eye-edit" aria-hidden="true"></span>
-									</button>
-								</div>
-
-								{/* draft*/}
-								<div className='sub-block'>
-									<label htmlFor="Visibility">Visibility</label>
-									<select
-										disabled={isSaving==true}
-										style={post.draft != draft ? highlight : {}}
-										className='custom-select' defaultValue={draft} onChange={e=>setVisibility(e.target.value=="true")}>
-										<option value={false}> Public </option>
-										<option value={true}> Private </option>
-									</select>
-								</div>
-
-								{/* allow comments*/}
-								<div className='sub-block'>
-									<label htmlFor="Visibility">Allow comments</label>
-									<select
-										disabled={isSaving==true}
-										style={post.allow_comments!=Boolean(allow_comments)?highlight:{}}
-										className='custom-select' defaultValue={allow_comments} onChange={e=>allowComment(e.target.value=="true")}>
-										<option value={true}> Yes </option>
-										<option value={false}> No </option>
-									</select>
-								</div>
-							</div>
+                            {/* markdown editor */}
+                            <div className="mt-5">
+                                <MdEditor
+                                    value={content}
+                                    html={false}
+                                    style={{ height: "500px" }}
+                                    renderHTML={(text) => {
+                                        if (!isSaving){
+                                            setContent(text);
+                                            return mdParser.render(text)
+                                        }
+                                        setContent(content);
+                                        return mdParser.render(content);
+                                    }}
+                                />
+                            </div>
+                        </div>
 
 
-							{/*4th block (text stats) */}
-							<div className='block-3 mt-1'>
-								<div className='block-1 border-bottom pb-2 mt-3'>
-										<div className='row'><div className='col-4'>Words: </div> <div className='col'>{WordCount(content)}</div> </div>
-										<div className='row'><div className='col-4'>Lines: </div> <div className='col comment-div'>{LineCount(content)}</div> </div>
-								</div>
-							</div>
+                        {/* Second column */}
+                        <div className='col-12 col-sm-3 visible-text'>
+                            {/*1st block (action block)*/}
+                            <div className='block-1 border-bottom pb-2 mt-3'>
+
+                                {/* view post link */}
+                                <button
+                                    disabled={isSaving==true}
+                                    className='btn btn-link'
+                                    onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${process.env.HOST}/${slug}`)}>
+                                    <a> View Post Page </a>
+                                </button>
+
+                                <div className="btn btn-group">
+                                    {/* Preview post */}
+                                    <button
+                                        onClick={_ => openPreview(true)}
+                                        title="Ctrl-b to preview"
+                                        disabled={isSaving==true}
+                                        className='btn btn-outline-secondary'>
+                                        Preview <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                    </button>
+        
+                                    {/* Save Post */}
+                                    <button
+                                        onClick={_ => {savePost(post_data, all_posts, setSaveState);}}
+                                        title="Ctrl-s to save"
+                                        disabled={isSaving == true}
+                                        className='btn btn-outline-primary'>
+                                            <ClipLoader size={14} color={"#123abc"} loading={isSaving}/>
+                                            Save <span className="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
 
 
-							{/*5th block (delete) */}
-							{!isNew?
-								<div className='block-3 mt-1'>
-									<div className='block-1 pb-2 mt-3'>
-										<button onClick={_=>slug && deletePost(slug)} disabled={isSaving==true} className='btn btn-danger'>
-											Delete <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
-										</button>
-									</div>
-								</div>
-							: "" }
-						</div>
-					</div>
+                            {/*2nd block (readonly info)*/}
+                            <div className='block-2 border-bottom' style={{fontSize: '14px'}}>
+                                {/*views|comments|revisions*/}
+                                {!post.draft?
+                                    <>
+                                        <div className='row'><div className='col-4'>Views: </div> <div className='col'>{post.views|0}</div> </div>
+                                        <div className='row'><div className='col-4'>Comments: </div>
+                                            <div className='col comment-div'>
+                                                {/* disqus commentcount */}
+                                                <CommentCount shortname={slug} config={{
+                                                        url: `http://${process.env.HOST}/${slug}`,
+                                                        identifier: slug,
+                                                        title,
+                                                    }}>
+                                                </CommentCount>
+                                            </div>
+                                        </div>
+                                    </>
+                                : <div className='row'> <div className='col-4'>Revisions:</div> <div className='col'>{post.draft_revisions|0} </div>
+                                </div>}
 
-					<br/>
-				</Header>
-			</div>
+                                {/*publication date*/}
+                                {(!post.draft && post.pub_date)?
+                                    <div className='row mt-2'><div className='col-4'>Published: </div>
+                                        <div className='col-8'>{format(new Date(post.pub_date), "MMM d, yyyy HH:mm a")}</div>
+                                    </div>
+                                : ""}
 
-			</HotKeys>
-			</HotKeys>
-		</>
-	);
+                                {/*last modified date*/}
+                                {(!post.draft && post.last_modified)?
+                                    <div className='row mt-2'><div className='col-4'>Last Modified: </div>
+                                        <div className='col-8'>{format(new Date(post.last_modified), "MMM d, yyyy HH:mm a")}</div>
+                                    </div>
+                                : ""}
+                            </div>
+
+
+                            {/*3rd block (post-info settings) */}
+                            <div className='block-3 mt-1 border-bottom'>
+
+                                {/*slug*/}
+                                <div className='sub-block'>
+                                    <label htmlFor="Post slug">URL slug</label>
+                                    {isNew ?
+                                        <input
+                                            style={post.slug!=slug?highlight:{}}
+                                            id="slug-input"
+                                            type='text'
+                                            disabled={isSaving==true}
+                                            title={`http://${process.env.HOST}/[post_slug]`}
+                                            className='form-control' value={slug || auto_slug} placeholder="post slug"
+                                            onChange={e=>{
+                                                setSlug(e.target.value);
+                                                setAutoSlug("")
+                                            }} />
+                                    : <input type='text' className='form-control' value={post.slug||""} readOnly={true}/> }
+                                </div>
+
+                                {/*topic*/}
+                                <div className='sub-block'>
+                                    <label htmlFor="Post topic">Post keywords</label>
+                                    <input
+                                        style={post_topic!=topic?highlight:{}}
+                                        name='topic'
+                                        type='text' title="used for search engines"
+                                        disabled={isSaving==true}
+                                        className='form-control' value={topic||""} onChange={e=>setTopic(e.target.value)} placeholder="separate by commas (, )"/>
+                                </div>
+
+                                {/* post quote*/}
+                                <div className='sub-block'>
+                                    <label htmlFor="Post Quote">Post Quote</label>
+
+                                    { postquote.quote ?
+                                        <blockquote style={post.post_quote.quote != postquote.quote ? highlight : {}}>
+                                            <p className="mb-0 post-quote">{postquote.quote}.</p>
+                                            <footer className="blockquote-footer p-quote text-right"><cite>{postquote.author}</cite></footer>
+                                        </blockquote>   
+                                    : <div>Not set</div>}
+
+                                    <button
+                                        disabled={isSaving==true}
+                                        className='btn btn-outline-secondary'
+                                        onClick={_=>openQuotes(true)}>
+                                        Change Quote <span className="glyphicon glyphicon-eye-edit" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+
+                                {/* draft*/}
+                                <div className='sub-block'>
+                                    <label htmlFor="Visibility">Visibility</label>
+                                    <select
+                                        disabled={isSaving==true}
+                                        style={post.draft != draft ? highlight : {}}
+                                        className='custom-select' defaultValue={draft} onChange={e=>setVisibility(e.target.value=="true")}>
+                                        <option value={false}> Public </option>
+                                        <option value={true}> Private </option>
+                                    </select>
+                                </div>
+
+                                {/* allow comments*/}
+                                <div className='sub-block'>
+                                    <label htmlFor="Visibility">Allow comments</label>
+                                    <select
+                                        disabled={isSaving==true}
+                                        style={post.allow_comments!=Boolean(allow_comments)?highlight:{}}
+                                        className='custom-select' defaultValue={allow_comments} onChange={e=>allowComment(e.target.value=="true")}>
+                                        <option value={true}> Yes </option>
+                                        <option value={false}> No </option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            {/*4th block (text stats) */}
+                            <div className='block-3 mt-1'>
+                                <div className='block-1 border-bottom pb-2 mt-3'>
+                                        <div className='row'><div className='col-4'>Words: </div> <div className='col'>{WordCount(content)}</div> </div>
+                                        <div className='row'><div className='col-4'>Lines: </div> <div className='col comment-div'>{LineCount(content)}</div> </div>
+                                </div>
+                            </div>
+
+
+                            {/*5th block (delete) */}
+                            {!isNew?
+                                <div className='block-3 mt-1'>
+                                    <div className='block-1 pb-2 mt-3'>
+                                        <button onClick={_=>slug && deletePost(slug)} disabled={isSaving==true} className='btn btn-danger'>
+                                            Delete <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            : "" }
+                        </div>
+                    </div>
+
+                    <br/>
+                </Header>
+            </div>
+
+            </HotKeys>
+            </HotKeys>
+        </>
+    );
 }
 
 
@@ -396,53 +396,53 @@ export default function Edit(props) {
  * Saves Post to DB
  */
 async function savePost(params, all_posts, setSaveState, redirect_url=null) {
-	const {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew} = params;
-	if (!slug) {
-		alert("Invalid Slug!");
-		return setSaveState(false), false;
-	}
-	// saveState
-	// renders button disabled,
-	// dispays a spinner in Save-Button
-	setSaveState(true);
+    const {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew} = params;
+    if (!slug) {
+        alert("Invalid Slug!");
+        return setSaveState(false), false;
+    }
+    // saveState
+    // renders button disabled,
+    // dispays a spinner in Save-Button
+    setSaveState(true);
 
-	// extract params
-	const data = {
-		slug,
-		title,
-		excerpt,
-		content,
-		allow_comments,
-		post_quote: postquote,
-		draft: draft,
-		topic: topic.split(","),
-		author: details.name,
-		author_email: details.email
-	};
+    // extract params
+    const data = {
+        slug,
+        title,
+        excerpt,
+        content,
+        allow_comments,
+        post_quote: postquote,
+        draft: draft,
+        topic: topic.split(","),
+        author: details.name,
+        author_email: details.email
+    };
 
-	let res;
-	try {
-		// create/update post
-		res = await addPostToDB(data, isNew);
-	} catch(e) {
-		alert(e);
-		return setSaveState(false), false;
-	}
+    let res;
+    try {
+        // create/update post
+        res = await addPostToDB(data, isNew);
+    } catch(e) {
+        alert(e);
+        return setSaveState(false), false;
+    }
 
-	// didnt go well ?
-	if (res.success != true) {
-		alert(JSON.stringify(res));
-		setSaveState(false);
-		return false;
-	}
-	
-	// no need for this, the page gets reloaded anyways
-	// and we also need to check if the reload was caused by a Save action
-	// so we dont ask the user if they want to leave
-	// setSaveState(false);
+    // didnt go well ?
+    if (res.success != true) {
+        alert(JSON.stringify(res));
+        setSaveState(false);
+        return false;
+    }
+    
+    // no need for this, the page gets reloaded anyways
+    // and we also need to check if the reload was caused by a Save action
+    // so we dont ask the user if they want to leave
+    // setSaveState(false);
 
-	if (redirect_url) location.href = redirect_url;
-	else location.search = '?slug=' + slug;
+    if (redirect_url) location.href = redirect_url;
+    else location.search = '?slug=' + slug;
 }
 
 
@@ -451,63 +451,63 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null) {
  * Delete Post from DB
  */
 async function deletePost(slug) {
-	if (confirm("Delete ?")) {
-		let res = await deleteDBPost(slug);
-		if (res.success != true) {
-			return alert(JSON.stringify(res));
-		}
-		window.location = "list";
-	}
+    if (confirm("Delete ?")) {
+        let res = await deleteDBPost(slug);
+        if (res.success != true) {
+            return alert(JSON.stringify(res));
+        }
+        window.location = "list";
+    }
 }
 
 
 export async function getServerSideProps(ctx) {
-	await verifyAuth(ctx);
+    await verifyAuth(ctx);
 
-	const host = process.env.HOST;
-	const baseUrl = `http://${host}`;
+    const host = process.env.HOST;
+    const baseUrl = `http://${host}`;
 
-	const post_id = ctx.query.slug;
-	const res = await fetch(`${baseUrl}/api/post/${post_id}?include=draft_revisions allow_comments views topic`, {
-		headers: { cookie: ctx.req.headers.cookie }
-	});
-	const data = await res.json()
+    const post_id = ctx.query.slug;
+    const res = await fetch(`${baseUrl}/api/post/${post_id}?include=draft_revisions allow_comments views topic`, {
+        headers: { cookie: ctx.req.headers.cookie }
+    });
+    const data = await res.json()
 
-	// fetch all posts, (used for the "next post" <select>)
-	let all_posts = await fetch(`${baseUrl}/api/post/list?fields=title slug`);
-	all_posts = (await all_posts.json()).map(post => {
-		return post;
-	});
-	// ...
+    // fetch all posts, (used for the "next post" <select>)
+    let all_posts = await fetch(`${baseUrl}/api/post/list?fields=title slug`);
+    all_posts = (await all_posts.json()).map(post => {
+        return post;
+    });
+    // ...
 
-	if (data.error) {
-		// no post with slug '${post_id}'
-		return {
-			props: {
-				post_id: post_id || null,
+    if (data.error) {
+        // no post with slug '${post_id}'
+        return {
+            props: {
+                post_id: post_id || null,
 
-				all_posts,
+                all_posts,
 
-				// blank template, (new post)
-				post: {
-					title: "",
-					slug: null,
-					excerpt: "",
-					draft: true,
-					allow_comments: true,
-					next_post: {},
-					post_quote: {quote: null}
-				}
-			}
-		}
-	}
+                // blank template, (new post)
+                post: {
+                    title: "",
+                    slug: null,
+                    excerpt: "",
+                    draft: true,
+                    allow_comments: true,
+                    next_post: {},
+                    post_quote: {quote: null}
+                }
+            }
+        }
+    }
 
-	return {
-		props: {
-			all_posts,
-			post_id,
-			post: data
-		}
-	};
+    return {
+        props: {
+            all_posts,
+            post_id,
+            post: data
+        }
+    };
 }
 

@@ -3,7 +3,7 @@ import dice from 'fast-dice-coefficient'
 
 
 // TODO:
-//  improve algorithm
+//  implement improved algorithm
 
 
 /**
@@ -15,28 +15,28 @@ import dice from 'fast-dice-coefficient'
  * @return {Object[]}      [description]
  */
 export async function getBestMatch(str, host){
-	const res = await fetch(`http://${host}/api/post/list?fields=title slug`);
-	const data = await res.json()
+    const res = await fetch(`http://${host}/api/post/list?fields=title slug`);
+    const data = await res.json()
 
-	if (!data.length)
-		return [];
+    if (!data.length)
+        return [];
 
-	let posts = [];	
-	for (let post of data) {
-		posts.push({
-			sdc: dice(str, post.slug),
-			slug: post.slug,
-			title: post.title
-		});
-	}
+    let posts = []; 
+    for (let post of data) {
+        posts.push({
+            sdc: dice(str, post.slug),
+            slug: post.slug,
+            title: post.title
+        });
+    }
 
-	// sort in descending order of similarity,
-	//  best match to least match
-	posts.sort((x,y) => y.sdc - x.sdc);
+    // sort in descending order of similarity,
+    //  best match to least match
+    posts.sort((x,y) => y.sdc - x.sdc);
 
-	// select results with at least 30% match
-	posts = posts.filter(x => x.sdc > 0.3);
+    // select results with at least 30% match
+    posts = posts.filter(x => x.sdc > 0.3);
 
-	return posts.slice(0, 4); // the top 4 result
+    return posts.slice(0, 4); // the top 4 result
 }
 
