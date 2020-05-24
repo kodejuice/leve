@@ -8,14 +8,14 @@ module.exports = withCSS(withSass(withFonts({
 
 		MONGODB_URI: "mongodb://localhost/levecms",
 
-		// sha256 hash of your password
+		// sha256 hash of password
 		// this is "root"
 		PASSWORD_HASH: "4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
 
 		// JWT token secret
 		JWT_SECRET: "MY_JWT_SECRET",
 
-		// url host of your disqus domain
+		// url host of disqus domain
 		DISQUS_HOST: "kodejuice.disqus.com",
 	},
 
