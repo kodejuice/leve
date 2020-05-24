@@ -74,7 +74,7 @@ const Posts = (props) => {
                 <h3> Most Recent </h3>
                 
                 {/* no posts yet ? */}
-                {recent_posts.length == 0 ? <div className='mt-3'>Noting to show here</div> : ""}
+                {recent_posts.length == 0 ? <div className='mt-3 ml-2'> Nothing to show here</div> : ""}
 
                 {/* map posts to the Post component */}
                 { recent_posts.map(p => <Post info={p} key={p._id} />) }
