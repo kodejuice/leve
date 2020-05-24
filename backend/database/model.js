@@ -31,6 +31,5 @@ const ArticleSchema = new Schema({
 
 
 module.exports = {
-    Admin(){return model('admin', AdminSchema)},
     Article(){return model('article', ArticleSchema)}
 };

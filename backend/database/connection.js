@@ -53,8 +53,7 @@ const connectDB = handler => async (req, res) => {
     });
 
     mongoose.connections.DB_Models = {
-        Article: DB_Models.Article(),
-        Admin: DB_Models.Admin()
+        Article: DB_Models.Article()
     };
 
     return handler(req, res, mongoose.connections.DB_Models);
