@@ -30,17 +30,6 @@ const ArticleSchema = new Schema({
 });
 
 
-// TODO: Remove this
-const AdminSchema = new Schema({
-	username: String,
-	user_id: String,
-
-	name: String,
-	email: String,
-});
-
-
-
 module.exports = {
 	Admin(){return model('admin', AdminSchema)},
 	Article(){return model('article', ArticleSchema)}
