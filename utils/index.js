@@ -24,12 +24,13 @@ export function toSlug(str) {
 /**
  * Get keywords from a large string
  * @param  {String}			String
- * @return {String[]}		keywords from string
+ * @return {String}		  keywords from string separated by ", "
  */
-export function getKeywords(string) {
+export function getKeywords(string, limit=true) {
 	let freq = {};
 
-	// remove https? links (may be buggy)
+	// remove https? links
+	// (this may be buggy)
 	string = string.replace(/(https?:\/\/[^)]+)/g, "");
 
 	let words = new Set(
@@ -51,8 +52,7 @@ export function getKeywords(string) {
 	// sort words in descending order of their frequency
 	words.sort((x, y)=>freq[y] - freq[x]);
 
-	// get best 10
-	return words.slice(0, 10);
+	return (limit ? words.slice(0, 10): words).join(", ");
 }
 
 

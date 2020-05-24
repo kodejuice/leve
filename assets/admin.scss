@@ -18,15 +18,23 @@
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 488px) {
 	form.post_create {
 		input {
 			width: 98% !important;
 		}
 	}
+	
+	blockquote.dialog-quote-block {
+		width: 100% !important;
+	}
 }
 
 
+
+button.kwrd-btn {
+	margin-top: 5px;
+}
 
 div.admin {
 	font-size: .975rem !important;

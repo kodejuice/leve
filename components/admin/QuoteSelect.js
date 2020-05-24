@@ -47,7 +47,7 @@ function getMatchingQuotes(kwords, selectQuotes) {
 
 
 export default function QuoteSelect(props) {
-	const {keywords, setQuote, selected} = props;
+	const {keywords, setQuote, selected, fullText_kwrds} = props;
 
 	// states
 	const [kwords, setKeywords] = useState(keywords || "");
@@ -57,26 +57,31 @@ export default function QuoteSelect(props) {
 		<>
 			<div className="quote-select">
 				<div className='form border-bottom pb-2 mb-3'>
-					<form onSubmit={ev=>{ev.preventDefault(); getMatchingQuotes(kwords, selectQuotes)}}>
-						<label htmlFor="Post keywords" style={{fontSize: "18px", display: "block"}}>Keywords</label>
-						<div className="btn-group w-100">
-							<input
-								type="text"
-								className="w-75 post-in"
-								placeholder="Enter keywords to get matching quotes"
-								title="Enter keywords to get matching quotes"
-								value={kwords}
-								style={{color: "#333", fontSize: "16px"}}
-								onChange={v=>setKeywords(v.target.value)}
-							/>
-							<button className="btn btn-outline-primary" type="submit"> Get Quotes </button>
+					<form onSubmit={ev=>ev.preventDefault()}>
+						<label htmlFor="Post keywords" style={{fontSize: "18px", display: "block"}}>Get Matching Quotes</label>
+						<div className="row">
+							<div className="col-12 col-sm-8 btn-group">
+								<input
+									type="text"
+									className="w-100 post-in keywords-in"
+									placeholder="Enter keywords to get matching quotes"
+									title="Enter keywords to get matching quotes"
+									value={kwords}
+									style={{color: "#333", fontSize: "16px", borderRadius: "5px"}}
+									onChange={v=>setKeywords(v.target.value)}
+								/>
+							</div>
+							<div className="col-12 col-sm-4 btn-group">
+								<button onClick={ev=>getMatchingQuotes(kwords, selectQuotes)} title='match keywords' className="kwrd-btn btn btn-outline-primary"> keywords </button>
+								<button onClick={ev=>getMatchingQuotes(fullText_kwrds, selectQuotes)} title='match fulltext' className="kwrd-btn btn btn-danger"> fullText </button>
+							</div>
 						</div>
 					</form>
 				</div>
 
 				<div className="quotes">
 					{quotes.map(q => (
-						<blockquote onClick={_=>setQuote(q)} className="btn w-25 blockquote mt-4" style={q.quote==selected.quote?{border: "1px solid #333"}:{}}>
+						<blockquote key={q.quote} onClick={_=>setQuote(q)} className="dialog-quote-block btn w-25 blockquote mt-4" style={q.quote==selected.quote?{border: "1px solid #333"}:{}}>
 							<p className="mb-0 post-quote">{q.quote}.</p>
 							<footer className="blockquote-footer p-quote text-right"><cite>{q.author}</cite></footer>
 						</blockquote>

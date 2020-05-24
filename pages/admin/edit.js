@@ -137,7 +137,7 @@ export default function Edit(props) {
 								<QuoteSelect
 									setQuote={setQuote}
 									selected={postquote}
-									keywords={getKeywords((content||"")+" "+(excerpt||"")))}
+									keywords={getKeywords((content||"")+" "+(excerpt||""))}
 									fullText_kwrds={getKeywords((content||"")+" "+(excerpt||""), false)}
 								/>
 							</>)
