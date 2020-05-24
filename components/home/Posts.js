@@ -72,7 +72,11 @@ const Posts = (props) => {
 		post_block = (
 			<div>
 				<h3> Most Recent </h3>
+				
+				{/* no posts yet ? */}
+				{recent_posts.length == 0 ? <div className='mt-3'>Noting to show here</div> : ""}
 
+				{/* map posts to the Post component */}
 				{ recent_posts.map(p => <Post info={p} key={p._id} />) }
 
 				{ props.all_posts.length > post_per_page
