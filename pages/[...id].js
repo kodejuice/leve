@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
+import {v4 as uuid} from 'uuid'
 
 import _ from 'underscore'
 import {format} from 'date-fns'
@@ -55,6 +56,8 @@ global.log = (...x) => console.log(...x)
 function PostView(props) {
     // props passed from getServerSideProps()
     const {id, post, corrections, host} = props;
+    
+    const [shortname, setShortname] = useState(uuid());
 
     // invalid post id, render 404 page
     if (!post) {
@@ -110,7 +113,9 @@ function PostView(props) {
             <div className='container'>
                 <div className='position-fixed action-btn'>
                     <div className='toggler'>
-                        <Toggle />
+                        <Toggle
+                        	onSwitch={_=>setShortname(uuid())} // this reloads the disqus thread
+                        />
                     </div>
 
                     <div className='hide-on-mobile'>
@@ -204,7 +209,7 @@ function PostView(props) {
                                     <b> <em> Comments Disabled </em> </b>
                                     : (
                                             <DiscussionEmbed
-                                                shortname={post.slug}
+                                                shortname={shortname}
                                                 config={{
                                                     url: `https://${host}/${post.slug}`,
                                                     identifier: post.slug,
@@ -223,10 +228,16 @@ function PostView(props) {
 
 
 
+// reload disqus thread
+function reloadDisqus() {
+
+}
+
+
 // fetch Article information from database
 export async function getServerSideProps(ctx) {
     const host = ctx.req.headers.host;
-    const baseUrl = `https://${host}`;
+    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
 
     const post_id = ctx.query.id[0];
     const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments`, {
