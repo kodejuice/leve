@@ -1,0 +1,4 @@
+A very simple cms i built to manage my personal website.
+Built with React(next.js)
+
+See environment variables in next.config.js file.
