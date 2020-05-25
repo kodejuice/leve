@@ -54,7 +54,7 @@ global.log = (...x) => console.log(...x)
 
 function PostView(props) {
     // props passed from getServerSideProps()
-    const {id, post, corrections, host} = props;
+    const {id, post, corrections, host, scheme} = props;
     
     // invalid post id, render 404 page
     if (!post) {
@@ -82,6 +82,7 @@ function PostView(props) {
             <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
             <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+            <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
             <script src="./js/benchmarkemail-signupform.js"/>
             <script dangerouslySetInnerHTML={{__html:`
@@ -262,6 +263,7 @@ export async function getServerSideProps(ctx) {
         return {
             props: _.extend(props, {
                 host,
+                scheme: process.env.SCHEME,
                 corrections: await getBestMatch(props.id.join('/'), host)
             })
         }
@@ -276,6 +278,7 @@ export async function getServerSideProps(ctx) {
     return {
         props: _.extend(props, {
             host,
+            scheme: process.env.SCHEME,
             post: data
         })
     }
