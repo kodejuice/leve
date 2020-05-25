@@ -12,7 +12,7 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function Export(props) {
-    let is_dark = props.is_dark;
+    let host = props.host;
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
@@ -28,9 +28,9 @@ function Export(props) {
             </Head>
 
             <div className='admin'>
-                <Header dark={is_dark} quick_draft={true} page='export'>
+                <Header is_dark={props.is_dark} host={host} quick_draft={true} page='export'>
                     <div className='mt-4'>
-                        <a href='../../api/post/import_export?type=export'> Download site data ({props.total_size}) </a>
+                        <a href={`http://${host}/api/post/import_export?type=export`}> Download site data ({props.total_size}) </a>
                     </div>
                 </Header>
             </div>
@@ -43,7 +43,7 @@ function Export(props) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `http://${process.env.HOST}`;
+    const baseUrl = `http://${ctx.req.headers.host}`;
     const res = await fetch(`${baseUrl}/api/post/import_export?size_only=true&type=export`, {
         headers: {cookie: ctx.req.headers.cookie}
     });
@@ -51,8 +51,9 @@ export async function getServerSideProps(ctx) {
 
     return {
         props: {
+            host: ctx.req.headers.host,
             total_size: json.size || null,
-            is_dark: ctx.req.url.includes('?dark')
+            is_dark: parseCookies({req:ctx.req}).__dark=='1',
         }
     };
 }

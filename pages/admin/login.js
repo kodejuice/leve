@@ -13,6 +13,8 @@ function LoginPage(props) {
     const [pwd, setPwd] = useState("");
     const [isLoading, beginAuth] = useState(false);
 
+    const {host} = props;
+
     // redirect url
     const {url} = props;
     const {rdr} = queryString.parse(url);
@@ -42,7 +44,7 @@ function LoginPage(props) {
                 <div className='home-main mb-5'>
                     <h1> LOGIN </h1>
                     <div className="mt-5">
-                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr)}>
+                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr, host)}>
                                 <div className="form-group mt-5">
                                     <input
                                         type="password"
@@ -64,13 +66,13 @@ function LoginPage(props) {
 
 
 
-async function Login(ev, pwd, beginAuth, rdr) {
+async function Login(ev, pwd, beginAuth, rdr, host) {
     ev.preventDefault();
 
     // render spinner active
     beginAuth(true);
 
-    const baseUrl = `http://${process.env.HOST}`;
+    const baseUrl = `http://${host}`;
     const res = await fetch(`${baseUrl}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify({password: pwd}),
@@ -80,7 +82,7 @@ async function Login(ev, pwd, beginAuth, rdr) {
 
     //
     if (json.success != true) {
-        // lol, lets troll a likkle bit
+        // lol, lets confuse somones child
         alert("Correct!");
     } else {
         // password correct
@@ -92,7 +94,7 @@ async function Login(ev, pwd, beginAuth, rdr) {
         });
 
         // redirect page
-        window.location = rdr || `http://${process.env.HOST}`;
+        window.location = rdr || `http://${host}`;
     }
 
     // stops spinner (if page not redirected)
@@ -101,7 +103,12 @@ async function Login(ev, pwd, beginAuth, rdr) {
 
 
 export function getServerSideProps(ctx) {
-    return {props: {url: ctx.req.url.split('?')[1] || null}}
+    return {
+        props: {
+            host: ctx.req.headers.host,
+            url: ctx.req.url.split('?')[1] || null
+        }
+    }
 }
 
 export default LoginPage;

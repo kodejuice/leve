@@ -54,7 +54,7 @@ mdParser.use(tm, {
 
 
 export default function Edit(props) {
-    let {post, all_posts} = props;
+    let {post, all_posts, host} = props;
     const isNew = (post.slug == null);
 
     // modal states
@@ -74,7 +74,7 @@ export default function Edit(props) {
     const [allow_comments, allowComment] = useState(Boolean(post.allow_comments));
     const [isSaving, setSaveState] = useState(false);
 
-    const post_data = {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
+    const post_data = {slug, auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
     //...
 
 
@@ -111,7 +111,7 @@ export default function Edit(props) {
         <>
             <HotKeys keyMap={{SAVE: "ctrl+s", PREVIEW: "ctrl+b"}}>
             <HotKeys handlers={{
-                SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState)},
+                SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState, null, host)},
                 PREVIEW: ev=>{ev.preventDefault(); if(!quotesOpen) openPreview(!previewOpen)}
             }}>
 
@@ -147,7 +147,7 @@ export default function Edit(props) {
                 </Modal>
 
 
-                <Header dark={false} quick_draft={false} page='edit'>
+                <Header host={host} dark={false} quick_draft={false} page='edit'>
                     <div className='row'>
                         <div className='col-12 col-sm-9 border-right'>
 
@@ -216,7 +216,7 @@ export default function Edit(props) {
                                 <button
                                     disabled={isSaving==true}
                                     className='btn btn-link'
-                                    onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${process.env.HOST}/${slug}`)}>
+                                    onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${host}/${slug}`, host)}>
                                     <a> View Post Page </a>
                                 </button>
 
@@ -232,7 +232,7 @@ export default function Edit(props) {
         
                                     {/* Save Post */}
                                     <button
-                                        onClick={_ => {savePost(post_data, all_posts, setSaveState);}}
+                                        onClick={_ => {savePost(post_data, all_posts, setSaveState, null, host);}}
                                         title="Ctrl-s to save"
                                         disabled={isSaving == true}
                                         className='btn btn-outline-primary'>
@@ -253,7 +253,7 @@ export default function Edit(props) {
                                             <div className='col comment-div'>
                                                 {/* disqus commentcount */}
                                                 <CommentCount shortname={slug} config={{
-                                                        url: `http://${process.env.HOST}/${slug}`,
+                                                        url: `http://${host}/${slug}`,
                                                         identifier: slug,
                                                         title,
                                                     }}>
@@ -292,7 +292,7 @@ export default function Edit(props) {
                                             id="slug-input"
                                             type='text'
                                             disabled={isSaving==true}
-                                            title={`http://${process.env.HOST}/[post_slug]`}
+                                            title={`http://${host}/[post_slug]`}
                                             className='form-control' value={slug || auto_slug} placeholder="post slug"
                                             onChange={e=>{
                                                 setSlug(e.target.value);
@@ -370,7 +370,7 @@ export default function Edit(props) {
                             {!isNew?
                                 <div className='block-3 mt-1'>
                                     <div className='block-1 pb-2 mt-3'>
-                                        <button onClick={_=>slug && deletePost(slug)} disabled={isSaving==true} className='btn btn-danger'>
+                                        <button onClick={_=>slug && deletePost(slug, host)} disabled={isSaving==true} className='btn btn-danger'>
                                             Delete <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                         </button>
                                     </div>
@@ -395,8 +395,11 @@ export default function Edit(props) {
 /**
  * Saves Post to DB
  */
-async function savePost(params, all_posts, setSaveState, redirect_url=null) {
-    const {slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew} = params;
+async function savePost(params, all_posts, setSaveState, redirect_url=null, host) {
+    const {auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew} = params;
+
+    let slug = params.slug || auto_slug;
+
     if (!slug) {
         alert("Invalid Slug!");
         return setSaveState(false), false;
@@ -423,7 +426,7 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null) {
     let res;
     try {
         // create/update post
-        res = await addPostToDB(data, isNew);
+        res = await addPostToDB(data, isNew, host);
     } catch(e) {
         alert(e);
         return setSaveState(false), false;
@@ -450,9 +453,9 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null) {
 /**
  * Delete Post from DB
  */
-async function deletePost(slug) {
+async function deletePost(slug, host) {
     if (confirm("Delete ?")) {
-        let res = await deleteDBPost(slug);
+        let res = await deleteDBPost(slug, host);
         if (res.success != true) {
             return alert(JSON.stringify(res));
         }
@@ -464,8 +467,7 @@ async function deletePost(slug) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const host = process.env.HOST;
-    const baseUrl = `http://${host}`;
+    const baseUrl = `http://${ctx.req.headers.host}`;
 
     const post_id = ctx.query.slug;
     const res = await fetch(`${baseUrl}/api/post/${post_id}?include=draft_revisions allow_comments views topic`, {
@@ -484,6 +486,8 @@ export async function getServerSideProps(ctx) {
         // no post with slug '${post_id}'
         return {
             props: {
+                host: ctx.req.headers.host,
+
                 post_id: post_id || null,
 
                 all_posts,
@@ -504,10 +508,10 @@ export async function getServerSideProps(ctx) {
 
     return {
         props: {
+            host: ctx.req.headers.host,
             all_posts,
             post_id,
             post: data
         }
     };
 }
-

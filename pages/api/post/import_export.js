@@ -125,14 +125,17 @@ function Import(req, res, Article) {
 // takes the post object and makes PUT request
 // to the '/api/post/[post_id]' endpoint
 async function addPostToDB(req, post) {
-    const baseUrl = `http://${process.env.HOST}`;
+    const baseUrl = `http://${req.headers.host}`;
     const {slug} = post; // post_id
 
     return new Promise(async (yes, no)=>{
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
             method: "PUT",
             body: JSON.stringify(post),
-            headers: { 'Content-type': 'application/json' }
+            headers: {
+                'Content-type': 'application/json',
+                cookie: req.headers.cookie
+            }
         });
         const data = await res.json()
         yes(data);

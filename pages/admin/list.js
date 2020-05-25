@@ -15,7 +15,6 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function List(props) {
-    let is_dark = props.is_dark;
     useEffect(_=>{
         window.onbeforeunload = ()=>null;
         if (parseCookies(null).__dark == "1")
@@ -32,7 +31,7 @@ function List(props) {
             </Head>
 
             <div className='admin'>
-                <Header dark={is_dark} quick_draft={true} page='list'>
+                <Header is_dark={props.is_dark} host={props.host} quick_draft={true} page='list'>
                     <div className='row' style={{width: '250px'}}>
                         <div className='col-6'> <h2> Posts </h2> </div>
                         <div className='col-6'>
@@ -45,7 +44,7 @@ function List(props) {
                     </div>
 
                     <div className='posts'>
-                        <Posts posts={props.posts} show_draft_on_load={props.show_draft_on_load} />
+                        <Posts host={props.host} posts={props.posts} show_draft_on_load={props.show_draft_on_load} />
                     </div>
                 </Header>
             </div>
@@ -59,7 +58,7 @@ function List(props) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `http://${process.env.HOST}`;
+    const baseUrl = `http://${ctx.req.headers.host}`;
 
     const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`, {
         headers: {cookie: ctx.req.headers.cookie}
@@ -89,7 +88,8 @@ export async function getServerSideProps(ctx) {
     return {
         props: {
             posts,
-            is_dark: ctx.req.url.includes('?dark'),
+            host: ctx.req.headers.host,
+            is_dark: parseCookies({req:ctx.req}).__dark=='1',
             show_draft_on_load: ctx.req.url.includes('draft=1')
         }
     };

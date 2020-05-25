@@ -16,7 +16,7 @@ export default connectDB((req, res, DB_Models) => {
 <rss version="2.0">
 <channel>
     <title> ${details.name} </title>
-    <link> ${process.env.HOST} </link>
+    <link> http://${req.headers.host} </link>
     <description> ${details.description} </description>
 `;
 
@@ -25,11 +25,11 @@ export default connectDB((req, res, DB_Models) => {
                 xml += `
     <item>
         <title> ${post.title} </title>
-        <link> http://${process.env.HOST}/${post.slug} </link>
+        <link> http://${req.headers.host}/${post.slug} </link>
         <description> ${post.excerpt} </description>
         <pubDate> ${post.pub_date} </pubDate>
         <author> ${post.author_email} </author>
-        <comments> http://${process.env.HOST}/${post.slug}#comments </comments>
+        <comments> http://${req.headers.host}/${post.slug}#comments </comments>
         <category> ${post.topic.join(", ")} </category>
         <language> en-us </language>
         <guid> ${post.slug} </guid>

@@ -8,7 +8,7 @@ const handle = (method, fn)=> handlers[method.toUpperCase()]=fn;
 /** Returns list of posts from db **/
 
 
-// get post listing (user-level access)
+// get post listing
 handle('get', async (req, res, {Article})=>{
     return new Promise(resolve=> {
         let fields = req.query.fields || 'title excerpt slug pub_date';

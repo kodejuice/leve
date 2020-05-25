@@ -12,7 +12,8 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function Import(props) {
-    let host = props.host;
+    let {host} = props;
+
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
@@ -28,7 +29,7 @@ function Import(props) {
             </Head>
 
             <div className='admin'>
-                <Header host={host} dark={is_dark} quick_draft={true} page='import'>
+                <Header is_dark={props.is_dark} host={host} quick_draft={true} page='import'>
                     <p> This allows you to import exteral blog posts </p>
                     <p> Data beign imported should match the following schema, props marked with the asterik (*) are required </p>
 
@@ -93,7 +94,8 @@ export async function getServerSideProps(ctx) {
 
     return {
         props: {
-        	host: ctx.req.headers.host
+            host: ctx.req.headers.host,
+            is_dark: parseCookies({req:ctx.req}).__dark=='1',
         }
     };
 }

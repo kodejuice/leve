@@ -23,15 +23,15 @@ const sidebarLinks = [{
 
 const Header = (props) => {
     const [saving, setSaving] = useState(false);
-    const theme = (parseCookies(null).__dark == '1') ? 'bg-dark' : 'bg-light';
-    const {page} = props;
-    
+    const theme = (parseCookies(null).__dark=='1' || props.is_dark) ? 'bg-dark' : 'bg-light';
+    const {page, host} = props;
+
     return (
         <>
             <div className="container-fluid">
                 {/*navbar*/}
                 <nav className={`navbar ${theme} fixed-top flex-md-nowrap p-0 shadow`} style={{zIndex:999}}>
-                    <a title="Visit website" className="navbar-brand col-sm-3 col-md-2 mr-0" href={`http://${process.env.HOST}`}>{details.name}</a>
+                    <a title="Visit website" className="navbar-brand col-sm-3 col-md-2 mr-0" href={`http://${host}`}>{details.name}</a>
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
                             <a className="nav-link btn btn-link" onClick={ev => {
@@ -80,7 +80,7 @@ const Header = (props) => {
                                               <input type="text" name='qslug' className="form-control mb-2" placeholder='post slug'/>
                                             </div>
                                             <div className="col-auto">
-                                              <button type="submit" className="mb-2 btn btn-outline-secondary" onClick={ev=>saveDraft(ev, setSaving)}>
+                                              <button type="submit" className="mb-2 btn btn-outline-secondary" onClick={ev=>saveDraft(ev, setSaving, host)}>
                                                         <ClipLoader
                                                             size={14}
                                                             color={"#333"}
@@ -110,7 +110,7 @@ const Header = (props) => {
 
 
 
-const saveDraft = async (ev, setSaving) => {
+const saveDraft = async (ev, setSaving, url_host) => {
     ev.preventDefault();
 
     let title = document.querySelector('input[name=qtitle]').value,
@@ -127,7 +127,7 @@ const saveDraft = async (ev, setSaving) => {
         title,
         author: details.name,
         author_email: details.email
-    });
+    }, true, url_host);
 
     if (res.success == true) {
         location.search = "?draft=1";

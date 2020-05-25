@@ -54,7 +54,7 @@ global.log = (...x) => console.log(...x)
 
 function PostView(props) {
     // props passed from getServerSideProps()
-    const {id, post, corrections} = props;
+    const {id, post, corrections, host} = props;
 
     // invalid post id, render 404 page
     if (!post) {
@@ -87,7 +87,7 @@ function PostView(props) {
                 <script dangerouslySetInnerHTML={{__html:`
                     // Disqus config
                     var disqus_config = function () {
-                        this.page.url = "http://${process.env.HOST}/${props.post.slug}";
+                        this.page.url = "http://${host}/${props.post.slug}";
                         this.page.identifier = "${props.post.slug}";
                         this.page.title = "${props.post.title}";
                     };
@@ -137,6 +137,10 @@ function PostView(props) {
                                             <a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
                                         </Link>
                                     </div>
+
+                                    {post.draft?
+                                        <em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em>
+                                    :""}
                                 </div>
                             )
                             : ""
@@ -202,7 +206,7 @@ function PostView(props) {
                                             <DiscussionEmbed
                                                 shortname={post.slug}
                                                 config={{
-                                                    url: `http://${process.env.HOST}/${post.slug}`,
+                                                    url: `http://${host}/${post.slug}`,
                                                     identifier: post.slug,
                                                     title: post.title,
                                                 }}
@@ -221,7 +225,7 @@ function PostView(props) {
 
 // fetch Article information from database
 export async function getServerSideProps(ctx) {
-    const host = process.env.HOST;
+    const host = ctx.req.headers.host;
     const baseUrl = `http://${host}`;
 
     const post_id = ctx.query.id[0];
@@ -239,6 +243,7 @@ export async function getServerSideProps(ctx) {
         // no post with slug '${post_id}'
         return {
             props: _.extend(props, {
+                host,
                 corrections: await getBestMatch(props.id.join('/'), host)
             })
         }
@@ -250,7 +255,12 @@ export async function getServerSideProps(ctx) {
     data.last_modified = (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) || null;
     // ...
 
-    return { props: _.extend(props, {post: data}) }
+    return {
+        props: _.extend(props, {
+            host,
+            post: data
+        })
+    }
 }
 
 export default PostView;

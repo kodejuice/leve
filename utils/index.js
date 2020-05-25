@@ -81,8 +81,8 @@ export function getKeywords(string, limit=true) {
  * @param  {Object}          post slug
  * @return {Promise}         resolved data is request's response
  */
-export async function deleteDBPost(slug) {
-    const baseUrl = `http://${process.env.HOST}`;
+export async function deleteDBPost(slug, host) {
+    const baseUrl = `http://${host}`;
 
     return new Promise(async (yes, no)=>{
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
@@ -99,8 +99,8 @@ export async function deleteDBPost(slug) {
  * @param  {Object}          post paramaeters
  * @return {Promise}         resolved data is request's response
  */
-export async function addPostToDB(body, create = true) {
-    const baseUrl = `http://${process.env.HOST}`;
+export async function addPostToDB(body, create = true, host) {
+    const baseUrl = `http://${host}`;
     const {slug} = body;
 
     return new Promise(async (yes, no)=>{
@@ -120,8 +120,8 @@ export async function addPostToDB(body, create = true) {
  * @param  {Object}          post paramaeters
  * @return {Promise}         resolved data is request's response
  */
-export async function modifyPost(body) {
-    const baseUrl = `http://${process.env.HOST}`;
+export async function modifyPost(body, host) {
+    const baseUrl = `http://${host}`;
     const {slug} = body;
 
     return new Promise(async (yes, no)=>{
@@ -190,4 +190,3 @@ export const scrollToTop = (cb, delay=300, top=0) => {
     });
     setTimeout(cb, delay); // call cb() after delay-ms
 }
-
