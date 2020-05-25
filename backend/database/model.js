@@ -14,7 +14,7 @@ const ArticleSchema = new Schema({
     creation_date: Date,
     last_modified: Date,
 
-    content: String,
+    content: {type: String, default: ""},
     topic: [String],
 
     next_post: {

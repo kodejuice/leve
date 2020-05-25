@@ -170,7 +170,7 @@ function PostView(props) {
                         </blockquote>
 
                         {/* post content */}
-                        <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content)}}/>
+                        <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content || "")}}/>
                         <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
 
                         <div className='row mb-5 _post_footer'>
