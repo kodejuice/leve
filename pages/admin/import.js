@@ -12,7 +12,7 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function Import(props) {
-    let {host} = props;
+    let {host, scheme} = props;
 
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
@@ -29,7 +29,7 @@ function Import(props) {
             </Head>
 
             <div className='admin'>
-                <Header is_dark={props.is_dark} host={host} quick_draft={true} page='import'>
+                <Header url={props.url} is_dark={props.is_dark} host={host} quick_draft={true} page='import'>
                     <p> This allows you to import exteral blog posts </p>
                     <p> Data beign imported should match the following schema, props marked with the asterik (*) are required </p>
 
@@ -60,7 +60,7 @@ function Import(props) {
                     <hr/>
 
                     <div className="input-group mt-3 mb-5">
-                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action={`${process.env.SCHEME}://${host}/api/post/import_export?type=import`}>
+                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action={`${scheme}://${host}/api/post/import_export?type=import`}>
                             <label className="screen-reader-text file-label" htmlFor="site_data">Upload site data</label>
                             <input type="file" name="data" required={true}/>
                             <input type="submit" name="site-data" className="btn btn-outline-secondary" value="Upload"  />
@@ -95,6 +95,8 @@ export async function getServerSideProps(ctx) {
     return {
         props: {
             host: ctx.req.headers.host,
+            url: process.env.SCHEME + "://" + ctx.req.headers.host,
+            scheme: process.env.SCHEME,
             is_dark: parseCookies({req:ctx.req}).__dark=='1',
         }
     };

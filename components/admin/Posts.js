@@ -10,7 +10,7 @@ import { site_details as details } from '../../site_config.js';
 
 function List(props) {
     const [activePage, setActivePage] = useState(1);    // pagination state
-    const {is_published, posts, host} = props;
+    const {is_published, posts, url} = props;
 
     // pagination data
     let {post_per_page} = details.site;
@@ -53,7 +53,7 @@ function List(props) {
                                 {/*Delete post (drafts only) */}
                                 {!is_published?
                                     <button className="btn-link btn pl-0 ml-0 mb-0 pb-0"
-                                        onClick={async _=>{deletePost(post.slug, host)}}>
+                                        onClick={async _=>{deletePost(post.slug, url)}}>
                                         <a className='btn btn-link btn-sm' title="Delete"> <span className="glyphicon glyphicon-trash" aria-hidden="true"></span> </a>
                                     </button>
                                 : ""}
@@ -66,10 +66,10 @@ function List(props) {
                             {is_published ?
                                 <td className="comment-count">
                                     <CommentCount shortname={post.slug} config={{
-                                        url: `http://${host}/${post.slug}`,
+                                        url: `${url}/${post.slug}`,
                                         identifier: post.slug,
                                         title: post.title,
-                                        }}> </CommentCount>
+                                    }}> </CommentCount>
                                 </td>
                                 : <td>{post.draft_revisions | 0}</td> }
 
@@ -105,9 +105,9 @@ function List(props) {
 
 
 // delete post button click
-async function deletePost(slug, url_host) {
+async function deletePost(slug, url) {
     if (confirm("Delete ?")) {
-        let res = await deleteDBPost(slug, url_host);
+        let res = await deleteDBPost(slug, url);
         if (res.success != true) {
             return alert(JSON.stringify(res));
         }
@@ -117,9 +117,9 @@ async function deletePost(slug, url_host) {
 
 
 export default function Posts(props) {
-    const [list_published, setState] = useState(!props.show_draft_on_load);
-    const {host} = props;
+    const {url} = props;
     const {drafts, published} = props.posts;
+    const [list_published, setState] = useState((props.show_draft_on_load && drafts.length>0) ? false : true);
 
     const l_pub = list_published;
     return  (
@@ -133,7 +133,7 @@ export default function Posts(props) {
             </div>
 
             <div className="list ml-3 mt-3">
-                <List host={host} posts={list_published ? published : drafts} is_published={list_published} />
+                <List url={url} posts={list_published ? published : drafts} is_published={list_published} />
             </div>
         </>
     );

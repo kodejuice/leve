@@ -81,8 +81,8 @@ export function getKeywords(string, limit=true) {
  * @param  {Object}          post slug
  * @return {Promise}         resolved data is request's response
  */
-export async function deleteDBPost(slug, host) {
-    const baseUrl = `${process.env.SCHEME}://${host}`;
+export async function deleteDBPost(slug, url) {
+    const baseUrl = `${url}`;
 
     return new Promise(async (yes, no)=>{
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
@@ -99,8 +99,8 @@ export async function deleteDBPost(slug, host) {
  * @param  {Object}          post paramaeters
  * @return {Promise}         resolved data is request's response
  */
-export async function addPostToDB(body, create = true, host) {
-    const baseUrl = `${process.env.SCHEME}://${host}`;
+export async function addPostToDB(body, create = true, url) {
+    const baseUrl = `${url}`;
     const {slug} = body;
 
     return new Promise(async (yes, no)=>{

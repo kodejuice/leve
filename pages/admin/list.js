@@ -31,7 +31,7 @@ function List(props) {
             </Head>
 
             <div className='admin'>
-                <Header is_dark={props.is_dark} host={props.host} quick_draft={true} page='list'>
+                <Header url={props.url} is_dark={props.is_dark} host={props.host} quick_draft={true} page='list'>
                     <div className='row' style={{width: '250px'}}>
                         <div className='col-6'> <h2> Posts </h2> </div>
                         <div className='col-6'>
@@ -44,7 +44,7 @@ function List(props) {
                     </div>
 
                     <div className='posts'>
-                        <Posts host={props.host} posts={props.posts} show_draft_on_load={props.show_draft_on_load} />
+                        <Posts url={props.url} host={props.host} posts={props.posts} show_draft_on_load={props.show_draft_on_load} />
                     </div>
                 </Header>
             </div>
@@ -88,6 +88,7 @@ export async function getServerSideProps(ctx) {
     return {
         props: {
             posts,
+            url: process.env.SCHEME + "://" + ctx.req.headers.host,
             host: ctx.req.headers.host,
             is_dark: parseCookies({req:ctx.req}).__dark=='1',
             show_draft_on_load: ctx.req.url.includes('draft=1')

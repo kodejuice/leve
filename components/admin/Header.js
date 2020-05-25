@@ -24,7 +24,7 @@ const sidebarLinks = [{
 const Header = (props) => {
     const [saving, setSaving] = useState(false);
     const theme = (parseCookies(null).__dark=='1' || props.is_dark) ? 'bg-dark' : 'bg-light';
-    const {page, host} = props;
+    const {page, host, url} = props;
 
     return (
         <>
@@ -80,12 +80,12 @@ const Header = (props) => {
                                               <input type="text" name='qslug' className="form-control mb-2" placeholder='post slug'/>
                                             </div>
                                             <div className="col-auto">
-                                              <button type="submit" className="mb-2 btn btn-outline-secondary" onClick={ev=>saveDraft(ev, setSaving, host)}>
-                                                        <ClipLoader
-                                                            size={14}
-                                                            color={"#333"}
-                                                            loading={saving}
-                                                        /> Save Draft
+                                              <button type="submit" className="mb-2 btn btn-outline-secondary" onClick={ev=>saveDraft(ev, setSaving, url)}>
+                                                    <ClipLoader
+                                                        size={14}
+                                                        color={"#333"}
+                                                        loading={saving}
+                                                    /> Save Draft
                                               </button>
                                             </div>
                                           </div>
@@ -110,7 +110,7 @@ const Header = (props) => {
 
 
 
-const saveDraft = async (ev, setSaving, url_host) => {
+const saveDraft = async (ev, setSaving, url) => {
     ev.preventDefault();
 
     let title = document.querySelector('input[name=qtitle]').value,
@@ -127,7 +127,7 @@ const saveDraft = async (ev, setSaving, url_host) => {
         title,
         author: details.name,
         author_email: details.email
-    }, true, url_host);
+    }, true, url);
 
     if (res.success == true) {
         location.search = "?draft=1";

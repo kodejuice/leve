@@ -54,7 +54,7 @@ mdParser.use(tm, {
 
 
 export default function Edit(props) {
-    let {post, all_posts, host} = props;
+    let {post, all_posts, url, host} = props;
     const isNew = (post.slug == null);
 
     // modal states
@@ -109,9 +109,9 @@ export default function Edit(props) {
     const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
     return (
         <>
-            <HotKeys keyMap={{SAVE: "ctrl+s", PREVIEW: "ctrl+b"}}>
+            <HotKeys keyMap={{SAVE: "ctrl+enter", PREVIEW: "ctrl+b"}}>
             <HotKeys handlers={{
-                SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState, null, host)},
+                SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState, null, url)},
                 PREVIEW: ev=>{ev.preventDefault(); if(!quotesOpen) openPreview(!previewOpen)}
             }}>
 
@@ -147,7 +147,7 @@ export default function Edit(props) {
                 </Modal>
 
 
-                <Header host={host} dark={false} quick_draft={false} page='edit'>
+                <Header url={url} host={host} dark={false} quick_draft={false} page='edit'>
                     <div className='row'>
                         <div className='col-12 col-sm-9 border-right'>
 
@@ -216,7 +216,7 @@ export default function Edit(props) {
                                 <button
                                     disabled={isSaving==true}
                                     className='btn btn-link'
-                                    onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${host}/${slug}`, host)}>
+                                    onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${host}/${slug}`, url)}>
                                     <a> View Post Page </a>
                                 </button>
 
@@ -229,11 +229,11 @@ export default function Edit(props) {
                                         className='btn btn-outline-secondary'>
                                         Preview <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                     </button>
-        
+
                                     {/* Save Post */}
                                     <button
-                                        onClick={_ => {savePost(post_data, all_posts, setSaveState, null, host);}}
-                                        title="Ctrl-s to save"
+                                        onClick={_ => {savePost(post_data, all_posts, setSaveState, null, url);}}
+                                        title="Ctrl-enter to save"
                                         disabled={isSaving == true}
                                         className='btn btn-outline-primary'>
                                             <ClipLoader size={14} color={"#123abc"} loading={isSaving}/>
@@ -370,7 +370,7 @@ export default function Edit(props) {
                             {!isNew?
                                 <div className='block-3 mt-1'>
                                     <div className='block-1 pb-2 mt-3'>
-                                        <button onClick={_=>slug && deletePost(slug, host)} disabled={isSaving==true} className='btn btn-danger'>
+                                        <button onClick={_=>slug && deletePost(slug, url)} disabled={isSaving==true} className='btn btn-danger'>
                                             Delete <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                         </button>
                                     </div>
@@ -395,7 +395,7 @@ export default function Edit(props) {
 /**
  * Saves Post to DB
  */
-async function savePost(params, all_posts, setSaveState, redirect_url=null, host) {
+async function savePost(params, all_posts, setSaveState, redirect_url=null, url) {
     const {auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew} = params;
 
     let slug = params.slug || auto_slug;
@@ -426,7 +426,7 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null, host
     let res;
     try {
         // create/update post
-        res = await addPostToDB(data, isNew, host);
+        res = await addPostToDB(data, isNew, url);
     } catch(e) {
         alert(e);
         return setSaveState(false), false;
@@ -453,9 +453,9 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null, host
 /**
  * Delete Post from DB
  */
-async function deletePost(slug, host) {
+async function deletePost(slug, url) {
     if (confirm("Delete ?")) {
-        let res = await deleteDBPost(slug, host);
+        let res = await deleteDBPost(slug, url);
         if (res.success != true) {
             return alert(JSON.stringify(res));
         }
@@ -487,6 +487,7 @@ export async function getServerSideProps(ctx) {
         return {
             props: {
                 host: ctx.req.headers.host,
+                url: process.env.SCHEME + "://" + ctx.req.headers.host,
 
                 post_id: post_id || null,
 
@@ -509,6 +510,7 @@ export async function getServerSideProps(ctx) {
     return {
         props: {
             host: ctx.req.headers.host,
+            url: process.env.SCHEME + "://" + ctx.req.headers.host,
             all_posts,
             post_id,
             post: data

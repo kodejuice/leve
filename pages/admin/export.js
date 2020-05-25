@@ -28,9 +28,9 @@ function Export(props) {
             </Head>
 
             <div className='admin'>
-                <Header is_dark={props.is_dark} host={host} quick_draft={true} page='export'>
+                <Header url={props.url} is_dark={props.is_dark} host={host} quick_draft={true} page='export'>
                     <div className='mt-4'>
-                        <a href={`https://${host}/api/post/import_export?type=export`}> Download site data ({props.total_size}) </a>
+                        <a href={`${props.scheme}://${host}/api/post/import_export?type=export`}> Download site data ({props.total_size}) </a>
                     </div>
                 </Header>
             </div>
@@ -53,6 +53,8 @@ export async function getServerSideProps(ctx) {
     return {
         props: {
             host: ctx.req.headers.host,
+            scheme: process.env.SCHEME,
+            url: process.env.SCHEME + "://" + ctx.req.headers.host,
             total_size: json.size || null,
             is_dark: parseCookies({req:ctx.req}).__dark=='1',
         }

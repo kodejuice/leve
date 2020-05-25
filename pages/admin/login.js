@@ -13,11 +13,11 @@ function LoginPage(props) {
     const [pwd, setPwd] = useState("");
     const [isLoading, beginAuth] = useState(false);
 
-    const {host} = props;
+    const {host, scheme} = props;
 
     // redirect url
-    const {url} = props;
-    const {rdr} = queryString.parse(url);
+    const {path} = props;
+    const {rdr} = queryString.parse(path);
 
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
@@ -44,7 +44,7 @@ function LoginPage(props) {
                 <div className='home-main mb-5'>
                     <h1> LOGIN </h1>
                     <div className="mt-5">
-                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr, host)}>
+                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr, host, scheme)}>
                                 <div className="form-group mt-5">
                                     <input
                                         type="password"
@@ -66,13 +66,13 @@ function LoginPage(props) {
 
 
 
-async function Login(ev, pwd, beginAuth, rdr, host) {
+async function Login(ev, pwd, beginAuth, rdr, host, scheme) {
     ev.preventDefault();
 
     // render spinner active
     beginAuth(true);
 
-    const baseUrl = `${process.env.SCHEME}://${host}`;
+    const baseUrl = `${scheme}://${host}`;
     const res = await fetch(`${baseUrl}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify({password: pwd}),
@@ -94,7 +94,7 @@ async function Login(ev, pwd, beginAuth, rdr, host) {
         });
 
         // redirect page
-        window.location = rdr || `https://${host}`;
+        window.location = rdr || `${scheme}://${host}`;
     }
 
     // stops spinner (if page not redirected)
@@ -106,7 +106,8 @@ export function getServerSideProps(ctx) {
     return {
         props: {
             host: ctx.req.headers.host,
-            url: ctx.req.url.split('?')[1] || null
+            scheme: process.env.SCHEME,
+            path: ctx.req.url.split('?')[1] || null
         }
     }
 }
