@@ -72,7 +72,7 @@ async function Login(ev, pwd, beginAuth, rdr, host) {
     // render spinner active
     beginAuth(true);
 
-    const baseUrl = `http://${host}`;
+    const baseUrl = `https://${host}`;
     const res = await fetch(`${baseUrl}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify({password: pwd}),
@@ -94,7 +94,7 @@ async function Login(ev, pwd, beginAuth, rdr, host) {
         });
 
         // redirect page
-        window.location = rdr || `http://${host}`;
+        window.location = rdr || `https://${host}`;
     }
 
     // stops spinner (if page not redirected)

@@ -253,7 +253,7 @@ export default function Edit(props) {
                                             <div className='col comment-div'>
                                                 {/* disqus commentcount */}
                                                 <CommentCount shortname={slug} config={{
-                                                        url: `http://${host}/${slug}`,
+                                                        url: `https://${host}/${slug}`,
                                                         identifier: slug,
                                                         title,
                                                     }}>
@@ -292,7 +292,7 @@ export default function Edit(props) {
                                             id="slug-input"
                                             type='text'
                                             disabled={isSaving==true}
-                                            title={`http://${host}/[post_slug]`}
+                                            title={`https://${host}/[post_slug]`}
                                             className='form-control' value={slug || auto_slug} placeholder="post slug"
                                             onChange={e=>{
                                                 setSlug(e.target.value);
@@ -467,7 +467,7 @@ async function deletePost(slug, host) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `http://${ctx.req.headers.host}`;
+    const baseUrl = `https://${ctx.req.headers.host}`;
 
     const post_id = ctx.query.slug;
     const res = await fetch(`${baseUrl}/api/post/${post_id}?include=draft_revisions allow_comments views topic`, {

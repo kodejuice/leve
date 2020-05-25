@@ -30,7 +30,7 @@ function Export(props) {
             <div className='admin'>
                 <Header is_dark={props.is_dark} host={host} quick_draft={true} page='export'>
                     <div className='mt-4'>
-                        <a href={`http://${host}/api/post/import_export?type=export`}> Download site data ({props.total_size}) </a>
+                        <a href={`https://${host}/api/post/import_export?type=export`}> Download site data ({props.total_size}) </a>
                     </div>
                 </Header>
             </div>
@@ -43,7 +43,7 @@ function Export(props) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `http://${ctx.req.headers.host}`;
+    const baseUrl = `https://${ctx.req.headers.host}`;
     const res = await fetch(`${baseUrl}/api/post/import_export?size_only=true&type=export`, {
         headers: {cookie: ctx.req.headers.cookie}
     });

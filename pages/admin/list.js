@@ -58,7 +58,7 @@ function List(props) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `http://${ctx.req.headers.host}`;
+    const baseUrl = `https://${ctx.req.headers.host}`;
 
     const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`, {
         headers: {cookie: ctx.req.headers.cookie}

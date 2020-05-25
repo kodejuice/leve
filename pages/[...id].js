@@ -87,7 +87,7 @@ function PostView(props) {
                 <script dangerouslySetInnerHTML={{__html:`
                     // Disqus config
                     var disqus_config = function () {
-                        this.page.url = "http://${host}/${props.post.slug}";
+                        this.page.url = "https://${host}/${props.post.slug}";
                         this.page.identifier = "${props.post.slug}";
                         this.page.title = "${props.post.title}";
                     };
@@ -206,7 +206,7 @@ function PostView(props) {
                                             <DiscussionEmbed
                                                 shortname={post.slug}
                                                 config={{
-                                                    url: `http://${host}/${post.slug}`,
+                                                    url: `https://${host}/${post.slug}`,
                                                     identifier: post.slug,
                                                     title: post.title,
                                                 }}
@@ -226,7 +226,7 @@ function PostView(props) {
 // fetch Article information from database
 export async function getServerSideProps(ctx) {
     const host = ctx.req.headers.host;
-    const baseUrl = `http://${host}`;
+    const baseUrl = `https://${host}`;
 
     const post_id = ctx.query.id[0];
     const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments`, {
