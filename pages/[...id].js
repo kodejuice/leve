@@ -141,11 +141,15 @@ function PostView(props) {
                                         </Link>
                                     </div>
 
-                                    {post.draft?
-                                        <em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em>
-                                    :""}
+                                    <div>
+                                        - <small><em title="This post isnt published yet" className="mt-1"> {post.views} views </em></small>
+                                    </div>
 
-                                    <em title="This post isnt published yet" className="mt-1"> {post.views} views </em>
+                                    <div>
+                                        - {post.draft?
+                                        <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
+                                        :""}
+                                    </div>
                                 </div>
                             )
                             : ""
@@ -179,14 +183,15 @@ function PostView(props) {
                                 <legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
                                   <div className="form-row">
                                     <div className="col" dangerouslySetInnerHTML={{__html:`
-<div id="signupFormContainer_7EKNW">
-<div id="signupFormContent_7EKNW">
-<div class="formbox-editor_7EKNW"><div id="formbox_screen_subscribe_7EKNW" style="display:block;" name="frmLB_7EKNW">
-<input type=hidden name=token_7EKNW id=token_7EKNW value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
-<input type=hidden name=successurl_7EKNW id=successurl_7EKNW value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
-<input type=hidden name=errorurl_7EKNW id=errorurl_7EKNW value="http://lb.benchmarkemail.com//Code/Error" />
-<input type=email placeholder="Email Address" class="email-input formbox-field_7EKNW text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_7EKNW" name="fldemail_7EKNW" maxlength=100/>
-<button id="btnSubmit_7EKNW" onClick="javascript:return submit_7EKNWClick();" class="btn submit visible-text formbox-button_7EKNW">Subscribe</div></div>
+<div id="signupFormContainer_YPLMC">
+<div id="signupFormContent_YPLMC">
+<div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
+<input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
+<input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
+<input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
+<input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 /></fieldset>
+<button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
+</div>
 </div>
 </div>
 </div>

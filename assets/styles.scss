@@ -182,7 +182,8 @@ div.post-view {
         text-decoration: underline;
     }
 
-    input.email-input {
+    // email input field (view-post page)
+    input.email-input, input.formbox-field_YPLMC {
         padding: 0;
         width: 60%;
         color: #333;
