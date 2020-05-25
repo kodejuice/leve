@@ -3,7 +3,12 @@ const withSass = require('@zeit/next-sass')
 const withFonts = require('next-fonts');
 
 module.exports = withCSS(withSass(withFonts({
-/*    env: {
+/*
+    // To my future self:
+    //  create a .env file with the following variables
+    //  nextjs 9.4+ automatically loads the config file
+
+    env: {
         SCHEME: "http",
 
         MONGODB_URI: "mongodb://localhost/levecms",
