@@ -28,7 +28,7 @@ export default connectDB((req, res, DB_Models) => {
     <item>
         <title> ${post.title} </title>
         <link> ${process.env.SCHEME}://${req.headers.host}/${post.slug} </link>
-        <description> ${post.excerpt} </description>
+        <description> ${post.excerpt || ""} </description>
         <pubDate> ${format(new Date(post.pub_date), "MMM d, yyyy HH:mm a")} </pubDate>
         <author> ${post.author_email} </author>
         <comments> http://${req.headers.host}/${post.slug}#comments </comments>
