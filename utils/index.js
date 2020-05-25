@@ -82,7 +82,7 @@ export function getKeywords(string, limit=true) {
  * @return {Promise}         resolved data is request's response
  */
 export async function deleteDBPost(slug, host) {
-    const baseUrl = `http://${host}`;
+    const baseUrl = `https://${host}`;
 
     return new Promise(async (yes, no)=>{
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
@@ -100,7 +100,7 @@ export async function deleteDBPost(slug, host) {
  * @return {Promise}         resolved data is request's response
  */
 export async function addPostToDB(body, create = true, host) {
-    const baseUrl = `http://${host}`;
+    const baseUrl = `https://${host}`;
     const {slug} = body;
 
     return new Promise(async (yes, no)=>{
@@ -121,7 +121,7 @@ export async function addPostToDB(body, create = true, host) {
  * @return {Promise}         resolved data is request's response
  */
 export async function modifyPost(body, host) {
-    const baseUrl = `http://${host}`;
+    const baseUrl = `https://${host}`;
     const {slug} = body;
 
     return new Promise(async (yes, no)=>{
