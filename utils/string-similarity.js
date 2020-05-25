@@ -2,8 +2,7 @@ import fetch from 'node-fetch'
 import dice from 'fast-dice-coefficient'
 
 
-// TODO:
-//  implement improved algorithm
+// TODO: implement improved algorithm
 
 
 /**
