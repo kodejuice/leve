@@ -210,10 +210,10 @@ function PostView(props) {
                                     <b> <em> Comments Disabled </em> </b>
                                     : (
                                             <DiscussionEmbed
-                                                shortname={post.slug}
+                                                shortname={details.name+":"+post.slug}
                                                 config={{
                                                     url: `https://${host}/${post.slug}`,
-                                                    identifier: post.slug,
+                                                    identifier: details.name+":"+post.slug,
                                                     title: post.title,
                                                 }}
                                             />
