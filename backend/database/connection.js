@@ -26,6 +26,8 @@ const connectDB = function(handler) {
 
 
 const connectDB = handler => async (req, res) => {
+    // Access-Control-Allow-Origin: *
+    res.setHeader("Access-Control-Allow-Origin", "*");
 
     // firstly check for authentication token in cookie,
     // if valid, set req.isAuthenticated = true
