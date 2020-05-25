@@ -88,7 +88,7 @@ function PostView(props) {
                 // Disqus config
                 var disqus_config = function () {
                     this.page.url = "https://${host}/${props.post.slug}";
-                    this.page.identifier = "${props.post.slug}";
+                    this.page.identifier = "${details.name}:${props.post.slug}";
                     this.page.title = "${props.post.title}";
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
