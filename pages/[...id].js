@@ -1,10 +1,9 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
-import {v4 as uuid} from 'uuid'
 
 import _ from 'underscore'
 import {format} from 'date-fns'
@@ -57,8 +56,6 @@ function PostView(props) {
     // props passed from getServerSideProps()
     const {id, post, corrections, host} = props;
     
-    const [shortname, setShortname] = useState(uuid());
-
     // invalid post id, render 404 page
     if (!post) {
         return <PageNotFound id={id} corrections={corrections} />;
@@ -80,41 +77,41 @@ function PostView(props) {
     return (
         <>
         <Head>
-                <title> {post.title} </title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
-                <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-                <script src="./js/benchmarkemail-signupform.js"/>
-                <script dangerouslySetInnerHTML={{__html:`
-                    // Disqus config
-                    var disqus_config = function () {
-                        this.page.url = "https://${host}/${props.post.slug}";
-                        this.page.identifier = "${props.post.slug}";
-                        this.page.title = "${props.post.title}";
-                    };
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                        var d=document, s=d.createElement('script');
-                        s.src="https://${process.env.DISQUS_HOST}/embed.js";
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head||d.body).appendChild(s);
-                    })();
-                `}} />
-                <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
-                <script dangerouslySetInnerHTML={{__html:`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.GA_TRACK_CODE}');
-                `}} />
-            </Head>
+            <title> {post.title} </title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
+            <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+            <script src="./js/benchmarkemail-signupform.js"/>
+            <script dangerouslySetInnerHTML={{__html:`
+                // Disqus config
+                var disqus_config = function () {
+                    this.page.url = "https://${host}/${props.post.slug}";
+                    this.page.identifier = "${props.post.slug}";
+                    this.page.title = "${props.post.title}";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d=document, s=d.createElement('script');
+                    s.src="https://${process.env.DISQUS_HOST}/embed.js";
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head||d.body).appendChild(s);
+                })();
+            `}} />
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
+            <script dangerouslySetInnerHTML={{__html:`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.GA_TRACK_CODE}');
+            `}} />
+        </Head>
 
             <div className='container'>
                 <div className='position-fixed action-btn'>
                     <div className='toggler'>
                         <Toggle
-                        	onSwitch={_=>setShortname(uuid())} // this reloads the disqus thread
+                        	onSwitch={_=>reloadDisqusThread()}
                         />
                     </div>
 
@@ -146,6 +143,8 @@ function PostView(props) {
                                     {post.draft?
                                         <em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em>
                                     :""}
+
+                                    <em title="This post isnt published yet" className="mt-1"> {post.views} views </em>
                                 </div>
                             )
                             : ""
@@ -163,11 +162,13 @@ function PostView(props) {
                     <div className='article'>
                         <em className='pub_date'> {post.pub_date} </em>
 
+                        {/* quote */}
                         <blockquote className="blockquote text-right mt-4">
                             <p className="mb-0 post-quote">{post.post_quote.quote}</p>
                             <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
                         </blockquote>
 
+                        {/* post content */}
                         <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content)}}/>
                         <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
 
@@ -209,7 +210,7 @@ function PostView(props) {
                                     <b> <em> Comments Disabled </em> </b>
                                     : (
                                             <DiscussionEmbed
-                                                shortname={shortname}
+                                                shortname={post.slug}
                                                 config={{
                                                     url: `https://${host}/${post.slug}`,
                                                     identifier: post.slug,
@@ -229,8 +230,10 @@ function PostView(props) {
 
 
 // reload disqus thread
-function reloadDisqus() {
-
+function reloadDisqusThread() {
+    DISQUS.reset();
+    // DISQUS is a global variable,
+    // which comes with the embed.js script
 }
 
 
@@ -240,7 +243,7 @@ export async function getServerSideProps(ctx) {
     const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
 
     const post_id = ctx.query.id[0];
-    const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments`, {
+    const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments views`, {
         headers: { cookie: ctx.req.headers.cookie }
     });
     const data = await res.json()
