@@ -4,6 +4,8 @@ const withFonts = require('next-fonts');
 
 module.exports = withCSS(withSass(withFonts({
 /*    env: {
+        SCHEME: "http",
+
         MONGODB_URI: "mongodb://localhost/levecms",
 
         // sha256 hash of password
