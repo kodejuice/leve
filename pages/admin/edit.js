@@ -467,7 +467,7 @@ async function deletePost(slug, host) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `https://${ctx.req.headers.host}`;
+    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
 
     const post_id = ctx.query.slug;
     const res = await fetch(`${baseUrl}/api/post/${post_id}?include=draft_revisions allow_comments views topic`, {

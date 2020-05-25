@@ -60,7 +60,7 @@ function Import(props) {
                     <hr/>
 
                     <div className="input-group mt-3 mb-5">
-                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action={`https://${host}/api/post/import_export?type=import`}>
+                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action={`${process.env.SCHEME}://${host}/api/post/import_export?type=import`}>
                             <label className="screen-reader-text file-label" htmlFor="site_data">Upload site data</label>
                             <input type="file" name="data" required={true}/>
                             <input type="submit" name="site-data" className="btn btn-outline-secondary" value="Upload"  />

@@ -72,7 +72,7 @@ async function Login(ev, pwd, beginAuth, rdr, host) {
     // render spinner active
     beginAuth(true);
 
-    const baseUrl = `https://${host}`;
+    const baseUrl = `${process.env.SCHEME}://${host}`;
     const res = await fetch(`${baseUrl}/api/auth/login`, {
         method: "POST",
         body: JSON.stringify({password: pwd}),

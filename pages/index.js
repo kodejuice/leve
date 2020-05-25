@@ -87,7 +87,7 @@ function Home(props) {
 // This gets called on every request
 export async function getServerSideProps(ctx) {
     // Fetch data from API
-    const baseUrl = `https://${ctx.req.headers.host}`;
+    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
 
     const res = await fetch(`${baseUrl}/api/post/list`);
     const data = await res.json();

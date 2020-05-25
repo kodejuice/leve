@@ -43,7 +43,8 @@ function Export(props) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `https://${ctx.req.headers.host}`;
+    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
+
     const res = await fetch(`${baseUrl}/api/post/import_export?size_only=true&type=export`, {
         headers: {cookie: ctx.req.headers.cookie}
     });
