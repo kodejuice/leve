@@ -12,7 +12,7 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function Import(props) {
-    let is_dark = props.is_dark;
+    let host = props.host;
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
@@ -28,7 +28,7 @@ function Import(props) {
             </Head>
 
             <div className='admin'>
-                <Header dark={is_dark} quick_draft={true} page='import'>
+                <Header host={host} dark={is_dark} quick_draft={true} page='import'>
                     <p> This allows you to import exteral blog posts </p>
                     <p> Data beign imported should match the following schema, props marked with the asterik (*) are required </p>
 
@@ -59,7 +59,7 @@ function Import(props) {
                     <hr/>
 
                     <div className="input-group mt-3 mb-5">
-                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action="../../../api/post/import_export?type=import">
+                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action={`http://${host}/api/post/import_export?type=import`}>
                             <label className="screen-reader-text file-label" htmlFor="site_data">Upload site data</label>
                             <input type="file" name="data" required={true}/>
                             <input type="submit" name="site-data" className="btn btn-outline-secondary" value="Upload"  />
@@ -93,7 +93,7 @@ export async function getServerSideProps(ctx) {
 
     return {
         props: {
-            is_dark: ctx.req.url.includes('?dark')
+        	host: ctx.req.headers.host
         }
     };
 }
