@@ -231,9 +231,10 @@ function PostView(props) {
 
 // reload disqus thread
 function reloadDisqusThread() {
-    DISQUS.reset();
     // DISQUS is a global variable,
     // which comes with the embed.js script
+    if (DISQUS)
+        DISQUS.reset();
 }
 
 
