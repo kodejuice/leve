@@ -1,2 +1,1 @@
-The script `index.js` creates an inverted index of the json data in `../quotes.js`, removing stopwords from every string, stores the inverted index in the `indexed-quotes.js` file.
-
+The script `index.js` creates an inverted index of the json data in `../quotes.js`, removing stopwords from every string, stores the inverted index in the `../indexed-quotes.js` file.
