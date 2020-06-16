@@ -82,7 +82,7 @@ async function Login(ev, pwd, beginAuth, rdr, host, scheme) {
 
     //
     if (json.success != true) {
-        // lol, lets confuse somones child
+        // lol, lets confuse someones child
         alert("Correct!");
     } else {
         // password correct
