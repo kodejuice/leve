@@ -15,8 +15,7 @@ export function setTheme(which) {
 
     if (which == 0) {
         if (list.contains('dark')) list.remove('dark'); // let there be light
-    }
-    else {
+    } else {
         if (!list.contains('dark')) list.add('dark'); // let there be darkness
     }
 }
@@ -34,7 +33,7 @@ export function toSlug(str) {
     str = str.replace(/^[-]+|[-]+$/g, '');
 
     str = str.split('-')
-        .filter(w=>!stop.has(w)) // remove stopwords
+        .filter(w => !stop.has(w)) // remove stopwords
         .join('-');
 
     return str;
@@ -46,7 +45,7 @@ export function toSlug(str) {
  * @param  {String}         String
  * @return {String}       keywords from string separated by ", "
  */
-export function getKeywords(string, limit=true) {
+export function getKeywords(string, limit = true) {
     let freq = {};
 
     // remove https? links
@@ -55,10 +54,10 @@ export function getKeywords(string, limit=true) {
 
     let words = new Set(
         string
-            .split(/[^a-zA-Z]/)
-            .filter(w => w.length>1)
-            .map(w => w.toLowerCase())
-            .filter(w => !stop.has(w))
+        .split(/[^a-zA-Z]/)
+        .filter(w => w.length > 1)
+        .map(w => w.toLowerCase())
+        .filter(w => !stop.has(w))
     );
 
     for (let word of words) {
@@ -68,11 +67,11 @@ export function getKeywords(string, limit=true) {
 
     // convert Set to Array
     words = Array.from(words);
-    
-    // sort words in descending order of their frequency
-    words.sort((x, y)=>freq[y] - freq[x]);
 
-    return (limit ? words.slice(0, 10): words).join(", ");
+    // sort words in descending order of their frequency
+    words.sort((x, y) => freq[y] - freq[x]);
+
+    return (limit ? words.slice(0, 10) : words).join(", ");
 }
 
 
@@ -84,7 +83,7 @@ export function getKeywords(string, limit=true) {
 export async function deleteDBPost(slug, url) {
     const baseUrl = `${url}`;
 
-    return new Promise(async (yes, no)=>{
+    return new Promise(async (yes, no) => {
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
             method: "DELETE",
         });
@@ -101,9 +100,9 @@ export async function deleteDBPost(slug, url) {
  */
 export async function addPostToDB(body, create = true, url) {
     const baseUrl = `${url}`;
-    const {slug} = body;
+    const { slug } = body;
 
-    return new Promise(async (yes, no)=>{
+    return new Promise(async (yes, no) => {
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
             method: create ? "PUT" : "POST", // PUT->create post, POST->update post
             body: JSON.stringify(body),
@@ -122,9 +121,9 @@ export async function addPostToDB(body, create = true, url) {
  */
 export async function modifyPost(body, host) {
     const baseUrl = `${process.env.SCHEME}://${host}`;
-    const {slug} = body;
+    const { slug } = body;
 
-    return new Promise(async (yes, no)=>{
+    return new Promise(async (yes, no) => {
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
             method: "POST",
             body: JSON.stringify(body),
@@ -141,8 +140,8 @@ export async function modifyPost(body, host) {
  * @param  {String}          string to check
  * @return {String}          count of lines in string
  */
- export function LineCount(str) {
-     return (str || "").split('\n').length;
+export function LineCount(str) {
+    return (str || "").split('\n').length;
 }
 
 /**
@@ -150,11 +149,11 @@ export async function modifyPost(body, host) {
  * @param  {String}          string to check
  * @return {String}          count of words in string
  */
- export function WordCount(str) {
-     str = str || "";
-     return str.split(/[^a-zA-Z]/) // divide string by anything thats not an alphabet
-                        .filter(function(n) { return n != '' })
-                        .length;
+export function WordCount(str) {
+    str = str || "";
+    return str.split(/[^a-zA-Z]/) // divide string by anything thats not an alphabet
+        .filter(function(n) { return n != '' })
+        .length;
 }
 
 
@@ -166,8 +165,8 @@ export async function modifyPost(body, host) {
  */
 export function bytesToSize(byte) {
     const gb = 1024 ** 3,
-                mb = 1024 ** 2,
-                kb = 1024 ** 1;
+        mb = 1024 ** 2,
+        kb = 1024 ** 1;
     if (byte >= gb) return `${~~(byte/gb)}GB`;
     if (byte >= mb) return `${~~(byte/mb)}MB`;
     if (byte >= kb) return `${~~(byte/kb)}KB`;
@@ -182,7 +181,7 @@ export function bytesToSize(byte) {
  * @param  {Number}   top   top position
  * @return {undefined}         [void]
  */
-export const scrollToTop = (cb, delay=300, top=0) => {
+export const scrollToTop = (cb, delay = 300, top = 0) => {
     window.scroll({
         top: top,
         left: 0,

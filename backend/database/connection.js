@@ -28,7 +28,7 @@ const connectDB = function(handler) {
 const connectDB = handler => async (req, res) => {
     // firstly check for authentication token in cookie,
     // if valid, set req.isAuthenticated = true
-    const token = parseCookies({req}).__token;
+    const token = parseCookies({ req }).__token;
     try {
         var decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.isAuthenticated = true;

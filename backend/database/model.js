@@ -8,13 +8,13 @@ const ArticleSchema = new Schema({
     title: String,
     slug: String,
     excerpt: String,
-    post_quote: {author: String, quote: String},
+    post_quote: { author: String, quote: String },
 
     pub_date: Date,
     creation_date: Date,
     last_modified: Date,
 
-    content: {type: String, default: ""},
+    content: { type: String, default: "" },
     topic: [String],
 
     next_post: {
@@ -22,14 +22,14 @@ const ArticleSchema = new Schema({
         title: String
     },
 
-    views: {type: Number, default: 0},
-    draft: {type: Boolean, default: true},  
-    draft_revisions: {type: Number, default: 0},
+    views: { type: Number, default: 0 },
+    draft: { type: Boolean, default: true },
+    draft_revisions: { type: Number, default: 0 },
 
-    allow_comments: {type: Boolean, default: true}
+    allow_comments: { type: Boolean, default: true }
 });
 
 
 module.exports = {
-    Article(){return model('article', ArticleSchema)}
+    Article() { return model('article', ArticleSchema) }
 };

@@ -12,18 +12,18 @@ log = console.log;
 
 
 // Get unique words from a string
-const words = (string)=>{
+const words = (string) => {
     return new Set(
         string
-            .split(/[^a-zA-Z]/) // split string by non alphabet characters
-            .filter(w => w.length>1) // get non letters (.length > 1)
-            .map(w => w.toLowerCase()) // convert word to lowercase
+        .split(/[^a-zA-Z]/) // split string by non alphabet characters
+        .filter(w => w.length > 1) // get non letters (.length > 1)
+        .map(w => w.toLowerCase()) // convert word to lowercase
     );
 };
 
 
 // remove stopwords from array of words
-const removeStop = (list)=>{
+const removeStop = (list) => {
     let array = Array.from(list);
     return new Set(
         array.filter(word => !stopwords.has(word.toLowerCase()))
@@ -45,8 +45,9 @@ function createFile(fname, content) {
 
 
 // main()
-(function main(quotes, stopwords){
-    let index = {}, wordlist, q;
+(function main(quotes, stopwords) {
+    let index = {},
+        wordlist, q;
 
     for (i in quotes) {
         q = quotes[i];
@@ -57,7 +58,7 @@ function createFile(fname, content) {
             else index[w] = [i];
         }
     }
-    
+
     // Save file
     let fname = "../indexed-quotes.js";
     createFile(fname, `module.exports = ` + JSON.stringify(index));
@@ -65,8 +66,3 @@ function createFile(fname, content) {
     log("Quotes indexed! '" + fname + "'");
 
 }(quotes, stopwords));
-
-
-
-
-

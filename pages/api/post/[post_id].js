@@ -4,7 +4,7 @@ import { parseCookies, setCookie, destroyCookie } from 'nookies'
 import connectDB from '../../../backend/database/connection.js';
 
 const handlers = {};
-const handle = (method, fn)=> handlers[method.toUpperCase()]=fn;
+const handle = (method, fn) => handlers[method.toUpperCase()] = fn;
 
 
 
@@ -12,75 +12,75 @@ const handle = (method, fn)=> handlers[method.toUpperCase()]=fn;
 
 
 // get post content
-handle('get', (req, res, slug/*post_id*/, {Article})=>{
+handle('get', (req, res, slug /*post_id*/ , { Article }) => {
     let db_query = Article
-        .findOne({'slug': slug})
+        .findOne({ 'slug': slug })
         .exec();
 
-    let cookies = parseCookies({req});
+    let cookies = parseCookies({ req });
 
     return new Promise(resolve => {
         db_query.then(async post => {
-            if (!post) return res.json({error: true, msg: "Not found"}), resolve();
+                if (!post) return res.json({ error: true, msg: "Not found" }), resolve();
 
-            // update 'views' count
-            if (!(post.slug in cookies)) {
-                post.views += 1;
-                setCookie({res}, post.slug, '1', {
-                    path: '/',
-                    maxAge: 86400 * 31 // 31 days
-                });
-                post.save();
-            }
-
-            let fields = ("author author_email title content post_quote pub_date last_modified next_post slug draft excerpt "+(req.query.include||"")).split(" ");
-            post = _.pick(post, fields);
-
-            // get "next post >>" suggestion
-            try{
-                let nxt_doc = await Article.findOne({'pub_date': {$gt: post.pub_date}, 'draft': false})
-
-                if (!nxt_doc)
-                    nxt_doc = (await Article.find({'pub_date': {$lt: post.pub_date}, 'draft': false}).sort({pub_date: 'asc'}))[0];
-
-                if (nxt_doc) {
-                    post.next_post = {
-                        slug: nxt_doc.slug,
-                        title: nxt_doc.title
-                    };                  
+                // update 'views' count
+                if (!(post.slug in cookies)) {
+                    post.views += 1;
+                    setCookie({ res }, post.slug, '1', {
+                        path: '/',
+                        maxAge: 86400 * 31 // 31 days
+                    });
+                    post.save();
                 }
-            } catch(e) {
-                console.log(e);
-            }
-            // ...
 
-            if (post.draft == true && !req.isAuthenticated) {
-                return res.json({error: true, msg: "Not found"}), resolve();
-            }
-            return res.json(post), resolve();
-        })
-        .catch(err => {
-            return res.json({error: true, msg: err}), resolve();
-        });
+                let fields = ("author author_email title content post_quote pub_date last_modified next_post slug draft excerpt " + (req.query.include || "")).split(" ");
+                post = _.pick(post, fields);
+
+                // get "next post >>" suggestion
+                try {
+                    let nxt_doc = await Article.findOne({ 'pub_date': { $gt: post.pub_date }, 'draft': false })
+
+                    if (!nxt_doc)
+                        nxt_doc = (await Article.find({ 'pub_date': { $lt: post.pub_date }, 'draft': false }).sort({ pub_date: 'asc' }))[0];
+
+                    if (nxt_doc) {
+                        post.next_post = {
+                            slug: nxt_doc.slug,
+                            title: nxt_doc.title
+                        };
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+                // ...
+
+                if (post.draft == true && !req.isAuthenticated) {
+                    return res.json({ error: true, msg: "Not found" }), resolve();
+                }
+                return res.json(post), resolve();
+            })
+            .catch(err => {
+                return res.json({ error: true, msg: err }), resolve();
+            });
     });
 });
 
 
 // create new post
-handle('put', (req, res, post_id, {Article}) => {
+handle('put', (req, res, post_id, { Article }) => {
     return new Promise(resolve => {
 
         if (!req.isAuthenticated) {
-            return res.json({error: true, msg: "Authentication required"}), resolve();
+            return res.json({ error: true, msg: "Authentication required" }), resolve();
         }
 
-        const {title} = req.body;
+        const { title } = req.body;
         if (!title || !title.length) {
-            res.json({error: true, msg: "empty title!"});
+            res.json({ error: true, msg: "empty title!" });
             return resolve();
         }
         if (!post_id || !post_id.length) {
-            res.json({error: true, msg: "invalid slug!"});
+            res.json({ error: true, msg: "invalid slug!" });
             return resolve();
         }
 
@@ -94,19 +94,19 @@ handle('put', (req, res, post_id, {Article}) => {
         newItem['last_modified'] = now;
 
         // create post if slug isn't in use already
-        Article.findOne({slug: post_id}, (err, doc)=>{
+        Article.findOne({ slug: post_id }, (err, doc) => {
             if (err || doc) {
-                if (err) res.json({error: true, msg: err});
-                else if (doc) res.json({error: true, msg: "slug not available!"});
+                if (err) res.json({ error: true, msg: err });
+                else if (doc) res.json({ error: true, msg: "slug not available!" });
                 return resolve();
             }
 
-            Article.create(newItem, (err, doc)=>{
-                if (err) res.json({error: true, msg: err});
-                else res.json({success: true, doc});
+            Article.create(newItem, (err, doc) => {
+                if (err) res.json({ error: true, msg: err });
+                else res.json({ success: true, doc });
                 resolve();
             });
-        });     
+        });
     });
 
 });
@@ -114,24 +114,24 @@ handle('put', (req, res, post_id, {Article}) => {
 
 
 // update post content
-handle('post',  (req, res, post_id, {Article}) => {
+handle('post', (req, res, post_id, { Article }) => {
     // let { title, excerpt, content, draft, topic, post_quote, next_post } = req.body;
     return new Promise(resolve => {
 
         if (!req.isAuthenticated) {
-            return res.json({error: true, msg: "Authentication required"}), resolve();
+            return res.json({ error: true, msg: "Authentication required" }), resolve();
         }
 
         let { title } = req.body;
-        if (title!=undefined && !title.length) return res.json({error: true, msg: "empty title!"}), resolve();
+        if (title != undefined && !title.length) return res.json({ error: true, msg: "empty title!" }), resolve();
 
         let writable = ['title', 'excerpt', 'content', 'draft', 'topic', 'post_quote', 'allow_comments'];
         let updates = _.pick(req.body, ...writable);
 
         // find post to update
-        Article.findOne({slug: post_id}, (err, doc)=>{
-            if (err) return res.json({error: true, msg: err}), resolve();
-            if (!doc) return res.json({error: true, msg: "that post doesnt exist!"}), resolve();
+        Article.findOne({ slug: post_id }, (err, doc) => {
+            if (err) return res.json({ error: true, msg: err }), resolve();
+            if (!doc) return res.json({ error: true, msg: "that post doesnt exist!" }), resolve();
 
             // increment revisions and update `Last modified` date
             // if content was modified
@@ -146,10 +146,10 @@ handle('post',  (req, res, post_id, {Article}) => {
             }
 
             _
-            .extend(doc, updates)
-            .save();
+                .extend(doc, updates)
+                .save();
 
-            res.json({success: true});
+            res.json({ success: true });
             resolve();
         });
     });
@@ -158,16 +158,16 @@ handle('post',  (req, res, post_id, {Article}) => {
 
 
 // delete post
-handle('delete', (req, res, post_id, {Article})=>{
+handle('delete', (req, res, post_id, { Article }) => {
     return new Promise(resolve => {
 
         if (!req.isAuthenticated) {
-            return res.json({error: true, msg: "Authentication required"}), resolve();
+            return res.json({ error: true, msg: "Authentication required" }), resolve();
         }
 
-        Article.findOneAndDelete({slug: post_id}, (err, doc)=>{
-            if (err) res.json({error: true, msg: err});
-            else res.json({success: true});
+        Article.findOneAndDelete({ slug: post_id }, (err, doc) => {
+            if (err) res.json({ error: true, msg: err });
+            else res.json({ success: true });
             return resolve();
         });
     });
@@ -176,11 +176,11 @@ handle('delete', (req, res, post_id, {Article})=>{
 
 
 export default connectDB((req, res, DB_Models) => {
-    const {query: { post_id }} = req;
+    const { query: { post_id } } = req;
 
     const method = req.method;
     if (!(method in handlers))
-        return res.json({msg: "You can't do that"});
+        return res.json({ msg: "You can't do that" });
 
     return handlers[method](req, res, post_id, DB_Models);
 });
