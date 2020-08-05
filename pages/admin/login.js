@@ -15,10 +15,6 @@ function LoginPage(props) {
 
     const {host, scheme} = props;
 
-    // redirect url
-    const {path} = props;
-    const {rdr} = queryString.parse(path);
-
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
@@ -27,11 +23,11 @@ function LoginPage(props) {
     return (
         <>
         <Head>
-                <title> Admin Login - {details.description} </title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="robots" content="noindex"/>
-                <meta name="description" content={details.name}/>
-            </Head>
+            <title> Admin Login - {details.description} </title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta name="robots" content="noindex"/>
+            <meta name="description" content={details.name}/>
+        </Head>
 
             <div className='container'>
                 <div className='position-fixed back-btn'>
@@ -43,18 +39,18 @@ function LoginPage(props) {
                 <div className='home-main mb-5'>
                     <h1> LOGIN </h1>
                     <div className="mt-5">
-                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, rdr, host, scheme)}>
-                                <div className="form-group mt-5">
-                                    <input
-                                        type="password"
-                                        className="form-control w-50 mr-2 input-login-pwd"
-                                        placeholder="Enter password"
-                                        value={pwd}
-                                        onChange={ev=>setPwd(ev.target.value)}
-                                        style={{display:"inline-block"}}
-                                    />
-                                    <ClipLoader size={15} color={"#123abc"} loading={isLoading}/>
-                                </div>
+                        <form onSubmit={ev=>Login(ev, pwd, beginAuth, host, scheme)}>
+                            <div className="form-group mt-5">
+                                <input
+                                    type="password"
+                                    className="form-control w-50 mr-2 input-login-pwd"
+                                    placeholder="Enter password"
+                                    value={pwd}
+                                    onChange={ev=>setPwd(ev.target.value)}
+                                    style={{display:"inline-block"}}
+                                />
+                                <ClipLoader size={15} color={"#123abc"} loading={isLoading}/>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -65,8 +61,10 @@ function LoginPage(props) {
 
 
 
-async function Login(ev, pwd, beginAuth, rdr, host, scheme) {
+async function Login(ev, pwd, beginAuth, host, scheme) {
     ev.preventDefault();
+
+    const {rdr} = queryString.parse(location.href.split("?")[1]);
 
     // render spinner active
     beginAuth(true);
@@ -101,12 +99,11 @@ async function Login(ev, pwd, beginAuth, rdr, host, scheme) {
 }
 
 
-export function getServerSideProps(ctx) {
+export function getStaticProps(ctx) {
     return {
         props: {
-            host: ctx.req.headers.host,
+            host: process.env.HOST,
             scheme: process.env.SCHEME,
-            path: ctx.req.url.split('?')[1] || null
         }
     }
 }
