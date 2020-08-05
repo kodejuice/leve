@@ -94,7 +94,11 @@ export async function getStaticProps(ctx) {
     return {
         props: {
             posts: data
-        }
+        },
+
+        // we will attempt to re-generate the page:
+        // - at most once every second
+        revalidate: 1
     };
 }
 
