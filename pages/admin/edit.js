@@ -78,7 +78,7 @@ export default function Edit(props) {
     //...
 
 
-    useEffect(_=>{
+    useEffect(_ => {
         document.querySelector("body").classList.remove('dark');
         document.querySelector("nav.navbar.fixed-top").classList.remove('bg-dark');
         document.querySelector("nav.navbar.fixed-top").classList.add('bg-light');
@@ -90,22 +90,27 @@ export default function Edit(props) {
         });
 
         // before unload event
-        window.onbeforeunload = function (e) {
-                // Saving? or New Post?, no need to prompt
-                if (isSaving || !slug) return null;
+        window.onbeforeunload = function(e) {
+            // Saving? or New Post?, no need to prompt
+            if (isSaving || !slug) return null;
 
-                e = e || window.event;
+            e = e || window.event;
 
-                // For IE and Firefox prior to version 4
-                if (e) {
-                    e.returnValue = 'Leave page ?';
-                }
-                // For Safari
-                return 'Leave page ?';
+            // For IE and Firefox prior to version 4
+            if (e) {
+                e.returnValue = 'Leave page ?';
+            }
+            // For Safari
+            return 'Leave page ?';
         };
+
+        // cleanup
+        return function() {
+            // before unload event
+            window.onbeforeunload = ()=>null;
+        }
     });
-
-
+ 
     const highlight = (post.slug!=null) ? {border: "1px solid orange"} : {};
     return (
         <>
@@ -395,8 +400,8 @@ export default function Edit(props) {
 /**
  * Saves Post to DB
  */
-async function savePost(params, all_posts, setSaveState, redirect_url=null, url) {
-    const {auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew} = params;
+async function savePost(params, all_posts, setSaveState, redirect_url = null, url) {
+    const { auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew } = params;
 
     let slug = params.slug || auto_slug;
 
@@ -427,7 +432,7 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null, url)
     try {
         // create/update post
         res = await addPostToDB(data, isNew, url);
-    } catch(e) {
+    } catch (e) {
         alert(e);
         return setSaveState(false), false;
     }
@@ -438,7 +443,7 @@ async function savePost(params, all_posts, setSaveState, redirect_url=null, url)
         setSaveState(false);
         return false;
     }
-    
+
     // no need for this, the page gets reloaded anyways
     // and we also need to check if the reload was caused by a Save action
     // so we dont ask the user if they want to leave
@@ -501,7 +506,7 @@ export async function getServerSideProps(ctx) {
                     draft: true,
                     allow_comments: true,
                     next_post: {},
-                    post_quote: {quote: null}
+                    post_quote: { quote: null }
                 }
             }
         }

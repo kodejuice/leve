@@ -22,7 +22,6 @@ function LoginPage(props) {
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
-        window.onbeforeunload = ()=>null;
     });
 
     return (
