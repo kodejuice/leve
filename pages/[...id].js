@@ -157,77 +157,86 @@ function PostView(props) {
                     </div>
                 </div>
 
-                <div className='home-main mt-5 post-view'>
-                    <h1 className='post-title'> {post.title} </h1>
-                    <p className='info ml-3'>
-                        <Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
-                         <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
-                    </p>
+                <section>
+                    <div className='home-main mt-5 post-view'>
+                        <header>
+                            <h1 className='post-title'> {post.title} </h1>
+                            <p className='info ml-3'>
+                                <Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
+                                 <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
+                            </p>
+                        </header>
 
-                    <div className='article'>
-                        <em className='pub_date'> {post.pub_date} </em>
+                        <div className='article'>
+                            <article>
+                                <em className='pub_date'> {post.pub_date} </em>
 
-                        {/* quote */}
-                        <blockquote className="blockquote text-right mt-4">
-                            <p className="mb-0 post-quote">{post.post_quote.quote}</p>
-                            <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
-                        </blockquote>
+                                {/* quote */}
+                                <blockquote className="blockquote text-right mt-4">
+                                    <p className="mb-0 post-quote">{post.post_quote.quote}</p>
+                                    <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
+                                </blockquote>
 
-                        {/* post content */}
-                        <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content || "")}}/>
-                        <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
+                                {/* post content */}
+                                <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content || "")}}/>
+                                <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
+                            </article>
 
-                        <div className='row mb-5 _post_footer'>
-                            {/* subsribe to newsletter */}
-                            <div className='col'>
-                                <legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
-                                  <div className="form-row">
-                                    <div className="col" dangerouslySetInnerHTML={{__html:`
-<div id="signupFormContainer_YPLMC">
-<div id="signupFormContent_YPLMC">
-<div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
-<input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
-<input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
-<input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
-<input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 />
-<button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
-</div>
-</div>
-</div>
-</div>
-                                    `}} />
-                                  </div>
-                            </div>
+                            <footer>
+                                <div className='row mb-5 _post_footer'>
+                                    {/* subsribe to newsletter */}
+                                    <div className='col'>
+                                        <legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
+                                          <div className="form-row">
+                                            <div className="col" dangerouslySetInnerHTML={{__html:`
+                                                <div id="signupFormContainer_YPLMC">
+                                                <div id="signupFormContent_YPLMC">
+                                                <div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
+                                                <input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
+                                                <input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
+                                                <input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
+                                                <input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 />
+                                                <button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                            `}} />
+                                          </div>
+                                    </div>
 
-                            {/* next post >> */}
-                            {!_.isEmpty(post.next_post)?
-                                <div className='col-12 col-sm-6 text-right next-post-link'>
-                                    <Link href="[...id].js" as={`/${post.next_post.slug}`}>
-                                        <a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
-                                    </Link>
+                                    {/* next post >> */}
+                                    {!_.isEmpty(post.next_post)?
+                                        <div className='col-12 col-sm-6 text-right next-post-link'>
+                                            <Link href="[...id].js" as={`/${post.next_post.slug}`}>
+                                                <a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
+                                            </Link>
+                                        </div>
+                                    : ""}
                                 </div>
-                            : ""}
-                        </div>
+                            </footer>
 
-                        {/*<!-- DISQUS HERE -->*/}
-                        <div className='comments' id='comments'>
-                            {
-                                (!post.allow_comments) ?
-                                    <b> <em> Comments Disabled </em> </b>
-                                    : (
-                                            <DiscussionEmbed
-                                                shortname={details.name+":"+post.slug}
-                                                config={{
-                                                    url: `https://${host}/${post.slug}`,
-                                                    identifier: details.name+":"+post.slug,
-                                                    title: post.title,
-                                                }}
-                                            />
-                                    )
-                            }
+                            {/*<!-- DISQUS HERE -->*/}
+                            <div className='comments' id='comments'>
+                                {
+                                    (!post.allow_comments) ?
+                                        <b> <em> Comments Disabled </em> </b>
+                                        : (
+                                                <DiscussionEmbed
+                                                    shortname={details.name+":"+post.slug}
+                                                    config={{
+                                                        url: `https://${host}/${post.slug}`,
+                                                        identifier: details.name+":"+post.slug,
+                                                        title: post.title,
+                                                    }}
+                                                />
+                                        )
+                                }
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
+
             </div>
         </>
     );
@@ -269,7 +278,7 @@ export async function getServerSideProps(ctx) {
             props: _.extend(props, {
                 host,
                 scheme: process.env.SCHEME,
-                corrections: await getBestMatch(props.id.join('/'), host)
+                corrections: await getBestMatch(props.id.join('/'), host, process.env.SCHEME)
             })
         }
     }
