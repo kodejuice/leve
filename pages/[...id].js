@@ -74,37 +74,37 @@ function PostView(props) {
 
     return (
         <>
-        <Head>
-            <title> {post.title} </title>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
-            <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
-            <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-            <script src="./js/benchmarkemail-signupform.js"/>
-            <script dangerouslySetInnerHTML={{__html:`
-                // Disqus config
-                var disqus_config = function () {
-                    this.page.url = "https://${host}/${props.post.slug}";
-                    this.page.identifier = "${details.name}:${props.post.slug}";
-                    this.page.title = "${props.post.title}";
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                    var d=document, s=d.createElement('script');
-                    s.src="https://${process.env.DISQUS_HOST}/embed.js";
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head||d.body).appendChild(s);
-                })();
-            `}} />
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
-            <script dangerouslySetInnerHTML={{__html:`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.GA_TRACK_CODE}');
-            `}} />
-        </Head>
+            <Head>
+                <title> {post.title} </title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
+                <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
+                <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
+                <script src="./js/benchmarkemail-signupform.js"/>
+                <script dangerouslySetInnerHTML={{__html:`
+                    // Disqus config
+                    var disqus_config = function () {
+                        this.page.url = "https://${host}/${props.post.slug}";
+                        this.page.identifier = "${details.name}:${props.post.slug}";
+                        this.page.title = "${props.post.title}";
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d=document, s=d.createElement('script');
+                        s.src="https://${process.env.DISQUS_HOST}/embed.js";
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head||d.body).appendChild(s);
+                    })();
+                `}} />
+                <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
+                <script dangerouslySetInnerHTML={{__html:`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.GA_TRACK_CODE}');
+                `}} />
+            </Head>
 
             <div className='container'>
                 <div className='position-fixed action-btn'>
@@ -220,14 +220,14 @@ function PostView(props) {
                                     (!post.allow_comments) ?
                                         <b> <em> Comments Disabled </em> </b>
                                         : (
-                                                <DiscussionEmbed
-                                                    shortname={details.name+":"+post.slug}
-                                                    config={{
-                                                        url: `https://${host}/${post.slug}`,
-                                                        identifier: details.name+":"+post.slug,
-                                                        title: post.title,
-                                                    }}
-                                                />
+                                            <DiscussionEmbed
+                                                shortname={details.name+":"+post.slug}
+                                                config={{
+                                                    url: `https://${host}/${post.slug}`,
+                                                    identifier: details.name+":"+post.slug,
+                                                    title: post.title,
+                                                }}
+                                            />
                                         )
                                 }
                             </div>
