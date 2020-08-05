@@ -82,10 +82,10 @@ function Home(props) {
 
 
 
-// This gets called on every request
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
     // Fetch data from API
-    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
+
+    const baseUrl = `${process.env.SCHEME}://${process.env.HOST}`;
 
     const res = await fetch(`${baseUrl}/api/post/list`);
     const data = await res.json();
