@@ -15,6 +15,11 @@
 /* printers */
 @media print {
 
+    article {
+        font: 12pt;
+        font-family: "Times New Roman";
+    }
+
     .home-link,
     ._post_footer,
     .position-fixed.action-btn {
