@@ -14,6 +14,7 @@
   "author": "Sochima Biereagu",
   "license": "MIT",
   "dependencies": {
+    "@toast-ui/editor": "^2.3.1",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.4.1",
@@ -29,7 +30,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-texmath": "^0.6.7",
     "mongoose": "^5.9.7",
-    "next": "^9.4.2",
+    "next": "^9.5.1",
     "next-fonts": "^1.1.0",
     "node-sass": "^4.14.1",
     "nookies": "^2.2.4",
