@@ -65,8 +65,6 @@ function PostView(props) {
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
 
-        window.onbeforeunload = ()=>null;
-
         // store cookie so the 'views' field of this post gets updated once
         setCookie(null, post.slug, '1', {
             path: '/',
