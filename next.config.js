@@ -10,6 +10,7 @@ module.exports = withCSS(withSass(withFonts({
 
         env: {
             SCHEME: "http",
+            HOST: "localhost:3000",
 
             MONGODB_URI: "mongodb://localhost/levecms",
 
@@ -27,6 +28,9 @@ module.exports = withCSS(withSass(withFonts({
             GA_TRACK_CODE: "UA-75709223-4",
         },
     */
+
+    target: 'serverless',
+
     enableSvg: true,
 
     webpack(config, options) {
