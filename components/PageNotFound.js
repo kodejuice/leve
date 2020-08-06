@@ -10,7 +10,7 @@ import { site_details as details } from '../site_config.js';
 
 
 /* renders a 404 page not found error */
-export default function (props) {
+export default function PageNotFound(props) {
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
@@ -42,9 +42,9 @@ export default function (props) {
                             <em> Possible corrections for '/{`${query}`}' </em>
                             <ul className='mt-2'>
                                 { corrections.map(p =>
-                                    <li title={p.title} key={p.slug}>
+                                    <li title={p.excerpt} key={p.slug}>
                                         <Link href={`/${p.slug}`}>
-                                            <a className='link'> {p.slug} </a>
+                                            <a className='link'> {p.slug} <em>&lt;{p.title}&gt;</em></a>
                                         </Link>
                                     </li> 
                                 )}
