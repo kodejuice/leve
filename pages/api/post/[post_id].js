@@ -13,11 +13,12 @@ const handle = (method, fn) => handlers[method.toUpperCase()] = fn;
 
 // get post content
 handle('get', (req, res, slug /*post_id*/ , { Article }) => {
+    let cookies = parseCookies({ req });
     let db_query = Article
         .findOne({ 'slug': slug })
         .exec();
 
-    let cookies = parseCookies({ req });
+    const __fields = "author author_email title content post_quote pub_date last_modified next_post slug draft excerpt ";
 
     return new Promise(resolve => {
         db_query.then(async post => {
@@ -33,26 +34,8 @@ handle('get', (req, res, slug /*post_id*/ , { Article }) => {
                     post.save();
                 }
 
-                let fields = ("author author_email title content post_quote pub_date last_modified next_post slug draft excerpt " + (req.query.include || "")).split(" ");
+                let fields = (__fields + (req.query.include || "")).split(" ");
                 post = _.pick(post, fields);
-
-                // get "next post >>" suggestion
-                try {
-                    let nxt_doc = await Article.findOne({ 'pub_date': { $gt: post.pub_date }, 'draft': false })
-
-                    if (!nxt_doc)
-                        nxt_doc = (await Article.find({ 'pub_date': { $lt: post.pub_date }, 'draft': false }).sort({ pub_date: 'asc' }))[0];
-
-                    if (nxt_doc) {
-                        post.next_post = {
-                            slug: nxt_doc.slug,
-                            title: nxt_doc.title
-                        };
-                    }
-                } catch (e) {
-                    console.log(e);
-                }
-                // ...
 
                 if (post.draft == true && !req.isAuthenticated) {
                     return res.json({ error: true, msg: "Not found" }), resolve();

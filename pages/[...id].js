@@ -4,12 +4,12 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
+import {useRouter} from 'next/router'
 
 import _ from 'underscore'
 import {format} from 'date-fns'
 import { parseCookies, setCookie } from 'nookies'
 import Toggle from '../components/home/Toggle';
-
 
 import { DiscussionEmbed } from 'disqus-react'
 import MarkdownIt from 'markdown-it'
@@ -19,10 +19,12 @@ import 'react-markdown-editor-lite/lib/index.css'
 import 'highlight.js/styles/github.css'
 
 import PageNotFound from '../components/PageNotFound'
-
+import PageError from '../components/PageError'
 
 import {setTheme} from '../utils';
 import {getBestMatch} from '../utils/string-similarity';
+import {getPost, getPosts} from '../utils/fetch-post';
+
 import { site_details as details } from '../site_config.js';
 
 
@@ -47,28 +49,40 @@ mdParser.use(tm, {
 });
 
 
-
 // DEBUG
 global.log = (...x) => console.log(...x)
+global.str = JSON.stringify;
 
+function PostView(props) {    
+    const router = useRouter();
 
-function PostView(props) {
-    // props passed from getServerSideProps()
-    const {id, post, corrections, host, scheme} = props;
-    
-    // invalid post id, render 404 page
-    if (!post) {
+    let {id, host, scheme, post, corrections} = props;
+
+    // page not yet generated
+    // display an incomplete loading page
+    // until getStaticProps() finish running
+    if (router.isFallback) {
+        post = getPlaceholder();
+    }
+    else if (!post) {
+        // no post data
+        // implies invalid post id, render 404 page
         return <PageNotFound id={id} corrections={corrections} />;
     }
+
 
     useEffect(_=>{
         if (parseCookies(null).__dark == "1")
             document.querySelector("body").classList.add('dark');
 
-        // store cookie so the 'views' field of this post gets updated once
-        setCookie(null, post.slug, '1', {
-            path: '/',
-            maxAge: 86400 * 31 /* 31 days */
+        update_views(props.id, scheme).then(yes => {
+            if (yes) {
+                // store cookie so the 'views' field of this post gets updated once
+                setCookie(null, post.slug, '1', {
+                    path: '/',
+                    maxAge: 86400 * 31 /* 31 days */
+                });
+            }
         });
     });
 
@@ -86,9 +100,9 @@ function PostView(props) {
                 <script dangerouslySetInnerHTML={{__html:`
                     // Disqus config
                     var disqus_config = function () {
-                        this.page.url = "https://${host}/${props.post.slug}";
-                        this.page.identifier = "${details.name}:${props.post.slug}";
-                        this.page.title = "${props.post.title}";
+                        this.page.url = "https://${host}/${post.slug}";
+                        this.page.identifier = "${details.name}:${post.slug}";
+                        this.page.title = "${post.title}";
                     };
                     (function() { // DON'T EDIT BELOW THIS LINE
                         var d=document, s=d.createElement('script');
@@ -170,10 +184,12 @@ function PostView(props) {
                                 <em className='pub_date'> {post.pub_date} </em>
 
                                 {/* quote */}
-                                <blockquote className="blockquote text-right mt-4">
-                                    <p className="mb-0 post-quote">{post.post_quote.quote}</p>
-                                    <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
-                                </blockquote>
+                                {post.post_quote != null ?
+                                    (<blockquote className="blockquote text-right mt-4">
+                                        <p className="mb-0 post-quote">{post.post_quote.quote}</p>
+                                        <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
+                                    </blockquote>)
+                                : "" }
 
                                 {/* post content */}
                                 <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content || "")}}/>
@@ -218,7 +234,7 @@ function PostView(props) {
                             <div className='comments' id='comments'>
                                 {
                                     (!post.allow_comments) ?
-                                        <b> <em> Comments Disabled </em> </b>
+                                        ((post.is_loading) ? "" : <b> <em> Comments Disabled </em> </b>)
                                         : (
                                             <DiscussionEmbed
                                                 shortname={details.name+":"+post.slug}
@@ -254,34 +270,81 @@ function reloadDisqusThread() {
 }
 
 
-// fetch Article information from database
-export async function getServerSideProps(ctx) {
-    const host = ctx.req.headers.host;
-    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
-
-    const post_id = ctx.query.id[0];
-    const res = await fetch(`${baseUrl}/api/post/${post_id}?include=allow_comments views`, {
-        headers: { cookie: ctx.req.headers.cookie }
+// this update the `views` property of a post
+// in the database
+async function update_views(slug, scheme) {
+    if (!slug) return;
+    const url = `${scheme}://${location.host}/api/post/${slug}`;
+    await fetch(url, {
+        headers: { cookie: parseCookies(null) }
     });
-    const data = await res.json()
+    return true;
+}
+
+// placeholder data
+// this will be displayed if the page isFallback
+function getPlaceholder() {
+    return {
+        is_loading: true,
+        topic: [],
+        slug: "/",
+        views: 1,
+        draft: 0,
+        content: "![Loading...](icons/spinner.svg)",
+        title: "Loading...",
+        author: details.name,
+        author_email: details.email,
+        pub_date: null,
+        last_modified: null,
+        allow_comments: false,
+        post_quote: null, // {}
+        next_post: null,  // {}
+    };
+}
+
+
+/////////////////////
+// pre-render util //
+////////////////////
+
+// get routes that should be pre-rendered
+export async function getStaticPaths() {
+    const data = await getPosts(['slug'], process.env.MONGODB_URI);
+
+    return {
+        paths: data.map(post => ({
+            params: {id: [post.slug]}
+        })),
+
+        fallback: true
+    }
+};
+
+
+// fetch Post information from database
+export async function getStaticProps(ctx) {
+    const post_id = ctx.params.id[0]; // `/{slug}`
+    const [host, scheme, mongo_uri] = [process.env.HOST, process.env.SCHEME, process.env.MONGODB_URI];
+
+    const data = await getPost(post_id, mongo_uri);
 
     const props = {
-        post: null,
-        id: ctx.query.id
+        host,
+        scheme,
+        id: ctx.params.id,
     };
 
     if (data.error) {
         // no post with slug '${post_id}'
         return {
             props: _.extend(props, {
-                host,
-                scheme: process.env.SCHEME,
-                corrections: await getBestMatch(props.id.join('/'), host, process.env.SCHEME)
-            })
+                corrections: await getBestMatch(ctx.params.id.join('/'), mongo_uri)
+            }),
+            revalidate: 60
         }
     }
 
-    // formate date in post
+    // format date in post
     let {pub_date, last_modified} = data;
     data.pub_date = (data.pub_date && format(new Date(pub_date), "MMMM dd, yyyy")) || null;
     data.last_modified = (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) || null;
@@ -289,11 +352,11 @@ export async function getServerSideProps(ctx) {
 
     return {
         props: _.extend(props, {
-            host,
-            scheme: process.env.SCHEME,
             post: data
-        })
+        }),
+        revalidate: 60
     }
 }
+
 
 export default PostView;
