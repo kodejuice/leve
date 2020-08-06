@@ -8,6 +8,8 @@ import Posts from '../components/home/Posts';
 import Header from '../components/home/Header';
 import Toggle from '../components/home/Toggle';
 
+import {getPosts} from '../utils/fetch-post';
+
 import { site_details as details } from '../site_config.js';
 
 
@@ -67,12 +69,21 @@ function Home(props) {
                 </div>
 
                 <div className='home-main mb-5'>
-                    <Header details={details} />
-                    <Posts recent_posts={recent_posts} all_posts={posts} />
+                    <section>
+                        <header>
+                            <Header details={details} />
+                        </header>
 
-                    <div className='mt-5 pl-0 ml-0' title='Get an email whenever theres new content'>
-                        <a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ"> <em> Subscribe to newsletter ! </em> </a>
-                    </div>
+                        <article>
+                            <Posts recent_posts={recent_posts} all_posts={posts} />
+                        </article>
+
+                        <footer>
+                            <div className='mt-5 pl-0 ml-0' title='Get an email whenever theres new content'>
+                                <a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ"> <em> Subscribe to newsletter ! </em> </a>
+                            </div>
+                        </footer>
+                    </section>
                 </div>
             </div>
         </>
@@ -83,12 +94,10 @@ function Home(props) {
 
 
 export async function getStaticProps(ctx) {
-    // Fetch data from API
+    const mongo_uri = process.env.MONGODB_URI;
 
-    const baseUrl = `${process.env.SCHEME}://${process.env.HOST}`;
-
-    const res = await fetch(`${baseUrl}/api/post/list`);
-    const data = await res.json();
+    // Fetch data from database
+    const data = await getPosts(['title', 'excerpt', 'slug', 'pub_date'], mongo_uri);
 
     // Pass data to the page via props
     return {
@@ -97,8 +106,8 @@ export async function getStaticProps(ctx) {
         },
 
         // we will attempt to re-generate the page:
-        // - at most once every second
-        revalidate: 1
+        // - at most once every 24 hours
+        revalidate: 86400 //seconds
     };
 }
 
