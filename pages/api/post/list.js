@@ -28,19 +28,19 @@ handle('get', async (req, res, { Article }) => {
         db_query.exec();
 
         db_query.then(posts => {
-                if (need_draft == 'true' && !req.isAuthenticated) {
-                    // respond with empty rather returning non-drafts
-                    res.json([])
-                } else {
-                    res.json(posts)
-                }
+            if (need_draft == 'true' && !req.isAuthenticated) {
+                // respond with empty rather returning non-drafts
+                res.json([])
+            } else {
+                res.json(posts)
+            }
 
-                resolve();
-            })
-            .catch(err => {
-                res.send({ err });
-                resolve();
-            });
+            resolve();
+        })
+        .catch(err => {
+            res.send({ err });
+            resolve();
+        });
     });
 });
 
