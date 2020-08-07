@@ -11,6 +11,8 @@ import Posts from '../../components/admin/Posts'
 import Header from '../../components/admin/Header'
 import { site_details as details } from '../../site_config.js';
 
+import {getPosts} from '../../utils/fetch-post';
+
 import verifyAuth from '../../utils/auth.js';
 
 
@@ -57,21 +59,16 @@ function List(props) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
+    const mongo_uri = process.env.MONGODB_URI;
 
-    const pub_res = await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt pub_date topic`, {
-        headers: {cookie: ctx.req.headers.cookie}
-    });
-    const draft_res= await fetch(`${baseUrl}/api/post/list?fields=title slug excerpt creation_date topic draft_revisions&draft=true`, {
-        headers: {cookie: ctx.req.headers.cookie}
-    });
-
-    // format date in posts
-    const published = (await pub_res.json()).map(post => {
+    let fields = ['title','slug','excerpt','pub_date','topic'];
+    const published = (await getPosts(fields,mongo_uri)).map(post => {
         post.pub_date = (post.pub_date && format(new Date(post.pub_date), "MMMM dd, yyyy")) || null;
         return post;
     });
-    const drafts = (await draft_res.json())
+
+    let draft_fields = ['title','slug','excerpt','pub_date','topic','draft_revisions'];
+    const drafts = (await getPosts(draft_fields,mongo_uri,true))
         .sort((x,y) => new Date(y.creation_date) - new Date(x.creation_date)) // sort in desceding order of creation
         .map(post => {
             post.creation_date = (post.creation_date && format(new Date(post.creation_date), "MMMM dd, yyyy")) || null;
