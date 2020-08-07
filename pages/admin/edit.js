@@ -55,7 +55,7 @@ mdParser.use(tm, {
 
 
 export default function Edit(props) {
-    let {post, all_posts, url, host} = props;
+    let {post, url, host} = props;
     const isNew = (post.slug == null);
 
     // modal states
@@ -111,7 +111,7 @@ export default function Edit(props) {
         <>
             <HotKeys keyMap={{SAVE: "ctrl+enter", PREVIEW: "ctrl+b"}}>
             <HotKeys handlers={{
-                SAVE: ev=>{ev.preventDefault(); savePost(post_data, all_posts, setSaveState, null, url)},
+                SAVE: ev=>{ev.preventDefault(); savePost(post_data, setSaveState, null, url)},
                 PREVIEW: ev=>{ev.preventDefault(); if(!quotesOpen) openPreview(!previewOpen)}
             }}>
 
@@ -216,7 +216,7 @@ export default function Edit(props) {
                                 <button
                                     disabled={isSaving==true}
                                     className='btn btn-link'
-                                    onClick={_=> confirm("Save ?") && savePost(post_data, all_posts, setSaveState, `//${host}/${slug}`, url)}>
+                                    onClick={_=> confirm("Save ?") && savePost(post_data, setSaveState, `//${host}/${slug}`, url)}>
                                     <a> View Post Page </a>
                                 </button>
 
@@ -232,7 +232,7 @@ export default function Edit(props) {
 
                                     {/* Save Post */}
                                     <button
-                                        onClick={_ => {savePost(post_data, all_posts, setSaveState, null, url);}}
+                                        onClick={_ => {savePost(post_data, setSaveState, null, url);}}
                                         title="Ctrl-enter to save"
                                         disabled={isSaving == true}
                                         className='btn btn-outline-primary'>
@@ -395,7 +395,7 @@ export default function Edit(props) {
 /**
  * Saves Post to DB
  */
-async function savePost(params, all_posts, setSaveState, redirect_url = null, url) {
+async function savePost(params, setSaveState, redirect_url = null, url) {
     const { auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew } = params;
 
     let slug = params.slug || auto_slug;
@@ -479,8 +479,6 @@ export async function getServerSideProps(ctx) {
 
                 post_id: post_id || null,
 
-                all_posts,
-
                 // blank template, (new post)
                 post: {
                     title: "",
@@ -499,7 +497,6 @@ export async function getServerSideProps(ctx) {
         props: {
             host: ctx.req.headers.host,
             url: process.env.SCHEME + "://" + ctx.req.headers.host,
-            all_posts,
             post_id,
             post: data
         }
