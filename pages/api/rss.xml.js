@@ -33,7 +33,7 @@ export default connectDB((req, res, DB_Models) => {
         <author> ${post.author_email} </author>
         <comments> http://${req.headers.host}/${post.slug}#comments </comments>
         <category> ${post.topic.join(", ")} </category>
-        <language> en-us </language>
+        <language> en-NG </language>
         <guid> ${post.slug} </guid>
     </item>
 `;
