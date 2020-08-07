@@ -11,7 +11,6 @@ import {format} from 'date-fns'
 import { CommentCount } from 'disqus-react'
 import Modal from 'react-modal'
 import ClipLoader from "react-spinners/ClipLoader"
-import { setCookie } from 'nookies'
 import { HotKeys } from "react-hotkeys"
 
 import MarkdownIt from 'markdown-it'
@@ -84,12 +83,6 @@ export default function Edit(props) {
         document.querySelector("body").classList.remove('dark');
         document.querySelector("nav.navbar.fixed-top").classList.remove('bg-dark');
         document.querySelector("nav.navbar.fixed-top").classList.add('bg-light');
-
-        // store cookie so the 'views' field of this post gets updated only once
-        setCookie(null, post.slug, '1', {
-            path: '/',
-            maxAge: 86400 * 86400 /* 86400 days, 236 years(LoL) */
-        });
 
         // before unload event
         window.onbeforeunload = function(e) {
