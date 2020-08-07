@@ -26,6 +26,8 @@ import QuoteSelect from '../../components/admin/QuoteSelect';
 import { WordCount, LineCount, toSlug, addPostToDB, deleteDBPost, getKeywords } from '../../utils';
 import { site_details as details } from '../../site_config.js';
 
+import {getPost} from '../../utils/fetch-post';
+
 import verifyAuth from '../../utils/auth.js';
 
 
@@ -472,20 +474,8 @@ async function deletePost(slug, url) {
 export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
-    const baseUrl = `${process.env.SCHEME}://${ctx.req.headers.host}`;
-
     const post_id = ctx.query.slug;
-    const res = await fetch(`${baseUrl}/api/post/${post_id}?include=draft_revisions allow_comments views topic`, {
-        headers: { cookie: ctx.req.headers.cookie }
-    });
-    const data = await res.json()
-
-    // fetch all posts, (used for the "next post" <select>)
-    let all_posts = await fetch(`${baseUrl}/api/post/list?fields=title slug`);
-    all_posts = (await all_posts.json()).map(post => {
-        return post;
-    });
-    // ...
+    const data = await getPost(post_id, process.env.MONGODB_URI, false);
 
     if (data.error) {
         // no post with slug '${post_id}'
