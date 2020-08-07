@@ -57,7 +57,7 @@ export async function getPosts(fields, mongo_uri, draft=false) {
             .find()
             .select(fields.join(" "))
             .sort({ views: 'desc' })
-            .where('draft', false)
+            .where('draft', draft)
             .exec();
 
         query.then(posts => {
