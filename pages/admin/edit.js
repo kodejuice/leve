@@ -209,6 +209,9 @@ export default function Edit(props) {
 
                         {/* Second column */}
                         <div className='col-12 col-sm-3 visible-text'>
+
+                            {/* BLOCKS */}
+
                             {/*1st block (action block)*/}
                             <div className='block-1 border-bottom pb-2 mt-3'>
 
