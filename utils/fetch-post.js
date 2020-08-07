@@ -17,16 +17,16 @@ const toObject = payload => JSON.parse(JSON.stringify(payload));
  * @param      {boolean}  [next_post=true]  Should we get the next post suggestion?
  * @return     {Promise}  The post.
  */
-export async function getPost(slug, mongo_uri, next_post=true) {
+export async function getPost(slug, mongo_uri, next_post=true, draft=false) {
     const model = await db_model(mongo_uri);
 
     return new Promise(resolve => {
         let query = model
-            .findOne({ 'slug': slug, 'draft': false })
+            .findOne({ 'slug': slug })
             .exec();
 
         query.then(post => {
-            if (!post) {
+            if (!post || (post.draft && draft==false)) {
                 return resolve({ error: true, msg: "Not found" });
             }
 
