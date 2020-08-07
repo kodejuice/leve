@@ -38,7 +38,7 @@ function List(props) {
                         <div className='col-6'>
                             <h2>
                                 <Link href="edit">
-                                    <a className="btn btn-sm btn-outline-secondary">Add New</a>
+                                    <a className="no-bg-color btn btn-sm btn-outline-secondary">Add New</a>
                                 </Link>
                             </h2>
                         </div>

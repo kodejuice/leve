@@ -31,10 +31,10 @@ const Header = (props) => {
             <div className="container-fluid">
                 {/*navbar*/}
                 <nav className={`navbar ${theme} fixed-top flex-md-nowrap p-0 shadow`} style={{zIndex:999}}>
-                    <a title="Visit website" className="navbar-brand col-sm-3 col-md-2 mr-0" href={`http://${host}`}>{details.name}</a>
+                    <a title="Visit website" className="no-bg-color navbar-brand col-sm-3 col-md-2 mr-0" href={`http://${host}`}>{details.name}</a>
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
-                            <a className="nav-link btn btn-link" onClick={ev => {
+                            <a className="nav-link btn btn-link no-bg-color" onClick={ev => {
                                 if (confirm("Sign out?")) {
                                     document.cookie = "__token=; path=/; maxAge=0;"
                                     location.reload();
@@ -52,7 +52,7 @@ const Header = (props) => {
                                 {sidebarLinks.map(obj=>
                                     <li className="nav-item" key={obj.href}>
                                         <Link href={obj.href} key={obj.name}>
-                                            <a className={"nav-link"+(page==obj.href?' active':'')}>
+                                            <a className={"nav-link"+(page==obj.href?' active':'')+" no-bg-color"}>
                                                 <span className={'mr-2 glyphicon glyphicon-'+obj.icon}></span>
                                                 {obj.name} <span className="sr-only">(current)</span>
                                             </a>

@@ -126,9 +126,9 @@ export default function Posts(props) {
         <>
             <div className="mt-4">
                 <div className='toggle-btn'>
-                    {published.length && <a onClick={_=>setState(true)} className={`link-btn btn btn-link bold-${l_pub}`}> Published ({published.length}) </a> || ""}
+                    {published.length && <a onClick={_=>setState(true)} className={`no-bg-color link-btn btn btn-link bold-${l_pub}`}> Published ({published.length}) </a> || ""}
                     {published.length && drafts.length && <b>|</b> || ""}
-                    {drafts.length && <a onClick={_=>setState(false)} className={`link-btn btn btn-link bold-${!l_pub}`}> Draft ({drafts.length}) </a> || ""}
+                    {drafts.length && <a onClick={_=>setState(false)} className={`no-bg-color link-btn btn btn-link bold-${!l_pub}`}> Draft ({drafts.length}) </a> || ""}
                 </div>
             </div>
 
