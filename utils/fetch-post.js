@@ -9,8 +9,15 @@ let DB_Models = require('../backend/database/model.js');
 const toObject = payload => JSON.parse(JSON.stringify(payload));
 
 
-// fetch a single post from DB
-export async function getPost(slug, mongo_uri) {
+/**
+ * Fetch a single post from DB.
+ *
+ * @param      {string}   slug              The slug of the post (post identifier) `http://{host}/{slug}`
+ * @param      {string}   mongo_uri         The mongodb connection URI
+ * @param      {boolean}  [next_post=true]  Should we get the next post suggestion?
+ * @return     {Promise}  The post.
+ */
+export async function getPost(slug, mongo_uri, next_post=true) {
     const model = await db_model(mongo_uri);
 
     return new Promise(resolve => {
@@ -35,8 +42,14 @@ export async function getPost(slug, mongo_uri) {
 }
 
 
-// fetch all posts from DB
-export async function getPosts(fields, mongo_uri) {
+/**
+ * Fetch all posts from DB.
+ *
+ * @param      {string[]}  fields     Fields to select in the database model
+ * @param      {<type>}    mongo_uri  The mongodb connection URI
+ * @return     {Promise}   The posts.
+ */
+export async function getPosts(fields, mongo_uri, draft=false) {
     const model = await db_model(mongo_uri);
 
     return new Promise(resolve => {
@@ -75,7 +88,12 @@ async function getNextPosts(post, model) {
 // DB Connect //
 ////////////////
 
-
+/**
+ * Connect to database
+ *
+ * @param      {string}   uri     The connection uri
+ * @return     {Promise}  { The database Article model }
+ */
 async function db_model(uri) {
     // if we connected already then just return the model
     // we stored in the connections[] array
