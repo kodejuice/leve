@@ -37,6 +37,10 @@ export async function getBestMatch(str, mongo_uri){
     // select results with at least 30% match
     posts = posts.filter(x => x.sdc > 0.3);
 
-    return posts.slice(0, 5); // the top 5 result
+    return JSON.parse(
+        JSON.stringify(
+            posts.slice(0, 5) // the top 5 result
+        )
+    );
 }
 
