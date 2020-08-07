@@ -102,7 +102,7 @@ async function getNextPosts(post, model) {
  */
 async function db_model(uri) {
     // if we connected already then just return the model
-    // we stored in the connections[] array
+    // we stored in the mongoose.connections[] array
     if (mongoose.connections[0].readyState)
         return mongoose.connections.DB_Models.Article;
 
