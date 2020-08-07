@@ -3,8 +3,7 @@ import Link from 'next/link'
 
 import {useEffect} from 'react'
 
-import fetch from 'node-fetch'
-import { parseCookies, setCookie } from 'nookies'
+import { parseCookies } from 'nookies'
 
 import { site_details as details } from '../site_config.js';
 
