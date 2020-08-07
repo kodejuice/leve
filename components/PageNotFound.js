@@ -44,7 +44,7 @@ export default function PageNotFound(props) {
                                 { corrections.map(p =>
                                     <li title={p.excerpt} key={p.slug}>
                                         <Link href={`/${p.slug}`}>
-                                            <a className='link'> {p.slug} <em>&lt;{p.title}&gt;</em></a>
+                                            <a className='link no-underline'> {p.slug} <em>&lt;{p.title}&gt;</em></a>
                                         </Link>
                                     </li> 
                                 )}
