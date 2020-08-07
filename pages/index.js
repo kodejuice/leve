@@ -26,6 +26,9 @@ function Home(props) {
     let post_per_page = details.site.post_per_page;
     let recent_posts = posts.slice().sort((x,y) => new Date(y.pub_date) - new Date(x.pub_date)).slice(0,post_per_page)
 
+    // rss feed url (for header icons)
+    details.links.rss_url = `${props.scheme}://${props.host}/api/rss.xml`;
+
     return (
         <>
             <Head>
@@ -102,7 +105,9 @@ export async function getStaticProps(ctx) {
     // Pass data to the page via props
     return {
         props: {
-            posts: data
+            posts: data,
+            host: process.env.HOST,
+            scheme: process.env.SCHEME,
         },
 
         // we will attempt to re-generate the page:

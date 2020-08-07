@@ -3,10 +3,11 @@ const Icon = (props) => {
         // github: "https://img.icons8.com/dusk/21/000000/github.png",
         github: "/icons/github.png",
         twitter: "/icons/twitter.png",
-        "résumé": "/icons/resume.png"
+        "résumé": "/icons/resume.png",
+        "rss feed": "/icons/rss.png",
     };
     return (
-        <a title={props.name} href={props.url} target={props.blank && "_blank"}> <img src={iconURL[props.name]}/> </a>
+        <a className='no-bg-color' title={props.name} href={props.url} target={props.blank && "_blank"}> <img src={iconURL[props.name]}/> </a>
     );
 }
 
@@ -25,10 +26,12 @@ const Header = (props) => {
                             <td> <Icon url={links.github} name='github' blank={true}/> </td>
                             <td> <Icon url={links.twitter} name='twitter' blank={true}/> </td>
                             <td> <Icon url={links.resume} name='résumé'/> </td>
+                            <td></td> <td></td> <td></td> <td></td>
+                            <td><Icon url={links.rss_url} name='rss feed'/> </td>
                         </tr>
                     </tbody>
                 </table>
-                <em className='site-email'> <a href={"mailto:"+p.email} target='_blank'> {p.email} </a> </em>
+                <em className='site-email'> <a className='no-bg-color' href={"mailto:"+p.email} target='_blank'> {p.email} </a> </em>
             </div>
         </div>
     );
