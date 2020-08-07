@@ -15,6 +15,7 @@ const toObject = payload => JSON.parse(JSON.stringify(payload));
  * @param      {string}   slug              The slug of the post (post identifier) `http://{host}/{slug}`
  * @param      {string}   mongo_uri         The mongodb connection URI
  * @param      {boolean}  [next_post=true]  Should we get the next post suggestion?
+ * @param      {boolean}  [draft=true]      Should we also show drafts?
  * @return     {Promise}  The post.
  */
 export async function getPost(slug, mongo_uri, next_post=true, draft=false) {
