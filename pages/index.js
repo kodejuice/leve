@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
 import {useEffect} from 'react'
-import { parseCookies, setCookie } from 'nookies'
+import { parseCookies } from 'nookies'
 
 import Posts from '../components/home/Posts';
 import Header from '../components/home/Header';
