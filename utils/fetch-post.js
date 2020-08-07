@@ -30,13 +30,19 @@ export async function getPost(slug, mongo_uri, next_post=true) {
                 return resolve({ error: true, msg: "Not found" });
             }
 
-            getNextPosts(post, model).then(nxt => {
-                post.next_post = nxt;
-                resolve(toObject(post));
-            }).catch(err => {});
+            if (next_post) {
+                getNextPosts(post, model).then(nxt => {
+                    post.next_post = nxt;
+                    resolve(toObject(post));
+                }).catch(err => {
+                    resolve(toObject(post));
+                });
+            } else {
+                return resolve(toObject(post));
+            }
 
         }).catch(err => {
-            resolve({error: true});
+            return resolve({error: true});
         });
     });
 }
