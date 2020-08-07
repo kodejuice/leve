@@ -69,7 +69,7 @@ export default function Edit(props) {
     const [content, setContent] = useState(post.content);
     const [slug, setSlug] = useState(post.slug);
     const [auto_slug, setAutoSlug] = useState("");
-    const [postquote, setQuote] = useState(post.post_quote);
+    const [postquote, setQuote] = useState(post.post_quote || {});
     const [topic, setTopic] = useState(post_topic);
     const [draft, setVisibility] = useState(post.draft);
     const [allow_comments, allowComment] = useState(Boolean(post.allow_comments));
@@ -471,7 +471,7 @@ export async function getServerSideProps(ctx) {
     await verifyAuth(ctx);
 
     const post_id = ctx.query.slug;
-    const data = await getPost(post_id, process.env.MONGODB_URI, false);
+    const data = await getPost(post_id, process.env.MONGODB_URI, false, true);
 
     if (data.error) {
         // no post with slug '${post_id}'
