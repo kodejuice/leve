@@ -1,4 +1,5 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
+import { parseCookies } from 'nookies'
 import '../assets/styles.scss'
 import '../assets/dark-theme.scss'
 import '../assets/pagination.scss'
@@ -14,11 +15,19 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
+	const [isMounted, setIsMounted] = useState(false);
 
     // add style <body> tag
     useEffect(_=>{
+        // set theme
         document.querySelector("body").classList.add('body');
+        if (parseCookies(null).__dark == "1") {
+            document.querySelector("body").classList.add('dark');
+        }
+
+		setIsMounted(true);
     });
 
-    return <Component {...pageProps} />;
+    return isMounted && <Component {...pageProps} />;
 }
+

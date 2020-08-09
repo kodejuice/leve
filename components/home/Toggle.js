@@ -5,7 +5,8 @@ import {setTheme} from '../../utils';
 
 
 export default function Toggle(props) {
-		const {onSwitch} = props;
+	const {onSwitch} = props;
+
     return (
     	<div title="toggle">
         <_Toggle
@@ -19,12 +20,14 @@ export default function Toggle(props) {
             knobRadius="2px"
             checked={+parseCookies(null).__dark == 1}
             onToggle={e=>{
-            		if (onSwitch) onSwitch();
+        		if (onSwitch) onSwitch();
                 let {checked} = e.target;
+
                 setCookie(null, "__dark", (checked ? 1 : 0), {
                     path: '/',
                     maxAge: 86400 * 86400
                 });
+
                 setTheme(parseCookies(null).__dark);
             }}
         />

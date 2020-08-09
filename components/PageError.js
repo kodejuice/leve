@@ -3,16 +3,10 @@ import Link from 'next/link'
 
 import {useEffect} from 'react'
 
-import { parseCookies } from 'nookies'
-
 import { site_details as details } from '../site_config.js';
 
 
 export default function PageError() {
-    useEffect(_=>{
-        if (parseCookies(null).__dark == "1")
-            document.querySelector("body").classList.add('dark');
-    });
 
     return (
         <>

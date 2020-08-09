@@ -3,18 +3,11 @@ import Link from 'next/link'
 
 import {useEffect} from 'react'
 
-import { parseCookies } from 'nookies'
-
 import { site_details as details } from '../site_config.js';
 
 
 /* renders a 404 page not found error */
 export default function PageNotFound(props) {
-    useEffect(_=>{
-        if (parseCookies(null).__dark == "1")
-            document.querySelector("body").classList.add('dark');
-    });
-
     let query = props.id.join('/');
     let {corrections} = props;
 

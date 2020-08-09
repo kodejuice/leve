@@ -14,11 +14,6 @@ import { site_details as details } from '../site_config.js';
 
 
 function Home(props) {
-    useEffect(_=>{
-        if (parseCookies(null).__dark == "1")
-            document.querySelector("body").classList.add('dark');
-    });
-
     let {posts} = props;
 
     // get recent posts from data,

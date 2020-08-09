@@ -72,9 +72,6 @@ function PostView(props) {
 
 
     useEffect(_=>{
-        if (parseCookies(null).__dark == "1")
-            document.querySelector("body").classList.add('dark');
-
         update_views(props.id, scheme).then(yes => {
             if (yes) {
                 // store cookie so the 'views' field of this post gets updated once

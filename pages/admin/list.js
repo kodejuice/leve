@@ -17,10 +17,6 @@ import verifyAuth from '../../utils/auth.js';
 
 
 function List(props) {
-    useEffect(_=>{
-        if (parseCookies(null).__dark == "1")
-            document.querySelector("body").classList.add('dark');
-    });
 
     return (
         <>

@@ -15,11 +15,6 @@ function LoginPage(props) {
 
     const {host, scheme} = props;
 
-    useEffect(_=>{
-        if (parseCookies(null).__dark == "1")
-            document.querySelector("body").classList.add('dark');
-    });
-
     return (
         <>
         <Head>
