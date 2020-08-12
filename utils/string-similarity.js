@@ -4,9 +4,6 @@ import dice from 'fast-dice-coefficient'
 import {getPosts} from './fetch-post';
 
 
-// TODO: implement improved algorithm
-
-
 /**
  * Get all post from DB and select the ones that their slug best match `str`,
  *  using the Sørensen-Dice similarity coefficient
