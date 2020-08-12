@@ -279,7 +279,7 @@ async function update_views(slug, scheme) {
 }
 
 // placeholder data
-// this will be displayed if the page isFallback
+// this will be used if the page isFallback
 function getPlaceholder() {
     return {
         is_loading: true,
