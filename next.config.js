@@ -7,6 +7,8 @@ module.exports = withCSS(withSass(withFonts({
         // To my future self:
         //  create a .env file with the following variables
         //  nextjs 9.4+ automatically loads the config file
+        //
+        // see .env.example
 
         env: {
             SCHEME: "http",
@@ -47,4 +49,4 @@ module.exports = withCSS(withSass(withFonts({
         return config
     }
 
-})))
+})));
