@@ -121,7 +121,7 @@ export default function Edit(props) {
                 <meta name="robots" content="noindex"/>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-                <script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
+                <script id="dsq-count-scr" src={`//${props.disqus_host}/count.js`} async></script>
             </Head>
 
             <div className='admin'>
@@ -479,6 +479,7 @@ export async function getServerSideProps(ctx) {
             props: {
                 host: ctx.req.headers.host,
                 url: process.env.SCHEME + "://" + ctx.req.headers.host,
+                disqus_host: process.env.DISQUS_HOST,
 
                 post_id: post_id || null,
 
@@ -500,6 +501,7 @@ export async function getServerSideProps(ctx) {
         props: {
             host: ctx.req.headers.host,
             url: process.env.SCHEME + "://" + ctx.req.headers.host,
+            disqus_host: process.env.DISQUS_HOST,
             post_id,
             post: data
         }

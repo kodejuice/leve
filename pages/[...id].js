@@ -103,17 +103,17 @@ function PostView(props) {
                     };
                     (function() { // DON'T EDIT BELOW THIS LINE
                         var d=document, s=d.createElement('script');
-                        s.src="https://${process.env.DISQUS_HOST}/embed.js";
+                        s.src="https://${props.disqus_host}/embed.js";
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head||d.body).appendChild(s);
                     })();
                 `}} />
-                <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
+                <script async src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}/>
                 <script dangerouslySetInnerHTML={{__html:`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', '${process.env.GA_TRACK_CODE}');
+                    gtag('config', '${props.ga_track_code}');
                 `}} />
             </Head>
 
@@ -329,6 +329,8 @@ export async function getStaticProps(ctx) {
         host,
         scheme,
         id: ctx.params.id,
+        ga_track_code: process.env.GA_TRACK_CODE,
+        disqus_host: process.env.DISQUS_HOST,
     };
 
     if (data.error) {

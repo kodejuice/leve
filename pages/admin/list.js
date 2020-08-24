@@ -24,7 +24,7 @@ function List(props) {
                 <title> Posts &lsaquo; {details.description} - Admin </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="robots" content="noindex"/>
-                <script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
+                <script id="dsq-count-scr" src={`//${props.disqus_host}/count.js`} async></script>
             </Head>
 
             <div className='admin'>
@@ -82,6 +82,7 @@ export async function getServerSideProps(ctx) {
             posts,
             url: process.env.SCHEME + "://" + ctx.req.headers.host,
             host: ctx.req.headers.host,
+            disqus_host: process.env.DISQUS_HOST,
             is_dark: parseCookies({req:ctx.req}).__dark=='1',
             show_draft_on_load: ctx.req.url.includes('draft=1')
         }

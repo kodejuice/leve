@@ -30,12 +30,12 @@ function Home(props) {
                 <title> {details.name} </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={details.description}/>
-                <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}/>
+                <script async src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}/>
                 <script dangerouslySetInnerHTML={{__html:`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', '${process.env.GA_TRACK_CODE}');
+                    gtag('config', '${props.ga_track_code}');
                 `}} />
             </Head>
 
@@ -103,6 +103,7 @@ export async function getStaticProps(ctx) {
             posts: data,
             host: process.env.HOST,
             scheme: process.env.SCHEME,
+            ga_track_code: process.env.GA_TRACK_CODE,
         },
 
         // we will attempt to re-generate the page:
