@@ -90,6 +90,21 @@ function PostView(props) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
                 <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
+                <link rel="canonical" href="https://www.zainrizvi.io/blog/whats-it-like-as-a-senior-engineer/" />   
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.excerpt} />
+                <meta property="og:url" content={`https://${host}/${post.slug}`} />
+                <meta property="article:published_time" content={post.pub_date} />
+                <meta property="article:modified_time" content={post.last_modified} />
+                <meta name="twitter:title" content={post.title} />
+                <meta name="twitter:description" content={post.excerpt} />
+                <meta name="twitter:url" content={`https://${host}/${post.slug}`} />
+                <meta property="og:type" content="article" />
+                <meta name="twitter:label1" content="Written by" />
+                <meta name="twitter:data1" content={post.author} />
+                <meta name="twitter:site" content="@kodejuice" />
+                <meta name="twitter:creator" content="@kodejuice" />
+
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
                 <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>

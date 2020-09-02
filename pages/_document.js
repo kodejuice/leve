@@ -14,7 +14,9 @@ class MyDocument extends Document {
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
                 <link rel="manifest" href="/favicon/site.webmanifest"/>
-            </Head>
+                <meta name="referrer" content="no-referrer-when-downgrade" />
+                <meta property="og:site_name" content="Biereagu Sochima" />
+             </Head>
             <body>
                 <Main />
                 <NextScript />
