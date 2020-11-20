@@ -30,6 +30,24 @@ function Home(props) {
                 <title> {details.name} </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={details.description}/>
+
+                {/*<!-- Facebook Meta Tags -->*/}
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://kodejuice.now.sh/favicon/favicon-192x192.png" />
+                <meta property="og:title" content={details.name} />
+                <meta property="og:url" content="https://kodejuice.now.sh/" />
+                <meta property="og:description" content={details.description} />
+                <meta property='og:site_name' content='Sochima Biereagu' />
+
+                {/*<!-- Twitter Meta Tags -->*/}
+                <meta name="twitter:creator" content="@kodejuice" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://kodejuice.now.sh/favicon/favicon-192x192.png" />
+                <meta property="twitter:domain" content="kodejuice.now.sh" />
+                <meta property="twitter:url" content="https://kodejuice.now.sh/" />
+                <meta name="twitter:title" content={details.name} />
+                <meta name="twitter:description" content={details.description} />
+
                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}/>
                 <script dangerouslySetInnerHTML={{__html:`
                     window.dataLayer = window.dataLayer || [];
