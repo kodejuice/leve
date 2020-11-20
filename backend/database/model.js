@@ -16,7 +16,7 @@ const ArticleSchema = new Schema({
 
     topic: [String],
     content: { type: String, default: "" },
-    post_image: {type: String, default: "https://kodejuice.now.sh/favicon/favicon-192x192.png"},
+    post_image: {type: String, default: "https://kodejuice.now.sh/sb.png"},
 
     next_post: {
         slug: String,

@@ -33,7 +33,7 @@ function Home(props) {
 
                 {/*<!-- Facebook Meta Tags -->*/}
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://kodejuice.now.sh/favicon/sb.png" />
+                <meta property="og:image" content="https://kodejuice.now.sh/sb.png" />
                 <meta property="og:title" content={details.name} />
                 <meta property="og:url" content="https://kodejuice.now.sh/" />
                 <meta property="og:description" content={details.description} />
@@ -41,6 +41,7 @@ function Home(props) {
 
                 {/*<!-- Twitter Meta Tags -->*/}
                 <meta name="twitter:creator" content="@kodejuice" />
+                <meta property="twitter:image" content="https://kodejuice.now.sh/sb.png" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="kodejuice.now.sh" />
                 <meta property="twitter:url" content="https://kodejuice.now.sh/" />
