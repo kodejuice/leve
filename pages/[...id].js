@@ -100,7 +100,7 @@ function PostView(props) {
                 <meta property="og:title" content={post.title} />
                 <meta property="og:url" content={page_url} />
                 <meta property="og:description" content={`${post.excerpt}, By: ${post.author}`} />
-                <meta property='og:site_name' content='Sochima Biereagus website' />
+                <meta property="og:site_name" content="Sochima Biereagus website" />
 
                 {/*<!-- Twitter Meta Tags -->*/}
                 <meta name="twitter:creator" content="@kodejuice" />

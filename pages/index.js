@@ -33,16 +33,15 @@ function Home(props) {
 
                 {/*<!-- Facebook Meta Tags -->*/}
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://kodejuice.now.sh/favicon/favicon-192x192.png" />
+                <meta property="og:image" content="https://kodejuice.now.sh/favicon/sb.png" />
                 <meta property="og:title" content={details.name} />
                 <meta property="og:url" content="https://kodejuice.now.sh/" />
                 <meta property="og:description" content={details.description} />
-                <meta property='og:site_name' content='Sochima Biereagu' />
+                <meta property="og:site_name" content="Sochima Biereagu" />
 
                 {/*<!-- Twitter Meta Tags -->*/}
                 <meta name="twitter:creator" content="@kodejuice" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content="https://kodejuice.now.sh/favicon/favicon-192x192.png" />
                 <meta property="twitter:domain" content="kodejuice.now.sh" />
                 <meta property="twitter:url" content="https://kodejuice.now.sh/" />
                 <meta name="twitter:title" content={details.name} />
