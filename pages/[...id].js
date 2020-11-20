@@ -6,7 +6,7 @@ import Head from 'next/head'
 import fetch from 'node-fetch'
 import {useRouter} from 'next/router'
 
-import _ from 'underscore'
+import {extend, isEmpty} from 'underscore'
 import {format} from 'date-fns'
 import { parseCookies, setCookie } from 'nookies'
 import Toggle from '../components/home/Toggle';
@@ -50,8 +50,8 @@ mdParser.use(tm, {
 
 
 // DEBUG
-global.log = (...x) => console.log(...x)
-global.str = JSON.stringify;
+// global.log = (...x) => console.log(...x)
+// global.str = JSON.stringify;
 
 function PostView(props) {    
     const router = useRouter();
@@ -83,52 +83,58 @@ function PostView(props) {
         });
     });
 
+    const page_url = `${scheme}://${host}/${post.slug}`;
+    const post_keywords = isEmpty(post.topic.join()) ? post.excerpt : post.topic.join(', ');
+
     return (
         <>
             <Head>
                 <title> {post.title} </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
-                <meta name="keywords" content={(post.topic || [post.excerpt]).join(', ')} />
-                <link rel="canonical" href="https://www.zainrizvi.io/blog/whats-it-like-as-a-senior-engineer/" />   
-                <meta property="og:title" content={post.title} />
-                <meta property="og:description" content={post.excerpt} />
-                <meta property="og:url" content={`https://${host}/${post.slug}`} />
-                <meta property="article:published_time" content={post.pub_date} />
-                <meta property="article:modified_time" content={post.last_modified} />
-                <meta name="twitter:title" content={post.title} />
-                <meta name="twitter:description" content={post.excerpt} />
-                <meta name="twitter:url" content={`https://${host}/${post.slug}`} />
+                <meta name="keywords" content={post_keywords} />
+
+                {/*<!-- Facebook Meta Tags -->*/}
                 <meta property="og:type" content="article" />
-                <meta name="twitter:label1" content="Written by" />
-                <meta name="twitter:data1" content={post.author} />
-                <meta name="twitter:site" content="@kodejuice" />
+                <meta property="og:image" content={post.post_image} />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:url" content={page_url} />
+                <meta property="og:description" content={`${post.excerpt}, By: ${post.author}`} />
+                <meta property='og:site_name' content='Sochima Biereagus website' />
+
+                {/*<!-- Twitter Meta Tags -->*/}
                 <meta name="twitter:creator" content="@kodejuice" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content={post.post_image} />
+                <meta property="twitter:domain" content="kodejuice.now.sh" />
+                <meta property="twitter:url" content={page_url} />
+                <meta name="twitter:title" content={post.title} />
+                <meta name="twitter:description" content={`${post.excerpt}, By: ${post.author}`} />
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
                 <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
                 <script src="./js/benchmarkemail-signupform.js"/>
                 <script dangerouslySetInnerHTML={{__html:`
-                    // Disqus config
-                    var disqus_config = function () {
-                        this.page.url = "https://${host}/${post.slug}";
-                        this.page.identifier = "${details.name}:${post.slug}";
-                        this.page.title = "${post.title}";
-                    };
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                        var d=document, s=d.createElement('script');
-                        s.src="https://${props.disqus_host}/embed.js";
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head||d.body).appendChild(s);
-                    })();
+                // Disqus config
+                var disqus_config = function () {
+                    this.page.url = "https://${host}/${post.slug}";
+                    this.page.identifier = "${details.name}:${post.slug}";
+                    this.page.title = "${post.title}";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d=document, s=d.createElement('script');
+                    s.src="https://${props.disqus_host}/embed.js";
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head||d.body).appendChild(s);
+                })();
                 `}} />
                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}/>
                 <script dangerouslySetInnerHTML={{__html:`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${props.ga_track_code}');
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('post_config', '${props.ga_track_code}');
                 `}} />
             </Head>
 
@@ -232,7 +238,7 @@ function PostView(props) {
                                     </div>
 
                                     {/* next post >> */}
-                                    {!_.isEmpty(post.next_post)?
+                                    {!isEmpty(post.next_post)?
                                         <div className='col-12 col-sm-6 text-right next-post-link'>
                                             <Link href="[...id].js" as={`/${post.next_post.slug}`}>
                                                 <a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
@@ -251,7 +257,7 @@ function PostView(props) {
                                             <DiscussionEmbed
                                                 shortname={details.name+":"+post.slug}
                                                 config={{
-                                                    url: `https://${host}/${post.slug}`,
+                                                    url: page_url,
                                                     identifier: details.name+":"+post.slug,
                                                     title: post.title,
                                                 }}
@@ -351,7 +357,7 @@ export async function getStaticProps(ctx) {
     if (data.error) {
         // no post with slug '${post_id}'
         return {
-            props: _.extend(props, {
+            props: extend(props, {
                 corrections: await getBestMatch(ctx.params.id.join('/'), mongo_uri)
             }),
             revalidate: 60
@@ -365,7 +371,7 @@ export async function getStaticProps(ctx) {
     // ...
 
     return {
-        props: _.extend(props, {
+        props: extend(props, {
             post: data
         }),
         revalidate: 60

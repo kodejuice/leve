@@ -83,12 +83,12 @@ export function getKeywords(string, limit = true) {
 export async function deleteDBPost(slug, url) {
     const baseUrl = `${url}`;
 
-    return new Promise(async (yes, no) => {
+    return new Promise(async (resolve, reject) => {
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
             method: "DELETE",
         });
         const data = await res.json()
-        yes(data);
+        resolve(data);
     })
 }
 
@@ -102,14 +102,18 @@ export async function addPostToDB(body, create = true, url) {
     const baseUrl = `${url}`;
     const { slug } = body;
 
-    return new Promise(async (yes, no) => {
-        const res = await fetch(`${baseUrl}/api/post/${slug}`, {
-            method: create ? "PUT" : "POST", // PUT->create post, POST->update post
-            body: JSON.stringify(body),
-            headers: { 'Content-type': 'application/json' }
-        });
-        const data = await res.json()
-        yes(data);
+    return new Promise(async (resolve, reject) => {
+        try {
+            const res = await fetch(`${baseUrl}/api/post/${slug}`, {
+                method: create ? "PUT" : "POST", // PUT->create post, POST->update post
+                body: JSON.stringify(body),
+                headers: { 'Content-type': 'application/json' }
+            });
+            const data = await res.json()
+            resolve(data);
+        } catch (e) {
+            reject(e);
+        }
     })
 }
 
@@ -123,14 +127,14 @@ export async function modifyPost(body, host) {
     const baseUrl = `${process.env.SCHEME}://${host}`;
     const { slug } = body;
 
-    return new Promise(async (yes, no) => {
+    return new Promise(async (resolve, reject) => {
         const res = await fetch(`${baseUrl}/api/post/${slug}`, {
             method: "POST",
             body: JSON.stringify(body),
             headers: { 'Content-type': 'application/json' }
         });
         const data = await res.json()
-        yes(data);
+        resolve(data);
     })
 }
 

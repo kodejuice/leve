@@ -41,8 +41,9 @@ function Import(props) {
     creation_date: Date,
     last_modified: Date,
 
-    *content: String,
+    post_image: String,
     topic: [String],
+    *content: String,
 
     views: {type: Number, default: 0},
     draft: {type: Boolean, default: true},  

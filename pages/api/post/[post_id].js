@@ -18,7 +18,7 @@ handle('get', (req, res, slug /*post_id*/ , { Article }) => {
         .findOne({ 'slug': slug })
         .exec();
 
-    const __fields = "author author_email title content post_quote pub_date last_modified next_post slug draft excerpt ";
+    const __fields = "author post_image author_email title content post_quote pub_date last_modified next_post slug draft excerpt ";
 
     return new Promise(resolve => {
         db_query.then(async post => {
@@ -67,7 +67,7 @@ handle('put', (req, res, post_id, { Article }) => {
             return resolve();
         }
 
-        let fields = ['author', 'author_email', 'title', 'excerpt', 'content', 'draft', 'topic', 'post_quote'];
+        let fields = ['author', 'author_email', 'title', 'excerpt', 'content', 'draft', 'topic', 'post_quote', 'post_image'];
         let newItem = _.pick(req.body, ...fields);
 
         const now = new Date;
@@ -108,7 +108,7 @@ handle('post', (req, res, post_id, { Article }) => {
         let { title } = req.body;
         if (title != undefined && !title.length) return res.json({ error: true, msg: "empty title!" }), resolve();
 
-        let writable = ['title', 'excerpt', 'content', 'draft', 'topic', 'post_quote', 'allow_comments'];
+        let writable = ['title', 'excerpt', 'content', 'draft', 'topic', 'post_quote', 'allow_comments', 'post_image'];
         let updates = _.pick(req.body, ...writable);
 
         // find post to update

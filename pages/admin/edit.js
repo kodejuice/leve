@@ -64,10 +64,11 @@ export default function Edit(props) {
 
     // post states
     let post_topic = (post.topic || []).join(",");
+    const [slug, setSlug] = useState(post.slug);
     const [title, setTitle] = useState(post.title);
     const [excerpt, setExcerpt] = useState(post.excerpt);
     const [content, setContent] = useState(post.content);
-    const [slug, setSlug] = useState(post.slug);
+    const [post_image, setPostImage] = useState(post.post_image);
     const [auto_slug, setAutoSlug] = useState("");
     const [postquote, setQuote] = useState(post.post_quote || {});
     const [topic, setTopic] = useState(post_topic);
@@ -75,7 +76,7 @@ export default function Edit(props) {
     const [allow_comments, allowComment] = useState(Boolean(post.allow_comments));
     const [isSaving, setSaveState] = useState(false);
 
-    const post_data = {slug, auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
+    const post_data = {slug, auto_slug, post_image, title, excerpt, content, postquote, topic, draft, allow_comments, isNew};
     //...
 
 
@@ -304,6 +305,22 @@ export default function Edit(props) {
                                     : <input type='text' className='form-control' value={post.slug||""} readOnly={true}/> }
                                 </div>
 
+                                {/*post_image*/}
+                                <div className='sub-block'>
+                                    <label htmlFor="Post slug">Post Image</label>
+                                    <input
+                                        style={post.post_image!=post_image ? highlight:{}}
+                                        id="slug-input"
+                                        type='url'
+                                        disabled={isSaving==true}
+                                        title={`Image to be used in OpenGraph preview`}
+                                        className='form-control' value={post_image} placeholder="post image"
+                                        onChange={e=>{
+                                            setPostImage(e.target.value);
+                                        }}
+                                    />
+                                </div>
+
                                 {/*topic*/}
                                 <div className='sub-block'>
                                     <label htmlFor="Post topic">Post keywords</label>
@@ -399,7 +416,7 @@ export default function Edit(props) {
  * Saves Post to DB
  */
 async function savePost(params, setSaveState, redirect_url = null, url) {
-    const { auto_slug, title, excerpt, content, postquote, topic, draft, allow_comments, isNew } = params;
+    const { auto_slug, title, post_image, excerpt, content, postquote, topic, draft, allow_comments, isNew } = params;
 
     let slug = params.slug || auto_slug;
 
@@ -419,6 +436,7 @@ async function savePost(params, setSaveState, redirect_url = null, url) {
         excerpt,
         content,
         allow_comments,
+        post_image,
         post_quote: postquote,
         draft: draft,
         topic: topic.split(","),
