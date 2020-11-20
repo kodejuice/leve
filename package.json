@@ -1,6 +1,7 @@
 {
   "name": "leve",
   "version": "1.0.0",
+  "private": true,
   "description": "minimal cms for my personal website",
   "main": "index.js",
   "scripts": {
