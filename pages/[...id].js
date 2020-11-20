@@ -360,7 +360,7 @@ export async function getStaticProps(ctx) {
             props: extend(props, {
                 corrections: await getBestMatch(ctx.params.id.join('/'), mongo_uri)
             }),
-            revalidate: 60
+            revalidate: 1
         }
     }
 
@@ -374,7 +374,7 @@ export async function getStaticProps(ctx) {
         props: extend(props, {
             post: data
         }),
-        revalidate: 60
+        revalidate: 1
     }
 }
 

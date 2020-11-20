@@ -124,9 +124,7 @@ export async function getStaticProps(ctx) {
             ga_track_code: process.env.GA_TRACK_CODE,
         },
 
-        // we will attempt to re-generate the page:
-        // - at most once every 24 hours
-        revalidate: 86400 //seconds
+        revalidate: 1
     };
 }
 
