@@ -172,13 +172,15 @@ function PostView(props) {
                                     </div>
 
                                     <div>
-                                        - <small><em title="This post isnt published yet" className="mt-1"> {post.views} views </em></small>
+                                        {post.views && (
+                                            - <small><em title="This post isnt published yet" className="mt-1"> {post.views} views </em></small>
+                                        )}
                                     </div>
 
                                     <div>
-                                        - {post.draft?
-                                        <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
-                                        :""}
+                                        {post.draft && (
+                                            - <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
+                                        )}
                                     </div>
                                 </div>
                             )
@@ -306,7 +308,7 @@ function getPlaceholder() {
         is_loading: true,
         topic: [],
         slug: "/",
-        views: 1,
+        views: 0,
         draft: 0,
         content: "![Loading...](icons/spinner.svg)",
         title: "Loading...",
