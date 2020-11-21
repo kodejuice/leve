@@ -18,7 +18,7 @@ class MyDocument extends Document {
                 <meta name="referrer" content="no-referrer-when-downgrade" />
                 <link rel="alternate" type="application/rss+xml" title="Sochima Biereagu" href={`https://${process.env.HOST}/api/rss.xml`} />
              </Head>
-            <body class="body">
+            <body className="body">
                 <Main />
                 <NextScript />
             </body>
