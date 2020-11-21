@@ -15,10 +15,8 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
-    // add style <body> tag
     useEffect(_=>{
-        // set theme
-        document.querySelector("body").classList.add('body');
+        // set dark theme
         if (parseCookies(null).__dark == "1") {
             document.querySelector("body").classList.add('dark');
         }

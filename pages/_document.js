@@ -17,7 +17,7 @@ class MyDocument extends Document {
                 <link rel="manifest" href="/favicon/site.webmanifest"/>
                 <meta name="referrer" content="no-referrer-when-downgrade" />
              </Head>
-            <body>
+            <body class="body">
                 <Main />
                 <NextScript />
             </body>
