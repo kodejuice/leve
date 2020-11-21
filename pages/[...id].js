@@ -107,7 +107,6 @@ function PostView(props) {
                 <meta property="twitter:url" content={page_url} />
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
-                <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
                 <script src="./js/benchmarkemail-signupform.js"/>
                 <script dangerouslySetInnerHTML={{__html:`

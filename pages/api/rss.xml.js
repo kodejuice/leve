@@ -20,6 +20,7 @@ export default connectDB((req, res, DB_Models) => {
     <title> ${details.name} </title>
     <link> ${process.env.SCHEME}://${req.headers.host} </link>
     <description> ${details.description} </description>
+    <image> ${process.env.SCHEME}://${req.headers.host}/sb.png </image>
 `;
 
         db_query.then(posts => {
