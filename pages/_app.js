@@ -15,8 +15,6 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
-	const [isMounted, setIsMounted] = useState(false);
-
     // add style <body> tag
     useEffect(_=>{
         // set theme
@@ -24,10 +22,7 @@ export default function MyApp({ Component, pageProps }) {
         if (parseCookies(null).__dark == "1") {
             document.querySelector("body").classList.add('dark');
         }
-
-		setIsMounted(true);
     });
 
-    return isMounted && <Component {...pageProps} />;
+    return <Component {...pageProps} />;
 }
-
