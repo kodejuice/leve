@@ -59,7 +59,7 @@ function PostView(props) {
     // display an incomplete loading page
     // until getStaticProps() finish running
     if (router.isFallback) {
-        post = getPlaceholder();
+        post = getPlaceholder(host);
     }
     else if (!post) {
         // no post data
@@ -80,15 +80,16 @@ function PostView(props) {
         });
     });
 
-    const page_url = `${scheme}://${host}/${post.slug}`;
+    const page_url = post.is_loading ? "" : `${scheme}://${host}/${post.slug}`;
     const post_keywords = isEmpty(post.topic.join()) ? post.excerpt : post.topic.join(', ');
+    const page_description = post.is_loading ? "Post doesn't exist" : `${post.excerpt}, By: ${post.author}`;
 
     return (
         <div className='container'>
             <Head>
                 <title> {post.title} </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="description" content={`${post.excerpt}, By: ${post.author}`}/>
+                <meta name="description" content={page_description}/>
                 <meta name="keywords" content={post_keywords} />
 
                 {/*<!-- Facebook Meta Tags -->*/}
@@ -96,17 +97,14 @@ function PostView(props) {
                 <meta property="og:image" content={post.post_image} />
                 <meta property="og:title" content={post.title} />
                 <meta property="og:url" content={page_url} />
-                <meta property="og:description" content={`${post.excerpt}, By: ${post.author}`} />
+                <meta property="og:description" content={page_description} />
                 <meta property="og:site_name" content="Sochima Biereagus website" />
 
                 {/*<!-- Twitter Meta Tags -->*/}
                 <meta name="twitter:creator" content="@kodejuice" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content={post.post_image} />
-                <meta property="twitter:domain" content="kodejuice.now.sh" />
+                <meta property="twitter:domain" content={host} />
                 <meta property="twitter:url" content={page_url} />
-                <meta name="twitter:title" content={post.title} />
-                <meta name="twitter:description" content={`${post.excerpt}, By: ${post.author}`} />
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
                 <link rel="alternate" type="application/rss+xml" href={`${scheme}://${host}/api/rss.xml`} />
@@ -310,7 +308,8 @@ function getPlaceholder() {
         views: 0,
         draft: 0,
         content: "![Loading...](icons/spinner.svg)",
-        title: "Loading...",
+        title: "Post not found",
+        post_image: `https://tinyurl.com/y3x3hrzk`,
         author: details.name,
         author_email: details.email,
         pub_date: null,

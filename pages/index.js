@@ -14,6 +14,8 @@ import { site_details as details } from '../site_config.js';
 function Home(props) {
     let {posts} = props;
 
+    const {host, scheme} = props;
+
     // get recent posts from data,
     // sorts them in descending order of their publication date, and gets the first few ${post_per_page}
     let post_per_page = details.site.post_per_page;
@@ -22,6 +24,7 @@ function Home(props) {
     // rss feed url (for header icons)
     details.links.rss_url = `${props.scheme}://${props.host}/api/rss.xml`;
 
+    const page_url = `${scheme}://${host}/`;
     return (
         <div className='container'>
             <Head>
@@ -31,20 +34,17 @@ function Home(props) {
 
                 {/*<!-- Facebook Meta Tags -->*/}
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://kodejuice.now.sh/sb.png" />
+                <meta property="og:image" content={`${scheme}://${host}/sb.png`} />
                 <meta property="og:title" content={details.name} />
-                <meta property="og:url" content="https://kodejuice.now.sh/" />
+                <meta property="og:url" content={page_url} />
                 <meta property="og:description" content={details.description} />
                 <meta property="og:site_name" content="Sochima Biereagu" />
 
                 {/*<!-- Twitter Meta Tags -->*/}
                 <meta name="twitter:creator" content="@kodejuice" />
-                <meta property="twitter:image" content="https://kodejuice.now.sh/sb.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:domain" content="kodejuice.now.sh" />
-                <meta property="twitter:url" content="https://kodejuice.now.sh/" />
-                <meta name="twitter:title" content={details.name} />
-                <meta name="twitter:description" content={details.description} />
+                <meta property="twitter:domain" content={host} />
+                <meta property="twitter:url" content={page_url} />
 
                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}/>
                 <script dangerouslySetInnerHTML={{__html:`
