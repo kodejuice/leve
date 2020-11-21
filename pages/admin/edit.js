@@ -1,4 +1,5 @@
 const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {ssr: false});
+import 'react-markdown-editor-lite/lib/index.css'
 
 import {useEffect, useState} from 'react'
 import dynamic from 'next/dynamic'
@@ -13,12 +14,6 @@ import Modal from 'react-modal'
 import ClipLoader from "react-spinners/ClipLoader"
 import { HotKeys } from "react-hotkeys"
 
-import MarkdownIt from 'markdown-it'
-import tm from 'markdown-it-texmath'
-import hljs from 'highlight.js'
-import 'react-markdown-editor-lite/lib/index.css'
-import 'highlight.js/styles/github.css'
-
 import Header from '../../components/admin/Header';
 import PreviewPost from '../../components/admin/PreviewPost';
 import QuoteSelect from '../../components/admin/QuoteSelect';
@@ -29,29 +24,7 @@ import {getPost} from '../../utils/fetch-post';
 
 import verifyAuth from '../../utils/auth.js';
 
-
-// Initialize a markdown parser
-const mdParser = new MarkdownIt({
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return '<pre class="hljs"><code>' +
-               hljs.highlight(lang, str, true).value +
-               '</code></pre>';
-      } catch (__) {}
-    }
-    return '<pre class="hljs"><code>' + mdParser.utils.escapeHtml(str) + '</code></pre>';
-  }
-});
-
-// MarkdownIt plugin
-//  for math text processing
-mdParser.use(tm, {
-    engine: require('katex'),
-    delimiters:'dollars',
-    katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
-});
-
+import mdParser from '../../utils/mdParser';
 
 
 export default function Edit(props) {

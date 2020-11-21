@@ -11,11 +11,6 @@ import { parseCookies, setCookie } from 'nookies'
 import Toggle from '../components/home/Toggle';
 
 import { DiscussionEmbed } from 'disqus-react'
-import MarkdownIt from 'markdown-it'
-import tm from 'markdown-it-texmath'
-import hljs from 'highlight.js'
-import 'react-markdown-editor-lite/lib/index.css'
-import 'highlight.js/styles/github.css'
 
 import PageNotFound from '../components/PageNotFound'
 
@@ -24,26 +19,7 @@ import {getPost, getPosts} from '../utils/fetch-post';
 
 import { site_details as details } from '../site_config.js';
 
-
-// Initialize a markdown parser
-const mdParser = new MarkdownIt({
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return '<pre class="hljs"><code>'+hljs.highlight(lang, str, true).value+'</code></pre>';
-      } catch (__) {return '<pre><code>'+mdParser.utils.escapeHtml(str)+'</code></pre>'}
-    }
-    return '<pre class="hljs"><code>' + mdParser.utils.escapeHtml(str) + '</code></pre>';
-  }
-});
-
-// MarkdownIt plugin
-//  for math text processing
-mdParser.use(tm, {
-    engine: require('katex'),
-    delimiters:'dollars',
-    katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
-});
+import mdParser from '../utils/mdParser';
 
 
 // DEBUG
