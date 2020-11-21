@@ -173,13 +173,17 @@ function PostView(props) {
 
                                     <div>
                                         {post.views && (
-                                            - <small><em title="This post isnt published yet" className="mt-1"> {post.views} views </em></small>
+                                            <>
+                                                <>-</> <small><em title="" className="mt-1"> {post.views} views </em></small>
+                                            </>
                                         )}
                                     </div>
 
                                     <div>
                                         {post.draft && (
-                                            - <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
+                                            <>
+                                                <>-</> <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
+                                            </>
                                         )}
                                     </div>
                                 </div>
