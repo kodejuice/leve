@@ -23,7 +23,7 @@ function Home(props) {
     details.links.rss_url = `${props.scheme}://${props.host}/api/rss.xml`;
 
     return (
-        <>
+        <div className='container'>
             <Head>
                 <title> {details.name} </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -55,52 +55,50 @@ function Home(props) {
                 `}} />
             </Head>
 
-            <div className='container'>
-                <div className='position-fixed action-btn'>
-                    <div className='toggler'>
-                        <Toggle />
-                    </div>
-
-                    {
-                        parseCookies(null).__token ?
-                        (
-                            <div className="mt-4 hide-on-mobile">
-                                <div title="Dashboard">
-                                    <Link href={"admin/list"}>
-                                        <a className="btn btn-link"><span className='glyphicon glyphicon-dashboard'></span></a>
-                                    </Link>
-                                </div>
-
-                                <div title="Add new post">
-                                    <Link href="admin/edit">
-                                        <a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
-                                    </Link>
-                                </div>
-                            </div>
-                        )
-                        : ""
-                    }
+            <div className='position-fixed action-btn'>
+                <div className='toggler'>
+                    <Toggle />
                 </div>
 
-                <div className='home-main mb-5'>
-                    <section>
-                        <header>
-                            <Header details={details} />
-                        </header>
-
-                        <article>
-                            <Posts recent_posts={recent_posts} all_posts={posts} />
-                        </article>
-
-                        <footer>
-                            <div className='mt-5 pl-0 ml-0' title='Get an email whenever theres new content'>
-                                <a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ"> <em> Subscribe to newsletter ! </em> </a>
+                {
+                    parseCookies(null).__token ?
+                    (
+                        <div className="mt-4 hide-on-mobile">
+                            <div title="Dashboard">
+                                <Link href={"admin/list"}>
+                                    <a className="btn btn-link"><span className='glyphicon glyphicon-dashboard'></span></a>
+                                </Link>
                             </div>
-                        </footer>
-                    </section>
-                </div>
+
+                            <div title="Add new post">
+                                <Link href="admin/edit">
+                                    <a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
+                                </Link>
+                            </div>
+                        </div>
+                    )
+                    : ""
+                }
             </div>
-        </>
+
+            <div className='home-main mb-5'>
+                <section>
+                    <header>
+                        <Header details={details} />
+                    </header>
+
+                    <article>
+                        <Posts recent_posts={recent_posts} all_posts={posts} />
+                    </article>
+
+                    <footer>
+                        <div className='mt-5 pl-0 ml-0' title='Get an email whenever theres new content'>
+                            <a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ"> <em> Subscribe to newsletter ! </em> </a>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </div>
     );
 }
 

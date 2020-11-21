@@ -84,7 +84,7 @@ function PostView(props) {
     const post_keywords = isEmpty(post.topic.join()) ? post.excerpt : post.topic.join(', ');
 
     return (
-        <>
+        <div className='container'>
             <Head>
                 <title> {post.title} </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -135,145 +135,143 @@ function PostView(props) {
                 `}} />
             </Head>
 
-            <div className='container'>
-                <div className='position-fixed action-btn'>
-                    <div className='toggler'>
-                        <Toggle
-                        	onSwitch={_=>reloadDisqusThread()}
-                        />
-                    </div>
-
-                    <div className='hide-on-mobile'>
-                        <p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
-                            <small style={{fontSize: "14px"}}>{details.name}</small>
-                        </p>
-                        <Link href="/">
-                            <div title="Go Home">
-                                <a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
-                            </div>
-                        </Link>
-                        {
-                            parseCookies(null).__token ?
-                            (
-                                <div className="mt-4">
-                                    <div title="Edit post">
-                                        <Link href={"admin/edit?slug="+post.slug}>
-                                            <a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
-                                        </Link>
-                                    </div>
-
-                                    <div title="Add new post">
-                                        <Link href="admin/edit">
-                                            <a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
-                                        </Link>
-                                    </div>
-
-                                    <div>
-                                        {post.views && (
-                                            <>
-                                                <>-</> <small><em title="" className="mt-1"> {post.views} views </em></small>
-                                            </>
-                                        ) || ""}
-                                    </div>
-
-                                    <div>
-                                        {post.draft && (
-                                            <>
-                                                <>-</> <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
-                                            </>
-                                        ) || ""}
-                                    </div>
-                                </div>
-                            )
-                            : ""
-                        }
-                    </div>
+            <div className='position-fixed action-btn'>
+                <div className='toggler'>
+                    <Toggle
+                        onSwitch={_=>reloadDisqusThread()}
+                    />
                 </div>
 
-                <section>
-                    <div className='home-main mt-5 post-view'>
-                        <header>
-                            <h1 className='post-title'> {post.title} </h1>
-                            <p className='info ml-3'>
-                                <Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
-                                 <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
-                            </p>
-                        </header>
-
-                        <div className='article'>
-                            <article>
-                                <em className='pub_date'> {post.pub_date} </em>
-
-                                {/* quote */}
-                                {post.post_quote != null ?
-                                    (<blockquote className="blockquote text-right mt-4">
-                                        <p className="mb-0 post-quote">{post.post_quote.quote}</p>
-                                        <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
-                                    </blockquote>)
-                                : "" }
-
-                                {/* post content */}
-                                <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content || "")}}/>
-                                <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
-                            </article>
-
-                            <footer>
-                                <div className='row mb-5 _post_footer'>
-                                    {/* subsribe to newsletter */}
-                                    <div className='col'>
-                                        <legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
-                                          <div className="form-row">
-                                            <div className="col" dangerouslySetInnerHTML={{__html:`
-                                                <div id="signupFormContainer_YPLMC">
-                                                <div id="signupFormContent_YPLMC">
-                                                <div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
-                                                <input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
-                                                <input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
-                                                <input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
-                                                <input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 />
-                                                <button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                            `}} />
-                                          </div>
-                                    </div>
-
-                                    {/* next post >> */}
-                                    {!isEmpty(post.next_post)?
-                                        <div className='col-12 col-sm-6 text-right next-post-link'>
-                                            <Link href="[...id].js" as={`/${post.next_post.slug}`}>
-                                                <a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
-                                            </Link>
-                                        </div>
-                                    : ""}
+                <div className='hide-on-mobile'>
+                    <p style={{position:'fixed',top:0,left:2,fontFamily:'Fira'}}>
+                        <small style={{fontSize: "14px"}}>{details.name}</small>
+                    </p>
+                    <Link href="/">
+                        <div title="Go Home">
+                            <a className="btn btn-link"><span className='glyphicon glyphicon-chevron-left'></span></a>
+                        </div>
+                    </Link>
+                    {
+                        parseCookies(null).__token ?
+                        (
+                            <div className="mt-4">
+                                <div title="Edit post">
+                                    <Link href={"admin/edit?slug="+post.slug}>
+                                        <a className="btn btn-link"><span className='glyphicon glyphicon-pencil'></span></a>
+                                    </Link>
                                 </div>
-                            </footer>
 
-                            {/*<!-- DISQUS HERE -->*/}
-                            <div className='comments' id='comments'>
-                                {
-                                    (!post.allow_comments) ?
-                                        ((post.is_loading) ? "" : <b> <em> Comments Disabled </em> </b>)
-                                        : (
-                                            <DiscussionEmbed
-                                                shortname={details.name+":"+post.slug}
-                                                config={{
-                                                    url: page_url,
-                                                    identifier: details.name+":"+post.slug,
-                                                    title: post.title,
-                                                }}
-                                            />
-                                        )
-                                }
+                                <div title="Add new post">
+                                    <Link href="admin/edit">
+                                        <a className="btn btn-link"> <span className='glyphicon glyphicon-plus'></span> </a>
+                                    </Link>
+                                </div>
+
+                                <div>
+                                    {post.views && (
+                                        <>
+                                            <>-</> <small><em title="" className="mt-1"> {post.views} views </em></small>
+                                        </>
+                                    ) || ""}
+                                </div>
+
+                                <div>
+                                    {post.draft && (
+                                        <>
+                                            <>-</> <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
+                                        </>
+                                    ) || ""}
+                                </div>
                             </div>
+                        )
+                        : ""
+                    }
+                </div>
+            </div>
+
+            <section>
+                <div className='home-main mt-5 post-view'>
+                    <header>
+                        <h1 className='post-title'> {post.title} </h1>
+                        <p className='info ml-3'>
+                            <Link href='/'><a title='author' className='no-underline'>{post.author}</a></Link>,
+                                <span>&lt;</span><a target='_blank' href={`mailto:${post.author_email}`}>{post.author_email}</a><span>/&gt;</span>
+                        </p>
+                    </header>
+
+                    <div className='article'>
+                        <article>
+                            <em className='pub_date'> {post.pub_date} </em>
+
+                            {/* quote */}
+                            {post.post_quote != null ?
+                                (<blockquote className="blockquote text-right mt-4">
+                                    <p className="mb-0 post-quote">{post.post_quote.quote}</p>
+                                    <footer className="blockquote-footer p-quote"><cite title="Author">{post.post_quote.author}</cite></footer>
+                                </blockquote>)
+                            : "" }
+
+                            {/* post content */}
+                            <div className='post-content mt-4 visible-text' dangerouslySetInnerHTML={{__html: mdParser.render(post.content || "")}}/>
+                            <p className='pt-1 text-right updated-time'> {post.last_modified!=post.pub_date && `Updated ${post.last_modified}`} </p>
+                        </article>
+
+                        <footer>
+                            <div className='row mb-5 _post_footer'>
+                                {/* subsribe to newsletter */}
+                                <div className='col'>
+                                    <legend id='subscribe' className='visible-text'>Get an email whenever theres a new article</legend>
+                                        <div className="form-row">
+                                        <div className="col" dangerouslySetInnerHTML={{__html:`
+                                            <div id="signupFormContainer_YPLMC">
+                                            <div id="signupFormContent_YPLMC">
+                                            <div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
+                                            <input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
+                                            <input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
+                                            <input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
+                                            <input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 />
+                                            <button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        `}} />
+                                        </div>
+                                </div>
+
+                                {/* next post >> */}
+                                {!isEmpty(post.next_post)?
+                                    <div className='col-12 col-sm-6 text-right next-post-link'>
+                                        <Link href="[...id].js" as={`/${post.next_post.slug}`}>
+                                            <a className='next-post-link'>{post.next_post.title} <span className='glyphicon glyphicon-chevron-right'></span></a>
+                                        </Link>
+                                    </div>
+                                : ""}
+                            </div>
+                        </footer>
+
+                        {/*<!-- DISQUS HERE -->*/}
+                        <div className='comments' id='comments'>
+                            {
+                                (!post.allow_comments) ?
+                                    ((post.is_loading) ? "" : <b> <em> Comments Disabled </em> </b>)
+                                    : (
+                                        <DiscussionEmbed
+                                            shortname={details.name+":"+post.slug}
+                                            config={{
+                                                url: page_url,
+                                                identifier: details.name+":"+post.slug,
+                                                title: post.title,
+                                            }}
+                                        />
+                                    )
+                            }
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-            </div>
-        </>
+        </div>
     );
 }
 
