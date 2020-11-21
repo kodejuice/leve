@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import fetch from 'node-fetch'
-import {useEffect} from 'react'
 import { parseCookies } from 'nookies'
 
 import Posts from '../components/home/Posts';
@@ -109,7 +107,7 @@ function Home(props) {
 
 
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
     const mongo_uri = process.env.MONGODB_URI;
 
     // Fetch data from database

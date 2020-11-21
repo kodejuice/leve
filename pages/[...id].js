@@ -1,6 +1,5 @@
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
@@ -19,9 +18,7 @@ import 'react-markdown-editor-lite/lib/index.css'
 import 'highlight.js/styles/github.css'
 
 import PageNotFound from '../components/PageNotFound'
-import PageError from '../components/PageError'
 
-import {setTheme} from '../utils';
 import {getBestMatch} from '../utils/string-similarity';
 import {getPost, getPosts} from '../utils/fetch-post';
 
@@ -176,7 +173,7 @@ function PostView(props) {
                                             <>
                                                 <>-</> <small><em title="" className="mt-1"> {post.views} views </em></small>
                                             </>
-                                        )}
+                                        ) || ""}
                                     </div>
 
                                     <div>
@@ -184,7 +181,7 @@ function PostView(props) {
                                             <>
                                                 <>-</> <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
                                             </>
-                                        )}
+                                        ) || ""}
                                     </div>
                                 </div>
                             )
