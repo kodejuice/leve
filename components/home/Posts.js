@@ -71,8 +71,8 @@ const Posts = (props) => {
 
         post_block = (
             <div>
-                <h3> Most Recent </h3>
-                
+                <h2 style={{fontSize: '1.75rem'}}> Most Recent </h2>
+
                 {/* no posts yet ? */}
                 {recent_posts.length == 0 ? <div className='mt-3 ml-2'> Nothing to show here</div> : ""}
 
