@@ -282,12 +282,14 @@ export default function Edit(props) {
                                 <div className='sub-block'>
                                     <label htmlFor="Post slug">Post Image</label>
                                     <input
-                                        style={post.post_image!=post_image ? highlight:{}}
-                                        id="slug-input"
                                         type='url'
+                                        id="slug-input"
+                                        value={post_image}
+                                        placeholder="http://url to post image"
                                         disabled={isSaving==true}
                                         title={`Image to be used in OpenGraph preview`}
-                                        className='form-control' value={post_image} placeholder="post image"
+                                        style={post.post_image!=post_image ? highlight:{}}
+                                        className='form-control'
                                         onChange={e=>{
                                             setPostImage(e.target.value);
                                         }}
