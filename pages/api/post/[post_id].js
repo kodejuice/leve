@@ -70,11 +70,15 @@ handle('put', (req, res, post_id, { Article }) => {
         let fields = ['author', 'author_email', 'title', 'excerpt', 'content', 'draft', 'topic', 'post_quote', 'post_image'];
         let newItem = _.pick(req.body, ...fields);
 
-        const now = new Date;
+        const now = new Date();
 
         newItem['slug'] = post_id;
         newItem['creation_date'] = now;
         newItem['last_modified'] = now;
+
+        if (!newItem.draft) {
+            newItem['pub_date'] = now;
+        }
 
         // create post if slug isn't in use already
         Article.findOne({ slug: post_id }, (err, doc) => {
@@ -120,12 +124,12 @@ handle('post', (req, res, post_id, { Article }) => {
             // if content was modified
             if ('content' in updates && updates.content != doc.content) {
                 doc.draft_revisions += 1;
-                doc.last_modified = new Date;
+                doc.last_modified = new Date();
             }
 
             // is it beign published ?, update publication date
             if (!updates.draft && !doc.pub_date) { // if (no_longer_a_draft AND not_published)
-                doc.pub_date = new Date;
+                doc.pub_date = new Date();
             }
 
             _
