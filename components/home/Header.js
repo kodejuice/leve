@@ -7,7 +7,7 @@ const Icon = (props) => {
         "rss feed": "/icons/rss.png",
     };
     return (
-        <a className='no-bg-color' title={props.name} href={props.url} rel="noreferrer" target={props.blank && "_blank"}>
+        <a className='no-bg-color profile-link' title={props.name} href={props.url} rel="noreferrer" target={props.blank && "_blank"}>
             <img src={iconURL[props.name]} alt={props.name} />
         </a>
     );
