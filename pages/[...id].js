@@ -255,7 +255,9 @@ function reloadDisqusThread() {
     // DISQUS is a global variable,
     // which comes with the embed.js script
     try {
-        DISQUS.reset();
+        DISQUS.reset({
+            reload: true
+        });
     } catch (e) {
         return;
     }
