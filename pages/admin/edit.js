@@ -63,8 +63,8 @@ export default function Edit(props) {
 
         // before unload event
         window.onbeforeunload = function(e) {
-            // Saving? or New Post?, no need to prompt
-            if (isSaving || !slug) return null;
+            // Saving? or New Post? or Deleted?, no need to prompt
+            if (isSaving || !slug || window.post_deleted) return null;
 
             e = e || window.event;
 
@@ -458,6 +458,7 @@ async function deletePost(slug, url) {
         if (res.success != true) {
             return alert(JSON.stringify(res));
         }
+        window.post_deleted = true;
         window.location = "list";
     }
 }
