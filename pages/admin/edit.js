@@ -1,8 +1,11 @@
-const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {ssr: false});
+import dynamic from 'next/dynamic'
+const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {
+    ssr: false,
+    loading: () => <p> Loading editor... </p>
+});
 import 'react-markdown-editor-lite/lib/index.css'
 
 import {useEffect, useState} from 'react'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Head from 'next/head'
 import fetch from 'node-fetch'
