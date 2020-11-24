@@ -23,7 +23,7 @@
     "fast-dice-coefficient": "^1.0.3",
     "formidable": "^1.2.2",
     "hash.js": "^1.1.7",
-    "highlight.js": "^10.0.2",
+    "highlight.js": "^10.1.2",
     "jquery": "^3.5.1",
     "jsonwebtoken": "^8.5.1",
     "katex": "^0.11.1",
