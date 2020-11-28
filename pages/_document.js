@@ -17,6 +17,7 @@ class MyDocument extends Document {
                 <link rel="manifest" href="/favicon/site.webmanifest"/>
                 <link rel="alternate" type="application/rss+xml" title="Sochima Biereagu" href={`https://${process.env.HOST}/api/rss.xml`} />
                 <meta name="referrer" content="no-referrer-when-downgrade" />
+                <meta name="charset" content="utf-8" />
              </Head>
             <body className="body">
                 <Main />
