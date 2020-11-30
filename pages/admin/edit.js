@@ -169,7 +169,6 @@ export default function Edit(props) {
                             <div className="mt-5">
                                 <MdEditor
                                     value={content}
-                                    html={false}
                                     style={{ height: "500px" }}
                                     renderHTML={(text) => {
                                         if (!isSaving){

@@ -5,6 +5,7 @@ import 'highlight.js/styles/github.css'
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt({
+  html: true,
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
