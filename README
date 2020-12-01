@@ -3,3 +3,12 @@ Built with React(next.js)
 
 See environment variables in next.config.js file.
 Site details in site_config.js file
+
+Install dependencies:
+$ npm install
+
+Development mode:
+$ npm run dev
+
+Build:
+$ npm run build
