@@ -5,7 +5,7 @@ import Head from 'next/head'
 import fetch from 'node-fetch'
 import {useRouter} from 'next/router'
 
-import {extend, isEmpty} from 'underscore'
+import {extend, isEmpty} from 'lodash'
 import {format} from 'date-fns'
 import { parseCookies, setCookie } from 'nookies'
 import Toggle from '../components/home/Toggle';

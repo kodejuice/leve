@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs'
-import _ from 'underscore'
+import _ from 'lodash'
 import fetch from 'node-fetch'
 
 import { IncomingForm } from 'formidable'

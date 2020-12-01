@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import _ from 'lodash'
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
 import connectDB from '../../../backend/database/connection.js';

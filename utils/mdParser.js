@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import tm from 'markdown-it-texmath'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
+import {memoize} from 'lodash';
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt({
@@ -23,5 +24,7 @@ mdParser.use(tm, {
     delimiters:'dollars',
     katexOptions: { macros: {"\\RR": "\\mathbb{R}"} }
 });
+
+mdParser.render = memoize(mdParser.render);
 
 export default mdParser;
