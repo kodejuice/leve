@@ -28,7 +28,10 @@ const Header = (props) => {
                             <td> <Icon url={links.github} name='github' blank={true}/> </td>
                             <td> <Icon url={links.twitter} name='twitter' blank={true}/> </td>
                             <td> <Icon url={links.resume} name='résumé'/> </td>
-                            <td></td> <td></td> <td></td> <td></td>
+                            <td className='hidden'></td>
+                            <td className='hidden'></td>
+                            <td className='hidden'></td>
+                            <td className='hidden'></td>
                             <td><Icon url={links.rss_url} name='rss feed'/> </td>
                         </tr>
                     </tbody>
