@@ -28,6 +28,15 @@ body.dark {
     }
 
 
+    div.f-nav {
+        .f-link {
+            &.br {
+                border-right: 1.5px solid #ccc;
+            }
+        }
+    }
+
+
     /* highlight.js
       Ocean color scheme*/
 

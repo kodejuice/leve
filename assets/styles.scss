@@ -225,3 +225,30 @@ div.post-view {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+h2.section-title {
+    font-size: 1.75rem;
+}
+
+div.f-nav {
+
+    .f-link {
+        height: 23px;
+        display: inline-block;
+
+        // a#inactive {
+        //     color: #333;
+        //     cursor: default;
+        //     font-weight: bold;
+        //     text-decoration: none !important;
+        // }
+
+        &.br {
+            border-right: 1.5px solid #333;
+        }
+    }
+}
+
+td.hidden {
+    visibility: hidden;
+}

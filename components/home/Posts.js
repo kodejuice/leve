@@ -42,24 +42,26 @@ const Posts = (props) => {
 
         post_block = (
             <div>
-                <h3> All Posts </h3>
+                <h2 className='section-title'> All Posts </h2>
                 <div> {all_posts.slice(start, length).map(p => <Post info={p} key={p._id} />)} </div>
 
                 <div className='mt-4'>
-                    {posts_len > post_per_page && <Pagination
-                        activePage={activePage}
-                        pageRangeDisplayed={4}
+                    {posts_len > post_per_page && (
+                        <Pagination
+                            activePage={activePage}
+                            pageRangeDisplayed={4}
 
-                        itemsCountPerPage={post_per_page}
-                        totalItemsCount={posts_len}
+                            itemsCountPerPage={post_per_page}
+                            totalItemsCount={posts_len}
 
-                        onChange={p => scrollToTop(_=>setActivePage(p), 50, 40)}
+                            onChange={p => scrollToTop(_=>setActivePage(p), 50, 40)}
 
-                        itemClass="page-item"
-                        linkClass="page-link"
+                            itemClass="page-item"
+                            linkClass="page-link"
 
-                        hideDisabled={true}
-                    />}
+                            hideDisabled={true}
+                        />
+                    ) || ""}
                 </div>
 
                 <a onClick={_=>scrollToTop(_=>setDisplay(false))} className="link-btn btn btn-link"> Recent posts </a>
@@ -71,7 +73,7 @@ const Posts = (props) => {
 
         post_block = (
             <div>
-                <h2 style={{fontSize: '1.75rem'}}> Most Recent </h2>
+                <h2 className='section-title'> Most Recent </h2>
 
                 {/* no posts yet ? */}
                 {recent_posts.length == 0 ? <div className='mt-3 ml-2'> Nothing to show here</div> : ""}

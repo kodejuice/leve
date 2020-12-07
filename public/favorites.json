@@ -1,0 +1,37 @@
+[
+    {
+        "title": "localGoogoo",
+        "href": "https://github.com/kodejuice/localgoogoo",
+        "excerpt": "A search engine for offline websites, saves you the hassle of manually looking for information in your local websites."
+    },
+
+    {
+        "title": "PhotApp",
+        "href": "https://photapp-web.herokuapp.com",
+        "excerpt": "A photo and video sharing social network (low budget Instagram)."
+    },
+
+    {
+        "title": "Kodra",
+        "href": "https://github.com/kodejuice/kodra",
+        "excerpt": "A checkers game engine playing the russian variation of checkers (at master level), built for the CheckerBoard interface."
+    },
+
+    {
+        "title": "Chip8 emulator",
+        "href": "https://github.com/kodejuice/chip8",
+        "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language"
+    },
+
+    {
+        "title": "OpenWhot",
+        "href": "https://github.com/kodejuice/openwhot",
+        "excerpt": "An android application for a variation of the Naija Whot! Game (players cards aren’t hidden from each other)."
+    },
+
+    {
+        "title": "JSmarka",
+        "href": "https://jsmarka.herokuapp.com",
+        "excerpt": "a javascript code performance benchmarking tool"
+    }
+]

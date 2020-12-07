@@ -1,25 +1,47 @@
+import {useRef, useState, useEffect} from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { parseCookies } from 'nookies'
 
-import Posts from '../components/home/Posts';
+import Posts from '../components/home/sections/Posts';
+import About from '../components/home/sections/About';
+import Projects from '../components/home/sections/Projects';
+
 import Header from '../components/home/Header';
 import Toggle from '../components/home/Toggle';
 
 import {getPosts} from '../utils/fetch-post';
+import {scrollToTop} from '../utils';
 
 import { site_details as details } from '../site_config.js';
+
+const tabs = {
+    '?posts': 0,
+    '?about': 1,
+    '?projects': 2,
+};
 
 
 function Home(props) {
     let {posts} = props;
-
     const {host, scheme} = props;
 
-    // get recent posts from data,
-    // sorts them in descending order of their publication date, and gets the first few ${post_per_page}
-    let post_per_page = details.site.post_per_page;
-    let recent_posts = posts.slice().sort((x,y) => new Date(y.pub_date) - new Date(x.pub_date)).slice(0,post_per_page)
+    const [section_index, setSectionIndex] = useState(0);
+    const sections = useRef([
+        <Posts posts={posts} />,
+        <About />,
+        <Projects />,
+    ]);
+
+    const switchTab = (ev, num) => {
+        if (ev) ev.preventDefault();
+        scrollToTop(() => setSectionIndex(num), 50, 40);
+    }
+
+    useEffect(()=>{
+        switchTab(null, tabs[location.search] || 0);
+    }, []);
+
 
     // rss feed url (for header icons)
     details.links.rss_url = `${props.scheme}://${props.host}/api/rss.xml`;
@@ -61,7 +83,7 @@ function Home(props) {
                 </div>
 
                 {
-                    parseCookies(null).__token ?
+                    parseCookies(null).__token &&
                     (
                         <div className="mt-4 hide-on-mobile">
                             <div title="Dashboard">
@@ -77,7 +99,6 @@ function Home(props) {
                             </div>
                         </div>
                     )
-                    : ""
                 }
             </div>
 
@@ -88,11 +109,29 @@ function Home(props) {
                     </header>
 
                     <article>
-                        <Posts recent_posts={recent_posts} all_posts={posts} />
+                        {sections.current[section_index]}
                     </article>
 
                     <footer>
-                        <div className='mt-5 pl-0 ml-0' title='Get an email whenever theres new content'>
+                        <div className="f-nav mt-5">
+                            {section_index!=0 && (
+                                <div className='f-link about br pr-2'>
+                                    <a href="?posts" onClick={_=>switchTab(_,0)}> Posts </a>
+                                </div>
+                            )}
+                            {section_index!=1 && (
+                                <div className={`f-link about ${section_index!=2&&'br'} pl-2 pr-2`}>
+                                    <a href="?about" title="About Me" onClick={_=>switchTab(_,1)}> About </a>
+                                </div>
+                            )}
+                            {section_index!=2 && (
+                                <div className='f-link projects pl-2' id={section_index==2 ? "inactive" : ""}>
+                                    <a href="?projects" title="My Software Projects" onClick={_=>switchTab(_,2)}> Software Projects </a>
+                                </div>
+                            )}
+                        </div>
+
+                        <div className='mt-4 pl-0 ml-0' title='Get an email whenever theres new content'>
                             <a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ"> <em> Subscribe to newsletter ! </em> </a>
                         </div>
                     </footer>
