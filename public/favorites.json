@@ -18,8 +18,8 @@
     },
 
     {
-        "title": "Chip8 emulator",
-        "href": "https://github.com/kodejuice/chip8",
+        "title": "Chip8 Emulator",
+        "href": "https://github.com/kodejuice/chip8-emulator",
         "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language"
     },
 

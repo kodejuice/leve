@@ -41,7 +41,7 @@ export default function Projects() {
                 <Fragment>
                     { projects.map(v => <Item key={v.title} info={v} />) }
 
-                    <p className="pt-4"> More on <a href="https://github.com/kodejuice">github</a> </p>
+                    <p className="pt-4"> More on <a href="https://github.com/kodejuice" title="Kodejuice">Github</a> </p>
                 </Fragment>
             ) || <p className="pt-4"> Loading ... </p>}</div>
 
