@@ -3,12 +3,14 @@ const Icon = (props) => {
         // github: "https://img.icons8.com/dusk/21/000000/github.png",
         github: "/icons/github.png",
         twitter: "/icons/twitter.png",
+        linkedin: "/icons/linkedin.png",
         "résumé": "/icons/resume.png",
         "rss feed": "/icons/rss.png",
     };
+    const size = 30;
     return (
         <a className='no-bg-color profile-link' title={props.name} href={props.url} rel="noreferrer" target={props.blank && "_blank"}>
-            <img src={iconURL[props.name]} alt={props.name} />
+            <img style={{width:`${size}px`, height: `${size}px`}} src={iconURL[props.name]} alt={props.name} />
         </a>
     );
 }
@@ -27,8 +29,8 @@ const Header = (props) => {
                         <tr>
                             <td> <Icon url={links.github} name='github' blank={true}/> </td>
                             <td> <Icon url={links.twitter} name='twitter' blank={true}/> </td>
+                            <td> <Icon url={links.linkedin} name='linkedin'/> </td>
                             <td> <Icon url={links.resume} name='résumé'/> </td>
-                            <td className='hidden'></td>
                             <td className='hidden'></td>
                             <td className='hidden'></td>
                             <td className='hidden'></td>

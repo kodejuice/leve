@@ -6,7 +6,8 @@ export const site_details = {
     "links": {
         "twitter": "https://twitter.com/kodejuice",
         "github": "https://github.com/kodejuice",
-        "resume": null
+        "linkedin": "https://linkedin.com/in/sochima",
+        "resume": "resume.pdf"
     },
 
     "site": {
