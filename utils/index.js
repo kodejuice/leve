@@ -191,5 +191,8 @@ export const scrollToTop = (cb, delay = 300, top = 0) => {
         left: 0,
         behavior: 'smooth'
     });
-    setTimeout(cb, delay); // call cb() after delay-ms
+
+    if (cb) {
+        setTimeout(cb, delay); // call cb() after delay-ms
+    }
 }
