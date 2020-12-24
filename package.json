@@ -19,7 +19,6 @@
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.4.1",
     "date-fns": "^2.12.0",
-    "disqus-react": "^1.0.8",
     "fast-dice-coefficient": "^1.0.3",
     "formidable": "^1.2.2",
     "hash.js": "^1.1.7",
