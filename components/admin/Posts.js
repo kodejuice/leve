@@ -64,7 +64,7 @@ function List(props) {
                             {/*Comment_count || Revisions_count*/}
                             {is_published ?
                                 <td className="comment-count">
-                                    <a href={`${url}/${post.slug}#disqus_thread`}></a>
+                                    <a href={`${url}/${post.slug}#disqus_thread`}> cmnts </a>
                                 </td>
                                 : <td>{post.draft_revisions | 0}</td> }
 

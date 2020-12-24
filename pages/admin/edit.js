@@ -12,7 +12,6 @@ import fetch from 'node-fetch'
 import _ from 'underscore'
 import {format} from 'date-fns'
 
-import { CommentCount } from 'disqus-react'
 import Modal from 'react-modal'
 import ClipLoader from "react-spinners/ClipLoader"
 import { HotKeys } from "react-hotkeys"
@@ -231,7 +230,7 @@ export default function Edit(props) {
                                         <div className='row'><div className='col-4'>Comments: </div>
                                             <div className='col comment-div'>
                                                 {/* disqus commentcount */}
-                                                <a href={`https://${host}/${slug}#disqus_thread`}>  </a>
+                                                <a href={`https://${host}/${slug}#disqus_thread`}> Comments </a>
                                             </div>
                                         </div>
                                     </>
