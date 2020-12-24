@@ -231,12 +231,7 @@ export default function Edit(props) {
                                         <div className='row'><div className='col-4'>Comments: </div>
                                             <div className='col comment-div'>
                                                 {/* disqus commentcount */}
-                                                <CommentCount shortname={slug} config={{
-                                                        url: `https://${host}/${slug}`,
-                                                        identifier: slug,
-                                                        title,
-                                                    }}>
-                                                </CommentCount>
+                                                <a href={`https://${host}/${slug}#disqus_thread`}>  </a>
                                             </div>
                                         </div>
                                     </>

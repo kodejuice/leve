@@ -10,8 +10,6 @@ import {format} from 'date-fns'
 import { parseCookies, setCookie } from 'nookies'
 import Toggle from '../components/home/Toggle';
 
-import { DiscussionEmbed } from 'disqus-react'
-
 import PageNotFound from '../components/PageNotFound'
 
 import {getBestMatch} from '../utils/string-similarity';
@@ -143,7 +141,7 @@ function PostView(props) {
                                 <div>
                                     {post.views && (
                                         <>
-                                            <>-</> <small><em title="" className="mt-1"> {post.views} views </em></small>
+                                            - <small><em title="" className="mt-1"> {post.views} views </em></small>
                                         </>
                                     ) || ""}
                                 </div>
@@ -151,7 +149,7 @@ function PostView(props) {
                                 <div>
                                     {post.draft && (
                                         <>
-                                            <>-</> <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
+                                            - <small><em title="This post isnt published yet" className="mt-1"> {post.draft ? "draft" : ""} </em></small>
                                         </>
                                     ) || ""}
                                 </div>
@@ -229,14 +227,7 @@ function PostView(props) {
                                 (!post.allow_comments) ?
                                     ((post.is_loading) ? "" : <b> <em> Comments Disabled </em> </b>)
                                     : (
-                                        <DiscussionEmbed
-                                            shortname={details.name+":"+post.slug}
-                                            config={{
-                                                url: page_url,
-                                                identifier: details.name+":"+post.slug,
-                                                title: post.title,
-                                            }}
-                                        />
+                                        <div id="disqus_thread"></div>
                                     )
                             }
                         </div>

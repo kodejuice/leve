@@ -1,7 +1,6 @@
 import {useState} from "react";
 import Link from 'next/link';
 
-import { CommentCount } from 'disqus-react'
 import Pagination from "react-js-pagination"
 
 import {scrollToTop, deleteDBPost} from '../../utils';
@@ -65,11 +64,7 @@ function List(props) {
                             {/*Comment_count || Revisions_count*/}
                             {is_published ?
                                 <td className="comment-count">
-                                    <CommentCount shortname={post.slug} config={{
-                                        url: `${url}/${post.slug}`,
-                                        identifier: post.slug,
-                                        title: post.title,
-                                    }}> </CommentCount>
+                                    <a href={`${url}/${post.slug}#disqus_thread`}></a>
                                 </td>
                                 : <td>{post.draft_revisions | 0}</td> }
 
