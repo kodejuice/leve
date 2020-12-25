@@ -6,16 +6,6 @@ const yearBorn  = 2000,
       monthBorn = 2 /*March*/,
       dayBorn   = 5;
 
-
-function birthdayToday() {
-    const d = new Date(),
-        currMonth = d.getMonth(),
-        currDay = d.getDate();
-
-    return (currMonth == monthBorn && currDay == dayBorn);
-}
-
-
 function getAge() {
     const d = new Date(),
         currYear = d.getFullYear(),
@@ -31,6 +21,15 @@ function getAge() {
     return (currYear - yearBorn - 1) + birthdayReached;
 }
 
+function birthdayToday() {
+    const d = new Date(),
+        currMonth = d.getMonth(),
+        currDay = d.getDate();
+
+    return (currMonth == monthBorn && currDay == dayBorn);
+}
+
+
 
 export default function About() {
     const { width, height } = useWindowSize()
@@ -45,15 +44,14 @@ export default function About() {
                         width={width}
                         height={height}
                     />
-                    <p>Today is my birthday ☺ </p>
+                    <p>I'm +1 today ☺ </p>
                 </Fragment>
             )}
 
             <p>
-                Hi, my name is Sochima Biereagu, i'm {getAge()}yrs old and i'm a <b>Software Engineer</b>. I ...
-                <br/>
-                <b> TODO: complete this </b>
-                
+                <span title={`${getAge()}yo`}>Hi, i'm Sochima.</span>
+                <p> I'm a Software Engineer and a decorated problem solver. </p>
+                I love solving problems and coming up with new stuff, i once met the god of problem solving in a dream (he was nice ☺).
             </p>
 
         </div>
