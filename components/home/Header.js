@@ -38,7 +38,7 @@ const Header = (props) => {
                         </tr>
                     </tbody>
                 </table>
-                <em className='site-email'> <a className='no-bg-color' href={"mailto:"+p.email} target='_blank'> {p.email} </a> </em>
+                <span className='site-email'> <a href={"mailto:"+p.email} target='_blank'> {p.email} </a> </span>
             </div>
         </div>
     );
