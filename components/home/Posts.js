@@ -89,9 +89,9 @@ const Posts = (props) => {
     }
 
     return (
-        <div className='home-posts ml-2'>
+        <>
             {post_block}
-        </div>
+        </>
     );
 }
 

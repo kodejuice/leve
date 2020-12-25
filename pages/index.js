@@ -109,7 +109,9 @@ function Home(props) {
                     </header>
 
                     <article>
-                        {sections.current[section_index]}
+                        <div className='home-posts ml-2'>
+                            {sections.current[section_index]}
+                        </div>
                     </article>
 
                     <footer>
