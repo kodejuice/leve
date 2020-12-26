@@ -24,7 +24,6 @@ function List(props) {
                 <title> Posts &lsaquo; {details.description} - Admin </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="robots" content="noindex"/>
-                <script id="dsq-count-scr" src={`//${props.disqus_host}/count.js`} async></script>
             </Head>
 
             <div className='admin'>

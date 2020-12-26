@@ -22,6 +22,8 @@ class MyDocument extends Document {
             <body className="body">
                 <Main />
                 <NextScript />
+
+                <script id="dsq-count-scr" src={`//${process.env.DISQUS_HOST}/count.js`} async></script>
             </body>
         </Html>
     );

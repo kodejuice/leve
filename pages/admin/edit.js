@@ -97,7 +97,6 @@ export default function Edit(props) {
                 <meta name="robots" content="noindex"/>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"/>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"/>
-                <script id="dsq-count-scr" src={`//${props.disqus_host}/count.js`} async></script>
             </Head>
 
             <div className='admin'>
