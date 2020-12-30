@@ -53,7 +53,7 @@ export default function About() {
                 <p> I'm a Software Engineer and a decorated problem solver. </p>
                 <p>
                     I love solving problems (i once met Apollo in a dream, he was nice ☺), i also love coming up with new stuff.
-                    I created this site specially for the purpose of documenting some of the stuff i've created || designed.
+                    I created this site specially for the purpose of writting about some of the stuffs i've created || designed.
                     I'll as well write about some of the stuff that goes through my crooked mind.
                 </p>
                 <pre> {`{name: "Biereagu Sochima Everton"}`} </pre>
