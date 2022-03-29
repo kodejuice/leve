@@ -27,7 +27,7 @@
     "jsonwebtoken": "^8.5.1",
     "katex": "^0.11.1",
     "lodash": "^4.17.21",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-texmath": "^0.6.7",
     "mongoose": "^5.9.7",
     "next": "^12.1.0",
