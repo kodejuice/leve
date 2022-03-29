@@ -32,7 +32,7 @@
     "mongoose": "^5.9.7",
     "next": "^12.1.0",
     "next-fonts": "^1.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nookies": "^2.2.4",
     "nprogress": "^0.2.0",
     "query-string": "^6.13.7",
