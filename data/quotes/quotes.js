@@ -1,9814 +1,11457 @@
 module.exports = [
-	{
-		"author": "Vladimir Vapnik",
-		"quote": "The most practical thing in the world is good theory"
-	},
   {
-    "author": "Edward Teller",
-    "quote": "The science of today is the technology of tomorrow."
+    author: "Vladimir Vapnik",
+    quote: "The most practical thing in the world is good theory",
   },
   {
-    "author": "A. P. J. Abdul Kalam",
-    "quote": "Science is a beautiful gift to humanity; we should not distort it."
+    author: "Edward Teller",
+    quote: "The science of today is the technology of tomorrow.",
   },
   {
-    "author": "H. L. Mencken",
-    "quote": "Democracy is the art and science of running the circus from the monkey cage."
+    author: "A. P. J. Abdul Kalam",
+    quote: "Science is a beautiful gift to humanity; we should not distort it.",
   },
   {
-    "author": "Immanuel Kant",
-    "quote": "Science is organized knowledge. Wisdom is organized life."
+    author: "H. L. Mencken",
+    quote:
+      "Democracy is the art and science of running the circus from the monkey cage.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Science without religion is lame, religion without science is blind."
+    author: "Immanuel Kant",
+    quote: "Science is organized knowledge. Wisdom is organized life.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "Success is a science; if you have the conditions, you get the result."
+    author: "Albert Einstein",
+    quote:
+      "Science without religion is lame, religion without science is blind.",
   },
   {
-    "author": "Carl Sagan",
-    "quote": "Science is a way of thinking much more than it is a body of knowledge."
+    author: "Oscar Wilde",
+    quote:
+      "Success is a science; if you have the conditions, you get the result.",
   },
   {
-    "author": "Wernher von Braun",
-    "quote": "Research is what I'm doing when I don't know what I'm doing."
+    author: "Carl Sagan",
+    quote:
+      "Science is a way of thinking much more than it is a body of knowledge.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Bad times have a scientific value. These are occasions a good learner would not miss."
+    author: "Wernher von Braun",
+    quote: "Research is what I'm doing when I don't know what I'm doing.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Only two things are infinite, the universe and human stupidity, and I'm not sure about the former."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "Bad times have a scientific value. These are occasions a good learner would not miss.",
   },
   {
-    "author": "Thomas Berger",
-    "quote": "The art and science of asking questions is the source of all knowledge."
+    author: "Albert Einstein",
+    quote:
+      "Only two things are infinite, the universe and human stupidity, and I'm not sure about the former.",
   },
   {
-    "author": "William Osler",
-    "quote": "Medicine is a science of uncertainty and an art of probability."
+    author: "Thomas Berger",
+    quote:
+      "The art and science of asking questions is the source of all knowledge.",
   },
   {
-    "author": "Henry Petroski",
-    "quote": "Science is about knowing; engineering is about doing."
+    author: "William Osler",
+    quote: "Medicine is a science of uncertainty and an art of probability.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "Science is not only a disciple of reason but, also, one of romance and passion."
+    author: "Henry Petroski",
+    quote: "Science is about knowing; engineering is about doing.",
   },
   {
-    "author": "Martin Luther King, Jr.",
-    "quote": "Our scientific power has outrun our spiritual power. We have guided missiles and misguided men."
+    author: "Stephen Hawking",
+    quote:
+      "Science is not only a disciple of reason but, also, one of romance and passion.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "Scientists have become the bearers of the torch of discovery in our quest for knowledge."
+    author: "Martin Luther King, Jr.",
+    quote:
+      "Our scientific power has outrun our spiritual power. We have guided missiles and misguided men.",
   },
   {
-    "author": "Adam Smith",
-    "quote": "Science is the great antidote to the poison of enthusiasm and superstition."
+    author: "Stephen Hawking",
+    quote:
+      "Scientists have become the bearers of the torch of discovery in our quest for knowledge.",
   },
   {
-    "author": "Edsger Dijkstra",
-    "quote": "Computer science is no more about computers than astronomy is about telescopes."
+    author: "Adam Smith",
+    quote:
+      "Science is the great antidote to the poison of enthusiasm and superstition.",
   },
   {
-    "author": "Bill Nye",
-    "quote": "Science is the key to our future, and if you don't believe in science, then you're holding everybody back."
+    author: "Edsger Dijkstra",
+    quote:
+      "Computer science is no more about computers than astronomy is about telescopes.",
   },
   {
-    "author": "Robert A. Heinlein",
-    "quote": "Everything is theoretically impossible, until it is done."
+    author: "Bill Nye",
+    quote:
+      "Science is the key to our future, and if you don't believe in science, then you're holding everybody back.",
   },
   {
-    "author": "Arthur M. Schlesinger",
-    "quote": "Science and technology revolutionize our lives, but memory, tradition and myth frame our response."
+    author: "Robert A. Heinlein",
+    quote: "Everything is theoretically impossible, until it is done.",
   },
   {
-    "author": "Edwin Powell Hubble",
-    "quote": "Equipped with his five senses, man explores the universe around him and calls the adventure Science."
+    author: "Arthur M. Schlesinger",
+    quote:
+      "Science and technology revolutionize our lives, but memory, tradition and myth frame our response.",
   },
   {
-    "author": "Edgar Allan Poe",
-    "quote": "Science has not yet taught us if madness is or is not the sublimity of the intelligence."
+    author: "Edwin Powell Hubble",
+    quote:
+      "Equipped with his five senses, man explores the universe around him and calls the adventure Science.",
   },
   {
-    "author": "Bruce Feirstein",
-    "quote": "The distance between insanity and genius is measured only by success."
+    author: "Edgar Allan Poe",
+    quote:
+      "Science has not yet taught us if madness is or is not the sublimity of the intelligence.",
   },
   {
-    "author": "William Blake",
-    "quote": "Art is the tree of life. Science is the tree of death."
+    author: "Bruce Feirstein",
+    quote:
+      "The distance between insanity and genius is measured only by success.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "The whole of science is nothing more than a refinement of everyday thinking."
+    author: "William Blake",
+    quote: "Art is the tree of life. Science is the tree of death.",
   },
   {
-    "author": "Bertrand Russell",
-    "quote": "Science is what you know, philosophy is what you don't know."
+    author: "Albert Einstein",
+    quote:
+      "The whole of science is nothing more than a refinement of everyday thinking.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "No amount of experimentation can ever prove me right; a single experiment can prove me wrong."
+    author: "Bertrand Russell",
+    quote: "Science is what you know, philosophy is what you don't know.",
   },
   {
-    "author": "Galileo Galilei",
-    "quote": "By denying scientific principles, one may maintain any paradox."
+    author: "Albert Einstein",
+    quote:
+      "No amount of experimentation can ever prove me right; a single experiment can prove me wrong.",
   },
   {
-    "author": "Lyman Beecher",
-    "quote": "No great advance has been made in science, politics, or religion without controversy."
+    author: "Galileo Galilei",
+    quote: "By denying scientific principles, one may maintain any paradox.",
   },
   {
-    "author": "William Bernbach",
-    "quote": "Advertising is fundamentally persuasion and persuasion happens to be not a science, but an art."
+    author: "Lyman Beecher",
+    quote:
+      "No great advance has been made in science, politics, or religion without controversy.",
   },
   {
-    "author": "Marie Curie",
-    "quote": "I am among those who think that science has great beauty."
+    author: "William Bernbach",
+    quote:
+      "Advertising is fundamentally persuasion and persuasion happens to be not a science, but an art.",
   },
   {
-    "author": "Sebastian Thrun",
-    "quote": "To me, mathematics, computer science, and the arts are insanely related. They're all creative expressions."
+    author: "Marie Curie",
+    quote: "I am among those who think that science has great beauty.",
   },
   {
-    "author": "Pierre Bourdieu",
-    "quote": "The function of sociology, as of every science, is to reveal that which is hidden."
+    author: "Sebastian Thrun",
+    quote:
+      "To me, mathematics, computer science, and the arts are insanely related. They're all creative expressions.",
   },
   {
-    "author": "Jamie Zawinski",
-    "quote": "Software Engineering might be science; but that's not what I do. I'm a hacker, not an engineer."
+    author: "Pierre Bourdieu",
+    quote:
+      "The function of sociology, as of every science, is to reveal that which is hidden.",
   },
   {
-    "author": "Niels Bohr",
-    "quote": "Your theory is crazy, but it's not crazy enough to be true."
+    author: "Jamie Zawinski",
+    quote:
+      "Software Engineering might be science; but that's not what I do. I'm a hacker, not an engineer.",
   },
   {
-    "author": "John Dewey",
-    "quote": "Every great advance in science has issued from a new audacity of imagination."
+    author: "Niels Bohr",
+    quote: "Your theory is crazy, but it's not crazy enough to be true.",
   },
   {
-    "author": "Marie Curie",
-    "quote": "In science, we must be interested in things, not in persons."
+    author: "John Dewey",
+    quote:
+      "Every great advance in science has issued from a new audacity of imagination.",
   },
   {
-    "author": "Georges Seurat",
-    "quote": "Some say they see poetry in my paintings; I see only science."
+    author: "Marie Curie",
+    quote: "In science, we must be interested in things, not in persons.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Most people say that it is the intellect which makes a great scientist. They are wrong: it is character."
+    author: "Georges Seurat",
+    quote: "Some say they see poetry in my paintings; I see only science.",
   },
   {
-    "author": "Sherry Yard",
-    "quote": "Baking is both an art and a science."
+    author: "Albert Einstein",
+    quote:
+      "Most people say that it is the intellect which makes a great scientist. They are wrong: it is character.",
   },
   {
-    "author": "Louis D. Brandeis",
-    "quote": "There are no shortcuts in evolution."
+    author: "Sherry Yard",
+    quote: "Baking is both an art and a science.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "Rockets are cool. There's no getting around that."
+    author: "Louis D. Brandeis",
+    quote: "There are no shortcuts in evolution.",
   },
   {
-    "author": "Kate McKinnon",
-    "quote": "I feel like science and art are cousins."
+    author: "Elon Musk",
+    quote: "Rockets are cool. There's no getting around that.",
   },
   {
-    "author": "Jacob Bronowski",
-    "quote": "No science is immune to the infection of politics and the corruption of power."
+    author: "Kate McKinnon",
+    quote: "I feel like science and art are cousins.",
   },
   {
-    "author": "Karl Popper",
-    "quote": "Science must begin with myths, and with the criticism of myths."
+    author: "Jacob Bronowski",
+    quote:
+      "No science is immune to the infection of politics and the corruption of power.",
   },
   {
-    "author": "Claude Bernard",
-    "quote": "Observation is a passive science, experimentation an active science."
+    author: "Karl Popper",
+    quote: "Science must begin with myths, and with the criticism of myths.",
   },
   {
-    "author": "Jeff Bezos",
-    "quote": "The human brain is an incredible pattern-matching machine."
+    author: "Claude Bernard",
+    quote:
+      "Observation is a passive science, experimentation an active science.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "Mars is the only place in the solar system where it's possible for life to become multi-planetarian."
+    author: "Jeff Bezos",
+    quote: "The human brain is an incredible pattern-matching machine.",
   },
   {
-    "author": "Isaac Asimov",
-    "quote": "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom."
+    author: "Elon Musk",
+    quote:
+      "Mars is the only place in the solar system where it's possible for life to become multi-planetarian.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "Science is the captain, and practice the soldiers."
+    author: "Isaac Asimov",
+    quote:
+      "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.",
   },
   {
-    "author": "Ernest Rutherford",
-    "quote": "All science is either physics or stamp collecting."
+    author: "Leonardo da Vinci",
+    quote: "Science is the captain, and practice the soldiers.",
   },
   {
-    "author": "Bill Nye",
-    "quote": "Science is the best idea humans have ever had. The more people who embrace that idea, the better."
+    author: "Ernest Rutherford",
+    quote: "All science is either physics or stamp collecting.",
   },
   {
-    "author": "Neil deGrasse Tyson",
-    "quote": "Science is basically an inoculation against charlatans."
+    author: "Bill Nye",
+    quote:
+      "Science is the best idea humans have ever had. The more people who embrace that idea, the better.",
   },
   {
-    "author": "Carl Friedrich Gauss",
-    "quote": "The enchanting charms of this sublime science reveal only to those who have the courage to go deeply into it."
+    author: "Neil deGrasse Tyson",
+    quote: "Science is basically an inoculation against charlatans.",
   },
   {
-    "author": "Jared Diamond",
-    "quote": "Biology is the science. Evolution is the concept that makes biology unique."
+    author: "Carl Friedrich Gauss",
+    quote:
+      "The enchanting charms of this sublime science reveal only to those who have the courage to go deeply into it.",
   },
   {
-    "author": "Kurt Vonnegut",
-    "quote": "Science is magic that works."
+    author: "Jared Diamond",
+    quote:
+      "Biology is the science. Evolution is the concept that makes biology unique.",
   },
   {
-    "author": "Earl Wilson",
-    "quote": "Science may never come up with a better office communication system than the coffee break."
+    author: "Kurt Vonnegut",
+    quote: "Science is magic that works.",
   },
   {
-    "author": "Karl Pearson",
-    "quote": "Statistics is the grammar of science."
+    author: "Earl Wilson",
+    quote:
+      "Science may never come up with a better office communication system than the coffee break.",
   },
   {
-    "author": "Edmund Husserl",
-    "quote": "Experience by itself is not science."
+    author: "Karl Pearson",
+    quote: "Statistics is the grammar of science.",
   },
   {
-    "author": "Edward Teller",
-    "quote": "The main purpose of science is simplicity and as we understand more things, everything is becoming simpler."
+    author: "Edmund Husserl",
+    quote: "Experience by itself is not science.",
   },
   {
-    "author": "David Hume",
-    "quote": "Human Nature is the only science of man; and yet has been hitherto the most neglected."
+    author: "Edward Teller",
+    quote:
+      "The main purpose of science is simplicity and as we understand more things, everything is becoming simpler.",
   },
   {
-    "author": "Thomas Hobbes",
-    "quote": "Science is the knowledge of consequences, and dependence of one fact upon another."
+    author: "David Hume",
+    quote:
+      "Human Nature is the only science of man; and yet has been hitherto the most neglected.",
   },
   {
-    "author": "Frederick Sanger",
-    "quote": "Scientific research is one of the most exciting and rewarding of occupations."
+    author: "Thomas Hobbes",
+    quote:
+      "Science is the knowledge of consequences, and dependence of one fact upon another.",
   },
   {
-    "author": "Henri Poincare",
-    "quote": "It is through science that we prove, but through intuition that we discover."
+    author: "Frederick Sanger",
+    quote:
+      "Scientific research is one of the most exciting and rewarding of occupations.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "The most beautiful thing we can experience is the mysterious. It is the source of all true art and science."
+    author: "Henri Poincare",
+    quote:
+      "It is through science that we prove, but through intuition that we discover.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Men love to wonder, and that is the seed of science."
+    author: "Albert Einstein",
+    quote:
+      "The most beautiful thing we can experience is the mysterious. It is the source of all true art and science.",
   },
   {
-    "author": "Steven Wright",
-    "quote": "When I die, I'm gonna leave my body to science fiction."
+    author: "Ralph Waldo Emerson",
+    quote: "Men love to wonder, and that is the seed of science.",
   },
   {
-    "author": "Neil Armstrong",
-    "quote": "Geologists have a saying - rocks remember."
+    author: "Steven Wright",
+    quote: "When I die, I'm gonna leave my body to science fiction.",
   },
   {
-    "author": "Carl Sagan",
-    "quote": "We've arranged a civilization in which most crucial elements profoundly depend on science and technology."
+    author: "Neil Armstrong",
+    quote: "Geologists have a saying - rocks remember.",
   },
   {
-    "author": "Plato",
-    "quote": "Science is nothing but perception."
+    author: "Carl Sagan",
+    quote:
+      "We've arranged a civilization in which most crucial elements profoundly depend on science and technology.",
   },
   {
-    "author": "Ursula K. Le Guin",
-    "quote": "If science fiction is the mythology of modern technology, then its myth is tragic."
+    author: "Plato",
+    quote: "Science is nothing but perception.",
   },
   {
-    "author": "George Allen, Sr.",
-    "quote": "Winning is the science of being totally prepared."
+    author: "Ursula K. Le Guin",
+    quote:
+      "If science fiction is the mythology of modern technology, then its myth is tragic.",
   },
   {
-    "author": "Isaac Asimov",
-    "quote": "There is a single light of science, and to brighten it anywhere is to brighten it everywhere."
+    author: "George Allen, Sr.",
+    quote: "Winning is the science of being totally prepared.",
   },
   {
-    "author": "Ridley Scott",
-    "quote": "In science fiction, we're always searching for new frontiers. We're drawn to the unknown."
+    author: "Isaac Asimov",
+    quote:
+      "There is a single light of science, and to brighten it anywhere is to brighten it everywhere.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "A year spent in artificial intelligence is enough to make one believe in God."
+    author: "Ridley Scott",
+    quote:
+      "In science fiction, we're always searching for new frontiers. We're drawn to the unknown.",
   },
   {
-    "author": "Ray Bradbury",
-    "quote": "Touch a scientist and you touch a child."
+    author: "Alan Perlis",
+    quote:
+      "A year spent in artificial intelligence is enough to make one believe in God.",
   },
   {
-    "author": "Jimi Hendrix",
-    "quote": "Imagination is the key to my lyrics. The rest is painted with a little science fiction."
+    author: "Ray Bradbury",
+    quote: "Touch a scientist and you touch a child.",
   },
   {
-    "author": "Bruno Bettelheim",
-    "quote": "Raising children is a creative endeavor, an art rather than a science."
+    author: "Jimi Hendrix",
+    quote:
+      "Imagination is the key to my lyrics. The rest is painted with a little science fiction.",
   },
   {
-    "author": "James D. Watson",
-    "quote": "We're not all equal, it's simply not true. That isn't science."
+    author: "Bruno Bettelheim",
+    quote:
+      "Raising children is a creative endeavor, an art rather than a science.",
   },
   {
-    "author": "Kurt Vonnegut",
-    "quote": "I had no talent for science. What was infinitely worse: all my fraternity brothers were engineers."
+    author: "James D. Watson",
+    quote: "We're not all equal, it's simply not true. That isn't science.",
   },
   {
-    "author": "Conor McGregor",
-    "quote": "My preparation is about precision. It is a science."
+    author: "Kurt Vonnegut",
+    quote:
+      "I had no talent for science. What was infinitely worse: all my fraternity brothers were engineers.",
   },
   {
-    "author": "Louis Pasteur",
-    "quote": "There are no such things as applied sciences, only applications of science."
+    author: "Conor McGregor",
+    quote: "My preparation is about precision. It is a science.",
   },
   {
-    "author": "Thomas Huxley",
-    "quote": "The great tragedy of science - the slaying of a beautiful hypothesis by an ugly fact."
+    author: "Louis Pasteur",
+    quote:
+      "There are no such things as applied sciences, only applications of science.",
   },
   {
-    "author": "Ivan Pavlov",
-    "quote": "But man has still another powerful resource: natural science with its strictly objective methods."
+    author: "Thomas Huxley",
+    quote:
+      "The great tragedy of science - the slaying of a beautiful hypothesis by an ugly fact.",
   },
   {
-    "author": "Rupert Sheldrake",
-    "quote": "Science at its best is an open-minded method of inquiry, not a belief system."
+    author: "Ivan Pavlov",
+    quote:
+      "But man has still another powerful resource: natural science with its strictly objective methods.",
   },
   {
-    "author": "Erik Brynjolfsson",
-    "quote": "The heart of science is measurement."
+    author: "Rupert Sheldrake",
+    quote:
+      "Science at its best is an open-minded method of inquiry, not a belief system.",
   },
   {
-    "author": "John Calvin",
-    "quote": "Knowledge of the sciences is so much smoke apart from the heavenly science of Christ."
+    author: "Erik Brynjolfsson",
+    quote: "The heart of science is measurement.",
   },
   {
-    "author": "Ted Cruz",
-    "quote": "Many of the alarmists on global warming, they've got a problem because the science doesn't back them up."
+    author: "John Calvin",
+    quote:
+      "Knowledge of the sciences is so much smoke apart from the heavenly science of Christ.",
   },
   {
-    "author": "Mitch McConnell",
-    "quote": "My job is to try to protect jobs in Kentucky now, not speculate about science in the future."
+    author: "Ted Cruz",
+    quote:
+      "Many of the alarmists on global warming, they've got a problem because the science doesn't back them up.",
   },
   {
-    "author": "Gustave Flaubert",
-    "quote": "All one's inventions are true, you can be sure of that. Poetry is as exact a science as geometry."
+    author: "Mitch McConnell",
+    quote:
+      "My job is to try to protect jobs in Kentucky now, not speculate about science in the future.",
   },
   {
-    "author": "W. H. Auden",
-    "quote": "'Healing,' Papa would tell me, 'is not a science, but the intuitive art of wooing nature.'"
+    author: "Gustave Flaubert",
+    quote:
+      "All one's inventions are true, you can be sure of that. Poetry is as exact a science as geometry.",
   },
   {
-    "author": "Emile Durkheim",
-    "quote": "It is science, and not religion, which has taught men that things are complex and difficult to understand."
+    author: "W. H. Auden",
+    quote:
+      "'Healing,' Papa would tell me, 'is not a science, but the intuitive art of wooing nature.'",
   },
   {
-    "author": "Harry Dean Stanton",
-    "quote": "Heisenberg, Max Plank and Einstein, they all agreed that science could not solve the mystery of the universe."
+    author: "Emile Durkheim",
+    quote:
+      "It is science, and not religion, which has taught men that things are complex and difficult to understand.",
   },
   {
-    "author": "Lord Kelvin",
-    "quote": "The more thoroughly I conduct scientific research, the more I believe that science excludes atheism."
+    author: "Harry Dean Stanton",
+    quote:
+      "Heisenberg, Max Plank and Einstein, they all agreed that science could not solve the mystery of the universe.",
   },
   {
-    "author": "John Burroughs",
-    "quote": "The love of nature is a different thing from the love of science, though the two may go together."
+    author: "Lord Kelvin",
+    quote:
+      "The more thoroughly I conduct scientific research, the more I believe that science excludes atheism.",
   },
   {
-    "author": "Terry Pratchett",
-    "quote": "I am a great fan of science, but I cannot do a quadratic equation."
+    author: "John Burroughs",
+    quote:
+      "The love of nature is a different thing from the love of science, though the two may go together.",
   },
   {
-    "author": "Wernher von Braun",
-    "quote": "It will free man from the remaining chains, the chains of gravity which still tie him to this planet."
+    author: "Terry Pratchett",
+    quote: "I am a great fan of science, but I cannot do a quadratic equation.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "Science is what we understand well enough to explain to a computer. Art is everything else we do."
+    author: "Wernher von Braun",
+    quote:
+      "It will free man from the remaining chains, the chains of gravity which still tie him to this planet.",
   },
   {
-    "author": "Henry Taube",
-    "quote": "The benefits of science are not to be reckoned only in terms of the physical."
+    author: "Donald Knuth",
+    quote:
+      "Science is what we understand well enough to explain to a computer. Art is everything else we do.",
   },
   {
-    "author": "Andrew Lincoln",
-    "quote": "I love science and that time in history when science and the humanities were the same thing."
+    author: "Henry Taube",
+    quote:
+      "The benefits of science are not to be reckoned only in terms of the physical.",
   },
   {
-    "author": "Walter Gilbert",
-    "quote": "The virtues of science are skepticism and independence of thought."
+    author: "Andrew Lincoln",
+    quote:
+      "I love science and that time in history when science and the humanities were the same thing.",
   },
   {
-    "author": "Tim Hunt",
-    "quote": "Science is about applying what we know and asking what we don't know."
+    author: "Walter Gilbert",
+    quote: "The virtues of science are skepticism and independence of thought.",
   },
   {
-    "author": "Heinrich Heine",
-    "quote": "You cannot feed the hungry on statistics."
+    author: "Tim Hunt",
+    quote:
+      "Science is about applying what we know and asking what we don't know.",
   },
   {
-    "author": "Jim Lovell",
-    "quote": "From now on we live in a world where man has walked on the Moon. It's not a miracle; we just decided to go."
+    author: "Heinrich Heine",
+    quote: "You cannot feed the hungry on statistics.",
   },
   {
-    "author": "Gabriel Marcel",
-    "quote": "It is right that we be concerned with the scientific probity of metaphysics."
+    author: "Jim Lovell",
+    quote:
+      "From now on we live in a world where man has walked on the Moon. It's not a miracle; we just decided to go.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Science is a wonderful thing if one does not have to earn one's living at it."
+    author: "Gabriel Marcel",
+    quote:
+      "It is right that we be concerned with the scientific probity of metaphysics.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "The man of science is a poor philosopher."
+    author: "Albert Einstein",
+    quote:
+      "Science is a wonderful thing if one does not have to earn one's living at it.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Science does not know its debt to imagination."
+    author: "Albert Einstein",
+    quote: "The man of science is a poor philosopher.",
   },
   {
-    "author": "Arnold H. Glasow",
-    "quote": "The fewer the facts, the stronger the opinion."
+    author: "Ralph Waldo Emerson",
+    quote: "Science does not know its debt to imagination.",
   },
   {
-    "author": "Bill Nye",
-    "quote": "Evolution is the fundamental idea in all of life science - in all of biology."
+    author: "Arnold H. Glasow",
+    quote: "The fewer the facts, the stronger the opinion.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Therefore, the good of man must be the end of the science of politics."
+    author: "Bill Nye",
+    quote:
+      "Evolution is the fundamental idea in all of life science - in all of biology.",
   },
   {
-    "author": "Steven Wright",
-    "quote": "When I die, I'm leaving my body to science fiction."
+    author: "Aristotle",
+    quote:
+      "Therefore, the good of man must be the end of the science of politics.",
   },
   {
-    "author": "George Bernard Shaw",
-    "quote": "Science never solves a problem without creating ten more."
+    author: "Steven Wright",
+    quote: "When I die, I'm leaving my body to science fiction.",
   },
   {
-    "author": "Hippocrates",
-    "quote": "There are in fact two things, science and opinion; the former begets knowledge, the later ignorance."
+    author: "George Bernard Shaw",
+    quote: "Science never solves a problem without creating ten more.",
   },
   {
-    "author": "Edward Abbey",
-    "quote": "There is science, logic, reason; there is thought verified by experience. And then there is California."
+    author: "Hippocrates",
+    quote:
+      "There are in fact two things, science and opinion; the former begets knowledge, the later ignorance.",
   },
   {
-    "author": "Neil deGrasse Tyson",
-    "quote": "Science literacy is the artery through which the solutions of tomorrow's problems flow."
+    author: "Edward Abbey",
+    quote:
+      "There is science, logic, reason; there is thought verified by experience. And then there is California.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "Romance should never begin with sentiment. It should begin with science and end with a settlement."
+    author: "Neil deGrasse Tyson",
+    quote:
+      "Science literacy is the artery through which the solutions of tomorrow's problems flow.",
   },
   {
-    "author": "Plato",
-    "quote": "Wisdom alone is the science of other sciences."
+    author: "Oscar Wilde",
+    quote:
+      "Romance should never begin with sentiment. It should begin with science and end with a settlement.",
   },
   {
-    "author": "Wernher von Braun",
-    "quote": "We can lick gravity, but sometimes the paperwork is overwhelming."
+    author: "Plato",
+    quote: "Wisdom alone is the science of other sciences.",
   },
   {
-    "author": "Neil deGrasse Tyson",
-    "quote": "The very nature of science is discoveries, and the best of those discoveries are the ones you don't expect."
+    author: "Wernher von Braun",
+    quote: "We can lick gravity, but sometimes the paperwork is overwhelming.",
   },
   {
-    "author": "Rene Descartes",
-    "quote": "Each problem that I solved became a rule, which served afterwards to solve other problems."
+    author: "Neil deGrasse Tyson",
+    quote:
+      "The very nature of science is discoveries, and the best of those discoveries are the ones you don't expect.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "You could warm Mars up, over time, with greenhouse gases."
+    author: "Rene Descartes",
+    quote:
+      "Each problem that I solved became a rule, which served afterwards to solve other problems.",
   },
   {
-    "author": "Marion Zimmer Bradley",
-    "quote": "Science fiction encourages us to explore... all the futures, good and bad, that the human mind can envision."
+    author: "Elon Musk",
+    quote: "You could warm Mars up, over time, with greenhouse gases.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "Science is increasingly answering questions that used to be the province of religion."
+    author: "Marion Zimmer Bradley",
+    quote:
+      "Science fiction encourages us to explore... all the futures, good and bad, that the human mind can envision.",
   },
   {
-    "author": "Hippocrates",
-    "quote": "Science is the father of knowledge, but opinion breeds ignorance."
+    author: "Stephen Hawking",
+    quote:
+      "Science is increasingly answering questions that used to be the province of religion.",
   },
   {
-    "author": "Robert Green Ingersoll",
-    "quote": "Reason, observation, and experience; the holy trinity of science."
+    author: "Hippocrates",
+    quote: "Science is the father of knowledge, but opinion breeds ignorance.",
   },
   {
-    "author": "Unknown",
-    "quote": "If the facts don't fit the theory, change the facts."
+    author: "Robert Green Ingersoll",
+    quote: "Reason, observation, and experience; the holy trinity of science.",
   },
   {
-    "author": "Ashley Montagu",
-    "quote": "Science has proof without any certainty. Creationists have certainty without any proof."
+    author: "Unknown",
+    quote: "If the facts don't fit the theory, change the facts.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "God may exist, but science can explain the universe without the need for a creator."
+    author: "Ashley Montagu",
+    quote:
+      "Science has proof without any certainty. Creationists have certainty without any proof.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "I believe there are no questions that science can't answer about a physical universe."
+    author: "Stephen Hawking",
+    quote:
+      "God may exist, but science can explain the universe without the need for a creator.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "Science can lift people out of poverty and cure disease. That, in turn, will reduce civil unrest."
+    author: "Stephen Hawking",
+    quote:
+      "I believe there are no questions that science can't answer about a physical universe.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "Before we understand science, it is natural to believe that God created the universe."
+    author: "Stephen Hawking",
+    quote:
+      "Science can lift people out of poverty and cure disease. That, in turn, will reduce civil unrest.",
   },
   {
-    "author": "Aleister Crowley",
-    "quote": "Science is always discovering odd scraps of magical wisdom and making a tremendous fuss about its cleverness."
+    author: "Stephen Hawking",
+    quote:
+      "Before we understand science, it is natural to believe that God created the universe.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "If you believe in science, like I do, you believe that there are certain laws that are always obeyed."
+    author: "Aleister Crowley",
+    quote:
+      "Science is always discovering odd scraps of magical wisdom and making a tremendous fuss about its cleverness.",
   },
   {
-    "author": "Stephen Hawking",
-    "quote": "Philosophers have not kept up with modern developments in science. Particularly physics."
+    author: "Stephen Hawking",
+    quote:
+      "If you believe in science, like I do, you believe that there are certain laws that are always obeyed.",
   },
   {
-    "author": "Alan Turing",
-    "quote": "Science is a differential equation. Religion is a boundary condition."
+    author: "Stephen Hawking",
+    quote:
+      "Philosophers have not kept up with modern developments in science. Particularly physics.",
   },
   {
-    "author": "Noam Chomsky",
-    "quote": "As soon as questions of will or decision or reason or choice of action arise, human science is at a loss."
+    author: "Alan Turing",
+    quote:
+      "Science is a differential equation. Religion is a boundary condition.",
   },
   {
-    "author": "Noam Chomsky",
-    "quote": "Science, as everyone knows, is responsible, moderate, unsentimental, and otherwise good."
+    author: "Noam Chomsky",
+    quote:
+      "As soon as questions of will or decision or reason or choice of action arise, human science is at a loss.",
   },
   {
-    "author": "Charles Darwin",
-    "quote": "On the ordinary view of each species having been independently created, we gain no scientific explanation."
+    author: "Noam Chomsky",
+    quote:
+      "Science, as everyone knows, is responsible, moderate, unsentimental, and otherwise good.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "The credit of advancing science has always been due to individuals and never to the age."
+    author: "Charles Darwin",
+    quote:
+      "On the ordinary view of each species having been independently created, we gain no scientific explanation.",
   },
   {
-    "author": "Kurt Vonnegut",
-    "quote": "As a Humanist, I love science. I hate superstition, which could never have given us A-bombs."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "The credit of advancing science has always been due to individuals and never to the age.",
   },
   {
-    "author": "Auguste Comte",
-    "quote": "To understand a science, it is necessary to know its history."
+    author: "Kurt Vonnegut",
+    quote:
+      "As a Humanist, I love science. I hate superstition, which could never have given us A-bombs.",
   },
   {
-    "author": "Robert Zubrin",
-    "quote": "Science is not a collection of facts; it is a process of discovery."
+    author: "Auguste Comte",
+    quote: "To understand a science, it is necessary to know its history.",
   },
   {
-    "author": "Barry Commoner",
-    "quote": "The age of innocent faith in science and technology may be over."
+    author: "Robert Zubrin",
+    quote:
+      "Science is not a collection of facts; it is a process of discovery.",
   },
   {
-    "author": "Will Durant",
-    "quote": "Every science begins as philosophy and ends as art."
+    author: "Barry Commoner",
+    quote: "The age of innocent faith in science and technology may be over.",
   },
   {
-    "author": "Katherine Johnson",
-    "quote": "I like to learn. That's an art and a science."
+    author: "Will Durant",
+    quote: "Every science begins as philosophy and ends as art.",
   },
   {
-    "author": "Ellen Ochoa",
-    "quote": "I don't recall any interest in science in particular. It came later in college."
+    author: "Katherine Johnson",
+    quote: "I like to learn. That's an art and a science.",
   },
   {
-    "author": "Josef Albers",
-    "quote": "Ah, the creative process is the same secret in science as it is in art. They are all the same absolutely."
+    author: "Ellen Ochoa",
+    quote:
+      "I don't recall any interest in science in particular. It came later in college.",
   },
   {
-    "author": "Neil Gershenfeld",
-    "quote": "Computer science is one of the worst things that ever happened to either computers or to science."
+    author: "Josef Albers",
+    quote:
+      "Ah, the creative process is the same secret in science as it is in art. They are all the same absolutely.",
   },
   {
-    "author": "Jawed Karim",
-    "quote": "That's one of those things about being a computer science major: Valentine's Day is just another day."
+    author: "Neil Gershenfeld",
+    quote:
+      "Computer science is one of the worst things that ever happened to either computers or to science.",
   },
   {
-    "author": "J. Robert Oppenheimer",
-    "quote": "Both the man of science and the man of action live always at the edge of mystery, surrounded by it."
+    author: "Jawed Karim",
+    quote:
+      "That's one of those things about being a computer science major: Valentine's Day is just another day.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "Understanding science and pushing the boundaries of science is what makes me immensely satisfied."
+    author: "J. Robert Oppenheimer",
+    quote:
+      "Both the man of science and the man of action live always at the edge of mystery, surrounded by it.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "He who possesses art and science has religion; he who does not possess them, needs religion."
+    author: "Bill Gates",
+    quote:
+      "Understanding science and pushing the boundaries of science is what makes me immensely satisfied.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Science arose from poetry... when times change the two can meet again on a higher level as friends."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "He who possesses art and science has religion; he who does not possess them, needs religion.",
   },
   {
-    "author": "Ludwig Wittgenstein",
-    "quote": "Man has to awaken to wonder - and so perhaps do peoples. Science is a way of sending him to sleep again."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "Science arose from poetry... when times change the two can meet again on a higher level as friends.",
   },
   {
-    "author": "Thomas Aquinas",
-    "quote": "Moral science is better occupied when treating of friendship than of justice."
+    author: "Ludwig Wittgenstein",
+    quote:
+      "Man has to awaken to wonder - and so perhaps do peoples. Science is a way of sending him to sleep again.",
   },
   {
-    "author": "Kyle Chandler",
-    "quote": "What I do is not rocket science, but I sure do love it."
+    author: "Thomas Aquinas",
+    quote:
+      "Moral science is better occupied when treating of friendship than of justice.",
   },
   {
-    "author": "Muriel Rukeyser",
-    "quote": "The universe is made of stories, not of atoms."
+    author: "Kyle Chandler",
+    quote: "What I do is not rocket science, but I sure do love it.",
   },
   {
-    "author": "Ray Bradbury",
-    "quote": "The best scientist is open to experience and begins with romance - the idea that anything is possible."
+    author: "Muriel Rukeyser",
+    quote: "The universe is made of stories, not of atoms.",
   },
   {
-    "author": "Simon Sinek",
-    "quote": "I love science fiction - always have."
+    author: "Ray Bradbury",
+    quote:
+      "The best scientist is open to experience and begins with romance - the idea that anything is possible.",
   },
   {
-    "author": "Edwin Hubbel Chapin",
-    "quote": "Fashion is the science of appearances, and it inspires one with the desire to seem rather than to be."
+    author: "Simon Sinek",
+    quote: "I love science fiction - always have.",
   },
   {
-    "author": "Freeman Dyson",
-    "quote": "Unfortunately the global warming hysteria, as I see it, is driven by politics more than by science."
+    author: "Edwin Hubbel Chapin",
+    quote:
+      "Fashion is the science of appearances, and it inspires one with the desire to seem rather than to be.",
   },
   {
-    "author": "E. O. Wilson",
-    "quote": "Political ideology can corrupt the mind, and science."
+    author: "Freeman Dyson",
+    quote:
+      "Unfortunately the global warming hysteria, as I see it, is driven by politics more than by science.",
   },
   {
-    "author": "Ernest Rutherford",
-    "quote": "You should never bet against anything in science at odds of more than about 1012 to 1."
+    author: "E. O. Wilson",
+    quote: "Political ideology can corrupt the mind, and science.",
   },
   {
-    "author": "Ahmed Zewail",
-    "quote": "Investing in science education and curiosity-driven research is investing in the future."
+    author: "Ernest Rutherford",
+    quote:
+      "You should never bet against anything in science at odds of more than about 1012 to 1.",
   },
   {
-    "author": "Ahmed Zewail",
-    "quote": "Curiosity - the rover and the concept - is what science is all about: the quest to reveal the unknown."
+    author: "Ahmed Zewail",
+    quote:
+      "Investing in science education and curiosity-driven research is investing in the future.",
   },
   {
-    "author": "Subrahmanyan Chandrasekhar",
-    "quote": "Science is a perception of the world around us. Science is a place where what you find in nature pleases you."
+    author: "Ahmed Zewail",
+    quote:
+      "Curiosity - the rover and the concept - is what science is all about: the quest to reveal the unknown.",
   },
   {
-    "author": "John Ruskin",
-    "quote": "The work of science is to substitute facts for appearances, and demonstrations for impressions."
+    author: "Subrahmanyan Chandrasekhar",
+    quote:
+      "Science is a perception of the world around us. Science is a place where what you find in nature pleases you.",
   },
   {
-    "author": "Anton Chekhov",
-    "quote": "The wealthy are always surrounded by hangers-on; science and art are as well."
+    author: "John Ruskin",
+    quote:
+      "The work of science is to substitute facts for appearances, and demonstrations for impressions.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "The church saves sinners, but science seeks to stop their manufacture."
+    author: "Anton Chekhov",
+    quote:
+      "The wealthy are always surrounded by hangers-on; science and art are as well.",
   },
   {
-    "author": "Deepak Chopra",
-    "quote": "We must revisit the idea that science is a methodology and not an ontology."
+    author: "Elbert Hubbard",
+    quote:
+      "The church saves sinners, but science seeks to stop their manufacture.",
   },
   {
-    "author": "Bob Iger",
-    "quote": "There is no science in creativity. If you don't give yourself room to fail, you won't innovate."
+    author: "Deepak Chopra",
+    quote:
+      "We must revisit the idea that science is a methodology and not an ontology.",
   },
   {
-    "author": "George Santayana",
-    "quote": "I believe in general in a dualism between facts and the ideas of those facts in human heads."
+    author: "Bob Iger",
+    quote:
+      "There is no science in creativity. If you don't give yourself room to fail, you won't innovate.",
   },
   {
-    "author": "Thomas Huxley",
-    "quote": "Science and literature are not two things, but two sides of one thing."
+    author: "George Santayana",
+    quote:
+      "I believe in general in a dualism between facts and the ideas of those facts in human heads.",
   },
   {
-    "author": "Francis Bacon",
-    "quote": "Science is but an image of the truth."
+    author: "Thomas Huxley",
+    quote:
+      "Science and literature are not two things, but two sides of one thing.",
   },
   {
-    "author": "Will Durant",
-    "quote": "Science gives us knowledge, but only philosophy can give us wisdom."
+    author: "Francis Bacon",
+    quote: "Science is but an image of the truth.",
   },
   {
-    "author": "Gary Larson",
-    "quote": "Great moments in science: Einstein discovers that time is actually money."
+    author: "Will Durant",
+    quote:
+      "Science gives us knowledge, but only philosophy can give us wisdom.",
   },
   {
-    "author": "Georges Braque",
-    "quote": "Art is made to disturb, science reassures."
+    author: "Gary Larson",
+    quote:
+      "Great moments in science: Einstein discovers that time is actually money.",
   },
   {
-    "author": "P. T. Barnum",
-    "quote": "Science is the pursuit of pure truth, and the systematizing of it."
+    author: "Georges Braque",
+    quote: "Art is made to disturb, science reassures.",
   },
   {
-    "author": "Valerie Jarrett",
-    "quote": "Many of our advances in science and technology were seeded through government."
+    author: "P. T. Barnum",
+    quote: "Science is the pursuit of pure truth, and the systematizing of it.",
   },
   {
-    "author": "Jean-Francois Lyotard",
-    "quote": "Scientific knowledge is a kind of discourse."
+    author: "Valerie Jarrett",
+    quote:
+      "Many of our advances in science and technology were seeded through government.",
   },
   {
-    "author": "Ahmed Zewail",
-    "quote": "The soft power of science has the potential to reshape global diplomacy."
+    author: "Jean-Francois Lyotard",
+    quote: "Scientific knowledge is a kind of discourse.",
   },
   {
-    "author": "Douglas Preston",
-    "quote": "Hubris and science are incompatible."
+    author: "Ahmed Zewail",
+    quote:
+      "The soft power of science has the potential to reshape global diplomacy.",
   },
   {
-    "author": "Leonard Susskind",
-    "quote": "Unforeseen surprises are the rule in science, not the exception. Remember: Stuff happens."
+    author: "Douglas Preston",
+    quote: "Hubris and science are incompatible.",
   },
   {
-    "author": "Gerhard Herzberg",
-    "quote": "There is nothing wrong with good accounting, except that it does not necessarily lead to good science."
+    author: "Leonard Susskind",
+    quote:
+      "Unforeseen surprises are the rule in science, not the exception. Remember: Stuff happens.",
   },
   {
-    "author": "Irving Langmuir",
-    "quote": "The scientist is motivated primarily by curiosity and a desire for truth."
+    author: "Gerhard Herzberg",
+    quote:
+      "There is nothing wrong with good accounting, except that it does not necessarily lead to good science.",
   },
   {
-    "author": "Lee Smolin",
-    "quote": "Science moves fastest when there's plenty of debate and controversy."
+    author: "Irving Langmuir",
+    quote:
+      "The scientist is motivated primarily by curiosity and a desire for truth.",
   },
   {
-    "author": "J. Robert Oppenheimer",
-    "quote": "Science is not everything, but science is very beautiful."
+    author: "Lee Smolin",
+    quote:
+      "Science moves fastest when there's plenty of debate and controversy.",
   },
   {
-    "author": "Jean-Paul Sartre",
-    "quote": "Politics is a science. You can demonstrate that you are right and that others are wrong."
+    author: "J. Robert Oppenheimer",
+    quote: "Science is not everything, but science is very beautiful.",
   },
   {
-    "author": "Deepak Chopra",
-    "quote": "Science stands for rational thought, faith for superstition and unreason."
+    author: "Jean-Paul Sartre",
+    quote:
+      "Politics is a science. You can demonstrate that you are right and that others are wrong.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "The pursuit of science leads only to the insoluble."
+    author: "Deepak Chopra",
+    quote:
+      "Science stands for rational thought, faith for superstition and unreason.",
   },
   {
-    "author": "N. R. Narayana Murthy",
-    "quote": "Science is about unravelling nature."
+    author: "Benjamin Disraeli",
+    quote: "The pursuit of science leads only to the insoluble.",
   },
   {
-    "author": "George Santayana",
-    "quote": "Theory helps us to bear our ignorance of facts."
+    author: "N. R. Narayana Murthy",
+    quote: "Science is about unravelling nature.",
   },
   {
-    "author": "Thomas Huxley",
-    "quote": "The man of science has learned to believe in justification, not by faith, but by verification."
+    author: "George Santayana",
+    quote: "Theory helps us to bear our ignorance of facts.",
   },
   {
-    "author": "will.i.am",
-    "quote": "It should be mandatory that you understand computer science."
+    author: "Thomas Huxley",
+    quote:
+      "The man of science has learned to believe in justification, not by faith, but by verification.",
   },
   {
-    "author": "Bill Nye",
-    "quote": "Teaching creationism in science class as an alternative to evolution is inappropriate."
+    author: "will.i.am",
+    quote: "It should be mandatory that you understand computer science.",
   },
   {
-    "author": "William Gibson",
-    "quote": "Science fiction writers aren't fortune tellers. Fortune tellers are fakes."
+    author: "Bill Nye",
+    quote:
+      "Teaching creationism in science class as an alternative to evolution is inappropriate.",
   },
   {
-    "author": "Miguel de Unamuno",
-    "quote": "True science teaches, above all, to doubt and to be ignorant."
+    author: "William Gibson",
+    quote:
+      "Science fiction writers aren't fortune tellers. Fortune tellers are fakes.",
   },
   {
-    "author": "Chuck Berry",
-    "quote": "Music is science. Everything is science. Because science is truth."
+    author: "Miguel de Unamuno",
+    quote: "True science teaches, above all, to doubt and to be ignorant.",
   },
   {
-    "author": "Thomas Carlyle",
-    "quote": "Science must have originated in the feeling that something was wrong."
+    author: "Chuck Berry",
+    quote: "Music is science. Everything is science. Because science is truth.",
   },
   {
-    "author": "Seth MacFarlane",
-    "quote": "Science has become politicized, and that's an embarrassment."
+    author: "Thomas Carlyle",
+    quote:
+      "Science must have originated in the feeling that something was wrong.",
   },
   {
-    "author": "William James",
-    "quote": "Man lives for science as well as bread."
+    author: "Seth MacFarlane",
+    quote: "Science has become politicized, and that's an embarrassment.",
   },
   {
-    "author": "Bonnie Hammer",
-    "quote": "Science fiction is not quirky anymore; we live in a futuristic world now."
+    author: "William James",
+    quote: "Man lives for science as well as bread.",
   },
   {
-    "author": "Francois Rabelais",
-    "quote": "Science without conscience is the death of the soul."
+    author: "Bonnie Hammer",
+    quote:
+      "Science fiction is not quirky anymore; we live in a futuristic world now.",
   },
   {
-    "author": "Jocelyn Bell Burnell",
-    "quote": "Women of my generation who've stayed in science have done it by playing the men at their own game."
+    author: "Francois Rabelais",
+    quote: "Science without conscience is the death of the soul.",
   },
   {
-    "author": "E. O. Wilson",
-    "quote": "Science and religion are the two most powerful forces in the world. Having them at odds... is not productive."
+    author: "Jocelyn Bell Burnell",
+    quote:
+      "Women of my generation who've stayed in science have done it by playing the men at their own game.",
   },
   {
-    "author": "Alexander Pope",
-    "quote": "One science only will one genius fit; so vast is art, so narrow human wit."
+    author: "E. O. Wilson",
+    quote:
+      "Science and religion are the two most powerful forces in the world. Having them at odds... is not productive.",
   },
   {
-    "author": "Mary Douglas",
-    "quote": "It seems true that the growth of science and secularism made organized Christianity feel under threat."
+    author: "Alexander Pope",
+    quote:
+      "One science only will one genius fit; so vast is art, so narrow human wit.",
   },
   {
-    "author": "Edward Thorndike",
-    "quote": "Psychology is the science of the intellects, characters and behavior of animals including man."
+    author: "Mary Douglas",
+    quote:
+      "It seems true that the growth of science and secularism made organized Christianity feel under threat.",
   },
   {
-    "author": "Paul Krugman",
-    "quote": "The science fiction world has a lot of people doing seriously imaginative thinking."
+    author: "Edward Thorndike",
+    quote:
+      "Psychology is the science of the intellects, characters and behavior of animals including man.",
   },
   {
-    "author": "Barry Barish",
-    "quote": "The most exciting science requires the most complex instruments."
+    author: "Paul Krugman",
+    quote:
+      "The science fiction world has a lot of people doing seriously imaginative thinking.",
   },
   {
-    "author": "Elizabeth Moon",
-    "quote": "I love biomedical science, I love astronomy, and you can't really do much with those in a fantasy setting."
+    author: "Barry Barish",
+    quote: "The most exciting science requires the most complex instruments.",
   },
   {
-    "author": "Peter C. Doherty",
-    "quote": "The thing I love about science is finding out something new and different."
+    author: "Elizabeth Moon",
+    quote:
+      "I love biomedical science, I love astronomy, and you can't really do much with those in a fantasy setting.",
   },
   {
-    "author": "Terry Pratchett",
-    "quote": "I got into science fiction by being interested in astronomy first."
+    author: "Peter C. Doherty",
+    quote:
+      "The thing I love about science is finding out something new and different.",
   },
   {
-    "author": "Robin S. Sharma",
-    "quote": "The vast masterpieces of art, business, science, and humanity were not constructed by practical people."
+    author: "Terry Pratchett",
+    quote: "I got into science fiction by being interested in astronomy first.",
   },
   {
-    "author": "Henry Ward Beecher",
-    "quote": "Theology is a science of mind applied to God."
+    author: "Robin S. Sharma",
+    quote:
+      "The vast masterpieces of art, business, science, and humanity were not constructed by practical people.",
   },
   {
-    "author": "Jeff Bezos",
-    "quote": "I grew up reading science fiction."
+    author: "Henry Ward Beecher",
+    quote: "Theology is a science of mind applied to God.",
   },
   {
-    "author": "Jacques Yves Cousteau",
-    "quote": "I am not a scientist. I am, rather, an impresario of scientists."
+    author: "Jeff Bezos",
+    quote: "I grew up reading science fiction.",
   },
   {
-    "author": "Miguel de Unamuno",
-    "quote": "Science is a cemetery of dead ideas."
+    author: "Jacques Yves Cousteau",
+    quote: "I am not a scientist. I am, rather, an impresario of scientists.",
   },
   {
-    "author": "Herbert Spencer",
-    "quote": "Science is organized knowledge."
+    author: "Miguel de Unamuno",
+    quote: "Science is a cemetery of dead ideas.",
   },
   {
-    "author": "Ricky Gervais",
-    "quote": "Luckily, even when people are shouting lies, the truth is undamaged. Science doesn't matter what you believe."
+    author: "Herbert Spencer",
+    quote: "Science is organized knowledge.",
   },
   {
-    "author": "Robert Quillen",
-    "quote": "If we wish to make a new world we have the material ready. The first one, too, was made out of chaos."
+    author: "Ricky Gervais",
+    quote:
+      "Luckily, even when people are shouting lies, the truth is undamaged. Science doesn't matter what you believe.",
   },
   {
-    "author": "Jenova Chen",
-    "quote": "I studied Computer Science when I was in my undergrad and minored in Digital Art &amp; Design."
+    author: "Robert Quillen",
+    quote:
+      "If we wish to make a new world we have the material ready. The first one, too, was made out of chaos.",
   },
   {
-    "author": "Brian Greene",
-    "quote": "I believe we owe our young an education that captures the exhilarating drama of science."
+    author: "Jenova Chen",
+    quote:
+      "I studied Computer Science when I was in my undergrad and minored in Digital Art &amp; Design.",
   },
   {
-    "author": "Arthur C. Clarke",
-    "quote": "Politicians should read science fiction, not westerns and detective stories."
+    author: "Brian Greene",
+    quote:
+      "I believe we owe our young an education that captures the exhilarating drama of science.",
   },
   {
-    "author": "Sara Paretsky",
-    "quote": "I went to college at the University of Kansas, where I got a degree in political science."
+    author: "Arthur C. Clarke",
+    quote:
+      "Politicians should read science fiction, not westerns and detective stories.",
   },
   {
-    "author": "Edwin Land",
-    "quote": "Science is a method to keep yourself from kidding yourself."
+    author: "Sara Paretsky",
+    quote:
+      "I went to college at the University of Kansas, where I got a degree in political science.",
   },
   {
-    "author": "Dan Shechtman",
-    "quote": "Science is the ultimate tool to reveal the laws of nature, and the one word written on its banner is Truth."
+    author: "Edwin Land",
+    quote: "Science is a method to keep yourself from kidding yourself.",
   },
   {
-    "author": "Imogen Cunningham",
-    "quote": "You see, I became kind of a drop-out in science after I came back to America."
+    author: "Dan Shechtman",
+    quote:
+      "Science is the ultimate tool to reveal the laws of nature, and the one word written on its banner is Truth.",
   },
   {
-    "author": "Martin Feldstein",
-    "quote": "A second reason why science cannot replace judgement is the behavior of financial markets."
+    author: "Imogen Cunningham",
+    quote:
+      "You see, I became kind of a drop-out in science after I came back to America.",
   },
   {
-    "author": "Larry Wall",
-    "quote": "I think computer science, by and large, is still stuck in the Modern age."
+    author: "Martin Feldstein",
+    quote:
+      "A second reason why science cannot replace judgement is the behavior of financial markets.",
   },
   {
-    "author": "E. O. Wilson",
-    "quote": "If history and science have taught us anything, it is that passion and desire are not the same as truth."
+    author: "Larry Wall",
+    quote:
+      "I think computer science, by and large, is still stuck in the Modern age.",
   },
   {
-    "author": "Mahmoud Ahmadinejad",
-    "quote": "One can not impede scientific progress."
+    author: "E. O. Wilson",
+    quote:
+      "If history and science have taught us anything, it is that passion and desire are not the same as truth.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Computer Science is embarrassed by the computer."
+    author: "Mahmoud Ahmadinejad",
+    quote: "One can not impede scientific progress.",
   },
   {
-    "author": "Kary Mullis",
-    "quote": "Science grows like a weed every year."
+    author: "Alan Perlis",
+    quote: "Computer Science is embarrassed by the computer.",
   },
   {
-    "author": "John Bardeen",
-    "quote": "Science is a field which grows continuously with ever expanding frontiers."
+    author: "Kary Mullis",
+    quote: "Science grows like a weed every year.",
   },
   {
-    "author": "Hilary Mason",
-    "quote": "Data science is the combination of analytics and the development of new algorithms."
+    author: "John Bardeen",
+    quote:
+      "Science is a field which grows continuously with ever expanding frontiers.",
   },
   {
-    "author": "Theodore Sturgeon",
-    "quote": "In science fiction, you can also test out your own realities."
+    author: "Hilary Mason",
+    quote:
+      "Data science is the combination of analytics and the development of new algorithms.",
   },
   {
-    "author": "John D. Barrow",
-    "quote": "There was no 'before' the beginning of our universe, because once upon a time there was no time."
+    author: "Theodore Sturgeon",
+    quote: "In science fiction, you can also test out your own realities.",
   },
   {
-    "author": "Terry Pratchett",
-    "quote": "I was a very keen reader of science fiction."
+    author: "John D. Barrow",
+    quote:
+      "There was no 'before' the beginning of our universe, because once upon a time there was no time.",
   },
   {
-    "author": "Thomas Huxley",
-    "quote": "Science is organized common sense where many a beautiful theory was killed by an ugly fact."
+    author: "Terry Pratchett",
+    quote: "I was a very keen reader of science fiction.",
   },
   {
-    "author": "Baruch Spinoza",
-    "quote": "Freedom is absolutely necessary for the progress in science and the liberal arts."
+    author: "Thomas Huxley",
+    quote:
+      "Science is organized common sense where many a beautiful theory was killed by an ugly fact.",
   },
   {
-    "author": "Edward G. Bulwer-Lytton",
-    "quote": "Art and science have their meeting point in method."
+    author: "Baruch Spinoza",
+    quote:
+      "Freedom is absolutely necessary for the progress in science and the liberal arts.",
   },
   {
-    "author": "Linus Pauling",
-    "quote": "Facts are the air of scientists. Without them you can never fly."
+    author: "Edward G. Bulwer-Lytton",
+    quote: "Art and science have their meeting point in method.",
   },
   {
-    "author": "Alton Brown",
-    "quote": "Everything in food is science. The only subjective part is when you eat it."
+    author: "Linus Pauling",
+    quote: "Facts are the air of scientists. Without them you can never fly.",
   },
   {
-    "author": "Naguib Mahfouz",
-    "quote": "If we reject science, we reject the common man."
+    author: "Alton Brown",
+    quote:
+      "Everything in food is science. The only subjective part is when you eat it.",
   },
   {
-    "author": "Tim Holden",
-    "quote": "We should be increasing research and development into our fossil fuel program."
+    author: "Naguib Mahfouz",
+    quote: "If we reject science, we reject the common man.",
   },
   {
-    "author": "Thabo Mbeki",
-    "quote": "Science is always inquiring."
+    author: "Tim Holden",
+    quote:
+      "We should be increasing research and development into our fossil fuel program.",
   },
   {
-    "author": "Craig Venter",
-    "quote": "That's the nice thing about the field of science - the test of time sorts out the truth."
+    author: "Thabo Mbeki",
+    quote: "Science is always inquiring.",
   },
   {
-    "author": "Indra Devi",
-    "quote": "Yoga is an art and science of living."
+    author: "Craig Venter",
+    quote:
+      "That's the nice thing about the field of science - the test of time sorts out the truth.",
   },
   {
-    "author": "Horace Walpole",
-    "quote": "In all science, error precedes the truth, and it is better it should go first than last."
+    author: "Indra Devi",
+    quote: "Yoga is an art and science of living.",
   },
   {
-    "author": "Gaston Bachelard",
-    "quote": "The characteristic of scientific progress is our knowing that we did not know."
+    author: "Horace Walpole",
+    quote:
+      "In all science, error precedes the truth, and it is better it should go first than last.",
   },
   {
-    "author": "Michael Shermer",
-    "quote": "But there is only one surefire method of proper pattern recognition, and that is science."
+    author: "Gaston Bachelard",
+    quote:
+      "The characteristic of scientific progress is our knowing that we did not know.",
   },
   {
-    "author": "Howard Nemerov",
-    "quote": "Nothing in the universe can travel at the speed of light, they say, forgetful of the shadow's speed."
+    author: "Michael Shermer",
+    quote:
+      "But there is only one surefire method of proper pattern recognition, and that is science.",
   },
   {
-    "author": "Jacob Bronowski",
-    "quote": "That is the essence of science: ask an impertinent question, and you are on the way to a pertinent answer."
+    author: "Howard Nemerov",
+    quote:
+      "Nothing in the universe can travel at the speed of light, they say, forgetful of the shadow's speed.",
   },
   {
-    "author": "Jacob Bronowski",
-    "quote": "The most wonderful discovery made by scientists is science itself."
+    author: "Jacob Bronowski",
+    quote:
+      "That is the essence of science: ask an impertinent question, and you are on the way to a pertinent answer.",
   },
   {
-    "author": "Claude Bernard",
-    "quote": "Art is I; science is we."
+    author: "Jacob Bronowski",
+    quote: "The most wonderful discovery made by scientists is science itself.",
   },
   {
-    "author": "Edmund Husserl",
-    "quote": "To begin with, we put the proposition: pure phenomenology is the science of pure consciousness."
+    author: "Claude Bernard",
+    quote: "Art is I; science is we.",
   },
   {
-    "author": "Karl Kraus",
-    "quote": "Science is spectral analysis. Art is light synthesis."
+    author: "Edmund Husserl",
+    quote:
+      "To begin with, we put the proposition: pure phenomenology is the science of pure consciousness.",
   },
   {
-    "author": "Lord Kelvin",
-    "quote": "In science there is only physics; all the rest is stamp collecting."
+    author: "Karl Kraus",
+    quote: "Science is spectral analysis. Art is light synthesis.",
   },
   {
-    "author": "Kyle Hill",
-    "quote": "In science, the kind of evidence matters; all unlikelihoods are not created equal."
+    author: "Lord Kelvin",
+    quote:
+      "In science there is only physics; all the rest is stamp collecting.",
   },
   {
-    "author": "Sam Ervin",
-    "quote": "Polygraph tests are 20th-century witchcraft."
+    author: "Kyle Hill",
+    quote:
+      "In science, the kind of evidence matters; all unlikelihoods are not created equal.",
   },
   {
-    "author": "Arthur Keith",
-    "quote": "My personal conviction is that science is concerned wholly with truth, not with ethics."
+    author: "Sam Ervin",
+    quote: "Polygraph tests are 20th-century witchcraft.",
   },
   {
-    "author": "Ann Makosinski",
-    "quote": "I think it is important to have a balance of science and arts to be able to be accessible in either fields."
+    author: "Arthur Keith",
+    quote:
+      "My personal conviction is that science is concerned wholly with truth, not with ethics.",
   },
   {
-    "author": "Gregory Benford",
-    "quote": "The people who built the space program - both Soviet and U.S. - were readers of science fiction."
+    author: "Ann Makosinski",
+    quote:
+      "I think it is important to have a balance of science and arts to be able to be accessible in either fields.",
   },
   {
-    "author": "Subrahmanyan Chandrasekhar",
-    "quote": "I am aware of the usefulness of science to society and of the benefits society derives from it."
+    author: "Gregory Benford",
+    quote:
+      "The people who built the space program - both Soviet and U.S. - were readers of science fiction.",
   },
   {
-    "author": "Walter Gilbert",
-    "quote": "Why do we do basic research? To learn about ourselves."
+    author: "Subrahmanyan Chandrasekhar",
+    quote:
+      "I am aware of the usefulness of science to society and of the benefits society derives from it.",
   },
   {
-    "author": "Charles Francis Richter",
-    "quote": "Nothing is less predictable than the development of an active scientific field."
+    author: "Walter Gilbert",
+    quote: "Why do we do basic research? To learn about ourselves.",
   },
   {
-    "author": "Cynthia Kenyon",
-    "quote": "It was like stepping on to an escalator; I could do anything. I was just made for science."
+    author: "Charles Francis Richter",
+    quote:
+      "Nothing is less predictable than the development of an active scientific field.",
   },
   {
-    "author": "Paul Wolfowitz",
-    "quote": "I told my father I had to try political science for a year. He thought I was throwing my life away."
+    author: "Cynthia Kenyon",
+    quote:
+      "It was like stepping on to an escalator; I could do anything. I was just made for science.",
   },
   {
-    "author": "Kary Mullis",
-    "quote": "Science consistently produces a new crop of miraculous truths and dazzling devices every year."
+    author: "Paul Wolfowitz",
+    quote:
+      "I told my father I had to try political science for a year. He thought I was throwing my life away.",
   },
   {
-    "author": "John Polanyi",
-    "quote": "When, as we must often do, we fear science, we really fear ourselves."
+    author: "Kary Mullis",
+    quote:
+      "Science consistently produces a new crop of miraculous truths and dazzling devices every year.",
   },
   {
-    "author": "Will Harvey",
-    "quote": "What is research but a blind date with knowledge?"
+    author: "John Polanyi",
+    quote:
+      "When, as we must often do, we fear science, we really fear ourselves.",
   },
   {
-    "author": "Paul Davies",
-    "quote": "The origin of life is one of the great outstanding mysteries of science."
+    author: "Will Harvey",
+    quote: "What is research but a blind date with knowledge?",
   },
   {
-    "author": "C. J. Cherryh",
-    "quote": "For me the purest and truest art in the world is science fiction."
+    author: "Paul Davies",
+    quote:
+      "The origin of life is one of the great outstanding mysteries of science.",
   },
   {
-    "author": "Henry Norris Russell",
-    "quote": "Conflict between science and religion a dangerous foe."
+    author: "C. J. Cherryh",
+    quote: "For me the purest and truest art in the world is science fiction.",
   },
   {
-    "author": "P. J. O'Rourke",
-    "quote": "Philosophy was once considered science."
+    author: "Henry Norris Russell",
+    quote: "Conflict between science and religion a dangerous foe.",
   },
   {
-    "author": "Gertrude Stein",
-    "quote": "The nineteenth century believed in science but the twentieth century does not."
+    author: "P. J. O'Rourke",
+    quote: "Philosophy was once considered science.",
   },
   {
-    "author": "Henry Adams",
-    "quote": "Nothing in education is so astonishing as the amount of ignorance it accumulates in the form of inert facts."
+    author: "Gertrude Stein",
+    quote:
+      "The nineteenth century believed in science but the twentieth century does not.",
   },
   {
-    "author": "Robert Anton Wilson",
-    "quote": "There is no complete theory of anything."
+    author: "Henry Adams",
+    quote:
+      "Nothing in education is so astonishing as the amount of ignorance it accumulates in the form of inert facts.",
   },
   {
-    "author": "Paul Samuelson",
-    "quote": "Economics has never been a science - and it is even less now than a few years ago."
+    author: "Robert Anton Wilson",
+    quote: "There is no complete theory of anything.",
   },
   {
-    "author": "E. Y. Harburg",
-    "quote": "Leave the atom alone."
+    author: "Paul Samuelson",
+    quote:
+      "Economics has never been a science - and it is even less now than a few years ago.",
   },
   {
-    "author": "Peter Thiel",
-    "quote": "When people use the word 'science,' it's often a tell, like in poker, that you're bluffing."
+    author: "E. Y. Harburg",
+    quote: "Leave the atom alone.",
   },
   {
-    "author": "Martin H. Fischer",
-    "quote": "Half of the modern drugs could well be thrown out of the window, except that the birds might eat them."
+    author: "Peter Thiel",
+    quote:
+      "When people use the word 'science,' it's often a tell, like in poker, that you're bluffing.",
   },
   {
-    "author": "Jean-Francois Lyotard",
-    "quote": "What is required of a working hypothesis is a fine capacity for discrimination."
+    author: "Martin H. Fischer",
+    quote:
+      "Half of the modern drugs could well be thrown out of the window, except that the birds might eat them.",
   },
   {
-    "author": "Leroy Hood",
-    "quote": "Data-intensive graph problems abound in the Life Science drug discovery and development process."
+    author: "Jean-Francois Lyotard",
+    quote:
+      "What is required of a working hypothesis is a fine capacity for discrimination.",
   },
   {
-    "author": "George Henry Lewes",
-    "quote": "Science is the systematic classification of experience."
+    author: "Leroy Hood",
+    quote:
+      "Data-intensive graph problems abound in the Life Science drug discovery and development process.",
   },
   {
-    "author": "Heidi Hammel",
-    "quote": "I went to MIT. I do rocket science. Being a mom is much harder."
+    author: "George Henry Lewes",
+    quote: "Science is the systematic classification of experience.",
   },
   {
-    "author": "Gregory Bateson",
-    "quote": "Science, like art, religion, commerce, warfare, and even sleep, is based on presuppositions."
+    author: "Heidi Hammel",
+    quote: "I went to MIT. I do rocket science. Being a mom is much harder.",
   },
   {
-    "author": "Kenneth R. Miller",
-    "quote": "We don't regard any scientific theory as the absolute truth."
+    author: "Gregory Bateson",
+    quote:
+      "Science, like art, religion, commerce, warfare, and even sleep, is based on presuppositions.",
   },
   {
-    "author": "Jean Rostand",
-    "quote": "Science has made us gods even before we are worthy of being men."
+    author: "Kenneth R. Miller",
+    quote: "We don't regard any scientific theory as the absolute truth.",
   },
   {
-    "author": "Nathan Deal",
-    "quote": "Scientific advancement should aim to affirm and to improve human life."
+    author: "Jean Rostand",
+    quote: "Science has made us gods even before we are worthy of being men.",
   },
   {
-    "author": "Bill Dana",
-    "quote": "He is so old that his blood type was discontinued."
+    author: "Nathan Deal",
+    quote:
+      "Scientific advancement should aim to affirm and to improve human life.",
   },
   {
-    "author": "John Polanyi",
-    "quote": "Some dreamers demand that scientists only discover things that can be used for good."
+    author: "Bill Dana",
+    quote: "He is so old that his blood type was discontinued.",
   },
   {
-    "author": "Stephen LaBerge",
-    "quote": "Dream research is a wonderful field. All you do is sleep for a living."
+    author: "John Polanyi",
+    quote:
+      "Some dreamers demand that scientists only discover things that can be used for good.",
   },
   {
-    "author": "Wilhelm Reich",
-    "quote": "Scientific theory is a contrived foothold in the chaos of living phenomena."
+    author: "Stephen LaBerge",
+    quote:
+      "Dream research is a wonderful field. All you do is sleep for a living.",
   },
   {
-    "author": "Dave Parnas",
-    "quote": "Whenever anyone says, 'theoretically,' they really mean, 'not really.'"
+    author: "Wilhelm Reich",
+    quote:
+      "Scientific theory is a contrived foothold in the chaos of living phenomena.",
   },
   {
-    "author": "Thomas Edison",
-    "quote": "Genius is one percent inspiration and ninety-nine percent perspiration."
+    author: "Dave Parnas",
+    quote:
+      "Whenever anyone says, 'theoretically,' they really mean, 'not really.'",
   },
   {
-    "author": "Yogi Berra",
-    "quote": "You can observe a lot just by watching."
+    author: "Thomas Edison",
+    quote:
+      "Genius is one percent inspiration and ninety-nine percent perspiration.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "A house divided against itself cannot stand."
+    author: "Yogi Berra",
+    quote: "You can observe a lot just by watching.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Difficulties increase the nearer we get to the goal."
+    author: "Abraham Lincoln",
+    quote: "A house divided against itself cannot stand.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Fate is in your hands and no one elses"
+    author: "Johann Wolfgang von Goethe",
+    quote: "Difficulties increase the nearer we get to the goal.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Be the chief but never the lord."
+    author: "Byron Pulsifer",
+    quote: "Fate is in your hands and no one elses",
   },
   {
-    "author": "Carl Sandburg",
-    "quote": "Nothing happens unless first we dream."
+    author: "Lao Tzu",
+    quote: "Be the chief but never the lord.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Well begun is half done."
+    author: "Carl Sandburg",
+    quote: "Nothing happens unless first we dream.",
   },
   {
-    "author": "Yogi Berra",
-    "quote": "Life is a learning experience, only if you learn."
+    author: "Aristotle",
+    quote: "Well begun is half done.",
   },
   {
-    "author": "Margaret Sangster",
-    "quote": "Self-complacency is fatal to progress."
+    author: "Yogi Berra",
+    quote: "Life is a learning experience, only if you learn.",
   },
   {
-    "author": "Buddha",
-    "quote": "Peace comes from within. Do not seek it without."
+    author: "Margaret Sangster",
+    quote: "Self-complacency is fatal to progress.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "What you give is what you get."
+    author: "Buddha",
+    quote: "Peace comes from within. Do not seek it without.",
   },
   {
-    "author": "Iris Murdoch",
-    "quote": "We can only learn to love by loving."
+    author: "Byron Pulsifer",
+    quote: "What you give is what you get.",
   },
   {
-    "author": "Karen Clark",
-    "quote": "Life is change. Growth is optional. Choose wisely."
+    author: "Iris Murdoch",
+    quote: "We can only learn to love by loving.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "You'll see it when you believe it."
+    author: "Karen Clark",
+    quote: "Life is change. Growth is optional. Choose wisely.",
   },
   {
-    "author": "",
-    "quote": "Today is the tomorrow we worried about yesterday."
+    author: "Wayne Dyer",
+    quote: "You'll see it when you believe it.",
   },
   {
-    "author": "",
-    "quote": "It's easier to see the mistakes on someone else's paper."
+    author: "",
+    quote: "Today is the tomorrow we worried about yesterday.",
   },
   {
-    "author": "",
-    "quote": "Every man dies. Not every man really lives."
+    author: "",
+    quote: "It's easier to see the mistakes on someone else's paper.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "To lead people walk behind them."
+    author: "",
+    quote: "Every man dies. Not every man really lives.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "Having nothing, nothing can he lose."
+    author: "Lao Tzu",
+    quote: "To lead people walk behind them.",
   },
   {
-    "author": "Henry J. Kaiser",
-    "quote": "Trouble is only opportunity in work clothes."
+    author: "William Shakespeare",
+    quote: "Having nothing, nothing can he lose.",
   },
   {
-    "author": "Publilius Syrus",
-    "quote": "A rolling stone gathers no moss."
+    author: "Henry J. Kaiser",
+    quote: "Trouble is only opportunity in work clothes.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Ideas are the beginning points of all fortunes."
+    author: "Publilius Syrus",
+    quote: "A rolling stone gathers no moss.",
   },
   {
-    "author": "Donald Trump",
-    "quote": "Everything in life is luck."
+    author: "Napoleon Hill",
+    quote: "Ideas are the beginning points of all fortunes.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Doing nothing is better than being busy doing nothing."
+    author: "Donald Trump",
+    quote: "Everything in life is luck.",
   },
   {
-    "author": "Benjamin Spock",
-    "quote": "Trust yourself. You know more than you think you do."
+    author: "Lao Tzu",
+    quote: "Doing nothing is better than being busy doing nothing.",
   },
   {
-    "author": "Confucius",
-    "quote": "Study the past, if you would divine the future."
+    author: "Benjamin Spock",
+    quote: "Trust yourself. You know more than you think you do.",
   },
   {
-    "author": "",
-    "quote": "The day is already blessed, find peace within it."
+    author: "Confucius",
+    quote: "Study the past, if you would divine the future.",
   },
   {
-    "author": "Sigmund Freud",
-    "quote": "From error to error one discovers the entire truth."
+    author: "",
+    quote: "The day is already blessed, find peace within it.",
   },
   {
-    "author": "Benjamin Franklin",
-    "quote": "Well done is better than well said."
+    author: "Sigmund Freud",
+    quote: "From error to error one discovers the entire truth.",
   },
   {
-    "author": "Ella Williams",
-    "quote": "Bite off more than you can chew, then chew it."
+    author: "Benjamin Franklin",
+    quote: "Well done is better than well said.",
   },
   {
-    "author": "Buddha",
-    "quote": "Work out your own salvation. Do not depend on others."
+    author: "Ella Williams",
+    quote: "Bite off more than you can chew, then chew it.",
   },
   {
-    "author": "Benjamin Franklin",
-    "quote": "One today is worth two tomorrows."
+    author: "Buddha",
+    quote: "Work out your own salvation. Do not depend on others.",
   },
   {
-    "author": "Christopher Reeve",
-    "quote": "Once you choose hope, anythings possible."
+    author: "Benjamin Franklin",
+    quote: "One today is worth two tomorrows.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "God always takes the simplest way."
+    author: "Christopher Reeve",
+    quote: "Once you choose hope, anythings possible.",
   },
   {
-    "author": "Charles Kettering",
-    "quote": "One fails forward toward success."
+    author: "Albert Einstein",
+    quote: "God always takes the simplest way.",
   },
   {
-    "author": "",
-    "quote": "From small beginnings come great things."
+    author: "Charles Kettering",
+    quote: "One fails forward toward success.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "Learning is a treasure that will follow its owner everywhere"
+    author: "",
+    quote: "From small beginnings come great things.",
   },
   {
-    "author": "Socrates",
-    "quote": "Be as you wish to seem."
+    author: "Chinese proverb",
+    quote: "Learning is a treasure that will follow its owner everywhere",
   },
   {
-    "author": "V. Naipaul",
-    "quote": "The world is always in movement."
+    author: "Socrates",
+    quote: "Be as you wish to seem.",
   },
   {
-    "author": "John Wooden",
-    "quote": "Never mistake activity for achievement."
+    author: "V. Naipaul",
+    quote: "The world is always in movement.",
   },
   {
-    "author": "Haddon Robinson",
-    "quote": "What worries you masters you."
+    author: "John Wooden",
+    quote: "Never mistake activity for achievement.",
   },
   {
-    "author": "Pearl Buck",
-    "quote": "One faces the future with ones past."
+    author: "Haddon Robinson",
+    quote: "What worries you masters you.",
   },
   {
-    "author": "Brian Tracy",
-    "quote": "Goals are the fuel in the furnace of achievement."
+    author: "Pearl Buck",
+    quote: "One faces the future with ones past.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "Who sows virtue reaps honour."
+    author: "Brian Tracy",
+    quote: "Goals are the fuel in the furnace of achievement.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Be kind whenever possible. It is always possible."
+    author: "Leonardo da Vinci",
+    quote: "Who sows virtue reaps honour.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "Talk doesn't cook rice."
+    author: "Dalai Lama",
+    quote: "Be kind whenever possible. It is always possible.",
   },
   {
-    "author": "Buddha",
-    "quote": "He is able who thinks he is able."
+    author: "Chinese proverb",
+    quote: "Talk doesn't cook rice.",
   },
   {
-    "author": "Larry Elder",
-    "quote": "A goal without a plan is just a wish."
+    author: "Buddha",
+    quote: "He is able who thinks he is able.",
   },
   {
-    "author": "Michael Korda",
-    "quote": "To succeed, we must first believe that we can."
+    author: "Larry Elder",
+    quote: "A goal without a plan is just a wish.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Learn from yesterday, live for today, hope for tomorrow."
+    author: "Michael Korda",
+    quote: "To succeed, we must first believe that we can.",
   },
   {
-    "author": "James Lowell",
-    "quote": "A weed is no more than a flower in disguise."
+    author: "Albert Einstein",
+    quote: "Learn from yesterday, live for today, hope for tomorrow.",
   },
   {
-    "author": "Yoda",
-    "quote": "Do, or do not. There is no try."
+    author: "James Lowell",
+    quote: "A weed is no more than a flower in disguise.",
   },
   {
-    "author": "Harriet Beecher Stowe",
-    "quote": "All serious daring starts from within."
+    author: "Yoda",
+    quote: "Do, or do not. There is no try.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "The best teacher is experience learned from failures."
+    author: "Harriet Beecher Stowe",
+    quote: "All serious daring starts from within.",
   },
   {
-    "author": "Murray Gell-Mann",
-    "quote": "Think how hard physics would be if particles could think."
+    author: "Byron Pulsifer",
+    quote: "The best teacher is experience learned from failures.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Love is the flower you've got to let grow."
+    author: "Murray Gell-Mann",
+    quote: "Think how hard physics would be if particles could think.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Don't wait. The time will never be just right."
+    author: "John Lennon",
+    quote: "Love is the flower you've got to let grow.",
   },
   {
-    "author": "Pericles",
-    "quote": "Time is the wisest counsellor of all."
+    author: "Napoleon Hill",
+    quote: "Don't wait. The time will never be just right.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "You give before you get."
+    author: "Pericles",
+    quote: "Time is the wisest counsellor of all.",
   },
   {
-    "author": "Socrates",
-    "quote": "Wisdom begins in wonder."
+    author: "Napoleon Hill",
+    quote: "You give before you get.",
   },
   {
-    "author": "Baltasar Gracian",
-    "quote": "Without courage, wisdom bears no fruit."
+    author: "Socrates",
+    quote: "Wisdom begins in wonder.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Change in all things is sweet."
+    author: "Baltasar Gracian",
+    quote: "Without courage, wisdom bears no fruit.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "What you fear is that which requires action to overcome."
+    author: "Aristotle",
+    quote: "Change in all things is sweet.",
   },
   {
-    "author": "Cullen Hightower",
-    "quote": "When performance exceeds ambition, the overlap is called success."
+    author: "Byron Pulsifer",
+    quote: "What you fear is that which requires action to overcome.",
   },
   {
-    "author": "African proverb",
-    "quote": "When deeds speak, words are nothing."
+    author: "Cullen Hightower",
+    quote: "When performance exceeds ambition, the overlap is called success.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Real magic in relationships means an absence of judgement of others."
+    author: "African proverb",
+    quote: "When deeds speak, words are nothing.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "I never think of the future. It comes soon enough."
+    author: "Wayne Dyer",
+    quote:
+      "Real magic in relationships means an absence of judgement of others.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Skill to do comes of doing."
+    author: "Albert Einstein",
+    quote: "I never think of the future. It comes soon enough.",
   },
   {
-    "author": "Sophocles",
-    "quote": "Wisdom is the supreme part of happiness."
+    author: "Ralph Emerson",
+    quote: "Skill to do comes of doing.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "I believe that every person is born with talent."
+    author: "Sophocles",
+    quote: "Wisdom is the supreme part of happiness.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Important principles may, and must, be inflexible."
+    author: "Maya Angelou",
+    quote: "I believe that every person is born with talent.",
   },
   {
-    "author": "Richard Evans",
-    "quote": "The undertaking of a new action brings new strength."
+    author: "Abraham Lincoln",
+    quote: "Important principles may, and must, be inflexible.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "The years teach much which the days never know."
+    author: "Richard Evans",
+    quote: "The undertaking of a new action brings new strength.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Our distrust is very expensive."
+    author: "Ralph Emerson",
+    quote: "The years teach much which the days never know.",
   },
   {
-    "author": "Bodhidharma",
-    "quote": "All know the way; few actually walk it."
+    author: "Ralph Emerson",
+    quote: "Our distrust is very expensive.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Great talent finds happiness in execution."
+    author: "Bodhidharma",
+    quote: "All know the way; few actually walk it.",
   },
   {
-    "author": "Michelangelo",
-    "quote": "Faith in oneself is the best and safest course."
+    author: "Johann Wolfgang von Goethe",
+    quote: "Great talent finds happiness in execution.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "Courage is going from failure to failure without losing enthusiasm."
+    author: "Michelangelo",
+    quote: "Faith in oneself is the best and safest course.",
   },
   {
-    "author": "Leo Tolstoy",
-    "quote": "The two most powerful warriors are patience and time."
+    author: "Winston Churchill",
+    quote:
+      "Courage is going from failure to failure without losing enthusiasm.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Anticipate the difficult by managing the easy."
+    author: "Leo Tolstoy",
+    quote: "The two most powerful warriors are patience and time.",
   },
   {
-    "author": "Buddha",
-    "quote": "Those who are free of resentful thoughts surely find peace."
+    author: "Lao Tzu",
+    quote: "Anticipate the difficult by managing the easy.",
   },
   {
-    "author": "Sophocles",
-    "quote": "A short saying often contains much wisdom."
+    author: "Buddha",
+    quote: "Those who are free of resentful thoughts surely find peace.",
   },
   {
-    "author": "",
-    "quote": "It takes both sunshine and rain to make a rainbow."
+    author: "Sophocles",
+    quote: "A short saying often contains much wisdom.",
   },
   {
-    "author": "",
-    "quote": "A beautiful thing is never perfect."
+    author: "",
+    quote: "It takes both sunshine and rain to make a rainbow.",
   },
   {
-    "author": "Princess Diana",
-    "quote": "Only do what your heart tells you."
+    author: "",
+    quote: "A beautiful thing is never perfect.",
   },
   {
-    "author": "John Pierrakos",
-    "quote": "Life is movement-we breathe, we eat, we walk, we move!"
+    author: "Princess Diana",
+    quote: "Only do what your heart tells you.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "No one can make you feel inferior without your consent."
+    author: "John Pierrakos",
+    quote: "Life is movement-we breathe, we eat, we walk, we move!",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Argue for your limitations, and sure enough theyre yours."
+    author: "Eleanor Roosevelt",
+    quote: "No one can make you feel inferior without your consent.",
   },
   {
-    "author": "Seneca",
-    "quote": "Luck is what happens when preparation meets opportunity."
+    author: "Richard Bach",
+    quote: "Argue for your limitations, and sure enough theyre yours.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "Victory belongs to the most persevering."
+    author: "Seneca",
+    quote: "Luck is what happens when preparation meets opportunity.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "Love all, trust a few, do wrong to none."
+    author: "Napoleon Bonaparte",
+    quote: "Victory belongs to the most persevering.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "In order to win, you must expect to win."
+    author: "William Shakespeare",
+    quote: "Love all, trust a few, do wrong to none.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "A goal is a dream with a deadline."
+    author: "Richard Bach",
+    quote: "In order to win, you must expect to win.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "You can do it if you believe you can!"
+    author: "Napoleon Hill",
+    quote: "A goal is a dream with a deadline.",
   },
   {
-    "author": "Bo Jackson",
-    "quote": "Set your goals high, and don't stop till you get there."
+    author: "Napoleon Hill",
+    quote: "You can do it if you believe you can!",
   },
   {
-    "author": "",
-    "quote": "Every new day is another chance to change your life."
+    author: "Bo Jackson",
+    quote: "Set your goals high, and don't stop till you get there.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "Smile, breathe, and go slowly."
+    author: "",
+    quote: "Every new day is another chance to change your life.",
   },
   {
-    "author": "Liberace",
-    "quote": "Nobody will believe in you unless you believe in yourself."
+    author: "Thich Nhat Hanh",
+    quote: "Smile, breathe, and go slowly.",
   },
   {
-    "author": "William Arthur Ward",
-    "quote": "Do more than dream: work."
+    author: "Liberace",
+    quote: "Nobody will believe in you unless you believe in yourself.",
   },
   {
-    "author": "Seneca",
-    "quote": "No man was ever wise by chance."
+    author: "William Arthur Ward",
+    quote: "Do more than dream: work.",
   },
   {
-    "author": "",
-    "quote": "Some pursue happiness, others create it."
+    author: "Seneca",
+    quote: "No man was ever wise by chance.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "He that is giddy thinks the world turns round."
+    author: "",
+    quote: "Some pursue happiness, others create it.",
   },
   {
-    "author": "Ellen Gilchrist",
-    "quote": "Don't ruin the present with the ruined past."
+    author: "William Shakespeare",
+    quote: "He that is giddy thinks the world turns round.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "Do something wonderful, people may imitate it."
+    author: "Ellen Gilchrist",
+    quote: "Don't ruin the present with the ruined past.",
   },
   {
-    "author": "",
-    "quote": "We do what we do because we believe."
+    author: "Albert Schweitzer",
+    quote: "Do something wonderful, people may imitate it.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "Do one thing every day that scares you."
+    author: "",
+    quote: "We do what we do because we believe.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "If you cannot be silent be brilliant and thoughtful."
+    author: "Eleanor Roosevelt",
+    quote: "Do one thing every day that scares you.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Who looks outside, dreams; who looks inside, awakes."
+    author: "Byron Pulsifer",
+    quote: "If you cannot be silent be brilliant and thoughtful.",
   },
   {
-    "author": "Buddha",
-    "quote": "What we think, we become."
+    author: "Carl Jung",
+    quote: "Who looks outside, dreams; who looks inside, awakes.",
   },
   {
-    "author": "Lord Herbert",
-    "quote": "The shortest answer is doing."
+    author: "Buddha",
+    quote: "What we think, we become.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "All our knowledge has its origins in our perceptions."
+    author: "Lord Herbert",
+    quote: "The shortest answer is doing.",
   },
   {
-    "author": "",
-    "quote": "The harder you fall, the higher you bounce."
+    author: "Leonardo da Vinci",
+    quote: "All our knowledge has its origins in our perceptions.",
   },
   {
-    "author": "Anne Wilson Schaef",
-    "quote": "Trusting our intuition often saves us from disaster."
+    author: "",
+    quote: "The harder you fall, the higher you bounce.",
   },
   {
-    "author": "Sojourner Truth",
-    "quote": "Truth is powerful and it prevails."
+    author: "Anne Wilson Schaef",
+    quote: "Trusting our intuition often saves us from disaster.",
   },
   {
-    "author": "Elizabeth Browning",
-    "quote": "Light tomorrow with today!"
+    author: "Sojourner Truth",
+    quote: "Truth is powerful and it prevails.",
   },
   {
-    "author": "German proverb",
-    "quote": "Silence is a fence around wisdom."
+    author: "Elizabeth Browning",
+    quote: "Light tomorrow with today!",
   },
   {
-    "author": "Madame de Stael",
-    "quote": "Society develops wit, but its contemplation alone forms genius."
+    author: "German proverb",
+    quote: "Silence is a fence around wisdom.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "The simplest things are often the truest."
+    author: "Madame de Stael",
+    quote: "Society develops wit, but its contemplation alone forms genius.",
   },
   {
-    "author": "",
-    "quote": "Everyone smiles in the same language."
+    author: "Richard Bach",
+    quote: "The simplest things are often the truest.",
   },
   {
-    "author": "Bernadette Devlin",
-    "quote": "Yesterday I dared to struggle. Today I dare to win."
+    author: "",
+    quote: "Everyone smiles in the same language.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "No alibi will save you from accepting the responsibility."
+    author: "Bernadette Devlin",
+    quote: "Yesterday I dared to struggle. Today I dare to win.",
   },
   {
-    "author": "Walt Disney",
-    "quote": "If you can dream it, you can do it."
+    author: "Napoleon Hill",
+    quote: "No alibi will save you from accepting the responsibility.",
   },
   {
-    "author": "Buddha",
-    "quote": "It is better to travel well than to arrive."
+    author: "Walt Disney",
+    quote: "If you can dream it, you can do it.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "Life shrinks or expands in proportion to one's courage."
+    author: "Buddha",
+    quote: "It is better to travel well than to arrive.",
   },
   {
-    "author": "Sun Tzu",
-    "quote": "You have to believe in yourself."
+    author: "Anais Nin",
+    quote: "Life shrinks or expands in proportion to one's courage.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Our intention creates our reality."
+    author: "Sun Tzu",
+    quote: "You have to believe in yourself.",
   },
   {
-    "author": "Confucius",
-    "quote": "Silence is a true friend who never betrays."
+    author: "Wayne Dyer",
+    quote: "Our intention creates our reality.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Character develops itself in the stream of life."
+    author: "Confucius",
+    quote: "Silence is a true friend who never betrays.",
   },
   {
-    "author": "American proverb",
-    "quote": "From little acorns mighty oaks do grow."
+    author: "Johann Wolfgang von Goethe",
+    quote: "Character develops itself in the stream of life.",
   },
   {
-    "author": "Jon Kabat-Zinn",
-    "quote": "You can't stop the waves, but you can learn to surf."
+    author: "American proverb",
+    quote: "From little acorns mighty oaks do grow.",
   },
   {
-    "author": "Gustave Flaubert",
-    "quote": "Reality does not conform to the ideal, but confirms it."
+    author: "Jon Kabat-Zinn",
+    quote: "You can't stop the waves, but you can learn to surf.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "Speak low, if you speak love."
+    author: "Gustave Flaubert",
+    quote: "Reality does not conform to the ideal, but confirms it.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "A really great talent finds its happiness in execution."
+    author: "William Shakespeare",
+    quote: "Speak low, if you speak love.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Reality leaves a lot to the imagination."
+    author: "Johann Wolfgang von Goethe",
+    quote: "A really great talent finds its happiness in execution.",
   },
   {
-    "author": "Seneca",
-    "quote": "The greatest remedy for anger is delay."
+    author: "John Lennon",
+    quote: "Reality leaves a lot to the imagination.",
   },
   {
-    "author": "Pearl Buck",
-    "quote": "Growth itself contains the germ of happiness."
+    author: "Seneca",
+    quote: "The greatest remedy for anger is delay.",
   },
   {
-    "author": "",
-    "quote": "You can do what's reasonable or you can decide what's possible."
+    author: "Pearl Buck",
+    quote: "Growth itself contains the germ of happiness.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "Nothing strengthens authority so much as silence."
+    author: "",
+    quote: "You can do what's reasonable or you can decide what's possible.",
   },
   {
-    "author": "Confucius",
-    "quote": "Wherever you go, go with all your heart."
+    author: "Leonardo da Vinci",
+    quote: "Nothing strengthens authority so much as silence.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "The only real valuable thing is intuition."
+    author: "Confucius",
+    quote: "Wherever you go, go with all your heart.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Good luck is another name for tenacity of purpose."
+    author: "Albert Einstein",
+    quote: "The only real valuable thing is intuition.",
   },
   {
-    "author": "Sylvia Voirol",
-    "quote": "Rainbows apologize for angry skies."
+    author: "Ralph Emerson",
+    quote: "Good luck is another name for tenacity of purpose.",
   },
   {
-    "author": "",
-    "quote": "Friendship isn't a big thing. It's a million little things."
+    author: "Sylvia Voirol",
+    quote: "Rainbows apologize for angry skies.",
   },
   {
-    "author": "Theophrastus",
-    "quote": "Time is the most valuable thing a man can spend."
+    author: "",
+    quote: "Friendship isn't a big thing. It's a million little things.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "Whatever happens, take responsibility."
+    author: "Theophrastus",
+    quote: "Time is the most valuable thing a man can spend.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "Experience is simply the name we give our mistakes."
+    author: "Tony Robbins",
+    quote: "Whatever happens, take responsibility.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "I think and that is all that I am."
+    author: "Oscar Wilde",
+    quote: "Experience is simply the name we give our mistakes.",
   },
   {
-    "author": "",
-    "quote": "A good plan today is better than a perfect plan tomorrow."
+    author: "Wayne Dyer",
+    quote: "I think and that is all that I am.",
   },
   {
-    "author": "Gloria Steinem",
-    "quote": "If the shoe doesn't fit, must we change the foot?"
+    author: "",
+    quote: "A good plan today is better than a perfect plan tomorrow.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Each day provides its own gifts."
+    author: "Gloria Steinem",
+    quote: "If the shoe doesn't fit, must we change the foot?",
   },
   {
-    "author": "Publilius Syrus",
-    "quote": "While we stop to think, we often miss our opportunity."
+    author: "Marcus Aurelius",
+    quote: "Each day provides its own gifts.",
   },
   {
-    "author": "Bernard Shaw",
-    "quote": "Life isn't about finding yourself. Life is about creating yourself."
+    author: "Publilius Syrus",
+    quote: "While we stop to think, we often miss our opportunity.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "To bring anything into your life, imagine that it's already there."
+    author: "Bernard Shaw",
+    quote:
+      "Life isn't about finding yourself. Life is about creating yourself.",
   },
   {
-    "author": "German proverb",
-    "quote": "Begin to weave and God will give you the thread."
+    author: "Richard Bach",
+    quote: "To bring anything into your life, imagine that it's already there.",
   },
   {
-    "author": "Confucius",
-    "quote": "The more you know yourself, the more you forgive yourself."
+    author: "German proverb",
+    quote: "Begin to weave and God will give you the thread.",
   },
   {
-    "author": "",
-    "quote": "Someone remembers, someone cares; your name is whispered in someone's prayers."
+    author: "Confucius",
+    quote: "The more you know yourself, the more you forgive yourself.",
   },
   {
-    "author": "Mary Bethune",
-    "quote": "Without faith, nothing is possible. With it, nothing is impossible."
+    author: "",
+    quote:
+      "Someone remembers, someone cares; your name is whispered in someone's prayers.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Once we accept our limits, we go beyond them."
+    author: "Mary Bethune",
+    quote:
+      "Without faith, nothing is possible. With it, nothing is impossible.",
   },
   {
-    "author": "",
-    "quote": "Don't be pushed by your problems; be led by your dreams."
+    author: "Albert Einstein",
+    quote: "Once we accept our limits, we go beyond them.",
   },
   {
-    "author": "Brian Tracy",
-    "quote": "Whatever we expect with confidence becomes our own self-fulfilling prophecy."
+    author: "",
+    quote: "Don't be pushed by your problems; be led by your dreams.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "Everything you can imagine is real."
+    author: "Brian Tracy",
+    quote:
+      "Whatever we expect with confidence becomes our own self-fulfilling prophecy.",
   },
   {
-    "author": "Usman Asif",
-    "quote": "Fear is a darkroom where negatives develop."
+    author: "Pablo Picasso",
+    quote: "Everything you can imagine is real.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "The truest wisdom is a resolute determination."
+    author: "Usman Asif",
+    quote: "Fear is a darkroom where negatives develop.",
   },
   {
-    "author": "Victor Hugo",
-    "quote": "Life is the flower for which love is the honey."
+    author: "Napoleon Bonaparte",
+    quote: "The truest wisdom is a resolute determination.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Freedom is the right to live as we wish."
+    author: "Victor Hugo",
+    quote: "Life is the flower for which love is the honey.",
   },
   {
-    "author": "",
-    "quote": "Change your thoughts, change your life!"
+    author: "Epictetus",
+    quote: "Freedom is the right to live as we wish.",
   },
   {
-    "author": "Robert Heller",
-    "quote": "Never ignore a gut feeling, but never believe that it's enough."
+    author: "",
+    quote: "Change your thoughts, change your life!",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Loss is nothing else but change,and change is Natures delight."
+    author: "Robert Heller",
+    quote: "Never ignore a gut feeling, but never believe that it's enough.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Someone is special only if you tell them."
+    author: "Marcus Aurelius",
+    quote: "Loss is nothing else but change,and change is Natures delight.",
   },
   {
-    "author": "",
-    "quote": "Today is the tomorrow you worried about yesterday."
+    author: "Byron Pulsifer",
+    quote: "Someone is special only if you tell them.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "There is no way to happiness, happiness is the way."
+    author: "",
+    quote: "Today is the tomorrow you worried about yesterday.",
   },
   {
-    "author": "",
-    "quote": "The day always looks brighter from behind a smile."
+    author: "Thich Nhat Hanh",
+    quote: "There is no way to happiness, happiness is the way.",
   },
   {
-    "author": "",
-    "quote": "A stumble may prevent a fall."
+    author: "",
+    quote: "The day always looks brighter from behind a smile.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who talks more is sooner exhausted."
+    author: "",
+    quote: "A stumble may prevent a fall.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who is contented is rich."
+    author: "Lao Tzu",
+    quote: "He who talks more is sooner exhausted.",
   },
   {
-    "author": "Plutarch",
-    "quote": "What we achieve inwardly will change outer reality."
+    author: "Lao Tzu",
+    quote: "He who is contented is rich.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Our strength grows out of our weaknesses."
+    author: "Plutarch",
+    quote: "What we achieve inwardly will change outer reality.",
   },
   {
-    "author": "Mahatma Gandhi",
-    "quote": "We must become the change we want to see."
+    author: "Ralph Waldo Emerson",
+    quote: "Our strength grows out of our weaknesses.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Happiness is found in doing, not merely possessing."
+    author: "Mahatma Gandhi",
+    quote: "We must become the change we want to see.",
   },
   {
-    "author": "",
-    "quote": "Put your future in good hands — your own."
+    author: "Napoleon Hill",
+    quote: "Happiness is found in doing, not merely possessing.",
   },
   {
-    "author": "Wit",
-    "quote": "We choose our destiny in the way we treat others."
+    author: "",
+    quote: "Put your future in good hands — your own.",
   },
   {
-    "author": "Voltaire",
-    "quote": "No snowflake in an avalanche ever feels responsible."
+    author: "Wit",
+    quote: "We choose our destiny in the way we treat others.",
   },
   {
-    "author": "Virgil",
-    "quote": "Fortune favours the brave."
+    author: "Voltaire",
+    quote: "No snowflake in an avalanche ever feels responsible.",
   },
   {
-    "author": "Joseph Stalin",
-    "quote": "I believe in one thing only, the power of human will."
+    author: "Virgil",
+    quote: "Fortune favours the brave.",
   },
   {
-    "author": "Robert Frost",
-    "quote": "The best way out is always through."
+    author: "Joseph Stalin",
+    quote: "I believe in one thing only, the power of human will.",
   },
   {
-    "author": "Seneca",
-    "quote": "The mind unlearns with difficulty what it has long learned."
+    author: "Robert Frost",
+    quote: "The best way out is always through.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "I destroy my enemies when I make them my friends."
+    author: "Seneca",
+    quote: "The mind unlearns with difficulty what it has long learned.",
   },
   {
-    "author": "Thomas Fuller",
-    "quote": "No garden is without its weeds."
+    author: "Abraham Lincoln",
+    quote: "I destroy my enemies when I make them my friends.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "There is no failure except in no longer trying."
+    author: "Thomas Fuller",
+    quote: "No garden is without its weeds.",
   },
   {
-    "author": "Turkish proverb",
-    "quote": "Kind words will unlock an iron door."
+    author: "Elbert Hubbard",
+    quote: "There is no failure except in no longer trying.",
   },
   {
-    "author": "Hugh Miller",
-    "quote": "Problems are only opportunities with thorns on them."
+    author: "Turkish proverb",
+    quote: "Kind words will unlock an iron door.",
   },
   {
-    "author": "A. Powell Davies",
-    "quote": "Life is just a chance to grow a soul."
+    author: "Hugh Miller",
+    quote: "Problems are only opportunities with thorns on them.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Mountains cannot be surmounted except by winding paths."
+    author: "A. Powell Davies",
+    quote: "Life is just a chance to grow a soul.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "May our hearts garden of awakening bloom with hundreds of flowers."
+    author: "Johann Wolfgang von Goethe",
+    quote: "Mountains cannot be surmounted except by winding paths.",
   },
   {
-    "author": "John Dryden",
-    "quote": "Fortune befriends the bold."
+    author: "Thich Nhat Hanh",
+    quote: "May our hearts garden of awakening bloom with hundreds of flowers.",
   },
   {
-    "author": "Friedrich von Schiller",
-    "quote": "Keep true to the dreams of thy youth."
+    author: "John Dryden",
+    quote: "Fortune befriends the bold.",
   },
   {
-    "author": "Mike Ditka",
-    "quote": "You're never a loser until you quit trying."
+    author: "Friedrich von Schiller",
+    quote: "Keep true to the dreams of thy youth.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Knowing is not enough; we must apply!"
+    author: "Mike Ditka",
+    quote: "You're never a loser until you quit trying.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Strong beliefs win strong men, and then make them stronger."
+    author: "Johann Wolfgang von Goethe",
+    quote: "Knowing is not enough; we must apply!",
   },
   {
-    "author": "Albert Camus",
-    "quote": "Autumn is a second spring when every leaf is a flower."
+    author: "Richard Bach",
+    quote: "Strong beliefs win strong men, and then make them stronger.",
   },
   {
-    "author": "Toni Morrison",
-    "quote": "If you surrender to the wind, you can ride it."
+    author: "Albert Camus",
+    quote: "Autumn is a second spring when every leaf is a flower.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "Keep yourself to the sunshine and you cannot see the shadow."
+    author: "Toni Morrison",
+    quote: "If you surrender to the wind, you can ride it.",
   },
   {
-    "author": "Paulo Coelho",
-    "quote": "Write your plans in pencil and give God the eraser."
+    author: "Helen Keller",
+    quote: "Keep yourself to the sunshine and you cannot see the shadow.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "Inspiration exists, but it has to find us working."
+    author: "Paulo Coelho",
+    quote: "Write your plans in pencil and give God the eraser.",
   },
   {
-    "author": "Jonathan Kozol",
-    "quote": "Pick battles big enough to matter, small enough to win."
+    author: "Pablo Picasso",
+    quote: "Inspiration exists, but it has to find us working.",
   },
   {
-    "author": "Janis Joplin",
-    "quote": "Don't compromise yourself. You are all you've got."
+    author: "Jonathan Kozol",
+    quote: "Pick battles big enough to matter, small enough to win.",
   },
   {
-    "author": "Sophocles",
-    "quote": "A short saying oft contains much wisdom."
+    author: "Janis Joplin",
+    quote: "Don't compromise yourself. You are all you've got.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Difficulties are things that show a person what they are."
+    author: "Sophocles",
+    quote: "A short saying oft contains much wisdom.",
   },
   {
-    "author": "Honore de Balzac",
-    "quote": "When you doubt your power, you give power to your doubt."
+    author: "Epictetus",
+    quote: "Difficulties are things that show a person what they are.",
   },
   {
-    "author": "Ovid",
-    "quote": "The cause is hidden. The effect is visible to all."
+    author: "Honore de Balzac",
+    quote: "When you doubt your power, you give power to your doubt.",
   },
   {
-    "author": "Francis Bacon",
-    "quote": "A prudent question is one half of wisdom."
+    author: "Ovid",
+    quote: "The cause is hidden. The effect is visible to all.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "The path to success is to take massive, determined action."
+    author: "Francis Bacon",
+    quote: "A prudent question is one half of wisdom.",
   },
   {
-    "author": "Manuel Puig",
-    "quote": "I allow my intuition to lead my path."
+    author: "Tony Robbins",
+    quote: "The path to success is to take massive, determined action.",
   },
   {
-    "author": "William R. Inge",
-    "quote": "Nature takes away any faculty that is not used."
+    author: "Manuel Puig",
+    quote: "I allow my intuition to lead my path.",
   },
   {
-    "author": "Epictetus",
-    "quote": "If you wish to be a writer, write."
+    author: "William R. Inge",
+    quote: "Nature takes away any faculty that is not used.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "There is no way to prosperity, prosperity is the way."
+    author: "Epictetus",
+    quote: "If you wish to be a writer, write.",
   },
   {
-    "author": "Jim Rohn",
-    "quote": "Either you run the day or the day runs you."
+    author: "Wayne Dyer",
+    quote: "There is no way to prosperity, prosperity is the way.",
   },
   {
-    "author": "Publilius Syrus",
-    "quote": "Better be ignorant of a matter than half know it."
+    author: "Jim Rohn",
+    quote: "Either you run the day or the day runs you.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "Follow your instincts. That is where true wisdom manifests itself."
+    author: "Publilius Syrus",
+    quote: "Better be ignorant of a matter than half know it.",
   },
   {
-    "author": "Benjamin Franklin",
-    "quote": "There never was a good knife made of bad steel."
+    author: "Oprah Winfrey",
+    quote: "Follow your instincts. That is where true wisdom manifests itself.",
   },
   {
-    "author": "Anatole France",
-    "quote": "To accomplish great things, we must dream as well as act."
+    author: "Benjamin Franklin",
+    quote: "There never was a good knife made of bad steel.",
   },
   {
-    "author": "Saint Augustine",
-    "quote": "Patience is the companion of wisdom."
+    author: "Anatole France",
+    quote: "To accomplish great things, we must dream as well as act.",
   },
   {
-    "author": "Buddha",
-    "quote": "The mind is everything. What you think you become."
+    author: "Saint Augustine",
+    quote: "Patience is the companion of wisdom.",
   },
   {
-    "author": "Voltaire",
-    "quote": "To enjoy life, we must touch much of it lightly."
+    author: "Buddha",
+    quote: "The mind is everything. What you think you become.",
   },
   {
-    "author": "Maya Lin",
-    "quote": "To fly, we have to have resistance."
+    author: "Voltaire",
+    quote: "To enjoy life, we must touch much of it lightly.",
   },
   {
-    "author": "",
-    "quote": "What you see depends on what you're looking for."
+    author: "Maya Lin",
+    quote: "To fly, we have to have resistance.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "The heart has its reasons which reason knows not of."
+    author: "",
+    quote: "What you see depends on what you're looking for.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "Be great in act, as you have been in thought."
+    author: "Blaise Pascal",
+    quote: "The heart has its reasons which reason knows not of.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "Imagination rules the world."
+    author: "William Shakespeare",
+    quote: "Be great in act, as you have been in thought.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "Kind words do not cost much. Yet they accomplish much."
+    author: "Napoleon Bonaparte",
+    quote: "Imagination rules the world.",
   },
   {
-    "author": "Michelangelo",
-    "quote": "There is no greater harm than that of time wasted."
+    author: "Blaise Pascal",
+    quote: "Kind words do not cost much. Yet they accomplish much.",
   },
   {
-    "author": "Jonas Salk",
-    "quote": "Intuition will tell the thinking mind where to look next."
+    author: "Michelangelo",
+    quote: "There is no greater harm than that of time wasted.",
   },
   {
-    "author": "",
-    "quote": "Worry gives a small thing a big shadow."
+    author: "Jonas Salk",
+    quote: "Intuition will tell the thinking mind where to look next.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Fears are nothing more than a state of mind."
+    author: "",
+    quote: "Worry gives a small thing a big shadow.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "The journey of a thousand miles begins with one step."
+    author: "Napoleon Hill",
+    quote: "Fears are nothing more than a state of mind.",
   },
   {
-    "author": "Peter Drucker",
-    "quote": "Efficiency is doing things right; effectiveness is doing the right things."
+    author: "Lao Tzu",
+    quote: "The journey of a thousand miles begins with one step.",
   },
   {
-    "author": "Luisa Sigea",
-    "quote": "Blaze with the fire that is never extinguished."
+    author: "Peter Drucker",
+    quote:
+      "Efficiency is doing things right; effectiveness is doing the right things.",
   },
   {
-    "author": "Dr. Seuss",
-    "quote": "Don't cry because it's over. Smile because it happened."
+    author: "Luisa Sigea",
+    quote: "Blaze with the fire that is never extinguished.",
   },
   {
-    "author": "Jason Fried",
-    "quote": "No is easier to do. Yes is easier to say."
+    author: "Dr. Seuss",
+    quote: "Don't cry because it's over. Smile because it happened.",
   },
   {
-    "author": "Confucius",
-    "quote": "To be wrong is nothing unless you continue to remember it."
+    author: "Jason Fried",
+    quote: "No is easier to do. Yes is easier to say.",
   },
   {
-    "author": "Babe Ruth",
-    "quote": "Yesterdays home runs don't win today's games."
+    author: "Confucius",
+    quote: "To be wrong is nothing unless you continue to remember it.",
   },
   {
-    "author": "Carlyle",
-    "quote": "Silence is deep as Eternity, Speech is shallow as Time."
+    author: "Babe Ruth",
+    quote: "Yesterdays home runs don't win today's games.",
   },
   {
-    "author": "Leo F. Buscaglia",
-    "quote": "Don't smother each other. No one can grow in the shade."
+    author: "Carlyle",
+    quote: "Silence is deep as Eternity, Speech is shallow as Time.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "An ant on the move does more than a dozing ox"
+    author: "Leo F. Buscaglia",
+    quote: "Don't smother each other. No one can grow in the shade.",
   },
   {
-    "author": "Indira Gandhi",
-    "quote": "You can't shake hands with a clenched fist."
+    author: "Lao Tzu",
+    quote: "An ant on the move does more than a dozing ox",
   },
   {
-    "author": "Plato",
-    "quote": "A good decision is based on knowledge and not on numbers."
+    author: "Indira Gandhi",
+    quote: "You can't shake hands with a clenched fist.",
   },
   {
-    "author": "Confucius",
-    "quote": "The cautious seldom err."
+    author: "Plato",
+    quote: "A good decision is based on knowledge and not on numbers.",
   },
   {
-    "author": "Frederick Douglass",
-    "quote": "If there is no struggle, there is no progress."
+    author: "Confucius",
+    quote: "The cautious seldom err.",
   },
   {
-    "author": "Willa Cather",
-    "quote": "Where there is great love, there are always miracles."
+    author: "Frederick Douglass",
+    quote: "If there is no struggle, there is no progress.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Time you enjoy wasting, was not wasted."
+    author: "Willa Cather",
+    quote: "Where there is great love, there are always miracles.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Every problem has a gift for you in its hands."
+    author: "John Lennon",
+    quote: "Time you enjoy wasting, was not wasted.",
   },
   {
-    "author": "Jean de la Fontaine",
-    "quote": "Sadness flies away on the wings of time."
+    author: "Richard Bach",
+    quote: "Every problem has a gift for you in its hands.",
   },
   {
-    "author": "Publilius Syrus",
-    "quote": "I have often regretted my speech, never my silence."
+    author: "Jean de la Fontaine",
+    quote: "Sadness flies away on the wings of time.",
   },
   {
-    "author": "Thomas Jefferson",
-    "quote": "Never put off till tomorrow what you can do today."
+    author: "Publilius Syrus",
+    quote: "I have often regretted my speech, never my silence.",
   },
   {
-    "author": "Thomas Dewar",
-    "quote": "Minds are like parachutes. They only function when open."
+    author: "Thomas Jefferson",
+    quote: "Never put off till tomorrow what you can do today.",
   },
   {
-    "author": "George Patton",
-    "quote": "If a man does his best, what else is there?"
+    author: "Thomas Dewar",
+    quote: "Minds are like parachutes. They only function when open.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "The secret of success is constancy to purpose."
+    author: "George Patton",
+    quote: "If a man does his best, what else is there?",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Life is a progress, and not a station."
+    author: "Benjamin Disraeli",
+    quote: "The secret of success is constancy to purpose.",
   },
   {
-    "author": "Horace Friess",
-    "quote": "All seasons are beautiful for the person who carries happiness within."
+    author: "Ralph Emerson",
+    quote: "Life is a progress, and not a station.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "To avoid criticism, do nothing, say nothing, be nothing."
+    author: "Horace Friess",
+    quote:
+      "All seasons are beautiful for the person who carries happiness within.",
   },
   {
-    "author": "Ovid",
-    "quote": "All things change; nothing perishes."
+    author: "Elbert Hubbard",
+    quote: "To avoid criticism, do nothing, say nothing, be nothing.",
   },
   {
-    "author": "Haynes Bayly",
-    "quote": "Absence makes the heart grow fonder."
+    author: "Ovid",
+    quote: "All things change; nothing perishes.",
   },
   {
-    "author": "Lauren Bacall",
-    "quote": "Imagination is the highest kite one can fly."
+    author: "Haynes Bayly",
+    quote: "Absence makes the heart grow fonder.",
   },
   {
-    "author": "Frank Herbert",
-    "quote": "The beginning of knowledge is the discovery of something we do not understand."
+    author: "Lauren Bacall",
+    quote: "Imagination is the highest kite one can fly.",
   },
   {
-    "author": "Elizabeth Browning",
-    "quote": "Love doesn't make the world go round, love is what makes the ride worthwhile."
+    author: "Frank Herbert",
+    quote:
+      "The beginning of knowledge is the discovery of something we do not understand.",
   },
   {
-    "author": "Arthur Conan Doyle",
-    "quote": "Whenever you have eliminated the impossible, whatever remains, however improbable, must be the truth."
+    author: "Elizabeth Browning",
+    quote:
+      "Love doesn't make the world go round, love is what makes the ride worthwhile.",
   },
   {
-    "author": "J. Willard Marriott",
-    "quote": "Good timber does not grow with ease; the stronger the wind, the stronger the trees."
+    author: "Arthur Conan Doyle",
+    quote:
+      "Whenever you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "I believe that we are fundamentally the same and have the same basic potential."
+    author: "J. Willard Marriott",
+    quote:
+      "Good timber does not grow with ease; the stronger the wind, the stronger the trees.",
   },
   {
-    "author": "Edward Gibbon",
-    "quote": "The winds and waves are always on the side of the ablest navigators."
+    author: "Dalai Lama",
+    quote:
+      "I believe that we are fundamentally the same and have the same basic potential.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "The future belongs to those who believe in the beauty of their dreams."
+    author: "Edward Gibbon",
+    quote:
+      "The winds and waves are always on the side of the ablest navigators.",
   },
   {
-    "author": "",
-    "quote": "To get something you never had, you have to do something you never did."
+    author: "Eleanor Roosevelt",
+    quote:
+      "The future belongs to those who believe in the beauty of their dreams.",
   },
   {
-    "author": "",
-    "quote": "Be thankful when you don't know something for it gives you the opportunity to learn."
+    author: "",
+    quote:
+      "To get something you never had, you have to do something you never did.",
   },
   {
-    "author": "Mahatma Gandhi",
-    "quote": "Strength does not come from physical capacity. It comes from an indomitable will."
+    author: "",
+    quote:
+      "Be thankful when you don't know something for it gives you the opportunity to learn.",
   },
   {
-    "author": "Og Mandino",
-    "quote": "Each misfortune you encounter will carry in it the seed of tomorrows good luck."
+    author: "Mahatma Gandhi",
+    quote:
+      "Strength does not come from physical capacity. It comes from an indomitable will.",
   },
   {
-    "author": "Lewis B. Smedes",
-    "quote": "To forgive is to set a prisoner free and realize that prisoner was you."
+    author: "Og Mandino",
+    quote:
+      "Each misfortune you encounter will carry in it the seed of tomorrows good luck.",
   },
   {
-    "author": "Buddha",
-    "quote": "In separateness lies the world's great misery, in compassion lies the world's true strength."
+    author: "Lewis B. Smedes",
+    quote:
+      "To forgive is to set a prisoner free and realize that prisoner was you.",
   },
   {
-    "author": "Nikos Kazantzakis",
-    "quote": "By believing passionately in something that does not yet exist, we create it."
+    author: "Buddha",
+    quote:
+      "In separateness lies the world's great misery, in compassion lies the world's true strength.",
   },
   {
-    "author": "",
-    "quote": "Letting go isn’t the end of the world; it’s the beginning of a new life."
+    author: "Nikos Kazantzakis",
+    quote:
+      "By believing passionately in something that does not yet exist, we create it.",
   },
   {
-    "author": "John Eliot",
-    "quote": "All the great performers I have worked with are fuelled by a personal dream."
+    author: "",
+    quote:
+      "Letting go isn’t the end of the world; it’s the beginning of a new life.",
   },
   {
-    "author": "A. A. Milne",
-    "quote": "One of the advantages of being disorderly is that one is constantly making exciting discoveries."
+    author: "John Eliot",
+    quote:
+      "All the great performers I have worked with are fuelled by a personal dream.",
   },
   {
-    "author": "Marie Curie",
-    "quote": "I never see what has been done; I only see what remains to be done."
+    author: "A. A. Milne",
+    quote:
+      "One of the advantages of being disorderly is that one is constantly making exciting discoveries.",
   },
   {
-    "author": "Seneca",
-    "quote": "Begin at once to live and count each separate day as a separate life."
+    author: "Marie Curie",
+    quote:
+      "I never see what has been done; I only see what remains to be done.",
   },
   {
-    "author": "Lawrence Peter",
-    "quote": "If you don't know where you are going, you will probably end up somewhere else."
+    author: "Seneca",
+    quote:
+      "Begin at once to live and count each separate day as a separate life.",
   },
   {
-    "author": "Hannah More",
-    "quote": "It is not so important to know everything as to appreciate what we learn."
+    author: "Lawrence Peter",
+    quote:
+      "If you don't know where you are going, you will probably end up somewhere else.",
   },
   {
-    "author": "John Berry",
-    "quote": "The bird of paradise alights only upon the hand that does not grasp."
+    author: "Hannah More",
+    quote:
+      "It is not so important to know everything as to appreciate what we learn.",
   },
   {
-    "author": "William Yeats",
-    "quote": "Think as a wise man but communicate in the language of the people."
+    author: "John Berry",
+    quote:
+      "The bird of paradise alights only upon the hand that does not grasp.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Practice yourself, for heavens sake in little things, and then proceed to greater."
+    author: "William Yeats",
+    quote: "Think as a wise man but communicate in the language of the people.",
   },
   {
-    "author": "Seneca",
-    "quote": "If one does not know to which port is sailing, no wind is favorable."
+    author: "Epictetus",
+    quote:
+      "Practice yourself, for heavens sake in little things, and then proceed to greater.",
   },
   {
-    "author": "",
-    "quote": "Our greatest glory is not in never failing but rising everytime we fall."
+    author: "Seneca",
+    quote:
+      "If one does not know to which port is sailing, no wind is favorable.",
   },
   {
-    "author": "",
-    "quote": "Being right is highly overrated. Even a stopped clock is right twice a day."
+    author: "",
+    quote:
+      "Our greatest glory is not in never failing but rising everytime we fall.",
   },
   {
-    "author": "Ken S. Keyes",
-    "quote": "To be upset over what you don't have is to waste what you do have."
+    author: "",
+    quote:
+      "Being right is highly overrated. Even a stopped clock is right twice a day.",
   },
   {
-    "author": "Thomas Edison",
-    "quote": "If we did the things we are capable of, we would astound ourselves."
+    author: "Ken S. Keyes",
+    quote: "To be upset over what you don't have is to waste what you do have.",
   },
   {
-    "author": "Marie Curie",
-    "quote": "Nothing in life is to be feared. It is only to be understood."
+    author: "Thomas Edison",
+    quote:
+      "If we did the things we are capable of, we would astound ourselves.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "Successful people ask better questions, and as a result, they get better answers."
+    author: "Marie Curie",
+    quote: "Nothing in life is to be feared. It is only to be understood.",
   },
   {
-    "author": "",
-    "quote": "Love is not blind; it simply enables one to see things others fail to see."
+    author: "Tony Robbins",
+    quote:
+      "Successful people ask better questions, and as a result, they get better answers.",
   },
   {
-    "author": "Anne Schaef",
-    "quote": "Life is a process. We are a process. The universe is a process."
+    author: "",
+    quote:
+      "Love is not blind; it simply enables one to see things others fail to see.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "I think somehow we learn who we really are and then live with that decision."
+    author: "Anne Schaef",
+    quote: "Life is a process. We are a process. The universe is a process.",
   },
   {
-    "author": "Kenneth Patton",
-    "quote": "We learn what we have said from those who listen to our speaking."
+    author: "Eleanor Roosevelt",
+    quote:
+      "I think somehow we learn who we really are and then live with that decision.",
   },
   {
-    "author": "Kahlil Gibran",
-    "quote": "A little knowledge that acts is worth infinitely more than much knowledge that is idle."
+    author: "Kenneth Patton",
+    quote: "We learn what we have said from those who listen to our speaking.",
   },
   {
-    "author": "",
-    "quote": "If you get up one more time than you fall, you will make it through."
+    author: "Kahlil Gibran",
+    quote:
+      "A little knowledge that acts is worth infinitely more than much knowledge that is idle.",
   },
   {
-    "author": "Flora Whittemore",
-    "quote": "The doors we open and close each day decide the lives we live."
+    author: "",
+    quote:
+      "If you get up one more time than you fall, you will make it through.",
   },
   {
-    "author": "H. W. Arnold",
-    "quote": "The worst bankrupt in the world is the person who has lost his enthusiasm."
+    author: "Flora Whittemore",
+    quote: "The doors we open and close each day decide the lives we live.",
   },
   {
-    "author": "Buddha",
-    "quote": "Happiness comes when your work and words are of benefit to yourself and others."
+    author: "H. W. Arnold",
+    quote:
+      "The worst bankrupt in the world is the person who has lost his enthusiasm.",
   },
   {
-    "author": "",
-    "quote": "Don't focus on making the right decision, focus on making the decision the right one."
+    author: "Buddha",
+    quote:
+      "Happiness comes when your work and words are of benefit to yourself and others.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Everything is perfect in the universe — even your desire to improve it."
+    author: "",
+    quote:
+      "Don't focus on making the right decision, focus on making the decision the right one.",
   },
   {
-    "author": "Eden Phillpotts",
-    "quote": "The universe is full of magical things, patiently waiting for our wits to grow sharper."
+    author: "Wayne Dyer",
+    quote:
+      "Everything is perfect in the universe — even your desire to improve it.",
   },
   {
-    "author": "Buddha",
-    "quote": "Just as a candle cannot burn without fire, men cannot live without a spiritual life."
+    author: "Eden Phillpotts",
+    quote:
+      "The universe is full of magical things, patiently waiting for our wits to grow sharper.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "A thing long expected takes the form of the unexpected when at last it comes."
+    author: "Buddha",
+    quote:
+      "Just as a candle cannot burn without fire, men cannot live without a spiritual life.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "Action may not always bring happiness; but there is no happiness without action."
+    author: "Mark Twain",
+    quote:
+      "A thing long expected takes the form of the unexpected when at last it comes.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "I don't believe in failure. It is not failure if you enjoyed the process."
+    author: "Benjamin Disraeli",
+    quote:
+      "Action may not always bring happiness; but there is no happiness without action.",
   },
   {
-    "author": "Confucius",
-    "quote": "What you do not want done to yourself, do not do to others."
+    author: "Oprah Winfrey",
+    quote:
+      "I don't believe in failure. It is not failure if you enjoyed the process.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "Short words are best and the old words when short are best of all."
+    author: "Confucius",
+    quote: "What you do not want done to yourself, do not do to others.",
   },
   {
-    "author": "Buddha",
-    "quote": "If you light a lamp for somebody, it will also brighten your path."
+    author: "Winston Churchill",
+    quote: "Short words are best and the old words when short are best of all.",
   },
   {
-    "author": "Lin-yutang",
-    "quote": "I have done my best: that is about all the philosophy of living one needs."
+    author: "Buddha",
+    quote: "If you light a lamp for somebody, it will also brighten your path.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "Through perseverance many people win success out of what seemed destined to be certain failure."
+    author: "Lin-yutang",
+    quote:
+      "I have done my best: that is about all the philosophy of living one needs.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Give thanks for the rain of life that propels us to reach new horizons."
+    author: "Benjamin Disraeli",
+    quote:
+      "Through perseverance many people win success out of what seemed destined to be certain failure.",
   },
   {
-    "author": "",
-    "quote": "Love is just a word until someone comes along and gives it meaning."
+    author: "Byron Pulsifer",
+    quote:
+      "Give thanks for the rain of life that propels us to reach new horizons.",
   },
   {
-    "author": "",
-    "quote": "We all have problems. The way we solve them is what makes us different."
+    author: "",
+    quote:
+      "Love is just a word until someone comes along and gives it meaning.",
   },
   {
-    "author": "Dave Weinbaum",
-    "quote": "The secret to a rich life is to have more beginnings than endings."
+    author: "",
+    quote:
+      "We all have problems. The way we solve them is what makes us different.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "It is only when the mind and character slumber that the dress can be seen."
+    author: "Dave Weinbaum",
+    quote: "The secret to a rich life is to have more beginnings than endings.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "If you don't like something, change it. If you can't change it, change your attitude."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "It is only when the mind and character slumber that the dress can be seen.",
   },
   {
-    "author": "Confucius",
-    "quote": "Reviewing what you have learned and learning anew, you are fit to be a teacher."
+    author: "Maya Angelou",
+    quote:
+      "If you don't like something, change it. If you can't change it, change your attitude.",
   },
   {
-    "author": "Augustinus Sanctus",
-    "quote": "The world is a book, and those who do not travel read only a page."
+    author: "Confucius",
+    quote:
+      "Reviewing what you have learned and learning anew, you are fit to be a teacher.",
   },
   {
-    "author": "Henri-Frederic Amiel",
-    "quote": "So long as a person is capable of self-renewal they are a living being."
+    author: "Augustinus Sanctus",
+    quote: "The world is a book, and those who do not travel read only a page.",
   },
   {
-    "author": "Louisa Alcott",
-    "quote": "I'm not afraid of storms, for Im learning how to sail my ship."
+    author: "Henri-Frederic Amiel",
+    quote:
+      "So long as a person is capable of self-renewal they are a living being.",
   },
   {
-    "author": "Voltaire",
-    "quote": "Think for yourselves and let others enjoy the privilege to do so too."
+    author: "Louisa Alcott",
+    quote: "I'm not afraid of storms, for Im learning how to sail my ship.",
   },
   {
-    "author": "Annie Dillard",
-    "quote": "How we spend our days is, of course, how we spend our lives."
+    author: "Voltaire",
+    quote:
+      "Think for yourselves and let others enjoy the privilege to do so too.",
   },
   {
-    "author": "Man Ray",
-    "quote": "It has never been my object to record my dreams, just to realize them."
+    author: "Annie Dillard",
+    quote: "How we spend our days is, of course, how we spend our lives.",
   },
   {
-    "author": "Sigmund Freud",
-    "quote": "The most complicated achievements of thought are possible without the assistance of consciousness."
+    author: "Man Ray",
+    quote:
+      "It has never been my object to record my dreams, just to realize them.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Be miserable. Or motivate yourself. Whatever has to be done, it's always your choice."
+    author: "Sigmund Freud",
+    quote:
+      "The most complicated achievements of thought are possible without the assistance of consciousness.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Most great people have attained their greatest success just one step beyond their greatest failure."
+    author: "Wayne Dyer",
+    quote:
+      "Be miserable. Or motivate yourself. Whatever has to be done, it's always your choice.",
   },
   {
-    "author": "Henry Ford",
-    "quote": "If you think you can, you can. And if you think you can't, you're right."
+    author: "Napoleon Hill",
+    quote:
+      "Most great people have attained their greatest success just one step beyond their greatest failure.",
   },
   {
-    "author": "St. Augustine",
-    "quote": "Better to have loved and lost, than to have never loved at all."
+    author: "Henry Ford",
+    quote:
+      "If you think you can, you can. And if you think you can't, you're right.",
   },
   {
-    "author": "Leo Tolstoy",
-    "quote": "Everyone thinks of changing the world, but no one thinks of changing himself."
+    author: "St. Augustine",
+    quote: "Better to have loved and lost, than to have never loved at all.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "The best way to pay for a lovely moment is to enjoy it."
+    author: "Leo Tolstoy",
+    quote:
+      "Everyone thinks of changing the world, but no one thinks of changing himself.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "You have enemies? Good. That means you've stood up for something, sometime in your life."
+    author: "Richard Bach",
+    quote: "The best way to pay for a lovely moment is to enjoy it.",
   },
   {
-    "author": "John De Paola",
-    "quote": "Slow down and everything you are chasing will come around and catch you."
+    author: "Winston Churchill",
+    quote:
+      "You have enemies? Good. That means you've stood up for something, sometime in your life.",
   },
   {
-    "author": "Buddha",
-    "quote": "Your worst enemy cannot harm you as much as your own unguarded thoughts."
+    author: "John De Paola",
+    quote:
+      "Slow down and everything you are chasing will come around and catch you.",
   },
   {
-    "author": "Lily Tomlin",
-    "quote": "I always wanted to be somebody, but I should have been more specific."
+    author: "Buddha",
+    quote:
+      "Your worst enemy cannot harm you as much as your own unguarded thoughts.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Yeah we all shine on, like the moon, and the stars, and the sun."
+    author: "Lily Tomlin",
+    quote:
+      "I always wanted to be somebody, but I should have been more specific.",
   },
   {
-    "author": "Martin Fischer",
-    "quote": "Knowledge is a process of piling up facts; wisdom lies in their simplification."
+    author: "John Lennon",
+    quote: "Yeah we all shine on, like the moon, and the stars, and the sun.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Life is like riding a bicycle. To keep your balance you must keep moving."
+    author: "Martin Fischer",
+    quote:
+      "Knowledge is a process of piling up facts; wisdom lies in their simplification.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "We should all be thankful for those people who rekindle the inner spirit."
+    author: "Albert Einstein",
+    quote:
+      "Life is like riding a bicycle. To keep your balance you must keep moving.",
   },
   {
-    "author": "Thomas Edison",
-    "quote": "Opportunity is missed by most because it is dressed in overalls and looks like work."
+    author: "Albert Schweitzer",
+    quote:
+      "We should all be thankful for those people who rekindle the inner spirit.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Feeling and longing are the motive forces behind all human endeavor and human creations."
+    author: "Thomas Edison",
+    quote:
+      "Opportunity is missed by most because it is dressed in overalls and looks like work.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "In the end we retain from our studies only that which we practically apply."
+    author: "Albert Einstein",
+    quote:
+      "Feeling and longing are the motive forces behind all human endeavor and human creations.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "If you correct your mind, the rest of your life will fall into place."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "In the end we retain from our studies only that which we practically apply.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "The world makes way for the man who knows where he is going."
+    author: "Lao Tzu",
+    quote:
+      "If you correct your mind, the rest of your life will fall into place.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "When your desires are strong enough you will appear to possess superhuman powers to achieve."
+    author: "Ralph Emerson",
+    quote: "The world makes way for the man who knows where he is going.",
   },
   {
-    "author": "John Adams",
-    "quote": "Patience and perseverance have a magical effect before which difficulties disappear and obstacles vanish."
+    author: "Napoleon Hill",
+    quote:
+      "When your desires are strong enough you will appear to possess superhuman powers to achieve.",
   },
   {
-    "author": "Henry David Thoreau",
-    "quote": "I cannot make my days longer so I strive to make them better."
+    author: "John Adams",
+    quote:
+      "Patience and perseverance have a magical effect before which difficulties disappear and obstacles vanish.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "Tension is who you think you should be. Relaxation is who you are."
+    author: "Henry David Thoreau",
+    quote: "I cannot make my days longer so I strive to make them better.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "Never bend your head. Always hold it high. Look the world right in the eye."
+    author: "Chinese proverb",
+    quote: "Tension is who you think you should be. Relaxation is who you are.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "One who gains strength by overcoming obstacles possesses the only strength which can overcome adversity."
+    author: "Helen Keller",
+    quote:
+      "Never bend your head. Always hold it high. Look the world right in the eye.",
   },
   {
-    "author": "Calvin Coolidge",
-    "quote": "We cannot do everything at once, but we can do something at once."
+    author: "Albert Schweitzer",
+    quote:
+      "One who gains strength by overcoming obstacles possesses the only strength which can overcome adversity.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "You have to do your own growing no matter how tall your grandfather was."
+    author: "Calvin Coolidge",
+    quote: "We cannot do everything at once, but we can do something at once.",
   },
   {
-    "author": "",
-    "quote": "Invent your world. Surround yourself with people, color, sounds, and work that nourish you."
+    author: "Abraham Lincoln",
+    quote:
+      "You have to do your own growing no matter how tall your grandfather was.",
   },
   {
-    "author": "General Douglas MacArthur",
-    "quote": "It is fatal to enter any war without the will to win it."
+    author: "",
+    quote:
+      "Invent your world. Surround yourself with people, color, sounds, and work that nourish you.",
   },
   {
-    "author": "Julius Charles Hare",
-    "quote": "Be what you are. This is the first step toward becoming better than you are."
+    author: "General Douglas MacArthur",
+    quote: "It is fatal to enter any war without the will to win it.",
   },
   {
-    "author": "Buckminster Fuller",
-    "quote": "There is nothing in a caterpillar that tells you it's going to be a butterfly."
+    author: "Julius Charles Hare",
+    quote:
+      "Be what you are. This is the first step toward becoming better than you are.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Love and compassion open our own inner life, reducing stress, distrust and loneliness."
+    author: "Buckminster Fuller",
+    quote:
+      "There is nothing in a caterpillar that tells you it's going to be a butterfly.",
   },
   {
-    "author": "Walter Lippmann",
-    "quote": "Ideals are an imaginative understanding of that which is desirable in that which is possible."
+    author: "Dalai Lama",
+    quote:
+      "Love and compassion open our own inner life, reducing stress, distrust and loneliness.",
   },
   {
-    "author": "Confucius",
-    "quote": "The superior man is satisfied and composed; the mean man is always full of distress."
+    author: "Walter Lippmann",
+    quote:
+      "Ideals are an imaginative understanding of that which is desirable in that which is possible.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "If you spend too much time thinking about a thing, you'll never get it done."
+    author: "Confucius",
+    quote:
+      "The superior man is satisfied and composed; the mean man is always full of distress.",
   },
   {
-    "author": "Buddha",
-    "quote": "The way is not in the sky. The way is in the heart."
+    author: "Bruce Lee",
+    quote:
+      "If you spend too much time thinking about a thing, you'll never get it done.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Most people are about as happy as they make up their minds to be"
+    author: "Buddha",
+    quote: "The way is not in the sky. The way is in the heart.",
   },
   {
-    "author": "Buddha",
-    "quote": "Three things cannot be long hidden: the sun, the moon, and the truth."
+    author: "Abraham Lincoln",
+    quote: "Most people are about as happy as they make up their minds to be",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "More often than not, anger is actually an indication of weakness rather than of strength."
+    author: "Buddha",
+    quote:
+      "Three things cannot be long hidden: the sun, the moon, and the truth.",
   },
   {
-    "author": "Jim Beggs",
-    "quote": "Before you put on a frown, make absolutely sure there are no smiles available."
+    author: "Dalai Lama",
+    quote:
+      "More often than not, anger is actually an indication of weakness rather than of strength.",
   },
   {
-    "author": "Donald Kircher",
-    "quote": "A man of ability and the desire to accomplish something can do anything."
+    author: "Jim Beggs",
+    quote:
+      "Before you put on a frown, make absolutely sure there are no smiles available.",
   },
   {
-    "author": "Buddha",
-    "quote": "You, yourself, as much as anybody in the entire universe, deserve your love and affection."
+    author: "Donald Kircher",
+    quote:
+      "A man of ability and the desire to accomplish something can do anything.",
   },
   {
-    "author": "Eckhart Tolle",
-    "quote": "It is not uncommon for people to spend their whole life waiting to start living."
+    author: "Buddha",
+    quote:
+      "You, yourself, as much as anybody in the entire universe, deserve your love and affection.",
   },
   {
-    "author": "H. Jackson Browne",
-    "quote": "Don't be afraid to go out on a limb. That's where the fruit is."
+    author: "Eckhart Tolle",
+    quote:
+      "It is not uncommon for people to spend their whole life waiting to start living.",
   },
   {
-    "author": "Marquis Vauvenargues",
-    "quote": "Wicked people are always surprised to find ability in those that are good."
+    author: "H. Jackson Browne",
+    quote: "Don't be afraid to go out on a limb. That's where the fruit is.",
   },
   {
-    "author": "Charlotte Bronte",
-    "quote": "Life is so constructed that an event does not, cannot, will not, match the expectation."
+    author: "Marquis Vauvenargues",
+    quote:
+      "Wicked people are always surprised to find ability in those that are good.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "If you change the way you look at things, the things you look at change."
+    author: "Charlotte Bronte",
+    quote:
+      "Life is so constructed that an event does not, cannot, will not, match the expectation.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "No man can succeed in a line of endeavor which he does not like."
+    author: "Wayne Dyer",
+    quote:
+      "If you change the way you look at things, the things you look at change.",
   },
   {
-    "author": "Buddha",
-    "quote": "You will not be punished for your anger, you will be punished by your anger."
+    author: "Napoleon Hill",
+    quote: "No man can succeed in a line of endeavor which he does not like.",
   },
   {
-    "author": "Robert Stevenson",
-    "quote": "Don't judge each day by the harvest you reap but by the seeds you plant."
+    author: "Buddha",
+    quote:
+      "You will not be punished for your anger, you will be punished by your anger.",
   },
   {
-    "author": "Andy Warhol",
-    "quote": "They say that time changes things, but you actually have to change them yourself."
+    author: "Robert Stevenson",
+    quote:
+      "Don't judge each day by the harvest you reap but by the seeds you plant.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "Never apologize for showing feelings. When you do so, you apologize for the truth."
+    author: "Andy Warhol",
+    quote:
+      "They say that time changes things, but you actually have to change them yourself.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "The truth you believe and cling to makes you unavailable to hear anything new."
+    author: "Benjamin Disraeli",
+    quote:
+      "Never apologize for showing feelings. When you do so, you apologize for the truth.",
   },
   {
-    "author": "Horace",
-    "quote": "Adversity has the effect of eliciting talents, which in prosperous circumstances would have lain dormant."
+    author: "Pema Chodron",
+    quote:
+      "The truth you believe and cling to makes you unavailable to hear anything new.",
   },
   {
-    "author": "Morris West",
-    "quote": "If you spend your whole life waiting for the storm, you'll never enjoy the sunshine."
+    author: "Horace",
+    quote:
+      "Adversity has the effect of eliciting talents, which in prosperous circumstances would have lain dormant.",
   },
   {
-    "author": "Franklin Roosevelt",
-    "quote": "The only limit to our realization of tomorrow will be our doubts of today."
+    author: "Morris West",
+    quote:
+      "If you spend your whole life waiting for the storm, you'll never enjoy the sunshine.",
   },
   {
-    "author": "Edwin Chapin",
-    "quote": "Every action of our lives touches on some chord that will vibrate in eternity."
+    author: "Franklin Roosevelt",
+    quote:
+      "The only limit to our realization of tomorrow will be our doubts of today.",
   },
   {
-    "author": "Les Brown",
-    "quote": "Shoot for the moon. Even if you miss, you'll land among the stars."
+    author: "Edwin Chapin",
+    quote:
+      "Every action of our lives touches on some chord that will vibrate in eternity.",
   },
   {
-    "author": "Confucius",
-    "quote": "It does not matter how slowly you go as long as you do not stop."
+    author: "Les Brown",
+    quote: "Shoot for the moon. Even if you miss, you'll land among the stars.",
   },
   {
-    "author": "",
-    "quote": "Every day may not be good, but there's something good in every day."
+    author: "Confucius",
+    quote: "It does not matter how slowly you go as long as you do not stop.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Most folks are about as happy as they make up their minds to be."
+    author: "",
+    quote:
+      "Every day may not be good, but there's something good in every day.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "If you would take, you must first give, this is the beginning of intelligence."
+    author: "Abraham Lincoln",
+    quote: "Most folks are about as happy as they make up their minds to be.",
   },
   {
-    "author": "",
-    "quote": "Some people think it's holding that makes one strong — sometimes it's letting go."
+    author: "Lao Tzu",
+    quote:
+      "If you would take, you must first give, this is the beginning of intelligence.",
   },
   {
-    "author": "Havelock Ellis",
-    "quote": "It is on our failures that we base a new and different and better success."
+    author: "",
+    quote:
+      "Some people think it's holding that makes one strong — sometimes it's letting go.",
   },
   {
-    "author": "John Ruskin",
-    "quote": "Quality is never an accident; it is always the result of intelligent effort."
+    author: "Havelock Ellis",
+    quote:
+      "It is on our failures that we base a new and different and better success.",
   },
   {
-    "author": "Confucius",
-    "quote": "To study and not think is a waste. To think and not study is dangerous."
+    author: "John Ruskin",
+    quote:
+      "Quality is never an accident; it is always the result of intelligent effort.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Life is a succession of lessons, which must be lived to be understood."
+    author: "Confucius",
+    quote:
+      "To study and not think is a waste. To think and not study is dangerous.",
   },
   {
-    "author": "Thomas Hardy",
-    "quote": "Time changes everything except something within us which is always surprised by change."
+    author: "Ralph Emerson",
+    quote:
+      "Life is a succession of lessons, which must be lived to be understood.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "You are important enough to ask and you are blessed enough to receive back."
+    author: "Thomas Hardy",
+    quote:
+      "Time changes everything except something within us which is always surprised by change.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "If you cannot do great things, do small things in a great way."
+    author: "Wayne Dyer",
+    quote:
+      "You are important enough to ask and you are blessed enough to receive back.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "If you want your life to be more rewarding, you have to change the way you think."
+    author: "Napoleon Hill",
+    quote: "If you cannot do great things, do small things in a great way.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Transformation doesn't take place with a vacuum; instead, it occurs when we are indirectly and directly connected to all those around us."
+    author: "Oprah Winfrey",
+    quote:
+      "If you want your life to be more rewarding, you have to change the way you think.",
   },
   {
-    "author": "Leonardo Ruiz",
-    "quote": "The only difference between your abilities and others is the ability to put yourself in their shoes and actually try."
+    author: "Byron Pulsifer",
+    quote:
+      "Transformation doesn't take place with a vacuum; instead, it occurs when we are indirectly and directly connected to all those around us.",
   },
   {
-    "author": "Leon Blum",
-    "quote": "The free man is he who does not fear to go to the end of his thought."
+    author: "Leonardo Ruiz",
+    quote:
+      "The only difference between your abilities and others is the ability to put yourself in their shoes and actually try.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Great are they who see that spiritual is stronger than any material force, that thoughts rule the world."
+    author: "Leon Blum",
+    quote:
+      "The free man is he who does not fear to go to the end of his thought.",
   },
   {
-    "author": "Bernard Shaw",
-    "quote": "A life spent making mistakes is not only more honourable but more useful than a life spent in doing nothing."
+    author: "Ralph Emerson",
+    quote:
+      "Great are they who see that spiritual is stronger than any material force, that thoughts rule the world.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "The wise man does not lay up his own treasures. The more he gives to others, the more he has for his own."
+    author: "Bernard Shaw",
+    quote:
+      "A life spent making mistakes is not only more honourable but more useful than a life spent in doing nothing.",
   },
   {
-    "author": "Charles Dickens",
-    "quote": "Don't leave a stone unturned. It's always something, to know you have done the most you could."
+    author: "Lao Tzu",
+    quote:
+      "The wise man does not lay up his own treasures. The more he gives to others, the more he has for his own.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "By going beyond your own problems and taking care of others, you gain inner strength, self-confidence, courage, and a greater sense of calm."
+    author: "Charles Dickens",
+    quote:
+      "Don't leave a stone unturned. It's always something, to know you have done the most you could.",
   },
   {
-    "author": "Sam Keen",
-    "quote": "We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly."
+    author: "Dalai Lama",
+    quote:
+      "By going beyond your own problems and taking care of others, you gain inner strength, self-confidence, courage, and a greater sense of calm.",
   },
   {
-    "author": "Walt Emerson",
-    "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us."
+    author: "Sam Keen",
+    quote:
+      "We come to love not by finding a perfect person, but by learning to see an imperfect person perfectly.",
   },
   {
-    "author": "John Astin",
-    "quote": "There are things so deep and complex that only intuition can reach it in our stage of development as human beings."
+    author: "Walt Emerson",
+    quote:
+      "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "A little more persistence, a little more effort, and what seemed hopeless failure may turn to glorious success."
+    author: "John Astin",
+    quote:
+      "There are things so deep and complex that only intuition can reach it in our stage of development as human beings.",
   },
   {
-    "author": "Henry Moore",
-    "quote": "There is no retirement for an artist, it's your way of living so there is no end to it."
+    author: "Elbert Hubbard",
+    quote:
+      "A little more persistence, a little more effort, and what seemed hopeless failure may turn to glorious success.",
   },
   {
-    "author": "Confucius",
-    "quote": "I will not be concerned at other men is not knowing me;I will be concerned at my own want of ability."
+    author: "Henry Moore",
+    quote:
+      "There is no retirement for an artist, it's your way of living so there is no end to it.",
   },
   {
-    "author": "",
-    "quote": "Why worry about things you can’t control when you can keep yourself busy controlling the things that depend on you?"
+    author: "Confucius",
+    quote:
+      "I will not be concerned at other men is not knowing me;I will be concerned at my own want of ability.",
   },
   {
-    "author": "Laozi",
-    "quote": "When you are content to be simply yourself and don't compare or compete, everybody will respect you."
+    author: "",
+    quote:
+      "Why worry about things you can’t control when you can keep yourself busy controlling the things that depend on you?",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them."
+    author: "Laozi",
+    quote:
+      "When you are content to be simply yourself and don't compare or compete, everybody will respect you.",
   },
   {
-    "author": "George Sheehan",
-    "quote": "Success means having the courage, the determination, and the will to become the person you believe you were meant to be."
+    author: "William Shakespeare",
+    quote:
+      "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them.",
   },
   {
-    "author": "Thomas Jefferson",
-    "quote": "Do you want to know who you are? Don't ask. Act! Action will delineate and define you."
+    author: "George Sheehan",
+    quote:
+      "Success means having the courage, the determination, and the will to become the person you believe you were meant to be.",
   },
   {
-    "author": "Antoine de Saint-Exupery",
-    "quote": "It is only with the heart that one can see rightly, what is essential is invisible to the eye."
+    author: "Thomas Jefferson",
+    quote:
+      "Do you want to know who you are? Don't ask. Act! Action will delineate and define you.",
   },
   {
-    "author": "Marcel Proust",
-    "quote": "Let us be grateful to people who make us happy; they are the charming gardeners who make our souls blossom."
+    author: "Antoine de Saint-Exupery",
+    quote:
+      "It is only with the heart that one can see rightly, what is essential is invisible to the eye.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Make the best use of what is in your power, and take the rest as it happens."
+    author: "Marcel Proust",
+    quote:
+      "Let us be grateful to people who make us happy; they are the charming gardeners who make our souls blossom.",
   },
   {
-    "author": "Louise Hay",
-    "quote": "The thoughts we choose to think are the tools we use to paint the canvas of our lives."
+    author: "Epictetus",
+    quote:
+      "Make the best use of what is in your power, and take the rest as it happens.",
   },
   {
-    "author": "W. Clement Stone",
-    "quote": "No matter how carefully you plan your goals they will never be more that pipe dreams unless you pursue them with gusto."
+    author: "Louise Hay",
+    quote:
+      "The thoughts we choose to think are the tools we use to paint the canvas of our lives.",
   },
   {
-    "author": "Robert McKain",
-    "quote": "The reason most goals are not achieved is that we spend our time doing second things first."
+    author: "W. Clement Stone",
+    quote:
+      "No matter how carefully you plan your goals they will never be more that pipe dreams unless you pursue them with gusto.",
   },
   {
-    "author": "John Quincy Adams",
-    "quote": "If your actions inspire others to dream more, learn more, do more and become more, you are a leader."
+    author: "Robert McKain",
+    quote:
+      "The reason most goals are not achieved is that we spend our time doing second things first.",
   },
   {
-    "author": "Thomas Jefferson",
-    "quote": "I'm a great believer in luck and I find the harder I work, the more I have of it."
+    author: "John Quincy Adams",
+    quote:
+      "If your actions inspire others to dream more, learn more, do more and become more, you are a leader.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Do not waste yourself in rejection, nor bark against the bad, but chant the beauty of the good."
+    author: "Thomas Jefferson",
+    quote:
+      "I'm a great believer in luck and I find the harder I work, the more I have of it.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "The person born with a talent they are meant to use will find their greatest happiness in using it."
+    author: "Ralph Emerson",
+    quote:
+      "Do not waste yourself in rejection, nor bark against the bad, but chant the beauty of the good.",
   },
   {
-    "author": "William Saroyan",
-    "quote": "Good people are good because they've come to wisdom through failure. We get very little wisdom from success, you know."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "The person born with a talent they are meant to use will find their greatest happiness in using it.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Your destiny isn't just fate; it is how you use your own developed abilities to get what you want."
+    author: "William Saroyan",
+    quote:
+      "Good people are good because they've come to wisdom through failure. We get very little wisdom from success, you know.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "Iron rusts from disuse; water loses its purity from stagnation... even so does inaction sap the vigour of the mind."
+    author: "Byron Pulsifer",
+    quote:
+      "Your destiny isn't just fate; it is how you use your own developed abilities to get what you want.",
   },
   {
-    "author": "Isaac Asimov",
-    "quote": "A subtle thought that is in error may yet give rise to fruitful inquiry that can establish truths of great value."
+    author: "Leonardo da Vinci",
+    quote:
+      "Iron rusts from disuse; water loses its purity from stagnation... even so does inaction sap the vigour of the mind.",
   },
   {
-    "author": "Henry Van Dyke",
-    "quote": "Be glad of life because it gives you the chance to love, to work, to play, and to look up at the stars."
+    author: "Isaac Asimov",
+    quote:
+      "A subtle thought that is in error may yet give rise to fruitful inquiry that can establish truths of great value.",
   },
   {
-    "author": "Yogi Berra",
-    "quote": "You got to be careful if you don't know where you're going, because you might not get there."
+    author: "Henry Van Dyke",
+    quote:
+      "Be glad of life because it gives you the chance to love, to work, to play, and to look up at the stars.",
   },
   {
-    "author": "Naguib Mahfouz",
-    "quote": "You can tell whether a man is clever by his answers. You can tell whether a man is wise by his questions."
+    author: "Yogi Berra",
+    quote:
+      "You got to be careful if you don't know where you're going, because you might not get there.",
   },
   {
-    "author": "Anthony Robbins",
-    "quote": "Life is a gift, and it offers us the privilege, opportunity, and responsibility to give something back by becoming more"
+    author: "Naguib Mahfouz",
+    quote:
+      "You can tell whether a man is clever by his answers. You can tell whether a man is wise by his questions.",
   },
   {
-    "author": "John Wooden",
-    "quote": "You can't let praise or criticism get to you. It's a weakness to get caught up in either one."
+    author: "Anthony Robbins",
+    quote:
+      "Life is a gift, and it offers us the privilege, opportunity, and responsibility to give something back by becoming more",
   },
   {
-    "author": "Og Mandino",
-    "quote": "I will love the light for it shows me the way, yet I will endure the darkness because it shows me the stars."
+    author: "John Wooden",
+    quote:
+      "You can't let praise or criticism get to you. It's a weakness to get caught up in either one.",
   },
   {
-    "author": "Jane Addams",
-    "quote": "Our doubts are traitors and make us lose the good we often might win, by fearing to attempt."
+    author: "Og Mandino",
+    quote:
+      "I will love the light for it shows me the way, yet I will endure the darkness because it shows me the stars.",
   },
   {
-    "author": "Thomas Carlyle",
-    "quote": "By nature man hates change; seldom will he quit his old home till it has actually fallen around his ears."
+    author: "Jane Addams",
+    quote:
+      "Our doubts are traitors and make us lose the good we often might win, by fearing to attempt.",
   },
   {
-    "author": "M. Scott Peck",
-    "quote": "Until you value yourself, you won't value your time. Until you value your time, you won't do anything with it."
+    author: "Thomas Carlyle",
+    quote:
+      "By nature man hates change; seldom will he quit his old home till it has actually fallen around his ears.",
   },
   {
-    "author": "Maureen Dowd",
-    "quote": "The minute you settle for less than you deserve, you get even less than you settled for."
+    author: "M. Scott Peck",
+    quote:
+      "Until you value yourself, you won't value your time. Until you value your time, you won't do anything with it.",
   },
   {
-    "author": "Charles Darwin",
-    "quote": "The highest stage in moral ure at which we can arrive is when we recognize that we ought to control our thoughts."
+    author: "Maureen Dowd",
+    quote:
+      "The minute you settle for less than you deserve, you get even less than you settled for.",
   },
   {
-    "author": "",
-    "quote": "It is better to take many small steps in the right direction than to make a great leap forward only to stumble backward."
+    author: "Charles Darwin",
+    quote:
+      "The highest stage in moral ure at which we can arrive is when we recognize that we ought to control our thoughts.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "If we have a positive mental attitude, then even when surrounded by hostility, we shall not lack inner peace."
+    author: "",
+    quote:
+      "It is better to take many small steps in the right direction than to make a great leap forward only to stumble backward.",
   },
   {
-    "author": "Christopher Morley",
-    "quote": "There is only one success — to be able to spend your life in your own way."
+    author: "Dalai Lama",
+    quote:
+      "If we have a positive mental attitude, then even when surrounded by hostility, we shall not lack inner peace.",
   },
   {
-    "author": "Hannah Arendt",
-    "quote": "Promises are the uniquely human way of ordering the future, making it predictable and reliable to the extent that this is humanly possible."
+    author: "Christopher Morley",
+    quote:
+      "There is only one success — to be able to spend your life in your own way.",
   },
   {
-    "author": "Alan Cohen",
-    "quote": "Appreciation is the highest form of prayer, for it acknowledges the presence of good wherever you shine the light of your thankful thoughts."
+    author: "Hannah Arendt",
+    quote:
+      "Promises are the uniquely human way of ordering the future, making it predictable and reliable to the extent that this is humanly possible.",
   },
   {
-    "author": "Aldous Huxley",
-    "quote": "There is only one corner of the universe you can be certain of improving, and that's your own self."
+    author: "Alan Cohen",
+    quote:
+      "Appreciation is the highest form of prayer, for it acknowledges the presence of good wherever you shine the light of your thankful thoughts.",
   },
   {
-    "author": "Marian Edelman",
-    "quote": "You're not obligated to win. You're obligated to keep trying to do the best you can every day."
+    author: "Aldous Huxley",
+    quote:
+      "There is only one corner of the universe you can be certain of improving, and that's your own self.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Everyone can taste success when the going is easy, but few know how to taste victory when times get tough."
+    author: "Marian Edelman",
+    quote:
+      "You're not obligated to win. You're obligated to keep trying to do the best you can every day.",
   },
   {
-    "author": "Sue Patton Thoele",
-    "quote": "Deep listening is miraculous for both listener and speaker.When someone receives us with open-hearted, non-judging, intensely interested listening, our spirits expand."
+    author: "Byron Pulsifer",
+    quote:
+      "Everyone can taste success when the going is easy, but few know how to taste victory when times get tough.",
   },
   {
-    "author": "Frank Crane",
-    "quote": "You may be deceived if you trust too much, but you will live in torment if you don't trust enough."
+    author: "Sue Patton Thoele",
+    quote:
+      "Deep listening is miraculous for both listener and speaker.When someone receives us with open-hearted, non-judging, intensely interested listening, our spirits expand.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Great indeed is the sublimity of the Creative, to which all beings owe their beginning and which permeates all heaven."
+    author: "Frank Crane",
+    quote:
+      "You may be deceived if you trust too much, but you will live in torment if you don't trust enough.",
   },
   {
-    "author": "Kathleen Norris",
-    "quote": "All that is necessary is to accept the impossible, do without the indispensable, and bear the intolerable."
+    author: "Lao Tzu",
+    quote:
+      "Great indeed is the sublimity of the Creative, to which all beings owe their beginning and which permeates all heaven.",
   },
   {
-    "author": "Confucius",
-    "quote": "Choose a job you love, and you will never have to work a day in your life."
+    author: "Kathleen Norris",
+    quote:
+      "All that is necessary is to accept the impossible, do without the indispensable, and bear the intolerable.",
   },
   {
-    "author": "Eckhart Tolle",
-    "quote": "You cannot find yourself by going into the past. You can find yourself by coming into the present."
+    author: "Confucius",
+    quote:
+      "Choose a job you love, and you will never have to work a day in your life.",
   },
   {
-    "author": "Anne Bronte",
-    "quote": "All our talents increase in the using, and the every faculty, both good and bad, strengthen by exercise."
+    author: "Eckhart Tolle",
+    quote:
+      "You cannot find yourself by going into the past. You can find yourself by coming into the present.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "In order to live free and happily you must sacrifice boredom. It is not always an easy sacrifice."
+    author: "Anne Bronte",
+    quote:
+      "All our talents increase in the using, and the every faculty, both good and bad, strengthen by exercise.",
   },
   {
-    "author": "Desiderius Erasmus",
-    "quote": "The fox has many tricks. The hedgehog has but one. But that is the best of all."
+    author: "Richard Bach",
+    quote:
+      "In order to live free and happily you must sacrifice boredom. It is not always an easy sacrifice.",
   },
   {
-    "author": "Arthur Rubinstein",
-    "quote": "Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings."
+    author: "Desiderius Erasmus",
+    quote:
+      "The fox has many tricks. The hedgehog has but one. But that is the best of all.",
   },
   {
-    "author": "Louis Pasteur",
-    "quote": "Let me tell you the secret that has led me to my goal: my strength lies solely in my tenacity"
+    author: "Arthur Rubinstein",
+    quote:
+      "Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings.",
   },
   {
-    "author": "Rumi",
-    "quote": "Something opens our wings. Something makes boredom and hurt disappear. Someone fills the cup in front of us: We taste only sacredness."
+    author: "Louis Pasteur",
+    quote:
+      "Let me tell you the secret that has led me to my goal: my strength lies solely in my tenacity",
   },
   {
-    "author": "Sogyal Rinpoche",
-    "quote": "We must never forget that it is through our actions, words, and thoughts that we have a choice."
+    author: "Rumi",
+    quote:
+      "Something opens our wings. Something makes boredom and hurt disappear. Someone fills the cup in front of us: We taste only sacredness.",
   },
   {
-    "author": "Dennis Kimbro",
-    "quote": "We see things not as they are, but as we are. Our perception is shaped by our previous experiences."
+    author: "Sogyal Rinpoche",
+    quote:
+      "We must never forget that it is through our actions, words, and thoughts that we have a choice.",
   },
   {
-    "author": "William Penn",
-    "quote": "True silence is the rest of the mind; it is to the spirit what sleep is to the body, nourishment and refreshment."
+    author: "Dennis Kimbro",
+    quote:
+      "We see things not as they are, but as we are. Our perception is shaped by our previous experiences.",
   },
   {
-    "author": "Immanuel Kant",
-    "quote": "All our knowledge begins with the senses, proceeds then to the understanding, and ends with reason. There is nothing higher than reason."
+    author: "William Penn",
+    quote:
+      "True silence is the rest of the mind; it is to the spirit what sleep is to the body, nourishment and refreshment.",
   },
   {
-    "author": "Buddha",
-    "quote": "The thought manifests as the word. The word manifests as the deed. The deed develops into habit. And the habit hardens into character."
+    author: "Immanuel Kant",
+    quote:
+      "All our knowledge begins with the senses, proceeds then to the understanding, and ends with reason. There is nothing higher than reason.",
   },
   {
-    "author": "",
-    "quote": "As the rest of the world is walking out the door, your best friends are the ones walking in."
+    author: "Buddha",
+    quote:
+      "The thought manifests as the word. The word manifests as the deed. The deed develops into habit. And the habit hardens into character.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Patience is a virtue but you will never ever accomplish anything if you don't exercise action over patience."
+    author: "",
+    quote:
+      "As the rest of the world is walking out the door, your best friends are the ones walking in.",
   },
   {
-    "author": "Robert Lynd",
-    "quote": "Any of us can achieve virtue, if by virtue we merely mean the avoidance of the vices that do not attract us."
+    author: "Byron Pulsifer",
+    quote:
+      "Patience is a virtue but you will never ever accomplish anything if you don't exercise action over patience.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "If the single man plant himself indomitably on his instincts, and there abide, the huge world will come round to him."
+    author: "Robert Lynd",
+    quote:
+      "Any of us can achieve virtue, if by virtue we merely mean the avoidance of the vices that do not attract us.",
   },
   {
-    "author": "Donald Trump",
-    "quote": "Money was never a big motivation for me, except as a way to keep score. The real excitement is playing the game."
+    author: "Ralph Emerson",
+    quote:
+      "If the single man plant himself indomitably on his instincts, and there abide, the huge world will come round to him.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "Friendship with oneself is all important because without it one cannot be friends with anybody else in the world."
+    author: "Donald Trump",
+    quote:
+      "Money was never a big motivation for me, except as a way to keep score. The real excitement is playing the game.",
   },
   {
-    "author": "Robert Fulghum",
-    "quote": "Peace is not something you wish for. It's something you make, something you do, something you are, and something you give away."
+    author: "Eleanor Roosevelt",
+    quote:
+      "Friendship with oneself is all important because without it one cannot be friends with anybody else in the world.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "A wise man can learn more from a foolish question than a fool can learn from a wise answer."
+    author: "Robert Fulghum",
+    quote:
+      "Peace is not something you wish for. It's something you make, something you do, something you are, and something you give away.",
   },
   {
-    "author": "Arthur Schopenhauer",
-    "quote": "Every man takes the limits of his own field of vision for the limits of the world."
+    author: "Bruce Lee",
+    quote:
+      "A wise man can learn more from a foolish question than a fool can learn from a wise answer.",
   },
   {
-    "author": "André Gide",
-    "quote": "One does not discover new lands without consenting to lose sight of the shore for a very long time."
+    author: "Arthur Schopenhauer",
+    quote:
+      "Every man takes the limits of his own field of vision for the limits of the world.",
   },
   {
-    "author": "Sai Baba",
-    "quote": "What is new in the world? Nothing. What is old in the world? Nothing. Everything has always been and will always be."
+    author: "André Gide",
+    quote:
+      "One does not discover new lands without consenting to lose sight of the shore for a very long time.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Genuine love should first be directed at oneself – if we do not love ourselves, how can we love others?"
+    author: "Sai Baba",
+    quote:
+      "What is new in the world? Nothing. What is old in the world? Nothing. Everything has always been and will always be.",
   },
   {
-    "author": "Tom Lehrer",
-    "quote": "Life is like a sewer. What you get out of it depends on what you put into it."
+    author: "Dalai Lama",
+    quote:
+      "Genuine love should first be directed at oneself – if we do not love ourselves, how can we love others?",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "Notice that the stiffest tree is most easily cracked, while the bamboo or willow survives by bending with the wind."
+    author: "Tom Lehrer",
+    quote:
+      "Life is like a sewer. What you get out of it depends on what you put into it.",
   },
   {
-    "author": "Alfred Sheinwold",
-    "quote": "Learn all you can from the mistakes of others. You won't have time to make them all yourself."
+    author: "Bruce Lee",
+    quote:
+      "Notice that the stiffest tree is most easily cracked, while the bamboo or willow survives by bending with the wind.",
   },
   {
-    "author": "Sri Chinmoy",
-    "quote": "Judge nothing, you will be happy. Forgive everything, you will be happier. Love everything, you will be happiest."
+    author: "Alfred Sheinwold",
+    quote:
+      "Learn all you can from the mistakes of others. You won't have time to make them all yourself.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "People are so constituted that everybody would rather undertake what they see others do, whether they have an aptitude for it or not."
+    author: "Sri Chinmoy",
+    quote:
+      "Judge nothing, you will be happy. Forgive everything, you will be happier. Love everything, you will be happiest.",
   },
   {
-    "author": "James Freeman Clarke",
-    "quote": "We are either progressing or retrograding all the while. There is no such thing as remaining stationary in this life."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "People are so constituted that everybody would rather undertake what they see others do, whether they have an aptitude for it or not.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "The possession of knowledge does not kill the sense of wonder and mystery. There is always more mystery."
+    author: "James Freeman Clarke",
+    quote:
+      "We are either progressing or retrograding all the while. There is no such thing as remaining stationary in this life.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Everything that happens happens as it should, and if you observe carefully, you will find this to be so."
+    author: "Anais Nin",
+    quote:
+      "The possession of knowledge does not kill the sense of wonder and mystery. There is always more mystery.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "What we think determines what happens to us, so if we want to change our lives, we need to stretch our minds."
+    author: "Marcus Aurelius",
+    quote:
+      "Everything that happens happens as it should, and if you observe carefully, you will find this to be so.",
   },
   {
-    "author": "Buddha",
-    "quote": "In a controversy the instant we feel anger we have already ceased striving for the truth, and have begun striving for ourselves."
+    author: "Wayne Dyer",
+    quote:
+      "What we think determines what happens to us, so if we want to change our lives, we need to stretch our minds.",
   },
   {
-    "author": "Sydney Smith",
-    "quote": "It is the greatest of all mistakes to do nothing because you can only do little — do what you can."
+    author: "Buddha",
+    quote:
+      "In a controversy the instant we feel anger we have already ceased striving for the truth, and have begun striving for ourselves.",
   },
   {
-    "author": "Confucius",
-    "quote": "When you see a man of worth, think of how you may emulate him. When you see one who is unworthy, examine yourself."
+    author: "Sydney Smith",
+    quote:
+      "It is the greatest of all mistakes to do nothing because you can only do little — do what you can.",
   },
   {
-    "author": "Mary Kay Ash",
-    "quote": "Aerodynamically the bumblebee shouldn't be able to fly, but the bumblebee doesn't know that so it goes on flying anyway."
+    author: "Confucius",
+    quote:
+      "When you see a man of worth, think of how you may emulate him. When you see one who is unworthy, examine yourself.",
   },
   {
-    "author": "Lloyd Jones",
-    "quote": "Those who try to do something and fail are infinitely better than those who try nothing and succeed."
+    author: "Mary Kay Ash",
+    quote:
+      "Aerodynamically the bumblebee shouldn't be able to fly, but the bumblebee doesn't know that so it goes on flying anyway.",
   },
   {
-    "author": "Vista Kelly",
-    "quote": "Snowflakes are one of natures most fragile things, but just look what they can do when they stick together."
+    author: "Lloyd Jones",
+    quote:
+      "Those who try to do something and fail are infinitely better than those who try nothing and succeed.",
   },
   {
-    "author": "Ben Stein",
-    "quote": "The first step to getting the things you want out of life is this: decide what you want."
+    author: "Vista Kelly",
+    quote:
+      "Snowflakes are one of natures most fragile things, but just look what they can do when they stick together.",
   },
   {
-    "author": "",
-    "quote": "Why compare yourself with others? No one in the entire world can do a better job of being you than you."
+    author: "Ben Stein",
+    quote:
+      "The first step to getting the things you want out of life is this: decide what you want.",
   },
   {
-    "author": "Aldous Huxley",
-    "quote": "Experience is not what happens to a man. It is what a man does with what happens to him."
+    author: "",
+    quote:
+      "Why compare yourself with others? No one in the entire world can do a better job of being you than you.",
   },
   {
-    "author": "",
-    "quote": "A good teacher is like a candle — it consumes itself to light the way for others."
+    author: "Aldous Huxley",
+    quote:
+      "Experience is not what happens to a man. It is what a man does with what happens to him.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "The only thing to do with good advice is to pass it on. It is never of any use to oneself."
+    author: "",
+    quote:
+      "A good teacher is like a candle — it consumes itself to light the way for others.",
   },
   {
-    "author": "",
-    "quote": "Life is not measured by the breaths we take, but by the moments that take our breath."
+    author: "Oscar Wilde",
+    quote:
+      "The only thing to do with good advice is to pass it on. It is never of any use to oneself.",
   },
   {
-    "author": "Honore de Balzac",
-    "quote": "The smallest flower is a thought, a life answering to some feature of the Great Whole, of whom they have a persistent intuition."
+    author: "",
+    quote:
+      "Life is not measured by the breaths we take, but by the moments that take our breath.",
   },
   {
-    "author": "Jacob Braude",
-    "quote": "Consider how hard it is to change yourself and you'll understand what little chance you have in trying to change others."
+    author: "Honore de Balzac",
+    quote:
+      "The smallest flower is a thought, a life answering to some feature of the Great Whole, of whom they have a persistent intuition.",
   },
   {
-    "author": "Vince Lombardi",
-    "quote": "If you'll not settle for anything less than your best, you will be amazed at what you can accomplish in your lives."
+    author: "Jacob Braude",
+    quote:
+      "Consider how hard it is to change yourself and you'll understand what little chance you have in trying to change others.",
   },
   {
-    "author": "Oliver Holmes",
-    "quote": "What lies behind us and what lies before us are small matters compared to what lies within us."
+    author: "Vince Lombardi",
+    quote:
+      "If you'll not settle for anything less than your best, you will be amazed at what you can accomplish in your lives.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "With the realization of ones own potential and self-confidence in ones ability, one can build a better world."
+    author: "Oliver Holmes",
+    quote:
+      "What lies behind us and what lies before us are small matters compared to what lies within us.",
   },
   {
-    "author": "Nelson Mandela",
-    "quote": "There is nothing like returning to a place that remains unchanged to find the ways in which you yourself have altered."
+    author: "Dalai Lama",
+    quote:
+      "With the realization of ones own potential and self-confidence in ones ability, one can build a better world.",
   },
   {
-    "author": "Robert Anthony",
-    "quote": "Forget about all the reasons why something may not work. You only need to find one good reason why it will."
+    author: "Nelson Mandela",
+    quote:
+      "There is nothing like returning to a place that remains unchanged to find the ways in which you yourself have altered.",
   },
   {
-    "author": "Aristotle",
-    "quote": "It is the mark of an educated mind to be able to entertain a thought without accepting it."
+    author: "Robert Anthony",
+    quote:
+      "Forget about all the reasons why something may not work. You only need to find one good reason why it will.",
   },
   {
-    "author": "Washington Irving",
-    "quote": "Love is never lost. If not reciprocated, it will flow back and soften and purify the heart."
+    author: "Aristotle",
+    quote:
+      "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
   },
   {
-    "author": "Anne Frank",
-    "quote": "We all live with the objective of being happy; our lives are all different and yet the same."
+    author: "Washington Irving",
+    quote:
+      "Love is never lost. If not reciprocated, it will flow back and soften and purify the heart.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Many people think of prosperity that concerns money only to forget that true prosperity is of the mind."
+    author: "Anne Frank",
+    quote:
+      "We all live with the objective of being happy; our lives are all different and yet the same.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "To be beautiful means to be yourself. You don’t need to be accepted by others. You need to accept yourself."
+    author: "Byron Pulsifer",
+    quote:
+      "Many people think of prosperity that concerns money only to forget that true prosperity is of the mind.",
   },
   {
-    "author": "Buddha",
-    "quote": "Do not overrate what you have received, nor envy others. He who envies others does not obtain peace of mind."
+    author: "Thich Nhat Hanh",
+    quote:
+      "To be beautiful means to be yourself. You don’t need to be accepted by others. You need to accept yourself.",
   },
   {
-    "author": "Jessamyn West",
-    "quote": "It is very easy to forgive others their mistakes; it takes more grit to forgive them for having witnessed your own."
+    author: "Buddha",
+    quote:
+      "Do not overrate what you have received, nor envy others. He who envies others does not obtain peace of mind.",
   },
   {
-    "author": "Plato",
-    "quote": "Bodily exercise, when compulsory, does no harm to the body; but knowledge which is acquired under compulsion obtains no hold on the mind."
+    author: "Jessamyn West",
+    quote:
+      "It is very easy to forgive others their mistakes; it takes more grit to forgive them for having witnessed your own.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."
+    author: "Plato",
+    quote:
+      "Bodily exercise, when compulsory, does no harm to the body; but knowledge which is acquired under compulsion obtains no hold on the mind.",
   },
   {
-    "author": "Charlotte Gilman",
-    "quote": "Let us revere, let us worship, but erect and open-eyed, the highest, not the lowest; the future, not the past!"
+    author: "Bruce Lee",
+    quote:
+      "Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Every time you smile at someone, it is an action of love, a gift to that person, a beautiful thing."
+    author: "Charlotte Gilman",
+    quote:
+      "Let us revere, let us worship, but erect and open-eyed, the highest, not the lowest; the future, not the past!",
   },
   {
-    "author": "Margaret Runbeck",
-    "quote": "Silences make the real conversations between friends. Not the saying but the never needing to say is what counts."
+    author: "Mother Teresa",
+    quote:
+      "Every time you smile at someone, it is an action of love, a gift to that person, a beautiful thing.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "The key to transforming our hearts and minds is to have an understanding of how our thoughts and emotions work."
+    author: "Margaret Runbeck",
+    quote:
+      "Silences make the real conversations between friends. Not the saying but the never needing to say is what counts.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "If you must tell me your opinions, tell me what you believe in. I have plenty of douts of my own."
+    author: "Dalai Lama",
+    quote:
+      "The key to transforming our hearts and minds is to have an understanding of how our thoughts and emotions work.",
   },
   {
-    "author": "Ovid",
-    "quote": "Chance is always powerful. Let your hook be always cast; in the pool where you least expect it, there will be a fish."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "If you must tell me your opinions, tell me what you believe in. I have plenty of douts of my own.",
   },
   {
-    "author": "Og Mandino",
-    "quote": "I seek constantly to improve my manners and graces, for they are the sugar to which all are attracted."
+    author: "Ovid",
+    quote:
+      "Chance is always powerful. Let your hook be always cast; in the pool where you least expect it, there will be a fish.",
   },
   {
-    "author": "James Barrie",
-    "quote": "We never understand how little we need in this world until we know the loss of it."
+    author: "Og Mandino",
+    quote:
+      "I seek constantly to improve my manners and graces, for they are the sugar to which all are attracted.",
   },
   {
-    "author": "",
-    "quote": "The real measure of your wealth is how much youd be worth if you lost all your money."
+    author: "James Barrie",
+    quote:
+      "We never understand how little we need in this world until we know the loss of it.",
   },
   {
-    "author": "Buddha",
-    "quote": "To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."
+    author: "",
+    quote:
+      "The real measure of your wealth is how much youd be worth if you lost all your money.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "Take no thought of who is right or wrong or who is better than. Be not for or against."
+    author: "Buddha",
+    quote:
+      "To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear.",
   },
   {
-    "author": "Everett Dirksen",
-    "quote": "I am a man of fixed and unbending principles, the first of which is to be flexible at all times."
+    author: "Bruce Lee",
+    quote:
+      "Take no thought of who is right or wrong or who is better than. Be not for or against.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Today, give a stranger a smile without waiting for it may be the joy they need to have a great day."
+    author: "Everett Dirksen",
+    quote:
+      "I am a man of fixed and unbending principles, the first of which is to be flexible at all times.",
   },
   {
-    "author": "Henry Miller",
-    "quote": "The moment one gives close attention to anything, even a blade of grass, it becomes a mysterious, awesome, indescribably magnificent world in itself."
+    author: "Byron Pulsifer",
+    quote:
+      "Today, give a stranger a smile without waiting for it may be the joy they need to have a great day.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "At the center of your being you have the answer; you know who you are and you know what you want."
+    author: "Henry Miller",
+    quote:
+      "The moment one gives close attention to anything, even a blade of grass, it becomes a mysterious, awesome, indescribably magnificent world in itself.",
   },
   {
-    "author": "Niels Bohr",
-    "quote": "How wonderful that we have met with a paradox. Now we have some hope of making progress."
+    author: "Lao Tzu",
+    quote:
+      "At the center of your being you have the answer; you know who you are and you know what you want.",
   },
   {
-    "author": "Georg Lichtenberg",
-    "quote": "Everyone is a genius at least once a year. A real genius has his original ideas closer together."
+    author: "Niels Bohr",
+    quote:
+      "How wonderful that we have met with a paradox. Now we have some hope of making progress.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "Dreams pass into the reality of action. From the actions stems the dream again; and this interdependence produces the highest form of living."
+    author: "Georg Lichtenberg",
+    quote:
+      "Everyone is a genius at least once a year. A real genius has his original ideas closer together.",
   },
   {
-    "author": "Gloria Steinem",
-    "quote": "Without leaps of imagination, or dreaming, we lose the excitement of possibilities. Dreaming, after all, is a form of planning."
+    author: "Anais Nin",
+    quote:
+      "Dreams pass into the reality of action. From the actions stems the dream again; and this interdependence produces the highest form of living.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Sadness may be part of life but there is no need to let it dominate your entire life."
+    author: "Gloria Steinem",
+    quote:
+      "Without leaps of imagination, or dreaming, we lose the excitement of possibilities. Dreaming, after all, is a form of planning.",
   },
   {
-    "author": "Charles Schwab",
-    "quote": "Keeping a little ahead of conditions is one of the secrets of business, the trailer seldom goes far."
+    author: "Byron Pulsifer",
+    quote:
+      "Sadness may be part of life but there is no need to let it dominate your entire life.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Nature gave us one tongue and two ears so we could hear twice as much as we speak."
+    author: "Charles Schwab",
+    quote:
+      "Keeping a little ahead of conditions is one of the secrets of business, the trailer seldom goes far.",
   },
   {
-    "author": "Barbara Baron",
-    "quote": "Don't wait for your feelings to change to take the action. Take the action and your feelings will change."
+    author: "Epictetus",
+    quote:
+      "Nature gave us one tongue and two ears so we could hear twice as much as we speak.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "You are always free to change your mind and choose a different future, or a different past."
+    author: "Barbara Baron",
+    quote:
+      "Don't wait for your feelings to change to take the action. Take the action and your feelings will change.",
   },
   {
-    "author": "Lou Holtz",
-    "quote": "You were not born a winner, and you were not born a loser. You are what you make yourself be."
+    author: "Richard Bach",
+    quote:
+      "You are always free to change your mind and choose a different future, or a different past.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Cherish your visions and your dreams as they are the children of your soul, the blueprints of your ultimate achievements."
+    author: "Lou Holtz",
+    quote:
+      "You were not born a winner, and you were not born a loser. You are what you make yourself be.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Cherish your visions and your dreams as they are the children of your soul; the blueprints of your ultimate achievements."
+    author: "Napoleon Hill",
+    quote:
+      "Cherish your visions and your dreams as they are the children of your soul, the blueprints of your ultimate achievements.",
   },
   {
-    "author": "Robert Stevenson",
-    "quote": "To be what we are, and to become what we are capable of becoming, is the only end of life."
+    author: "Napoleon Hill",
+    quote:
+      "Cherish your visions and your dreams as they are the children of your soul; the blueprints of your ultimate achievements.",
   },
   {
-    "author": "Charles DeLint",
-    "quote": "The road leading to a goal does not separate you from the destination; it is essentially a part of it."
+    author: "Robert Stevenson",
+    quote:
+      "To be what we are, and to become what we are capable of becoming, is the only end of life.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "Take things as they are. Punch when you have to punch. Kick when you have to kick."
+    author: "Charles DeLint",
+    quote:
+      "The road leading to a goal does not separate you from the destination; it is essentially a part of it.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "I believe that a simple and unassuming manner of life is best for everyone, best both for the body and the mind."
+    author: "Bruce Lee",
+    quote:
+      "Take things as they are. Punch when you have to punch. Kick when you have to kick.",
   },
   {
-    "author": "",
-    "quote": "Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending."
+    author: "Albert Einstein",
+    quote:
+      "I believe that a simple and unassuming manner of life is best for everyone, best both for the body and the mind.",
   },
   {
-    "author": "Paavo Nurmi",
-    "quote": "Mind is everything: muscle, pieces of rubber. All that I am, I am because of my mind."
+    author: "",
+    quote:
+      "Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.",
   },
   {
-    "author": "Anne Frank",
-    "quote": "How wonderful it is that nobody need wait a single moment before starting to improve the world."
+    author: "Paavo Nurmi",
+    quote:
+      "Mind is everything: muscle, pieces of rubber. All that I am, I am because of my mind.",
   },
   {
-    "author": "",
-    "quote": "A friend is someone who understands your past, believes in your future, and accepts you just the way you are."
+    author: "Anne Frank",
+    quote:
+      "How wonderful it is that nobody need wait a single moment before starting to improve the world.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "It is one of the blessings of old friends that you can afford to be stupid with them."
+    author: "",
+    quote:
+      "A friend is someone who understands your past, believes in your future, and accepts you just the way you are.",
   },
   {
-    "author": "Tryon Edwards",
-    "quote": "He that never changes his opinions, never corrects his mistakes, and will never be wiser on the morrow than he is today."
+    author: "Ralph Emerson",
+    quote:
+      "It is one of the blessings of old friends that you can afford to be stupid with them.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
+    author: "Tryon Edwards",
+    quote:
+      "He that never changes his opinions, never corrects his mistakes, and will never be wiser on the morrow than he is today.",
   },
   {
-    "author": "E. M. Forster",
-    "quote": "One must be fond of people and trust them if one is not to make a mess of life."
+    author: "Abraham Lincoln",
+    quote:
+      "Give me six hours to chop down a tree and I will spend the first four sharpening the axe.",
   },
   {
-    "author": "David Seamans",
-    "quote": "We cannot change our memories, but we can change their meaning and the power they have over us."
+    author: "E. M. Forster",
+    quote:
+      "One must be fond of people and trust them if one is not to make a mess of life.",
   },
   {
-    "author": "Confucius",
-    "quote": "Being in humaneness is good. If we select other goodness and thus are far apart from humaneness, how can we be the wise?"
+    author: "David Seamans",
+    quote:
+      "We cannot change our memories, but we can change their meaning and the power they have over us.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "To give hope to someone occurs when you teach them how to use the tools to do it for themselves."
+    author: "Confucius",
+    quote:
+      "Being in humaneness is good. If we select other goodness and thus are far apart from humaneness, how can we be the wise?",
   },
   {
-    "author": "Lucille Ball",
-    "quote": "Id rather regret the things that I have done than the things that I have not done."
+    author: "Byron Pulsifer",
+    quote:
+      "To give hope to someone occurs when you teach them how to use the tools to do it for themselves.",
   },
   {
-    "author": "Eckhart Tolle",
-    "quote": "The past has no power to stop you from being present now. Only your grievance about the past can do that."
+    author: "Lucille Ball",
+    quote:
+      "Id rather regret the things that I have done than the things that I have not done.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "If the stars should appear but one night every thousand years how man would marvel and adore."
+    author: "Eckhart Tolle",
+    quote:
+      "The past has no power to stop you from being present now. Only your grievance about the past can do that.",
   },
   {
-    "author": "Laurence J. Peter",
-    "quote": "There are two kinds of failures: those who thought and never did, and those who did and never thought."
+    author: "Ralph Emerson",
+    quote:
+      "If the stars should appear but one night every thousand years how man would marvel and adore.",
   },
   {
-    "author": "Elizabeth Arden",
-    "quote": "I'm not interested in age. People who tell me their age are silly. You're as old as you feel."
+    author: "Laurence J. Peter",
+    quote:
+      "There are two kinds of failures: those who thought and never did, and those who did and never thought.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "I find hope in the darkest of days, and focus in the brightest. I do not judge the universe."
+    author: "Elizabeth Arden",
+    quote:
+      "I'm not interested in age. People who tell me their age are silly. You're as old as you feel.",
   },
   {
-    "author": "Confucius",
-    "quote": "When it is obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps."
+    author: "Dalai Lama",
+    quote:
+      "I find hope in the darkest of days, and focus in the brightest. I do not judge the universe.",
   },
   {
-    "author": "Nikola Tesla",
-    "quote": "Our virtues and our failings are inseparable, like force and matter. When they separate, man is no more."
+    author: "Confucius",
+    quote:
+      "When it is obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps.",
   },
   {
-    "author": "Leo Aikman",
-    "quote": "Blessed is the person who is too busy to worry in the daytime, and too sleepy to worry at night."
+    author: "Nikola Tesla",
+    quote:
+      "Our virtues and our failings are inseparable, like force and matter. When they separate, man is no more.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "He can who thinks he can, and he can't who thinks he can't. This is an inexorable, indisputable law."
+    author: "Leo Aikman",
+    quote:
+      "Blessed is the person who is too busy to worry in the daytime, and too sleepy to worry at night.",
   },
   {
-    "author": "Vernon Cooper",
-    "quote": "These days people seek knowledge, not wisdom. Knowledge is of the past, wisdom is of the future."
+    author: "Pablo Picasso",
+    quote:
+      "He can who thinks he can, and he can't who thinks he can't. This is an inexorable, indisputable law.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "One secret of success in life is for a man to be ready for his opportunity when it comes."
+    author: "Vernon Cooper",
+    quote:
+      "These days people seek knowledge, not wisdom. Knowledge is of the past, wisdom is of the future.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "People take different roads seeking fulfilment and happiness. Just because theyre not on your road doesn't mean they've gotten lost."
+    author: "Benjamin Disraeli",
+    quote:
+      "One secret of success in life is for a man to be ready for his opportunity when it comes.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "The shoe that fits one person pinches another; there is no recipe for living that suits all cases."
+    author: "Dalai Lama",
+    quote:
+      "People take different roads seeking fulfilment and happiness. Just because theyre not on your road doesn't mean they've gotten lost.",
   },
   {
-    "author": "Buddha",
-    "quote": "There are only two mistakes one can make along the road to truth; not going all the way, and not starting."
+    author: "Carl Jung",
+    quote:
+      "The shoe that fits one person pinches another; there is no recipe for living that suits all cases.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking."
+    author: "Buddha",
+    quote:
+      "There are only two mistakes one can make along the road to truth; not going all the way, and not starting.",
   },
   {
-    "author": "",
-    "quote": "Giving up doesn't always mean you are weak. Sometimes it means that you are strong enough to let go."
+    author: "Marcus Aurelius",
+    quote:
+      "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Treat people as if they were what they ought to be and you help them to become what they are capable of being."
+    author: "",
+    quote:
+      "Giving up doesn't always mean you are weak. Sometimes it means that you are strong enough to let go.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "The most precious gift we can offer anyone is our attention. When mindfulness embraces those we love, they will bloom like flowers."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "Treat people as if they were what they ought to be and you help them to become what they are capable of being.",
   },
   {
-    "author": "Jack Dixon",
-    "quote": "If you focus on results, you will never change. If you focus on change, you will get results."
+    author: "Thich Nhat Hanh",
+    quote:
+      "The most precious gift we can offer anyone is our attention. When mindfulness embraces those we love, they will bloom like flowers.",
   },
   {
-    "author": "G. K. Chesterton",
-    "quote": "I would maintain that thanks are the highest form of thought, and that gratitude is happiness doubled by wonder."
+    author: "Jack Dixon",
+    quote:
+      "If you focus on results, you will never change. If you focus on change, you will get results.",
   },
   {
-    "author": "Denis Waitley",
-    "quote": "There are two primary choices in life: to accept conditions as they exist, or accept the responsibility for changing them."
+    author: "G. K. Chesterton",
+    quote:
+      "I would maintain that thanks are the highest form of thought, and that gratitude is happiness doubled by wonder.",
   },
   {
-    "author": "Lao-Tzu",
-    "quote": "All difficult things have their origin in that which is easy, and great things in that which is small."
+    author: "Denis Waitley",
+    quote:
+      "There are two primary choices in life: to accept conditions as they exist, or accept the responsibility for changing them.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "You can be what you want to be. You have the power within and we will help you always."
+    author: "Lao-Tzu",
+    quote:
+      "All difficult things have their origin in that which is easy, and great things in that which is small.",
   },
   {
-    "author": "Johannes Gaertner",
-    "quote": "To speak gratitude is courteous and pleasant, to enact gratitude is generous and noble, but to live gratitude is to touch Heaven."
+    author: "Byron Pulsifer",
+    quote:
+      "You can be what you want to be. You have the power within and we will help you always.",
   },
   {
-    "author": "Doug Larson",
-    "quote": "Wisdom is the reward you get for a lifetime of listening when you'd have preferred to talk."
+    author: "Johannes Gaertner",
+    quote:
+      "To speak gratitude is courteous and pleasant, to enact gratitude is generous and noble, but to live gratitude is to touch Heaven.",
   },
   {
-    "author": "Charles Lamb",
-    "quote": "The greatest pleasure I know is to do a good action by stealth, and to have it found out by accident."
+    author: "Doug Larson",
+    quote:
+      "Wisdom is the reward you get for a lifetime of listening when you'd have preferred to talk.",
   },
   {
-    "author": "John Muir",
-    "quote": "When one tugs at a single thing in nature, he finds it attached to the rest of the world."
+    author: "Charles Lamb",
+    quote:
+      "The greatest pleasure I know is to do a good action by stealth, and to have it found out by accident.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "Courage is what it takes to stand up and speak; courage is also what it takes to sit down and listen."
+    author: "John Muir",
+    quote:
+      "When one tugs at a single thing in nature, he finds it attached to the rest of the world.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "The most beautiful things in the world cannot be seen or even touched. They must be felt with the heart."
+    author: "Winston Churchill",
+    quote:
+      "Courage is what it takes to stand up and speak; courage is also what it takes to sit down and listen.",
   },
   {
-    "author": "Buddha",
-    "quote": "To live a pure unselfish life, one must count nothing as ones own in the midst of abundance."
+    author: "Helen Keller",
+    quote:
+      "The most beautiful things in the world cannot be seen or even touched. They must be felt with the heart.",
   },
   {
-    "author": "Thomas Edison",
-    "quote": "Many of life's failures are people who did not realize how close they were to success when they gave up."
+    author: "Buddha",
+    quote:
+      "To live a pure unselfish life, one must count nothing as ones own in the midst of abundance.",
   },
   {
-    "author": "William Ward",
-    "quote": "When we seek to discover the best in others, we somehow bring out the best in ourselves."
+    author: "Thomas Edison",
+    quote:
+      "Many of life's failures are people who did not realize how close they were to success when they gave up.",
   },
   {
-    "author": "Michael Jordan",
-    "quote": "If you accept the expectations of others, especially negative ones, then you never will change the outcome."
+    author: "William Ward",
+    quote:
+      "When we seek to discover the best in others, we somehow bring out the best in ourselves.",
   },
   {
-    "author": "Oliver Holmes",
-    "quote": "A man may fulfil the object of his existence by asking a question he cannot answer, and attempting a task he cannot achieve."
+    author: "Michael Jordan",
+    quote:
+      "If you accept the expectations of others, especially negative ones, then you never will change the outcome.",
   },
   {
-    "author": "Confucius",
-    "quote": "I am not bothered by the fact that I am unknown. I am bothered when I do not know others."
+    author: "Oliver Holmes",
+    quote:
+      "A man may fulfil the object of his existence by asking a question he cannot answer, and attempting a task he cannot achieve.",
   },
   {
-    "author": "Epictetus",
-    "quote": "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has."
+    author: "Confucius",
+    quote:
+      "I am not bothered by the fact that I am unknown. I am bothered when I do not know others.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "I am always doing that which I cannot do, in order that I may learn how to do it."
+    author: "Epictetus",
+    quote:
+      "He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.",
   },
   {
-    "author": "Barack Obama",
-    "quote": "If you're walking down the right path and you're willing to keep walking, eventually you'll make progress."
+    author: "Pablo Picasso",
+    quote:
+      "I am always doing that which I cannot do, in order that I may learn how to do it.",
   },
   {
-    "author": "Ivy Baker Priest",
-    "quote": "The world is round and the place which may seem like the end may also be the beginning."
+    author: "Barack Obama",
+    quote:
+      "If you're walking down the right path and you're willing to keep walking, eventually you'll make progress.",
   },
   {
-    "author": "",
-    "quote": "Never miss an opportunity to make others happy, even if you have to leave them alone in order to do it."
+    author: "Ivy Baker Priest",
+    quote:
+      "The world is round and the place which may seem like the end may also be the beginning.",
   },
   {
-    "author": "Danielle Ingrum",
-    "quote": "Give it all you've got because you never know if there's going to be a next time."
+    author: "",
+    quote:
+      "Never miss an opportunity to make others happy, even if you have to leave them alone in order to do it.",
   },
   {
-    "author": "Old German proverb",
-    "quote": "You have to take it as it happens, but you should try to make it happen the way you want to take it."
+    author: "Danielle Ingrum",
+    quote:
+      "Give it all you've got because you never know if there's going to be a next time.",
   },
   {
-    "author": "Ralph Blum",
-    "quote": "Nothing is predestined: The obstacles of your past can become the gateways that lead to new beginnings."
+    author: "Old German proverb",
+    quote:
+      "You have to take it as it happens, but you should try to make it happen the way you want to take it.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "Im not in this world to live up to your expectations and you're not in this world to live up to mine."
+    author: "Ralph Blum",
+    quote:
+      "Nothing is predestined: The obstacles of your past can become the gateways that lead to new beginnings.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "Sometimes your joy is the source of your smile, but sometimes your smile can be the source of your joy."
+    author: "Bruce Lee",
+    quote:
+      "Im not in this world to live up to your expectations and you're not in this world to live up to mine.",
   },
   {
-    "author": "Walter Cronkite",
-    "quote": "I can't imagine a person becoming a success who doesn't give this game of life everything hes got."
+    author: "Thich Nhat Hanh",
+    quote:
+      "Sometimes your joy is the source of your smile, but sometimes your smile can be the source of your joy.",
   },
   {
-    "author": "Socrates",
-    "quote": "The greatest way to live with honor in this world is to be what we pretend to be."
+    author: "Walter Cronkite",
+    quote:
+      "I can't imagine a person becoming a success who doesn't give this game of life everything hes got.",
   },
   {
-    "author": "Seneca",
-    "quote": "The conditions of conquest are always easy. We have but to toil awhile, endure awhile, believe always, and never turn back."
+    author: "Socrates",
+    quote:
+      "The greatest way to live with honor in this world is to be what we pretend to be.",
   },
   {
-    "author": "Chalmers",
-    "quote": "The grand essentials of happiness are: something to do, something to love, and something to hope for."
+    author: "Seneca",
+    quote:
+      "The conditions of conquest are always easy. We have but to toil awhile, endure awhile, believe always, and never turn back.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "By living deeply in the present moment we can understand the past better and we can prepare for a better future."
+    author: "Chalmers",
+    quote:
+      "The grand essentials of happiness are: something to do, something to love, and something to hope for.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Do not be too timid and squeamish about your reactions. All life is an experiment. The more experiments you make the better."
+    author: "Thich Nhat Hanh",
+    quote:
+      "By living deeply in the present moment we can understand the past better and we can prepare for a better future.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Do not go where the path may lead, go instead where there is no path and leave a trail."
+    author: "Ralph Emerson",
+    quote:
+      "Do not be too timid and squeamish about your reactions. All life is an experiment. The more experiments you make the better.",
   },
   {
-    "author": "Robert Louis Stevenson",
-    "quote": "There is no duty we so underrate as the duty of being happy. By being happy we sow anonymous benefits upon the world."
+    author: "Ralph Emerson",
+    quote:
+      "Do not go where the path may lead, go instead where there is no path and leave a trail.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Edison failed 10,000 times before he made the electric light. Do not be discouraged if you fail a few times."
+    author: "Robert Louis Stevenson",
+    quote:
+      "There is no duty we so underrate as the duty of being happy. By being happy we sow anonymous benefits upon the world.",
   },
   {
-    "author": "",
-    "quote": "Yesterday is history. Tomorrow is a mystery. And today? Today is a gift that's why they call it the present."
+    author: "Napoleon Hill",
+    quote:
+      "Edison failed 10,000 times before he made the electric light. Do not be discouraged if you fail a few times.",
   },
   {
-    "author": "Henry Thoreau",
-    "quote": "The only way to tell the truth is to speak with kindness. Only the words of a loving man can be heard."
+    author: "",
+    quote:
+      "Yesterday is history. Tomorrow is a mystery. And today? Today is a gift that's why they call it the present.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "The greatest good you can do for another is not just to share your riches but to reveal to him his own."
+    author: "Henry Thoreau",
+    quote:
+      "The only way to tell the truth is to speak with kindness. Only the words of a loving man can be heard.",
   },
   {
-    "author": "Brian Tracy",
-    "quote": "You can only grow if you're willing to feel awkward and uncomfortable when you try something new."
+    author: "Benjamin Disraeli",
+    quote:
+      "The greatest good you can do for another is not just to share your riches but to reveal to him his own.",
   },
   {
-    "author": "Joan Didion",
-    "quote": "To free us from the expectations of others, to give us back to ourselves — there lies the great, singular power of self-respect."
+    author: "Brian Tracy",
+    quote:
+      "You can only grow if you're willing to feel awkward and uncomfortable when you try something new.",
   },
   {
-    "author": "Mabel Newcomber",
-    "quote": "It is more important to know where you are going than to get there quickly. Do not mistake activity for achievement."
+    author: "Joan Didion",
+    quote:
+      "To free us from the expectations of others, to give us back to ourselves — there lies the great, singular power of self-respect.",
   },
   {
-    "author": "",
-    "quote": "When you don't know what you believe, everything becomes an argument. Everything is debatable. But when you stand for something, decisions are obvious."
+    author: "Mabel Newcomber",
+    quote:
+      "It is more important to know where you are going than to get there quickly. Do not mistake activity for achievement.",
   },
   {
-    "author": "Robert Graves",
-    "quote": "Intuition is the supra-logic that cuts out all the routine processes of thought and leaps straight from the problem to the answer."
+    author: "",
+    quote:
+      "When you don't know what you believe, everything becomes an argument. Everything is debatable. But when you stand for something, decisions are obvious.",
   },
   {
-    "author": "Frank Wright",
-    "quote": "The thing always happens that you really believe in; and the belief in a thing makes it happen."
+    author: "Robert Graves",
+    quote:
+      "Intuition is the supra-logic that cuts out all the routine processes of thought and leaps straight from the problem to the answer.",
   },
   {
-    "author": "Francois de La Rochefoucauld",
-    "quote": "A true friend is the most precious of all possessions and the one we take the least thought about acquiring."
+    author: "Frank Wright",
+    quote:
+      "The thing always happens that you really believe in; and the belief in a thing makes it happen.",
   },
   {
-    "author": "Epictetus",
-    "quote": "There is only one way to happiness and that is to cease worrying about things which are beyond the power of our will."
+    author: "Francois de La Rochefoucauld",
+    quote:
+      "A true friend is the most precious of all possessions and the one we take the least thought about acquiring.",
   },
   {
-    "author": "Margaret Cousins",
-    "quote": "Appreciation can make a day, even change a life. Your willingness to put it into words is all that is necessary."
+    author: "Epictetus",
+    quote:
+      "There is only one way to happiness and that is to cease worrying about things which are beyond the power of our will.",
   },
   {
-    "author": "",
-    "quote": "Every sixty seconds you spend angry, upset or mad, is a full minute of happiness you’ll never get back."
+    author: "Margaret Cousins",
+    quote:
+      "Appreciation can make a day, even change a life. Your willingness to put it into words is all that is necessary.",
   },
   {
-    "author": "Thomas Carlyle",
-    "quote": "This world, after all our science and sciences, is still a miracle; wonderful, inscrutable, magical and more, to whosoever will think of it."
+    author: "",
+    quote:
+      "Every sixty seconds you spend angry, upset or mad, is a full minute of happiness you’ll never get back.",
   },
   {
-    "author": "Pearl Buck",
-    "quote": "Every great mistake has a halfway moment, a split second when it can be recalled and perhaps remedied."
+    author: "Thomas Carlyle",
+    quote:
+      "This world, after all our science and sciences, is still a miracle; wonderful, inscrutable, magical and more, to whosoever will think of it.",
   },
   {
-    "author": "Catherine Pulsifer",
-    "quote": "You can adopt the attitude there is nothing you can do, or you can see the challenge as your call to action."
+    author: "Pearl Buck",
+    quote:
+      "Every great mistake has a halfway moment, a split second when it can be recalled and perhaps remedied.",
   },
   {
-    "author": "Alfred Tennyson",
-    "quote": "The happiness of a man in this life does not consist in the absence but in the mastery of his passions."
+    author: "Catherine Pulsifer",
+    quote:
+      "You can adopt the attitude there is nothing you can do, or you can see the challenge as your call to action.",
   },
   {
-    "author": "Margaret Mead",
-    "quote": "Never doubt that a small group of thoughtful, committed people can change the world. Indeed. It is the only thing that ever has."
+    author: "Alfred Tennyson",
+    quote:
+      "The happiness of a man in this life does not consist in the absence but in the mastery of his passions.",
   },
   {
-    "author": "Ovid",
-    "quote": "Let your hook always be cast; in the pool where you least expect it, there will be a fish."
+    author: "Margaret Mead",
+    quote:
+      "Never doubt that a small group of thoughtful, committed people can change the world. Indeed. It is the only thing that ever has.",
   },
   {
-    "author": "Remez Sasson",
-    "quote": "You get peace of mind not by thinking about it or imagining it, but by quietening and relaxing the restless mind."
+    author: "Ovid",
+    quote:
+      "Let your hook always be cast; in the pool where you least expect it, there will be a fish.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Your friends will know you better in the first minute you meet than your acquaintances will know you in a thousand years."
+    author: "Remez Sasson",
+    quote:
+      "You get peace of mind not by thinking about it or imagining it, but by quietening and relaxing the restless mind.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "When you are content to be simply yourself and don't compare or compete, everybody will respect you."
+    author: "Richard Bach",
+    quote:
+      "Your friends will know you better in the first minute you meet than your acquaintances will know you in a thousand years.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "When you begin to touch your heart or let your heart be touched, you begin to discover that it's bottomless."
+    author: "Lao Tzu",
+    quote:
+      "When you are content to be simply yourself and don't compare or compete, everybody will respect you.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "If you love someone, set them free. If they come back they're yours; if they don't they never were."
+    author: "Pema Chodron",
+    quote:
+      "When you begin to touch your heart or let your heart be touched, you begin to discover that it's bottomless.",
   },
   {
-    "author": "David Jordan",
-    "quote": "Wisdom is knowing what to do next; Skill is knowing how ot do it, and Virtue is doing it."
+    author: "Richard Bach",
+    quote:
+      "If you love someone, set them free. If they come back they're yours; if they don't they never were.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Bad things are not the worst things that can happen to us. Nothing is the worst thing that can happen to us!"
+    author: "David Jordan",
+    quote:
+      "Wisdom is knowing what to do next; Skill is knowing how ot do it, and Virtue is doing it.",
   },
   {
-    "author": "Alan Watts",
-    "quote": "No valid plans for the future can be made by those who have no capacity for living now."
+    author: "Richard Bach",
+    quote:
+      "Bad things are not the worst things that can happen to us. Nothing is the worst thing that can happen to us!",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "The aim of life is self-development. To realize ones nature perfectly — that is what each of us is here for."
+    author: "Alan Watts",
+    quote:
+      "No valid plans for the future can be made by those who have no capacity for living now.",
   },
   {
-    "author": "Anatole France",
-    "quote": "To accomplish great things, we must not only act, but also dream; not only plan, but also believe."
+    author: "Oscar Wilde",
+    quote:
+      "The aim of life is self-development. To realize ones nature perfectly — that is what each of us is here for.",
   },
   {
-    "author": "Thomas Edison",
-    "quote": "The first requisite for success is the ability to apply your physical and mental energies to one problem incessantly without growing weary."
+    author: "Anatole France",
+    quote:
+      "To accomplish great things, we must not only act, but also dream; not only plan, but also believe.",
   },
   {
-    "author": "John Steinbeck",
-    "quote": "If we could learn to like ourselves, even a little, maybe our cruelties and angers might melt away."
+    author: "Thomas Edison",
+    quote:
+      "The first requisite for success is the ability to apply your physical and mental energies to one problem incessantly without growing weary.",
   },
   {
-    "author": "",
-    "quote": "If we are facing in the right direction, all we have to do is keep on walking."
+    author: "John Steinbeck",
+    quote:
+      "If we could learn to like ourselves, even a little, maybe our cruelties and angers might melt away.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "Remember always that you not only have the right to be an individual, you have an obligation to be one."
+    author: "",
+    quote:
+      "If we are facing in the right direction, all we have to do is keep on walking.",
   },
   {
-    "author": "Denis Waitley",
-    "quote": "There are two primary choices in life: to accept conditions as they exist, or accept responsibility for changing them."
+    author: "Eleanor Roosevelt",
+    quote:
+      "Remember always that you not only have the right to be an individual, you have an obligation to be one.",
   },
   {
-    "author": "Epictetus",
-    "quote": "If you seek truth you will not seek victory by dishonourable means, and if you find truth you will become invincible."
+    author: "Denis Waitley",
+    quote:
+      "There are two primary choices in life: to accept conditions as they exist, or accept responsibility for changing them.",
   },
   {
-    "author": "Eknath Easwaran",
-    "quote": "Through meditation and by giving full attention to one thing at a time, we can learn to direct attention where we choose."
+    author: "Epictetus",
+    quote:
+      "If you seek truth you will not seek victory by dishonourable means, and if you find truth you will become invincible.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "We could never learn to be brave and patient if there were only joy in the world."
+    author: "Eknath Easwaran",
+    quote:
+      "Through meditation and by giving full attention to one thing at a time, we can learn to direct attention where we choose.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "If it is not right do not do it; if it is not true do not say it."
+    author: "Helen Keller",
+    quote:
+      "We could never learn to be brave and patient if there were only joy in the world.",
   },
   {
-    "author": "Norman Schwarzkopf",
-    "quote": "The truth of the matter is that you always know the right thing to do. The hard part is doing it."
+    author: "Marcus Aurelius",
+    quote: "If it is not right do not do it; if it is not true do not say it.",
   },
   {
-    "author": "Julie Morgenstern",
-    "quote": "Some people thrive on huge, dramatic change. Some people prefer the slow and steady route. Do what's right for you."
+    author: "Norman Schwarzkopf",
+    quote:
+      "The truth of the matter is that you always know the right thing to do. The hard part is doing it.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "Man is equally incapable of seeing the nothingness from which he emerges and the infinity in which he is engulfed."
+    author: "Julie Morgenstern",
+    quote:
+      "Some people thrive on huge, dramatic change. Some people prefer the slow and steady route. Do what's right for you.",
   },
   {
-    "author": "Laura Teresa Marquez",
-    "quote": "Arrogance and rudeness are training wheels on the bicycle of life — for weak people who cannot keep their balance without them."
+    author: "Blaise Pascal",
+    quote:
+      "Man is equally incapable of seeing the nothingness from which he emerges and the infinity in which he is engulfed.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "If you are patient in one moment of anger, you will escape one hundred days of sorrow."
+    author: "Laura Teresa Marquez",
+    quote:
+      "Arrogance and rudeness are training wheels on the bicycle of life — for weak people who cannot keep their balance without them.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "When you have got an elephant by the hind legs and he is trying to run away, it's best to let him run."
+    author: "Chinese proverb",
+    quote:
+      "If you are patient in one moment of anger, you will escape one hundred days of sorrow.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Courage is not about taking risks unknowingly but putting your own being in front of challenges that others may not be able to."
+    author: "Abraham Lincoln",
+    quote:
+      "When you have got an elephant by the hind legs and he is trying to run away, it's best to let him run.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Can miles truly separate you from friends... If you want to be with someone you love, aren't you already there?"
+    author: "Byron Pulsifer",
+    quote:
+      "Courage is not about taking risks unknowingly but putting your own being in front of challenges that others may not be able to.",
   },
   {
-    "author": "Harry Kemp",
-    "quote": "The poor man is not he who is without a cent, but he who is without a dream."
+    author: "Richard Bach",
+    quote:
+      "Can miles truly separate you from friends... If you want to be with someone you love, aren't you already there?",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "The greatest good you can do for another is not just share your riches, but reveal to them their own."
+    author: "Harry Kemp",
+    quote:
+      "The poor man is not he who is without a cent, but he who is without a dream.",
   },
   {
-    "author": "Buddha",
-    "quote": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."
+    author: "Benjamin Disraeli",
+    quote:
+      "The greatest good you can do for another is not just share your riches, but reveal to them their own.",
   },
   {
-    "author": "",
-    "quote": "Peace of mind is not the absence of conflict from life, but the ability to cope with it."
+    author: "Buddha",
+    quote:
+      "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "Face your deficiencies and acknowledge them; but do not let them master you. Let them teach you patience, sweetness, insight."
+    author: "",
+    quote:
+      "Peace of mind is not the absence of conflict from life, but the ability to cope with it.",
   },
   {
-    "author": "John Kennedy",
-    "quote": "Change is the law of life. And those who look only to the past or present are certain to miss the future."
+    author: "Helen Keller",
+    quote:
+      "Face your deficiencies and acknowledge them; but do not let them master you. Let them teach you patience, sweetness, insight.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "You have power over your mind — not outside events. Realize this, and you will find strength."
+    author: "John Kennedy",
+    quote:
+      "Change is the law of life. And those who look only to the past or present are certain to miss the future.",
   },
   {
-    "author": "Louis Pasteur",
-    "quote": "Let me tell you the secret that has led me to my goal: my strength lies solely in my tenacity."
+    author: "Marcus Aurelius",
+    quote:
+      "You have power over your mind — not outside events. Realize this, and you will find strength.",
   },
   {
-    "author": "Buddha",
-    "quote": "We are what we think. All that we are arises with our thoughts. With our thoughts, we make the world."
+    author: "Louis Pasteur",
+    quote:
+      "Let me tell you the secret that has led me to my goal: my strength lies solely in my tenacity.",
   },
   {
-    "author": "Henry Longfellow",
-    "quote": "He that respects himself is safe from others; he wears a coat of mail that none can pierce."
+    author: "Buddha",
+    quote:
+      "We are what we think. All that we are arises with our thoughts. With our thoughts, we make the world.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "I cannot always control what goes on outside. But I can always control what goes on inside."
+    author: "Henry Longfellow",
+    quote:
+      "He that respects himself is safe from others; he wears a coat of mail that none can pierce.",
   },
   {
-    "author": "Daisaku Ikeda",
-    "quote": "What matters is the value we've created in our lives, the people we've made happy and how much we've grown as people."
+    author: "Wayne Dyer",
+    quote:
+      "I cannot always control what goes on outside. But I can always control what goes on inside.",
   },
   {
-    "author": "Epictetus",
-    "quote": "When you are offended at any man's fault, turn to yourself and study your own failings. Then you will forget your anger."
+    author: "Daisaku Ikeda",
+    quote:
+      "What matters is the value we've created in our lives, the people we've made happy and how much we've grown as people.",
   },
   {
-    "author": "Rumi",
-    "quote": "Everyone has been made for some particular work, and the desire for that work has been put in every heart."
+    author: "Epictetus",
+    quote:
+      "When you are offended at any man's fault, turn to yourself and study your own failings. Then you will forget your anger.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "Take time to deliberate, but when the time for action has arrived, stop thinking and go in."
+    author: "Rumi",
+    quote:
+      "Everyone has been made for some particular work, and the desire for that work has been put in every heart.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "With realization of ones own potential and self-confidence in ones ability, one can build a better world."
+    author: "Napoleon Bonaparte",
+    quote:
+      "Take time to deliberate, but when the time for action has arrived, stop thinking and go in.",
   },
   {
-    "author": "Franklin Roosevelt",
-    "quote": "Happiness is not in the mere possession of money; it lies in the joy of achievement, in the thrill of creative effort."
+    author: "Dalai Lama",
+    quote:
+      "With realization of ones own potential and self-confidence in ones ability, one can build a better world.",
   },
   {
-    "author": "Pearl Buck",
-    "quote": "You cannot make yourself feel something you do not feel, but you can make yourself do right in spite of your feelings."
+    author: "Franklin Roosevelt",
+    quote:
+      "Happiness is not in the mere possession of money; it lies in the joy of achievement, in the thrill of creative effort.",
   },
   {
-    "author": "Mary Kay Ash",
-    "quote": "Those who are blessed with the most talent don't necessarily outperform everyone else. It's the people with follow-through who excel."
+    author: "Pearl Buck",
+    quote:
+      "You cannot make yourself feel something you do not feel, but you can make yourself do right in spite of your feelings.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Try not to become a man of success, but rather try to become a man of value."
+    author: "Mary Kay Ash",
+    quote:
+      "Those who are blessed with the most talent don't necessarily outperform everyone else. It's the people with follow-through who excel.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "All difficult things have their origin in that which is easy, and great things in that which is small."
+    author: "Albert Einstein",
+    quote:
+      "Try not to become a man of success, but rather try to become a man of value.",
   },
   {
-    "author": "Sophocles",
-    "quote": "Men of perverse opinion do not know the excellence of what is in their hands, till some one dash it from them."
+    author: "Lao Tzu",
+    quote:
+      "All difficult things have their origin in that which is easy, and great things in that which is small.",
   },
   {
-    "author": "Rene Descartes",
-    "quote": "It is not enough to have a good mind; the main thing is to use it well."
+    author: "Sophocles",
+    quote:
+      "Men of perverse opinion do not know the excellence of what is in their hands, till some one dash it from them.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Responsibility is not inherited, it is a choice that everyone needs to make at some point in their life."
+    author: "Rene Descartes",
+    quote:
+      "It is not enough to have a good mind; the main thing is to use it well.",
   },
   {
-    "author": "Amelia Earhart",
-    "quote": "Never do things others can do and will do, if there are things others cannot do or will not do."
+    author: "Byron Pulsifer",
+    quote:
+      "Responsibility is not inherited, it is a choice that everyone needs to make at some point in their life.",
   },
   {
-    "author": "Jimmy Dean",
-    "quote": "I can't change the direction of the wind, but I can adjust my sails to always reach my destination."
+    author: "Amelia Earhart",
+    quote:
+      "Never do things others can do and will do, if there are things others cannot do or will not do.",
   },
   {
-    "author": "George Allen",
-    "quote": "People of mediocre ability sometimes achieve outstanding success because they don't know when to quit. Most men succeed because they are determined to."
+    author: "Jimmy Dean",
+    quote:
+      "I can't change the direction of the wind, but I can adjust my sails to always reach my destination.",
   },
   {
-    "author": "Joseph Roux",
-    "quote": "A fine quotation is a diamond on the finger of a man of wit, and a pebble in the hand of a fool."
+    author: "George Allen",
+    quote:
+      "People of mediocre ability sometimes achieve outstanding success because they don't know when to quit. Most men succeed because they are determined to.",
   },
   {
-    "author": "Bernice Reagon",
-    "quote": "Life's challenges are not supposed to paralyse you, they're supposed to help you discover who you are."
+    author: "Joseph Roux",
+    quote:
+      "A fine quotation is a diamond on the finger of a man of wit, and a pebble in the hand of a fool.",
   },
   {
-    "author": "Socrates",
-    "quote": "The greatest way to live with honour in this world is to be what we pretend to be."
+    author: "Bernice Reagon",
+    quote:
+      "Life's challenges are not supposed to paralyse you, they're supposed to help you discover who you are.",
   },
   {
-    "author": "Henri Bergson",
-    "quote": "To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly."
+    author: "Socrates",
+    quote:
+      "The greatest way to live with honour in this world is to be what we pretend to be.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Try not to become a man of success but rather try to become a man of value."
+    author: "Henri Bergson",
+    quote:
+      "To exist is to change, to change is to mature, to mature is to go on creating oneself endlessly.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "You can't create in a vacuum. Life gives you the material and dreams can propel new beginnings."
+    author: "Albert Einstein",
+    quote:
+      "Try not to become a man of success but rather try to become a man of value.",
   },
   {
-    "author": "Buddha",
-    "quote": "Your work is to discover your world and then with all your heart give yourself to it."
+    author: "Byron Pulsifer",
+    quote:
+      "You can't create in a vacuum. Life gives you the material and dreams can propel new beginnings.",
   },
   {
-    "author": "Daisaku Ikeda",
-    "quote": "The person who lives life fully, glowing with life's energy, is the person who lives a successful life."
+    author: "Buddha",
+    quote:
+      "Your work is to discover your world and then with all your heart give yourself to it.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Don't turn away from possible futures before you're certain you don't have anything to learn from them."
+    author: "Daisaku Ikeda",
+    quote:
+      "The person who lives life fully, glowing with life's energy, is the person who lives a successful life.",
   },
   {
-    "author": "David Brinkley",
-    "quote": "A successful person is one who can lay a firm foundation with the bricks that others throw at him or her."
+    author: "Richard Bach",
+    quote:
+      "Don't turn away from possible futures before you're certain you don't have anything to learn from them.",
   },
   {
-    "author": "Buddha",
-    "quote": "All that we are is the result of what we have thought. The mind is everything. What we think we become."
+    author: "David Brinkley",
+    quote:
+      "A successful person is one who can lay a firm foundation with the bricks that others throw at him or her.",
   },
   {
-    "author": "Henri-Frederic Amiel",
-    "quote": "Work while you have the light. You are responsible for the talent that has been entrusted to you."
+    author: "Buddha",
+    quote:
+      "All that we are is the result of what we have thought. The mind is everything. What we think we become.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "How far that little candle throws its beams! So shines a good deed in a naughty world."
+    author: "Henri-Frederic Amiel",
+    quote:
+      "Work while you have the light. You are responsible for the talent that has been entrusted to you.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit."
+    author: "William Shakespeare",
+    quote:
+      "How far that little candle throws its beams! So shines a good deed in a naughty world.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "It is in your moments of decision that your destiny is shaped."
+    author: "Napoleon Hill",
+    quote:
+      "Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit.",
   },
   {
-    "author": "",
-    "quote": "An obstacle may be either a stepping stone or a stumbling block."
+    author: "Tony Robbins",
+    quote: "It is in your moments of decision that your destiny is shaped.",
   },
   {
-    "author": "Pierre Auguste Renoir",
-    "quote": "The pain passes, but the beauty remains."
+    author: "",
+    quote: "An obstacle may be either a stepping stone or a stumbling block.",
   },
   {
-    "author": "Bob Newhart",
-    "quote": "All I can say about life is, Oh God, enjoy it!"
+    author: "Pierre Auguste Renoir",
+    quote: "The pain passes, but the beauty remains.",
   },
   {
-    "author": "Rita Mae Brown",
-    "quote": "Creativity comes from trust. Trust your instincts. And never hope more than you work."
+    author: "Bob Newhart",
+    quote: "All I can say about life is, Oh God, enjoy it!",
   },
   {
-    "author": "Lululemon",
-    "quote": "Your outlook on life is a direct reflection on how much you like yourself."
+    author: "Rita Mae Brown",
+    quote:
+      "Creativity comes from trust. Trust your instincts. And never hope more than you work.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures."
+    author: "Lululemon",
+    quote:
+      "Your outlook on life is a direct reflection on how much you like yourself.",
   },
   {
-    "author": "Kin Hubbard",
-    "quote": "You won't skid if you stay in a rut."
+    author: "Lao Tzu",
+    quote:
+      "I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.",
   },
   {
-    "author": "Mary Morrissey",
-    "quote": "You block your dream when you allow your fear to grow bigger than your faith."
+    author: "Kin Hubbard",
+    quote: "You won't skid if you stay in a rut.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Happiness depends upon ourselves."
+    author: "Mary Morrissey",
+    quote:
+      "You block your dream when you allow your fear to grow bigger than your faith.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "Wherever a man turns he can find someone who needs him."
+    author: "Aristotle",
+    quote: "Happiness depends upon ourselves.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "If one is lucky, a solitary fantasy can totally transform one million realities."
+    author: "Albert Schweitzer",
+    quote: "Wherever a man turns he can find someone who needs him.",
   },
   {
-    "author": "Leo Buscaglia",
-    "quote": "Never idealize others. They will never live up to your expectations."
+    author: "Maya Angelou",
+    quote:
+      "If one is lucky, a solitary fantasy can totally transform one million realities.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "When you realize there is nothing lacking, the whole world belongs to you."
+    author: "Leo Buscaglia",
+    quote:
+      "Never idealize others. They will never live up to your expectations.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Happiness is not something ready made. It comes from your own actions."
+    author: "Lao Tzu",
+    quote:
+      "When you realize there is nothing lacking, the whole world belongs to you.",
   },
   {
-    "author": "Peter Elbow",
-    "quote": "Meaning is not what you start with but what you end up with."
+    author: "Dalai Lama",
+    quote:
+      "Happiness is not something ready made. It comes from your own actions.",
   },
   {
-    "author": "Anne Frank",
-    "quote": "No one has ever become poor by giving."
+    author: "Peter Elbow",
+    quote: "Meaning is not what you start with but what you end up with.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Be faithful in small things because it is in them that your strength lies."
+    author: "Anne Frank",
+    quote: "No one has ever become poor by giving.",
   },
   {
-    "author": "Heraclitus",
-    "quote": "All is flux; nothing stays still."
+    author: "Mother Teresa",
+    quote:
+      "Be faithful in small things because it is in them that your strength lies.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "He who is fixed to a star does not change his mind."
+    author: "Heraclitus",
+    quote: "All is flux; nothing stays still.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "He who lives in harmony with himself lives in harmony with the universe."
+    author: "Leonardo da Vinci",
+    quote: "He who is fixed to a star does not change his mind.",
   },
   {
-    "author": "Sophocles",
-    "quote": "Ignorant men don't know what good they hold in their hands until they've flung it away."
+    author: "Marcus Aurelius",
+    quote:
+      "He who lives in harmony with himself lives in harmony with the universe.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "When the solution is simple, God is answering."
+    author: "Sophocles",
+    quote:
+      "Ignorant men don't know what good they hold in their hands until they've flung it away.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "All achievements, all earned riches, have their beginning in an idea."
+    author: "Albert Einstein",
+    quote: "When the solution is simple, God is answering.",
   },
   {
-    "author": "Publilius Syrus",
-    "quote": "Do not turn back when you are just at the goal."
+    author: "Napoleon Hill",
+    quote:
+      "All achievements, all earned riches, have their beginning in an idea.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "You can't trust without risk but neither can you live in a cocoon."
+    author: "Publilius Syrus",
+    quote: "Do not turn back when you are just at the goal.",
   },
   {
-    "author": "Rudolf Arnheim",
-    "quote": "All perceiving is also thinking, all reasoning is also intuition, all observation is also invention."
+    author: "Byron Pulsifer",
+    quote: "You can't trust without risk but neither can you live in a cocoon.",
   },
   {
-    "author": "Channing",
-    "quote": "Error is discipline through which we advance."
+    author: "Rudolf Arnheim",
+    quote:
+      "All perceiving is also thinking, all reasoning is also intuition, all observation is also invention.",
   },
   {
-    "author": "Pearl Buck",
-    "quote": "The truth is always exciting. Speak it, then. Life is dull without it."
+    author: "Channing",
+    quote: "Error is discipline through which we advance.",
   },
   {
-    "author": "Confucius",
-    "quote": "The superior man is modest in his speech, but exceeds in his actions."
+    author: "Pearl Buck",
+    quote:
+      "The truth is always exciting. Speak it, then. Life is dull without it.",
   },
   {
-    "author": "Voltaire",
-    "quote": "The longer we dwell on our misfortunes, the greater is their power to harm us."
+    author: "Confucius",
+    quote:
+      "The superior man is modest in his speech, but exceeds in his actions.",
   },
   {
-    "author": "Cervantes",
-    "quote": "Those who will play with cats must expect to be scratched."
+    author: "Voltaire",
+    quote:
+      "The longer we dwell on our misfortunes, the greater is their power to harm us.",
   },
   {
-    "author": "",
-    "quote": "I've never seen a smiling face that was not beautiful."
+    author: "Cervantes",
+    quote: "Those who will play with cats must expect to be scratched.",
   },
   {
-    "author": "Aristotle",
-    "quote": "In all things of nature there is something of the marvellous."
+    author: "",
+    quote: "I've never seen a smiling face that was not beautiful.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "The universe is transformation; our life is what our thoughts make it."
+    author: "Aristotle",
+    quote: "In all things of nature there is something of the marvellous.",
   },
   {
-    "author": "Samuel Johnson",
-    "quote": "Memory is the mother of all wisdom."
+    author: "Marcus Aurelius",
+    quote:
+      "The universe is transformation; our life is what our thoughts make it.",
   },
   {
-    "author": "Confucius",
-    "quote": "Silence is the true friend that never betrays."
+    author: "Samuel Johnson",
+    quote: "Memory is the mother of all wisdom.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "You might well remember that nothing can bring you success but yourself."
+    author: "Confucius",
+    quote: "Silence is the true friend that never betrays.",
   },
   {
-    "author": "Benjamin Franklin",
-    "quote": "Watch the little things; a small leak will sink a great ship."
+    author: "Napoleon Hill",
+    quote:
+      "You might well remember that nothing can bring you success but yourself.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "God has given you one face, and you make yourself another."
+    author: "Benjamin Franklin",
+    quote: "Watch the little things; a small leak will sink a great ship.",
   },
   {
-    "author": "Confucius",
-    "quote": "To be wronged is nothing unless you continue to remember it."
+    author: "William Shakespeare",
+    quote: "God has given you one face, and you make yourself another.",
   },
   {
-    "author": "",
-    "quote": "Kindness is the greatest wisdom."
+    author: "Confucius",
+    quote: "To be wronged is nothing unless you continue to remember it.",
   },
   {
-    "author": "Tehyi Hsieh",
-    "quote": "Action will remove the doubts that theory cannot solve."
+    author: "",
+    quote: "Kindness is the greatest wisdom.",
   },
   {
-    "author": "",
-    "quote": "Don't miss all the beautiful colors of the rainbow looking for that pot of gold."
+    author: "Tehyi Hsieh",
+    quote: "Action will remove the doubts that theory cannot solve.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Your big opportunity may be right where you are now."
+    author: "",
+    quote:
+      "Don't miss all the beautiful colors of the rainbow looking for that pot of gold.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "People who say it cannot be done should not interrupt those who are doing it."
+    author: "Napoleon Hill",
+    quote: "Your big opportunity may be right where you are now.",
   },
   {
-    "author": "Japanese proverb",
-    "quote": "The day you decide to do it is your lucky day."
+    author: "Chinese proverb",
+    quote:
+      "People who say it cannot be done should not interrupt those who are doing it.",
   },
   {
-    "author": "Cicero",
-    "quote": "We must not say every mistake is a foolish one."
+    author: "Japanese proverb",
+    quote: "The day you decide to do it is your lucky day.",
   },
   {
-    "author": "George Patton",
-    "quote": "Accept challenges, so that you may feel the exhilaration of victory."
+    author: "Cicero",
+    quote: "We must not say every mistake is a foolish one.",
   },
   {
-    "author": "Anatole France",
-    "quote": "It is better to understand a little than to misunderstand a lot."
+    author: "George Patton",
+    quote:
+      "Accept challenges, so that you may feel the exhilaration of victory.",
   },
   {
-    "author": "",
-    "quote": "You don't drown by falling in water. You drown by staying there."
+    author: "Anatole France",
+    quote: "It is better to understand a little than to misunderstand a lot.",
   },
   {
-    "author": "",
-    "quote": "Never be afraid to try, remember... Amateurs built the ark, Professionals built the Titanic."
+    author: "",
+    quote: "You don't drown by falling in water. You drown by staying there.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Correction does much, but encouragement does more."
+    author: "",
+    quote:
+      "Never be afraid to try, remember... Amateurs built the ark, Professionals built the Titanic.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Know, first, who you are, and then adorn yourself accordingly."
+    author: "Johann Wolfgang von Goethe",
+    quote: "Correction does much, but encouragement does more.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "The biggest adventure you can ever take is to live the life of your dreams."
+    author: "Epictetus",
+    quote: "Know, first, who you are, and then adorn yourself accordingly.",
   },
   {
-    "author": "Charles Swindoll",
-    "quote": "Life is 10% what happens to you and 90% how you react to it."
+    author: "Oprah Winfrey",
+    quote:
+      "The biggest adventure you can ever take is to live the life of your dreams.",
   },
   {
-    "author": "Cynthia Ozick",
-    "quote": "To want to be what one can be is purpose in life."
+    author: "Charles Swindoll",
+    quote: "Life is 10% what happens to you and 90% how you react to it.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Remember that sometimes not getting what you want is a wonderful stroke of luck."
+    author: "Cynthia Ozick",
+    quote: "To want to be what one can be is purpose in life.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "History will be kind to me for I intend to write it."
+    author: "Dalai Lama",
+    quote:
+      "Remember that sometimes not getting what you want is a wonderful stroke of luck.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Our lives are a sum total of the choices we have made."
+    author: "Winston Churchill",
+    quote: "History will be kind to me for I intend to write it.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "Time stays long enough for anyone who will use it."
+    author: "Wayne Dyer",
+    quote: "Our lives are a sum total of the choices we have made.",
   },
   {
-    "author": "",
-    "quote": "Never tell me the sky’s the limit when there are footprints on the moon."
+    author: "Leonardo da Vinci",
+    quote: "Time stays long enough for anyone who will use it.",
   },
   {
-    "author": "Denis Waitley",
-    "quote": "You must welcome change as the rule but not as your ruler."
+    author: "",
+    quote:
+      "Never tell me the sky’s the limit when there are footprints on the moon.",
   },
   {
-    "author": "Jim Rohn",
-    "quote": "Give whatever you are doing and whoever you are with the gift of your attention."
+    author: "Denis Waitley",
+    quote: "You must welcome change as the rule but not as your ruler.",
   },
   {
-    "author": "Lena Horne",
-    "quote": "Always be smarter than the people who hire you."
+    author: "Jim Rohn",
+    quote:
+      "Give whatever you are doing and whoever you are with the gift of your attention.",
   },
   {
-    "author": "Tom Peters",
-    "quote": "Formula for success: under promise and over deliver."
+    author: "Lena Horne",
+    quote: "Always be smarter than the people who hire you.",
   },
   {
-    "author": "Henri Bergson",
-    "quote": "The eye sees only what the mind is prepared to comprehend."
+    author: "Tom Peters",
+    quote: "Formula for success: under promise and over deliver.",
   },
   {
-    "author": "Lee Mildon",
-    "quote": "People seldom notice old clothes if you wear a big smile."
+    author: "Henri Bergson",
+    quote: "The eye sees only what the mind is prepared to comprehend.",
   },
   {
-    "author": "Shakti Gawain",
-    "quote": "The more light you allow within you, the brighter the world you live in will be."
+    author: "Lee Mildon",
+    quote: "People seldom notice old clothes if you wear a big smile.",
   },
   {
-    "author": "Walter Anderson",
-    "quote": "Nothing diminishes anxiety faster than action."
+    author: "Shakti Gawain",
+    quote:
+      "The more light you allow within you, the brighter the world you live in will be.",
   },
   {
-    "author": "André Gide",
-    "quote": "Man cannot discover new oceans unless he has the courage to lose sight of the shore."
+    author: "Walter Anderson",
+    quote: "Nothing diminishes anxiety faster than action.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Everything that irritates us about others can lead us to an understanding about ourselves."
+    author: "André Gide",
+    quote:
+      "Man cannot discover new oceans unless he has the courage to lose sight of the shore.",
   },
   {
-    "author": "Sun Tzu",
-    "quote": "Can you imagine what I would do if I could do all I can?"
+    author: "Carl Jung",
+    quote:
+      "Everything that irritates us about others can lead us to an understanding about ourselves.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "Ignorance never settle a question."
+    author: "Sun Tzu",
+    quote: "Can you imagine what I would do if I could do all I can?",
   },
   {
-    "author": "Paul Cezanne",
-    "quote": "The awareness of our own strength makes us modest."
+    author: "Benjamin Disraeli",
+    quote: "Ignorance never settle a question.",
   },
   {
-    "author": "Confucius",
-    "quote": "They must often change, who would be constant in happiness or wisdom."
+    author: "Paul Cezanne",
+    quote: "The awareness of our own strength makes us modest.",
   },
   {
-    "author": "Tom Krause",
-    "quote": "There are no failures. Just experiences and your reactions to them."
+    author: "Confucius",
+    quote:
+      "They must often change, who would be constant in happiness or wisdom.",
   },
   {
-    "author": "Frank Tyger",
-    "quote": "Your future depends on many things, but mostly on you."
+    author: "Tom Krause",
+    quote:
+      "There are no failures. Just experiences and your reactions to them.",
   },
   {
-    "author": "Dorothy Thompson",
-    "quote": "Fear grows in darkness; if you think theres a bogeyman around, turn on the light."
+    author: "Frank Tyger",
+    quote: "Your future depends on many things, but mostly on you.",
   },
   {
-    "author": "Shunryu Suzuki",
-    "quote": "The most important point is to accept yourself and stand on your two feet."
+    author: "Dorothy Thompson",
+    quote:
+      "Fear grows in darkness; if you think theres a bogeyman around, turn on the light.",
   },
   {
-    "author": "Tomas Eliot",
-    "quote": "Do not expect the world to look bright, if you habitually wear gray-brown glasses."
+    author: "Shunryu Suzuki",
+    quote:
+      "The most important point is to accept yourself and stand on your two feet.",
   },
   {
-    "author": "Donald Trump",
-    "quote": "As long as your going to be thinking anyway, think big."
+    author: "Tomas Eliot",
+    quote:
+      "Do not expect the world to look bright, if you habitually wear gray-brown glasses.",
   },
   {
-    "author": "John Dewey",
-    "quote": "Without some goals and some efforts to reach it, no man can live."
+    author: "Donald Trump",
+    quote: "As long as your going to be thinking anyway, think big.",
   },
   {
-    "author": "Richard Braunstein",
-    "quote": "He who obtains has little. He who scatters has much."
+    author: "John Dewey",
+    quote: "Without some goals and some efforts to reach it, no man can live.",
   },
   {
-    "author": "George Orwell",
-    "quote": "Myths which are believed in tend to become true."
+    author: "Richard Braunstein",
+    quote: "He who obtains has little. He who scatters has much.",
   },
   {
-    "author": "Buddha",
-    "quote": "The foot feels the foot when it feels the ground."
+    author: "George Orwell",
+    quote: "Myths which are believed in tend to become true.",
   },
   {
-    "author": "John Petit-Senn",
-    "quote": "Not what we have but what we enjoy constitutes our abundance."
+    author: "Buddha",
+    quote: "The foot feels the foot when it feels the ground.",
   },
   {
-    "author": "George Eliot",
-    "quote": "It is never too late to be what you might have been."
+    author: "John Petit-Senn",
+    quote: "Not what we have but what we enjoy constitutes our abundance.",
   },
   {
-    "author": "Mary Wollstonecraft",
-    "quote": "The beginning is always today."
+    author: "George Eliot",
+    quote: "It is never too late to be what you might have been.",
   },
   {
-    "author": "Sheldon Kopp",
-    "quote": "In the long run we get no more than we have been willing to risk giving."
+    author: "Mary Wollstonecraft",
+    quote: "The beginning is always today.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Self-trust is the first secret of success."
+    author: "Sheldon Kopp",
+    quote:
+      "In the long run we get no more than we have been willing to risk giving.",
   },
   {
-    "author": "Satchel Paige",
-    "quote": "Don't look back. Something might be gaining on you."
+    author: "Ralph Emerson",
+    quote: "Self-trust is the first secret of success.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Look back over the past, with its changing empires that rose and fell, and you can foresee the future, too."
+    author: "Satchel Paige",
+    quote: "Don't look back. Something might be gaining on you.",
   },
   {
-    "author": "George Bernard Shaw",
-    "quote": "A life spent making mistakes is not only more honourable, but more useful than a life spent doing nothing."
+    author: "Marcus Aurelius",
+    quote:
+      "Look back over the past, with its changing empires that rose and fell, and you can foresee the future, too.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Men are disturbed not by things, but by the view which they take of them."
+    author: "George Bernard Shaw",
+    quote:
+      "A life spent making mistakes is not only more honourable, but more useful than a life spent doing nothing.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "Imagination disposes of everything; it creates beauty, justice, and happiness, which are everything in this world."
+    author: "Epictetus",
+    quote:
+      "Men are disturbed not by things, but by the view which they take of them.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "Happiness is a Swedish sunset — it is there for all, but most of us look the other way and lose it."
+    author: "Blaise Pascal",
+    quote:
+      "Imagination disposes of everything; it creates beauty, justice, and happiness, which are everything in this world.",
   },
   {
-    "author": "",
-    "quote": "A smile is a light in the window of your face to show your heart is at home."
+    author: "Mark Twain",
+    quote:
+      "Happiness is a Swedish sunset — it is there for all, but most of us look the other way and lose it.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Look forward to spring as a time when you can start to see what nature has to offer once again."
+    author: "",
+    quote:
+      "A smile is a light in the window of your face to show your heart is at home.",
   },
   {
-    "author": "Billy Wilder",
-    "quote": "Trust your own instinct. Your mistakes might as well be your own, instead of someone elses."
+    author: "Byron Pulsifer",
+    quote:
+      "Look forward to spring as a time when you can start to see what nature has to offer once again.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "The least movement is of importance to all nature. The entire ocean is affected by a pebble."
+    author: "Billy Wilder",
+    quote:
+      "Trust your own instinct. Your mistakes might as well be your own, instead of someone elses.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "I am always doing that which I can not do, in order that I may learn how to do it."
+    author: "Blaise Pascal",
+    quote:
+      "The least movement is of importance to all nature. The entire ocean is affected by a pebble.",
   },
   {
-    "author": "Niccolo Machiavelli",
-    "quote": "Men in general judge more from appearances than from reality. All men have eyes, but few have the gift of penetration."
+    author: "Pablo Picasso",
+    quote:
+      "I am always doing that which I can not do, in order that I may learn how to do it.",
   },
   {
-    "author": "",
-    "quote": "You may only be someone in the world, but to someone else, you may be the world."
+    author: "Niccolo Machiavelli",
+    quote:
+      "Men in general judge more from appearances than from reality. All men have eyes, but few have the gift of penetration.",
   },
   {
-    "author": "Henry Ward Beecher",
-    "quote": "Every artist dips his brush in his own soul, and paints his own nature into his pictures."
+    author: "",
+    quote:
+      "You may only be someone in the world, but to someone else, you may be the world.",
   },
   {
-    "author": "James Faust",
-    "quote": "If you take each challenge one step at a time, with faith in every footstep, your strength and understanding will increase."
+    author: "Henry Ward Beecher",
+    quote:
+      "Every artist dips his brush in his own soul, and paints his own nature into his pictures.",
   },
   {
-    "author": "Denis Waitley",
-    "quote": "Happiness cannot be travelled to, owned, earned, worn or consumed. Happiness is the spiritual experience of living every minute with love, grace and gratitude."
+    author: "James Faust",
+    quote:
+      "If you take each challenge one step at a time, with faith in every footstep, your strength and understanding will increase.",
   },
   {
-    "author": "Hasidic saying",
-    "quote": "Everyone should carefully observe which way his heart draws him, and then choose that way with all his strength."
+    author: "Denis Waitley",
+    quote:
+      "Happiness cannot be travelled to, owned, earned, worn or consumed. Happiness is the spiritual experience of living every minute with love, grace and gratitude.",
   },
   {
-    "author": "Joseph Campbell",
-    "quote": "When we quit thinking primarily about ourselves and our own self-preservation, we undergo a truly heroic transformation of consciousness."
+    author: "Hasidic saying",
+    quote:
+      "Everyone should carefully observe which way his heart draws him, and then choose that way with all his strength.",
   },
   {
-    "author": "Dhammapada",
-    "quote": "Do not give your attention to what others do or fail to do; give it to what you do or fail to do."
+    author: "Joseph Campbell",
+    quote:
+      "When we quit thinking primarily about ourselves and our own self-preservation, we undergo a truly heroic transformation of consciousness.",
   },
   {
-    "author": "Peter Drucker",
-    "quote": "Follow effective action with quiet reflection. From the quiet reflection will come even more effective action."
+    author: "Dhammapada",
+    quote:
+      "Do not give your attention to what others do or fail to do; give it to what you do or fail to do.",
   },
   {
-    "author": "Bernice Reagon",
-    "quote": "Life's challenges are not supposed to paralyze you, they're supposed to help you discover who you are."
+    author: "Peter Drucker",
+    quote:
+      "Follow effective action with quiet reflection. From the quiet reflection will come even more effective action.",
   },
   {
-    "author": "Fannie Hamer",
-    "quote": "There is one thing you have got to learn about our movement. Three people are better than no people."
+    author: "Bernice Reagon",
+    quote:
+      "Life's challenges are not supposed to paralyze you, they're supposed to help you discover who you are.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Happiness is a perfume you cannot pour on others without getting a few drops on yourself."
+    author: "Fannie Hamer",
+    quote:
+      "There is one thing you have got to learn about our movement. Three people are better than no people.",
   },
   {
-    "author": "Byron Roberts",
-    "quote": "It is not the mistake that has the most power, instead, it is learning from the mistake to advance your own attributes."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "Happiness is a perfume you cannot pour on others without getting a few drops on yourself.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "The amount of happiness that you have depends on the amount of freedom you have in your heart."
+    author: "Byron Roberts",
+    quote:
+      "It is not the mistake that has the most power, instead, it is learning from the mistake to advance your own attributes.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Your vision will become clear only when you look into your heart. Who looks outside, dreams. Who looks inside, awakens."
+    author: "Thich Nhat Hanh",
+    quote:
+      "The amount of happiness that you have depends on the amount of freedom you have in your heart.",
   },
   {
-    "author": "Babatunde Olatunji",
-    "quote": "Yesterday is history. Tomorrow is a mystery. And today? Today is a gift. That is why we call it the present."
+    author: "Carl Jung",
+    quote:
+      "Your vision will become clear only when you look into your heart. Who looks outside, dreams. Who looks inside, awakens.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "The way we communicate with others and with ourselves ultimately determines the quality of our lives."
+    author: "Babatunde Olatunji",
+    quote:
+      "Yesterday is history. Tomorrow is a mystery. And today? Today is a gift. That is why we call it the present.",
   },
   {
-    "author": "Tony Blair",
-    "quote": "Sometimes it is better to lose and do the right thing than to win and do the wrong thing."
+    author: "Tony Robbins",
+    quote:
+      "The way we communicate with others and with ourselves ultimately determines the quality of our lives.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Let us always meet each other with smile, for the smile is the beginning of love."
+    author: "Tony Blair",
+    quote:
+      "Sometimes it is better to lose and do the right thing than to win and do the wrong thing.",
   },
   {
-    "author": "",
-    "quote": "A bend in the road is not the end of the road...unless you fail to make the turn."
+    author: "Mother Teresa",
+    quote:
+      "Let us always meet each other with smile, for the smile is the beginning of love.",
   },
   {
-    "author": "Aristotle",
-    "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit."
+    author: "",
+    quote:
+      "A bend in the road is not the end of the road...unless you fail to make the turn.",
   },
   {
-    "author": "Ray Bradbury",
-    "quote": "Living at risk is jumping off the cliff and building your wings on the way down."
+    author: "Aristotle",
+    quote:
+      "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
   },
   {
-    "author": "Albert Camus",
-    "quote": "In the depth of winter, I finally learned that there was within me an invincible summer."
+    author: "Ray Bradbury",
+    quote:
+      "Living at risk is jumping off the cliff and building your wings on the way down.",
   },
   {
-    "author": "Madame de Stael",
-    "quote": "Wit lies in recognizing the resemblance among things which differ and the difference between things which are alike."
+    author: "Albert Camus",
+    quote:
+      "In the depth of winter, I finally learned that there was within me an invincible summer.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "A failure is a man who has blundered but is not capable of cashing in on the experience."
+    author: "Madame de Stael",
+    quote:
+      "Wit lies in recognizing the resemblance among things which differ and the difference between things which are alike.",
   },
   {
-    "author": "Herbert Swope",
-    "quote": "I cannot give you the formula for success, but I can give you the formula for failure: which is: Try to please everybody."
+    author: "Elbert Hubbard",
+    quote:
+      "A failure is a man who has blundered but is not capable of cashing in on the experience.",
   },
   {
-    "author": "",
-    "quote": "One who asks a question is a fool for five minutes; one who does not ask a question remains a fool forever."
+    author: "Herbert Swope",
+    quote:
+      "I cannot give you the formula for success, but I can give you the formula for failure: which is: Try to please everybody.",
   },
   {
-    "author": "Laozi",
-    "quote": "The power of intuitive understanding will protect you from harm until the end of your days."
+    author: "",
+    quote:
+      "One who asks a question is a fool for five minutes; one who does not ask a question remains a fool forever.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "The best thing about the future is that it only comes one day at a time."
+    author: "Laozi",
+    quote:
+      "The power of intuitive understanding will protect you from harm until the end of your days.",
   },
   {
-    "author": "Epictetus",
-    "quote": "We have two ears and one mouth so that we can listen twice as much as we speak."
+    author: "Abraham Lincoln",
+    quote:
+      "The best thing about the future is that it only comes one day at a time.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Fear of failure is one attitude that will keep you at the same point in your life."
+    author: "Epictetus",
+    quote:
+      "We have two ears and one mouth so that we can listen twice as much as we speak.",
   },
   {
-    "author": "Ed Cunningham",
-    "quote": "Friends are those rare people who ask how we are and then wait to hear the answer."
+    author: "Byron Pulsifer",
+    quote:
+      "Fear of failure is one attitude that will keep you at the same point in your life.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "If we learn to open our hearts, anyone, including the people who drive us crazy, can be our teacher."
+    author: "Ed Cunningham",
+    quote:
+      "Friends are those rare people who ask how we are and then wait to hear the answer.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "People grow through experience if they meet life honestly and courageously. This is how character is built."
+    author: "Pema Chodron",
+    quote:
+      "If we learn to open our hearts, anyone, including the people who drive us crazy, can be our teacher.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "A hero is no braver than an ordinary man, but he is braver five minutes longer."
+    author: "Eleanor Roosevelt",
+    quote:
+      "People grow through experience if they meet life honestly and courageously. This is how character is built.",
   },
   {
-    "author": "Angela Schwindt",
-    "quote": "While we try to teach our children all about life, our children teach us what life is all about."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "A hero is no braver than an ordinary man, but he is braver five minutes longer.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "When you dance, your purpose is not to get to a certain place on the floor. It's to enjoy each step along the way."
+    author: "Angela Schwindt",
+    quote:
+      "While we try to teach our children all about life, our children teach us what life is all about.",
   },
   {
-    "author": "Orison Marden",
-    "quote": "The Creator has not given you a longing to do that which you have no ability to do."
+    author: "Wayne Dyer",
+    quote:
+      "When you dance, your purpose is not to get to a certain place on the floor. It's to enjoy each step along the way.",
   },
   {
-    "author": "Sam Levenson",
-    "quote": "It's so simple to be wise. Just think of something stupid to say and then don't say it."
+    author: "Orison Marden",
+    quote:
+      "The Creator has not given you a longing to do that which you have no ability to do.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."
+    author: "Sam Levenson",
+    quote:
+      "It's so simple to be wise. Just think of something stupid to say and then don't say it.",
   },
   {
-    "author": "Doris Mortman",
-    "quote": "Until you make peace with who you are, you will never be content with what you have."
+    author: "Dalai Lama",
+    quote:
+      "Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health.",
   },
   {
-    "author": "Buddha",
-    "quote": "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path."
+    author: "Doris Mortman",
+    quote:
+      "Until you make peace with who you are, you will never be content with what you have.",
   },
   {
-    "author": "Henry Miller",
-    "quote": "The moment one gives close attention to anything, it becomes a mysterious, awesome, indescribably magnificent world in itself."
+    author: "Buddha",
+    quote:
+      "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path.",
   },
   {
-    "author": "Mohandas Gandhi",
-    "quote": "Happiness is when what you think, what you say, and what you do are in harmony."
+    author: "Henry Miller",
+    quote:
+      "The moment one gives close attention to anything, it becomes a mysterious, awesome, indescribably magnificent world in itself.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "The greatest antidote to insecurity and the sense of fear is compassion — it brings one back to the basis of one's inner strength"
+    author: "Mohandas Gandhi",
+    quote:
+      "Happiness is when what you think, what you say, and what you do are in harmony.",
   },
   {
-    "author": "",
-    "quote": "Courage is the discovery that you may not win, and trying when you know you can lose."
+    author: "Dalai Lama",
+    quote:
+      "The greatest antidote to insecurity and the sense of fear is compassion — it brings one back to the basis of one's inner strength",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "To be thoughtful and kind only takes a few seconds compared to the timeless hurt caused by one rude gesture."
+    author: "",
+    quote:
+      "Courage is the discovery that you may not win, and trying when you know you can lose.",
   },
   {
-    "author": "Mortimer Adler",
-    "quote": "The purpose of learning is growth, and our minds, unlike our bodies, can continue growing as we continue to live."
+    author: "Byron Pulsifer",
+    quote:
+      "To be thoughtful and kind only takes a few seconds compared to the timeless hurt caused by one rude gesture.",
   },
   {
-    "author": "Buddha",
-    "quote": "When you realize how perfect everything is you will tilt your head back and laugh at the sky."
+    author: "Mortimer Adler",
+    quote:
+      "The purpose of learning is growth, and our minds, unlike our bodies, can continue growing as we continue to live.",
   },
   {
-    "author": "Mary Kay Ash",
-    "quote": "For every failure, there's an alternative course of action. You just have to find it. When you come to a roadblock, take a detour."
+    author: "Buddha",
+    quote:
+      "When you realize how perfect everything is you will tilt your head back and laugh at the sky.",
   },
   {
-    "author": "Walter Linn",
-    "quote": "It is surprising what a man can do when he has to, and how little most men will do when they don't have to."
+    author: "Mary Kay Ash",
+    quote:
+      "For every failure, there's an alternative course of action. You just have to find it. When you come to a roadblock, take a detour.",
   },
   {
-    "author": "Tenzin Gyatso",
-    "quote": "To be aware of a single shortcoming in oneself is more useful than to be aware of a thousand in someone else."
+    author: "Walter Linn",
+    quote:
+      "It is surprising what a man can do when he has to, and how little most men will do when they don't have to.",
   },
   {
-    "author": "Edmund Burke",
-    "quote": "Nobody made a greater mistake than he who did nothing because he could do only a little."
+    author: "Tenzin Gyatso",
+    quote:
+      "To be aware of a single shortcoming in oneself is more useful than to be aware of a thousand in someone else.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "Constant kindness can accomplish much. As the sun makes ice melt, kindness causes misunderstanding, mistrust, and hostility to evaporate."
+    author: "Edmund Burke",
+    quote:
+      "Nobody made a greater mistake than he who did nothing because he could do only a little.",
   },
   {
-    "author": "Rene Descartes",
-    "quote": "The greatest minds are capable of the greatest vices as well as of the greatest virtues."
+    author: "Albert Schweitzer",
+    quote:
+      "Constant kindness can accomplish much. As the sun makes ice melt, kindness causes misunderstanding, mistrust, and hostility to evaporate.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "A man should look for what is, and not for what he thinks should be."
+    author: "Rene Descartes",
+    quote:
+      "The greatest minds are capable of the greatest vices as well as of the greatest virtues.",
   },
   {
-    "author": "William Channing",
-    "quote": "Difficulties are meant to rouse, not discourage. The human spirit is to grow strong by conflict."
+    author: "Albert Einstein",
+    quote:
+      "A man should look for what is, and not for what he thinks should be.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "If you have no respect for your own values how can you be worthy of respect from others."
+    author: "William Channing",
+    quote:
+      "Difficulties are meant to rouse, not discourage. The human spirit is to grow strong by conflict.",
   },
   {
-    "author": "Alphonse Karr",
-    "quote": "Some people are always grumbling because roses have thorns; I am thankful that thorns have roses."
+    author: "Byron Pulsifer",
+    quote:
+      "If you have no respect for your own values how can you be worthy of respect from others.",
   },
   {
-    "author": "W. H. Auden",
-    "quote": "To choose what is difficult all ones days, as if it were easy, that is faith."
+    author: "Alphonse Karr",
+    quote:
+      "Some people are always grumbling because roses have thorns; I am thankful that thorns have roses.",
   },
   {
-    "author": "Lou Holtz",
-    "quote": "Ability is what you're capable of doing. Motivation determines what you do.Attitude determines how well you do it."
+    author: "W. H. Auden",
+    quote:
+      "To choose what is difficult all ones days, as if it were easy, that is faith.",
   },
   {
-    "author": "Thomas Carlyle",
-    "quote": "Do not be embarrassed by your mistakes. Nothing can teach us better than our understanding of them. This is one of the best ways of self-education."
+    author: "Lou Holtz",
+    quote:
+      "Ability is what you're capable of doing. Motivation determines what you do.Attitude determines how well you do it.",
   },
   {
-    "author": "Buddha",
-    "quote": "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared."
+    author: "Thomas Carlyle",
+    quote:
+      "Do not be embarrassed by your mistakes. Nothing can teach us better than our understanding of them. This is one of the best ways of self-education.",
   },
   {
-    "author": "Michel de Montaigne",
-    "quote": "I care not so much what I am to others as what I am to myself. I will be rich by myself, and not by borrowing."
+    author: "Buddha",
+    quote:
+      "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.",
   },
   {
-    "author": "Margaret Laurence",
-    "quote": "Know that although in the eternal scheme of things you are small, you are also unique and irreplaceable, as are all your fellow humans everywhere in the world."
+    author: "Michel de Montaigne",
+    quote:
+      "I care not so much what I am to others as what I am to myself. I will be rich by myself, and not by borrowing.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "To do all that one is able to do, is to be a man; to do all that one would like to do, is to be a god."
+    author: "Margaret Laurence",
+    quote:
+      "Know that although in the eternal scheme of things you are small, you are also unique and irreplaceable, as are all your fellow humans everywhere in the world.",
   },
   {
-    "author": "Ajahn Chah",
-    "quote": "If you let go a little, you will have a little peace. If you let go a lot, you will have a lot of peace."
+    author: "Napoleon Bonaparte",
+    quote:
+      "To do all that one is able to do, is to be a man; to do all that one would like to do, is to be a god.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "There is no need for temples, no need for complicated philosophies. My brain and my heart are my temples; my philosophy is kindness."
+    author: "Ajahn Chah",
+    quote:
+      "If you let go a little, you will have a little peace. If you let go a lot, you will have a lot of peace.",
   },
   {
-    "author": "Vincent Lombardi",
-    "quote": "The spirit, the will to win, and the will to excel, are the things that endure. These qualities are so much more important than the events that occur."
+    author: "Dalai Lama",
+    quote:
+      "There is no need for temples, no need for complicated philosophies. My brain and my heart are my temples; my philosophy is kindness.",
   },
   {
-    "author": "Jean-Paul Sartre",
-    "quote": "Man is not sum of what he has already, but rather the sum of what he does not yet have, of what he could have."
+    author: "Vincent Lombardi",
+    quote:
+      "The spirit, the will to win, and the will to excel, are the things that endure. These qualities are so much more important than the events that occur.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Don't believe what your eyes are telling you. All they show is limitation. Look with your understanding, find out what you already know, and you'll see the way to fly."
+    author: "Jean-Paul Sartre",
+    quote:
+      "Man is not sum of what he has already, but rather the sum of what he does not yet have, of what he could have.",
   },
   {
-    "author": "Elisabeth Kubler-Ross",
-    "quote": "I believe that we are solely responsible for our choices, and we have to accept the consequences of every deed, word, and thought throughout our lifetime."
+    author: "Richard Bach",
+    quote:
+      "Don't believe what your eyes are telling you. All they show is limitation. Look with your understanding, find out what you already know, and you'll see the way to fly.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Wishes can be your best avenue of getting what you want when you turn wishes into action. Action moves your wish to the forefront from thought to reality."
+    author: "Elisabeth Kubler-Ross",
+    quote:
+      "I believe that we are solely responsible for our choices, and we have to accept the consequences of every deed, word, and thought throughout our lifetime.",
   },
   {
-    "author": "Kahlil Gibran",
-    "quote": "To understand the heart and mind of a person, look not at what he has already achieved, but at what he aspires to do."
+    author: "Byron Pulsifer",
+    quote:
+      "Wishes can be your best avenue of getting what you want when you turn wishes into action. Action moves your wish to the forefront from thought to reality.",
   },
   {
-    "author": "Bernard Shaw",
-    "quote": "I am of the opinion that my life belongs to the community, and as long as I live it is my privilege to do for it whatever I can."
+    author: "Kahlil Gibran",
+    quote:
+      "To understand the heart and mind of a person, look not at what he has already achieved, but at what he aspires to do.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Imagination is more important than knowledge. For while knowledge defines all we currently know and understand, imagination points to all we might yet discover and create."
+    author: "Bernard Shaw",
+    quote:
+      "I am of the opinion that my life belongs to the community, and as long as I live it is my privilege to do for it whatever I can.",
   },
   {
-    "author": "Confucius",
-    "quote": "When you see a good person, think of becoming like him. When you see someone not so good, reflect on your own weak points."
+    author: "Albert Einstein",
+    quote:
+      "Imagination is more important than knowledge. For while knowledge defines all we currently know and understand, imagination points to all we might yet discover and create.",
   },
   {
-    "author": "Anne Lindbergh",
-    "quote": "If one is estranged from oneself, then one is estranged from others too. If one is out of touch with oneself, then one cannot touch others."
+    author: "Confucius",
+    quote:
+      "When you see a good person, think of becoming like him. When you see someone not so good, reflect on your own weak points.",
   },
   {
-    "author": "Dale Carnegie",
-    "quote": "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all."
+    author: "Anne Lindbergh",
+    quote:
+      "If one is estranged from oneself, then one is estranged from others too. If one is out of touch with oneself, then one cannot touch others.",
   },
   {
-    "author": "John Lennon",
-    "quote": "You may say Im a dreamer, but Im not the only one, I hope someday you will join us, and the world will live as one."
+    author: "Dale Carnegie",
+    quote:
+      "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.",
   },
   {
-    "author": "Nathaniel Hawthorne",
-    "quote": "Happiness is as a butterfly which, when pursued, is always beyond our grasp, but which if you will sit down quietly, may alight upon you."
+    author: "John Lennon",
+    quote:
+      "You may say Im a dreamer, but Im not the only one, I hope someday you will join us, and the world will live as one.",
   },
   {
-    "author": "Buddha",
-    "quote": "He who experiences the unity of life sees his own Self in all beings, and all beings in his own Self, and looks on everything with an impartial eye."
+    author: "Nathaniel Hawthorne",
+    quote:
+      "Happiness is as a butterfly which, when pursued, is always beyond our grasp, but which if you will sit down quietly, may alight upon you.",
   },
   {
-    "author": "Buddha",
-    "quote": "In the sky, there is no distinction of east and west; people create distinctions out of their own minds and then believe them to be true."
+    author: "Buddha",
+    quote:
+      "He who experiences the unity of life sees his own Self in all beings, and all beings in his own Self, and looks on everything with an impartial eye.",
   },
   {
-    "author": "Caroline Myss",
-    "quote": "You cannot change anything in your life with intention alone, which can become a watered-down, occasional hope that you'll get to tomorrow. Intention without action is useless."
+    author: "Buddha",
+    quote:
+      "In the sky, there is no distinction of east and west; people create distinctions out of their own minds and then believe them to be true.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "Before you can inspire with emotion, you must be swamped with it yourself. Before you can move their tears, your own must flow. To convince them, you must yourself believe."
+    author: "Caroline Myss",
+    quote:
+      "You cannot change anything in your life with intention alone, which can become a watered-down, occasional hope that you'll get to tomorrow. Intention without action is useless.",
   },
   {
-    "author": "William James",
-    "quote": "The greatest discovery of our generation is that human beings can alter their lives by altering their attitudes of mind. As you think, so shall you be."
+    author: "Winston Churchill",
+    quote:
+      "Before you can inspire with emotion, you must be swamped with it yourself. Before you can move their tears, your own must flow. To convince them, you must yourself believe.",
   },
   {
-    "author": "Henry David Thoreau",
-    "quote": "If one advances confidently in the direction of his dream, and endeavours to live the life which he had imagines, he will meet with a success unexpected in common hours."
+    author: "William James",
+    quote:
+      "The greatest discovery of our generation is that human beings can alter their lives by altering their attitudes of mind. As you think, so shall you be.",
   },
   {
-    "author": "Pearl Buck",
-    "quote": "The secret of joy in work is contained in one word — excellence. To know how to do something well is to enjoy it."
+    author: "Henry David Thoreau",
+    quote:
+      "If one advances confidently in the direction of his dream, and endeavours to live the life which he had imagines, he will meet with a success unexpected in common hours.",
   },
   {
-    "author": "Confucius",
-    "quote": "When you meet someone better than yourself, turn your thoughts to becoming his equal. When you meet someone not as good as you are, look within and examine your own self."
+    author: "Pearl Buck",
+    quote:
+      "The secret of joy in work is contained in one word — excellence. To know how to do something well is to enjoy it.",
   },
   {
-    "author": "Uta Hagen",
-    "quote": "We must overcome the notion that we must be regular. It robs you of the chance to be extraordinary and leads you to the mediocre."
+    author: "Confucius",
+    quote:
+      "When you meet someone better than yourself, turn your thoughts to becoming his equal. When you meet someone not as good as you are, look within and examine your own self.",
   },
   {
-    "author": "Orison Marden",
-    "quote": "Most of our obstacles would melt away if, instead of cowering before them, we should make up our minds to walk boldly through them."
+    author: "Uta Hagen",
+    quote:
+      "We must overcome the notion that we must be regular. It robs you of the chance to be extraordinary and leads you to the mediocre.",
   },
   {
-    "author": "Victor Frankl",
-    "quote": "Everything can be taken from a man but ... the last of the human freedoms — to choose ones attitude in any given set of circumstances, to choose ones own way."
+    author: "Orison Marden",
+    quote:
+      "Most of our obstacles would melt away if, instead of cowering before them, we should make up our minds to walk boldly through them.",
   },
   {
-    "author": "Edward de Bono",
-    "quote": "It is better to have enough ideas for some of them to be wrong, than to be always right by having no ideas at all."
+    author: "Victor Frankl",
+    quote:
+      "Everything can be taken from a man but ... the last of the human freedoms — to choose ones attitude in any given set of circumstances, to choose ones own way.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Character is like a tree and reputation like a shadow. The shadow is what we think of it; the tree is the real thing."
+    author: "Edward de Bono",
+    quote:
+      "It is better to have enough ideas for some of them to be wrong, than to be always right by having no ideas at all.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "By letting it go it all gets done. The world is won by those who let it go. But when you try and try. The world is beyond the winning."
+    author: "Abraham Lincoln",
+    quote:
+      "Character is like a tree and reputation like a shadow. The shadow is what we think of it; the tree is the real thing.",
   },
   {
-    "author": "Amy Tan",
-    "quote": "I am like a falling star who has finally found her place next to another in a lovely constellation, where we will sparkle in the heavens forever."
+    author: "Lao Tzu",
+    quote:
+      "By letting it go it all gets done. The world is won by those who let it go. But when you try and try. The world is beyond the winning.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Not every difficult and dangerous thing is suitable for training, but only that which is conducive to success in achieving the object of our effort."
+    author: "Amy Tan",
+    quote:
+      "I am like a falling star who has finally found her place next to another in a lovely constellation, where we will sparkle in the heavens forever.",
   },
   {
-    "author": "Stephen Covey",
-    "quote": "We are not animals. We are not a product of what has happened to us in our past. We have the power of choice."
+    author: "Epictetus",
+    quote:
+      "Not every difficult and dangerous thing is suitable for training, but only that which is conducive to success in achieving the object of our effort.",
   },
   {
-    "author": "Paul Graham",
-    "quote": "The most dangerous way to lose time is not to spend it having fun, but to spend it doing fake work. When you spend time having fun, you know you're being self-indulgent."
+    author: "Stephen Covey",
+    quote:
+      "We are not animals. We are not a product of what has happened to us in our past. We have the power of choice.",
   },
   {
-    "author": "Buddha",
-    "quote": "Thousands of candles can be lit from a single, and the life of the candle will not be shortened. Happiness never decreases by being shared."
+    author: "Paul Graham",
+    quote:
+      "The most dangerous way to lose time is not to spend it having fun, but to spend it doing fake work. When you spend time having fun, you know you're being self-indulgent.",
   },
   {
-    "author": "Chuck Norris",
-    "quote": "A lot of times people look at the negative side of what they feel they can't do. I always look on the positive side of what I can do."
+    author: "Buddha",
+    quote:
+      "Thousands of candles can be lit from a single, and the life of the candle will not be shortened. Happiness never decreases by being shared.",
   },
   {
-    "author": "Amiel",
-    "quote": "Without passion man is a mere latent force and possibility, like the flint which awaits the shock of the iron before it can give forth its spark."
+    author: "Chuck Norris",
+    quote:
+      "A lot of times people look at the negative side of what they feel they can't do. I always look on the positive side of what I can do.",
   },
   {
-    "author": "Amy Bloom",
-    "quote": "Love at first sight is easy to understand; its when two people have been looking at each other for a lifetime that it becomes a miracle."
+    author: "Amiel",
+    quote:
+      "Without passion man is a mere latent force and possibility, like the flint which awaits the shock of the iron before it can give forth its spark.",
   },
   {
-    "author": "Keshavan Nair",
-    "quote": "With courage you will dare to take risks, have the strength to be compassionate, and the wisdom to be humble. Courage is the foundation of integrity."
+    author: "Amy Bloom",
+    quote:
+      "Love at first sight is easy to understand; its when two people have been looking at each other for a lifetime that it becomes a miracle.",
   },
   {
-    "author": "Margaret Smith",
-    "quote": "The right way is not always the popular and easy way. Standing for right when it is unpopular is a true test of moral character."
+    author: "Keshavan Nair",
+    quote:
+      "With courage you will dare to take risks, have the strength to be compassionate, and the wisdom to be humble. Courage is the foundation of integrity.",
   },
   {
-    "author": "Frederick Douglass",
-    "quote": "I prefer to be true to myself, even at the hazard of incurring the ridicule of others, rather than to be false, and to incur my own abhorrence."
+    author: "Margaret Smith",
+    quote:
+      "The right way is not always the popular and easy way. Standing for right when it is unpopular is a true test of moral character.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "No pessimist ever discovered the secrets of the stars, or sailed to an uncharted land, or opened a new heaven to the human spirit."
+    author: "Frederick Douglass",
+    quote:
+      "I prefer to be true to myself, even at the hazard of incurring the ridicule of others, rather than to be false, and to incur my own abhorrence.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love."
+    author: "Helen Keller",
+    quote:
+      "No pessimist ever discovered the secrets of the stars, or sailed to an uncharted land, or opened a new heaven to the human spirit.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, vision cleared, ambition inspired, and success achieved."
+    author: "Marcus Aurelius",
+    quote:
+      "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "Although there may be tragedy in your life, there's always a possibility to triumph. It doesn't matter who you are, where you come from. The ability to triumph begins with you. Always."
+    author: "Helen Keller",
+    quote:
+      "Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, vision cleared, ambition inspired, and success achieved.",
   },
   {
-    "author": "Ingrid Bergman",
-    "quote": "You must train your intuition — you must trust the small voice inside you which tells you exactly what to say, what to decide."
+    author: "Oprah Winfrey",
+    quote:
+      "Although there may be tragedy in your life, there's always a possibility to triumph. It doesn't matter who you are, where you come from. The ability to triumph begins with you. Always.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart."
+    author: "Ingrid Bergman",
+    quote:
+      "You must train your intuition — you must trust the small voice inside you which tells you exactly what to say, what to decide.",
   },
   {
-    "author": "John Kennedy",
-    "quote": "Let us resolve to be masters, not the victims, of our history, controlling our own destiny without giving way to blind suspicions and emotions."
+    author: "Marcus Aurelius",
+    quote:
+      "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
   },
   {
-    "author": "Marie Curie",
-    "quote": "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less."
+    author: "John Kennedy",
+    quote:
+      "Let us resolve to be masters, not the victims, of our history, controlling our own destiny without giving way to blind suspicions and emotions.",
   },
   {
-    "author": "Anne Frank",
-    "quote": "Parents can only give good advice or put them on the right paths, but the final forming of a persons character lies in their own hands."
+    author: "Marie Curie",
+    quote:
+      "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Adversity isn't set against you to fail; adversity is a way to build your character so that you can succeed over and over again through perseverance."
+    author: "Anne Frank",
+    quote:
+      "Parents can only give good advice or put them on the right paths, but the final forming of a persons character lies in their own hands.",
   },
   {
-    "author": "Robert Fulghum",
-    "quote": "If you break your neck, if you have nothing to eat, if your house is on fire, then you got a problem. Everything else is inconvenience."
+    author: "Byron Pulsifer",
+    quote:
+      "Adversity isn't set against you to fail; adversity is a way to build your character so that you can succeed over and over again through perseverance.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful."
+    author: "Robert Fulghum",
+    quote:
+      "If you break your neck, if you have nothing to eat, if your house is on fire, then you got a problem. Everything else is inconvenience.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."
+    author: "Albert Schweitzer",
+    quote:
+      "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
   },
   {
-    "author": "Thornton Wilder",
-    "quote": "My advice to you is not to inquire why or whither, but just enjoy your ice cream while its on your plate — that's my philosophy."
+    author: "Albert Einstein",
+    quote:
+      "If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut.",
   },
   {
-    "author": "John Dewey",
-    "quote": "Conflict is the gadfly of thought. It stirs us to observation and memory. It instigates to invention. It shocks us out of sheeplike passivity, and sets us at noting and contriving."
+    author: "Thornton Wilder",
+    quote:
+      "My advice to you is not to inquire why or whither, but just enjoy your ice cream while its on your plate — that's my philosophy.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who conquers others is strong; He who conquers himself is mighty."
+    author: "John Dewey",
+    quote:
+      "Conflict is the gadfly of thought. It stirs us to observation and memory. It instigates to invention. It shocks us out of sheeplike passivity, and sets us at noting and contriving.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Anything you really want, you can attain, if you really go after it."
+    author: "Lao Tzu",
+    quote:
+      "He who conquers others is strong; He who conquers himself is mighty.",
   },
   {
-    "author": "John Dewey",
-    "quote": "Arriving at one point is the starting point to another."
+    author: "Wayne Dyer",
+    quote:
+      "Anything you really want, you can attain, if you really go after it.",
   },
   {
-    "author": "James Oppenheim",
-    "quote": "The foolish man seeks happiness in the distance, the wise grows it under his feet."
+    author: "John Dewey",
+    quote: "Arriving at one point is the starting point to another.",
   },
   {
-    "author": "Martha Washington",
-    "quote": "The greatest part of our happiness depends on our dispositions, not our circumstances."
+    author: "James Oppenheim",
+    quote:
+      "The foolish man seeks happiness in the distance, the wise grows it under his feet.",
   },
   {
-    "author": "Margaret Bonnano",
-    "quote": "It is only possible to live happily ever after on a day to day basis."
+    author: "Martha Washington",
+    quote:
+      "The greatest part of our happiness depends on our dispositions, not our circumstances.",
   },
   {
-    "author": "Goethe",
-    "quote": "A man sees in the world what he carries in his heart."
+    author: "Margaret Bonnano",
+    quote:
+      "It is only possible to live happily ever after on a day to day basis.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "Action may not always bring happiness, but there is no happiness without action."
+    author: "Goethe",
+    quote: "A man sees in the world what he carries in his heart.",
   },
   {
-    "author": "Joe Paterno",
-    "quote": "Believe deep down in your heart that you're destined to do great things."
+    author: "Benjamin Disraeli",
+    quote:
+      "Action may not always bring happiness, but there is no happiness without action.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Sooner or later, those who win are those who think they can."
+    author: "Joe Paterno",
+    quote:
+      "Believe deep down in your heart that you're destined to do great things.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "The only limit to your impact is your imagination and commitment."
+    author: "Richard Bach",
+    quote: "Sooner or later, those who win are those who think they can.",
   },
   {
-    "author": "Cathy Pulsifer",
-    "quote": "You are special, you are unique, you are the best!"
+    author: "Tony Robbins",
+    quote: "The only limit to your impact is your imagination and commitment.",
   },
   {
-    "author": "William Arthur Ward",
-    "quote": "Four steps to achievement: Plan purposefully. Prepare prayerfully. Proceed positively. Pursue persistently."
+    author: "Cathy Pulsifer",
+    quote: "You are special, you are unique, you are the best!",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "To know oneself is to study oneself in action with another person."
+    author: "William Arthur Ward",
+    quote:
+      "Four steps to achievement: Plan purposefully. Prepare prayerfully. Proceed positively. Pursue persistently.",
   },
   {
-    "author": "Bishop Desmond Tutu",
-    "quote": "We must not allow ourselves to become like the system we oppose."
+    author: "Bruce Lee",
+    quote: "To know oneself is to study oneself in action with another person.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "Smile, breathe and go slowly."
+    author: "Bishop Desmond Tutu",
+    quote: "We must not allow ourselves to become like the system we oppose.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Reality is merely an illusion, albeit a very persistent one."
+    author: "Thich Nhat Hanh",
+    quote: "Smile, breathe and go slowly.",
   },
   {
-    "author": "Franklin Roosevelt",
-    "quote": "When you come to the end of your rope, tie a knot and hang on."
+    author: "Albert Einstein",
+    quote: "Reality is merely an illusion, albeit a very persistent one.",
   },
   {
-    "author": "Buddha",
-    "quote": "Always be mindful of the kindness and not the faults of others."
+    author: "Franklin Roosevelt",
+    quote: "When you come to the end of your rope, tie a knot and hang on.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Everything that irritates us about others can lead us to an understanding of ourselves."
+    author: "Buddha",
+    quote: "Always be mindful of the kindness and not the faults of others.",
   },
   {
-    "author": "Dale Carnegie",
-    "quote": "When fate hands us a lemon, lets try to make lemonade."
+    author: "Carl Jung",
+    quote:
+      "Everything that irritates us about others can lead us to an understanding of ourselves.",
   },
   {
-    "author": "Mohandas Gandhi",
-    "quote": "The weak can never forgive. Forgiveness is the attribute of the strong."
+    author: "Dale Carnegie",
+    quote: "When fate hands us a lemon, lets try to make lemonade.",
   },
   {
-    "author": "Chanakya",
-    "quote": "A man is great by deeds, not by birth."
+    author: "Mohandas Gandhi",
+    quote:
+      "The weak can never forgive. Forgiveness is the attribute of the strong.",
   },
   {
-    "author": "Dale Carnegie",
-    "quote": "Success is getting what you want. Happiness is wanting what you get."
+    author: "Chanakya",
+    quote: "A man is great by deeds, not by birth.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Truth isn't all about what actually happens but more about how what has happened is interpreted."
+    author: "Dale Carnegie",
+    quote:
+      "Success is getting what you want. Happiness is wanting what you get.",
   },
   {
-    "author": "",
-    "quote": "A good rest is half the work."
+    author: "Byron Pulsifer",
+    quote:
+      "Truth isn't all about what actually happens but more about how what has happened is interpreted.",
   },
   {
-    "author": "Robert Stevenson",
-    "quote": "Don't judge each day by the harvest you reap but by the seeds that you plant."
+    author: "",
+    quote: "A good rest is half the work.",
   },
   {
-    "author": "Demosthenes",
-    "quote": "Small opportunities are often the beginning of great enterprises."
+    author: "Robert Stevenson",
+    quote:
+      "Don't judge each day by the harvest you reap but by the seeds that you plant.",
   },
   {
-    "author": "Gail Sheehy",
-    "quote": "To be tested is good. The challenged life may be the best therapist."
+    author: "Demosthenes",
+    quote: "Small opportunities are often the beginning of great enterprises.",
   },
   {
-    "author": "English proverb",
-    "quote": "Take heed: you do not find what you do not seek."
+    author: "Gail Sheehy",
+    quote:
+      "To be tested is good. The challenged life may be the best therapist.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Happiness is the reward we get for living to the highest right we know."
+    author: "English proverb",
+    quote: "Take heed: you do not find what you do not seek.",
   },
   {
-    "author": "Cervantes",
-    "quote": "Be slow of tongue and quick of eye."
+    author: "Richard Bach",
+    quote:
+      "Happiness is the reward we get for living to the highest right we know.",
   },
   {
-    "author": "Mohandas Gandhi",
-    "quote": "Freedom is not worth having if it does not connote freedom to err."
+    author: "Cervantes",
+    quote: "Be slow of tongue and quick of eye.",
   },
   {
-    "author": "John Locke",
-    "quote": "I have always thought the actions of men the best interpreters of their thoughts."
+    author: "Mohandas Gandhi",
+    quote: "Freedom is not worth having if it does not connote freedom to err.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who obtains has little. He who scatters has much."
+    author: "John Locke",
+    quote:
+      "I have always thought the actions of men the best interpreters of their thoughts.",
   },
   {
-    "author": "Soren Kierkegaard",
-    "quote": "To dare is to lose ones footing momentarily. To not dare is to lose oneself."
+    author: "Lao Tzu",
+    quote: "He who obtains has little. He who scatters has much.",
   },
   {
-    "author": "David Eddings",
-    "quote": "No day in which you learn something is a complete loss."
+    author: "Soren Kierkegaard",
+    quote:
+      "To dare is to lose ones footing momentarily. To not dare is to lose oneself.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Peace cannot be kept by force. It can only be achieved by understanding."
+    author: "David Eddings",
+    quote: "No day in which you learn something is a complete loss.",
   },
   {
-    "author": "David McCullough",
-    "quote": "Real success is finding your lifework in the work that you love."
+    author: "Albert Einstein",
+    quote:
+      "Peace cannot be kept by force. It can only be achieved by understanding.",
   },
   {
-    "author": "Buddha",
-    "quote": "Better than a thousand hollow words, is one word that brings peace."
+    author: "David McCullough",
+    quote: "Real success is finding your lifework in the work that you love.",
   },
   {
-    "author": "",
-    "quote": "All the flowers of all the tomorrows are in the seeds of today."
+    author: "Buddha",
+    quote:
+      "Better than a thousand hollow words, is one word that brings peace.",
   },
   {
-    "author": "Joseph Campbell",
-    "quote": "Your sacred space is where you can find yourself again and again."
+    author: "",
+    quote: "All the flowers of all the tomorrows are in the seeds of today.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "As you think, so shall you become."
+    author: "Joseph Campbell",
+    quote: "Your sacred space is where you can find yourself again and again.",
   },
   {
-    "author": "William Blake",
-    "quote": "In seed time learn, in harvest teach, in winter enjoy."
+    author: "Bruce Lee",
+    quote: "As you think, so shall you become.",
   },
   {
-    "author": "Cheng Yen",
-    "quote": "Happiness does not come from having much, but from being attached to little."
+    author: "William Blake",
+    quote: "In seed time learn, in harvest teach, in winter enjoy.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Every gift from a friend is a wish for your happiness."
+    author: "Cheng Yen",
+    quote:
+      "Happiness does not come from having much, but from being attached to little.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Go put your creed into the deed. Nor speak with double tongue."
+    author: "Richard Bach",
+    quote: "Every gift from a friend is a wish for your happiness.",
   },
   {
-    "author": "Euripides",
-    "quote": "The wisest men follow their own direction."
+    author: "Ralph Emerson",
+    quote: "Go put your creed into the deed. Nor speak with double tongue.",
   },
   {
-    "author": "William Sloane Coffin",
-    "quote": "Hope arouses, as nothing else can arouse, a passion for the possible."
+    author: "Euripides",
+    quote: "The wisest men follow their own direction.",
   },
   {
-    "author": "Confucius",
-    "quote": "Everything has beauty, but not everyone sees it."
+    author: "William Sloane Coffin",
+    quote:
+      "Hope arouses, as nothing else can arouse, a passion for the possible.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "Nothing ever goes away until it has taught us what we need to know."
+    author: "Confucius",
+    quote: "Everything has beauty, but not everyone sees it.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "When you learn, teach. When you get, give."
+    author: "Pema Chodron",
+    quote:
+      "Nothing ever goes away until it has taught us what we need to know.",
   },
   {
-    "author": "Dorothy Thompson",
-    "quote": "Only when we are no longer afraid do we begin to live."
+    author: "Maya Angelou",
+    quote: "When you learn, teach. When you get, give.",
   },
   {
-    "author": "Andy Rooney",
-    "quote": "If you smile when no one else is around, you really mean it."
+    author: "Dorothy Thompson",
+    quote: "Only when we are no longer afraid do we begin to live.",
   },
   {
-    "author": "Martin Luther King, Jr.",
-    "quote": "Love is the only force capable of transforming an enemy into friend."
+    author: "Andy Rooney",
+    quote: "If you smile when no one else is around, you really mean it.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "In all chaos there is a cosmos, in all disorder a secret order."
+    author: "Martin Luther King, Jr.",
+    quote:
+      "Love is the only force capable of transforming an enemy into friend.",
   },
   {
-    "author": "",
-    "quote": "A man is not where he lives but where he loves."
+    author: "Carl Jung",
+    quote: "In all chaos there is a cosmos, in all disorder a secret order.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "The price of greatness is responsibility."
+    author: "",
+    quote: "A man is not where he lives but where he loves.",
   },
   {
-    "author": "Paul Tillich",
-    "quote": "Decision is a risk rooted in the courage of being free."
+    author: "Winston Churchill",
+    quote: "The price of greatness is responsibility.",
   },
   {
-    "author": "William Burroughs",
-    "quote": "Your mind will answer most questions if you learn to relax and wait for the answer."
+    author: "Paul Tillich",
+    quote: "Decision is a risk rooted in the courage of being free.",
   },
   {
-    "author": "",
-    "quote": "The world doesn’t happen to you it happens from you."
+    author: "William Burroughs",
+    quote:
+      "Your mind will answer most questions if you learn to relax and wait for the answer.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "We cannot solve our problems with the same thinking we used when we created them."
+    author: "",
+    quote: "The world doesn’t happen to you it happens from you.",
   },
   {
-    "author": "",
-    "quote": "More powerful than the will to win is the courage to begin."
+    author: "Albert Einstein",
+    quote:
+      "We cannot solve our problems with the same thinking we used when we created them.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Learning is finding out what you already know."
+    author: "",
+    quote: "More powerful than the will to win is the courage to begin.",
   },
   {
-    "author": "Alfred Painter",
-    "quote": "Saying thank you is more than good manners. It is good spirituality."
+    author: "Richard Bach",
+    quote: "Learning is finding out what you already know.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Silence is a source of great strength."
+    author: "Alfred Painter",
+    quote:
+      "Saying thank you is more than good manners. It is good spirituality.",
   },
   {
-    "author": "Anne Lamott",
-    "quote": "Joy is the best makeup."
+    author: "Lao Tzu",
+    quote: "Silence is a source of great strength.",
   },
   {
-    "author": "Seneca",
-    "quote": "There is no great genius without some touch of madness."
+    author: "Anne Lamott",
+    quote: "Joy is the best makeup.",
   },
   {
-    "author": "Buddha",
-    "quote": "A jug fills drop by drop."
+    author: "Seneca",
+    quote: "There is no great genius without some touch of madness.",
   },
   {
-    "author": "Doris Mortman",
-    "quote": "Until you make peace with who you are, you'll never be content with what you have."
+    author: "Buddha",
+    quote: "A jug fills drop by drop.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "We aim above the mark to hit the mark."
+    author: "Doris Mortman",
+    quote:
+      "Until you make peace with who you are, you'll never be content with what you have.",
   },
   {
-    "author": "Catherine Pulsifer",
-    "quote": "Being angry never solves anything."
+    author: "Ralph Emerson",
+    quote: "We aim above the mark to hit the mark.",
   },
   {
-    "author": "Orison Marden",
-    "quote": "All men who have achieved great things have been great dreamers."
+    author: "Catherine Pulsifer",
+    quote: "Being angry never solves anything.",
   },
   {
-    "author": "Arthur Conan Doyle",
-    "quote": "Mediocrity knows nothing higher than itself, but talent instantly recognizes genius."
+    author: "Orison Marden",
+    quote: "All men who have achieved great things have been great dreamers.",
   },
   {
-    "author": "Walter Lippmann",
-    "quote": "Where all think alike, no one thinks very much."
+    author: "Arthur Conan Doyle",
+    quote:
+      "Mediocrity knows nothing higher than itself, but talent instantly recognizes genius.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Everything that exists is in a manner the seed of that which will be."
+    author: "Walter Lippmann",
+    quote: "Where all think alike, no one thinks very much.",
   },
   {
-    "author": "Marie Curie",
-    "quote": "Be less curious about people and more curious about ideas."
+    author: "Marcus Aurelius",
+    quote:
+      "Everything that exists is in a manner the seed of that which will be.",
   },
   {
-    "author": "Charles Perkhurst",
-    "quote": "The heart has eyes which the brain knows nothing of."
+    author: "Marie Curie",
+    quote: "Be less curious about people and more curious about ideas.",
   },
   {
-    "author": "Robert Kennedy",
-    "quote": "Only those who dare to fail greatly can ever achieve greatly."
+    author: "Charles Perkhurst",
+    quote: "The heart has eyes which the brain knows nothing of.",
   },
   {
-    "author": "Richard Whately",
-    "quote": "Lose an hour in the morning, and you will spend all day looking for it."
+    author: "Robert Kennedy",
+    quote: "Only those who dare to fail greatly can ever achieve greatly.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "Mistakes are always forgivable, if one has the courage to admit them."
+    author: "Richard Whately",
+    quote:
+      "Lose an hour in the morning, and you will spend all day looking for it.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "Go to your bosom: Knock there, and ask your heart what it doth know."
+    author: "Bruce Lee",
+    quote:
+      "Mistakes are always forgivable, if one has the courage to admit them.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Happiness mainly comes from our own attitude, rather than from external factors."
+    author: "William Shakespeare",
+    quote:
+      "Go to your bosom: Knock there, and ask your heart what it doth know.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "If you do not change direction, you may end up where you are heading."
+    author: "Dalai Lama",
+    quote:
+      "Happiness mainly comes from our own attitude, rather than from external factors.",
   },
   {
-    "author": "",
-    "quote": "What we see is mainly what we look for."
+    author: "Lao Tzu",
+    quote:
+      "If you do not change direction, you may end up where you are heading.",
   },
   {
-    "author": "Marsha Petrie Sue",
-    "quote": "Stay away from what might have been and look at what will be."
+    author: "",
+    quote: "What we see is mainly what we look for.",
   },
   {
-    "author": "William James",
-    "quote": "Act as if what you do makes a difference. It does."
+    author: "Marsha Petrie Sue",
+    quote: "Stay away from what might have been and look at what will be.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Passion creates the desire for more and action fuelled by passion creates a future."
+    author: "William James",
+    quote: "Act as if what you do makes a difference. It does.",
   },
   {
-    "author": "Alexander Pope",
-    "quote": "Do good by stealth, and blush to find it fame."
+    author: "Byron Pulsifer",
+    quote:
+      "Passion creates the desire for more and action fuelled by passion creates a future.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Opportunity often comes disguised in the form of misfortune, or temporary defeat."
+    author: "Alexander Pope",
+    quote: "Do good by stealth, and blush to find it fame.",
   },
   {
-    "author": "Thomas Jefferson",
-    "quote": "Don't talk about what you have done or what you are going to do."
+    author: "Napoleon Hill",
+    quote:
+      "Opportunity often comes disguised in the form of misfortune, or temporary defeat.",
   },
   {
-    "author": "Seneca",
-    "quote": "Most powerful is he who has himself in his own power."
+    author: "Thomas Jefferson",
+    quote: "Don't talk about what you have done or what you are going to do.",
   },
   {
-    "author": "Bernard Shaw",
-    "quote": "We don't stop playing because we grow old; we grow old because we stop playing."
+    author: "Seneca",
+    quote: "Most powerful is he who has himself in his own power.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Experience can only be gained by doing not by thinking or dreaming."
+    author: "Bernard Shaw",
+    quote:
+      "We don't stop playing because we grow old; we grow old because we stop playing.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "Always tell the truth. That way, you don't have to remember what you said."
+    author: "Byron Pulsifer",
+    quote:
+      "Experience can only be gained by doing not by thinking or dreaming.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "From wonder into wonder existence opens."
+    author: "Mark Twain",
+    quote:
+      "Always tell the truth. That way, you don't have to remember what you said.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "He who fears being conquered is sure of defeat."
+    author: "Lao Tzu",
+    quote: "From wonder into wonder existence opens.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Life is what happens while you are making other plans."
+    author: "Napoleon Bonaparte",
+    quote: "He who fears being conquered is sure of defeat.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Doing what you love is the cornerstone of having abundance in your life."
+    author: "John Lennon",
+    quote: "Life is what happens while you are making other plans.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Kindness is the golden chain by which society is bound together."
+    author: "Wayne Dyer",
+    quote:
+      "Doing what you love is the cornerstone of having abundance in your life.",
   },
   {
-    "author": "Nietzsche",
-    "quote": "You need chaos in your soul to give birth to a dancing star."
+    author: "Johann Wolfgang von Goethe",
+    quote: "Kindness is the golden chain by which society is bound together.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "It can't be spring if your heart is filled with past failures."
+    author: "Nietzsche",
+    quote: "You need chaos in your soul to give birth to a dancing star.",
   },
   {
-    "author": "Brendan Francis",
-    "quote": "No yesterdays are ever wasted for those who give themselves to today."
+    author: "Byron Pulsifer",
+    quote: "It can't be spring if your heart is filled with past failures.",
   },
   {
-    "author": "Tom Krause",
-    "quote": "There are no failures — just experiences and your reactions to them."
+    author: "Brendan Francis",
+    quote:
+      "No yesterdays are ever wasted for those who give themselves to today.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "Action is the foundational key to all success."
+    author: "Tom Krause",
+    quote:
+      "There are no failures — just experiences and your reactions to them.",
   },
   {
-    "author": "Abraham Maslow",
-    "quote": "What is necessary to change a person is to change his awareness of himself."
+    author: "Pablo Picasso",
+    quote: "Action is the foundational key to all success.",
   },
   {
-    "author": "Zig Ziglar",
-    "quote": "Positive thinking will let you do everything better than negative thinking will."
+    author: "Abraham Maslow",
+    quote:
+      "What is necessary to change a person is to change his awareness of himself.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "We shall never know all the good that a simple smile can do."
+    author: "Zig Ziglar",
+    quote:
+      "Positive thinking will let you do everything better than negative thinking will.",
   },
   {
-    "author": "Frances de Sales",
-    "quote": "Nothing is so strong as gentleness. Nothing is so gentle as real strength."
+    author: "Mother Teresa",
+    quote: "We shall never know all the good that a simple smile can do.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Imagination is not a talent of some men but is the health of every man."
+    author: "Frances de Sales",
+    quote:
+      "Nothing is so strong as gentleness. Nothing is so gentle as real strength.",
   },
   {
-    "author": "Kenji Miyazawa",
-    "quote": "We must embrace pain and burn it as fuel for our journey."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "Imagination is not a talent of some men but is the health of every man.",
   },
   {
-    "author": "",
-    "quote": "Don't wait for people to be friendly. Show them how."
+    author: "Kenji Miyazawa",
+    quote: "We must embrace pain and burn it as fuel for our journey.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "A gem cannot be polished without friction, nor a man perfected without trials."
+    author: "",
+    quote: "Don't wait for people to be friendly. Show them how.",
   },
   {
-    "author": "George Matthew Adams",
-    "quote": "Each day can be one of triumph if you keep up your interests."
+    author: "Chinese proverb",
+    quote:
+      "A gem cannot be polished without friction, nor a man perfected without trials.",
   },
   {
-    "author": "Robert M. Pirsig",
-    "quote": "The place to improve the world is first in one's own heart and head and hands."
+    author: "George Matthew Adams",
+    quote: "Each day can be one of triumph if you keep up your interests.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."
+    author: "Robert M. Pirsig",
+    quote:
+      "The place to improve the world is first in one's own heart and head and hands.",
   },
   {
-    "author": "Albert Gray",
-    "quote": "Winners have simply formed the habit of doing things losers don't like to do."
+    author: "Winston Churchill",
+    quote:
+      "The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Nature is a mutable cloud which is always and never the same."
+    author: "Albert Gray",
+    quote:
+      "Winners have simply formed the habit of doing things losers don't like to do.",
   },
   {
-    "author": "Grandma Moses",
-    "quote": "Life is what you make of it. Always has been, always will be."
+    author: "Ralph Emerson",
+    quote: "Nature is a mutable cloud which is always and never the same.",
   },
   {
-    "author": "Swedish proverb",
-    "quote": "Worry often gives a small thing a big shadow."
+    author: "Grandma Moses",
+    quote: "Life is what you make of it. Always has been, always will be.",
   },
   {
-    "author": "Confucius",
-    "quote": "I want you to be everything that's you, deep at the center of your being."
+    author: "Swedish proverb",
+    quote: "Worry often gives a small thing a big shadow.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "We know what we are, but know not what we may be."
+    author: "Confucius",
+    quote:
+      "I want you to be everything that's you, deep at the center of your being.",
   },
   {
-    "author": "Jean-Paul Sartre",
-    "quote": "Freedom is what you do with what's been done to you."
+    author: "William Shakespeare",
+    quote: "We know what we are, but know not what we may be.",
   },
   {
-    "author": "Felix Adler",
-    "quote": "The truth which has made us free will in the end make us glad also."
+    author: "Jean-Paul Sartre",
+    quote: "Freedom is what you do with what's been done to you.",
   },
   {
-    "author": "Joseph Joubert",
-    "quote": "He who has imagination without learning has wings but no feet."
+    author: "Felix Adler",
+    quote:
+      "The truth which has made us free will in the end make us glad also.",
   },
   {
-    "author": "Elizabeth Browning",
-    "quote": "Whoso loves, believes the impossible."
+    author: "Joseph Joubert",
+    quote: "He who has imagination without learning has wings but no feet.",
   },
   {
-    "author": "Ella Fitzgerald",
-    "quote": "It isn't where you come from, it's where you're going that counts."
+    author: "Elizabeth Browning",
+    quote: "Whoso loves, believes the impossible.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "The greatest obstacle to connecting with our joy is resentment."
+    author: "Ella Fitzgerald",
+    quote: "It isn't where you come from, it's where you're going that counts.",
   },
   {
-    "author": "C. Pulsifer",
-    "quote": "When anger use your energy to do something productive."
+    author: "Pema Chodron",
+    quote: "The greatest obstacle to connecting with our joy is resentment.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "We are all something, but none of us are everything."
+    author: "C. Pulsifer",
+    quote: "When anger use your energy to do something productive.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "If you can't explain it simply, you don't understand it well enough."
+    author: "Blaise Pascal",
+    quote: "We are all something, but none of us are everything.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "He who lives in harmony with himself lives in harmony with the world."
+    author: "Albert Einstein",
+    quote:
+      "If you can't explain it simply, you don't understand it well enough.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who knows himself is enlightened."
+    author: "Marcus Aurelius",
+    quote:
+      "He who lives in harmony with himself lives in harmony with the world.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Build a better mousetrap and the world will beat a path to your door."
+    author: "Lao Tzu",
+    quote: "He who knows himself is enlightened.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "As our case is new, we must think and act anew."
+    author: "Ralph Emerson",
+    quote:
+      "Build a better mousetrap and the world will beat a path to your door.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "If you can't feed a hundred people, then feed just one."
+    author: "Abraham Lincoln",
+    quote: "As our case is new, we must think and act anew.",
   },
   {
-    "author": "Robert Frost",
-    "quote": "In three words I can sum up everything Ive learned about life: it goes on."
+    author: "Mother Teresa",
+    quote: "If you can't feed a hundred people, then feed just one.",
   },
   {
-    "author": "",
-    "quote": "Don't let today's disappointments cast a shadow on tomorrow's dreams."
+    author: "Robert Frost",
+    quote:
+      "In three words I can sum up everything Ive learned about life: it goes on.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "You always succeed in producing a result."
+    author: "",
+    quote:
+      "Don't let today's disappointments cast a shadow on tomorrow's dreams.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Everything you are against weakens you. Everything you are for empowers you."
+    author: "Tony Robbins",
+    quote: "You always succeed in producing a result.",
   },
   {
-    "author": "Fran Watson",
-    "quote": "As we risk ourselves, we grow. Each new experience is a risk."
+    author: "Wayne Dyer",
+    quote:
+      "Everything you are against weakens you. Everything you are for empowers you.",
   },
   {
-    "author": "Mary Almanac",
-    "quote": "Who we are never changes. Who we think we are does."
+    author: "Fran Watson",
+    quote: "As we risk ourselves, we grow. Each new experience is a risk.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "The final proof of greatness lies in being able to endure criticism without resentment."
+    author: "Mary Almanac",
+    quote: "Who we are never changes. Who we think we are does.",
   },
   {
-    "author": "Victor Hugo",
-    "quote": "An invasion of armies can be resisted, but not an idea whose time has come."
+    author: "Elbert Hubbard",
+    quote:
+      "The final proof of greatness lies in being able to endure criticism without resentment.",
   },
   {
-    "author": "",
-    "quote": "Never let lack of money interfere with having fun."
+    author: "Victor Hugo",
+    quote:
+      "An invasion of armies can be resisted, but not an idea whose time has come.",
   },
   {
-    "author": "Ralph Marston",
-    "quote": "Excellence is not a skill. It is an attitude."
+    author: "",
+    quote: "Never let lack of money interfere with having fun.",
   },
   {
-    "author": "Lewis Cass",
-    "quote": "People may doubt what you say, but they will believe what you do."
+    author: "Ralph Marston",
+    quote: "Excellence is not a skill. It is an attitude.",
   },
   {
-    "author": "Thomas Paine",
-    "quote": "The most formidable weapon against errors of every kind is reason."
+    author: "Lewis Cass",
+    quote: "People may doubt what you say, but they will believe what you do.",
   },
   {
-    "author": "Danilo Dolci",
-    "quote": "It's important to know that words don't move mountains. Work, exacting work moves mountains."
+    author: "Thomas Paine",
+    quote: "The most formidable weapon against errors of every kind is reason.",
   },
   {
-    "author": "Franz Liszt",
-    "quote": "Beware of missing chances; otherwise it may be altogether too late some day."
+    author: "Danilo Dolci",
+    quote:
+      "It's important to know that words don't move mountains. Work, exacting work moves mountains.",
   },
   {
-    "author": "Buddha",
-    "quote": "You only lose what you cling to."
+    author: "Franz Liszt",
+    quote:
+      "Beware of missing chances; otherwise it may be altogether too late some day.",
   },
   {
-    "author": "Corita Kent",
-    "quote": "Life is a succession of moments. To live each one is to succeed."
+    author: "Buddha",
+    quote: "You only lose what you cling to.",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Most of the shadows of life are caused by standing in our own sunshine."
+    author: "Corita Kent",
+    quote: "Life is a succession of moments. To live each one is to succeed.",
   },
   {
-    "author": "Plato",
-    "quote": "Good actions give strength to ourselves and inspire good actions in others."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "Most of the shadows of life are caused by standing in our own sunshine.",
   },
   {
-    "author": "Antoine de Saint-Exupery",
-    "quote": "I know but one freedom and that is the freedom of the mind."
+    author: "Plato",
+    quote:
+      "Good actions give strength to ourselves and inspire good actions in others.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "In the middle of every difficulty lies opportunity."
+    author: "Antoine de Saint-Exupery",
+    quote: "I know but one freedom and that is the freedom of the mind.",
   },
   {
-    "author": "Buddha",
-    "quote": "Every human being is the author of his own health or disease."
+    author: "Albert Einstein",
+    quote: "In the middle of every difficulty lies opportunity.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "When in doubt, tell the truth."
+    author: "Buddha",
+    quote: "Every human being is the author of his own health or disease.",
   },
   {
-    "author": "John Dewey",
-    "quote": "Every great advance in science has issued from a new audacity of the imagination."
+    author: "Mark Twain",
+    quote: "When in doubt, tell the truth.",
   },
   {
-    "author": "Anthony Robbins",
-    "quote": "The path to success is to take massive, determined action."
+    author: "John Dewey",
+    quote:
+      "Every great advance in science has issued from a new audacity of the imagination.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "The ladder of success is never crowded at the top."
+    author: "Anthony Robbins",
+    quote: "The path to success is to take massive, determined action.",
   },
   {
-    "author": "",
-    "quote": "He who has health has hope, and he who has hope has everything."
+    author: "Napoleon Hill",
+    quote: "The ladder of success is never crowded at the top.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "All great achievements require time."
+    author: "",
+    quote: "He who has health has hope, and he who has hope has everything.",
   },
   {
-    "author": "Alice Walker",
-    "quote": "No person is your friend who demands your silence, or denies your right to grow."
+    author: "Maya Angelou",
+    quote: "All great achievements require time.",
   },
   {
-    "author": "Charles Chesnutt",
-    "quote": "Impossibilities are merely things which we have not yet learned."
+    author: "Alice Walker",
+    quote:
+      "No person is your friend who demands your silence, or denies your right to grow.",
   },
   {
-    "author": "Japanese proverb",
-    "quote": "Vision without action is a daydream. Action without vision is a nightmare."
+    author: "Charles Chesnutt",
+    quote: "Impossibilities are merely things which we have not yet learned.",
   },
   {
-    "author": "Confucius",
-    "quote": "The Superior Man is aware of Righteousness, the inferior man is aware of advantage."
+    author: "Japanese proverb",
+    quote:
+      "Vision without action is a daydream. Action without vision is a nightmare.",
   },
   {
-    "author": "Elizabeth Kenny",
-    "quote": "He who angers you conquers you."
+    author: "Confucius",
+    quote:
+      "The Superior Man is aware of Righteousness, the inferior man is aware of advantage.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "I never worry about action, but only inaction."
+    author: "Elizabeth Kenny",
+    quote: "He who angers you conquers you.",
   },
   {
-    "author": "Epictetus",
-    "quote": "No man is free who is not master of himself."
+    author: "Winston Churchill",
+    quote: "I never worry about action, but only inaction.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Those that know, do. Those that understand, teach."
+    author: "Epictetus",
+    quote: "No man is free who is not master of himself.",
   },
   {
-    "author": "Thich Nhat Hanh",
-    "quote": "If we are not fully ourselves, truly in the present moment, we miss everything."
+    author: "Aristotle",
+    quote: "Those that know, do. Those that understand, teach.",
   },
   {
-    "author": "Aesop",
-    "quote": "No act of kindness, no matter how small, is ever wasted."
+    author: "Thich Nhat Hanh",
+    quote:
+      "If we are not fully ourselves, truly in the present moment, we miss everything.",
   },
   {
-    "author": "Channing",
-    "quote": "Every man is a volume if you know how to read him."
+    author: "Aesop",
+    quote: "No act of kindness, no matter how small, is ever wasted.",
   },
   {
-    "author": "",
-    "quote": "The difficulties of life are intended to make us better, not bitter."
+    author: "Channing",
+    quote: "Every man is a volume if you know how to read him.",
   },
   {
-    "author": "Henry Ford",
-    "quote": "Quality means doing it right when no one is looking."
+    author: "",
+    quote:
+      "The difficulties of life are intended to make us better, not bitter.",
   },
   {
-    "author": "",
-    "quote": "Change your words. Change your world."
+    author: "Henry Ford",
+    quote: "Quality means doing it right when no one is looking.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Great acts are made up of small deeds."
+    author: "",
+    quote: "Change your words. Change your world.",
   },
   {
-    "author": "Mal Pancoast",
-    "quote": "The odds of hitting your target go up dramatically when you aim at it."
+    author: "Lao Tzu",
+    quote: "Great acts are made up of small deeds.",
   },
   {
-    "author": "",
-    "quote": "Open minds lead to open doors."
+    author: "Mal Pancoast",
+    quote:
+      "The odds of hitting your target go up dramatically when you aim at it.",
   },
   {
-    "author": "Virgil",
-    "quote": "They can do all because they think they can."
+    author: "",
+    quote: "Open minds lead to open doors.",
   },
   {
-    "author": "Donald Trump",
-    "quote": "You have to think anyway, so why not think big?"
+    author: "Virgil",
+    quote: "They can do all because they think they can.",
   },
   {
-    "author": "Edward Young",
-    "quote": "On every thorn, delightful wisdom grows, In every rill a sweet instruction flows."
+    author: "Donald Trump",
+    quote: "You have to think anyway, so why not think big?",
   },
   {
-    "author": "Buddha",
-    "quote": "Your body is precious. It is our vehicle for awakening. Treat it with care."
+    author: "Edward Young",
+    quote:
+      "On every thorn, delightful wisdom grows, In every rill a sweet instruction flows.",
   },
   {
-    "author": "Claire Charmont",
-    "quote": "The one who always loses, is the only person who gets the reward."
+    author: "Buddha",
+    quote:
+      "Your body is precious. It is our vehicle for awakening. Treat it with care.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "The future is completely open, and we are writing it moment to moment."
+    author: "Claire Charmont",
+    quote: "The one who always loses, is the only person who gets the reward.",
   },
   {
-    "author": "",
-    "quote": "Each time we face a fear, we gain strength, courage, and confidence in the doing."
+    author: "Pema Chodron",
+    quote:
+      "The future is completely open, and we are writing it moment to moment.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Ask yourself the secret of your success. Listen to your answer, and practice it."
+    author: "",
+    quote:
+      "Each time we face a fear, we gain strength, courage, and confidence in the doing.",
   },
   {
-    "author": "Sinvyest Tan",
-    "quote": "Don't frown because you never know who is falling in love with your smile."
+    author: "Richard Bach",
+    quote:
+      "Ask yourself the secret of your success. Listen to your answer, and practice it.",
   },
   {
-    "author": "Joyce Brothers",
-    "quote": "Trust your hunches. They're usually based on facts filed away just below the conscious level."
+    author: "Sinvyest Tan",
+    quote:
+      "Don't frown because you never know who is falling in love with your smile.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Nothing is at last sacred but the integrity of your own mind."
+    author: "Joyce Brothers",
+    quote:
+      "Trust your hunches. They're usually based on facts filed away just below the conscious level.",
   },
   {
-    "author": "Anthony D'Angelo",
-    "quote": "Listen to your intuition. It will tell you everything you need to know."
+    author: "Ralph Emerson",
+    quote: "Nothing is at last sacred but the integrity of your own mind.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "The personal life deeply lived always expands into truths beyond itself."
+    author: "Anthony D'Angelo",
+    quote:
+      "Listen to your intuition. It will tell you everything you need to know.",
   },
   {
-    "author": "Eckhart Tolle",
-    "quote": "Whenever something negative happens to you, there is a deep lesson concealed within it."
+    author: "Anais Nin",
+    quote:
+      "The personal life deeply lived always expands into truths beyond itself.",
   },
   {
-    "author": "Goethe",
-    "quote": "What is not started today is never finished tomorrow."
+    author: "Eckhart Tolle",
+    quote:
+      "Whenever something negative happens to you, there is a deep lesson concealed within it.",
   },
   {
-    "author": "Gordon Hinckley",
-    "quote": "Our kindness may be the most persuasive argument for that which we believe."
+    author: "Goethe",
+    quote: "What is not started today is never finished tomorrow.",
   },
   {
-    "author": "Buddha",
-    "quote": "Chaos is inherent in all compounded things. Strive on with diligence."
+    author: "Gordon Hinckley",
+    quote:
+      "Our kindness may be the most persuasive argument for that which we believe.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Be sure you put your feet in the right place, then stand firm."
+    author: "Buddha",
+    quote:
+      "Chaos is inherent in all compounded things. Strive on with diligence.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Nothing great was ever achieved without enthusiasm."
+    author: "Abraham Lincoln",
+    quote: "Be sure you put your feet in the right place, then stand firm.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "The meaning I picked, the one that changed my life: Overcome fear, behold wonder."
+    author: "Ralph Emerson",
+    quote: "Nothing great was ever achieved without enthusiasm.",
   },
   {
-    "author": "Plutarch",
-    "quote": "Know how to listen, and you will profit even from those who talk badly."
+    author: "Richard Bach",
+    quote:
+      "The meaning I picked, the one that changed my life: Overcome fear, behold wonder.",
   },
   {
-    "author": "Edmond Rostand",
-    "quote": "A man is not old as long as he is seeking something."
+    author: "Plutarch",
+    quote:
+      "Know how to listen, and you will profit even from those who talk badly.",
   },
   {
-    "author": "Ymber Delecto",
-    "quote": "The time you think you're missing, misses you too."
+    author: "Edmond Rostand",
+    quote: "A man is not old as long as he is seeking something.",
   },
   {
-    "author": "Michael Vance",
-    "quote": "Life is not measured by the breaths you take, but by its breathtaking moments."
+    author: "Ymber Delecto",
+    quote: "The time you think you're missing, misses you too.",
   },
   {
-    "author": "Sophocles",
-    "quote": "Much wisdom often goes with fewer words."
+    author: "Michael Vance",
+    quote:
+      "Life is not measured by the breaths you take, but by its breathtaking moments.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "If you love life, don't waste time, for time is what life is made up of."
+    author: "Sophocles",
+    quote: "Much wisdom often goes with fewer words.",
   },
   {
-    "author": "Samuel Taylor Coleridge",
-    "quote": "Imagination is the living power and prime agent of all human perception."
+    author: "Bruce Lee",
+    quote:
+      "If you love life, don't waste time, for time is what life is made up of.",
   },
   {
-    "author": "Naomi Williams",
-    "quote": "It is impossible to feel grateful and depressed in the same moment."
+    author: "Samuel Taylor Coleridge",
+    quote:
+      "Imagination is the living power and prime agent of all human perception.",
   },
   {
-    "author": "Frederick Wilcox",
-    "quote": "Progress always involves risks. You can't steal second base and keep your foot on first."
+    author: "Naomi Williams",
+    quote:
+      "It is impossible to feel grateful and depressed in the same moment.",
   },
   {
-    "author": "Simone Weil",
-    "quote": "Liberty, taking the word in its concrete sense, consists in the ability to choose."
+    author: "Frederick Wilcox",
+    quote:
+      "Progress always involves risks. You can't steal second base and keep your foot on first.",
   },
   {
-    "author": "John Dryden",
-    "quote": "A thing well said will be wit in all languages."
+    author: "Simone Weil",
+    quote:
+      "Liberty, taking the word in its concrete sense, consists in the ability to choose.",
   },
   {
-    "author": "Og Mandino",
-    "quote": "Always do your best. What you plant now, you will harvest later."
+    author: "John Dryden",
+    quote: "A thing well said will be wit in all languages.",
   },
   {
-    "author": "Forrest Gump",
-    "quote": "My mama always said: life's like a box of chocolate — you never know what you gonna get."
+    author: "Og Mandino",
+    quote: "Always do your best. What you plant now, you will harvest later.",
   },
   {
-    "author": "Jean Lacordaire",
-    "quote": "We are the leaves of one branch, the drops of one sea, the flowers of one garden."
+    author: "Forrest Gump",
+    quote:
+      "My mama always said: life's like a box of chocolate — you never know what you gonna get.",
   },
   {
-    "author": "",
-    "quote": "If you come to a fork in the road, take it."
+    author: "Jean Lacordaire",
+    quote:
+      "We are the leaves of one branch, the drops of one sea, the flowers of one garden.",
   },
   {
-    "author": "Moliere",
-    "quote": "It is not only for what we do that we are held responsible, but also for what we do not do."
+    author: "",
+    quote: "If you come to a fork in the road, take it.",
   },
   {
-    "author": "",
-    "quote": "Nobody can do everything, but everybody can do something."
+    author: "Moliere",
+    quote:
+      "It is not only for what we do that we are held responsible, but also for what we do not do.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "The world has the habit of making room for the man whose actions show that he knows where he is going."
+    author: "",
+    quote: "Nobody can do everything, but everybody can do something.",
   },
   {
-    "author": "Heraclitus",
-    "quote": "You cannot step twice into the same river, for other waters are continually flowing in."
+    author: "Napoleon Hill",
+    quote:
+      "The world has the habit of making room for the man whose actions show that he knows where he is going.",
   },
   {
-    "author": "Booker Washington",
-    "quote": "Excellence is to do a common thing in an uncommon way."
+    author: "Heraclitus",
+    quote:
+      "You cannot step twice into the same river, for other waters are continually flowing in.",
   },
   {
-    "author": "Buddha",
-    "quote": "No matter how hard the past, you can always begin again."
+    author: "Booker Washington",
+    quote: "Excellence is to do a common thing in an uncommon way.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "I begin with an idea and then it becomes something else."
+    author: "Buddha",
+    quote: "No matter how hard the past, you can always begin again.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "Whoever is happy will make others happy, too."
+    author: "Pablo Picasso",
+    quote: "I begin with an idea and then it becomes something else.",
   },
   {
-    "author": "Buddha",
-    "quote": "Your work is to discover your work and then with all your heart to give yourself to it."
+    author: "Mark Twain",
+    quote: "Whoever is happy will make others happy, too.",
   },
   {
-    "author": "Epictetus",
-    "quote": "It's not what happens to you, but how you react to it that matters."
+    author: "Buddha",
+    quote:
+      "Your work is to discover your work and then with all your heart to give yourself to it.",
   },
   {
-    "author": "Woody Guthrie",
-    "quote": "Take it easy — but take it."
+    author: "Epictetus",
+    quote:
+      "It's not what happens to you, but how you react to it that matters.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "Never apologize for showing feeling. When you do so, you apologize for truth."
+    author: "Woody Guthrie",
+    quote: "Take it easy — but take it.",
   },
   {
-    "author": "Ovid",
-    "quote": "Take rest; a field that has rested gives a bountiful crop."
+    author: "Benjamin Disraeli",
+    quote:
+      "Never apologize for showing feeling. When you do so, you apologize for truth.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "Age does not protect you from love. But love, to some extent, protects you from age."
+    author: "Ovid",
+    quote: "Take rest; a field that has rested gives a bountiful crop.",
   },
   {
-    "author": "Forrest Church",
-    "quote": "Do what you can. Want what you have. Be who you are."
+    author: "Anais Nin",
+    quote:
+      "Age does not protect you from love. But love, to some extent, protects you from age.",
   },
   {
-    "author": "Coco Chanel",
-    "quote": "There are people who have money and people who are rich."
+    author: "Forrest Church",
+    quote: "Do what you can. Want what you have. Be who you are.",
   },
   {
-    "author": "",
-    "quote": "Why worry about tomorrow, when today is all we have?"
+    author: "Coco Chanel",
+    quote: "There are people who have money and people who are rich.",
   },
   {
-    "author": "Ambrose Bierce",
-    "quote": "Speak when you are angry and you will make the best speech you will ever regret."
+    author: "",
+    quote: "Why worry about tomorrow, when today is all we have?",
   },
   {
-    "author": "Henry Thoreau",
-    "quote": "Things do not change, we change."
+    author: "Ambrose Bierce",
+    quote:
+      "Speak when you are angry and you will make the best speech you will ever regret.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "The exercise of an extraordinary gift is the supremest pleasure in life."
+    author: "Henry Thoreau",
+    quote: "Things do not change, we change.",
   },
   {
-    "author": "Etty Hillesum",
-    "quote": "Sometimes the most important thing in a whole day is the rest we take between two deep breaths."
+    author: "Mark Twain",
+    quote:
+      "The exercise of an extraordinary gift is the supremest pleasure in life.",
   },
   {
-    "author": "Mohandas Gandhi",
-    "quote": "Forgiveness is choosing to love. It is the first skill of self-giving love."
+    author: "Etty Hillesum",
+    quote:
+      "Sometimes the most important thing in a whole day is the rest we take between two deep breaths.",
   },
   {
-    "author": "William Londen",
-    "quote": "To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."
+    author: "Mohandas Gandhi",
+    quote:
+      "Forgiveness is choosing to love. It is the first skill of self-giving love.",
   },
   {
-    "author": "",
-    "quote": "Most smiles are started by another smile."
+    author: "William Londen",
+    quote:
+      "To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Nothing is softer or more flexible than water, yet nothing can resist it."
+    author: "",
+    quote: "Most smiles are started by another smile.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "It is difficult to achieve a spirit of genuine cooperation as long as people remain indifferent to the feelings and happiness of others."
+    author: "Lao Tzu",
+    quote:
+      "Nothing is softer or more flexible than water, yet nothing can resist it.",
   },
   {
-    "author": "Benjamin Franklin",
-    "quote": "Experience keeps a dear school, but fools will learn in no other."
+    author: "Dalai Lama",
+    quote:
+      "It is difficult to achieve a spirit of genuine cooperation as long as people remain indifferent to the feelings and happiness of others.",
   },
   {
-    "author": "Thornton Wilder",
-    "quote": "We can only be said to be alive in those moments when our hearts are conscious of our treasures."
+    author: "Benjamin Franklin",
+    quote: "Experience keeps a dear school, but fools will learn in no other.",
   },
   {
-    "author": "Confucius",
-    "quote": "Fine words and an insinuating appearance are seldom associated with true virtue"
+    author: "Thornton Wilder",
+    quote:
+      "We can only be said to be alive in those moments when our hearts are conscious of our treasures.",
   },
   {
-    "author": "Oliver Holmes",
-    "quote": "We do not quit playing because we grow old, we grow old because we quit playing."
+    author: "Confucius",
+    quote:
+      "Fine words and an insinuating appearance are seldom associated with true virtue",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "You can't choose up sides on a round world."
+    author: "Oliver Holmes",
+    quote:
+      "We do not quit playing because we grow old, we grow old because we quit playing.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "Kindness is the language which the deaf can hear and the blind can see."
+    author: "Wayne Dyer",
+    quote: "You can't choose up sides on a round world.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "I may not know everything, but everything is not known yet anyway."
+    author: "Mark Twain",
+    quote:
+      "Kindness is the language which the deaf can hear and the blind can see.",
   },
   {
-    "author": "Buddha",
-    "quote": "If we could see the miracle of a single flower clearly, our whole life would change."
+    author: "Byron Pulsifer",
+    quote: "I may not know everything, but everything is not known yet anyway.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Without this playing with fantasy no creative work has ever yet come to birth. The debt we owe to the play of the imagination is incalculable."
+    author: "Buddha",
+    quote:
+      "If we could see the miracle of a single flower clearly, our whole life would change.",
   },
   {
-    "author": "Buddha",
-    "quote": "You cannot travel the path until you have become the path itself."
+    author: "Carl Jung",
+    quote:
+      "Without this playing with fantasy no creative work has ever yet come to birth. The debt we owe to the play of the imagination is incalculable.",
   },
   {
-    "author": "Theodore Roosevelt",
-    "quote": "Keep your eyes on the stars and your feet on the ground."
+    author: "Buddha",
+    quote: "You cannot travel the path until you have become the path itself.",
   },
   {
-    "author": "William White",
-    "quote": "I am not afraid of tomorrow, for I have seen yesterday and I love today."
+    author: "Theodore Roosevelt",
+    quote: "Keep your eyes on the stars and your feet on the ground.",
   },
   {
-    "author": "Jamie Paolinetti",
-    "quote": "Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless."
+    author: "William White",
+    quote:
+      "I am not afraid of tomorrow, for I have seen yesterday and I love today.",
   },
   {
-    "author": "",
-    "quote": "When you lose, don't lose the lesson."
+    author: "Jamie Paolinetti",
+    quote:
+      "Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "If you want a thing done well, do it yourself."
+    author: "",
+    quote: "When you lose, don't lose the lesson.",
   },
   {
-    "author": "Eriksson",
-    "quote": "The greatest barrier to success is the fear of failure."
+    author: "Napoleon Bonaparte",
+    quote: "If you want a thing done well, do it yourself.",
   },
   {
-    "author": "John Ruskin",
-    "quote": "Sunshine is delicious, rain is refreshing, wind braces us up, snow is exhilarating; there is really no such thing as bad weather, only different kinds of good weather."
+    author: "Eriksson",
+    quote: "The greatest barrier to success is the fear of failure.",
   },
   {
-    "author": "Joe Namath",
-    "quote": "If you aren't going all the way, why go at all?"
+    author: "John Ruskin",
+    quote:
+      "Sunshine is delicious, rain is refreshing, wind braces us up, snow is exhilarating; there is really no such thing as bad weather, only different kinds of good weather.",
   },
   {
-    "author": "Confucius",
-    "quote": "Our greatest glory is not in never falling, but in rising every time we fall."
+    author: "Joe Namath",
+    quote: "If you aren't going all the way, why go at all?",
   },
   {
-    "author": "Pierre Abelard",
-    "quote": "The beginning of wisdom is found in doubting; by doubting we come to the question, and by seeking we may come upon the truth."
+    author: "Confucius",
+    quote:
+      "Our greatest glory is not in never falling, but in rising every time we fall.",
   },
   {
-    "author": "",
-    "quote": "If I could reach up and hold a star for every time you've made me smile, the entire evening sky would be in the palm of my hand."
+    author: "Pierre Abelard",
+    quote:
+      "The beginning of wisdom is found in doubting; by doubting we come to the question, and by seeking we may come upon the truth.",
   },
   {
-    "author": "Buddha",
-    "quote": "We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow that never leaves."
+    author: "",
+    quote:
+      "If I could reach up and hold a star for every time you've made me smile, the entire evening sky would be in the palm of my hand.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "Stay committed to your decisions, but stay flexible in your approach."
+    author: "Buddha",
+    quote:
+      "We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow that never leaves.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "An optimist is a person who sees a green light everywhere, while the pessimist sees only the red spotlight... The truly wise person is colour-blind."
+    author: "Tony Robbins",
+    quote:
+      "Stay committed to your decisions, but stay flexible in your approach.",
   },
   {
-    "author": "Donald Trump",
-    "quote": "What separates the winners from the losers is how a person reacts to each new twist of fate."
+    author: "Albert Schweitzer",
+    quote:
+      "An optimist is a person who sees a green light everywhere, while the pessimist sees only the red spotlight... The truly wise person is colour-blind.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Each man has his own vocation; his talent is his call. There is one direction in which all space is open to him."
+    author: "Donald Trump",
+    quote:
+      "What separates the winners from the losers is how a person reacts to each new twist of fate.",
   },
   {
-    "author": "Dhammapada",
-    "quote": "Just as a flower, which seems beautiful has color but no perfume, so are the fruitless words of a man who speaks them but does them not."
+    author: "Ralph Emerson",
+    quote:
+      "Each man has his own vocation; his talent is his call. There is one direction in which all space is open to him.",
   },
   {
-    "author": "William James",
-    "quote": "To change ones life, start immediately, do it flamboyantly, no exceptions."
+    author: "Dhammapada",
+    quote:
+      "Just as a flower, which seems beautiful has color but no perfume, so are the fruitless words of a man who speaks them but does them not.",
   },
   {
-    "author": "John F. Kennedy",
-    "quote": "As we express our gratitude, we must never forget that the highest appreciation is not to utter words, but to live by them."
+    author: "William James",
+    quote:
+      "To change ones life, start immediately, do it flamboyantly, no exceptions.",
   },
   {
-    "author": "Booker Washington",
-    "quote": "The world cares very little about what a man or woman knows; it is what a man or woman is able to do that counts."
+    author: "John F. Kennedy",
+    quote:
+      "As we express our gratitude, we must never forget that the highest appreciation is not to utter words, but to live by them.",
   },
   {
-    "author": "",
-    "quote": "The steeper the mountain the harder the climb the better the view from the finishing line"
+    author: "Booker Washington",
+    quote:
+      "The world cares very little about what a man or woman knows; it is what a man or woman is able to do that counts.",
   },
   {
-    "author": "Dr. David M. Burns",
-    "quote": "Aim for success, not perfection. Never give up your right to be wrong, because then you will lose the ability to learn new things and move forward with your life."
+    author: "",
+    quote:
+      "The steeper the mountain the harder the climb the better the view from the finishing line",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "When I let go of what I am, I become what I might be."
+    author: "Dr. David M. Burns",
+    quote:
+      "Aim for success, not perfection. Never give up your right to be wrong, because then you will lose the ability to learn new things and move forward with your life.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Transformation does not start with some one else changing you; transformation is an inner self reworking of what you are now to what you will be."
+    author: "Lao Tzu",
+    quote: "When I let go of what I am, I become what I might be.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Time is not a measure the length of a day or month or year but more a measure of what you have accomplished."
+    author: "Byron Pulsifer",
+    quote:
+      "Transformation does not start with some one else changing you; transformation is an inner self reworking of what you are now to what you will be.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Wherever a man may happen to turn, whatever a man may undertake, he will always end up by returning to the path which nature has marked out for him."
+    author: "Byron Pulsifer",
+    quote:
+      "Time is not a measure the length of a day or month or year but more a measure of what you have accomplished.",
   },
   {
-    "author": "Buddha",
-    "quote": "Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "Wherever a man may happen to turn, whatever a man may undertake, he will always end up by returning to the path which nature has marked out for him.",
   },
   {
-    "author": "African proverb",
-    "quote": "When there is no enemy within, the enemies outside cannot hurt you."
+    author: "Buddha",
+    quote:
+      "Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who controls others may be powerful, but he who has mastered himself is mightier still."
+    author: "African proverb",
+    quote:
+      "When there is no enemy within, the enemies outside cannot hurt you.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "There is no scarcity of opportunity to make a living at what you love; theres only scarcity of resolve to make it happen."
+    author: "Lao Tzu",
+    quote:
+      "He who controls others may be powerful, but he who has mastered himself is mightier still.",
   },
   {
-    "author": "Wolfgang Amadeus Mozart",
-    "quote": "Neither a lofty degree of intelligence nor imagination nor both together go to the making of genius. Love, love, love, that is the soul of genius."
+    author: "Wayne Dyer",
+    quote:
+      "There is no scarcity of opportunity to make a living at what you love; theres only scarcity of resolve to make it happen.",
   },
   {
-    "author": "H. Bertram Lewis",
-    "quote": "The happy and efficient people in this world are those who accept trouble as a normal detail of human life and resolve to capitalize it when it comes along."
+    author: "Wolfgang Amadeus Mozart",
+    quote:
+      "Neither a lofty degree of intelligence nor imagination nor both together go to the making of genius. Love, love, love, that is the soul of genius.",
   },
   {
-    "author": "Saul Alinsky",
-    "quote": "As an organizer I start from where the world is, as it is, not as I would like it to be."
+    author: "H. Bertram Lewis",
+    quote:
+      "The happy and efficient people in this world are those who accept trouble as a normal detail of human life and resolve to capitalize it when it comes along.",
   },
   {
-    "author": "Zig Ziglar",
-    "quote": "You are the only person on Earth who can use your ability."
+    author: "Saul Alinsky",
+    quote:
+      "As an organizer I start from where the world is, as it is, not as I would like it to be.",
   },
   {
-    "author": "",
-    "quote": "Don't let what you can't do stop you from doing what you can do."
+    author: "Zig Ziglar",
+    quote: "You are the only person on Earth who can use your ability.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Complaining doesn't change a thing only taking action does."
+    author: "",
+    quote: "Don't let what you can't do stop you from doing what you can do.",
   },
   {
-    "author": "Charles A. Lindbergh",
-    "quote": "Life a culmination of the past, an awareness of the present, an indication of the future beyond knowledge, the quality that gives a touch of divinity to matter."
+    author: "Byron Pulsifer",
+    quote: "Complaining doesn't change a thing only taking action does.",
   },
   {
-    "author": "Robert Brault",
-    "quote": "Enjoy the little things, for one day you may look back and realize they were the big things."
+    author: "Charles A. Lindbergh",
+    quote:
+      "Life a culmination of the past, an awareness of the present, an indication of the future beyond knowledge, the quality that gives a touch of divinity to matter.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "With every experience, you alone are painting your own canvas, thought by thought, choice by choice."
+    author: "Robert Brault",
+    quote:
+      "Enjoy the little things, for one day you may look back and realize they were the big things.",
   },
   {
-    "author": "Rumi",
-    "quote": "Let the beauty of what you love be what you do."
+    author: "Oprah Winfrey",
+    quote:
+      "With every experience, you alone are painting your own canvas, thought by thought, choice by choice.",
   },
   {
-    "author": "Epictetus",
-    "quote": "The world turns aside to let any man pass who knows where he is going."
+    author: "Rumi",
+    quote: "Let the beauty of what you love be what you do.",
   },
   {
-    "author": "Kahlil Gibran",
-    "quote": "Beauty is not in the face; beauty is a light in the heart."
+    author: "Epictetus",
+    quote:
+      "The world turns aside to let any man pass who knows where he is going.",
   },
   {
-    "author": "John Lubbock",
-    "quote": "A day of worry is more exhausting than a day of work."
+    author: "Kahlil Gibran",
+    quote: "Beauty is not in the face; beauty is a light in the heart.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Truth, and goodness, and beauty are but different faces of the same all."
+    author: "John Lubbock",
+    quote: "A day of worry is more exhausting than a day of work.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "To be great is to be misunderstood."
+    author: "Ralph Emerson",
+    quote:
+      "Truth, and goodness, and beauty are but different faces of the same all.",
   },
   {
-    "author": "Alfred Adler",
-    "quote": "Trust only movement. Life happens at the level of events, not of words. Trust movement."
+    author: "Ralph Emerson",
+    quote: "To be great is to be misunderstood.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "Never, never, never give up."
+    author: "Alfred Adler",
+    quote:
+      "Trust only movement. Life happens at the level of events, not of words. Trust movement.",
   },
   {
-    "author": "André Gide",
-    "quote": "The most decisive actions of our life... are most often unconsidered actions."
+    author: "Winston Churchill",
+    quote: "Never, never, never give up.",
   },
   {
-    "author": "Robert Schuller",
-    "quote": "As we grow as unique persons, we learn to respect the uniqueness of others."
+    author: "André Gide",
+    quote:
+      "The most decisive actions of our life... are most often unconsidered actions.",
   },
   {
-    "author": "Robert Schuller",
-    "quote": "Failure doesn't mean you are a failure it just means you haven't succeeded yet."
+    author: "Robert Schuller",
+    quote:
+      "As we grow as unique persons, we learn to respect the uniqueness of others.",
   },
   {
-    "author": "Mahatma Gandhi",
-    "quote": "It is the quality of our work which will please God, not the quantity."
+    author: "Robert Schuller",
+    quote:
+      "Failure doesn't mean you are a failure it just means you haven't succeeded yet.",
   },
   {
-    "author": "Stephen Kaggwa",
-    "quote": "Try and fail, but don't fail to try."
+    author: "Mahatma Gandhi",
+    quote:
+      "It is the quality of our work which will please God, not the quantity.",
   },
   {
-    "author": "Epictetus",
-    "quote": "First say to yourself what you would be; and then do what you have to do."
+    author: "Stephen Kaggwa",
+    quote: "Try and fail, but don't fail to try.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Through pride we are ever deceiving ourselves. But deep down below the surface of the average conscience a still, small voice says to us, Something is out of tune."
+    author: "Epictetus",
+    quote:
+      "First say to yourself what you would be; and then do what you have to do.",
   },
   {
-    "author": "Epictetus",
-    "quote": "Keep silence for the most part, and speak only when you must, and then briefly."
+    author: "Carl Jung",
+    quote:
+      "Through pride we are ever deceiving ourselves. But deep down below the surface of the average conscience a still, small voice says to us, Something is out of tune.",
   },
   {
-    "author": "Percy Shelley",
-    "quote": "Fear not for the future, weep not for the past."
+    author: "Epictetus",
+    quote:
+      "Keep silence for the most part, and speak only when you must, and then briefly.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "We are Divine enough to ask and we are important enough to receive."
+    author: "Percy Shelley",
+    quote: "Fear not for the future, weep not for the past.",
   },
   {
-    "author": "Korean proverb",
-    "quote": "If you kick a stone in anger, you'll hurt your own foot."
+    author: "Wayne Dyer",
+    quote:
+      "We are Divine enough to ask and we are important enough to receive.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "To see things in the seed, that is genius."
+    author: "Korean proverb",
+    quote: "If you kick a stone in anger, you'll hurt your own foot.",
   },
   {
-    "author": "Bertrand Russell",
-    "quote": "The happiness that is genuinely satisfying is accompanied by the fullest exercise of our faculties and the fullest realization of the world in which we live."
+    author: "Lao Tzu",
+    quote: "To see things in the seed, that is genius.",
   },
   {
-    "author": "Douglas Adams",
-    "quote": "Human beings, who are almost unique in having the ability to learn from the experience of others, are also remarkable for their apparent disinclination to do so."
+    author: "Bertrand Russell",
+    quote:
+      "The happiness that is genuinely satisfying is accompanied by the fullest exercise of our faculties and the fullest realization of the world in which we live.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Make the most of yourself, for that is all there is of you."
+    author: "Douglas Adams",
+    quote:
+      "Human beings, who are almost unique in having the ability to learn from the experience of others, are also remarkable for their apparent disinclination to do so.",
   },
   {
-    "author": "Muriel Rukeyser",
-    "quote": "The universe is made of stories, not atoms."
+    author: "Ralph Emerson",
+    quote: "Make the most of yourself, for that is all there is of you.",
   },
   {
-    "author": "Frank Wright",
-    "quote": "Respect should be earned by actions, and not acquired by years."
+    author: "Muriel Rukeyser",
+    quote: "The universe is made of stories, not atoms.",
   },
   {
-    "author": "Confucius",
-    "quote": "I hear and I forget. I see and I remember. I do and I understand."
+    author: "Frank Wright",
+    quote: "Respect should be earned by actions, and not acquired by years.",
   },
   {
-    "author": "Will Durant",
-    "quote": "The trouble with most people is that they think with their hopes or fears or wishes rather than with their minds."
+    author: "Confucius",
+    quote: "I hear and I forget. I see and I remember. I do and I understand.",
   },
   {
-    "author": "Chuck Norris",
-    "quote": "A lot of people give up just before theyre about to make it. You know you never know when that next obstacle is going to be the last one."
+    author: "Will Durant",
+    quote:
+      "The trouble with most people is that they think with their hopes or fears or wishes rather than with their minds.",
   },
   {
-    "author": "Lauren Raffo",
-    "quote": "Sometimes the biggest act of courage is a small one."
+    author: "Chuck Norris",
+    quote:
+      "A lot of people give up just before theyre about to make it. You know you never know when that next obstacle is going to be the last one.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "People are not lazy. They simply have impotent goals — that is, goals that do not inspire them."
+    author: "Lauren Raffo",
+    quote: "Sometimes the biggest act of courage is a small one.",
   },
   {
-    "author": "Eckhart Tolle",
-    "quote": "You do not become good by trying to be good, but by finding the goodness that is already within you."
+    author: "Tony Robbins",
+    quote:
+      "People are not lazy. They simply have impotent goals — that is, goals that do not inspire them.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Waste no more time arguing about what a good man should be. Be one."
+    author: "Eckhart Tolle",
+    quote:
+      "You do not become good by trying to be good, but by finding the goodness that is already within you.",
   },
   {
-    "author": "John Barrymore",
-    "quote": "Happiness often sneaks in through a door you didn't know you left open."
+    author: "Marcus Aurelius",
+    quote:
+      "Waste no more time arguing about what a good man should be. Be one.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "There are basically two types of people. People who accomplish things, and people who claim to have accomplished things. The first group is less crowded."
+    author: "John Barrymore",
+    quote:
+      "Happiness often sneaks in through a door you didn't know you left open.",
   },
   {
-    "author": "Winifred Holtby",
-    "quote": "The things that one most wants to do are the things that are probably most worth doing."
+    author: "Mark Twain",
+    quote:
+      "There are basically two types of people. People who accomplish things, and people who claim to have accomplished things. The first group is less crowded.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Always bear in mind that your own resolution to succeed is more important than any one thing."
+    author: "Winifred Holtby",
+    quote:
+      "The things that one most wants to do are the things that are probably most worth doing.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Setting an example is not the main means of influencing another, it is the only means."
+    author: "Abraham Lincoln",
+    quote:
+      "Always bear in mind that your own resolution to succeed is more important than any one thing.",
   },
   {
-    "author": "Richard Garriott",
-    "quote": "Chaos and Order are not enemies, only opposites."
+    author: "Albert Einstein",
+    quote:
+      "Setting an example is not the main means of influencing another, it is the only means.",
   },
   {
-    "author": "Henry Longfellow",
-    "quote": "Perseverance is a great element of success. If you only knock long enough and loud enough at the gate, you are sure to wake up somebody."
+    author: "Richard Garriott",
+    quote: "Chaos and Order are not enemies, only opposites.",
   },
   {
-    "author": "Harriet Lerner",
-    "quote": "Only through our connectedness to others can we really know and enhance the self. And only through working on the self can we begin to enhance our connectedness to others."
+    author: "Henry Longfellow",
+    quote:
+      "Perseverance is a great element of success. If you only knock long enough and loud enough at the gate, you are sure to wake up somebody.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "He who deliberates fully before taking a step will spend his entire life on one leg."
+    author: "Harriet Lerner",
+    quote:
+      "Only through our connectedness to others can we really know and enhance the self. And only through working on the self can we begin to enhance our connectedness to others.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Peace begins with a smile."
+    author: "Chinese proverb",
+    quote:
+      "He who deliberates fully before taking a step will spend his entire life on one leg.",
   },
   {
-    "author": "Doug Horton",
-    "quote": "Be your own hero, it's cheaper than a movie ticket."
+    author: "Mother Teresa",
+    quote: "Peace begins with a smile.",
   },
   {
-    "author": "Maori proverb",
-    "quote": "Turn your face toward the sun and the shadows will fall behind you."
+    author: "Doug Horton",
+    quote: "Be your own hero, it's cheaper than a movie ticket.",
   },
   {
-    "author": "Jack Buck",
-    "quote": "Things turn out best for those who make the best of the way things turn out."
+    author: "Maori proverb",
+    quote:
+      "Turn your face toward the sun and the shadows will fall behind you.",
   },
   {
-    "author": "Whoopi Goldberg",
-    "quote": "Were here for a reason. I believe a bit of the reason is to throw little torches out to lead people through the dark."
+    author: "Jack Buck",
+    quote:
+      "Things turn out best for those who make the best of the way things turn out.",
   },
   {
-    "author": "Anthony Robbins",
-    "quote": "To effectively communicate, we must realize that we are all different in the way we perceive the world and use this understanding as a guide to our communication with others."
+    author: "Whoopi Goldberg",
+    quote:
+      "Were here for a reason. I believe a bit of the reason is to throw little torches out to lead people through the dark.",
   },
   {
-    "author": "Confucius",
-    "quote": "Ability will never catch up with the demand for it."
+    author: "Anthony Robbins",
+    quote:
+      "To effectively communicate, we must realize that we are all different in the way we perceive the world and use this understanding as a guide to our communication with others.",
   },
   {
-    "author": "Albert Schweitzer",
-    "quote": "Never say there is nothing beautiful in the world any more. There is always something to make you wonder in the shape of a tree, the trembling of a leaf."
+    author: "Confucius",
+    quote: "Ability will never catch up with the demand for it.",
   },
   {
-    "author": "Henry Reed",
-    "quote": "Intuition is the very force or activity of the soul in its experience through whatever has been the experience of the soul itself."
+    author: "Albert Schweitzer",
+    quote:
+      "Never say there is nothing beautiful in the world any more. There is always something to make you wonder in the shape of a tree, the trembling of a leaf.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "Setting goals is the first step in turning the invisible into the visible."
+    author: "Henry Reed",
+    quote:
+      "Intuition is the very force or activity of the soul in its experience through whatever has been the experience of the soul itself.",
   },
   {
-    "author": "Pat Riley",
-    "quote": "Courage is not the absence of fear, but simply moving on with dignity despite that fear."
+    author: "Tony Robbins",
+    quote:
+      "Setting goals is the first step in turning the invisible into the visible.",
   },
   {
-    "author": "Galileo Galilei",
-    "quote": "All truths are easy to understand once they are discovered; the point is to discover them."
+    author: "Pat Riley",
+    quote:
+      "Courage is not the absence of fear, but simply moving on with dignity despite that fear.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "The smallest act of kindness is worth more than the grandest intention."
+    author: "Galileo Galilei",
+    quote:
+      "All truths are easy to understand once they are discovered; the point is to discover them.",
   },
   {
-    "author": "Margaret Wheatley",
-    "quote": "We know from science that nothing in the universe exists as an isolated or independent entity."
+    author: "Oscar Wilde",
+    quote:
+      "The smallest act of kindness is worth more than the grandest intention.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Everything in the universe goes by indirection. There are no straight lines."
+    author: "Margaret Wheatley",
+    quote:
+      "We know from science that nothing in the universe exists as an isolated or independent entity.",
   },
   {
-    "author": "George Eliot",
-    "quote": "What do we live for, if it is not to make life less difficult for each other?"
+    author: "Ralph Emerson",
+    quote:
+      "Everything in the universe goes by indirection. There are no straight lines.",
   },
   {
-    "author": "Tenzin Gyatso",
-    "quote": "When we feel love and kindness toward others, it not only makes others feel loved and cared for, but it helps us also to develop inner happiness and peace."
+    author: "George Eliot",
+    quote:
+      "What do we live for, if it is not to make life less difficult for each other?",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "We may encounter many defeats but we must not be defeated."
+    author: "Tenzin Gyatso",
+    quote:
+      "When we feel love and kindness toward others, it not only makes others feel loved and cared for, but it helps us also to develop inner happiness and peace.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Every person, all the events of your life are there because you have drawn them there. What you choose to do with them is up to you."
+    author: "Maya Angelou",
+    quote: "We may encounter many defeats but we must not be defeated.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Logic will get you from A to B. Imagination will take you everywhere."
+    author: "Richard Bach",
+    quote:
+      "Every person, all the events of your life are there because you have drawn them there. What you choose to do with them is up to you.",
   },
   {
-    "author": "Sarah Breathnach",
-    "quote": "Our deepest wishes are whispers of our authentic selves. We must learn to respect them. We must learn to listen."
+    author: "Albert Einstein",
+    quote:
+      "Logic will get you from A to B. Imagination will take you everywhere.",
   },
   {
-    "author": "Henry Thoreau",
-    "quote": "The world is but a canvas to the imagination."
+    author: "Sarah Breathnach",
+    quote:
+      "Our deepest wishes are whispers of our authentic selves. We must learn to respect them. We must learn to listen.",
   },
   {
-    "author": "Lisa Alther",
-    "quote": "Thats the risk you take if you change: that people you've been involved with won't like the new you. But other people who do will come along."
+    author: "Henry Thoreau",
+    quote: "The world is but a canvas to the imagination.",
   },
   {
-    "author": "Walter Benjamin",
-    "quote": "To be happy is to be able to become aware of oneself without fright."
+    author: "Lisa Alther",
+    quote:
+      "Thats the risk you take if you change: that people you've been involved with won't like the new you. But other people who do will come along.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Strength to carry on despite the odds means you have faith in your own abilities and know how."
+    author: "Walter Benjamin",
+    quote:
+      "To be happy is to be able to become aware of oneself without fright.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Make the most of yourself for that is all there is of you."
+    author: "Byron Pulsifer",
+    quote:
+      "Strength to carry on despite the odds means you have faith in your own abilities and know how.",
   },
   {
-    "author": "Lama Yeshe",
-    "quote": "Be gentle first with yourself if you wish to be gentle with others."
+    author: "Ralph Emerson",
+    quote: "Make the most of yourself for that is all there is of you.",
   },
   {
-    "author": "Cardinal Retz",
-    "quote": "A man who doesn't trust himself can never really trust anyone else."
+    author: "Lama Yeshe",
+    quote:
+      "Be gentle first with yourself if you wish to be gentle with others.",
   },
   {
-    "author": "Benjamin Disraeli",
-    "quote": "We make our own fortunes and we call them fate."
+    author: "Cardinal Retz",
+    quote:
+      "A man who doesn't trust himself can never really trust anyone else.",
   },
   {
-    "author": "Vince Lombardi",
-    "quote": "Leaders aren't born they are made. And they are made just like anything else, through hard work. And that's the price well have to pay to achieve that goal, or any goal."
+    author: "Benjamin Disraeli",
+    quote: "We make our own fortunes and we call them fate.",
   },
   {
-    "author": "E. E. Cummings",
-    "quote": "It takes courage to grow up and become who you really are."
+    author: "Vince Lombardi",
+    quote:
+      "Leaders aren't born they are made. And they are made just like anything else, through hard work. And that's the price well have to pay to achieve that goal, or any goal.",
   },
   {
-    "author": "Og Mandino",
-    "quote": "Always seek out the seed of triumph in every adversity."
+    author: "E. E. Cummings",
+    quote: "It takes courage to grow up and become who you really are.",
   },
   {
-    "author": "Catherine Pulsifer",
-    "quote": "Rather than wishing for change, you first must be prepared to change."
+    author: "Og Mandino",
+    quote: "Always seek out the seed of triumph in every adversity.",
   },
   {
-    "author": "Buddha",
-    "quote": "I do not believe in a fate that falls on men however they act; but I do believe in a fate that falls on them unless they act."
+    author: "Catherine Pulsifer",
+    quote:
+      "Rather than wishing for change, you first must be prepared to change.",
   },
   {
-    "author": "Holmes",
-    "quote": "Fame usually comes to those who are thinking about something else."
+    author: "Buddha",
+    quote:
+      "I do not believe in a fate that falls on men however they act; but I do believe in a fate that falls on them unless they act.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "First comes thought; then organization of that thought, into ideas and plans; then transformation of those plans into reality. The beginning, as you will observe, is in your imagination."
+    author: "Holmes",
+    quote: "Fame usually comes to those who are thinking about something else.",
   },
   {
-    "author": "Confucius",
-    "quote": "The superior man acts before he speaks, and afterwards speaks according to his action."
+    author: "Napoleon Hill",
+    quote:
+      "First comes thought; then organization of that thought, into ideas and plans; then transformation of those plans into reality. The beginning, as you will observe, is in your imagination.",
   },
   {
-    "author": "Chinese proverb",
-    "quote": "A single conversation across the table with a wise person is worth a months study of books."
+    author: "Confucius",
+    quote:
+      "The superior man acts before he speaks, and afterwards speaks according to his action.",
   },
   {
-    "author": "Mohandas Gandhi",
-    "quote": "The difference between what we do and what we are capable of doing would suffice to solve most of the worlds problems."
+    author: "Chinese proverb",
+    quote:
+      "A single conversation across the table with a wise person is worth a months study of books.",
   },
   {
-    "author": "",
-    "quote": "You can never cross the ocean unless you have the courage to lose sight of the shore."
+    author: "Mohandas Gandhi",
+    quote:
+      "The difference between what we do and what we are capable of doing would suffice to solve most of the worlds problems.",
   },
   {
-    "author": "Vaclav Havel",
-    "quote": "Work for something because it is good, not just because it stands a chance to succeed."
+    author: "",
+    quote:
+      "You can never cross the ocean unless you have the courage to lose sight of the shore.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Knowledge rests not upon truth alone, but upon error also."
+    author: "Vaclav Havel",
+    quote:
+      "Work for something because it is good, not just because it stands a chance to succeed.",
   },
   {
-    "author": "Katherine Mansfield",
-    "quote": "Make it a rule of life never to regret and never to look back. Regret is an appalling waste of energy; you can't build on it; it's only for wallowing in."
+    author: "Carl Jung",
+    quote: "Knowledge rests not upon truth alone, but upon error also.",
   },
   {
-    "author": "Victoria Holt",
-    "quote": "Never regret. If it's good, it's wonderful. If it's bad, it's experience."
+    author: "Katherine Mansfield",
+    quote:
+      "Make it a rule of life never to regret and never to look back. Regret is an appalling waste of energy; you can't build on it; it's only for wallowing in.",
   },
   {
-    "author": "Chuang Tzu",
-    "quote": "When deeds and words are in accord, the whole world is transformed."
+    author: "Victoria Holt",
+    quote:
+      "Never regret. If it's good, it's wonderful. If it's bad, it's experience.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Kind words can be short and easy to speak but their echoes are truly endless."
+    author: "Chuang Tzu",
+    quote:
+      "When deeds and words are in accord, the whole world is transformed.",
   },
   {
-    "author": "William Blake",
-    "quote": "For everything that lives is holy, life delights in life."
+    author: "Mother Teresa",
+    quote:
+      "Kind words can be short and easy to speak but their echoes are truly endless.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "The most important thing is transforming our minds, for a new way of thinking, a new outlook: we should strive to develop a new inner world."
+    author: "William Blake",
+    quote: "For everything that lives is holy, life delights in life.",
   },
   {
-    "author": "Billie Armstrong",
-    "quote": "Our passion is our strength."
+    author: "Dalai Lama",
+    quote:
+      "The most important thing is transforming our minds, for a new way of thinking, a new outlook: we should strive to develop a new inner world.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "In rivers, the water that you touch is the last of what has passed and the first of that which comes; so with present time."
+    author: "Billie Armstrong",
+    quote: "Our passion is our strength.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Spring is a time for rebirth and the fulfilment of new life."
+    author: "Leonardo da Vinci",
+    quote:
+      "In rivers, the water that you touch is the last of what has passed and the first of that which comes; so with present time.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "There is nothing happens to any person but what was in his power to go through with."
+    author: "Byron Pulsifer",
+    quote: "Spring is a time for rebirth and the fulfilment of new life.",
   },
   {
-    "author": "Alfred Korzybski",
-    "quote": "There are two ways to slide easily through life: to believe everything or to doubt everything; both ways save us from thinking."
+    author: "Marcus Aurelius",
+    quote:
+      "There is nothing happens to any person but what was in his power to go through with.",
   },
   {
-    "author": "Alfred Whitehead",
-    "quote": "The art of progress is to preserve order amid change, and to preserve change amid order."
+    author: "Alfred Korzybski",
+    quote:
+      "There are two ways to slide easily through life: to believe everything or to doubt everything; both ways save us from thinking.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "We make a living by what we get, but we make a life by what we give."
+    author: "Alfred Whitehead",
+    quote:
+      "The art of progress is to preserve order amid change, and to preserve change amid order.",
   },
   {
-    "author": "Friedrich von Schiller",
-    "quote": "If you want to study yourself — look into the hearts of other people. If you want to study other people — look into your own heart."
+    author: "Winston Churchill",
+    quote:
+      "We make a living by what we get, but we make a life by what we give.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Maxim for life: You get treated in life the way you teach people to treat you."
+    author: "Friedrich von Schiller",
+    quote:
+      "If you want to study yourself — look into the hearts of other people. If you want to study other people — look into your own heart.",
   },
   {
-    "author": "Charlotte Perkins Gilman",
-    "quote": "The first duty of a human being is to assume the right functional relationship to society — more briefly, to find your real job, and do it."
+    author: "Wayne Dyer",
+    quote:
+      "Maxim for life: You get treated in life the way you teach people to treat you.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "The key to growth is the introduction of higher dimensions of consciousness into our awareness."
+    author: "Charlotte Perkins Gilman",
+    quote:
+      "The first duty of a human being is to assume the right functional relationship to society — more briefly, to find your real job, and do it.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Thought is the blossom; language the bud; action the fruit behind it."
+    author: "Lao Tzu",
+    quote:
+      "The key to growth is the introduction of higher dimensions of consciousness into our awareness.",
   },
   {
-    "author": "Daisaku Ikeda",
-    "quote": "True happiness means forging a strong spirit that is undefeated, no matter how trying our circumstances."
+    author: "Ralph Emerson",
+    quote:
+      "Thought is the blossom; language the bud; action the fruit behind it.",
   },
   {
-    "author": "Peter Drucker",
-    "quote": "There is nothing so useless as doing efficiently that which should not be done at all."
+    author: "Daisaku Ikeda",
+    quote:
+      "True happiness means forging a strong spirit that is undefeated, no matter how trying our circumstances.",
   },
   {
-    "author": "Leonardo da Vinci",
-    "quote": "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do."
+    author: "Peter Drucker",
+    quote:
+      "There is nothing so useless as doing efficiently that which should not be done at all.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "All the world is a stage, And all the men and women merely players.They have their exits and entrances; Each man in his time plays many parts."
+    author: "Leonardo da Vinci",
+    quote:
+      "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do.",
   },
   {
-    "author": "Nelson Mandela",
-    "quote": "As we are liberated from our own fear, our presence automatically liberates others."
+    author: "William Shakespeare",
+    quote:
+      "All the world is a stage, And all the men and women merely players.They have their exits and entrances; Each man in his time plays many parts.",
   },
   {
-    "author": "James Yorke",
-    "quote": "The most successful people are those who are good at plan B."
+    author: "Nelson Mandela",
+    quote:
+      "As we are liberated from our own fear, our presence automatically liberates others.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Criticism is something you can easily avoid by saying nothing, doing nothing, and being nothing."
+    author: "James Yorke",
+    quote: "The most successful people are those who are good at plan B.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "To fly as fast as thought, you must begin by knowing that you have already arrived."
+    author: "Aristotle",
+    quote:
+      "Criticism is something you can easily avoid by saying nothing, doing nothing, and being nothing.",
   },
   {
-    "author": "Hannah More",
-    "quote": "Obstacles are those things you see when you take your eyes off the goal."
+    author: "Richard Bach",
+    quote:
+      "To fly as fast as thought, you must begin by knowing that you have already arrived.",
   },
   {
-    "author": "Michelangelo",
-    "quote": "The greatest danger for most of us is not that our aim is too high and we miss it, but that it is too low and we reach it."
+    author: "Hannah More",
+    quote:
+      "Obstacles are those things you see when you take your eyes off the goal.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Great ideas often receive violent opposition from mediocre minds."
+    author: "Michelangelo",
+    quote:
+      "The greatest danger for most of us is not that our aim is too high and we miss it, but that it is too low and we reach it.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "We can change our lives. We can do, have, and be exactly what we wish."
+    author: "Albert Einstein",
+    quote: "Great ideas often receive violent opposition from mediocre minds.",
   },
   {
-    "author": "Zig Ziglar",
-    "quote": "You are the only person on earth who can use your ability."
+    author: "Tony Robbins",
+    quote:
+      "We can change our lives. We can do, have, and be exactly what we wish.",
   },
   {
-    "author": "Jean Lacordaire",
-    "quote": "Neither genius, fame, nor love show the greatness of the soul. Only kindness can do that."
+    author: "Zig Ziglar",
+    quote: "You are the only person on earth who can use your ability.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "The least of things with a meaning is worth more in life than the greatest of things without it."
+    author: "Jean Lacordaire",
+    quote:
+      "Neither genius, fame, nor love show the greatness of the soul. Only kindness can do that.",
   },
   {
-    "author": "Isocrates",
-    "quote": "The noblest worship is to make yourself as good and as just as you can."
+    author: "Carl Jung",
+    quote:
+      "The least of things with a meaning is worth more in life than the greatest of things without it.",
   },
   {
-    "author": "Carl Bard",
-    "quote": "Though no one can go back and make a brand new start, anyone can start from not and make a brand new ending."
+    author: "Isocrates",
+    quote:
+      "The noblest worship is to make yourself as good and as just as you can.",
   },
   {
-    "author": "Denis Waitley",
-    "quote": "A dream is your creative vision for your life in the future. You must break out of your current comfort zone and become comfortable with the unfamiliar and the unknown."
+    author: "Carl Bard",
+    quote:
+      "Though no one can go back and make a brand new start, anyone can start from not and make a brand new ending.",
   },
   {
-    "author": "Robert Orben",
-    "quote": "Don't think of it as failure. Think of it as time-released success."
+    author: "Denis Waitley",
+    quote:
+      "A dream is your creative vision for your life in the future. You must break out of your current comfort zone and become comfortable with the unfamiliar and the unknown.",
   },
   {
-    "author": "Aristotle",
-    "quote": "We are what we repeatedly do. Excellence, then, is not an act but a habit."
+    author: "Robert Orben",
+    quote:
+      "Don't think of it as failure. Think of it as time-released success.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "I walk slowly, but I never walk backward."
+    author: "Aristotle",
+    quote:
+      "We are what we repeatedly do. Excellence, then, is not an act but a habit.",
   },
   {
-    "author": "Rene Descartes",
-    "quote": "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
+    author: "Abraham Lincoln",
+    quote: "I walk slowly, but I never walk backward.",
   },
   {
-    "author": "",
-    "quote": "The best place to find a helping hand is at the end of your own arm."
+    author: "Rene Descartes",
+    quote:
+      "Divide each difficulty into as many parts as is feasible and necessary to resolve it.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "We know the truth, not only by the reason, but by the heart."
+    author: "",
+    quote:
+      "The best place to find a helping hand is at the end of your own arm.",
   },
   {
-    "author": "Kahlil Gibran",
-    "quote": "We choose our joys and sorrows long before we experience them."
+    author: "Blaise Pascal",
+    quote: "We know the truth, not only by the reason, but by the heart.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "Anybody can make history. Only a great man can write it."
+    author: "Kahlil Gibran",
+    quote: "We choose our joys and sorrows long before we experience them.",
   },
   {
-    "author": "Hermann Hesse",
-    "quote": "If I know what love is, it is because of you."
+    author: "Oscar Wilde",
+    quote: "Anybody can make history. Only a great man can write it.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Allow the world to live as it chooses, and allow yourself to live as you choose."
+    author: "Hermann Hesse",
+    quote: "If I know what love is, it is because of you.",
   },
   {
-    "author": "Barack Obama",
-    "quote": "Focusing your life solely on making a buck shows a poverty of ambition. It asks too little of yourself. And it will leave you unfulfilled."
+    author: "Richard Bach",
+    quote:
+      "Allow the world to live as it chooses, and allow yourself to live as you choose.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Compassion and happiness are not a sign of weakness but a sign of strength."
+    author: "Barack Obama",
+    quote:
+      "Focusing your life solely on making a buck shows a poverty of ambition. It asks too little of yourself. And it will leave you unfulfilled.",
   },
   {
-    "author": "Franklin D. Roosevelt",
-    "quote": "It is common sense to take a method and try it. If it fails, admit it frankly and try another. But above all, try something."
+    author: "Dalai Lama",
+    quote:
+      "Compassion and happiness are not a sign of weakness but a sign of strength.",
   },
   {
-    "author": "David Bader",
-    "quote": "Be here now. Be someplace else later. Is that so complicated?"
+    author: "Franklin D. Roosevelt",
+    quote:
+      "It is common sense to take a method and try it. If it fails, admit it frankly and try another. But above all, try something.",
   },
   {
-    "author": "Mahummad Ali",
-    "quote": "To be able to give away riches is mandatory if you wish to possess them. This is the only way that you will be truly rich."
+    author: "David Bader",
+    quote: "Be here now. Be someplace else later. Is that so complicated?",
   },
   {
-    "author": "Confucius",
-    "quote": "Learning without reflection is a waste, reflection without learning is dangerous."
+    author: "Mahummad Ali",
+    quote:
+      "To be able to give away riches is mandatory if you wish to possess them. This is the only way that you will be truly rich.",
   },
   {
-    "author": "",
-    "quote": "Don't fear failure so much that you refuse to try new things. The saddest summary of life contains three descriptions: could have, might have, and should have."
+    author: "Confucius",
+    quote:
+      "Learning without reflection is a waste, reflection without learning is dangerous.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "All fixed set patterns are incapable of adaptability or pliability. The truth is outside of all fixed patterns."
+    author: "",
+    quote:
+      "Don't fear failure so much that you refuse to try new things. The saddest summary of life contains three descriptions: could have, might have, and should have.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "I don't believe in failure. It's not failure if you enjoyed the process."
+    author: "Bruce Lee",
+    quote:
+      "All fixed set patterns are incapable of adaptability or pliability. The truth is outside of all fixed patterns.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "The best and most beautiful things in the world cannot be seen, nor touched... but are felt in the heart."
+    author: "Oprah Winfrey",
+    quote:
+      "I don't believe in failure. It's not failure if you enjoyed the process.",
   },
   {
-    "author": "David Rockefeller",
-    "quote": "Success in business requires training and discipline and hard work. But if you're not frightened by these things, the opportunities are just as great today as they ever were."
+    author: "Helen Keller",
+    quote:
+      "The best and most beautiful things in the world cannot be seen, nor touched... but are felt in the heart.",
   },
   {
-    "author": "Cavour",
-    "quote": "The man who trusts men will make fewer mistakes than he who distrusts them."
+    author: "David Rockefeller",
+    quote:
+      "Success in business requires training and discipline and hard work. But if you're not frightened by these things, the opportunities are just as great today as they ever were.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "The less effort, the faster and more powerful you will be."
+    author: "Cavour",
+    quote:
+      "The man who trusts men will make fewer mistakes than he who distrusts them.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "We must be as courteous to a man as we are to a picture, which we are willing to give the advantage of a good light."
+    author: "Bruce Lee",
+    quote: "The less effort, the faster and more powerful you will be.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "The dream was always running ahead of me. To catch up, to live for a moment in unison with it, that was the miracle."
+    author: "Ralph Emerson",
+    quote:
+      "We must be as courteous to a man as we are to a picture, which we are willing to give the advantage of a good light.",
   },
   {
-    "author": "Ellen Parr",
-    "quote": "The cure for boredom is curiosity. There is no cure for curiosity."
+    author: "Anais Nin",
+    quote:
+      "The dream was always running ahead of me. To catch up, to live for a moment in unison with it, that was the miracle.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "We can do no great things, only small things with great love."
+    author: "Ellen Parr",
+    quote: "The cure for boredom is curiosity. There is no cure for curiosity.",
   },
   {
-    "author": "Kahlil Gibran",
-    "quote": "Be like the flower, turn your face to the sun."
+    author: "Mother Teresa",
+    quote: "We can do no great things, only small things with great love.",
   },
   {
-    "author": "Buddha",
-    "quote": "Remembering a wrong is like carrying a burden on the mind."
+    author: "Kahlil Gibran",
+    quote: "Be like the flower, turn your face to the sun.",
   },
   {
-    "author": "James Openheim",
-    "quote": "The foolish man seeks happiness in the distance; the wise grows it under his feet."
+    author: "Buddha",
+    quote: "Remembering a wrong is like carrying a burden on the mind.",
   },
   {
-    "author": "Henry Beecher",
-    "quote": "Gratitude is the fairest blossom which springs from the soul."
+    author: "James Openheim",
+    quote:
+      "The foolish man seeks happiness in the distance; the wise grows it under his feet.",
   },
   {
-    "author": "Confucius",
-    "quote": "If you look into your own heart, and you find nothing wrong there, what is there to worry about? What is there to fear?"
+    author: "Henry Beecher",
+    quote: "Gratitude is the fairest blossom which springs from the soul.",
   },
   {
-    "author": "John Acosta",
-    "quote": "You cannot have what you do not want."
+    author: "Confucius",
+    quote:
+      "If you look into your own heart, and you find nothing wrong there, what is there to worry about? What is there to fear?",
   },
   {
-    "author": "Ralph Waldo Emerson",
-    "quote": "Do not follow where the path may lead. Go, instead, where there is no path and leave a trail."
+    author: "John Acosta",
+    quote: "You cannot have what you do not want.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "It is not fair to ask of others what you are unwilling to do yourself."
+    author: "Ralph Waldo Emerson",
+    quote:
+      "Do not follow where the path may lead. Go, instead, where there is no path and leave a trail.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Knowing your own darkness is the best method for dealing with the darknesses of other people."
+    author: "Eleanor Roosevelt",
+    quote:
+      "It is not fair to ask of others what you are unwilling to do yourself.",
   },
   {
-    "author": "Moncure Conway",
-    "quote": "The best thing in every noble dream is the dreamer..."
+    author: "Carl Jung",
+    quote:
+      "Knowing your own darkness is the best method for dealing with the darknesses of other people.",
   },
   {
-    "author": "Walt Disney",
-    "quote": "Weve got to have a dream if we are going to make a dream come true."
+    author: "Moncure Conway",
+    quote: "The best thing in every noble dream is the dreamer...",
   },
   {
-    "author": "Norman Peale",
-    "quote": "If you want things to be different, perhaps the answer is to become different yourself."
+    author: "Walt Disney",
+    quote:
+      "Weve got to have a dream if we are going to make a dream come true.",
   },
   {
-    "author": "Alexander the Great",
-    "quote": "There is nothing impossible to him who will try."
+    author: "Norman Peale",
+    quote:
+      "If you want things to be different, perhaps the answer is to become different yourself.",
   },
   {
-    "author": "Theodore Rubin",
-    "quote": "Kindness is more important than wisdom, and the recognition of this is the beginning of wisdom."
+    author: "Alexander the Great",
+    quote: "There is nothing impossible to him who will try.",
   },
   {
-    "author": "Harriet Tubman",
-    "quote": "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world."
+    author: "Theodore Rubin",
+    quote:
+      "Kindness is more important than wisdom, and the recognition of this is the beginning of wisdom.",
   },
   {
-    "author": "Buddha",
-    "quote": "The only real failure in life is not to be true to the best one knows."
+    author: "Harriet Tubman",
+    quote:
+      "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Anyone who doesn't take truth seriously in small matters cannot be trusted in large ones either."
+    author: "Buddha",
+    quote:
+      "The only real failure in life is not to be true to the best one knows.",
   },
   {
-    "author": "Barack Obama",
-    "quote": "Change will not come if we wait for some other person or some other time. We are the ones weve been waiting for. We are the change that we seek."
+    author: "Albert Einstein",
+    quote:
+      "Anyone who doesn't take truth seriously in small matters cannot be trusted in large ones either.",
   },
   {
-    "author": "George Santayan",
-    "quote": "Those who cannot learn from history are doomed to repeat it."
+    author: "Barack Obama",
+    quote:
+      "Change will not come if we wait for some other person or some other time. We are the ones weve been waiting for. We are the change that we seek.",
   },
   {
-    "author": "Carlos Castaneda",
-    "quote": "The trick is in what one emphasizes. We either make ourselves miserable, or we make ourselves happy. The amount of work is the same."
+    author: "George Santayan",
+    quote: "Those who cannot learn from history are doomed to repeat it.",
   },
   {
-    "author": "Seneca",
-    "quote": "Things that were hard to bear are sweet to remember."
+    author: "Carlos Castaneda",
+    quote:
+      "The trick is in what one emphasizes. We either make ourselves miserable, or we make ourselves happy. The amount of work is the same.",
   },
   {
-    "author": "Henry James",
-    "quote": "Three things in human life are important. The first is to be kind. The second is to be kind. The third is to be kind."
+    author: "Seneca",
+    quote: "Things that were hard to bear are sweet to remember.",
   },
   {
-    "author": "Buddha",
-    "quote": "However many holy words you read, However many you speak, What good will they do you If you do not act on upon them?"
+    author: "Henry James",
+    quote:
+      "Three things in human life are important. The first is to be kind. The second is to be kind. The third is to be kind.",
   },
   {
-    "author": "Virgil",
-    "quote": "They can conquer who believe they can."
+    author: "Buddha",
+    quote:
+      "However many holy words you read, However many you speak, What good will they do you If you do not act on upon them?",
   },
   {
-    "author": "Frank Tyger",
-    "quote": "Learn to listen. Opportunity could be knocking at your door very softly."
+    author: "Virgil",
+    quote: "They can conquer who believe they can.",
   },
   {
-    "author": "Sai Baba",
-    "quote": "All action results from thought, so it is thoughts that matter."
+    author: "Frank Tyger",
+    quote:
+      "Learn to listen. Opportunity could be knocking at your door very softly.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle."
+    author: "Sai Baba",
+    quote: "All action results from thought, so it is thoughts that matter.",
   },
   {
-    "author": "Colette",
-    "quote": "I love my past. I love my present. Im not ashamed of what Ive had, and Im not sad because I have it no longer."
+    author: "Albert Einstein",
+    quote:
+      "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "Prejudice is a burden that confuses the past, threatens the future and renders the present inaccessible."
+    author: "Colette",
+    quote:
+      "I love my past. I love my present. Im not ashamed of what Ive had, and Im not sad because I have it no longer.",
   },
   {
-    "author": "William Hazlitt",
-    "quote": "Just as much as we see in others we have in ourselves."
+    author: "Maya Angelou",
+    quote:
+      "Prejudice is a burden that confuses the past, threatens the future and renders the present inaccessible.",
   },
   {
-    "author": "Geoffrey F. Abert",
-    "quote": "Prosperity depends more on wanting what you have than having what you want."
+    author: "William Hazlitt",
+    quote: "Just as much as we see in others we have in ourselves.",
   },
   {
-    "author": "Coco Chanel",
-    "quote": "How many cares one loses when one decides not to be something but to be someone."
+    author: "Geoffrey F. Abert",
+    quote:
+      "Prosperity depends more on wanting what you have than having what you want.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who knows, does not speak. He who speaks, does not know."
+    author: "Coco Chanel",
+    quote:
+      "How many cares one loses when one decides not to be something but to be someone.",
   },
   {
-    "author": "",
-    "quote": "We cannot direct the wind but we can adjust the sails."
+    author: "Lao Tzu",
+    quote: "He who knows, does not speak. He who speaks, does not know.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "One may say the eternal mystery of the world is its comprehensibility."
+    author: "",
+    quote: "We cannot direct the wind but we can adjust the sails.",
   },
   {
-    "author": "John Dewey",
-    "quote": "The self is not something ready-made, but something in continuous formation through choice of action."
+    author: "Albert Einstein",
+    quote:
+      "One may say the eternal mystery of the world is its comprehensibility.",
   },
   {
-    "author": "Mahatma Gandhi",
-    "quote": "Our greatness lies not so much in being able to remake the world as being able to remake ourselves."
+    author: "John Dewey",
+    quote:
+      "The self is not something ready-made, but something in continuous formation through choice of action.",
   },
   {
-    "author": "Philip Breedveld",
-    "quote": "Moments of complete apathy are the best for new creations."
+    author: "Mahatma Gandhi",
+    quote:
+      "Our greatness lies not so much in being able to remake the world as being able to remake ourselves.",
   },
   {
-    "author": "John Powell",
-    "quote": "The only real mistake is the one from which we learn nothing."
+    author: "Philip Breedveld",
+    quote: "Moments of complete apathy are the best for new creations.",
   },
   {
-    "author": "Tim Menchen",
-    "quote": "To dream of the person you would like to be is to waste the person you are."
+    author: "John Powell",
+    quote: "The only real mistake is the one from which we learn nothing.",
   },
   {
-    "author": "Charles Dubois",
-    "quote": "The important thing is this: to be able at any moment to sacrifice what we are for what we could become."
+    author: "Tim Menchen",
+    quote:
+      "To dream of the person you would like to be is to waste the person you are.",
   },
   {
-    "author": "Cicero",
-    "quote": "Gratitude is not only the greatest of virtues, but the paren't of all the others."
+    author: "Charles Dubois",
+    quote:
+      "The important thing is this: to be able at any moment to sacrifice what we are for what we could become.",
   },
   {
-    "author": "Lama Yeshe",
-    "quote": "It is never too late. Even if you are going to die tomorrow, keep yourself straight and clear and be a happy human being today."
+    author: "Cicero",
+    quote:
+      "Gratitude is not only the greatest of virtues, but the paren't of all the others.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Respect is not something that you can ask for, buy or borrow. Respect is what you earn from each person no matter their background or status."
+    author: "Lama Yeshe",
+    quote:
+      "It is never too late. Even if you are going to die tomorrow, keep yourself straight and clear and be a happy human being today.",
   },
   {
-    "author": "Henry Thoreau",
-    "quote": "Things do not change; we change."
+    author: "Byron Pulsifer",
+    quote:
+      "Respect is not something that you can ask for, buy or borrow. Respect is what you earn from each person no matter their background or status.",
   },
   {
-    "author": "Blaise Pascal",
-    "quote": "We must learn our limits. We are all something, but none of us are everything."
+    author: "Henry Thoreau",
+    quote: "Things do not change; we change.",
   },
   {
-    "author": "Stephen Sigmund",
-    "quote": "Learn wisdom from the ways of a seedling. A seedling which is never hardened off through stressful situations will never become a strong productive plant."
+    author: "Blaise Pascal",
+    quote:
+      "We must learn our limits. We are all something, but none of us are everything.",
   },
   {
-    "author": "Charles R. Swindoll",
-    "quote": "We are all faced with a series of great opportunities brilliantly disguised as impossible situations."
+    author: "Stephen Sigmund",
+    quote:
+      "Learn wisdom from the ways of a seedling. A seedling which is never hardened off through stressful situations will never become a strong productive plant.",
   },
   {
-    "author": "Albert Camus",
-    "quote": "All men have a sweetness in their life. That is what helps them go on. It is towards that they turn when they feel too worn out."
+    author: "Charles R. Swindoll",
+    quote:
+      "We are all faced with a series of great opportunities brilliantly disguised as impossible situations.",
   },
   {
-    "author": "Frank Tyger",
-    "quote": "Be a good listener. Your ears will never get you in trouble."
+    author: "Albert Camus",
+    quote:
+      "All men have a sweetness in their life. That is what helps them go on. It is towards that they turn when they feel too worn out.",
   },
   {
-    "author": "Buddha",
-    "quote": "Meditation brings wisdom; lack of mediation leaves ignorance. Know well what leads you forward and what hold you back, and choose the path that leads to wisdom."
+    author: "Frank Tyger",
+    quote: "Be a good listener. Your ears will never get you in trouble.",
   },
   {
-    "author": "Anatole France",
-    "quote": "You learn to speak by speaking, to study by studying, to run by running, to work by working; in just the same way, you learn to love by loving."
+    author: "Buddha",
+    quote:
+      "Meditation brings wisdom; lack of mediation leaves ignorance. Know well what leads you forward and what hold you back, and choose the path that leads to wisdom.",
   },
   {
-    "author": "John Marshall",
-    "quote": "To listen well is as powerful a means of communication and influence as to talk well."
+    author: "Anatole France",
+    quote:
+      "You learn to speak by speaking, to study by studying, to run by running, to work by working; in just the same way, you learn to love by loving.",
   },
   {
-    "author": "George Sand",
-    "quote": "There is only one happiness in life, to love and be loved."
+    author: "John Marshall",
+    quote:
+      "To listen well is as powerful a means of communication and influence as to talk well.",
   },
   {
-    "author": "Matt Zotti",
-    "quote": "Live through feeling and you will live through love. For feeling is the language of the soul, and feeling is truth."
+    author: "George Sand",
+    quote: "There is only one happiness in life, to love and be loved.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Kindness in words creates confidence. Kindness in thinking creates profoundness. Kindness in giving creates love."
+    author: "Matt Zotti",
+    quote:
+      "Live through feeling and you will live through love. For feeling is the language of the soul, and feeling is truth.",
   },
   {
-    "author": "Thomas Jefferson",
-    "quote": "Reason and free inquiry are the only effectual agents against error."
+    author: "Lao Tzu",
+    quote:
+      "Kindness in words creates confidence. Kindness in thinking creates profoundness. Kindness in giving creates love.",
   },
   {
-    "author": "Napoleon Bonaparte",
-    "quote": "The best cure for the body is a quiet mind."
+    author: "Thomas Jefferson",
+    quote:
+      "Reason and free inquiry are the only effectual agents against error.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "See the positive side, the potential, and make an effort."
+    author: "Napoleon Bonaparte",
+    quote: "The best cure for the body is a quiet mind.",
   },
   {
-    "author": "Jane Roberts",
-    "quote": "By accepting yourself and being fully what you are, your presence can make others happy."
+    author: "Dalai Lama",
+    quote: "See the positive side, the potential, and make an effort.",
   },
   {
-    "author": "Norman Cousins",
-    "quote": "Never deny a diagnosis, but do deny the negative verdict that may go with it."
+    author: "Jane Roberts",
+    quote:
+      "By accepting yourself and being fully what you are, your presence can make others happy.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "The really unhappy person is the one who leaves undone what they can do, and starts doing what they don't understand; no wonder they come to grief."
+    author: "Norman Cousins",
+    quote:
+      "Never deny a diagnosis, but do deny the negative verdict that may go with it.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "You cannot be lonely if you like the person you're alone with."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "The really unhappy person is the one who leaves undone what they can do, and starts doing what they don't understand; no wonder they come to grief.",
   },
   {
-    "author": "G. K. Chesterton",
-    "quote": "I do not believe in a fate that falls on men however they act; but I do believe in a fate that falls on man unless they act."
+    author: "Wayne Dyer",
+    quote: "You cannot be lonely if you like the person you're alone with.",
   },
   {
-    "author": "Buddha",
-    "quote": "If you propose to speak, always ask yourself, is it true, is it necessary, is it kind."
+    author: "G. K. Chesterton",
+    quote:
+      "I do not believe in a fate that falls on men however they act; but I do believe in a fate that falls on man unless they act.",
   },
   {
-    "author": "Cadet Maxim",
-    "quote": "Risk more than others think is safe. Care more than others think is wise. Dream more than others think is practical.Expect more than others think is possible."
+    author: "Buddha",
+    quote:
+      "If you propose to speak, always ask yourself, is it true, is it necessary, is it kind.",
   },
   {
-    "author": "Og Mandino",
-    "quote": "Failure will never overtake me if my determination to succeed is strong enough."
+    author: "Cadet Maxim",
+    quote:
+      "Risk more than others think is safe. Care more than others think is wise. Dream more than others think is practical.Expect more than others think is possible.",
   },
   {
-    "author": "Ralph Marston",
-    "quote": "Let go of your attachment to being right, and suddenly your mind is more open. You're able to benefit from the unique viewpoints of others, without being crippled by your own judgement."
+    author: "Og Mandino",
+    quote:
+      "Failure will never overtake me if my determination to succeed is strong enough.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "Wrinkles should merely indicate where smiles have been."
+    author: "Ralph Marston",
+    quote:
+      "Let go of your attachment to being right, and suddenly your mind is more open. You're able to benefit from the unique viewpoints of others, without being crippled by your own judgement.",
   },
   {
-    "author": "Zig Ziglar",
-    "quote": "Your attitude, not your aptitude, will determine your altitude."
+    author: "Mark Twain",
+    quote: "Wrinkles should merely indicate where smiles have been.",
   },
   {
-    "author": "Rumi",
-    "quote": "Let yourself be silently drawn by the stronger pull of what you really love."
+    author: "Zig Ziglar",
+    quote: "Your attitude, not your aptitude, will determine your altitude.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "I gave my life to become the person I am right now. Was it worth it?"
+    author: "Rumi",
+    quote:
+      "Let yourself be silently drawn by the stronger pull of what you really love.",
   },
   {
-    "author": "Hausa",
-    "quote": "Give thanks for a little and you will find a lot."
+    author: "Richard Bach",
+    quote:
+      "I gave my life to become the person I am right now. Was it worth it?",
   },
   {
-    "author": "Arie de Gues",
-    "quote": "Your ability to learn faster than your competition is your only sustainable competitive advantage."
+    author: "Hausa",
+    quote: "Give thanks for a little and you will find a lot.",
   },
   {
-    "author": "Paul Boese",
-    "quote": "Forgiveness does not change the past, but it does enlarge the future."
+    author: "Arie de Gues",
+    quote:
+      "Your ability to learn faster than your competition is your only sustainable competitive advantage.",
   },
   {
-    "author": "Nikola Tesla",
-    "quote": "Let the future tell the truth, and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine."
+    author: "Paul Boese",
+    quote:
+      "Forgiveness does not change the past, but it does enlarge the future.",
   },
   {
-    "author": "Aristotle",
-    "quote": "Moral excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts."
+    author: "Nikola Tesla",
+    quote:
+      "Let the future tell the truth, and evaluate each one according to his work and accomplishments. The present is theirs; the future, for which I have really worked, is mine.",
   },
   {
-    "author": "William James",
-    "quote": "The deepest craving of human nature is the need to be appreciated."
+    author: "Aristotle",
+    quote:
+      "Moral excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
   },
   {
-    "author": "Antoine de Saint-Exupery",
-    "quote": "Love does not consist of gazing at each other, but in looking together in the same direction."
+    author: "William James",
+    quote: "The deepest craving of human nature is the need to be appreciated.",
   },
   {
-    "author": "Edwin Markham",
-    "quote": "We have committed the Golden Rule to memory; let us now commit it to life."
+    author: "Antoine de Saint-Exupery",
+    quote:
+      "Love does not consist of gazing at each other, but in looking together in the same direction.",
   },
   {
-    "author": "Robert Southey",
-    "quote": "It is with words as with sunbeams. The more they are condensed, the deeper they burn."
+    author: "Edwin Markham",
+    quote:
+      "We have committed the Golden Rule to memory; let us now commit it to life.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "When people are like each other they tend to like each other."
+    author: "Robert Southey",
+    quote:
+      "It is with words as with sunbeams. The more they are condensed, the deeper they burn.",
   },
   {
-    "author": "Confucius",
-    "quote": "Sincerity is the way of Heaven. The attainment of sincerity is the way of men."
+    author: "Tony Robbins",
+    quote: "When people are like each other they tend to like each other.",
   },
   {
-    "author": "Mohandas Gandhi",
-    "quote": "Be the change that you want to see in the world."
+    author: "Confucius",
+    quote:
+      "Sincerity is the way of Heaven. The attainment of sincerity is the way of men.",
   },
   {
-    "author": "Jim Rohn",
-    "quote": "The more you care, the stronger you can be."
+    author: "Mohandas Gandhi",
+    quote: "Be the change that you want to see in the world.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "Lots of people want to ride with you in the limo, but what you want is someone who will take the bus with you when the limo breaks down."
+    author: "Jim Rohn",
+    quote: "The more you care, the stronger you can be.",
   },
   {
-    "author": "Goethe",
-    "quote": "Just trust yourself, then you will know how to live."
+    author: "Oprah Winfrey",
+    quote:
+      "Lots of people want to ride with you in the limo, but what you want is someone who will take the bus with you when the limo breaks down.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "To be fully alive, fully human, and completely awake is to be continually thrown out of the nest."
+    author: "Goethe",
+    quote: "Just trust yourself, then you will know how to live.",
   },
   {
-    "author": "Jim Rohn",
-    "quote": "If you don't design your own life plan, chances are you'll fall into someone else's plan. And guess what they have planned for you? Not much."
+    author: "Pema Chodron",
+    quote:
+      "To be fully alive, fully human, and completely awake is to be continually thrown out of the nest.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "It all depends on how we look at things, and not how they are in themselves."
+    author: "Jim Rohn",
+    quote:
+      "If you don't design your own life plan, chances are you'll fall into someone else's plan. And guess what they have planned for you? Not much.",
   },
   {
-    "author": "",
-    "quote": "Giving up doesn't always mean you are weak; sometimes it means that you are strong enough to let go."
+    author: "Carl Jung",
+    quote:
+      "It all depends on how we look at things, and not how they are in themselves.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "To climb steep hills requires a slow pace at first."
+    author: "",
+    quote:
+      "Giving up doesn't always mean you are weak; sometimes it means that you are strong enough to let go.",
   },
   {
-    "author": "Buddha",
-    "quote": "An idea that is developed and put into action is more important than an idea that exists only as an idea."
+    author: "William Shakespeare",
+    quote: "To climb steep hills requires a slow pace at first.",
   },
   {
-    "author": "Max Planck",
-    "quote": "It is not the possession of truth, but the success which attends the seeking after it, that enriches the seeker and brings happiness to him."
+    author: "Buddha",
+    quote:
+      "An idea that is developed and put into action is more important than an idea that exists only as an idea.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Truth is generally the best vindication against slander."
+    author: "Max Planck",
+    quote:
+      "It is not the possession of truth, but the success which attends the seeking after it, that enriches the seeker and brings happiness to him.",
   },
   {
-    "author": "Anna Pavlova",
-    "quote": "To follow, without halt, one aim: There is the secret of success."
+    author: "Abraham Lincoln",
+    quote: "Truth is generally the best vindication against slander.",
   },
   {
-    "author": "Nelson Mandela",
-    "quote": "And as we let our own light shine, we unconsciously give other people permission to do the same."
+    author: "Anna Pavlova",
+    quote: "To follow, without halt, one aim: There is the secret of success.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "What is a weed? A plant whose virtues have not yet been discovered."
+    author: "Nelson Mandela",
+    quote:
+      "And as we let our own light shine, we unconsciously give other people permission to do the same.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Belief consists in accepting the affirmations of the soul; Unbelief, in denying them."
+    author: "Ralph Emerson",
+    quote:
+      "What is a weed? A plant whose virtues have not yet been discovered.",
   },
   {
-    "author": "",
-    "quote": "Many people have gone further than they thought they could because someone else thought they could."
+    author: "Ralph Emerson",
+    quote:
+      "Belief consists in accepting the affirmations of the soul; Unbelief, in denying them.",
   },
   {
-    "author": "Rabindranath Tagore",
-    "quote": "We read the world wrong and say that it deceives us."
+    author: "",
+    quote:
+      "Many people have gone further than they thought they could because someone else thought they could.",
   },
   {
-    "author": "Edith Wharton",
-    "quote": "If only wed stop trying to be happy wed have a pretty good time."
+    author: "Rabindranath Tagore",
+    quote: "We read the world wrong and say that it deceives us.",
   },
   {
-    "author": "Eleanor Roosevelt",
-    "quote": "You must do the things you think you cannot do."
+    author: "Edith Wharton",
+    quote: "If only wed stop trying to be happy wed have a pretty good time.",
   },
   {
-    "author": "Oscar Wilde",
-    "quote": "Be yourself; everyone else is already taken."
+    author: "Eleanor Roosevelt",
+    quote: "You must do the things you think you cannot do.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "The mark of your ignorance is the depth of your belief in injustice and tragedy. What the caterpillar calls the end of the world, the Master calls the butterfly."
+    author: "Oscar Wilde",
+    quote: "Be yourself; everyone else is already taken.",
   },
   {
-    "author": "Edna Millay",
-    "quote": "I am glad that I paid so little attention to good advice; had I abided by it I might have been saved from some of my most valuable mistakes."
+    author: "Richard Bach",
+    quote:
+      "The mark of your ignorance is the depth of your belief in injustice and tragedy. What the caterpillar calls the end of the world, the Master calls the butterfly.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "Most folks are as happy as they make up their minds to be."
+    author: "Edna Millay",
+    quote:
+      "I am glad that I paid so little attention to good advice; had I abided by it I might have been saved from some of my most valuable mistakes.",
   },
   {
-    "author": "Oliver Holmes",
-    "quote": "Love is the master key that opens the gates of happiness."
+    author: "Abraham Lincoln",
+    quote: "Most folks are as happy as they make up their minds to be.",
   },
   {
-    "author": "Cecil B. DeMille",
-    "quote": "The person who makes a success of living is the one who see his goal steadily and aims for it unswervingly. That is dedication."
+    author: "Oliver Holmes",
+    quote: "Love is the master key that opens the gates of happiness.",
   },
   {
-    "author": "George Shaw",
-    "quote": "My reputation grows with every failure."
+    author: "Cecil B. DeMille",
+    quote:
+      "The person who makes a success of living is the one who see his goal steadily and aims for it unswervingly. That is dedication.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Good thoughts are no better than good dreams, unless they be executed."
+    author: "George Shaw",
+    quote: "My reputation grows with every failure.",
   },
   {
-    "author": "Dalai Lama",
-    "quote": "Happiness does not come about only due to external circumstances; it mainly derives from inner attitudes."
+    author: "Ralph Emerson",
+    quote:
+      "Good thoughts are no better than good dreams, unless they be executed.",
   },
   {
-    "author": "Buddha",
-    "quote": "However many holy words you read, however many you speak, what good will they do you if you do not act on upon them?"
+    author: "Dalai Lama",
+    quote:
+      "Happiness does not come about only due to external circumstances; it mainly derives from inner attitudes.",
   },
   {
-    "author": "Harry Banks",
-    "quote": "For success, attitude is equally as important as ability."
+    author: "Buddha",
+    quote:
+      "However many holy words you read, however many you speak, what good will they do you if you do not act on upon them?",
   },
   {
-    "author": "Colin Powell",
-    "quote": "If you are going to achieve excellence in big things, you develop the habit in little matters. Excellence is not an exception, it is a prevailing attitude."
+    author: "Harry Banks",
+    quote: "For success, attitude is equally as important as ability.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "A person who never made a mistake never tried anything new."
+    author: "Colin Powell",
+    quote:
+      "If you are going to achieve excellence in big things, you develop the habit in little matters. Excellence is not an exception, it is a prevailing attitude.",
   },
   {
-    "author": "Buddha",
-    "quote": "Better than a thousand hollow words is one word that brings peace."
+    author: "Albert Einstein",
+    quote: "A person who never made a mistake never tried anything new.",
   },
   {
-    "author": "George Bernard Shaw",
-    "quote": "The possibilities are numerous once we decide to act and not react."
+    author: "Buddha",
+    quote: "Better than a thousand hollow words is one word that brings peace.",
   },
   {
-    "author": "Henri Amiel",
-    "quote": "Almost everything comes from nothing."
+    author: "George Bernard Shaw",
+    quote:
+      "The possibilities are numerous once we decide to act and not react.",
   },
   {
-    "author": "Donald Trump",
-    "quote": "Sometimes by losing a battle you find a new way to win the war."
+    author: "Henri Amiel",
+    quote: "Almost everything comes from nothing.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Listen to what you know instead of what you fear."
+    author: "Donald Trump",
+    quote: "Sometimes by losing a battle you find a new way to win the war.",
   },
   {
-    "author": "Betty Friedan",
-    "quote": "It is easier to live through someone else than to become complete yourself."
+    author: "Richard Bach",
+    quote: "Listen to what you know instead of what you fear.",
   },
   {
-    "author": "John Simone",
-    "quote": "If you're in a bad situation, don't worry it'll change. If you're in a good situation, don't worry it'll change."
+    author: "Betty Friedan",
+    quote:
+      "It is easier to live through someone else than to become complete yourself.",
   },
   {
-    "author": "Zig Ziglar",
-    "quote": "Remember that failure is an event, not a person."
+    author: "John Simone",
+    quote:
+      "If you're in a bad situation, don't worry it'll change. If you're in a good situation, don't worry it'll change.",
   },
   {
-    "author": "Oprah Winfrey",
-    "quote": "Don't settle for a relationship that won't let you be yourself."
+    author: "Zig Ziglar",
+    quote: "Remember that failure is an event, not a person.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "What the caterpillar calls the end of the world, the master calls a butterfly."
+    author: "Oprah Winfrey",
+    quote: "Don't settle for a relationship that won't let you be yourself.",
   },
   {
-    "author": "Thomas Carlyle",
-    "quote": "Instead of saying that man is the creature of circumstance, it would be nearer the mark to say that man is the architect of circumstance."
+    author: "Richard Bach",
+    quote:
+      "What the caterpillar calls the end of the world, the master calls a butterfly.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "If you do what you've always done, you'll get what youve always gotten."
+    author: "Thomas Carlyle",
+    quote:
+      "Instead of saying that man is the creature of circumstance, it would be nearer the mark to say that man is the architect of circumstance.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Do not wait for leaders; do it alone, person to person."
+    author: "Tony Robbins",
+    quote:
+      "If you do what you've always done, you'll get what youve always gotten.",
   },
   {
-    "author": "Plotinus",
-    "quote": "Knowledge has three degrees — opinion, science, illumination. The means or instrument of the first is sense; of the second, dialectic; of the third, intuition."
+    author: "Mother Teresa",
+    quote: "Do not wait for leaders; do it alone, person to person.",
   },
   {
-    "author": "Mary Parrish",
-    "quote": "Love vanquishes time. To lovers, a moment can be eternity, eternity can be the tick of a clock."
+    author: "Plotinus",
+    quote:
+      "Knowledge has three degrees — opinion, science, illumination. The means or instrument of the first is sense; of the second, dialectic; of the third, intuition.",
   },
   {
-    "author": "Voltaire",
-    "quote": "We never live; we are always in the expectation of living."
+    author: "Mary Parrish",
+    quote:
+      "Love vanquishes time. To lovers, a moment can be eternity, eternity can be the tick of a clock.",
   },
   {
-    "author": "Henri L. Bergson",
-    "quote": "Think like a man of action; act like a man of thought."
+    author: "Voltaire",
+    quote: "We never live; we are always in the expectation of living.",
   },
   {
-    "author": "Ziggy",
-    "quote": "You can complain because roses have thorns, or you can rejoice because thorns have roses."
+    author: "Henri L. Bergson",
+    quote: "Think like a man of action; act like a man of thought.",
   },
   {
-    "author": "Anais Nin",
-    "quote": "There is not one big cosmic meaning for all, there is only the meaning we each give to our life."
+    author: "Ziggy",
+    quote:
+      "You can complain because roses have thorns, or you can rejoice because thorns have roses.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "A leader is best when people barely know he exists, when his work is done, his aim fulfilled, they will say: we did it ourselves."
+    author: "Anais Nin",
+    quote:
+      "There is not one big cosmic meaning for all, there is only the meaning we each give to our life.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Time you enjoyed wasting was not wasted."
+    author: "Lao Tzu",
+    quote:
+      "A leader is best when people barely know he exists, when his work is done, his aim fulfilled, they will say: we did it ourselves.",
   },
   {
-    "author": "Albert Camus",
-    "quote": "You will never be happy if you continue to search for what happiness consists of. You will never live if you are looking for the meaning of life."
+    author: "John Lennon",
+    quote: "Time you enjoyed wasting was not wasted.",
   },
   {
-    "author": "Daisaku Ikeda",
-    "quote": "Genuine sincerity opens people's hearts, while manipulation causes them to close."
+    author: "Albert Camus",
+    quote:
+      "You will never be happy if you continue to search for what happiness consists of. You will never live if you are looking for the meaning of life.",
   },
   {
-    "author": "Confucius",
-    "quote": "To give ones self earnestly to the duties due to men, and, while respecting spiritual beings, to keep aloof from them, may be called wisdom."
+    author: "Daisaku Ikeda",
+    quote:
+      "Genuine sincerity opens people's hearts, while manipulation causes them to close.",
   },
   {
-    "author": "Zadok Rabinowitz",
-    "quote": "A man's dreams are an index to his greatness."
+    author: "Confucius",
+    quote:
+      "To give ones self earnestly to the duties due to men, and, while respecting spiritual beings, to keep aloof from them, may be called wisdom.",
   },
   {
-    "author": "William Lyon Phelps",
-    "quote": "This is the final test of a gentleman: his respect for those who can be of no possible value to him."
+    author: "Zadok Rabinowitz",
+    quote: "A man's dreams are an index to his greatness.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "You teach best what you most need to learn."
+    author: "William Lyon Phelps",
+    quote:
+      "This is the final test of a gentleman: his respect for those who can be of no possible value to him.",
   },
   {
-    "author": "Winston Churchill",
-    "quote": "Continuous effort—not strength or intelligence—is the key to unlocking our potential."
+    author: "Richard Bach",
+    quote: "You teach best what you most need to learn.",
   },
   {
-    "author": "Henry Ford",
-    "quote": "Obstacles are those frightful things you see when you take your eyes off your goal."
+    author: "Winston Churchill",
+    quote:
+      "Continuous effort—not strength or intelligence—is the key to unlocking our potential.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Go for it now. The future is promised to no one."
+    author: "Henry Ford",
+    quote:
+      "Obstacles are those frightful things you see when you take your eyes off your goal.",
   },
   {
-    "author": "John Holmes",
-    "quote": "Never tell a young person that anything cannot be done. God may have been waiting centuries for someone ignorant enough of the impossible to do that very thing."
+    author: "Wayne Dyer",
+    quote: "Go for it now. The future is promised to no one.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Bold is not the act of foolishness but the attribute and inner strength to act when others will not so as to move forward not backward."
+    author: "John Holmes",
+    quote:
+      "Never tell a young person that anything cannot be done. God may have been waiting centuries for someone ignorant enough of the impossible to do that very thing.",
   },
   {
-    "author": "Daisaku Ikeda",
-    "quote": "If we look at the world with a love of life, the world will reveal its beauty to us."
+    author: "Byron Pulsifer",
+    quote:
+      "Bold is not the act of foolishness but the attribute and inner strength to act when others will not so as to move forward not backward.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "In skating over thin ice our safety is in our speed."
+    author: "Daisaku Ikeda",
+    quote:
+      "If we look at the world with a love of life, the world will reveal its beauty to us.",
   },
   {
-    "author": "W. Clement Stone",
-    "quote": "When you discover your mission, you will feel its demand. It will fill you with enthusiasm and a burning desire to get to work on it."
+    author: "Ralph Emerson",
+    quote: "In skating over thin ice our safety is in our speed.",
   },
   {
-    "author": "Publilius Syrus",
-    "quote": "Never promise more than you can perform."
+    author: "W. Clement Stone",
+    quote:
+      "When you discover your mission, you will feel its demand. It will fill you with enthusiasm and a burning desire to get to work on it.",
   },
   {
-    "author": "Nora Roberts",
-    "quote": "If you don't go after what you want, you'll never have it. If you don't ask, the answer is always no. If you don't step forward, you're always in the same place."
+    author: "Publilius Syrus",
+    quote: "Never promise more than you can perform.",
   },
   {
-    "author": "Lou Holtz",
-    "quote": "I can't believe that God put us on this earth to be ordinary."
+    author: "Nora Roberts",
+    quote:
+      "If you don't go after what you want, you'll never have it. If you don't ask, the answer is always no. If you don't step forward, you're always in the same place.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "There are no limitations to the mind except those we acknowledge."
+    author: "Lou Holtz",
+    quote: "I can't believe that God put us on this earth to be ordinary.",
   },
   {
-    "author": "Jules Poincare",
-    "quote": "It is through science that we prove, but through intuition that we discover."
+    author: "Napoleon Hill",
+    quote: "There are no limitations to the mind except those we acknowledge.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Don't be dismayed by good-byes. A farewell is necessary before you can meet again. And meeting again, after moments or lifetimes, is certain for those who are friends."
+    author: "Jules Poincare",
+    quote:
+      "It is through science that we prove, but through intuition that we discover.",
   },
   {
-    "author": "Carla Gordon",
-    "quote": "If someone in your life talked to you the way you talk to yourself, you would have left them long ago."
+    author: "Richard Bach",
+    quote:
+      "Don't be dismayed by good-byes. A farewell is necessary before you can meet again. And meeting again, after moments or lifetimes, is certain for those who are friends.",
   },
   {
-    "author": "Edward Ericson",
-    "quote": "The cosmos is neither moral or immoral; only people are. He who would move the world must first move himself."
+    author: "Carla Gordon",
+    quote:
+      "If someone in your life talked to you the way you talk to yourself, you would have left them long ago.",
   },
   {
-    "author": "Daisaku Ikeda",
-    "quote": "If you lose today, win tomorrow. In this never-ending spirit of challenge is the heart of a victor."
+    author: "Edward Ericson",
+    quote:
+      "The cosmos is neither moral or immoral; only people are. He who would move the world must first move himself.",
   },
   {
-    "author": "Linda Hogan",
-    "quote": "There is a way that nature speaks, that land speaks. Most of the time we are simply not patient enough, quiet enough, to pay attention to the story."
+    author: "Daisaku Ikeda",
+    quote:
+      "If you lose today, win tomorrow. In this never-ending spirit of challenge is the heart of a victor.",
   },
   {
-    "author": "Georg Lichtenberg",
-    "quote": "I cannot say whether things will get better if we change; what I can say is they must change if they are to get better."
+    author: "Linda Hogan",
+    quote:
+      "There is a way that nature speaks, that land speaks. Most of the time we are simply not patient enough, quiet enough, to pay attention to the story.",
   },
   {
-    "author": "Eckhart Tolle",
-    "quote": "The greater part of human pain is unnecessary. It is self-created as long as the unobserved mind runs your life."
+    author: "Georg Lichtenberg",
+    quote:
+      "I cannot say whether things will get better if we change; what I can say is they must change if they are to get better.",
   },
   {
-    "author": "Alexander Pope",
-    "quote": "Blessed is the man who expects nothing, for he shall never be disappointed."
+    author: "Eckhart Tolle",
+    quote:
+      "The greater part of human pain is unnecessary. It is self-created as long as the unobserved mind runs your life.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who knows others is wise. He who knows himself is enlightened."
+    author: "Alexander Pope",
+    quote:
+      "Blessed is the man who expects nothing, for he shall never be disappointed.",
   },
   {
-    "author": "Peter Drucker",
-    "quote": "The best way to predict your future is to create it."
+    author: "Lao Tzu",
+    quote: "He who knows others is wise. He who knows himself is enlightened.",
   },
   {
-    "author": "May Sarton",
-    "quote": "A garden is always a series of losses set against a few triumphs, like life itself."
+    author: "Peter Drucker",
+    quote: "The best way to predict your future is to create it.",
   },
   {
-    "author": "Rachel Carson",
-    "quote": "If facts are the seeds that later produce knowledge and wisdom, then the emotions and the impressions of the senses are the fertile soil in which the seeds must grow."
+    author: "May Sarton",
+    quote:
+      "A garden is always a series of losses set against a few triumphs, like life itself.",
   },
   {
-    "author": "Ernest Hemingway",
-    "quote": "Never mistake motion for action."
+    author: "Rachel Carson",
+    quote:
+      "If facts are the seeds that later produce knowledge and wisdom, then the emotions and the impressions of the senses are the fertile soil in which the seeds must grow.",
   },
   {
-    "author": "Hannah Senesh",
-    "quote": "One needs something to believe in, something for which one can have whole-hearted enthusiasm. One needs to feel that ones life has meaning, that one is needed in this world."
+    author: "Ernest Hemingway",
+    quote: "Never mistake motion for action.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "One who is too insistent on his own views, finds few to agree with him."
+    author: "Hannah Senesh",
+    quote:
+      "One needs something to believe in, something for which one can have whole-hearted enthusiasm. One needs to feel that ones life has meaning, that one is needed in this world.",
   },
   {
-    "author": "Harry Burchell Mathews",
-    "quote": "Translation is the paradigm, the exemplar of all writing. It is translation that demonstrates most vividly the yearning for transformation that underlies every act involving speech, that supremely human gift."
+    author: "Lao Tzu",
+    quote:
+      "One who is too insistent on his own views, finds few to agree with him.",
   },
   {
-    "author": "Voltaire",
-    "quote": "Meditation is the dissolution of thoughts in eternal awareness or Pure consciousness without objectification, knowing without thinking, merging finitude in infinity."
+    author: "Harry Burchell Mathews",
+    quote:
+      "Translation is the paradigm, the exemplar of all writing. It is translation that demonstrates most vividly the yearning for transformation that underlies every act involving speech, that supremely human gift.",
   },
   {
-    "author": "George Shaw",
-    "quote": "The reasonable man adapts himself to the world; the unreasonable man persists in trying to adapt the world to himself. Therefore, all progress depends on the unreasonable man."
+    author: "Voltaire",
+    quote:
+      "Meditation is the dissolution of thoughts in eternal awareness or Pure consciousness without objectification, knowing without thinking, merging finitude in infinity.",
   },
   {
-    "author": "Michael Burke",
-    "quote": "Good instincts usually tell you what to do long before your head has figured it out."
+    author: "George Shaw",
+    quote:
+      "The reasonable man adapts himself to the world; the unreasonable man persists in trying to adapt the world to himself. Therefore, all progress depends on the unreasonable man.",
   },
   {
-    "author": "Pema Chodron",
-    "quote": "It isn't what happens to us that causes us to suffer; it's what we say to ourselves about what happens."
+    author: "Michael Burke",
+    quote:
+      "Good instincts usually tell you what to do long before your head has figured it out.",
   },
   {
-    "author": "Edgar Allan Poe",
-    "quote": "Those who dream by day are cognizant of many things which escape those who dream only by night."
+    author: "Pema Chodron",
+    quote:
+      "It isn't what happens to us that causes us to suffer; it's what we say to ourselves about what happens.",
   },
   {
-    "author": "Ben Sweetland",
-    "quote": "We cannot hold a torch to light another's path without brightening our own."
+    author: "Edgar Allan Poe",
+    quote:
+      "Those who dream by day are cognizant of many things which escape those who dream only by night.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "You are never given a wish without also being given the power to make it come true. You may have to work for it, however."
+    author: "Ben Sweetland",
+    quote:
+      "We cannot hold a torch to light another's path without brightening our own.",
   },
   {
-    "author": "Mother Teresa",
-    "quote": "Kind words can be short and easy to speak, but their echoes are truly endless."
+    author: "Richard Bach",
+    quote:
+      "You are never given a wish without also being given the power to make it come true. You may have to work for it, however.",
   },
   {
-    "author": "",
-    "quote": "Count your joys instead of your woes. Count your friends instead of your foes."
+    author: "Mother Teresa",
+    quote:
+      "Kind words can be short and easy to speak, but their echoes are truly endless.",
   },
   {
-    "author": "John Updike",
-    "quote": "Dreams come true. Without that possibility, nature would not incite us to have them."
+    author: "",
+    quote:
+      "Count your joys instead of your woes. Count your friends instead of your foes.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Staying in one place is the best path to be taken over and surpassed by many."
+    author: "John Updike",
+    quote:
+      "Dreams come true. Without that possibility, nature would not incite us to have them.",
   },
   {
-    "author": "Carl Sagan",
-    "quote": "Imagination will often carry us to worlds that never were. But without it we go nowhere."
+    author: "Byron Pulsifer",
+    quote:
+      "Staying in one place is the best path to be taken over and surpassed by many.",
   },
   {
-    "author": "Helen Keller",
-    "quote": "When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us."
+    author: "Carl Sagan",
+    quote:
+      "Imagination will often carry us to worlds that never were. But without it we go nowhere.",
   },
   {
-    "author": "Jawaharlal Nehru",
-    "quote": "A leader or a man of action in a crisis almost always acts subconsciously and then thinks of the reasons for his action."
+    author: "Helen Keller",
+    quote:
+      "When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "I have no special talent. I am only passionately curious."
+    author: "Jawaharlal Nehru",
+    quote:
+      "A leader or a man of action in a crisis almost always acts subconsciously and then thinks of the reasons for his action.",
   },
   {
-    "author": "Elizabeth Montagu",
-    "quote": "I endeavour to be wise when I cannot be merry, easy when I cannot be glad, content with what cannot be mended and patient when there is no redress."
+    author: "Albert Einstein",
+    quote: "I have no special talent. I am only passionately curious.",
   },
   {
-    "author": "William Scolavino",
-    "quote": "The height of your accomplishments will equal the depth of your convictions."
+    author: "Elizabeth Montagu",
+    quote:
+      "I endeavour to be wise when I cannot be merry, easy when I cannot be glad, content with what cannot be mended and patient when there is no redress.",
   },
   {
-    "author": "Rabbi Hillel",
-    "quote": "If I am not for myself, who will be for me? If I am not for others, what am I? And if not now, when?"
+    author: "William Scolavino",
+    quote:
+      "The height of your accomplishments will equal the depth of your convictions.",
   },
   {
-    "author": "Audre Lorde",
-    "quote": "When I dare to be powerful, to use my strength in the service of my vision, then it becomes less and less important whether I am afraid."
+    author: "Rabbi Hillel",
+    quote:
+      "If I am not for myself, who will be for me? If I am not for others, what am I? And if not now, when?",
   },
   {
-    "author": "Alexis Carrel",
-    "quote": "All great men are gifted with intuition. They know without reasoning or analysis, what they need to know."
+    author: "Audre Lorde",
+    quote:
+      "When I dare to be powerful, to use my strength in the service of my vision, then it becomes less and less important whether I am afraid.",
   },
   {
-    "author": "Mark Twain",
-    "quote": "To get the full value of joy you must have someone to divide it with."
+    author: "Alexis Carrel",
+    quote:
+      "All great men are gifted with intuition. They know without reasoning or analysis, what they need to know.",
   },
   {
-    "author": "Johann Wolfgang von Goethe",
-    "quote": "Sometimes our fate resembles a fruit tree in winter. Who would think that those branches would turn green again and blossom, but we hope it, we know it."
+    author: "Mark Twain",
+    quote:
+      "To get the full value of joy you must have someone to divide it with.",
   },
   {
-    "author": "Leo Tolstoy",
-    "quote": "We lost because we told ourselves we lost."
+    author: "Johann Wolfgang von Goethe",
+    quote:
+      "Sometimes our fate resembles a fruit tree in winter. Who would think that those branches would turn green again and blossom, but we hope it, we know it.",
   },
   {
-    "author": "James Pence",
-    "quote": "Success is determined by those whom prove the impossible, possible."
+    author: "Leo Tolstoy",
+    quote: "We lost because we told ourselves we lost.",
   },
   {
-    "author": "Agatha Christie",
-    "quote": "Good advice is always certain to be ignored, but that's no reason not to give it."
+    author: "James Pence",
+    quote:
+      "Success is determined by those whom prove the impossible, possible.",
   },
   {
-    "author": "Dale Earnhardt",
-    "quote": "The winner ain't the one with the fastest car it's the one who refuses to lose."
+    author: "Agatha Christie",
+    quote:
+      "Good advice is always certain to be ignored, but that's no reason not to give it.",
   },
   {
-    "author": "Robert C. Solomon",
-    "quote": "Spirituality can be severed from both vicious sectarianism and thoughtless banalities. Spirituality, I have come to see, is nothing less than the thoughtful love of life."
+    author: "Dale Earnhardt",
+    quote:
+      "The winner ain't the one with the fastest car it's the one who refuses to lose.",
   },
   {
-    "author": "Sam Rayburn",
-    "quote": "No one has a finer command of language than the person who keeps his mouth shut."
+    author: "Robert C. Solomon",
+    quote:
+      "Spirituality can be severed from both vicious sectarianism and thoughtless banalities. Spirituality, I have come to see, is nothing less than the thoughtful love of life.",
   },
   {
-    "author": "Denis Waitley",
-    "quote": "The only person who never makes mistakes is the person who never does anything."
+    author: "Sam Rayburn",
+    quote:
+      "No one has a finer command of language than the person who keeps his mouth shut.",
   },
   {
-    "author": "John Lennon",
-    "quote": "Life is what happens to you while you're busy making other plans."
+    author: "Denis Waitley",
+    quote:
+      "The only person who never makes mistakes is the person who never does anything.",
   },
   {
-    "author": "Jonathan Swift",
-    "quote": "Discovery consists of seeing what everybody has seen and thinking what nobody else has thought."
+    author: "John Lennon",
+    quote: "Life is what happens to you while you're busy making other plans.",
   },
   {
-    "author": "Margaret Fuller",
-    "quote": "If you have knowledge, let others light their candles in it."
+    author: "Jonathan Swift",
+    quote:
+      "Discovery consists of seeing what everybody has seen and thinking what nobody else has thought.",
   },
   {
-    "author": "Epictetus",
-    "quote": "It is impossible for a man to learn what he thinks he already knows."
+    author: "Margaret Fuller",
+    quote: "If you have knowledge, let others light their candles in it.",
   },
   {
-    "author": "Will Rogers",
-    "quote": "If you find yourself in a hole, the first thing to do is stop digging."
+    author: "Epictetus",
+    quote:
+      "It is impossible for a man to learn what he thinks he already knows.",
   },
   {
-    "author": "Plutarch",
-    "quote": "To make no mistakes is not in the power of man; but from their errors and mistakes the wise and good learn wisdom for the future."
+    author: "Will Rogers",
+    quote:
+      "If you find yourself in a hole, the first thing to do is stop digging.",
   },
   {
-    "author": "Lee Womack",
-    "quote": "I think you can have moderate success by copying something else, but if you really want to knock it out of the park, you have to do something different and take chances."
+    author: "Plutarch",
+    quote:
+      "To make no mistakes is not in the power of man; but from their errors and mistakes the wise and good learn wisdom for the future.",
   },
   {
-    "author": "Marcus Aurelius",
-    "quote": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth."
+    author: "Lee Womack",
+    quote:
+      "I think you can have moderate success by copying something else, but if you really want to knock it out of the park, you have to do something different and take chances.",
   },
   {
-    "author": "William Menninger",
-    "quote": "Six essential qualities that are the key to success: Sincerity, personal integrity, humility, courtesy, wisdom, charity."
+    author: "Marcus Aurelius",
+    quote:
+      "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
   },
   {
-    "author": "Lucille Ball",
-    "quote": "I have an everyday religion that works for me. Love yourself first, and everything else falls into line."
+    author: "William Menninger",
+    quote:
+      "Six essential qualities that are the key to success: Sincerity, personal integrity, humility, courtesy, wisdom, charity.",
   },
   {
-    "author": "Chuang Tzu",
-    "quote": "Flow with whatever is happening and let your mind be free. Stay centred by accepting whatever you are doing. This is the ultimate."
+    author: "Lucille Ball",
+    quote:
+      "I have an everyday religion that works for me. Love yourself first, and everything else falls into line.",
   },
   {
-    "author": "Jane Addams",
-    "quote": "Nothing could be worse than the fear that one had given up too soon, and left one unexpended effort that might have saved the world."
+    author: "Chuang Tzu",
+    quote:
+      "Flow with whatever is happening and let your mind be free. Stay centred by accepting whatever you are doing. This is the ultimate.",
   },
   {
-    "author": "Aristotle",
-    "quote": "The energy of the mind is the essence of life."
+    author: "Jane Addams",
+    quote:
+      "Nothing could be worse than the fear that one had given up too soon, and left one unexpended effort that might have saved the world.",
   },
   {
-    "author": "Horace",
-    "quote": "Begin, be bold, and venture to be wise."
+    author: "Aristotle",
+    quote: "The energy of the mind is the essence of life.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime."
+    author: "Horace",
+    quote: "Begin, be bold, and venture to be wise.",
   },
   {
-    "author": "Francis Bacon",
-    "quote": "A wise man will make more opportunities than he finds."
+    author: "Lao Tzu",
+    quote:
+      "Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime.",
   },
   {
-    "author": "Eddie Cantor",
-    "quote": "Slow down and enjoy life. It's not only the scenery you miss by going too fast — you also miss the sense of where you are going and why."
+    author: "Francis Bacon",
+    quote: "A wise man will make more opportunities than he finds.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Miracles come in moments. Be ready and willing."
+    author: "Eddie Cantor",
+    quote:
+      "Slow down and enjoy life. It's not only the scenery you miss by going too fast — you also miss the sense of where you are going and why.",
   },
   {
-    "author": "Sophocles",
-    "quote": "Numberless are the worlds wonders, but none more wonderful than man."
+    author: "Wayne Dyer",
+    quote: "Miracles come in moments. Be ready and willing.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "So is cheerfulness, or a good temper, the more it is spent, the more remains."
+    author: "Sophocles",
+    quote:
+      "Numberless are the worlds wonders, but none more wonderful than man.",
   },
   {
-    "author": "Francoise de Motteville",
-    "quote": "The true way to render ourselves happy is to love our work and find in it our pleasure."
+    author: "Ralph Emerson",
+    quote:
+      "So is cheerfulness, or a good temper, the more it is spent, the more remains.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "When you judge another, you do not define them, you define yourself."
+    author: "Francoise de Motteville",
+    quote:
+      "The true way to render ourselves happy is to love our work and find in it our pleasure.",
   },
   {
-    "author": "Richard Bach",
-    "quote": "Argue for your limitations, and sure enough they're yours."
+    author: "Wayne Dyer",
+    quote:
+      "When you judge another, you do not define them, you define yourself.",
   },
   {
-    "author": "Confucius",
-    "quote": "He who wishes to secure the good of others, has already secured his own."
+    author: "Richard Bach",
+    quote: "Argue for your limitations, and sure enough they're yours.",
   },
   {
-    "author": "Plato",
-    "quote": "Wise men talk because they have something to say; fools, because they have to say something."
+    author: "Confucius",
+    quote:
+      "He who wishes to secure the good of others, has already secured his own.",
   },
   {
-    "author": "Confucius",
-    "quote": "Life is really simple, but we insist on making it complicated."
+    author: "Plato",
+    quote:
+      "Wise men talk because they have something to say; fools, because they have to say something.",
   },
   {
-    "author": "Jim Bishop",
-    "quote": "The future is an opaque mirror. Anyone who tries to look into it sees nothing but the dim outlines of an old and worried face."
+    author: "Confucius",
+    quote: "Life is really simple, but we insist on making it complicated.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Everything that irritates us about others can lead us to a better understanding of ourselves."
+    author: "Jim Bishop",
+    quote:
+      "The future is an opaque mirror. Anyone who tries to look into it sees nothing but the dim outlines of an old and worried face.",
   },
   {
-    "author": "",
-    "quote": "Beware of the half truth. You may have gotten hold of the wrong half."
+    author: "Carl Jung",
+    quote:
+      "Everything that irritates us about others can lead us to a better understanding of ourselves.",
   },
   {
-    "author": "Elbert Hubbard",
-    "quote": "The greatest mistake you can make in life is to be continually fearing you will make one."
+    author: "",
+    quote:
+      "Beware of the half truth. You may have gotten hold of the wrong half.",
   },
   {
-    "author": "Calvin Coolidge",
-    "quote": "I have never been hurt by anything I didn't say."
+    author: "Elbert Hubbard",
+    quote:
+      "The greatest mistake you can make in life is to be continually fearing you will make one.",
   },
   {
-    "author": "Thomas Kempis",
-    "quote": "Be not angry that you cannot make others as you wish them to be, since you cannot make yourself as you wish to be."
+    author: "Calvin Coolidge",
+    quote: "I have never been hurt by anything I didn't say.",
   },
   {
-    "author": "William Ward",
-    "quote": "Adversity causes some men to break, others to break records."
+    author: "Thomas Kempis",
+    quote:
+      "Be not angry that you cannot make others as you wish them to be, since you cannot make yourself as you wish to be.",
   },
   {
-    "author": "Thomas Fuller",
-    "quote": "An invincible determination can accomplish almost anything and in this lies the great distinction between great men and little men."
+    author: "William Ward",
+    quote: "Adversity causes some men to break, others to break records.",
   },
   {
-    "author": "Abernathy",
-    "quote": "The industrial landscape is already littered with remains of once successful companies that could not adapt their strategic vision to altered conditions of competition."
+    author: "Thomas Fuller",
+    quote:
+      "An invincible determination can accomplish almost anything and in this lies the great distinction between great men and little men.",
   },
   {
-    "author": "Christian Bovee",
-    "quote": "Example has more followers than reason."
+    author: "Abernathy",
+    quote:
+      "The industrial landscape is already littered with remains of once successful companies that could not adapt their strategic vision to altered conditions of competition.",
   },
   {
-    "author": "Epictetus",
-    "quote": "One that desires to excel should endeavour in those things that are in themselves most excellent."
+    author: "Christian Bovee",
+    quote: "Example has more followers than reason.",
   },
   {
-    "author": "Mary Pickford",
-    "quote": "If you have made mistakes, there is always another chance for you. You may have a fresh start any moment you choose."
+    author: "Epictetus",
+    quote:
+      "One that desires to excel should endeavour in those things that are in themselves most excellent.",
   },
   {
-    "author": "Robert Pirsig",
-    "quote": "The only Zen you find on the tops of mountains is the Zen you bring up there."
+    author: "Mary Pickford",
+    quote:
+      "If you have made mistakes, there is always another chance for you. You may have a fresh start any moment you choose.",
   },
   {
-    "author": "Doris Day",
-    "quote": "Gratitude is riches. Complaint is poverty."
+    author: "Robert Pirsig",
+    quote:
+      "The only Zen you find on the tops of mountains is the Zen you bring up there.",
   },
   {
-    "author": "Richard Needham",
-    "quote": "Strong people make as many mistakes as weak people. Difference is that strong people admit their mistakes, laugh at them, learn from them. That is how they become strong."
+    author: "Doris Day",
+    quote: "Gratitude is riches. Complaint is poverty.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "To know your purpose is to live a life of direction, and in that direction is found peace and tranquillity."
+    author: "Richard Needham",
+    quote:
+      "Strong people make as many mistakes as weak people. Difference is that strong people admit their mistakes, laugh at them, learn from them. That is how they become strong.",
   },
   {
-    "author": "Harriet Woods",
-    "quote": "You can stand tall without standing on someone. You can be a victor without having victims."
+    author: "Byron Pulsifer",
+    quote:
+      "To know your purpose is to live a life of direction, and in that direction is found peace and tranquillity.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "Bad times have a scientific value. These are occasions a good learner would not miss."
+    author: "Harriet Woods",
+    quote:
+      "You can stand tall without standing on someone. You can be a victor without having victims.",
   },
   {
-    "author": "",
-    "quote": "It's not who you are that holds you back, it's who you think you're not."
+    author: "Ralph Emerson",
+    quote:
+      "Bad times have a scientific value. These are occasions a good learner would not miss.",
   },
   {
-    "author": "Pablo Picasso",
-    "quote": "All children are artists. The problem is how to remain an artist once he grows up."
+    author: "",
+    quote:
+      "It's not who you are that holds you back, it's who you think you're not.",
   },
   {
-    "author": "Philip Sidney",
-    "quote": "Either I will find a way, or I will make one."
+    author: "Pablo Picasso",
+    quote:
+      "All children are artists. The problem is how to remain an artist once he grows up.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "He who knows that enough is enough will always have enough."
+    author: "Philip Sidney",
+    quote: "Either I will find a way, or I will make one.",
   },
   {
-    "author": "Ralph Emerson",
-    "quote": "The only way to have a friend is to be one."
+    author: "Lao Tzu",
+    quote: "He who knows that enough is enough will always have enough.",
   },
   {
-    "author": "Anne Bradstreet",
-    "quote": "If we had no winter, the spring would not be so pleasant; if we did not sometimes taste of adversity, prosperity would not be so welcome."
+    author: "Ralph Emerson",
+    quote: "The only way to have a friend is to be one.",
   },
   {
-    "author": "Marianne Williamson",
-    "quote": "Joy is what happens to us when we allow ourselves to recognize how good things really are."
+    author: "Anne Bradstreet",
+    quote:
+      "If we had no winter, the spring would not be so pleasant; if we did not sometimes taste of adversity, prosperity would not be so welcome.",
   },
   {
-    "author": "Carl Jung",
-    "quote": "Your vision will become clear only when you can look into your own heart. Who looks outside, dreams; who looks inside, awakes."
+    author: "Marianne Williamson",
+    quote:
+      "Joy is what happens to us when we allow ourselves to recognize how good things really are.",
   },
   {
-    "author": "Brian Tracy",
-    "quote": "There is never enough time to do everything, but there is always enough time to do the most important thing."
+    author: "Carl Jung",
+    quote:
+      "Your vision will become clear only when you can look into your own heart. Who looks outside, dreams; who looks inside, awakes.",
   },
   {
-    "author": "Marian Edelman",
-    "quote": "You really can change the world if you care enough."
+    author: "Brian Tracy",
+    quote:
+      "There is never enough time to do everything, but there is always enough time to do the most important thing.",
   },
   {
-    "author": "Buddha",
-    "quote": "What you are is what you have been. What you’ll be is what you do now."
+    author: "Marian Edelman",
+    quote: "You really can change the world if you care enough.",
   },
   {
-    "author": "Gordon Hinckley",
-    "quote": "Our lives are the only meaningful expression of what we believe and in Whom we believe. And the only real wealth, for any of us, lies in our faith."
+    author: "Buddha",
+    quote:
+      "What you are is what you have been. What you’ll be is what you do now.",
   },
   {
-    "author": "Benjamin Haydon",
-    "quote": "There surely is in human nature an inherent propensity to extract all the good out of all the evil."
+    author: "Gordon Hinckley",
+    quote:
+      "Our lives are the only meaningful expression of what we believe and in Whom we believe. And the only real wealth, for any of us, lies in our faith.",
   },
   {
-    "author": "Lao Tzu",
-    "quote": "Music in the soul can be heard by the universe."
+    author: "Benjamin Haydon",
+    quote:
+      "There surely is in human nature an inherent propensity to extract all the good out of all the evil.",
   },
   {
-    "author": "John Lubbock",
-    "quote": "What we see depends mainly on what we look for."
+    author: "Lao Tzu",
+    quote: "Music in the soul can be heard by the universe.",
   },
   {
-    "author": "Bruce Lee",
-    "quote": "To hell with circumstances; I create opportunities."
+    author: "John Lubbock",
+    quote: "What we see depends mainly on what we look for.",
   },
   {
-    "author": "Ella Wilcox",
-    "quote": "The truest greatness lies in being kind, the truest wisdom in a happy mind."
+    author: "Bruce Lee",
+    quote: "To hell with circumstances; I create opportunities.",
   },
   {
-    "author": "John Junor",
-    "quote": "An ounce of emotion is equal to a ton of facts."
+    author: "Ella Wilcox",
+    quote:
+      "The truest greatness lies in being kind, the truest wisdom in a happy mind.",
   },
   {
-    "author": "Barbara De Angelis",
-    "quote": "We need to find the courage to say NO to the things and people that are not serving us if we want to rediscover ourselves and live our lives with authenticity."
+    author: "John Junor",
+    quote: "An ounce of emotion is equal to a ton of facts.",
   },
   {
-    "author": "Lazurus Long",
-    "quote": "Great is the art of beginning, but greater is the art of ending."
+    author: "Barbara De Angelis",
+    quote:
+      "We need to find the courage to say NO to the things and people that are not serving us if we want to rediscover ourselves and live our lives with authenticity.",
   },
   {
-    "author": "Wayne Dyer",
-    "quote": "Simply put, you believer that things or people make you unhappy, but this is not accurate. You make yourself unhappy."
+    author: "Lazurus Long",
+    quote: "Great is the art of beginning, but greater is the art of ending.",
   },
   {
-    "author": "Maya Angelou",
-    "quote": "Nothing will work unless you do."
+    author: "Wayne Dyer",
+    quote:
+      "Simply put, you believer that things or people make you unhappy, but this is not accurate. You make yourself unhappy.",
   },
   {
-    "author": "Catherine Pulsifer",
-    "quote": "Our ability to achieve happiness and success depends on the strength of our wings."
+    author: "Maya Angelou",
+    quote: "Nothing will work unless you do.",
   },
   {
-    "author": "Theodore H. White",
-    "quote": "To go against the dominant thinking of your friends, of most of the people you see every day, is perhaps the most difficult act of heroism you can perform."
+    author: "Catherine Pulsifer",
+    quote:
+      "Our ability to achieve happiness and success depends on the strength of our wings.",
   },
   {
-    "author": "Melody Beattie",
-    "quote": "Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow."
+    author: "Theodore H. White",
+    quote:
+      "To go against the dominant thinking of your friends, of most of the people you see every day, is perhaps the most difficult act of heroism you can perform.",
   },
   {
-    "author": "Byron Pulsifer",
-    "quote": "Into each life rain must fall but rain can be the giver of life and it is all in your attitude that makes rain produce sunshine."
+    author: "Melody Beattie",
+    quote:
+      "Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow.",
   },
   {
-    "author": "Harold Nicolson",
-    "quote": "We are all inclined to judge ourselves by our ideals; others, by their acts."
+    author: "Byron Pulsifer",
+    quote:
+      "Into each life rain must fall but rain can be the giver of life and it is all in your attitude that makes rain produce sunshine.",
   },
   {
-    "author": "Rodin",
-    "quote": "Nothing is a waste of time if you use the experience wisely."
+    author: "Harold Nicolson",
+    quote:
+      "We are all inclined to judge ourselves by our ideals; others, by their acts.",
   },
   {
-    "author": "Aristotle",
-    "quote": "If one way be better than another, that you may be sure is natures way."
+    author: "Rodin",
+    quote: "Nothing is a waste of time if you use the experience wisely.",
   },
   {
-    "author": "Napoleon Hill",
-    "quote": "Here is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it."
+    author: "Aristotle",
+    quote:
+      "If one way be better than another, that you may be sure is natures way.",
   },
   {
-    "author": "William Shakespeare",
-    "quote": "It is not in the stars to hold our destiny but in ourselves."
+    author: "Napoleon Hill",
+    quote:
+      "Here is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it.",
   },
   {
-    "author": "Tony Robbins",
-    "quote": "Using the power of decision gives you the capacity to get past any excuse to change any and every part of your life in an instant."
+    author: "William Shakespeare",
+    quote: "It is not in the stars to hold our destiny but in ourselves.",
   },
   {
-    "author": "Abraham Lincoln",
-    "quote": "I will prepare and some day my chance will come."
+    author: "Tony Robbins",
+    quote:
+      "Using the power of decision gives you the capacity to get past any excuse to change any and every part of your life in an instant.",
   },
   {
-    "author": "Tom Jackson",
-    "quote": "Sometimes the cards we are dealt are not always fair. However you must keep smiling and moving on."
+    author: "Abraham Lincoln",
+    quote: "I will prepare and some day my chance will come.",
   },
   {
-    "author": "Isaac Newton",
-    "quote": "Truth is the offspring of silence and unbroken meditation."
+    author: "Tom Jackson",
+    quote:
+      "Sometimes the cards we are dealt are not always fair. However you must keep smiling and moving on.",
   },
   {
-    "author": "?",
-    "quote": "One reason why mathematics enjoys special esteem, above all other sciences, is that its laws are absolutely certain and indisputable, while those of all other sciences are to some extent debatable and in constant danger of being overthrown by newly discovered facts."
+    author: "Isaac Newton",
+    quote: "Truth is the offspring of silence and unbroken meditation.",
   },
   {
-    "author": "?",
-    "quote": "Closed in my room, my imagination becomes the universe and the rest of the world is missing out."
+    author: "?",
+    quote:
+      "One reason why mathematics enjoys special esteem, above all other sciences, is that its laws are absolutely certain and indisputable, while those of all other sciences are to some extent debatable and in constant danger of being overthrown by newly discovered facts.",
   },
   {
-    "author": "Sochima Biereagu",
-    "quote": "Figuring out whats important, thats the most important."
+    author: "?",
+    quote:
+      "Closed in my room, my imagination becomes the universe and the rest of the world is missing out.",
   },
   {
-    "author": "Sochima Biereagu",
-    "quote": "Simplicity is the offspring of clear thought and thorough understanding."
+    author: "Sochima Biereagu",
+    quote: "Figuring out whats important, thats the most important.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "It would be possible to describe everything scientifically, but it would make no sense; it would be without meaning, as if you described a Beethoven symphony as a variation of wave pressure."
+    author: "Sochima Biereagu",
+    quote:
+      "Simplicity is the offspring of clear thought and thorough understanding.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "My mind is my laboratory."
+    author: "Sochima Biereagu",
+    quote: "From a hurtful experience a beautiful thing is born",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "The intellect has little to do on the road to discovery. There comes a leap in consciousness, call it Intuition or what you will, the solution comes to you and you don't know how or why."
+    author: "Albert Einstein",
+    quote:
+      "It would be possible to describe everything scientifically, but it would make no sense; it would be without meaning, as if you described a Beethoven symphony as a variation of wave pressure.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "When we write programs that 'learn', it turns out that we do and they don't."
+    author: "Albert Einstein",
+    quote: "My mind is my laboratory.",
   },
   {
-    "author": "Rob pike",
-    "quote": "Simplicity is the art of hiding complexity."
+    author: "Albert Einstein",
+    quote:
+      "The intellect has little to do on the road to discovery. There comes a leap in consciousness, call it Intuition or what you will, the solution comes to you and you don't know how or why.",
   },
   {
-    "author": "Duke Ellington",
-    "quote": "A problem is a chance for you to do your best."
+    author: "Alan Perlis",
+    quote:
+      "When we write programs that 'learn', it turns out that we do and they don't.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "We can not solve our problems with the same level of thinking that created them."
+    author: "Rob pike",
+    quote: "Simplicity is the art of hiding complexity.",
   },
   {
-    "author": "John Dewey",
-    "quote": "A problem well stated is a problem half solved."
+    author: "Duke Ellington",
+    quote: "A problem is a chance for you to do your best.",
   },
   {
-    "author": "Malcolm Forbes",
-    "quote": "It's so much easier to suggest solutions when you don't know too much about the problem."
+    author: "Albert Einstein",
+    quote:
+      "We can not solve our problems with the same level of thinking that created them.",
   },
   {
-    "author": "Amit Kalantri",
-    "quote": "All my problems bow before my stubbornness."
+    author: "John Dewey",
+    quote: "A problem well stated is a problem half solved.",
   },
   {
-    "author": "Yoko Ogawa",
-    "quote": "Solving a problem for which you know there’s an answer is like climbing a mountain with a guide, along a trail someone else has laid. In mathematics, the truth is somewhere out there in a place no one knows, beyond all the beaten paths. And it’s not always at the top of the mountain. It might be in a crack on the smoothest cliff or somewhere deep in the valley"
+    author: "Malcolm Forbes",
+    quote:
+      "It's so much easier to suggest solutions when you don't know too much about the problem.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "Computer Science is no more about computers than astronomy is about telescopes."
+    author: "Amit Kalantri",
+    quote: "All my problems bow before my stubbornness.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "Simplicity is prerequisite for reliability."
+    author: "Yoko Ogawa",
+    quote:
+      "Solving a problem for which you know there’s an answer is like climbing a mountain with a guide, along a trail someone else has laid. In mathematics, the truth is somewhere out there in a place no one knows, beyond all the beaten paths. And it’s not always at the top of the mountain. It might be in a crack on the smoothest cliff or somewhere deep in the valley",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "The computing scientist’s main challenge is not to get confused by the complexities of his own making."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "Computer Science is no more about computers than astronomy is about telescopes.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "If debugging is the process of removing software bugs, then programming must be the process of putting them in."
+    author: "Edsger W. Dijkstra",
+    quote: "Simplicity is prerequisite for reliability.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "A program is like a poem: you cannot write a poem without writing it. Yet people talk about programming as if it were a production process and measure „programmer productivity“ in terms of „number of lines of code produced“. In so doing they book that number on the wrong side of the ledger: We should always refer to „the number of lines of code spent“."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "The computing scientist’s main challenge is not to get confused by the complexities of his own making.",
   },
   {
-    "author": "Tony Hoare",
-    "quote": "There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "If debugging is the process of removing software bugs, then programming must be the process of putting them in.",
   },
   {
-    "author": "Jeff Hammerbacher",
-    "quote": "The best minds of my generation are thinking about how to make people click ads."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "A program is like a poem: you cannot write a poem without writing it. Yet people talk about programming as if it were a production process and measure „programmer productivity“ in terms of „number of lines of code produced“. In so doing they book that number on the wrong side of the ledger: We should always refer to „the number of lines of code spent“.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "The tools we use have a profound and devious influence on our thinking habits, and therefore on our thinking abilities."
+    author: "Tony Hoare",
+    quote:
+      "There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "How do we convince people that in programming simplicity and clarity — in short: what mathematicians call \"elegance\" — are not a dispensable luxury, but a crucial matter that decides between success and failure?"
+    author: "Jeff Hammerbacher",
+    quote:
+      "The best minds of my generation are thinking about how to make people click ads.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Adding manpower to a late software project makes it later."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "The tools we use have a profound and devious influence on our thinking habits, and therefore on our thinking abilities.",
   },
   {
-    "author": "Michael Stal",
-    "quote": "Sometimes there is a silver bullet for boosting software engineering productivity. But you need to shoot the right person."
+    author: "Edsger W. Dijkstra",
+    quote:
+      'How do we convince people that in programming simplicity and clarity — in short: what mathematicians call "elegance" — are not a dispensable luxury, but a crucial matter that decides between success and failure?',
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Nine women can't make a baby in one month."
+    author: "Fred Brooks",
+    quote: "Adding manpower to a late software project makes it later.",
   },
   {
-    "author": "Jeff Sickel",
-    "quote": "Deleted code is debugged code."
+    author: "Michael Stal",
+    quote:
+      "Sometimes there is a silver bullet for boosting software engineering productivity. But you need to shoot the right person.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "When in doubt, use brute force."
+    author: "Fred Brooks",
+    quote: "Nine women can't make a baby in one month.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "When a task cannot be partitioned because of sequential constraints, the application of more effort has no effect on the schedule. The bearing of a child takes nine months, no matter how many women are assigned."
+    author: "Jeff Sickel",
+    quote: "Deleted code is debugged code.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "If each part of the task must be separately coordinated with each other part, the effort increases as n(n-1)/2. Three workers require three times as much pairwise intercommunication as two; four require six times as much as two."
+    author: "Ken Thompson",
+    quote: "When in doubt, use brute force.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Having a system architect is the most important single step toward conceptual integrity. After teaching a software engineering laboratory more than 20 times, I came to insist that student teams as small as four people choose a manager and a separate architect."
+    author: "Fred Brooks",
+    quote:
+      "When a task cannot be partitioned because of sequential constraints, the application of more effort has no effect on the schedule. The bearing of a child takes nine months, no matter how many women are assigned.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures."
+    author: "Fred Brooks",
+    quote:
+      "If each part of the task must be separately coordinated with each other part, the effort increases as n(n-1)/2. Three workers require three times as much pairwise intercommunication as two; four require six times as much as two.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The first false assumption that underlies the scheduling of systems programming is that all will go well, i.e., that each task will hike only as long as it \"ought\" to take. A large programming effort, however, consists of many tasks, some chained end-to-end. The probability that each will go well becomes vanishingly small."
+    author: "Fred Brooks",
+    quote:
+      "Having a system architect is the most important single step toward conceptual integrity. After teaching a software engineering laboratory more than 20 times, I came to insist that student teams as small as four people choose a manager and a separate architect.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."
+    author: "Fred Brooks",
+    quote:
+      "The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "One of my most productive days was throwing away 1,000 lines of code."
+    author: "Fred Brooks",
+    quote:
+      'The first false assumption that underlies the scheduling of systems programming is that all will go well, i.e., that each task will hike only as long as it "ought" to take. A large programming effort, however, consists of many tasks, some chained end-to-end. The probability that each will go well becomes vanishingly small.',
   },
   {
-    "author": "Grace Hopper",
-    "quote": "One accurate measurement is worth more than a thousand expert opinions."
+    author: "Donald Knuth",
+    quote:
+      "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "What one programmer can do in one month, two programmers can do in two months."
+    author: "Ken Thompson",
+    quote:
+      "One of my most productive days was throwing away 1,000 lines of code.",
   },
   {
-    "author": "Rick Osborne",
-    "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
+    author: "Grace Hopper",
+    quote:
+      "One accurate measurement is worth more than a thousand expert opinions.",
   },
   {
-    "author": "John Ousterhout",
-    "quote": "A program that produces incorrect results twice as fast is infinitely slower."
+    author: "Fred Brooks",
+    quote:
+      "What one programmer can do in one month, two programmers can do in two months.",
   },
   {
-    "author": "Poul Anderson",
-    "quote": "I have yet to see any problem, however complicated, which when looked at in the right way, did not become more complicated."
+    author: "Rick Osborne",
+    quote:
+      "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.",
   },
   {
-    "author": "Robert C. Martin",
-    "quote": "Cleaning code does NOT take time. NOT cleaning code does take time."
+    author: "John Ousterhout",
+    quote:
+      "A program that produces incorrect results twice as fast is infinitely slower.",
   },
   {
-    "author": "David Gelernter",
-    "quote": "Beauty is more important in computing than anywhere else in technology because software is so complicated. Beauty is the ultimate defense against complexity."
+    author: "Poul Anderson",
+    quote:
+      "I have yet to see any problem, however complicated, which when looked at in the right way, did not become more complicated.",
   },
   {
-    "author": "Edward V. Berard",
-    "quote": "Walking on water and developing software from a specification are easy if both are frozen."
+    author: "Robert C. Martin",
+    quote:
+      "Cleaning code does NOT take time. NOT cleaning code does take time.",
   },
   {
-    "author": "Brian Kernighan",
-    "quote": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."
+    author: "David Gelernter",
+    quote:
+      "Beauty is more important in computing than anywhere else in technology because software is so complicated. Beauty is the ultimate defense against complexity.",
   },
   {
-    "author": "Brian Kernighan",
-    "quote": "Controlling complexity is the essence of computer programming."
+    author: "Edward V. Berard",
+    quote:
+      "Walking on water and developing software from a specification are easy if both are frozen.",
   },
   {
-    "author": "Chris Wenham",
-    "quote": "Debugging time increases as a square of the program’s size."
+    author: "Brian Kernighan",
+    quote:
+      "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
   },
   {
-    "author": "Seymour Cray",
-    "quote": "The trouble with programmers is that you can never tell what a programmer is doing until it’s too late."
+    author: "Brian Kernighan",
+    quote: "Controlling complexity is the essence of computer programming.",
   },
   {
-    "author": "Ron Jeffries",
-    "quote": "Code never lies, comments sometimes do."
+    author: "Chris Wenham",
+    quote: "Debugging time increases as a square of the program’s size.",
   },
   {
-    "author": "Laurence J. Peter",
-    "quote": "Some problems are so complex that you have to be highly intelligent and well informed just to be undecided about them."
+    author: "Seymour Cray",
+    quote:
+      "The trouble with programmers is that you can never tell what a programmer is doing until it’s too late.",
   },
   {
-    "author": "Poul-Henning Kamp",
-    "quote": "Make a guess, double the number, and then move to the next larger unit of time. This rule scales tasks in a very interesting way: a one-minute task explodes by a factor of 120 to take two hours. A one-hour job explodes by \"only\" a factor 48 to take two days, while a one-day job grows by a factor of 14 to take two weeks."
+    author: "Ron Jeffries",
+    quote: "Code never lies, comments sometimes do.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "I have no special talent. I am only passionately curious."
+    author: "Laurence J. Peter",
+    quote:
+      "Some problems are so complex that you have to be highly intelligent and well informed just to be undecided about them.",
   },
   {
-    "author": "Robert C. Martin",
-    "quote": "The proper use of comments is to compensate for our failure to express ourself in code."
+    author: "Poul-Henning Kamp",
+    quote:
+      'Make a guess, double the number, and then move to the next larger unit of time. This rule scales tasks in a very interesting way: a one-minute task explodes by a factor of 120 to take two hours. A one-hour job explodes by "only" a factor 48 to take two days, while a one-day job grows by a factor of 14 to take two weeks.',
   },
   {
-    "author": "Rob Pike",
-    "quote": "When there is no type hierarchy you don’t have to manage the type hierarchy."
+    author: "Albert Einstein",
+    quote: "I have no special talent. I am only passionately curious.",
   },
   {
-    "author": "Chris Sacca",
-    "quote": "Simplicity is hard to build, easy to use, and hard to charge for. Complexity is easy to build, hard to use, and easy to charge for."
+    author: "Robert C. Martin",
+    quote:
+      "The proper use of comments is to compensate for our failure to express ourself in code.",
   },
   {
-    "author": "William Wulf",
-    "quote": "More computing sins are committed in the name of efficiency (without necessarily achieving it) than for any other single reason - including blind stupidity."
+    author: "Rob Pike",
+    quote:
+      "When there is no type hierarchy you don’t have to manage the type hierarchy.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "Testing can be a very effective way to show the presence of bugs, but it is hopelessly inadequate for showing their absence."
+    author: "Chris Sacca",
+    quote:
+      "Simplicity is hard to build, easy to use, and hard to charge for. Complexity is easy to build, hard to use, and easy to charge for.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "The formulation of the problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill."
+    author: "William Wulf",
+    quote:
+      "More computing sins are committed in the name of efficiency (without necessarily achieving it) than for any other single reason - including blind stupidity.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "I believe in intuition and inspiration. Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution. It is, strictly speaking, a real factor in scientific research."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "Testing can be a very effective way to show the presence of bugs, but it is hopelessly inadequate for showing their absence.",
   },
   {
-    "author": "Buckminster Fuller",
-    "quote": "When I am working on a problem I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong."
+    author: "Albert Einstein",
+    quote:
+      "The formulation of the problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill.",
   },
   {
-    "author": "Sean Parent",
-    "quote": "Good code is short, simple, and symmetrical - the challenge is figuring out how to get there."
+    author: "Albert Einstein",
+    quote:
+      "I believe in intuition and inspiration. Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution. It is, strictly speaking, a real factor in scientific research.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "If you think your users are idiots, only idiots will use it."
+    author: "Buckminster Fuller",
+    quote:
+      "When I am working on a problem I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Once you stop learning you start dying."
+    author: "Sean Parent",
+    quote:
+      "Good code is short, simple, and symmetrical - the challenge is figuring out how to get there.",
   },
   {
-    "author": "Kevlin Henney",
-    "quote": "No code is faster than no code."
+    author: "Linus Torvalds",
+    quote: "If you think your users are idiots, only idiots will use it.",
   },
   {
-    "author": "Richard P. Gabriel",
-    "quote": "Over half of the time you spend working on a project is spent thinking, and no tool, no matter how advanced, can think for you."
+    author: "Albert Einstein",
+    quote: "Once you stop learning you start dying.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "We could, for instance, begin with cleaning up our language by no longer calling a bug a bug but by calling it an error. It is much more honest because it squarely puts the blame where it belongs, viz. with the programmer who made the error. The animistic metaphor of the bug that maliciously sneaked in while the programmer was not looking is intellectually dishonest as it disguises that the error is the programmer's own creation. The nice thing of this simple change of vocabulary is that it has such a profound effect: while, before, a program with only one bug used to be \"almost correct\", afterwards a program with an error is just \"wrong\"."
+    author: "Kevlin Henney",
+    quote: "No code is faster than no code.",
   },
   {
-    "author": "Stewart Brand",
-    "quote": "Once a new technology starts rolling, if you’re not part of the steamroller, you’re part of the road."
+    author: "Richard P. Gabriel",
+    quote:
+      "Over half of the time you spend working on a project is spent thinking, and no tool, no matter how advanced, can think for you.",
   },
   {
-    "author": "John Gall (author)",
-    "quote": "A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work."
+    author: "Edsger W. Dijkstra",
+    quote:
+      'We could, for instance, begin with cleaning up our language by no longer calling a bug a bug but by calling it an error. It is much more honest because it squarely puts the blame where it belongs, viz. with the programmer who made the error. The animistic metaphor of the bug that maliciously sneaked in while the programmer was not looking is intellectually dishonest as it disguises that the error is the programmer\'s own creation. The nice thing of this simple change of vocabulary is that it has such a profound effect: while, before, a program with only one bug used to be "almost correct", afterwards a program with an error is just "wrong".',
   },
   {
-    "author": "Henry Petroski",
-    "quote": "The most amazing achievement of the computer software industry is its continuing cancellation of the steady and staggering gains made by the computer hardware industry."
+    author: "Stewart Brand",
+    quote:
+      "Once a new technology starts rolling, if you’re not part of the steamroller, you’re part of the road.",
   },
   {
-    "author": "Carl Friedrich Gauss",
-    "quote": "I am never satisfied until I have said as much as possible in a few words, and writing briefly takes far more time than writing at length."
+    author: "John Gall (author)",
+    quote:
+      "A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "There are only two kinds of languages: the ones people complain about and the ones nobody uses."
+    author: "Henry Petroski",
+    quote:
+      "The most amazing achievement of the computer software industry is its continuing cancellation of the steady and staggering gains made by the computer hardware industry.",
   },
   {
-    "author": "Pamela Zave",
-    "quote": "The purpose of software engineering is to control complexity, not to create it."
+    author: "Carl Friedrich Gauss",
+    quote:
+      "I am never satisfied until I have said as much as possible in a few words, and writing briefly takes far more time than writing at length.",
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "Unix is simple. It just takes a genius to understand its simplicity."
+    author: "Bjarne Stroustrup",
+    quote:
+      "There are only two kinds of languages: the ones people complain about and the ones nobody uses.",
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "A language that doesn’t have everything is actually easier to program in than some that do."
+    author: "Pamela Zave",
+    quote:
+      "The purpose of software engineering is to control complexity, not to create it.",
   },
   {
-    "author": "Richard Feynman",
-    "quote": "What I cannot build, I do not understand."
+    author: "Dennis Ritchie",
+    quote:
+      "Unix is simple. It just takes a genius to understand its simplicity.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius – and a lot of courage – to move in the opposite direction."
+    author: "Dennis Ritchie",
+    quote:
+      "A language that doesn’t have everything is actually easier to program in than some that do.",
   },
   {
-    "author": "Lawrence Flon",
-    "quote": "There is no programming language, no matter how structured, that will prevent programmers from making bad programs."
+    author: "Richard Feynman",
+    quote: "What I cannot build, I do not understand.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+    author: "Albert Einstein",
+    quote:
+      "Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius – and a lot of courage – to move in the opposite direction.",
   },
   {
-    "author": "Joe Armstrong (programmer)",
-    "quote": "The problem with object-oriented languages is they’ve got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle."
+    author: "Lawrence Flon",
+    quote:
+      "There is no programming language, no matter how structured, that will prevent programmers from making bad programs.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "You can’t trust code that you did not totally create yourself."
+    author: "Martin Fowler",
+    quote:
+      "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "A clever person solves a problem. A wise person avoids it."
+    author: "Joe Armstrong (programmer)",
+    quote:
+      "The problem with object-oriented languages is they’ve got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "The most important single aspect of software development is to be clear about what you are trying to build."
+    author: "Ken Thompson",
+    quote: "You can’t trust code that you did not totally create yourself.",
   },
   {
-    "author": "Jonathan Shewchuk",
-    "quote": "The only sin is to make a choice without knowing you are making one."
+    author: "Albert Einstein",
+    quote: "A clever person solves a problem. A wise person avoids it.",
   },
   {
-    "author": "Ryan Singer",
-    "quote": "So much complexity in software comes from trying to make one thing do two things."
+    author: "Bjarne Stroustrup",
+    quote:
+      "The most important single aspect of software development is to be clear about what you are trying to build.",
   },
   {
-    "author": "P. J. Plauger",
-    "quote": "Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law."
+    author: "Jonathan Shewchuk",
+    quote:
+      "The only sin is to make a choice without knowing you are making one.",
   },
   {
-    "author": "John Johnson",
-    "quote": "First, solve the problem. Then, write the code."
+    author: "Ryan Singer",
+    quote:
+      "So much complexity in software comes from trying to make one thing do two things.",
   },
   {
-    "author": "Doug Linder",
-    "quote": "A good programmer is someone who looks both ways before crossing a one-way street."
+    author: "P. J. Plauger",
+    quote:
+      "Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law.",
   },
   {
-    "author": "David Wheeler (computer scientist)",
-    "quote": "Compatibility means deliberately repeating other people’s mistakes."
+    author: "John Johnson",
+    quote: "First, solve the problem. Then, write the code.",
   },
   {
-    "author": "Jeremy S. Anderson",
-    "quote": "There are two major products that come out of Berkeley: LSD and UNIX. We don't believe this to be a coincidence."
+    author: "Doug Linder",
+    quote:
+      "A good programmer is someone who looks both ways before crossing a one-way street.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague"
+    author: "David Wheeler (computer scientist)",
+    quote:
+      "Compatibility means deliberately repeating other people’s mistakes.",
   },
   {
-    "author": "Joshua Bloch",
-    "quote": "When in doubt, leave it out."
+    author: "Jeremy S. Anderson",
+    quote:
+      "There are two major products that come out of Berkeley: LSD and UNIX. We don't believe this to be a coincidence.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "Never memorize something that you can look up."
+    author: "Joshua Bloch",
+    quote: "When in doubt, leave it out.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "Mathematicians stand on each others' shoulders and computer scientists stand on each others' toes."
+    author: "Linus Torvalds",
+    quote:
+      "I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "LISP has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts."
+    author: "Albert Einstein",
+    quote: "Never memorize something that you can look up.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "An organisation that treats its programmers as morons will soon have programmers that are willing and able to act like morons only."
+    author: "Richard Hamming",
+    quote:
+      "Mathematicians stand on each others' shoulders and computer scientists stand on each others' toes.",
   },
   {
-    "author": "Anonymous",
-    "quote": "The button is working, only, it cannot be seen."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "LISP has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts.",
   },
   {
-    "author": "Abraham Maslow",
-    "quote": "If your only tool is a hammer then every problem looks like a nail."
+    author: "Bjarne Stroustrup",
+    quote:
+      "An organisation that treats its programmers as morons will soon have programmers that are willing and able to act like morons only.",
   },
   {
-    "author": "Betty Williams",
-    "quote": "There's no use talking about the problem unless you talk about the solution."
+    author: "Anonymous",
+    quote: "The button is working, only, it cannot be seen.",
   },
   {
-    "author": "Piet Hein",
-    "quote": "Problems worthy of attack prove their worth by fighting back"
+    author: "Abraham Maslow",
+    quote:
+      "If your only tool is a hammer then every problem looks like a nail.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Don't worry about anything. Just do what you can and be the best you can be."
+    author: "Betty Williams",
+    quote:
+      "There's no use talking about the problem unless you talk about the solution.",
   },
   {
-    "author": "Tom DeMarco",
-    "quote": "The business of software building isn't really high-tech at all. It's most of all a business of talking to each other and writing things down."
+    author: "Piet Hein",
+    quote: "Problems worthy of attack prove their worth by fighting back",
   },
   {
-    "author": "Paul Graham (programmer)",
-    "quote": "In programming the hard part isn’t solving problems, but deciding what problems to solve."
+    author: "Douglas Crockford",
+    quote:
+      "Don't worry about anything. Just do what you can and be the best you can be.",
   },
   {
-    "author": "Tom DeMarco",
-    "quote": "The manager's function is not to make people work, but to make it possible for people to work."
+    author: "Tom DeMarco",
+    quote:
+      "The business of software building isn't really high-tech at all. It's most of all a business of talking to each other and writing things down.",
   },
   {
-    "author": "Tom DeMarco",
-    "quote": "People under pressure don’t work better; they just work faster."
+    author: "Paul Graham (programmer)",
+    quote:
+      "In programming the hard part isn’t solving problems, but deciding what problems to solve.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "My main conclusion after spending ten years of my life working on the TEX project is that software is hard. It’s harder than anything else I’ve ever had to do."
+    author: "Tom DeMarco",
+    quote:
+      "The manager's function is not to make people work, but to make it possible for people to work.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "Science is what we understand well enough to explain to a computer. Art is everything else we do."
+    author: "Tom DeMarco",
+    quote: "People under pressure don’t work better; they just work faster.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "We have seen that computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty."
+    author: "Donald Knuth",
+    quote:
+      "My main conclusion after spending ten years of my life working on the TEX project is that software is hard. It’s harder than anything else I’ve ever had to do.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "Email is a wonderful thing for people whose role in life is to be on top of things. But not for me; my role is to be on the bottom of things. What I do takes long hours of studying and uninterruptible concentration."
+    author: "Donald Knuth",
+    quote:
+      "Science is what we understand well enough to explain to a computer. Art is everything else we do.",
   },
   {
-    "author": "Kevlin Henney",
-    "quote": "Less code equals less bugs."
+    author: "Donald Knuth",
+    quote:
+      "We have seen that computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty.",
   },
   {
-    "author": "Charles Babbage",
-    "quote": "As soon as an Analytical Engine exists, it will necessarily guide the future course of science."
+    author: "Donald Knuth",
+    quote:
+      "Email is a wonderful thing for people whose role in life is to be on top of things. But not for me; my role is to be on the bottom of things. What I do takes long hours of studying and uninterruptible concentration.",
   },
   {
-    "author": "Charles Babbage",
-    "quote": "The errors which arise from the absence of facts are far more numerous and more durable than those which result from unsound reasoning respecting true data."
+    author: "Kevlin Henney",
+    quote: "Less code equals less bugs.",
   },
   {
-    "author": "Charles Babbage",
-    "quote": "We have already mentioned what may, perhaps, appear paradoxical to some of our readers, — that the division of labour can be applied with equal success to mental as to mechanical operations, and that it ensures in both the same economy of time."
+    author: "Charles Babbage",
+    quote:
+      "As soon as an Analytical Engine exists, it will necessarily guide the future course of science.",
   },
   {
-    "author": "Charles Babbage",
-    "quote": "On two occasions I have been asked [by members of Parliament]: \"Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?\" I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question."
+    author: "Charles Babbage",
+    quote:
+      "The errors which arise from the absence of facts are far more numerous and more durable than those which result from unsound reasoning respecting true data.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "As long as there were no machines, programming was no problem at all; when we had a few weak computers, programming became a mild problem, and now we have gigantic computers, programming has become an equally gigantic problem."
+    author: "Charles Babbage",
+    quote:
+      "We have already mentioned what may, perhaps, appear paradoxical to some of our readers, — that the division of labour can be applied with equal success to mental as to mechanical operations, and that it ensures in both the same economy of time.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense."
+    author: "Charles Babbage",
+    quote:
+      'On two occasions I have been asked [by members of Parliament]: "Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?" I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.',
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "If you want more effective programmers, you will discover that they should not waste their time debugging, they should not introduce the bugs to start with."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "As long as there were no machines, programming was no problem at all; when we had a few weak computers, programming became a mild problem, and now we have gigantic computers, programming has become an equally gigantic problem.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "A picture may be worth a thousand words, a formula is worth a thousand pictures."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "If you want more effective programmers, you will discover that they should not waste their time debugging, they should not introduce the bugs to start with.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "I mean, if 10 years from now, when you are doing something quick and dirty, you suddenly visualize that I am looking over your shoulders and say to yourself \"Dijkstra would not have liked this\", well, that would be enough immortality for me."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "Don't blame me for the fact that competent programming will be too difficult for \"the average programmer\" — you must not fall into the trap of rejecting a surgical technique because it is beyond the capabilities of the barber in his shop around the corner."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "A picture may be worth a thousand words, a formula is worth a thousand pictures.",
   },
   {
-    "author": "John von Neumann",
-    "quote": "Young man, in mathematics you don't understand things. You just get used to them."
+    author: "Edsger W. Dijkstra",
+    quote:
+      'I mean, if 10 years from now, when you are doing something quick and dirty, you suddenly visualize that I am looking over your shoulders and say to yourself "Dijkstra would not have liked this", well, that would be enough immortality for me.',
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "C is quirky, flawed, and an enormous success."
+    author: "Edsger W. Dijkstra",
+    quote:
+      'Don\'t blame me for the fact that competent programming will be too difficult for "the average programmer" — you must not fall into the trap of rejecting a surgical technique because it is beyond the capabilities of the barber in his shop around the corner.',
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "It is not the task of the University to offer what society asks for, but to give what society needs."
+    author: "John von Neumann",
+    quote:
+      "Young man, in mathematics you don't understand things. You just get used to them.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "By understanding a machine-oriented language, the programmer will tend to use a much more efficient method; it is much closer to reality."
+    author: "Dennis Ritchie",
+    quote: "C is quirky, flawed, and an enormous success.",
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "Another danger is that commercial pressures of one sort or another will divert the attention of the best thinkers from real innovation to exploitation of the current fad, from prospecting to mining a known lode."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "It is not the task of the University to offer what society asks for, but to give what society needs.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "Within C++, there is a much smaller and cleaner language struggling to get out."
+    author: "Donald Knuth",
+    quote:
+      "By understanding a machine-oriented language, the programmer will tend to use a much more efficient method; it is much closer to reality.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "Anybody who comes to you and says he has a perfect language is either naïve or a salesman."
+    author: "Dennis Ritchie",
+    quote:
+      "Another danger is that commercial pressures of one sort or another will divert the attention of the best thinkers from real innovation to exploitation of the current fad, from prospecting to mining a known lode.",
   },
   {
-    "author": "Alan Turing",
-    "quote": "A man provided with paper, pencil, and rubber, and subject to strict discipline, is in effect a universal machine."
+    author: "Bjarne Stroustrup",
+    quote:
+      "Within C++, there is a much smaller and cleaner language struggling to get out.",
   },
   {
-    "author": "Alan Turing",
-    "quote": "The idea behind digital computers may be explained by saying that these machines are intended to carry out any operations which could be done by a human computer."
+    author: "Bjarne Stroustrup",
+    quote:
+      "Anybody who comes to you and says he has a perfect language is either naïve or a salesman.",
   },
   {
-    "author": "Alan Turing",
-    "quote": "Machines take me by surprise with great frequency."
+    author: "Alan Turing",
+    quote:
+      "A man provided with paper, pencil, and rubber, and subject to strict discipline, is in effect a universal machine.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "Maybe \"just one little global variable\" isn't too unmanageable, but that style leads to code that is useless except to its original programmer."
+    author: "Alan Turing",
+    quote:
+      "The idea behind digital computers may be explained by saying that these machines are intended to carry out any operations which could be done by a human computer.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "I'm doing a free operating system (just a hobby, won't be big and professional like GNU)."
+    author: "Alan Turing",
+    quote: "Machines take me by surprise with great frequency.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program."
+    author: "Bjarne Stroustrup",
+    quote:
+      'Maybe "just one little global variable" isn\'t too unmanageable, but that style leads to code that is useless except to its original programmer.',
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "An infinite number of monkeys typing into GNU Emacs would never make a good program."
+    author: "Linus Torvalds",
+    quote:
+      "I'm doing a free operating system (just a hobby, won't be big and professional like GNU).",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "If Microsoft ever does applications for Linux it means I've won."
+    author: "Linus Torvalds",
+    quote:
+      "If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-)"
+    author: "Linus Torvalds",
+    quote:
+      "An infinite number of monkeys typing into GNU Emacs would never make a good program.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "Really, I'm not out to destroy Microsoft. That will just be a completely unintentional side effect."
+    author: "Linus Torvalds",
+    quote: "If Microsoft ever does applications for Linux it means I've won.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "Talk is cheap. Show me the code."
+    author: "Linus Torvalds",
+    quote:
+      "See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-)",
   },
   {
-    "author": "Tom Cargill",
-    "quote": "The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time."
+    author: "Linus Torvalds",
+    quote:
+      "Really, I'm not out to destroy Microsoft. That will just be a completely unintentional side effect.",
   },
   {
-    "author": "Kent Beck",
-    "quote": "I'm not a great programmer; I'm just a good programmer with great habits."
+    author: "Linus Torvalds",
+    quote: "Talk is cheap. Show me the code.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "There's only one trick in software, and that is using a piece of software that's already been written."
+    author: "Tom Cargill",
+    quote:
+      "The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
   },
   {
-    "author": "Marijn Haverbeke",
-    "quote": "Programming, it turns out, is hard. The fundamental rules are typically simple and clear. But programs built on top of these rules tend to become complex enough to introduce their own rules and complexity. You’re building your own maze, in a way, and you might just get lost in it."
+    author: "Kent Beck",
+    quote:
+      "I'm not a great programmer; I'm just a good programmer with great habits.",
   },
   {
-    "author": "Marijn Haverbeke",
-    "quote": "Computers themselves can do only stupidly straightforward things. The reason they are so useful is that they do these things at an incredibly high speed."
+    author: "Bill Gates",
+    quote:
+      "There's only one trick in software, and that is using a piece of software that's already been written.",
   },
   {
-    "author": "Marijn Haverbeke",
-    "quote": "A program is a building of thought. It is costless to build, it is weightless, and it grows easily under our typing hands. But without care, a program’s size and complexity will grow out of control, confusing even the person who created it."
+    author: "Marijn Haverbeke",
+    quote:
+      "Programming, it turns out, is hard. The fundamental rules are typically simple and clear. But programs built on top of these rules tend to become complex enough to introduce their own rules and complexity. You’re building your own maze, in a way, and you might just get lost in it.",
   },
   {
-    "author": "Marijn Haverbeke",
-    "quote": "There are many terrible mistakes to make in program design, so go ahead and make them so that you understand them better."
+    author: "Marijn Haverbeke",
+    quote:
+      "Computers themselves can do only stupidly straightforward things. The reason they are so useful is that they do these things at an incredibly high speed.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones."
+    author: "Marijn Haverbeke",
+    quote:
+      "A program is a building of thought. It is costless to build, it is weightless, and it grows easily under our typing hands. But without care, a program’s size and complexity will grow out of control, confusing even the person who created it.",
   },
   {
-    "author": "Jamie Zawinski",
-    "quote": "Professionalism has no place in art, and hacking is art. Software Engineering might be science; but that's not what I do. I'm a hacker, not an engineer."
+    author: "Marijn Haverbeke",
+    quote:
+      "There are many terrible mistakes to make in program design, so go ahead and make them so that you understand them better.",
   },
   {
-    "author": "Quarry worker's creed",
-    "quote": "We who cut mere stones must always be envisioning cathedrals."
+    author: "Donald Knuth",
+    quote:
+      "People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones.",
   },
   {
-    "author": "Roy Fielding",
-    "quote": "Communication must be stateless in nature, such that each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server."
+    author: "Jamie Zawinski",
+    quote:
+      "Professionalism has no place in art, and hacking is art. Software Engineering might be science; but that's not what I do. I'm a hacker, not an engineer.",
   },
   {
-    "author": "Kent Beck",
-    "quote": "When you feel the need to write a comment, first try to refactor the code so that any comment becomes superfluous."
+    author: "Quarry worker's creed",
+    quote: "We who cut mere stones must always be envisioning cathedrals.",
   },
   {
-    "author": "Kent Beck",
-    "quote": "When you find you have to add a feature to a program, and the program's code is not structured in a convenient way to add the feature, first refactor the program to make it easy to add the feature, then add the feature."
+    author: "Roy Fielding",
+    quote:
+      "Communication must be stateless in nature, such that each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "There are few things more frustrating or time wasting than debugging. Wouldn't it be a hell of a lot quicker if we just didn't create the bugs in the first place?"
+    author: "Kent Beck",
+    quote:
+      "When you feel the need to write a comment, first try to refactor the code so that any comment becomes superfluous.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "With testing, I know straight away when I added a bug. That lets me fix the bug immediately, before it can crawl off and hide."
+    author: "Kent Beck",
+    quote:
+      "When you find you have to add a feature to a program, and the program's code is not structured in a convenient way to add the feature, first refactor the program to make it easy to add the feature, then add the feature.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "I think one of the most valuable rules is avoid duplication."
+    author: "Martin Fowler",
+    quote:
+      "There are few things more frustrating or time wasting than debugging. Wouldn't it be a hell of a lot quicker if we just didn't create the bugs in the first place?",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "Often designers do complicated things that improve the capacity on a particular hardware platform when it might actually be cheaper to buy more hardware."
+    author: "Martin Fowler",
+    quote:
+      "With testing, I know straight away when I added a bug. That lets me fix the bug immediately, before it can crawl off and hide.",
   },
   {
-    "author": "John Carmack",
-    "quote": "The situation is so much better for programmers today - a cheap used PC, a linux CD, and an internet account, and you have all the tools necessary to work your way to any level of programming skill you want to shoot for."
+    author: "Martin Fowler",
+    quote: "I think one of the most valuable rules is avoid duplication.",
   },
   {
-    "author": "John Carmack",
-    "quote": "If you want to set off and go develop some grand new thing, you don't need millions of dollars of capitalization. You need enough pizza and Diet Coke to stick in your refrigerator, a cheap PC to work on, and the dedication to go through with it."
+    author: "Martin Fowler",
+    quote:
+      "Often designers do complicated things that improve the capacity on a particular hardware platform when it might actually be cheaper to buy more hardware.",
   },
   {
-    "author": "John Carmack",
-    "quote": "Story in a game is like a story in a porn movie. It's expected to be there, but it's not that important."
+    author: "John Carmack",
+    quote:
+      "The situation is so much better for programmers today - a cheap used PC, a linux CD, and an internet account, and you have all the tools necessary to work your way to any level of programming skill you want to shoot for.",
   },
   {
-    "author": "Paul Graham (programmer)",
-    "quote": "The best thing software can be is easy, but the way to do this is to get the defaults right, not to limit users' choices."
+    author: "John Carmack",
+    quote:
+      "If you want to set off and go develop some grand new thing, you don't need millions of dollars of capitalization. You need enough pizza and Diet Coke to stick in your refrigerator, a cheap PC to work on, and the dedication to go through with it.",
   },
   {
-    "author": "Paul Graham (programmer)",
-    "quote": "The most important thing is to be able to think what you want, not to say what you want."
+    author: "John Carmack",
+    quote:
+      "Story in a game is like a story in a porn movie. It's expected to be there, but it's not that important.",
   },
   {
-    "author": "Paul Graham (programmer)",
-    "quote": "It's not so important what you work on, so long as you're not wasting your time."
+    author: "Paul Graham (programmer)",
+    quote:
+      "The best thing software can be is easy, but the way to do this is to get the defaults right, not to limit users' choices.",
   },
   {
-    "author": "Paul Graham (programmer)",
-    "quote": "The top 5% of programmers probably write 99% of the good software."
+    author: "Paul Graham (programmer)",
+    quote:
+      "The most important thing is to be able to think what you want, not to say what you want.",
   },
   {
-    "author": "Paul Graham (programmer)",
-    "quote": "There are few sources of energy so powerful as a procrastinating grad student."
+    author: "Paul Graham (programmer)",
+    quote:
+      "It's not so important what you work on, so long as you're not wasting your time.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "Your most unhappy customers are your greatest source of learning."
+    author: "Paul Graham (programmer)",
+    quote: "The top 5% of programmers probably write 99% of the good software.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "We're no longer in the days where everything is super well crafted. But at the heart of the programs that make it to the top, you'll find that the key internal code was done by a few people who really know what they were doing."
+    author: "Paul Graham (programmer)",
+    quote:
+      "There are few sources of energy so powerful as a procrastinating grad student.",
   },
   {
-    "author": "Ward Cunningham",
-    "quote": "What is simplicity? Simplicity is the shortest path to a solution."
+    author: "Bill Gates",
+    quote: "Your most unhappy customers are your greatest source of learning.",
   },
   {
-    "author": "Ward Cunningham",
-    "quote": "Putting a new feature into a program is important, but refactoring so new features can be added in the future is equally important."
+    author: "Bill Gates",
+    quote:
+      "We're no longer in the days where everything is super well crafted. But at the heart of the programs that make it to the top, you'll find that the key internal code was done by a few people who really know what they were doing.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "A new idea comes suddenly and in a rather intuitive way. But intuition is nothing but the outcome of earlier intellectual experience."
+    author: "Ward Cunningham",
+    quote: "What is simplicity? Simplicity is the shortest path to a solution.",
   },
   {
-    "author": "Ludwig Wittgenstein",
-    "quote": "The limits of my language mean the limits of my world."
+    author: "Ward Cunningham",
+    quote:
+      "Putting a new feature into a program is important, but refactoring so new features can be added in the future is equally important.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "If you have a procedure with 10 parameters, you probably missed some."
+    author: "Albert Einstein",
+    quote:
+      "A new idea comes suddenly and in a rather intuitive way. But intuition is nothing but the outcome of earlier intellectual experience.",
   },
   {
-    "author": "George Boole",
-    "quote": "That language is an instrument of human reason, and not merely a medium for the expression of thought, is a truth generally admitted."
+    author: "Ludwig Wittgenstein",
+    quote: "The limits of my language mean the limits of my world.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "A language that doesn't affect the way you think about programming, is not worth knowing."
+    author: "Alan Perlis",
+    quote:
+      "If you have a procedure with 10 parameters, you probably missed some.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Simplicity does not precede complexity, but follows it."
+    author: "George Boole",
+    quote:
+      "That language is an instrument of human reason, and not merely a medium for the expression of thought, is a truth generally admitted.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "A year spent in artificial intelligence is enough to make one believe in God."
+    author: "Alan Perlis",
+    quote:
+      "A language that doesn't affect the way you think about programming, is not worth knowing.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "The best book on programming for the layman is Alice in Wonderland, but that's because it's the best book on anything for the layman."
+    author: "Alan Perlis",
+    quote: "Simplicity does not precede complexity, but follows it.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Dealing with failure is easy: Work hard to improve."
+    author: "Alan Perlis",
+    quote:
+      "A year spent in artificial intelligence is enough to make one believe in God.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "A programming language is low level when its programs require attention to the irrelevant."
+    author: "Alan Perlis",
+    quote:
+      "The best book on programming for the layman is Alice in Wonderland, but that's because it's the best book on anything for the layman.",
   },
   {
-    "author": "James Gleick",
-    "quote": "Computer programs are the most intricate, delicately balanced and finely interwoven of all the products of human industry to date."
+    author: "Alan Perlis",
+    quote: "Dealing with failure is easy: Work hard to improve.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "The effective exploitation of his powers of abstraction must be regarded as one of the most vital activities of a competent programmer."
+    author: "Alan Perlis",
+    quote:
+      "A programming language is low level when its programs require attention to the irrelevant.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it."
+    author: "James Gleick",
+    quote:
+      "Computer programs are the most intricate, delicately balanced and finely interwoven of all the products of human industry to date.",
   },
   {
-    "author": "Hal Abelson",
-    "quote": "Programs must be written for people to read, and only incidentally for machines to execute."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "The effective exploitation of his powers of abstraction must be regarded as one of the most vital activities of a competent programmer.",
   },
   {
-    "author": "Mark Gibbs",
-    "quote": "No matter how slick the demo is in rehearsal, when you do it in front of a live audience, the probability of a flawless presentation is inversely proportional to the number of people watching, raised to the power of the amount of money involved."
+    author: "Alan Perlis",
+    quote:
+      "Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.",
   },
   {
-    "author": "Nathaniel Borenstein",
-    "quote": "It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter."
+    author: "Hal Abelson",
+    quote:
+      "Programs must be written for people to read, and only incidentally for machines to execute.",
   },
   {
-    "author": "Jef Raskin",
-    "quote": "When we don’t understand a process, we fall into magical thinking about results."
+    author: "Mark Gibbs",
+    quote:
+      "No matter how slick the demo is in rehearsal, when you do it in front of a live audience, the probability of a flawless presentation is inversely proportional to the number of people watching, raised to the power of the amount of money involved.",
   },
   {
-    "author": "John Carmack",
-    "quote": "Low-level programming is good for the programmer’s soul."
+    author: "Nathaniel Borenstein",
+    quote:
+      "It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "Simplicity and elegance are unpopular because they require hard work and discipline to achieve and education to be appreciated."
+    author: "Jef Raskin",
+    quote:
+      "When we don’t understand a process, we fall into magical thinking about results.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "A user interface should be so simple that a beginner in an emergency can understand it within 10 seconds."
+    author: "John Carmack",
+    quote: "Low-level programming is good for the programmer’s soul.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "Learning to program has no more to do with designing interactive software than learning to touch type has to do with writing poetry."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "Simplicity and elegance are unpopular because they require hard work and discipline to achieve and education to be appreciated.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Every program has (at least) two purposes: the one for which it was written and another for which it wasn't."
+    author: "Ted Nelson",
+    quote:
+      "A user interface should be so simple that a beginner in an emergency can understand it within 10 seconds.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "In man-machine symbiosis, it is man who must adjust: The machines can't."
+    author: "Ted Nelson",
+    quote:
+      "Learning to program has no more to do with designing interactive software than learning to touch type has to do with writing poetry.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "One man's constant is another man's variable."
+    author: "Alan Perlis",
+    quote:
+      "Every program has (at least) two purposes: the one for which it was written and another for which it wasn't.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "Success is a lousy teacher. It seduces smart people into thinking they can't lose."
+    author: "Alan Perlis",
+    quote:
+      "In man-machine symbiosis, it is man who must adjust: The machines can't.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "It is easier to change the specification to fit the program than vice versa."
+    author: "Alan Perlis",
+    quote: "One man's constant is another man's variable.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "I think it is inevitable that people program poorly. Training will not substantially help matters. We have to learn to live with it."
+    author: "Bill Gates",
+    quote:
+      "Success is a lousy teacher. It seduces smart people into thinking they can't lose.",
   },
   {
-    "author": "Henry Ford",
-    "quote": "If we’d asked the customers what they wanted, they would have said “faster horses”."
+    author: "Alan Perlis",
+    quote:
+      "It is easier to change the specification to fit the program than vice versa.",
   },
   {
-    "author": "David Parnas",
-    "quote": "I have found that the reason a lot of people are interested in artificial intelligence is the same reason a lot of people are interested in artificial limbs: they are missing one."
+    author: "Alan Perlis",
+    quote:
+      "I think it is inevitable that people program poorly. Training will not substantially help matters. We have to learn to live with it.",
   },
   {
-    "author": "Leslie Lamport",
-    "quote": "A distributed system is one in which the failure of a computer you didn’t even know existed can render your own computer unusable."
+    author: "Henry Ford",
+    quote:
+      "If we’d asked the customers what they wanted, they would have said “faster horses”.",
   },
   {
-    "author": "Ward Cunningham",
-    "quote": "It’s all talk until the code runs."
+    author: "David Parnas",
+    quote:
+      "I have found that the reason a lot of people are interested in artificial intelligence is the same reason a lot of people are interested in artificial limbs: they are missing one.",
   },
   {
-    "author": "Jan L. A. van de Snepscheut",
-    "quote": "In theory, there is no difference between theory and practice. But, in practice, there is."
+    author: "Leslie Lamport",
+    quote:
+      "A distributed system is one in which the failure of a computer you didn’t even know existed can render your own computer unusable.",
   },
   {
-    "author": "Ellen Ullman",
-    "quote": "We build our computer systems the way we build our cities: over time, without a plan, on top of ruins."
+    author: "Ward Cunningham",
+    quote: "It’s all talk until the code runs.",
   },
   {
-    "author": "Eric S. Raymond",
-    "quote": "The next best thing to having good ideas is recognizing good ideas from your users."
+    author: "Jan L. A. van de Snepscheut",
+    quote:
+      "In theory, there is no difference between theory and practice. But, in practice, there is.",
   },
   {
-    "author": "Joel Spolsky",
-    "quote": "Good software, like good wine, takes time."
+    author: "Ellen Ullman",
+    quote:
+      "We build our computer systems the way we build our cities: over time, without a plan, on top of ruins.",
   },
   {
-    "author": "Eric S. Raymond",
-    "quote": "Lisp is worth learning for the profound enlightenment experience you will have when you finally get it; that experience will make you a better programmer for the rest of your days, even if you never actually use Lisp itself a lot."
+    author: "Eric S. Raymond",
+    quote:
+      "The next best thing to having good ideas is recognizing good ideas from your users.",
   },
   {
-    "author": "Filipe Fortes",
-    "quote": "Debugging is like being the detective in a crime movie where you are also the murderer."
+    author: "Joel Spolsky",
+    quote: "Good software, like good wine, takes time.",
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "What we wanted to preserve was not just a good environment in which to do programming, but a system around which fellowship could form."
+    author: "Eric S. Raymond",
+    quote:
+      "Lisp is worth learning for the profound enlightenment experience you will have when you finally get it; that experience will make you a better programmer for the rest of your days, even if you never actually use Lisp itself a lot.",
   },
   {
-    "author": "Marvin Minsky",
-    "quote": "Once the computers got control, we might never get it back."
+    author: "Filipe Fortes",
+    quote:
+      "Debugging is like being the detective in a crime movie where you are also the murderer.",
   },
   {
-    "author": "Jef Raskin",
-    "quote": "A computer shall not waste your time or require you to do more work than is strictly necessary."
+    author: "Dennis Ritchie",
+    quote:
+      "What we wanted to preserve was not just a good environment in which to do programming, but a system around which fellowship could form.",
   },
   {
-    "author": "George Boole",
-    "quote": "Of the many forms of false culture, a premature converse with abstractions is perhaps the most likely to prove fatal to the growth of a masculine vigour of intellect."
+    author: "Marvin Minsky",
+    quote: "Once the computers got control, we might never get it back.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "C++ certainly has its good points. But by and large I think it's a bad language. It does a lot of things half well and it’s just a garbage heap of ideas that are mutually exclusive. It’s way too big, way too complex. And it’s obviously built by a committee."
+    author: "Jef Raskin",
+    quote:
+      "A computer shall not waste your time or require you to do more work than is strictly necessary.",
   },
   {
-    "author": "George Boole",
-    "quote": "No matter how correct a mathematical theorem may appear to be, one ought never to be satisfied that there was not something imperfect about it until it also gives the impression of being beautiful."
+    author: "George Boole",
+    quote:
+      "Of the many forms of false culture, a premature converse with abstractions is perhaps the most likely to prove fatal to the growth of a masculine vigour of intellect.",
   },
   {
-    "author": "Ada Lovelace",
-    "quote": "The Analytical Engine does not occupy common ground with mere 'calculating machines.' It holds a position wholly its own, and the considerations it suggests are more interesting in their nature."
+    author: "Ken Thompson",
+    quote:
+      "C++ certainly has its good points. But by and large I think it's a bad language. It does a lot of things half well and it’s just a garbage heap of ideas that are mutually exclusive. It’s way too big, way too complex. And it’s obviously built by a committee.",
   },
   {
-    "author": "Ada Lovelace",
-    "quote": "The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value."
+    author: "George Boole",
+    quote:
+      "No matter how correct a mathematical theorem may appear to be, one ought never to be satisfied that there was not something imperfect about it until it also gives the impression of being beautiful.",
   },
   {
-    "author": "Ada Lovelace",
-    "quote": "In the case of the Analytical Engine, we have undoubtedly to lay out a certain capital of analytical labour in one particular line, but this is in order that the engine may bring us in a much larger return in another line."
+    author: "Ada Lovelace",
+    quote:
+      "The Analytical Engine does not occupy common ground with mere 'calculating machines.' It holds a position wholly its own, and the considerations it suggests are more interesting in their nature.",
   },
   {
-    "author": "Ada Lovelace",
-    "quote": "We may say most aptly that the Analytical Engine weaves algebraical patterns just as the Jacquard loom weaves flowers and leaves."
+    author: "Ada Lovelace",
+    quote:
+      "The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.",
   },
   {
-    "author": "George Boole",
-    "quote": "The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method."
+    author: "Ada Lovelace",
+    quote:
+      "In the case of the Analytical Engine, we have undoubtedly to lay out a certain capital of analytical labour in one particular line, but this is in order that the engine may bring us in a much larger return in another line.",
   },
   {
-    "author": "John von Neumann",
-    "quote": "Any one who considers arithmetical methods of producing random digits is, of course, in a state of sin. For, as has been pointed out several times, there is no such thing as a random number."
+    author: "Ada Lovelace",
+    quote:
+      "We may say most aptly that the Analytical Engine weaves algebraical patterns just as the Jacquard loom weaves flowers and leaves.",
   },
   {
-    "author": "George Boole",
-    "quote": "There is not only a close analogy between the operations of the mind in general reasoning and its operations in the particular science of Algebra, but there is to a considerable extent an exact agreement in the laws by which the two classes of operations are conducted."
+    author: "George Boole",
+    quote:
+      "The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method.",
   },
   {
-    "author": "John von Neumann",
-    "quote": "A large part of mathematics which becomes useful developed with absolutely no desire to be useful, and in a situation where nobody could possibly know in what area it would become useful."
+    author: "John von Neumann",
+    quote:
+      "Any one who considers arithmetical methods of producing random digits is, of course, in a state of sin. For, as has been pointed out several times, there is no such thing as a random number.",
   },
   {
-    "author": "Friedrich Bauer",
-    "quote": "Software engineering is the part of computer science which is too difficult for the computer scientist."
+    author: "George Boole",
+    quote:
+      "There is not only a close analogy between the operations of the mind in general reasoning and its operations in the particular science of Algebra, but there is to a considerable extent an exact agreement in the laws by which the two classes of operations are conducted.",
   },
   {
-    "author": "Grady Booch",
-    "quote": "The amateur software engineer is always in search of magic, some sensational method or tool whose application promises to render software development trivial. It is the mark of the professional software engineer to know that no such panacea exist."
+    author: "John von Neumann",
+    quote:
+      "A large part of mathematics which becomes useful developed with absolutely no desire to be useful, and in a situation where nobody could possibly know in what area it would become useful.",
   },
   {
-    "author": "Grady Booch",
-    "quote": "Good people with a good process will outperform good people with no process every time."
+    author: "Friedrich Bauer",
+    quote:
+      "Software engineering is the part of computer science which is too difficult for the computer scientist.",
   },
   {
-    "author": "Grady Booch",
-    "quote": "The entire history of software engineering is that of the rise in levels of abstraction."
+    author: "Grady Booch",
+    quote:
+      "The amateur software engineer is always in search of magic, some sensational method or tool whose application promises to render software development trivial. It is the mark of the professional software engineer to know that no such panacea exist.",
   },
   {
-    "author": "Hal Abelson",
-    "quote": "The reason that we think computer science is about computers is pretty much the same reason that the Egyptians thought geometry was about surveying instruments: when some field is just getting started and you don't really understand it very well, it's very easy to confuse the essence of what you're doing with the tools that you use."
+    author: "Grady Booch",
+    quote:
+      "Good people with a good process will outperform good people with no process every time.",
   },
   {
-    "author": "Alan Kay",
-    "quote": "Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves."
+    author: "Grady Booch",
+    quote:
+      "The entire history of software engineering is that of the rise in levels of abstraction.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "Is studying computer science the best way to prepare to be a programmer? No. the best way to prepare is to write programs, and to study great programs that other people have written."
+    author: "Hal Abelson",
+    quote:
+      "The reason that we think computer science is about computers is pretty much the same reason that the Egyptians thought geometry was about surveying instruments: when some field is just getting started and you don't really understand it very well, it's very easy to confuse the essence of what you're doing with the tools that you use.",
   },
   {
-    "author": "Richard Feynman",
-    "quote": "Computer science differs from physics in that it is not actually a science. It does not study natural objects. Rather, computer science is like engineering; it is all about getting something to do something."
+    author: "Alan Kay",
+    quote:
+      "Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "The purpose of computing is insight, not numbers."
+    author: "Bill Gates",
+    quote:
+      "Is studying computer science the best way to prepare to be a programmer? No. the best way to prepare is to write programs, and to study great programs that other people have written.",
   },
   {
-    "author": "Albert Einstein",
-    "quote": "All of our exalted technological progress, civilization for that matter, is comparable to an axe in the hand of a pathological criminal."
+    author: "Richard Feynman",
+    quote:
+      "Computer science differs from physics in that it is not actually a science. It does not study natural objects. Rather, computer science is like engineering; it is all about getting something to do something.",
   },
   {
-    "author": "Arthur C. Clarke",
-    "quote": "When a distinguished but elderly scientist states that something is possible, they are almost certainly right. When they state that something is impossible, they are very probably wrong."
+    author: "Richard Hamming",
+    quote: "The purpose of computing is insight, not numbers.",
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "Computer science research is different from these more traditional disciplines. Philosophically it differs from the physical sciences because it seeks not to discover, explain, or exploit the natural world, but instead to study the properties of machines of human creation."
+    author: "Albert Einstein",
+    quote:
+      "All of our exalted technological progress, civilization for that matter, is comparable to an axe in the hand of a pathological criminal.",
   },
   {
-    "author": "Arthur C. Clarke",
-    "quote": "Any sufficiently advanced technology is indistinguishable from magic."
+    author: "Arthur C. Clarke",
+    quote:
+      "When a distinguished but elderly scientist states that something is possible, they are almost certainly right. When they state that something is impossible, they are very probably wrong.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed: the Big Ball of Mud."
+    author: "Dennis Ritchie",
+    quote:
+      "Computer science research is different from these more traditional disciplines. Philosophically it differs from the physical sciences because it seeks not to discover, explain, or exploit the natural world, but instead to study the properties of machines of human creation.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "All too many of our software systems are, architecturally, little more than shantytowns."
+    author: "Arthur C. Clarke",
+    quote:
+      "Any sufficiently advanced technology is indistinguishable from magic.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "Managing a large project is a qualitatively different problem from managing a small one, just as leading a division of infantry into battle is different from commanding a small special forces team."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "While much attention has been focused on high-level software architectural patterns, what is, in effect, the de-facto standard software architecture is seldom discussed: the Big Ball of Mud.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "When you build a prototype, there is always the risk that someone will say \"that's good enough, ship it\". One way to minimize the risk of a prototype being put into production is to write the prototype in using a language or tool that you couldn't possibly use for a production version."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "All too many of our software systems are, architecturally, little more than shantytowns.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "Sadly, architecture has been undervalued for so long that many engineers regard life with a Big Ball of Mud as normal."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "Managing a large project is a qualitatively different problem from managing a small one, just as leading a division of infantry into battle is different from commanding a small special forces team.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "The real problem with throwaway code comes when it isn't thrown away."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "When you build a prototype, there is always the risk that someone will say \"that's good enough, ship it\". One way to minimize the risk of a prototype being put into production is to write the prototype in using a language or tool that you couldn't possibly use for a production version.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "Sometimes it’s just easier to throw a system away, and start over."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "Sadly, architecture has been undervalued for so long that many engineers regard life with a Big Ball of Mud as normal.",
   },
   {
-    "author": "Eric S. Raymond",
-    "quote": "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "The real problem with throwaway code comes when it isn't thrown away.",
   },
   {
-    "author": "Randall E. Stross",
-    "quote": "The best programmers are not marginally better than merely good ones. They are an order-of-magnitude better, measured by whatever standard: conceptual creativity, speed, ingenuity of design, or problem-solving ability."
+    author: "Joseph Yoder (computer scientist)",
+    quote: "Sometimes it’s just easier to throw a system away, and start over.",
   },
   {
-    "author": "Alan Kay",
-    "quote": "I invented the term 'Object-Oriented', and I can tell you I did not have C++ in mind."
+    author: "Eric S. Raymond",
+    quote:
+      "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.",
   },
   {
-    "author": "Linus Torvalds",
-    "quote": "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."
+    author: "Randall E. Stross",
+    quote:
+      "The best programmers are not marginally better than merely good ones. They are an order-of-magnitude better, measured by whatever standard: conceptual creativity, speed, ingenuity of design, or problem-solving ability.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Educators, generals, dieticians, psychologists, and parents program. Armies, students, and some societies are programmed."
+    author: "Alan Kay",
+    quote:
+      "I invented the term 'Object-Oriented', and I can tell you I did not have C++ in mind.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "To iterate is human, to recurse divine."
+    author: "Linus Torvalds",
+    quote:
+      "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "For all its power, the computer is a harsh taskmaster. Its programs must be correct, and what we wish to say must be said accurately in every detail."
+    author: "Alan Perlis",
+    quote:
+      "Educators, generals, dieticians, psychologists, and parents program. Armies, students, and some societies are programmed.",
   },
   {
-    "author": "John Locke",
-    "quote": "The acts of the mind, wherein it exerts its power over simple ideas, are chiefly these three: 1. Combining several simple ideas into one compound one, and thus all complex ideas are made. 2. The second is bringing two ideas, whether simple or complex, together, and setting them by one another so as to take a view of them at once, without uniting them into one, by which it gets all its ideas of relations. 3. The third is separating them from all other ideas that accompany them in their real existence: this is called abstraction, and thus all its general ideas are made."
+    author: "L. Peter Deutsch",
+    quote: "To iterate is human, to recurse divine.",
   },
   {
-    "author": "Gerald Weinberg",
-    "quote": "When program developers are not territorial about their code and encourage others to look for bugs and potential improvements, progress speeds up dramatically."
+    author: "Alan Perlis",
+    quote:
+      "For all its power, the computer is a harsh taskmaster. Its programs must be correct, and what we wish to say must be said accurately in every detail.",
   },
   {
-    "author": "Anonymous",
-    "quote": "The best thing about a boolean is even if you are wrong, you are only off by a bit."
+    author: "John Locke",
+    quote:
+      "The acts of the mind, wherein it exerts its power over simple ideas, are chiefly these three: 1. Combining several simple ideas into one compound one, and thus all complex ideas are made. 2. The second is bringing two ideas, whether simple or complex, together, and setting them by one another so as to take a view of them at once, without uniting them into one, by which it gets all its ideas of relations. 3. The third is separating them from all other ideas that accompany them in their real existence: this is called abstraction, and thus all its general ideas are made.",
   },
   {
-    "author": "Richard E. Pattis",
-    "quote": "When debugging, novices insert corrective code; experts remove defective code."
+    author: "Gerald Weinberg",
+    quote:
+      "When program developers are not territorial about their code and encourage others to look for bugs and potential improvements, progress speeds up dramatically.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "It turns out that style matters in programming for the same reason that it matters in writing. It makes for better reading."
+    author: "Anonymous",
+    quote:
+      "The best thing about a boolean is even if you are wrong, you are only off by a bit.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Computer programs are the most complex things that humans make."
+    author: "Richard E. Pattis",
+    quote:
+      "When debugging, novices insert corrective code; experts remove defective code.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Most programming languages contain good parts and bad parts. I discovered that I could be better programmer by using only the good parts and avoiding the bad parts."
+    author: "Douglas Crockford",
+    quote:
+      "It turns out that style matters in programming for the same reason that it matters in writing. It makes for better reading.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Good architecture is necessary to give programs enough structure to be able to grow large without collapsing into a puddle of confusion."
+    author: "Douglas Crockford",
+    quote: "Computer programs are the most complex things that humans make.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "JavaScript is the world's most misunderstood programming language."
+    author: "Douglas Crockford",
+    quote:
+      "Most programming languages contain good parts and bad parts. I discovered that I could be better programmer by using only the good parts and avoiding the bad parts.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "In JavaScript, there is a beautiful, elegant, highly expressive language that is buried under a steaming pile of good intentions and blunders."
+    author: "Douglas Crockford",
+    quote:
+      "Good architecture is necessary to give programs enough structure to be able to grow large without collapsing into a puddle of confusion.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Software is usually expected to be modified over the course of its productive life. The process of converting one correct program into a different correct program is extremely challenging."
+    author: "Douglas Crockford",
+    quote: "JavaScript is the world's most misunderstood programming language.",
   },
   {
-    "author": "Eric S. Raymond",
-    "quote": "Every good work of software starts by scratching a developer’s personal itch."
+    author: "Douglas Crockford",
+    quote:
+      "In JavaScript, there is a beautiful, elegant, highly expressive language that is buried under a steaming pile of good intentions and blunders.",
   },
   {
-    "author": "Anonymous",
-    "quote": "You can have the project: Done On Time. Done On Budget. Done Properly - Pick two."
+    author: "Douglas Crockford",
+    quote:
+      "Software is usually expected to be modified over the course of its productive life. The process of converting one correct program into a different correct program is extremely challenging.",
   },
   {
-    "author": "Andy Hunt (author)",
-    "quote": "No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first."
+    author: "Eric S. Raymond",
+    quote:
+      "Every good work of software starts by scratching a developer’s personal itch.",
   },
   {
-    "author": "Steve Wozniak",
-    "quote": "Never trust a computer you can’t throw out a window."
+    author: "Anonymous",
+    quote:
+      "You can have the project: Done On Time. Done On Budget. Done Properly - Pick two.",
   },
   {
-    "author": "Alan Kay",
-    "quote": "The best way to predict the future is to invent it."
+    author: "Andy Hunt (author)",
+    quote:
+      "No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "If you can get today’s work done today, but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow, then you lose."
+    author: "Steve Wozniak",
+    quote: "Never trust a computer you can’t throw out a window.",
   },
   {
-    "author": "Alan Turing",
-    "quote": "Codes are a puzzle. A game, just like any other game."
+    author: "Alan Kay",
+    quote: "The best way to predict the future is to invent it.",
   },
   {
-    "author": "Damian Conway",
-    "quote": "Documentation is a love letter that you write to your future self."
+    author: "Martin Fowler",
+    quote:
+      "If you can get today’s work done today, but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow, then you lose.",
   },
   {
-    "author": "Bdale Garbee",
-    "quote": "Life is too short to run proprietary software."
+    author: "Alan Turing",
+    quote: "Codes are a puzzle. A game, just like any other game.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent."
+    author: "Damian Conway",
+    quote: "Documentation is a love letter that you write to your future self.",
   },
   {
-    "author": "David Leinweber",
-    "quote": "If you give someone a program, you will frustrate them for a day; if you teach them how to program, you will frustrate them for a lifetime."
+    author: "Bdale Garbee",
+    quote: "Life is too short to run proprietary software.",
   },
   {
-    "author": "Mario Fusco",
-    "quote": "The code you write makes you a programmer. The code you delete makes you a good one. The code you don't have to write makes you a great one."
+    author: "Martin Fowler",
+    quote:
+      "Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent.",
   },
   {
-    "author": "Addy Osmani",
-    "quote": "First do it, then do it right, then do it better."
+    author: "David Leinweber",
+    quote:
+      "If you give someone a program, you will frustrate them for a day; if you teach them how to program, you will frustrate them for a lifetime.",
   },
   {
-    "author": "John Carmack",
-    "quote": "The cost of adding a feature isn’t just the time it takes to code it. The cost also includes the addition of an obstacle to future expansion. The trick is to pick the features that don’t fight each other."
+    author: "Mario Fusco",
+    quote:
+      "The code you write makes you a programmer. The code you delete makes you a good one. The code you don't have to write makes you a great one.",
   },
   {
-    "author": "George Carrette",
-    "quote": "First learn computer science and all the theory. Next develop a programming style. Then forget all that and just hack."
+    author: "Addy Osmani",
+    quote: "First do it, then do it right, then do it better.",
   },
   {
-    "author": "Anders Hejlsberg",
-    "quote": "Just because people tell you it can't be done, that doesn't necessarily mean that it can't be done. It just means that they can't do it."
+    author: "John Carmack",
+    quote:
+      "The cost of adding a feature isn’t just the time it takes to code it. The cost also includes the addition of an obstacle to future expansion. The trick is to pick the features that don’t fight each other.",
   },
   {
-    "author": "Dennis Ritchie",
-    "quote": "The only way to learn a new programming language is by writing programs in it."
+    author: "George Carrette",
+    quote:
+      "First learn computer science and all the theory. Next develop a programming style. Then forget all that and just hack.",
   },
   {
-    "author": "Manny Lehman (computer scientist)",
-    "quote": "An evolving system increases its complexity unless work is done to reduce it."
+    author: "Anders Hejlsberg",
+    quote:
+      "Just because people tell you it can't be done, that doesn't necessarily mean that it can't be done. It just means that they can't do it.",
   },
   {
-    "author": "Robert C. Martin",
-    "quote": "No matter how slow you are writing clean code, you will always be slower if you make a mess."
+    author: "Dennis Ritchie",
+    quote:
+      "The only way to learn a new programming language is by writing programs in it.",
   },
   {
-    "author": "Rob Pike",
-    "quote": "Fancy algorithms are slow when n is small, and n is usually small."
+    author: "Manny Lehman (computer scientist)",
+    quote:
+      "An evolving system increases its complexity unless work is done to reduce it.",
   },
   {
-    "author": "Manuel Blum",
-    "quote": "The only difference between a FA [finite automata] and a TM [Turing machine] is that the TM, unlike the FA, has paper and pencil. Think about it. It tells you something about the power of writing."
+    author: "Robert C. Martin",
+    quote:
+      "No matter how slow you are writing clean code, you will always be slower if you make a mess.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "Within a computer, natural language is unnatural."
+    author: "Rob Pike",
+    quote: "Fancy algorithms are slow when n is small, and n is usually small.",
   },
   {
-    "author": "Brian Cantwell Smith",
-    "quote": "Just because you've implemented something doesn't mean you understand it."
+    author: "Manuel Blum",
+    quote:
+      "The only difference between a FA [finite automata] and a TM [Turing machine] is that the TM, unlike the FA, has paper and pencil. Think about it. It tells you something about the power of writing.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "That hardly ever happens is another way of saying 'it happens'."
+    author: "Alan Perlis",
+    quote: "Within a computer, natural language is unnatural.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "Beware of bugs in the above code; I have only proved it correct, not tried it."
+    author: "Brian Cantwell Smith",
+    quote:
+      "Just because you've implemented something doesn't mean you understand it.",
   },
   {
-    "author": "Ivan Sutherland",
-    "quote": "A display connected to a digital computer gives us a chance to gain familiarity with concepts not realizable in the physical world. It is a looking glass into a mathematical wonderland."
+    author: "Douglas Crockford",
+    quote: "That hardly ever happens is another way of saying 'it happens'.",
   },
   {
-    "author": "Ralph Johnson (computer scientist)",
-    "quote": "Before software can be reusable it first has to be usable."
+    author: "Donald Knuth",
+    quote:
+      "Beware of bugs in the above code; I have only proved it correct, not tried it.",
   },
   {
-    "author": "Gordon Bell",
-    "quote": "The cheapest, fastest, and most reliable components are those that aren’t there."
+    author: "Ivan Sutherland",
+    quote:
+      "A display connected to a digital computer gives us a chance to gain familiarity with concepts not realizable in the physical world. It is a looking glass into a mathematical wonderland.",
   },
   {
-    "author": "Anonymous",
-    "quote": "In order to understand recursion, one must first understand recursion."
+    author: "Ralph Johnson (computer scientist)",
+    quote: "Before software can be reusable it first has to be usable.",
   },
   {
-    "author": "Don Norman",
-    "quote": "The hardest part of design is keeping features out."
+    author: "Gordon Bell",
+    quote:
+      "The cheapest, fastest, and most reliable components are those that aren’t there.",
   },
   {
-    "author": "Luciano Ramalho",
-    "quote": "Premature abstraction is as bad as premature optimization."
+    author: "Anonymous",
+    quote:
+      "In order to understand recursion, one must first understand recursion.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Much of the essence of building a program is in fact the debugging of the specification."
+    author: "Don Norman",
+    quote: "The hardest part of design is keeping features out.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "Any product that needs a manual to work is broken."
+    author: "Luciano Ramalho",
+    quote: "Premature abstraction is as bad as premature optimization.",
   },
   {
-    "author": "Kevlin Henney",
-    "quote": "The act of describing a program in unambiguous detail and the act of programming are one and the same."
+    author: "Fred Brooks",
+    quote:
+      "Much of the essence of building a program is in fact the debugging of the specification.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "I think you should always bear in mind that entropy is not on your side."
+    author: "Elon Musk",
+    quote: "Any product that needs a manual to work is broken.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design."
+    author: "Kevlin Henney",
+    quote:
+      "The act of describing a program in unambiguous detail and the act of programming are one and the same.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "People are mistaken when they think that technology just automatically improves. It does not automatically improve. It only improves if a lot of people work very hard to make it better, and actually it will, I think, by itself degrade, actually."
+    author: "Elon Musk",
+    quote:
+      "I think you should always bear in mind that entropy is not on your side.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "With artificial intelligence we are summoning the demon."
+    author: "Elon Musk",
+    quote:
+      "The path to the CEO's office should not be through the CFO's office, and it should not be through the marketing department. It needs to be through engineering and design.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "AI is a fundamental risk to the existence of human civilization."
+    author: "Elon Musk",
+    quote:
+      "People are mistaken when they think that technology just automatically improves. It does not automatically improve. It only improves if a lot of people work very hard to make it better, and actually it will, I think, by itself degrade, actually.",
   },
   {
-    "author": "Terry Winograd",
-    "quote": "The main activity of programming is not the origination of new independent programs, but in the integration, modification, and explanation of existing ones."
+    author: "Elon Musk",
+    quote: "With artificial intelligence we are summoning the demon.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "Cool URIs don't change."
+    author: "Elon Musk",
+    quote: "AI is a fundamental risk to the existence of human civilization.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "I don't believe in the sort of eureka moment idea. I think it's a myth. I'm very suspicious that actually Archimedes had been thinking about that problem for a long time."
+    author: "Terry Winograd",
+    quote:
+      "The main activity of programming is not the origination of new independent programs, but in the integration, modification, and explanation of existing ones.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "When I invented the web, I didn't have to ask anyone's permission."
+    author: "Tim Berners-Lee",
+    quote: "Cool URIs don't change.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "We need to be super careful with AI. Potentially more dangerous than nukes."
+    author: "Tim Berners-Lee",
+    quote:
+      "I don't believe in the sort of eureka moment idea. I think it's a myth. I'm very suspicious that actually Archimedes had been thinking about that problem for a long time.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "I invented the Web just because I needed it, really, because it was so frustrating that it didn't exit."
+    author: "Tim Berners-Lee",
+    quote: "When I invented the web, I didn't have to ask anyone's permission.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "To be a hacker - when I use the term - is somebody who is creative and does wonderful things."
+    author: "Elon Musk",
+    quote:
+      "We need to be super careful with AI. Potentially more dangerous than nukes.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "The Domain Name Server (DNS) is the Achilles heel of the Web."
+    author: "Tim Berners-Lee",
+    quote:
+      "I invented the Web just because I needed it, really, because it was so frustrating that it didn't exit.",
   },
   {
-    "author": "Vannevar Bush",
-    "quote": "Two centuries ago Leibnitz invented a calculating machine which embodied most of the essential features of recent keyboard devices, but it could not then come into use. The economics of the situation were against it."
+    author: "Tim Berners-Lee",
+    quote:
+      "To be a hacker - when I use the term - is somebody who is creative and does wonderful things.",
   },
   {
-    "author": "Vannevar Bush",
-    "quote": "Whenever logical processes of thought are employed, there is an opportunity for the machine."
+    author: "Tim Berners-Lee",
+    quote: "The Domain Name Server (DNS) is the Achilles heel of the Web.",
   },
   {
-    "author": "Vannevar Bush",
-    "quote": "If scientific reasoning were limited to the logical processes of arithmetic, we should not get very far in our understanding of the physical world. One might as well attempt to grasp the game of poker entirely by the use of the mathematics of probability."
+    author: "Vannevar Bush",
+    quote:
+      "Two centuries ago Leibnitz invented a calculating machine which embodied most of the essential features of recent keyboard devices, but it could not then come into use. The economics of the situation were against it.",
   },
   {
-    "author": "Ward Cunningham",
-    "quote": "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite. The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be brought to a stand-still under the technical debt load."
+    author: "Vannevar Bush",
+    quote:
+      "Whenever logical processes of thought are employed, there is an opportunity for the machine.",
   },
   {
-    "author": "Martin Fowler",
-    "quote": "Like a financial debt, the technical debt incurs interest payments, which come in the form of the extra effort that we have to do in future development because of the quick and dirty design choice."
+    author: "Vannevar Bush",
+    quote:
+      "If scientific reasoning were limited to the logical processes of arithmetic, we should not get very far in our understanding of the physical world. One might as well attempt to grasp the game of poker entirely by the use of the mathematics of probability.",
   },
   {
-    "author": "Steve McConnell",
-    "quote": "One of the important implications of technical debt is that it must be serviced. If the debt grows large enough, eventually the company will spend more on servicing its debt than it invests in increasing the value of its other assets."
+    author: "Ward Cunningham",
+    quote:
+      "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite. The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be brought to a stand-still under the technical debt load.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "What's very important from my point of view is that there is one web. Anyone that tries to chop it into two will find that their piece looks very boring."
+    author: "Martin Fowler",
+    quote:
+      "Like a financial debt, the technical debt incurs interest payments, which come in the form of the extra effort that we have to do in future development because of the quick and dirty design choice.",
   },
   {
-    "author": "René Descartes",
-    "quote": "Thus it is observable that the buildings which a single architect has planned and executed, are generally more elegant and commodious than those which several have attempted to improve."
+    author: "Steve McConnell",
+    quote:
+      "One of the important implications of technical debt is that it must be serviced. If the debt grows large enough, eventually the company will spend more on servicing its debt than it invests in increasing the value of its other assets.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "Computers are the most complex objects we human beings have ever created, but in a fundamental sense they are remarkably simple."
+    author: "Tim Berners-Lee",
+    quote:
+      "What's very important from my point of view is that there is one web. Anyone that tries to chop it into two will find that their piece looks very boring.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "The magic of a computer lies in its ability to become almost anything you can imagine, as long as you can explain exactly what that is."
+    author: "René Descartes",
+    quote:
+      "Thus it is observable that the buildings which a single architect has planned and executed, are generally more elegant and commodious than those which several have attempted to improve.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "The computer is not just an advanced calculator or camera or paintbrush; rather, it is a device that accelerates and extends our processes of thought."
+    author: "Danny Hillis",
+    quote:
+      "Computers are the most complex objects we human beings have ever created, but in a fundamental sense they are remarkably simple.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "With the right programming, a computer can become a theater, a musical instrument, a reference book, a chess opponent. No other entity in the world except a human being has such an adaptable, universal nature."
+    author: "Danny Hillis",
+    quote:
+      "The magic of a computer lies in its ability to become almost anything you can imagine, as long as you can explain exactly what that is.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "Anyone who has ever written a program knows that telling a computer what you want it to do is not as easy as it sounds. Every detail of the computer’s desired operation must be precisely described. For instance, if you tell an accounting program to bill your clients for the amount that each owes, then the computer will send out a weekly bill for $0.00 to clients who owe nothing."
+    author: "Danny Hillis",
+    quote:
+      "The computer is not just an advanced calculator or camera or paintbrush; rather, it is a device that accelerates and extends our processes of thought.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "A skilled programmer is like a poet who can put into words those ideas that others find inexpressible."
+    author: "Danny Hillis",
+    quote:
+      "With the right programming, a computer can become a theater, a musical instrument, a reference book, a chess opponent. No other entity in the world except a human being has such an adaptable, universal nature.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "Every computer language has its Shakespeares, and it is a joy to read their code. A well-written computer program possesses style, finesse, even humor—and a clarity that rivals the best prose."
+    author: "Danny Hillis",
+    quote:
+      "Anyone who has ever written a program knows that telling a computer what you want it to do is not as easy as it sounds. Every detail of the computer’s desired operation must be precisely described. For instance, if you tell an accounting program to bill your clients for the amount that each owes, then the computer will send out a weekly bill for $0.00 to clients who owe nothing.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "It turns out that there is no algorithm for examining a program and determining whether or not it is fatally infected with an endless loop. Moreover, it’s not that no one has yet discovered such an algorithm; rather, no such algorithm is possible."
+    author: "Danny Hillis",
+    quote:
+      "A skilled programmer is like a poet who can put into words those ideas that others find inexpressible.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "The class of problems that are computable by a digital computer apparently includes every problem that is computable by any kind of device."
+    author: "Danny Hillis",
+    quote:
+      "Every computer language has its Shakespeares, and it is a joy to read their code. A well-written computer program possesses style, finesse, even humor—and a clarity that rivals the best prose.",
   },
   {
-    "author": "Hal Abelson",
-    "quote": "The programs we use to conjure processes are like a sorcerer's spells. They are carefully composed from symbolic expressions in arcane and esoteric programming languages that prescribe the tasks we want our processes to perform."
+    author: "Danny Hillis",
+    quote:
+      "It turns out that there is no algorithm for examining a program and determining whether or not it is fatally infected with an endless loop. Moreover, it’s not that no one has yet discovered such an algorithm; rather, no such algorithm is possible.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Human beings are not accustomed to being perfect, and few areas of human activity demand it. Adjusting to the requirement for perfection is, I think, the most difficult part of learning to program."
+    author: "Danny Hillis",
+    quote:
+      "The class of problems that are computable by a digital computer apparently includes every problem that is computable by any kind of device.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Because of optimism, we usually expect the number of bugs to be smaller than it turns out to be. Therefore testing is usually the most mis-scheduled part of programming."
+    author: "Hal Abelson",
+    quote:
+      "The programs we use to conjure processes are like a sorcerer's spells. They are carefully composed from symbolic expressions in arcane and esoteric programming languages that prescribe the tasks we want our processes to perform.",
   },
   {
-    "author": "Danny Hillis",
-    "quote": "One of the greatest joys in computer programming is discovering a new, faster, more efficient algorithm for doing something — particularly if a lot of well-respected people have come up with worse solutions."
+    author: "Fred Brooks",
+    quote:
+      "Human beings are not accustomed to being perfect, and few areas of human activity demand it. Adjusting to the requirement for perfection is, I think, the most difficult part of learning to program.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "False scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering."
+    author: "Fred Brooks",
+    quote:
+      "Because of optimism, we usually expect the number of bugs to be smaller than it turns out to be. Therefore testing is usually the most mis-scheduled part of programming.",
   },
   {
-    "author": "Robert L. Glass",
-    "quote": "The best programmers are up to 28 times better than the worst programmers, according to “individual differences” research. Given that their pay is never commensurate, they are the biggest bargains in the software field."
+    author: "Danny Hillis",
+    quote:
+      "One of the greatest joys in computer programming is discovering a new, faster, more efficient algorithm for doing something — particularly if a lot of well-respected people have come up with worse solutions.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Sackman, Erickson, and Grant were measuring performance of a group of experienced programmers. Within just this group the ratios between the best and worst performances averaged about 10:1 on productivity measurements and an amazing 5:1 on program speed and space measurements!"
+    author: "Fred Brooks",
+    quote:
+      "False scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Conceptual integrity is the most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of design ideas, than to have one that contains many good but independent and uncoordinated ideas."
+    author: "Robert L. Glass",
+    quote:
+      "The best programmers are up to 28 times better than the worst programmers, according to “individual differences” research. Given that their pay is never commensurate, they are the biggest bargains in the software field.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects."
+    author: "Fred Brooks",
+    quote:
+      "Sackman, Erickson, and Grant were measuring performance of a group of experienced programmers. Within just this group the ratios between the best and worst performances averaged about 10:1 on productivity measurements and an amazing 5:1 on program speed and space measurements!",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The general tendency is to over-design the second system, using all the ideas and frills that were cautiously sidetracked on the first one."
+    author: "Fred Brooks",
+    quote:
+      "Conceptual integrity is the most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of design ideas, than to have one that contains many good but independent and uncoordinated ideas.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The management question, therefore, is not whether to build a pilot system and throw it away. You will do that. The only question is whether to plan in advance to build a throwaway, or to promise to deliver the throwaway to customers."
+    author: "Fred Brooks",
+    quote:
+      "The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Program building is an entropy-decreasing process, hence inherently metastable. Program maintenance is an entropy-increasing process, and even its most skillful execution only delays the subsidence of the system into unfixable obsolescence."
+    author: "Fred Brooks",
+    quote:
+      "The general tendency is to over-design the second system, using all the ideas and frills that were cautiously sidetracked on the first one.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Chemical engineers learned long ago that a process that works in the laboratory cannot be implemented in a factory in only one step."
+    author: "Fred Brooks",
+    quote:
+      "The management question, therefore, is not whether to build a pilot system and throw it away. You will do that. The only question is whether to plan in advance to build a throwaway, or to promise to deliver the throwaway to customers.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "First, we must observe that the anomaly is not that software progress is so slow but that computer hardware progress is so fast. No other technology since civilization began has seen six orders of magnitude price-performance gain in 30 years."
+    author: "Fred Brooks",
+    quote:
+      "Program building is an entropy-decreasing process, hence inherently metastable. Program maintenance is an entropy-increasing process, and even its most skillful execution only delays the subsidence of the system into unfixable obsolescence.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Coding is \"90 percent finished\" for half of the total coding time. Debugging is \"99 percent complete\" most of the time."
+    author: "Fred Brooks",
+    quote:
+      "Chemical engineers learned long ago that a process that works in the laboratory cannot be implemented in a factory in only one step.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The complexity of software is an essential property, not an accidental one. Hence descriptions of a software entity that abstract away its complexity often abstract away its essence."
+    author: "Fred Brooks",
+    quote:
+      "First, we must observe that the anomaly is not that software progress is so slow but that computer hardware progress is so fast. No other technology since civilization began has seen six orders of magnitude price-performance gain in 30 years.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Study after study shows that the very best designers produce structures that are faster, smaller, simpler, cleaner, and produced with less effort. The differences between the great and the average approach an order of magnitude."
+    author: "Fred Brooks",
+    quote:
+      'Coding is "90 percent finished" for half of the total coding time. Debugging is "99 percent complete" most of the time.',
   },
   {
-    "author": "Fred Brooks",
-    "quote": "A programming systems product takes about nine times as much effort as the component programs written separately for private use."
+    author: "Fred Brooks",
+    quote:
+      "The complexity of software is an essential property, not an accidental one. Hence descriptions of a software entity that abstract away its complexity often abstract away its essence.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "My rule of thumb is 1/3 of the schedule for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing."
+    author: "Fred Brooks",
+    quote:
+      "Study after study shows that the very best designers produce structures that are faster, smaller, simpler, cleaner, and produced with less effort. The differences between the great and the average approach an order of magnitude.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "First, my wife, my colleagues, and my editors find me to err far more often in optimism than in pessimism. I am, after all, a programmer by background, and optimism is an occupational disease of our craft."
+    author: "Fred Brooks",
+    quote:
+      "A programming systems product takes about nine times as much effort as the component programs written separately for private use.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Because we are uncertain about our scheduling estimates, we often lack the courage to defend them stubbornly against management and customer pressure."
+    author: "Fred Brooks",
+    quote:
+      "My rule of thumb is 1/3 of the schedule for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Adding people to a software project increases the total effort necessary in three ways: the work and disruption of repartitioning itself, training the new people, and added intercommunication."
+    author: "Fred Brooks",
+    quote:
+      "First, my wife, my colleagues, and my editors find me to err far more often in optimism than in pessimism. I am, after all, a programmer by background, and optimism is an occupational disease of our craft.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Very good professional programmers are ten times as productive as poor ones, at same training and two-year experience level."
+    author: "Fred Brooks",
+    quote:
+      "Because we are uncertain about our scheduling estimates, we often lack the courage to defend them stubbornly against management and customer pressure.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Programming increases goes as a power of program size."
+    author: "Fred Brooks",
+    quote:
+      "Adding people to a software project increases the total effort necessary in three ways: the work and disruption of repartitioning itself, training the new people, and added intercommunication.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Various studies indicate that the optimal team size is between 2 and 5, with 3 being the mode. With more than 5 team members, team management begins to dominate the work."
+    author: "Fred Brooks",
+    quote:
+      "Very good professional programmers are ten times as productive as poor ones, at same training and two-year experience level.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "A stupid error is an algorithmically avoidable error. Mainly, you are stupid if you let an error that a program can detect go undetected."
+    author: "Fred Brooks",
+    quote: "Programming increases goes as a power of program size.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "All repairs tend to destroy structure, to increase the entropy and disorder of a system."
+    author: "Daniel T. Barry",
+    quote:
+      "Various studies indicate that the optimal team size is between 2 and 5, with 3 being the mode. With more than 5 team members, team management begins to dominate the work.",
   },
   {
-    "author": "Thomas J. Watson",
-    "quote": "I think there is a world market for maybe five\ncomputers."
+    author: "Daniel T. Barry",
+    quote:
+      "A stupid error is an algorithmically avoidable error. Mainly, you are stupid if you let an error that a program can detect go undetected.",
   },
   {
-    "author": "Ken Olsen",
-    "quote": "There is no reason anyone would want a computer in their home."
+    author: "Fred Brooks",
+    quote:
+      "All repairs tend to destroy structure, to increase the entropy and disorder of a system.",
   },
   {
-    "author": "Michael A. Jackson",
-    "quote": "The beginning of wisdom for a programmer is to recognize the difference between getting his program to work and getting it right."
+    author: "Thomas J. Watson",
+    quote: "I think there is a world market for maybe five\ncomputers.",
   },
   {
-    "author": "Michael A. Jackson",
-    "quote": "Two things are known about requirements:\n1. They will change!\n2. They will be misunderstood!"
+    author: "Ken Olsen",
+    quote: "There is no reason anyone would want a computer in their home.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Every time you improve process, work becomes harder."
+    author: "Michael A. Jackson",
+    quote:
+      "The beginning of wisdom for a programmer is to recognize the difference between getting his program to work and getting it right.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "There is never enough time to do it right, but there is always enough time to fix it or to do it over."
+    author: "Michael A. Jackson",
+    quote:
+      "Two things are known about requirements:\n1. They will change!\n2. They will be misunderstood!",
   },
   {
-    "author": "Rich Skrenta",
-    "quote": "The more code you have, the more places there are for bugs to hide."
+    author: "Daniel T. Barry",
+    quote: "Every time you improve process, work becomes harder.",
   },
   {
-    "author": "Gerald Weinberg",
-    "quote": "If builders built houses the way programmers built programs, the first woodpecker to come along would destroy civilization."
+    author: "Daniel T. Barry",
+    quote:
+      "There is never enough time to do it right, but there is always enough time to fix it or to do it over.",
   },
   {
-    "author": "Terry Winograd",
-    "quote": "The techniques of artificial intelligence are to the mind what bureaucracy is to human social interaction."
+    author: "Rich Skrenta",
+    quote:
+      "The more code you have, the more places there are for bugs to hide.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Code is expensive to change, but design is cheaper to change, and requirements are even cheaper to change."
+    author: "Gerald Weinberg",
+    quote:
+      "If builders built houses the way programmers built programs, the first woodpecker to come along would destroy civilization.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "The cost to repair an error goes up dramatically as project moves towards completion and beyond."
+    author: "Terry Winograd",
+    quote:
+      "The techniques of artificial intelligence are to the mind what bureaucracy is to human social interaction.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "A team of highly competent programmers who are also highly territorial, egotistical politicians will fail while a team of equally competent programmers, who are also egoless, cooperative, team players will succeed."
+    author: "Daniel T. Barry",
+    quote:
+      "Code is expensive to change, but design is cheaper to change, and requirements are even cheaper to change.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "For most software, efficiency just does not matter."
+    author: "Daniel T. Barry",
+    quote:
+      "The cost to repair an error goes up dramatically as project moves towards completion and beyond.",
   },
   {
-    "author": "Harlan Mills",
-    "quote": "The best way to know that you have found the last bug is never to find the first bug."
+    author: "Daniel T. Barry",
+    quote:
+      "A team of highly competent programmers who are also highly territorial, egotistical politicians will fail while a team of equally competent programmers, who are also egoless, cooperative, team players will succeed.",
   },
   {
-    "author": "Harlan Mills",
-    "quote": "An interactive debugger is an outstanding example of what is not needed - it encourages trial-and-error hacking rather than systematic design, and also hides marginal people barely qualified for precision programming."
+    author: "Daniel T. Barry",
+    quote: "For most software, efficiency just does not matter.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Thoroughly testing a program is impossible (requires unbounded number of test cases); so try to choose test cases that will expose all errors. That’s very difficult, especially since we do not know what all the errors are, and if we did, we would not need the test cases!"
+    author: "Harlan Mills",
+    quote:
+      "The best way to know that you have found the last bug is never to find the first bug.",
   },
   {
-    "author": "Harlan Mills",
-    "quote": "The only way for errors to occur in a program is by being put there by the author. No other mechanisms are known."
+    author: "Harlan Mills",
+    quote:
+      "An interactive debugger is an outstanding example of what is not needed - it encourages trial-and-error hacking rather than systematic design, and also hides marginal people barely qualified for precision programming.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Reliable computations are obtainable from buggy programs, which after all, are the only kind of programs there are."
+    author: "Daniel T. Barry",
+    quote:
+      "Thoroughly testing a program is impossible (requires unbounded number of test cases); so try to choose test cases that will expose all errors. That’s very difficult, especially since we do not know what all the errors are, and if we did, we would not need the test cases!",
   },
   {
-    "author": "David Parnas",
-    "quote": "I can build a reliable system with thousands of bugs, if you let me choose my bugs carefully."
+    author: "Harlan Mills",
+    quote:
+      "The only way for errors to occur in a program is by being put there by the author. No other mechanisms are known.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Ed Adams of IBM found that 80% of the reliability problems are caused by only 2% of the defects."
+    author: "Daniel T. Barry",
+    quote:
+      "Reliable computations are obtainable from buggy programs, which after all, are the only kind of programs there are.",
   },
   {
-    "author": "Jim Horning",
-    "quote": "Hardware is the part you can replace. Software is the part you have to keep, because it’s so expensive and nobody understands it any more."
+    author: "David Parnas",
+    quote:
+      "I can build a reliable system with thousands of bugs, if you let me choose my bugs carefully.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Any technological or managerial scheme to force documentation can be subverted by unwilling programmers."
+    author: "Daniel T. Barry",
+    quote:
+      "Ed Adams of IBM found that 80% of the reliability problems are caused by only 2% of the defects.",
   },
   {
-    "author": "Jim Horning",
-    "quote": "Good judgement comes from experience. Experience comes from bad judgement."
+    author: "Jim Horning",
+    quote:
+      "Hardware is the part you can replace. Software is the part you have to keep, because it’s so expensive and nobody understands it any more.",
   },
   {
-    "author": "John McCarthy (computer scientist)",
-    "quote": "Machines as simple as thermostats can be said to have beliefs."
+    author: "Daniel T. Barry",
+    quote:
+      "Any technological or managerial scheme to force documentation can be subverted by unwilling programmers.",
   },
   {
-    "author": "Tony Parisi (software developer)",
-    "quote": "A framework can provide 90% of the features we need quickly — giving us a false sense of confidence early in the development cycle — and then be frustratingly hard when it comes to implementing the last 10%."
+    author: "Jim Horning",
+    quote:
+      "Good judgement comes from experience. Experience comes from bad judgement.",
   },
   {
-    "author": "John McCarthy (computer scientist)",
-    "quote": "Mental qualities peculiar to human-like motivational structures, such as love and hate, will not be required for intelligent behavior, but we could probably program computers to exhibit them if we wanted to."
+    author: "John McCarthy (computer scientist)",
+    quote: "Machines as simple as thermostats can be said to have beliefs.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "I have met bright students in computer science who have never seen the source code of a large program. They may be good at writing small programs, but they can't begin to learn the different skills of writing large ones if they can't see how others have done it."
+    author: "Tony Parisi (software developer)",
+    quote:
+      "A framework can provide 90% of the features we need quickly — giving us a false sense of confidence early in the development cycle — and then be frustratingly hard when it comes to implementing the last 10%.",
   },
   {
-    "author": "John McCarthy (computer scientist)",
-    "quote": "Program designers have a tendency to think of the users as idiots who need to be controlled. They should rather think of their program as a servant, whose master, the user, should be able to control it."
+    author: "John McCarthy (computer scientist)",
+    quote:
+      "Mental qualities peculiar to human-like motivational structures, such as love and hate, will not be required for intelligent behavior, but we could probably program computers to exhibit them if we wanted to.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "In fact, in the 1980s I often came across newly graduated computer science majors who had never seen a real program in their lives. They had only seen toy exercises, school exercises, because every real program was a trade secret."
+    author: "Richard Stallman",
+    quote:
+      "I have met bright students in computer science who have never seen the source code of a large program. They may be good at writing small programs, but they can't begin to learn the different skills of writing large ones if they can't see how others have done it.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "I figure that since proprietary software developers use copyright to stop us from sharing, we cooperators can use copyright to give other cooperators an advantage of their own: they can use our code."
+    author: "John McCarthy (computer scientist)",
+    quote:
+      "Program designers have a tendency to think of the users as idiots who need to be controlled. They should rather think of their program as a servant, whose master, the user, should be able to control it.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "I consider that the golden rule requires that if I like a program I must share it with other people who like it. Software sellers want to divide the users and conquer them, making each user agree not to share with others. I refuse to break solidarity with other users in this way."
+    author: "Richard Stallman",
+    quote:
+      "In fact, in the 1980s I often came across newly graduated computer science majors who had never seen a real program in their lives. They had only seen toy exercises, school exercises, because every real program was a trade secret.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "The free software community rejects the “priesthood of technology”, which keeps the general public in ignorance of how technology works; we encourage students of any age and situation to read the source code and learn as much as they want to know."
+    author: "Richard Stallman",
+    quote:
+      "I figure that since proprietary software developers use copyright to stop us from sharing, we cooperators can use copyright to give other cooperators an advantage of their own: they can use our code.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "The most powerful programming language is Lisp. If you don't know Lisp (or its variant, Scheme), you don't know what it means for a programming language to be powerful and elegant. Once you learn Lisp, you will understand what is lacking in most other languages."
+    author: "Richard Stallman",
+    quote:
+      "I consider that the golden rule requires that if I like a program I must share it with other people who like it. Software sellers want to divide the users and conquer them, making each user agree not to share with others. I refuse to break solidarity with other users in this way.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "Programming is programming. If you get good at programming, it doesn't matter which language you learned it in, because you'll be able to do programming in any language."
+    author: "Richard Stallman",
+    quote:
+      "The free software community rejects the “priesthood of technology”, which keeps the general public in ignorance of how technology works; we encourage students of any age and situation to read the source code and learn as much as they want to know.",
   },
   {
-    "author": "Maurice Wilkes",
-    "quote": "It was on one of my journeys between the EDSAC room and the punching equipment the realization came over me with full force that a good part of the remainder of my life was going to be spent in finding errors in my own programs."
+    author: "Richard Stallman",
+    quote:
+      "The most powerful programming language is Lisp. If you don't know Lisp (or its variant, Scheme), you don't know what it means for a programming language to be powerful and elegant. Once you learn Lisp, you will understand what is lacking in most other languages.",
   },
   {
-    "author": "Maurice Wilkes",
-    "quote": "Since 1954, the raw speed of computers, as measured by the time it takes to do an addition, increased by a factor of 10,000. That means an algorithm that once took 10 minutes to perform can now be done 15 times a second."
+    author: "Richard Stallman",
+    quote:
+      "Programming is programming. If you get good at programming, it doesn't matter which language you learned it in, because you'll be able to do programming in any language.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "Typing is no substitute for thinking."
+    author: "Maurice Wilkes",
+    quote:
+      "It was on one of my journeys between the EDSAC room and the punching equipment the realization came over me with full force that a good part of the remainder of my life was going to be spent in finding errors in my own programs.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better."
+    author: "Maurice Wilkes",
+    quote:
+      "Since 1954, the raw speed of computers, as measured by the time it takes to do an addition, increased by a factor of 10,000. That means an algorithm that once took 10 minutes to perform can now be done 15 times a second.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "Perhaps the central problem we face in all of computer science is how we are to get to the situation where we build on top of the work of others rather than redoing so much of it in a trivially different way."
+    author: "Richard Hamming",
+    quote: "Typing is no substitute for thinking.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "Any unwillingness to learn mathematics today can greatly restrict your possibilities tomorrow."
+    author: "Donald Knuth",
+    quote:
+      "A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.",
   },
   {
-    "author": "Charles Simonyi",
-    "quote": "Really good programs live forever."
+    author: "Richard Hamming",
+    quote:
+      "Perhaps the central problem we face in all of computer science is how we are to get to the situation where we build on top of the work of others rather than redoing so much of it in a trivially different way.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "In science if you know what you are doing you should not be doing it. In engineering if you do not know what you are doing you should not be doing it."
+    author: "Richard Hamming",
+    quote:
+      "Any unwillingness to learn mathematics today can greatly restrict your possibilities tomorrow.",
   },
   {
-    "author": "Butler Lampson",
-    "quote": "In handling resources, strive to avoid disaster rather than to attain an optimum."
+    author: "Charles Simonyi",
+    quote: "Really good programs live forever.",
   },
   {
-    "author": "John Warnock",
-    "quote": "As with most projects, the last two percent takes fifty percent of the time."
+    author: "Richard Hamming",
+    quote:
+      "In science if you know what you are doing you should not be doing it. In engineering if you do not know what you are doing you should not be doing it.",
   },
   {
-    "author": "Gary Kildall",
-    "quote": "It's fun to sit at a terminal and let the code flow. It sounds strange, but it just comes out my brain; once I'm started, I don't have to think about it."
+    author: "Butler Lampson",
+    quote:
+      "In handling resources, strive to avoid disaster rather than to attain an optimum.",
   },
   {
-    "author": "Gary Kildall",
-    "quote": "I think programming is very much a religious experience for a lot of people."
+    author: "John Warnock",
+    quote:
+      "As with most projects, the last two percent takes fifty percent of the time.",
   },
   {
-    "author": "Charles Simonyi",
-    "quote": "What is programming? Some people call it a science, some people call it an art, some people call it a skill. I think it has aspects of all three."
+    author: "Gary Kildall",
+    quote:
+      "It's fun to sit at a terminal and let the code flow. It sounds strange, but it just comes out my brain; once I'm started, I don't have to think about it.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "If you ever talk to a great programmer, you'll find he knows his tools like an artist knows his paintbrushes."
+    author: "Gary Kildall",
+    quote:
+      "I think programming is very much a religious experience for a lot of people.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "Our goals are very simple. We're going to create the software that puts a computer on every desk and in every home."
+    author: "Charles Simonyi",
+    quote:
+      "What is programming? Some people call it a science, some people call it an art, some people call it a skill. I think it has aspects of all three.",
   },
   {
-    "author": "Dan Bricklin",
-    "quote": "The most important part of writing a program is designing the data structures."
+    author: "Bill Gates",
+    quote:
+      "If you ever talk to a great programmer, you'll find he knows his tools like an artist knows his paintbrushes.",
   },
   {
-    "author": "Bob Frankston",
-    "quote": "Ideas don't disappear. They change form, they merge with other ideas."
+    author: "Bill Gates",
+    quote:
+      "Our goals are very simple. We're going to create the software that puts a computer on every desk and in every home.",
   },
   {
-    "author": "Peter Roizen",
-    "quote": "I care not only what the code says but how it looks."
+    author: "Dan Bricklin",
+    quote:
+      "The most important part of writing a program is designing the data structures.",
   },
   {
-    "author": "Ray Ozzie",
-    "quote": "Programming is the ultimate field for someone who likes to tinker."
+    author: "Bob Frankston",
+    quote:
+      "Ideas don't disappear. They change form, they merge with other ideas.",
   },
   {
-    "author": "Bob Carr",
-    "quote": "Programming can be addictive."
+    author: "Peter Roizen",
+    quote: "I care not only what the code says but how it looks.",
   },
   {
-    "author": "Bob Carr",
-    "quote": "From an artistic standpoint, the best software comes from the realm of intuition."
+    author: "Ray Ozzie",
+    quote: "Programming is the ultimate field for someone who likes to tinker.",
   },
   {
-    "author": "Andy Hertzfeld",
-    "quote": "Then Apple went public toward the end of 1980. All of a sudden, all these people I was working with were millionaires."
+    author: "Bob Carr",
+    quote: "Programming can be addictive.",
   },
   {
-    "author": "Toru Iwatani",
-    "quote": "I'm interested in creating images that communicate with people."
+    author: "Bob Carr",
+    quote:
+      "From an artistic standpoint, the best software comes from the realm of intuition.",
   },
   {
-    "author": "Charles Simonyi",
-    "quote": "I think the best way to supervise is by personal example and by frequent code reviews."
+    author: "Andy Hertzfeld",
+    quote:
+      "Then Apple went public toward the end of 1980. All of a sudden, all these people I was working with were millionaires.",
   },
   {
-    "author": "Butler Lampson",
-    "quote": "There are some basic techniques to control complexity. Fundamentally, I divide and conquer, break things down, and try to write reasonably precise descriptions of what each piece is supposed to do."
+    author: "Toru Iwatani",
+    quote: "I'm interested in creating images that communicate with people.",
   },
   {
-    "author": "Charles Simonyi",
-    "quote": "The efficiency of the code decreases with an increase in the number of people working on the program. The most efficient programs are written by a single person."
+    author: "Charles Simonyi",
+    quote:
+      "I think the best way to supervise is by personal example and by frequent code reviews.",
   },
   {
-    "author": "Charles Simonyi",
-    "quote": "I'll bet you that from ten feet away I can tell if a program is bad. I might not guarantee that it is good, but if it looks bad from ten feet, I can guarantee you that it wasn't written with care."
+    author: "Butler Lampson",
+    quote:
+      "There are some basic techniques to control complexity. Fundamentally, I divide and conquer, break things down, and try to write reasonably precise descriptions of what each piece is supposed to do.",
   },
   {
-    "author": "Butler Lampson",
-    "quote": "Nobody knows how to build really complicated hardware systems, so designing hardware tends to be simpler. Software is much more complicated."
+    author: "Charles Simonyi",
+    quote:
+      "The efficiency of the code decreases with an increase in the number of people working on the program. The most efficient programs are written by a single person.",
   },
   {
-    "author": "Butler Lampson",
-    "quote": "A beautiful program is like a beautiful theorem: It does the job elegantly."
+    author: "Charles Simonyi",
+    quote:
+      "I'll bet you that from ten feet away I can tell if a program is bad. I might not guarantee that it is good, but if it looks bad from ten feet, I can guarantee you that it wasn't written with care.",
   },
   {
-    "author": "John Warnock",
-    "quote": "To be successful, you want to surround yourself with very talented folks whose skills blend very well. That’s the secret of success."
+    author: "Butler Lampson",
+    quote:
+      "Nobody knows how to build really complicated hardware systems, so designing hardware tends to be simpler. Software is much more complicated.",
   },
   {
-    "author": "Gary Kildall",
-    "quote": "I start with drawing the data structures, and I spend a lot of time thinking about them. I also think about what the program has to go through before I start writing code."
+    author: "Butler Lampson",
+    quote:
+      "A beautiful program is like a beautiful theorem: It does the job elegantly.",
   },
   {
-    "author": "John Warnock",
-    "quote": "Don’t go into a two-year development with nothing coming out in the middle. Have something come out every two months, so you can evaluate, regroup, and restart."
+    author: "John Warnock",
+    quote:
+      "To be successful, you want to surround yourself with very talented folks whose skills blend very well. That’s the secret of success.",
   },
   {
-    "author": "Gary Kildall",
-    "quote": "If you learn how to solve problems, you can go through life and do pretty well."
+    author: "Gary Kildall",
+    quote:
+      "I start with drawing the data structures, and I spend a lot of time thinking about them. I also think about what the program has to go through before I start writing code.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "A great programmer thinks about the program on a constant basis, whether driving or eating. That method takes an incredible amount of mental energy."
+    author: "John Warnock",
+    quote:
+      "Don’t go into a two-year development with nothing coming out in the middle. Have something come out every two months, so you can evaluate, regroup, and restart.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "The really great programs I've written have all been ones that I have thought about for a huge amount of time before I ever wrote them."
+    author: "Gary Kildall",
+    quote:
+      "If you learn how to solve problems, you can go through life and do pretty well.",
   },
   {
-    "author": "Bill Gates",
-    "quote": "There is an amazing commonality in the types of difficulties you run into. In design reviews, I really enjoy being able to provide advice, based on programs that I have done."
+    author: "Bill Gates",
+    quote:
+      "A great programmer thinks about the program on a constant basis, whether driving or eating. That method takes an incredible amount of mental energy.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "The fundamental problem with program maintenance is that fixing a defect has a substantial (20-50 percent) chance of introducing another. So the whole process is two steps forward and one step back."
+    author: "Bill Gates",
+    quote:
+      "The really great programs I've written have all been ones that I have thought about for a huge amount of time before I ever wrote them.",
   },
   {
-    "author": "Addy Osmani",
-    "quote": "Really care about the tools you use because they are what make you your best."
+    author: "Bill Gates",
+    quote:
+      "There is an amazing commonality in the types of difficulties you run into. In design reviews, I really enjoy being able to provide advice, based on programs that I have done.",
   },
   {
-    "author": "Michael Hawley",
-    "quote": "What I like about programming is that it really helps you think about how we communicate, how we think, how logic works, how creative arts work."
+    author: "Fred Brooks",
+    quote:
+      "The fundamental problem with program maintenance is that fixing a defect has a substantial (20-50 percent) chance of introducing another. So the whole process is two steps forward and one step back.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "One of the things I’ve been pushing is code reading. I think that is the most useful thing that a community of programmers can do for each other—spend time on a regular basis reading each other’s code."
+    author: "Addy Osmani",
+    quote:
+      "Really care about the tools you use because they are what make you your best.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "I think the best way to make JavaScript better would be to\nmake it smaller. If we could just get it down to what it does really well and remove the features that add little or no value, it’s actually a better language."
+    author: "Michael Hawley",
+    quote:
+      "What I like about programming is that it really helps you think about how we communicate, how we think, how logic works, how creative arts work.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Readability of code is now my first priority. It’s more important than being fast, almost as important as being correct, but I think being readable is actually the most likely way of making it correct."
+    author: "Douglas Crockford",
+    quote:
+      "One of the things I’ve been pushing is code reading. I think that is the most useful thing that a community of programmers can do for each other—spend time on a regular basis reading each other’s code.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Part of what makes programming difficult is most of the time we’re doing stuff we’ve never done before."
+    author: "Douglas Crockford",
+    quote:
+      "I think the best way to make JavaScript better would be to\nmake it smaller. If we could just get it down to what it does really well and remove the features that add little or no value, it’s actually a better language.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "I think of myself as a writer. Sometimes I write in English and sometimes I write in JavaScript."
+    author: "Douglas Crockford",
+    quote:
+      "Readability of code is now my first priority. It’s more important than being fast, almost as important as being correct, but I think being readable is actually the most likely way of making it correct.",
   },
   {
-    "author": "Jaron Lanier",
-    "quote": "People should be able to speak and breathe programs just like they talk now."
+    author: "Douglas Crockford",
+    quote:
+      "Part of what makes programming difficult is most of the time we’re doing stuff we’ve never done before.",
   },
   {
-    "author": "Joe Armstrong (programmer)",
-    "quote": "If you start removing things, if you get to the point where if you were to remove anything more it would not work any more — at this point it is beautiful."
+    author: "Douglas Crockford",
+    quote:
+      "I think of myself as a writer. Sometimes I write in English and sometimes I write in JavaScript.",
   },
   {
-    "author": "Buckminster Fuller",
-    "quote": "Humanity is acquiring all the right technology for all the wrong reasons."
+    author: "Jaron Lanier",
+    quote:
+      "People should be able to speak and breathe programs just like they talk now.",
   },
   {
-    "author": "Simon Peyton Jones",
-    "quote": "I characterize functional programming as a radical and elegant attack on the whole enterprise of writing programs."
+    author: "Joe Armstrong (programmer)",
+    quote:
+      "If you start removing things, if you get to the point where if you were to remove anything more it would not work any more — at this point it is beautiful.",
   },
   {
-    "author": "Marijn Haverbeke",
-    "quote": "Size almost always involves complexity, and complexity confuses programmers. Confused programmers, in turn, introduce mistakes (bugs) into programs."
+    author: "Buckminster Fuller",
+    quote:
+      "Humanity is acquiring all the right technology for all the wrong reasons.",
   },
   {
-    "author": "Marijn Haverbeke",
-    "quote": "Flaws in computer programs are usually called bugs. It makes programmers feel good to imagine them as little things that just happen to crawl into our work. In reality, of course, we put them there ourselves."
+    author: "Simon Peyton Jones",
+    quote:
+      "I characterize functional programming as a radical and elegant attack on the whole enterprise of writing programs.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "When I was at what I would consider the peak of my abilities, I had extremely trustworthy intuition. I would do things and they would just turn out right."
+    author: "Marijn Haverbeke",
+    quote:
+      "Size almost always involves complexity, and complexity confuses programmers. Confused programmers, in turn, introduce mistakes (bugs) into programs.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "Every now and then I feel a temptation to design a programming language but then I just lie down until it goes away."
+    author: "Marijn Haverbeke",
+    quote:
+      "Flaws in computer programs are usually called bugs. It makes programmers feel good to imagine them as little things that just happen to crawl into our work. In reality, of course, we put them there ourselves.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "Language systems stand on a tripod. There’s the language, there’s the libraries, and there are the tools. And how successful a language is depends on a complex interaction between those three things."
+    author: "L. Peter Deutsch",
+    quote:
+      "When I was at what I would consider the peak of my abilities, I had extremely trustworthy intuition. I would do things and they would just turn out right.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "I would make a strong case that programming languages have not improved qualitatively in the last 40 years. There is no programming language in use today that is qualitatively better than Simula-67."
+    author: "L. Peter Deutsch",
+    quote:
+      "Every now and then I feel a temptation to design a programming language but then I just lie down until it goes away.",
   },
   {
-    "author": "Gottfried Wilhelm Leibniz",
-    "quote": "Instead of the progression of tens, I have for many years used the simplest progression of all, which proceeds by twos, having found that it is useful for the perfection of the science of numbers."
+    author: "L. Peter Deutsch",
+    quote:
+      "Language systems stand on a tripod. There’s the language, there’s the libraries, and there are the tools. And how successful a language is depends on a complex interaction between those three things.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "I never in my wildest dreams would have predicted the evolution of the Internet. And I never would’ve predicted the degree to which corporate influence over the Internet has changed its character over time."
+    author: "L. Peter Deutsch",
+    quote:
+      "I would make a strong case that programming languages have not improved qualitatively in the last 40 years. There is no programming language in use today that is qualitatively better than Simula-67.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "I’ve never been a lover of existing code. Code by itself almost rots and it’s gotta be rewritten. Even when nothing has changed, for some reason it rots."
+    author: "Gottfried Wilhelm Leibniz",
+    quote:
+      "Instead of the progression of tens, I have for many years used the simplest progression of all, which proceeds by twos, having found that it is useful for the perfection of the science of numbers.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "Modern programming scares me in many respects. It confuses me to read a program which you must read top-down. It says “do something.” And you go find “something.” And you read it and it says, “do something else” and you go find something and it says, “do something else” and it goes back to the top maybe. And nothing gets done. It’s just relegating the problem to a deeper and deeper level."
+    author: "L. Peter Deutsch",
+    quote:
+      "I never in my wildest dreams would have predicted the evolution of the Internet. And I never would’ve predicted the degree to which corporate influence over the Internet has changed its character over time.",
   },
   {
-    "author": "Richard Hamming",
-    "quote": "I always spend a day a week learning new stuff. That means I spend 20% more of my time than my colleagues learning new stuff. Now 20% at compound interest means that after four and a half years I will know twice as much as them."
+    author: "Ken Thompson",
+    quote:
+      "I’ve never been a lover of existing code. Code by itself almost rots and it’s gotta be rewritten. Even when nothing has changed, for some reason it rots.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "I’ll use dirty tricks for two reasons. One is, if it’s really going to give me a performance improvement. Or sometimes just for pure pleasure. In any case, I document it; I don’t just put it in there."
+    author: "Ken Thompson",
+    quote:
+      "Modern programming scares me in many respects. It confuses me to read a program which you must read top-down. It says “do something.” And you go find “something.” And you read it and it says, “do something else” and you go find something and it says, “do something else” and it goes back to the top maybe. And nothing gets done. It’s just relegating the problem to a deeper and deeper level.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "I’ll throw away code as soon I want to add something to it and I get the feeling that what I have to do to add it is too hard."
+    author: "Richard Hamming",
+    quote:
+      "I always spend a day a week learning new stuff. That means I spend 20% more of my time than my colleagues learning new stuff. Now 20% at compound interest means that after four and a half years I will know twice as much as them.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "The problem is that coding isn’t fun if all you can do is call things out of a library, if you can’t write the library yourself."
+    author: "Donald Knuth",
+    quote:
+      "I’ll use dirty tricks for two reasons. One is, if it’s really going to give me a performance improvement. Or sometimes just for pure pleasure. In any case, I document it; I don’t just put it in there.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "I make mistakes because I’m always operating at my limit. If I only stay in comfortable territory all the time, that’s not so much fun."
+    author: "Ken Thompson",
+    quote:
+      "I’ll throw away code as soon I want to add something to it and I get the feeling that what I have to do to add it is too hard.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "I’ve got this need to program. I wake up in the morning with sentences of a literate program. Before breakfast — I’m sure poets must feel this — I have to go to the computer and write this paragraph and then I can eat and I’m happy."
+    author: "Donald Knuth",
+    quote:
+      "The problem is that coding isn’t fun if all you can do is call things out of a library, if you can’t write the library yourself.",
   },
   {
-    "author": "Donald Knuth",
-    "quote": "The more varieties of different kinds of notations are still useful — don’t only read the people who code like you."
+    author: "Donald Knuth",
+    quote:
+      "I make mistakes because I’m always operating at my limit. If I only stay in comfortable territory all the time, that’s not so much fun.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "The good news about computers is that they do what you tell them to do. The bad news is that they do what you tell them to do."
+    author: "Donald Knuth",
+    quote:
+      "I’ve got this need to program. I wake up in the morning with sentences of a literate program. Before breakfast — I’m sure poets must feel this — I have to go to the computer and write this paragraph and then I can eat and I’m happy.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "Mathematics is important in programming, but it’s just one of a lot of things that are important. If you overemphasize the math then you underemphasize stuff which might be even more important, such as literacy."
+    author: "Donald Knuth",
+    quote:
+      "The more varieties of different kinds of notations are still useful — don’t only read the people who code like you.",
   },
   {
-    "author": "Ken Thompson",
-    "quote": "Documenting is very, very hard; it’s time-consuming. To do it right, you’ve got to do it like programming. You’ve got to deconstruct it, put it together in nice ways, rewrite it when it’s wrong. People don’t do that."
+    author: "Ted Nelson",
+    quote:
+      "The good news about computers is that they do what you tell them to do. The bad news is that they do what you tell them to do.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "Making things easy is hard."
+    author: "Douglas Crockford",
+    quote:
+      "Mathematics is important in programming, but it’s just one of a lot of things that are important. If you overemphasize the math then you underemphasize stuff which might be even more important, such as literacy.",
   },
   {
-    "author": "Richard Moore (engineer)",
-    "quote": "The difference between theory and practice is that in theory, there is no difference between theory and practice."
+    author: "Ken Thompson",
+    quote:
+      "Documenting is very, very hard; it’s time-consuming. To do it right, you’ve got to do it like programming. You’ve got to deconstruct it, put it together in nice ways, rewrite it when it’s wrong. People don’t do that.",
   },
   {
-    "author": "Jim Coplien",
-    "quote": "You should name a variable using the same care with which you name a first-born child."
+    author: "Ted Nelson",
+    quote: "Making things easy is hard.",
   },
   {
-    "author": "Robert C. Martin",
-    "quote": "The ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code."
+    author: "Richard Moore (engineer)",
+    quote:
+      "The difference between theory and practice is that in theory, there is no difference between theory and practice.",
   },
   {
-    "author": "Kyle Simpson",
-    "quote": "There's nothing more permanent than a temporary hack."
+    author: "Jim Coplien",
+    quote:
+      "You should name a variable using the same care with which you name a first-born child.",
   },
   {
-    "author": "Gottfried Wilhelm Leibniz",
-    "quote": "As numbers are reduced to the simplest principles, like 0 and 1, a wonderful order is apparent throughout."
+    author: "Robert C. Martin",
+    quote:
+      "The ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "In my second year in graduate school, I took a computer course and that was like lightening striking."
+    author: "Kyle Simpson",
+    quote: "There's nothing more permanent than a temporary hack.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "They were saying computers deal with numbers. This was absolutely nonsense. Computers deal with arbitrary information of any kind."
+    author: "Gottfried Wilhelm Leibniz",
+    quote:
+      "As numbers are reduced to the simplest principles, like 0 and 1, a wonderful order is apparent throughout.",
   },
   {
-    "author": "Ted Nelson",
-    "quote": "Right now you are a prisoner of each application you use. You have only the options that were given you by the developer of that application."
+    author: "Ted Nelson",
+    quote:
+      "In my second year in graduate school, I took a computer course and that was like lightening striking.",
   },
   {
-    "author": "Ray Ozzie",
-    "quote": "Complexity kills. It sucks the life out of developers, it makes products difficult to plan, build and test, it introduces security challenges and it causes end-user and administrator frustration."
+    author: "Ted Nelson",
+    quote:
+      "They were saying computers deal with numbers. This was absolutely nonsense. Computers deal with arbitrary information of any kind.",
   },
   {
-    "author": "Niklaus Wirth",
-    "quote": "Software gets slower faster than hardware gets faster."
+    author: "Ted Nelson",
+    quote:
+      "Right now you are a prisoner of each application you use. You have only the options that were given you by the developer of that application.",
   },
   {
-    "author": "David Parnas",
-    "quote": "A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match."
+    author: "Ray Ozzie",
+    quote:
+      "Complexity kills. It sucks the life out of developers, it makes products difficult to plan, build and test, it introduces security challenges and it causes end-user and administrator frustration.",
   },
   {
-    "author": "Anonymous",
-    "quote": "A few months writing code can save you a few hours in design."
+    author: "Niklaus Wirth",
+    quote: "Software gets slower faster than hardware gets faster.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "Are you quite sure that all those bells and whistles, all those wonderful facilities of your so called powerful programming languages, belong to the solution set rather than the problem set?"
+    author: "David Parnas",
+    quote:
+      "A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.",
   },
   {
-    "author": "John von Neumann",
-    "quote": "If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is."
+    author: "Anonymous",
+    quote: "A few months writing code can save you a few hours in design.",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "Are you quite sure that all those bells and whistles, all those wonderful facilities of your so called powerful programming languages, belong to the solution set rather than the problem set?",
   },
   {
-    "author": "Bjarne Stroustrup",
-    "quote": "If you think it's simple, then you have misunderstood the problem."
+    author: "John von Neumann",
+    quote:
+      "If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.",
   },
   {
-    "author": "Rob Pike",
-    "quote": "Object-oriented design is the roman numerals of computing."
+    author: "Bjarne Stroustrup",
+    quote:
+      "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off.",
   },
   {
-    "author": "Jamie Zawinski",
-    "quote": "Some people, when confronted with a problem, think ‘I know, I’ll use regular expressions.’ Now they have two problems."
+    author: "Bjarne Stroustrup",
+    quote: "If you think it's simple, then you have misunderstood the problem.",
   },
   {
-    "author": "Ward Cunningham",
-    "quote": "It was a turning point in my programming career when I realized that I didn't have to win every argument."
+    author: "Rob Pike",
+    quote: "Object-oriented design is the roman numerals of computing.",
   },
   {
-    "author": "Vint Cerf",
-    "quote": "And programming computers was so fascinating. You create your own little universe, and then it does what you tell it to do."
+    author: "Jamie Zawinski",
+    quote:
+      "Some people, when confronted with a problem, think ‘I know, I’ll use regular expressions.’ Now they have two problems.",
   },
   {
-    "author": "Joshua Bloch",
-    "quote": "The cleaner and nicer the program, the faster it's going to run. And if it doesn't, it'll be easy to make it fast."
+    author: "Ward Cunningham",
+    quote:
+      "It was a turning point in my programming career when I realized that I didn't have to win every argument.",
   },
   {
-    "author": "Philip Greenspun",
-    "quote": "SQL, Lisp, and Haskell are the only programming languages that I've seen where one spends more time thinking than typing."
+    author: "Vint Cerf",
+    quote:
+      "And programming computers was so fascinating. You create your own little universe, and then it does what you tell it to do.",
   },
   {
-    "author": "Alan Perlis",
-    "quote": "It is better to have 100 functions operate on one data structure than to have 10 functions operate on 10 data structures."
+    author: "Joshua Bloch",
+    quote:
+      "The cleaner and nicer the program, the faster it's going to run. And if it doesn't, it'll be easy to make it fast.",
   },
   {
-    "author": "Brian Kernighan",
-    "quote": "The most effective debugging tool is still careful thought, coupled with judiciously placed print statements."
+    author: "Philip Greenspun",
+    quote:
+      "SQL, Lisp, and Haskell are the only programming languages that I've seen where one spends more time thinking than typing.",
   },
   {
-    "author": "Marvin Minsky",
-    "quote": "Computer languages of the future will be more concerned with goals and less with procedures specified by the programmer."
+    author: "Alan Perlis",
+    quote:
+      "It is better to have 100 functions operate on one data structure than to have 10 functions operate on 10 data structures.",
   },
   {
-    "author": "Alan Turing",
-    "quote": "A computer would deserve to be called intelligent if it could deceive a human into believing that it was human."
+    author: "Brian Kernighan",
+    quote:
+      "The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "The way to arrest entropy in software is to refactor it."
+    author: "Marvin Minsky",
+    quote:
+      "Computer languages of the future will be more concerned with goals and less with procedures specified by the programmer.",
   },
   {
-    "author": "Joseph Yoder (computer scientist)",
-    "quote": "Reviews and pair programming provide programmers with something their work would not otherwise have: an audience. Sunlight, it is said is a powerful disinfectant. An immediate audience of one's peers provides immediate incentives to programmers to keep their code clear and comprehensible, as well as functional."
+    author: "Alan Turing",
+    quote:
+      "A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.",
   },
   {
-    "author": "John Romero",
-    "quote": "You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity."
+    author: "Joseph Yoder (computer scientist)",
+    quote: "The way to arrest entropy in software is to refactor it.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "JavaScript is the only language that I'm aware of that people feel they don't need to learn before they start using it."
+    author: "Joseph Yoder (computer scientist)",
+    quote:
+      "Reviews and pair programming provide programmers with something their work would not otherwise have: an audience. Sunlight, it is said is a powerful disinfectant. An immediate audience of one's peers provides immediate incentives to programmers to keep their code clear and comprehensible, as well as functional.",
   },
   {
-    "author": "Addy Osmani",
-    "quote": "Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless."
+    author: "John Romero",
+    quote:
+      "You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.",
   },
   {
-    "author": "Pete Cordell",
-    "quote": "Telling a programmer there's already a library to do X is like telling a songwriter there's already a song about love."
+    author: "Douglas Crockford",
+    quote:
+      "JavaScript is the only language that I'm aware of that people feel they don't need to learn before they start using it.",
   },
   {
-    "author": "Stan Kelly-Bootle",
-    "quote": "Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration."
+    author: "Addy Osmani",
+    quote:
+      "Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless.",
   },
   {
-    "author": "Edsger W. Dijkstra",
-    "quote": "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise."
+    author: "Pete Cordell",
+    quote:
+      "Telling a programmer there's already a library to do X is like telling a songwriter there's already a song about love.",
   },
   {
-    "author": "Elon Musk",
-    "quote": "There certainly will be job disruption. Because what's going to happen is robots will be able to do everything better than us."
+    author: "Stan Kelly-Bootle",
+    quote:
+      "Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration.",
   },
   {
-    "author": "John Carmack",
-    "quote": "Sometimes, the elegant implementation is a function. Not a method. Not a class. Not a framework. Just a function."
+    author: "Edsger W. Dijkstra",
+    quote:
+      "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise.",
   },
   {
-    "author": "Marvin Minsky",
-    "quote": "Artificial intelligence is the science of making machines do things that would require intelligence if done by men."
+    author: "Elon Musk",
+    quote:
+      "There certainly will be job disruption. Because what's going to happen is robots will be able to do everything better than us.",
   },
   {
-    "author": "Tim Berners-Lee",
-    "quote": "I just had to take the hypertext idea and connect it to the TCP and DNS ideas and — ta-da!— the World Wide Web."
+    author: "John Carmack",
+    quote:
+      "Sometimes, the elegant implementation is a function. Not a method. Not a class. Not a framework. Just a function.",
   },
   {
-    "author": "Hal Abelson",
-    "quote": "A computational process is indeed much like a sorcerer's idea of a spirit. It cannot be seen or touched. It is not composed of matter at all. However, it is very real. It can perform intellectual work. It can answer questions. It can affect the world by disbursing money at a bank or by controlling a robot arm in a factory."
+    author: "Marvin Minsky",
+    quote:
+      "Artificial intelligence is the science of making machines do things that would require intelligence if done by men.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "One must assume that there will be lots of bugs, and plan an orderly procedure for snaking them out."
+    author: "Tim Berners-Lee",
+    quote:
+      "I just had to take the hypertext idea and connect it to the TCP and DNS ideas and — ta-da!— the World Wide Web.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "To achieve conceptual integrity, a design must proceed from one mind or a small group of agreeing minds."
+    author: "Hal Abelson",
+    quote:
+      "A computational process is indeed much like a sorcerer's idea of a spirit. It cannot be seen or touched. It is not composed of matter at all. However, it is very real. It can perform intellectual work. It can answer questions. It can affect the world by disbursing money at a bank or by controlling a robot arm in a factory.",
   },
   {
-    "author": "Tom DeMarco",
-    "quote": "The very best technology never has as much impact as girlfriend or boyfriend trouble."
+    author: "Fred Brooks",
+    quote:
+      "One must assume that there will be lots of bugs, and plan an orderly procedure for snaking them out.",
   },
   {
-    "author": "Fred Brooks",
-    "quote": "Maintenance cost is strongly affected by the number of users. More users find more bugs."
+    author: "Fred Brooks",
+    quote:
+      "To achieve conceptual integrity, a design must proceed from one mind or a small group of agreeing minds.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Most errors are introduced during requirements specification!"
+    author: "Tom DeMarco",
+    quote:
+      "The very best technology never has as much impact as girlfriend or boyfriend trouble.",
   },
   {
-    "author": "Harlan Mills",
-    "quote": "Programming is similar to a game of golf. The point is not getting the ball in the hole but how many strokes it takes."
+    author: "Fred Brooks",
+    quote:
+      "Maintenance cost is strongly affected by the number of users. More users find more bugs.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "A number of studies have shown testing not very effective at finding bugs."
+    author: "Daniel T. Barry",
+    quote: "Most errors are introduced during requirements specification!",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "The key to keeping software costs down is to write code that is easily modified."
+    author: "Harlan Mills",
+    quote:
+      "Programming is similar to a game of golf. The point is not getting the ball in the hole but how many strokes it takes.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "The notions of correctness in mathematics and programs are different. A mathematical model must be consistent; it need not match reality (be correct), and it need not be complete (in the formal sense). A program model must be consistent; it must match reality; and it must be complete (in the sense that it reacts gracefully to all inputs)."
+    author: "Daniel T. Barry",
+    quote:
+      "A number of studies have shown testing not very effective at finding bugs.",
   },
   {
-    "author": "Daniel T. Barry",
-    "quote": "Programming is at least as difficult as developing a mathematical theory."
+    author: "Daniel T. Barry",
+    quote:
+      "The key to keeping software costs down is to write code that is easily modified.",
   },
   {
-    "author": "Richard Stallman",
-    "quote": "In 1971 when I joined the staff of the MIT Artificial Intelligence lab, all of us who helped develop the operating system software, we called ourselves hackers. We were not breaking any laws, at least not in doing the hacking we were paid to do. We were developing software and we were having fun. Hacking refers to the spirit of fun in which we were developing software."
+    author: "Daniel T. Barry",
+    quote:
+      "The notions of correctness in mathematics and programs are different. A mathematical model must be consistent; it need not match reality (be correct), and it need not be complete (in the formal sense). A program model must be consistent; it must match reality; and it must be complete (in the sense that it reacts gracefully to all inputs).",
   },
   {
-    "author": "Maurice Wilkes",
-    "quote": "By June 1949 people had begun to realize that it was not so easy to get programs right as at one time appeared."
+    author: "Daniel T. Barry",
+    quote:
+      "Programming is at least as difficult as developing a mathematical theory.",
   },
   {
-    "author": "Butler Lampson",
-    "quote": "Everything should be made as simple as possible. But to do that you have to master complexity."
+    author: "Richard Stallman",
+    quote:
+      "In 1971 when I joined the staff of the MIT Artificial Intelligence lab, all of us who helped develop the operating system software, we called ourselves hackers. We were not breaking any laws, at least not in doing the hacking we were paid to do. We were developing software and we were having fun. Hacking refers to the spirit of fun in which we were developing software.",
   },
   {
-    "author": "Wayne Ratliff",
-    "quote": "If I had followed my heart instead of advice, dBASE would be much closer to perfection today."
+    author: "Maurice Wilkes",
+    quote:
+      "By June 1949 people had begun to realize that it was not so easy to get programs right as at one time appeared.",
   },
   {
-    "author": "Wayne Ratliff",
-    "quote": "Programming is a little bit like the army. Now that I'm out, it's neat to have had the experience."
+    author: "Butler Lampson",
+    quote:
+      "Everything should be made as simple as possible. But to do that you have to master complexity.",
   },
   {
-    "author": "Jonathan Sachs",
-    "quote": "I don't like using any tools or programs I didn't write myself or that I don't have some control over."
+    author: "Wayne Ratliff",
+    quote:
+      "If I had followed my heart instead of advice, dBASE would be much closer to perfection today.",
   },
   {
-    "author": "Bob Frankston",
-    "quote": "If you cannot explain a program to yourself, the chance of the\ncomputer getting it right is pretty small."
+    author: "Wayne Ratliff",
+    quote:
+      "Programming is a little bit like the army. Now that I'm out, it's neat to have had the experience.",
   },
   {
-    "author": "Gary Kildall",
-    "quote": "I don't comment on the code itself because I feel that properly written code is very much self-documented."
+    author: "Jonathan Sachs",
+    quote:
+      "I don't like using any tools or programs I didn't write myself or that I don't have some control over.",
   },
   {
-    "author": "Gary Kildall",
-    "quote": "When a program is clean and neat, nicely structured, and consistent, it can be beautiful."
+    author: "Bob Frankston",
+    quote:
+      "If you cannot explain a program to yourself, the chance of the\ncomputer getting it right is pretty small.",
   },
   {
-    "author": "Douglas Crockford",
-    "quote": "JavaScript, purely by accident, has become the most popular programming language in the world."
+    author: "Gary Kildall",
+    quote:
+      "I don't comment on the code itself because I feel that properly written code is very much self-documented.",
   },
   {
-    "author": "L. Peter Deutsch",
-    "quote": "Software is a discipline of detail, and that is a deep, horrendous fundamental problem with software."
+    author: "Gary Kildall",
+    quote:
+      "When a program is clean and neat, nicely structured, and consistent, it can be beautiful.",
   },
   {
-    "author": "Gottfried Wilhelm Leibniz",
-    "quote": "Even in the games of children there are things to interest the greatest mathematician."
-  }
-]
+    author: "Douglas Crockford",
+    quote:
+      "JavaScript, purely by accident, has become the most popular programming language in the world.",
+  },
+  {
+    author: "L. Peter Deutsch",
+    quote:
+      "Software is a discipline of detail, and that is a deep, horrendous fundamental problem with software.",
+  },
+  {
+    author: "Gottfried Wilhelm Leibniz",
+    quote:
+      "Even in the games of children there are things to interest the greatest mathematician.",
+  },
+];

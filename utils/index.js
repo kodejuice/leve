@@ -1,25 +1,25 @@
+/* eslint-disable no-bitwise */
+/* eslint-disable no-restricted-syntax */
 import stopwords from "../data/quotes/indexer/stopwords";
 
-let stop = new Set(stopwords);
-
+const stop = new Set(stopwords);
 
 /** Set site theme
  * @param       {String}        theme to switch to
  */
 // set site theme
 export function setTheme(which) {
-    // 0=>light, 1=>dark
-    which = Number(which);
+  // 0=>light, 1=>dark
+  which = Number(which);
 
-    let list = document.querySelector("body").classList;
+  const list = document.querySelector("body").classList;
 
-    if (which == 0) {
-        if (list.contains('dark')) list.remove('dark'); // let there be light
-    } else {
-        if (!list.contains('dark')) list.add('dark'); // let there be darkness
-    }
+  if (which === 0) {
+    if (list.contains("dark")) list.remove("dark"); // let there be light
+  } else if (!list.contains("dark")) {
+    list.add("dark"); // let there be darkness
+  }
 }
-
 
 /**
  * Convert a string to a slug
@@ -29,16 +29,16 @@ export function setTheme(which) {
  * @return  {String}        slug
  */
 export function toSlug(str) {
-    str = str.replace(/[^A-Z0-9_]+/gi, '-').toLowerCase();
-    str = str.replace(/^[-]+|[-]+$/g, '');
+  str = str.replace(/[^A-Z0-9_]+/gi, "-").toLowerCase();
+  str = str.replace(/^[-]+|[-]+$/g, "");
 
-    str = str.split('-')
-        .filter(w => !stop.has(w)) // remove stopwords
-        .join('-');
+  str = str
+    .split("-")
+    .filter((w) => !stop.has(w)) // remove stopwords
+    .join("-");
 
-    return str;
+  return str;
 }
-
 
 /**
  * Get keywords from a large string
@@ -46,98 +46,33 @@ export function toSlug(str) {
  * @return {String}       keywords from string separated by ", "
  */
 export function getKeywords(string, limit = true) {
-    let freq = {};
+  const freq = {};
 
-    // remove https? links
-    // (this may be buggy)
-    string = string.replace(/(https?:\/\/[^)]+)/g, "");
+  // remove https? links
+  // (this may be buggy)
+  string = string.replace(/(https?:\/\/[^)]+)/g, "");
 
-    let words = new Set(
-        string
-        .split(/[^a-zA-Z]/)
-        .filter(w => w.length > 1)
-        .map(w => w.toLowerCase())
-        .filter(w => !stop.has(w))
-    );
+  let words = new Set(
+    string
+      .split(/[^a-zA-Z]/)
+      .filter((w) => w.length > 1)
+      .map((w) => w.toLowerCase())
+      .filter((w) => !stop.has(w))
+  );
 
-    for (let word of words) {
-        if (word in freq) freq[word] += 1;
-        else freq[word] = 1;
-    }
+  for (const word of words) {
+    if (word in freq) freq[word] += 1;
+    else freq[word] = 1;
+  }
 
-    // convert Set to Array
-    words = Array.from(words);
+  // convert Set to Array
+  words = Array.from(words);
 
-    // sort words in descending order of their frequency
-    words.sort((x, y) => freq[y] - freq[x]);
+  // sort words in descending order of their frequency
+  words.sort((x, y) => freq[y] - freq[x]);
 
-    return (limit ? words.slice(0, 10) : words).join(", ");
+  return (limit ? words.slice(0, 10) : words).join(", ");
 }
-
-
-/**
- * Delete Post from DB
- * @param  {Object}          post slug
- * @return {Promise}         resolved data is request's response
- */
-export async function deleteDBPost(slug, url) {
-    const baseUrl = `${url}`;
-
-    return new Promise(async (resolve, reject) => {
-        const res = await fetch(`${baseUrl}/api/post/${slug}`, {
-            method: "DELETE",
-        });
-        const data = await res.json()
-        resolve(data);
-    })
-}
-
-
-/**
- * Add Post to DB / Modify Post in DB
- * @param  {Object}          post paramaeters
- * @return {Promise}         resolved data is request's response
- */
-export async function addPostToDB(body, create = true, url) {
-    const baseUrl = `${url}`;
-    const { slug } = body;
-
-    return new Promise(async (resolve, reject) => {
-        try {
-            const res = await fetch(`${baseUrl}/api/post/${slug}`, {
-                method: create ? "PUT" : "POST", // PUT->create post, POST->update post
-                body: JSON.stringify(body),
-                headers: { 'Content-type': 'application/json' }
-            });
-            const data = await res.json()
-            resolve(data);
-        } catch (e) {
-            reject(e);
-        }
-    })
-}
-
-
-/**
- * Modify post in DB
- * @param  {Object}          post paramaeters
- * @return {Promise}         resolved data is request's response
- */
-export async function modifyPost(body, host) {
-    const baseUrl = `${process.env.SCHEME}://${host}`;
-    const { slug } = body;
-
-    return new Promise(async (resolve, reject) => {
-        const res = await fetch(`${baseUrl}/api/post/${slug}`, {
-            method: "POST",
-            body: JSON.stringify(body),
-            headers: { 'Content-type': 'application/json' }
-        });
-        const data = await res.json()
-        resolve(data);
-    })
-}
-
 
 /**
  * Takes a string and returns the line count
@@ -145,7 +80,7 @@ export async function modifyPost(body, host) {
  * @return {String}          count of lines in string
  */
 export function LineCount(str) {
-    return (str || "").split('\n').length;
+  return (str || "").split("\n").length;
 }
 
 /**
@@ -154,12 +89,11 @@ export function LineCount(str) {
  * @return {String}          count of words in string
  */
 export function WordCount(str) {
-    str = str || "";
-    return str.split(/[^a-zA-Z]/) // divide string by anything thats not an alphabet
-        .filter(function(n) { return n != '' })
-        .length;
+  str = str || "";
+  return str
+    .split(/[^a-zA-Z]/) // divide string by anything thats not an alphabet
+    .filter((n) => n !== "").length;
 }
-
 
 /**
  * Take file size in bytes and converts to appropriate size
@@ -168,15 +102,14 @@ export function WordCount(str) {
  * @return {String}          file size in GB|MG|KB|B
  */
 export function bytesToSize(byte) {
-    const gb = 1024 ** 3,
-        mb = 1024 ** 2,
-        kb = 1024 ** 1;
-    if (byte >= gb) return `${~~(byte/gb)}GB`;
-    if (byte >= mb) return `${~~(byte/mb)}MB`;
-    if (byte >= kb) return `${~~(byte/kb)}KB`;
-    return `${byte}B`;
+  const gb = 1024 ** 3;
+  const mb = 1024 ** 2;
+  const kb = 1024 ** 1;
+  if (byte >= gb) return `${~~(byte / gb)}GB`;
+  if (byte >= mb) return `${~~(byte / mb)}MB`;
+  if (byte >= kb) return `${~~(byte / kb)}KB`;
+  return `${byte}B`;
 }
-
 
 /**
  * scroll to top
@@ -186,13 +119,13 @@ export function bytesToSize(byte) {
  * @return {undefined}         [void]
  */
 export const scrollToTop = (cb, delay = 300, top = 0) => {
-    window.scroll({
-        top: top,
-        left: 0,
-        behavior: 'smooth'
-    });
+  window.scroll({
+    top,
+    left: 0,
+    behavior: "smooth",
+  });
 
-    if (cb) {
-        setTimeout(cb, delay); // call cb() after delay-ms
-    }
-}
+  if (cb) {
+    setTimeout(cb, delay); // call cb() after delay-ms
+  }
+};

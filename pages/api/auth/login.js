@@ -1,39 +1,42 @@
-import hash from 'hash.js'
-import jwt from 'jsonwebtoken'
+import hash from "hash.js";
+import jwt from "jsonwebtoken";
 
-import connectDB from '../../../backend/database/connection.js';
+import connectDB from "../../../database/connection";
 
 const handlers = {};
-const handle = (method, fn) => handlers[method.toUpperCase()] = fn;
+const handle = (method, fn) => (handlers[method.toUpperCase()] = fn);
 
+handle(
+  "post",
+  async (req, res) =>
+    // eslint-disable-next-line consistent-return
+    new Promise((resolve) => {
+      const { password } = req.body;
 
-handle('post', async (req, res, { Article }) => {
-    return new Promise(resolve => {
-        const password = req.body.password;
+      let token;
+      const h = hash.sha256().update(password).digest("hex");
 
-        let token;
-        let h = hash.sha256().update(password).digest('hex');
+      if (h === process.env.PASSWORD_HASH) {
+        token = jwt.sign(
+          { password },
+          process.env.JWT_SECRET,
+          { expiresIn: 86400 * 31 } // 31 days token
+        );
 
-        if (h == process.env.PASSWORD_HASH) {
-            token = jwt.sign({ password },
-                process.env.JWT_SECRET, { expiresIn: 86400 * 31 } // 31 days token
-            );
+        res.json({ success: true, token });
+        return;
+      }
 
-            return res.json({ success: true, token });
-        }
-
-        // wrong password
-        res.json({ success: false });
-        resolve();
-    });
-});
-
+      // wrong password
+      res.json({ success: false });
+      resolve();
+    })
+);
 
 export default connectDB((req, res, DB_Models) => {
-    let method = req.method;
+  const { method } = req;
 
-    if (!(method in handlers))
-        return res.json({ msg: "You can't do that" });
+  if (!(method in handlers)) return res.json({ msg: "You can't do that" });
 
-    return handlers[method](req, res, DB_Models);
+  return handlers[method](req, res, DB_Models);
 });

@@ -6,32 +6,26 @@
     },
 
     {
-        "title": "PhotApp",
-        "href": "https://photapp-web.herokuapp.com",
-        "excerpt": "A photo and video sharing social network (low budget Instagram)."
-    },
-
-    {
         "title": "Kodra",
         "href": "https://github.com/kodejuice/kodra",
-        "excerpt": "A checkers game engine playing the russian variation (at master level), built for the CheckerBoard interface."
+        "excerpt": "A checkers game engine playing the russian variation (Shashki) at master level, built for the CheckerBoard interface."
     },
 
     {
         "title": "Chip8 Emulator",
         "href": "https://github.com/kodejuice/chip8-emulator",
-        "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language"
+        "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language."
     },
 
     {
         "title": "OpenWhot",
         "href": "https://github.com/kodejuice/openwhot",
-        "excerpt": "An android application for a variation of the Naija Whot! Game (players cards aren’t hidden from each other)."
+        "excerpt": "An android application for a variation of the Naija Whot! Game (players cards aren't hidden from each other)."
     },
 
     {
         "title": "JSmarka",
         "href": "https://jsmarka.herokuapp.com",
-        "excerpt": "a javascript code performance benchmarking tool"
+        "excerpt": "a Javascript code performance benchmarking tool."
     }
 ]

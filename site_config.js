@@ -1,16 +1,16 @@
 export const site_details = {
-    "name": "Sochima Biereagu",
-    "email": "sochima.eb@gmail.com",
-    "description": "Sochima Biereagu's website",
+  name: "Sochima Biereagu",
+  email: "sochima.eb@gmail.com",
+  description: "Sochima Biereagu's website",
 
-    "links": {
-        "twitter": "https://twitter.com/kodejuice",
-        "github": "https://github.com/kodejuice",
-        "linkedin": "https://linkedin.com/in/sochima",
-        "resume": "resume.pdf"
-    },
+  links: {
+    twitter: "https://twitter.com/kodejuice",
+    github: "https://github.com/kodejuice",
+    linkedin: "https://linkedin.com/in/sochima",
+    resume: "resume.pdf",
+  },
 
-    "site": {
-        "post_per_page": 6
-    }
-}
+  site: {
+    post_per_page: 6,
+  },
+};

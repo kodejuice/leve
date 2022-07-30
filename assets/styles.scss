@@ -1,254 +1,243 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #__next {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, 'SF Pro Icons', 'Roboto',
-        'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, "SF Pro Icons", "Roboto",
+    "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 19px;
 }
-
-
 
 /* printers */
 @media print {
+  article {
+    font: 12pt;
+    font-family: "Times New Roman";
+  }
 
-    article {
-        font: 12pt;
-        font-family: "Times New Roman";
-    }
-
-    .home-link,
-    ._post_footer,
-    .position-fixed.action-btn {
-        display: none !important;
-    }
+  .home-link,
+  ._post_footer,
+  .position-fixed.action-btn {
+    display: none !important;
+  }
 }
-
 
 /* width > 480px */
 @media only screen and (min-width: 480px) {
-    div.home-main {
-        max-width: 612px;
-        margin: 3.889em 0;
-        margin-left: 10%;
-    }
+  div.home-main {
+    max-width: 612px;
+    margin: 3.889em 0;
+    margin-left: 10%;
+  }
 
-    div.home-main.post-view {
-        max-width: 750px;
-    }
+  div.home-main.post-view {
+    max-width: 750px;
+  }
 }
-
 
 /*width <= 480px*/
 @media only screen and (max-width: 480px) {
-    div.home-main {
-        /* $value / $font-size */
-        margin: 0.667em;
-        /*12px*/
-    }
+  div.home-main {
+    /* $value / $font-size */
+    margin: 0.667em;
+    /*12px*/
+  }
 
-    div.position-fixed.action-btn {
-        position: static !important;
-        float: right;
+  div.position-fixed.action-btn {
+    position: static !important;
+    float: right;
 
-        .hide-on-mobile {
-            display: none;
-        }
+    .hide-on-mobile {
+      display: none;
     }
+  }
 
-    .next-post-link {
-        margin-top: 10px;
-    }
+  .next-post-link {
+    margin-top: 10px;
+  }
 
-    .page-not-found-div {
-        h1 {
-            font-size: 30px;
-        }
+  .page-not-found-div {
+    h1 {
+      font-size: 30px;
     }
+  }
 
-    input.input-login-pwd {
-        width: 100% !important;
-    }
+  input.input-login-pwd {
+    width: 100% !important;
+  }
 }
-
 
 /* light theme */
 body.body {
-    color: #333333;
-    background-color: #f1f1f1;
+  color: #333333;
+  background-color: #f1f1f1;
 
-    // links
-    a {
-        &:hover {
-            text-decoration: none !important;
+  // links
+  a {
+    &:hover {
+      text-decoration: none !important;
 
-            &:not(.no-bg-color) {
-                background: #0dfffc;
-            }
-        }
-
-        color: #282c34 !important;
-        text-decoration: underline !important;
-
-        &.no-underline {
-            text-decoration: none !important;
-        }
+      &:not(.no-bg-color) {
+        background: #0dfffc;
+      }
     }
 
-    .p-quote cite {
-        color: #444;
-    }
+    color: #282c34 !important;
+    text-decoration: underline !important;
 
-    .visible-text {
-        color: #333333 !important;
+    &.no-underline {
+      text-decoration: none !important;
     }
+  }
+
+  .p-quote cite {
+    color: #444;
+  }
+
+  .visible-text {
+    color: #333333 !important;
+  }
 }
 
 a.profile-link {
-    margin-right: 6px;
+  margin-right: 6px;
 }
 
 /* quotes styling */
 blockquote {
-    position: relative;
-    margin: 16px 0;
-    padding: 5px 8px 5px 30px;
-    background: none repeat scroll 0 0 rgba(102, 128, 153, .05);
-    border: none;
-    color: #333;
-    border-left: 10px solid #d6dbdf;
+  position: relative;
+  margin: 16px 0;
+  padding: 5px 8px 5px 30px;
+  background: none repeat scroll 0 0 rgba(102, 128, 153, 0.05);
+  border: none;
+  color: #333;
+  border-left: 10px solid #d6dbdf;
 }
-
 
 /*.home-header*/
 div.home-header {
-    h1.site-name {
-        font-size: 35px;
-    }
+  h1.site-name {
+    font-size: 35px;
+  }
 }
-
 
 /*.home-posts*/
 div.home-posts {
-    a.post-title {
-        font-size: 20px;
-    }
+  a.post-title {
+    font-size: 20px;
+  }
 
-    a.link-btn {
-        font-size: 19px;
-        margin-top: 19px;
-        padding-left: 0px;
-        text-decoration: none !important;
-    }
+  a.link-btn {
+    font-size: 19px;
+    margin-top: 19px;
+    padding-left: 0px;
+    text-decoration: none !important;
+  }
 }
-
-
 
 /* post */
 div.post-view {
+  h1.post-title {
+    font-size: 30px;
 
-    h1.post-title {
-        font-size: 30px;
+    + p.info {
+      /* sibling */
+      font-size: 16px;
+    }
+  }
 
-        +p.info {
-            /* sibling */
-            font-size: 16px;
-        }
+  div.post-content {
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    div.post-content {
-        h1 {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-size: 23px;
-            font-weight: bold;
-        }
-
-        display: block !important !important;
+    h2 {
+      font-size: 23px;
+      font-weight: bold;
     }
 
-    em.pub_date,
-    p.updated-time {
-        font-size: 16px;
+    display: block !important;
+  }
+
+  em.pub_date,
+  p.updated-time {
+    font-size: 16px;
+  }
+
+  p.post-quote {
+    font-size: 17px;
+  }
+
+  a.next-post-link {
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  legend#subscribe {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+  }
+
+  // email input field (view-post page)
+  input.email-input,
+  input.formbox-field_YPLMC {
+    padding: 0;
+    width: 60%;
+    color: #333;
+    font-size: 17px;
+
+    &:focus {
+      outline: none;
     }
 
-    p.post-quote {
-        font-size: 17px;
+    + button.submit {
+      border-radius: 0;
+      border: 1px solid #ccc;
+
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 14px;
+
+      margin-left: 3px;
+      margin-bottom: 3px;
     }
-
-    a.next-post-link {
-        font-size: 18px;
-        font-style: italic;
-    }
-
-    legend#subscribe {
-        color: #333;
-        font-size: 16px;
-        margin-bottom: 0px;
-        text-decoration: underline;
-    }
-
-    // email input field (view-post page)
-    input.email-input, input.formbox-field_YPLMC {
-        padding: 0;
-        width: 60%;
-        color: #333;
-        font-size: 17px;
-
-        &:focus {
-            outline: none;
-        }
-
-        +button.submit {
-            border-radius: 0;
-            border: 1px solid #ccc;
-
-            padding-top: 2px;
-            padding-bottom: 2px;
-            font-size: 14px;
-
-            margin-left: 3px;
-            margin-bottom: 3px;
-        }
-    }
+  }
 }
 
-
 .page-not-found-div {
-    width: 90% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 h2.section-title {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 div.f-nav {
+  .f-link {
+    height: 23px;
+    display: inline-block;
 
-    .f-link {
-        height: 23px;
-        display: inline-block;
+    // a#inactive {
+    //     color: #333;
+    //     cursor: default;
+    //     font-weight: bold;
+    //     text-decoration: none !important;
+    // }
 
-        // a#inactive {
-        //     color: #333;
-        //     cursor: default;
-        //     font-weight: bold;
-        //     text-decoration: none !important;
-        // }
-
-        &.br {
-            border-right: 1.5px solid #333;
-        }
+    &.br {
+      border-right: 1.5px solid #333;
     }
+  }
 }
 
 td.hidden {
-    visibility: hidden;
+  visibility: hidden;
 }

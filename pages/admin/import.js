@@ -1,33 +1,39 @@
-import {useEffect} from 'react'
+import Head from "next/head";
+import { parseCookies } from "nookies";
 
-import Link from 'next/link'
-import Head from 'next/head'
-import fetch from 'node-fetch'
-import { parseCookies } from 'nookies'
+import Header from "../../components/admin/Header";
 
-import Header from '../../components/admin/Header';
-
-import { site_details as details } from '../../site_config.js';
-import verifyAuth from '../../utils/auth.js';
-
+import { site_details as details } from "../../site_config";
+import verifyAuth from "../../utils/auth";
 
 function Import(props) {
-    let {host, scheme} = props;
+  const { host, scheme } = props;
 
-    return (
-        <>
-            <Head>
-                <title> Import Data &lsaquo; {details.description} - Admin </title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="robots" content="noindex"/>
-            </Head>
+  return (
+    <>
+      <Head>
+        <title> Import Data &lsaquo; {details.description} - Admin </title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="robots" content="noindex" />
+      </Head>
 
-            <div className='admin'>
-                <Header url={props.url} is_dark={props.is_dark} host={host} quick_draft={true} page='import'>
-                    <p> This allows you to import exteral blog posts </p>
-                    <p> Data beign imported should match the following schema, props marked with the asterik (*) are required </p>
+      <div className="admin">
+        <Header
+          url={props.url}
+          is_dark={props.is_dark}
+          host={host}
+          quick_draft
+          page="import"
+        >
+          <p> This allows you to import exteral blog posts </p>
+          <p>
+            {" "}
+            Data beign imported should match the following schema, props marked
+            with the asterik (*) are required{" "}
+          </p>
 
-                    <pre><code>{`
+          <pre>
+            <code>{`
 [{
     *author: String,
     *author_email: String,
@@ -51,16 +57,32 @@ function Import(props) {
 
     allow_comments: Boolean
 }, ...]
-                    `}</code></pre>
-                    <hr/>
+                    `}</code>
+          </pre>
+          <hr />
 
-                    <div className="input-group mt-3 mb-5">
-                        <form method="post" encType="multipart/form-data" className="mt-4 mb-5 wp-upload-form" action={`${scheme}://${host}/api/post/import_export?type=import`}>
-                            <label className="screen-reader-text file-label" htmlFor="site_data">Upload site data</label>
-                            <input type="file" name="data" required={true}/>
-                            <input type="submit" name="site-data" className="btn btn-outline-secondary" value="Upload"  />
-                        </form>
-                        <style>{`
+          <div className="input-group mt-3 mb-5">
+            <form
+              method="post"
+              encType="multipart/form-data"
+              className="mt-4 mb-5 wp-upload-form"
+              action={`${scheme}://${host}/api/post/import_export?type=import`}
+            >
+              <label
+                className="screen-reader-text file-label"
+                htmlFor="site_data"
+              >
+                Upload site data
+              </label>
+              <input type="file" name="data" required />
+              <input
+                type="submit"
+                name="site-data"
+                className="btn btn-outline-secondary"
+                value="Upload"
+              />
+            </form>
+            <style>{`
                                 .file-label {
                                     display: block;
                                 }
@@ -74,27 +96,25 @@ function Import(props) {
                                     margin-left: 5px;
                                     margin-bottom: 2px;
                                 }
-                        `}</style>      
-                    </div>
-
-                </Header>
-            </div>
-        </>
-    );
+                        `}</style>
+          </div>
+        </Header>
+      </div>
+    </>
+  );
 }
 
-
 export async function getServerSideProps(ctx) {
-    await verifyAuth(ctx);
+  await verifyAuth(ctx);
 
-    return {
-        props: {
-            host: ctx.req.headers.host,
-            url: process.env.SCHEME + "://" + ctx.req.headers.host,
-            scheme: process.env.SCHEME,
-            is_dark: parseCookies({req:ctx.req}).__dark=='1',
-        }
-    };
+  return {
+    props: {
+      host: ctx.req.headers.host,
+      url: `${process.env.SCHEME}://${ctx.req.headers.host}`,
+      scheme: process.env.SCHEME,
+      is_dark: parseCookies({ req: ctx.req }).__dark === "1",
+    },
+  };
 }
 
 export default Import;
