@@ -21,23 +21,8 @@ module.exports = {
         DISQUS_HOST: "kodejuice.disqus.com",
 
         // google analytics track code
-        GA_TRACK_CODE: "UA-75709223-4",
+        GA_TRACK_CODE: "G-QDSBDZSG0Z",
     },
     */
-
-  target: "serverless",
-
-  // webpack(config) {
-  //   config.module.rules.push({
-  //     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-  //     use: {
-  //       loader: "url-loader",
-  //       options: {
-  //         limit: 100000,
-  //       },
-  //     },
-  //   });
-
-  //   return config;
-  // },
+  // target: "serverless",
 };

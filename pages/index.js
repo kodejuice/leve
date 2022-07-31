@@ -62,6 +62,7 @@ function Home(props) {
         <meta property="twitter:domain" content={host} />
         <meta property="twitter:url" content={page_url} />
 
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}
@@ -70,10 +71,10 @@ function Home(props) {
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${props.ga_track_code}');
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('post_config', '${props.ga_track_code}');
                 `,
           }}
         />
