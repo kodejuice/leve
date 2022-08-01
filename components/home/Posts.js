@@ -16,7 +16,7 @@ function Post(props) {
     <div className="mt-3">
       <Link href="/[...id]" as={`/${slug}`}>
         <a className="post-title"> {title} </a>
-      </Link>{" "}
+      </Link>
       <span className="pl-3 post-date">{post_date} </span>
       <div className="post-excerpt ml-3"> {excerpt} </div>
     </div>
