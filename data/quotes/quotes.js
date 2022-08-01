@@ -1,5 +1,10 @@
 module.exports = [
   {
+    author: "Mark 9:23 (ESV)",
+    quote:
+      "And Jesus said to him, “If you can'! All things are possible for one who believes.”",
+  },
+  {
     author: "Vladimir Vapnik",
     quote: "The most practical thing in the world is good theory",
   },
@@ -8996,10 +9001,6 @@ module.exports = [
     author: "Sochima Biereagu",
     quote:
       "Simplicity is the offspring of clear thought and thorough understanding.",
-  },
-  {
-    author: "Sochima Biereagu",
-    quote: "From a hurtful experience a beautiful thing is born",
   },
   {
     author: "Albert Einstein",
