@@ -426,7 +426,7 @@ export default function Edit(props) {
                     {postquote.quote ? (
                       <blockquote
                         style={
-                          post.post_quote.quote !== postquote.quote
+                          post?.post_quote?.quote !== postquote.quote
                             ? highlight
                             : {}
                         }

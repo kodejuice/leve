@@ -40,7 +40,7 @@ export default function About() {
         </>
       )}
 
-      <p>
+      <div>
         <span title={`${getAge()}yo`}>Hi, i&apos;m Sochima.</span>
         <p> I&apos;m a Software Engineer. </p>
         <p>
@@ -51,7 +51,7 @@ export default function About() {
         </p>
         <pre> {`{name: "Biereagu Sochima Everton"}`} </pre>
         <pre> {`{skill: "Google-fu", rank: "9dan"}`} </pre>
-      </p>
+      </div>
     </div>
   );
 }

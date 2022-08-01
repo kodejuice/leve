@@ -217,13 +217,25 @@ div.post-view {
 }
 
 h2.section-title {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
 div.f-nav {
   .f-link {
     height: 23px;
     display: inline-block;
+
+    a.active {
+      color: #333;
+      cursor: default;
+      font-weight: bold;
+      text-decoration: none !important;
+
+      &:hover {
+        background: none;
+      }
+    }
 
     // a#inactive {
     //     color: #333;

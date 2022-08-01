@@ -11,8 +11,8 @@ import { useRouter } from "next/router";
 import { extend, isEmpty } from "lodash";
 import { format } from "date-fns";
 import { parseCookies, setCookie } from "nookies";
-import Toggle from "../components/home/Toggle";
 
+import Toggle from "../components/home/Toggle";
 import PageNotFound from "../components/PageNotFound";
 
 import { getBestMatch } from "../utils/string-similarity";
@@ -21,6 +21,7 @@ import { getPost, getPosts } from "../database/functions";
 import { site_details as details } from "../site_config";
 
 import mdParser from "../utils/mdParser";
+import { Page, sitePages } from "../components/pages/list";
 
 // DEBUG
 // global.log = (...x) => console.log(...x)
@@ -45,6 +46,11 @@ function PostView(props) {
       });
     }
   });
+
+  // a site page?
+  if (sitePages.has(id)) {
+    return <>{Page[id](props)}</>;
+  }
 
   // page not yet generated
   // display an incomplete loading page
@@ -117,7 +123,7 @@ function PostView(props) {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('post_config', '${props.ga_track_code}');
-                `,
+              `,
           }}
         />
       </Head>
@@ -257,19 +263,19 @@ function PostView(props) {
                       className="col"
                       dangerouslySetInnerHTML={{
                         __html: `
-                                            <div id="signupFormContainer_YPLMC">
-                                            <div id="signupFormContent_YPLMC">
-                                            <div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
-                                            <input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
-                                            <input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
-                                            <input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
-                                            <input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 />
-                                            <button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
-                                            </div>
-                                            </div>
-                                            </div>
-                                            </div>
-                                        `,
+                          <div id="signupFormContainer_YPLMC">
+                          <div id="signupFormContent_YPLMC">
+                          <div class="formbox-editor_YPLMC"><div id="formbox_screen_subscribe_YPLMC" style="display:block;" name="frmLB_YPLMC">
+                          <input type=hidden name=token_YPLMC id=token_YPLMC value="mFcQnoBFKMREm%2FBVsa6KJrJ25jqXIyRIGAsuYxzAV7Knxdbvm8OfpQ%3D%3D" />
+                          <input type=hidden name=successurl_YPLMC id=successurl_YPLMC value="https://lb.benchmarkemail.com/Code/ThankYouOptin" />
+                          <input type=hidden name=errorurl_YPLMC id=errorurl_YPLMC value="http://lb.benchmarkemail.com//Code/Error" />
+                          <input type=text placeholder="Email Address" class="formbox-field_YPLMC text-placeholder" onfocus="javascript:focusPlaceHolder(this);" onblur="javascript:blurPlaceHolder(this);" id="fldemail_YPLMC" name="fldemail_YPLMC" maxlength=100 />
+                          <button id="btnSubmit_YPLMC" onClick="javascript:return submit_YPLMCClick();" class="formbox-button_YPLMC btn-link btn submit visible-text">subscribe</button>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                        `,
                       }}
                     />
                   </div>
@@ -366,10 +372,12 @@ function getPlaceholder() {
 
 // get routes that should be pre-rendered
 export async function getStaticPaths() {
-  const data = await getPosts(["slug"]);
+  const data = (await getPosts(["slug"])) || [];
+  const site_pages = Array.from(sitePages).map((p) => ({ slug: p }));
+  const all = data.concat(site_pages);
 
   return {
-    paths: data.map((post) => ({
+    paths: all.map((post) => ({
       params: { id: [post.slug] },
     })),
 
@@ -382,16 +390,27 @@ export async function getStaticProps(ctx) {
   const post_id = ctx.params.id[0]; // `/{slug}`
   const [host, scheme] = [process.env.HOST, process.env.SCHEME];
 
-  const data = await getPost(post_id);
-
   const props = {
     host,
     scheme,
-    id: ctx.params.id,
+    id: post_id,
+    // id: ctx.params.id,
     ga_track_code: process.env.GA_TRACK_CODE,
     disqus_host: process.env.DISQUS_HOST,
   };
 
+  if (sitePages.has(post_id)) {
+    return {
+      props: extend(props, {
+        post: {},
+      }),
+      revalidate: 1,
+    };
+  }
+
+  // fetch post from DB
+
+  const data = await getPost(post_id);
   if (data.error) {
     // no post with slug '${post_id}'
     return {

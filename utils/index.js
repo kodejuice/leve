@@ -4,20 +4,21 @@ import stopwords from "../data/quotes/indexer/stopwords";
 
 const stop = new Set(stopwords);
 
-/** Set site theme
- * @param       {String}        theme to switch to
+/**
+ * Set site theme
+ * @param {String} state state we need should switch to
  */
-// set site theme
-export function setTheme(which) {
+export function setTheme(state) {
   // 0=>light, 1=>dark
-  which = Number(which);
+  state = Number(state);
 
   const list = document.querySelector("body").classList;
 
-  if (which === 0) {
-    if (list.contains("dark")) list.remove("dark"); // let there be light
-  } else if (!list.contains("dark")) {
-    list.add("dark"); // let there be darkness
+  if (state) {
+    if (!list.contains("dark")) list.add("dark"); // and darkness was upon the face of the deep
+  } else if (list.contains("dark")) {
+    list.remove("dark"); // let there be light
+    list.add("body");
   }
 }
 

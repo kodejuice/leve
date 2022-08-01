@@ -1,11 +1,12 @@
+const iconURL = {
+  // github: "https://img.icons8.com/dusk/21/000000/github.png",
+  github: "/icons/github.png",
+  twitter: "/icons/twitter.png",
+  linkedin: "/icons/linkedin.png",
+  "rss feed": "/icons/rss.png",
+};
+
 function Icon(props) {
-  const iconURL = {
-    // github: "https://img.icons8.com/dusk/21/000000/github.png",
-    github: "/icons/github.png",
-    twitter: "/icons/twitter.png",
-    linkedin: "/icons/linkedin.png",
-    "rss feed": "/icons/rss.png",
-  };
   const size = 30;
   return (
     <a
@@ -24,7 +25,7 @@ function Icon(props) {
   );
 }
 
-function Header(props) {
+function SiteHeader(props) {
   const p = props.details;
   const { links } = p;
 
@@ -68,4 +69,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default SiteHeader;

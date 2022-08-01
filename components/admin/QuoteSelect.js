@@ -121,7 +121,7 @@ export default function QuoteSelect(props) {
         {quotes.map((q) => (
           <blockquote
             key={q.quote}
-            onClick={() => setQuote(q)}
+            onClick={() => setQuote(q.quote !== selected.quote ? q : {})}
             className="dialog-quote-block btn w-25 blockquote mt-4"
             style={
               q.quote === selected.quote ? { border: "1px solid #333" } : {}
