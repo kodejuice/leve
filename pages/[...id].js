@@ -387,7 +387,7 @@ export async function getStaticPaths() {
 
 // fetch Post information from database
 export async function getStaticProps(ctx) {
-  const post_id = ctx.params.id[0]; // `/{slug}`
+  const post_id = ctx.params.id.join("/"); // `/{slug}`
   const [host, scheme] = [process.env.HOST, process.env.SCHEME];
 
   const props = {
