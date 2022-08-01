@@ -10,17 +10,17 @@ import { site_details as details } from "../../site_config";
 const sidebarLinks = [
   {
     icon: "book",
-    href: "list",
+    href: "/admin/list",
     name: "Posts",
   },
   {
     icon: "floppy-disk",
-    href: "export",
+    href: "/admin/export",
     name: "Export Data",
   },
   {
     icon: "floppy-disk",
-    href: "import",
+    href: "/admin/import",
     name: "Import Data",
   },
 ];
