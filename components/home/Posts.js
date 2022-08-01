@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { format } from "date-fns";
 
 import Pagination from "react-js-pagination";
 
@@ -8,13 +9,15 @@ import { site_details as details } from "../../site_config";
 
 // single post component
 function Post(props) {
-  const { title, excerpt, slug } = props.info;
+  const { title, excerpt, slug, pub_date } = props.info;
+  const post_date = format(new Date(pub_date), "MMMM dd, yyyy");
 
   return (
     <div className="mt-3">
       <Link href="/[...id]" as={`/${slug}`}>
         <a className="post-title"> {title} </a>
-      </Link>
+      </Link>{" "}
+      <span className="pl-3 post-date">{post_date} </span>
       <div className="post-excerpt ml-3"> {excerpt} </div>
     </div>
   );
@@ -42,11 +45,10 @@ function Posts(props) {
     post_block = (
       <div>
         <h2 className="section-title"> All Posts </h2>
-        <div>
-          {" "}
+        <div className="home-posts">
           {all_posts.slice(start, length).map((p) => (
             <Post info={p} key={p._id} />
-          ))}{" "}
+          ))}
         </div>
 
         <div className="mt-4">

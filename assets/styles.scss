@@ -68,6 +68,12 @@
   input.input-login-pwd {
     width: 100% !important;
   }
+
+  .home-posts {
+    span.post-date {
+      display: block;
+    }
+  }
 }
 
 /* light theme */
@@ -104,6 +110,13 @@ body.body {
 
 a.profile-link {
   margin-right: 6px;
+}
+
+.home-posts {
+  span.post-date {
+    color: #888;
+    font-size: 0.8em;
+  }
 }
 
 /* quotes styling */

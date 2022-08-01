@@ -29,7 +29,7 @@ function AboutPage(props) {
 
       <SideBar />
 
-      <div className="home-main mb-5">
+      <div className="home-main mb-5 pl-2">
         <section>
           <header>
             <SiteHeader details={details} />
