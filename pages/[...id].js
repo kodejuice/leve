@@ -133,10 +133,7 @@ function PostView(props) {
           <Toggle onSwitch={() => reloadDisqusThread()} />
         </div>
 
-        <div className="hide-on-mobile">
-          <p style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}>
-            <small style={{ fontSize: "14px" }}>{details.name}</small>
-          </p>
+        <div className="mobile-back-button">
           <Link href="/">
             <div title="Go Home">
               <a className="btn btn-link">
@@ -144,6 +141,12 @@ function PostView(props) {
               </a>
             </div>
           </Link>
+        </div>
+
+        <div className="hide-on-mobile">
+          <p style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}>
+            <small style={{ fontSize: "14px" }}>{details.name}</small>
+          </p>
           {parseCookies(null).__token ? (
             <div className="mt-4">
               <div title="Edit post">
@@ -199,7 +202,7 @@ function PostView(props) {
       </div>
 
       <section>
-        <div className="home-main mt-5 post-view">
+        <div className="home-main mt-5 post-view pl-2">
           <header>
             <h1 className="post-title"> {post.title} </h1>
             <p className="info ml-3">
