@@ -11,16 +11,19 @@ const sidebarLinks = [
   {
     icon: "book",
     href: "/admin/list",
+    page: "list",
     name: "Posts",
   },
   {
     icon: "floppy-disk",
     href: "/admin/export",
+    page: "export",
     name: "Export Data",
   },
   {
     icon: "floppy-disk",
     href: "/admin/import",
+    page: "import",
     name: "Import Data",
   },
 ];
@@ -77,7 +80,7 @@ function Header(props) {
                   <Link href={obj.href} key={obj.name}>
                     <a
                       className={`nav-link${
-                        page === obj.href ? " active" : ""
+                        page === obj.page ? " active" : ""
                       } no-bg-color`}
                     >
                       <span
