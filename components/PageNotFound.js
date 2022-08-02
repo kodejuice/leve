@@ -5,7 +5,7 @@ import { site_details as details } from "../site_config";
 
 /* renders a 404 page not found error */
 export default function PageNotFound(props) {
-  const query = props.id.join("/");
+  const query = props.id;
   const { corrections } = props;
 
   return (
