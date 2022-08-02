@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 /* eslint-disable react/no-danger */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-use-before-define */
@@ -11,6 +12,8 @@ import { useRouter } from "next/router";
 import { extend, isEmpty } from "lodash";
 import { format } from "date-fns";
 import { parseCookies, setCookie } from "nookies";
+import HRNumbers from "human-readable-numbers";
+
 import "highlight.js/styles/github.css";
 
 import Toggle from "../components/home/Toggle";
@@ -133,7 +136,7 @@ function PostView(props) {
           <Toggle onSwitch={() => reloadDisqusThread()} />
         </div>
 
-        <div className="mobile-back-button">
+        <div className="back-button">
           <Link href="/">
             <div title="Go Home">
               <a className="btn btn-link">
@@ -167,15 +170,11 @@ function PostView(props) {
 
               <div>
                 {(post.views && (
-                  <>
-                    -{" "}
-                    <small>
-                      <em title="" className="mt-1">
-                        {" "}
-                        {post.views} views
-                      </em>
-                    </small>
-                  </>
+                  <small>
+                    <em title="" className="mt-1">
+                      {HRNumbers.toHumanString(post.views | 0)} views
+                    </em>
+                  </small>
                 )) ||
                   ""}
               </div>
