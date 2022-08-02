@@ -9,15 +9,24 @@ import { site_details as details } from "../../../site_config";
 
 // single post component
 function Post(props) {
-  const { title, excerpt, slug, pub_date } = props.info;
+  const { title, excerpt, slug, pub_date, last_modified } = props.info;
   const post_date = format(new Date(pub_date), "MMMM dd, yyyy");
+  const last_modified_date = format(new Date(last_modified), "MMMM do, yyyy");
+  const display_last_updated = post_date !== last_modified_date;
 
   return (
     <div className="mt-3">
       <Link href="/[...id]" as={`/${slug}`}>
         <a className="post-title"> {title} </a>
       </Link>
-      <span className="pl-3 post-date">{post_date} </span>
+      <span
+        className="pl-3 post-date"
+        title={
+          display_last_updated ? `Last updated on ${last_modified_date}` : ""
+        }
+      >
+        {post_date}
+      </span>
       <div className="post-excerpt ml-3"> {excerpt} </div>
     </div>
   );

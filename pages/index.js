@@ -57,7 +57,13 @@ function Home(props) {
 
 export async function getStaticProps() {
   // Fetch data from database
-  const data = await getPosts(["title", "excerpt", "slug", "pub_date"]);
+  const data = await getPosts([
+    "title",
+    "excerpt",
+    "slug",
+    "pub_date",
+    "last_modified",
+  ]);
 
   // get recent posts from data,
   // sorts them in descending order of their publication date, and gets the first few ${post_per_page}
