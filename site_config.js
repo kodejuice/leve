@@ -7,10 +7,9 @@ export const site_details = {
     twitter: "https://twitter.com/kodejuice",
     github: "https://github.com/kodejuice",
     linkedin: "https://linkedin.com/in/sochima",
-    resume: "resume.pdf",
   },
 
   site: {
-    post_per_page: 6,
+    post_per_page: 10,
   },
 };

@@ -4,8 +4,8 @@ import { format } from "date-fns";
 
 import Pagination from "react-js-pagination";
 
-import { scrollToTop } from "../../utils";
-import { site_details as details } from "../../site_config";
+import { scrollToTop } from "../../../utils";
+import { site_details as details } from "../../../site_config";
 
 // single post component
 function Post(props) {
@@ -69,10 +69,9 @@ function Posts(props) {
 
         <a
           onClick={() => scrollToTop(() => setDisplay(false))}
-          className="link-btn btn btn-link"
+          className="link-btn btn btn-link p-1"
         >
-          {" "}
-          Recent posts{" "}
+          Recent posts
         </a>
       </div>
     );
@@ -99,10 +98,9 @@ function Posts(props) {
         {props.all_posts.length > post_per_page ? (
           <a
             onClick={() => scrollToTop(() => setDisplay(true))}
-            className="link-btn btn btn-link"
+            className="link-btn btn btn-link p-1"
           >
-            {" "}
-            All posts{" "}
+            All posts
           </a>
         ) : (
           ""

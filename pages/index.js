@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import HomeHead from "../components/home/sections/HomeHead";
 import { SideBar } from "../components/home/sections/SideBar";
-import PostList from "../components/home/Posts";
+import PostList from "../components/home/sections/Posts";
 
 import SiteHeader from "../components/home/sections/SiteHeader";
 
