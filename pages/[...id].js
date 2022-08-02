@@ -157,8 +157,7 @@ function PostView(props) {
               <div title="Add new post">
                 <Link href="admin/edit">
                   <a className="btn btn-link">
-                    {" "}
-                    <span className="glyphicon glyphicon-plus" />{" "}
+                    <span className="glyphicon glyphicon-plus" />
                   </a>
                 </Link>
               </div>
@@ -170,7 +169,7 @@ function PostView(props) {
                     <small>
                       <em title="" className="mt-1">
                         {" "}
-                        {post.views} views{" "}
+                        {post.views} views
                       </em>
                     </small>
                   </>
@@ -181,11 +180,11 @@ function PostView(props) {
               <div>
                 {(post.draft && (
                   <>
-                    -{" "}
+                    -
                     <small>
                       <em title="This post isnt published yet" className="mt-1">
                         {" "}
-                        {post.draft ? "draft" : ""}{" "}
+                        {post.draft ? "draft" : ""}
                       </em>
                     </small>
                   </>
@@ -304,8 +303,7 @@ function PostView(props) {
                   ""
                 ) : (
                   <b>
-                    {" "}
-                    <em> Comments Disabled </em>{" "}
+                    <em> Comments Disabled </em>
                   </b>
                 )
               ) : (
