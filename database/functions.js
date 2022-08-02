@@ -2,6 +2,7 @@
 /* eslint-disable no-async-promise-executor */
 /* eslint-disable no-console */
 import { sample, pick, extend } from "lodash";
+import mdParser from "../utils/mdParser";
 import { db_model } from "./connection";
 
 const toObject = (payload) => JSON.parse(JSON.stringify(payload));
@@ -42,6 +43,8 @@ export async function createPost(post_id, post_fields) {
   if (!newItem.draft && !newItem.pub_date) {
     newItem.pub_date = now;
   }
+
+  newItem.html_content = mdParser.render(newItem.content || "");
 
   return new Promise((resolve) => {
     // create post if slug isn't in use already
@@ -96,6 +99,7 @@ export async function updatePost(post_id, post_fields) {
       if ("content" in updates && updates.content !== doc.content) {
         doc.draft_revisions += 1;
         doc.last_modified = new Date();
+        doc.html_content = mdParser.render(updates.content);
       }
 
       // is it beign published ?, update publication date

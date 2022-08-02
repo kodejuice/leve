@@ -20,7 +20,7 @@ handle("get", (req, res, slug /*post_id*/, { Article }) => {
   const cookies = parseCookies({ req });
 
   const __fields =
-    "author post_image author_email title content post_quote pub_date last_modified next_post slug draft excerpt ";
+    "author post_image author_email title content html_content post_quote pub_date last_modified next_post slug draft excerpt ";
 
   const db_query = Article.findOne({ slug }).exec();
   return new Promise((resolve) => {

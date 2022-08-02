@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import { extend, isEmpty } from "lodash";
 import { format } from "date-fns";
 import { parseCookies, setCookie } from "nookies";
+import "highlight.js/styles/github.css";
 
 import Toggle from "../components/home/Toggle";
 import PageNotFound from "../components/PageNotFound";
@@ -20,7 +21,6 @@ import { getPost, getPosts } from "../database/functions";
 
 import { site_details as details } from "../site_config";
 
-import mdParser from "../utils/mdParser";
 import { Page, sitePages } from "../components/pages/list";
 
 // DEBUG
@@ -240,7 +240,7 @@ function PostView(props) {
               <div
                 className="post-content mt-4 visible-text"
                 dangerouslySetInnerHTML={{
-                  __html: mdParser.render(post.content || ""),
+                  __html: post.html_content,
                 }}
               />
               <p className="pt-1 text-right updated-time">

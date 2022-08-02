@@ -15,7 +15,8 @@ const ArticleSchema = new Schema({
   last_modified: Date,
 
   topic: [String],
-  content: { type: String, default: "" },
+  content: { type: String, default: "" }, // markdown content
+  html_content: { type: String, default: "" }, // html content
   post_image: { type: String, default: "https://i.ibb.co/gyYtF0f/sb.png" },
 
   next_post: {
