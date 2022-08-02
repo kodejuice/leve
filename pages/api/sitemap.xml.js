@@ -1,7 +1,9 @@
 import { format } from "date-fns";
+import { sitePages } from "../../components/pages/list";
 
 import connectDB from "../../database/connection";
-// import { site_details as details } from "../../site_config";
+
+// https://www.google.com/ping?sitemap=FULL_URL_OF_SITEMAP
 
 export default connectDB((req, res, DB_Models) => {
   const { Article } = DB_Models;
@@ -32,6 +34,16 @@ export default connectDB((req, res, DB_Models) => {
 <url>
     <loc> ${process.env.SCHEME}://${req.headers.host}/${post.slug} </loc>
     <lastmod> ${format(new Date(post.last_modified), "yyyy-MM-d")} </lastmod>
+    <priority> 0.8 </priority>
+</url>
+`;
+        });
+
+        Array.from(sitePages).forEach((page) => {
+          xml += `
+<url>
+    <loc> ${process.env.SCHEME}://${req.headers.host}/${page} </loc>
+    <lastmod> ${format(new Date(), "yyyy-MM-d")} </lastmod>
     <priority> 0.8 </priority>
 </url>
 `;
