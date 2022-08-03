@@ -88,10 +88,10 @@ function PostView(props) {
         <meta property="og:title" content={post.title} />
         <meta property="og:url" content={page_url} />
         <meta property="og:description" content={page_description} />
-        <meta property="og:site_name" content="Sochima Biereagus website" />
+        <meta property="og:site_name" content={details.description} />
 
         {/*<!-- Twitter Meta Tags -->*/}
-        <meta name="twitter:creator" content="@kodejuice" />
+        <meta name="twitter:creator" content={`@${details.handle.twitter}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content={host} />
         <meta property="twitter:url" content={page_url} />
@@ -322,7 +322,7 @@ function PostView(props) {
 // reload disqus thread
 function reloadDisqusThread() {
   // DISQUS is a global variable,
-  // which comes with the embed.js script
+  // which comes with the embedded disqus embed.js script
   try {
     // eslint-disable-next-line no-undef
     DISQUS.reset({

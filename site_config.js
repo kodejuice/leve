@@ -9,6 +9,10 @@ export const site_details = {
     linkedin: "https://linkedin.com/in/sochima",
   },
 
+  handle: {
+    twitter: "kodejuice",
+  },
+
   site: {
     post_per_page: 10,
   },
