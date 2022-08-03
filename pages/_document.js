@@ -53,7 +53,7 @@ class MyDocument extends Document {
           <script
             id="dsq-count-scr"
             src={`//${process.env.DISQUS_HOST}/count.js`}
-            async
+            defer
           />
         </body>
       </Html>

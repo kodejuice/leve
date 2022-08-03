@@ -133,12 +133,25 @@ function PostView(props) {
         />
       </Head>
 
+      <div className="hide-on-desktop mt-4">
+        <Link href="/">
+          <div title="Go Home">
+            <a className="btn btn-link">
+              <span className="glyphicon glyphicon-chevron-left" /> Back
+            </a>
+          </div>
+        </Link>
+      </div>
+
       <div className="position-fixed action-btn">
         <div className="toggler">
           <Toggle onSwitch={() => reloadDisqusThread()} />
         </div>
 
-        <div className="back-button">
+        <div className="hide-on-mobile">
+          <p style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}>
+            <small style={{ fontSize: "14px" }}>{details.name}</small>
+          </p>
           <Link href="/">
             <div title="Go Home">
               <a className="btn btn-link">
@@ -146,12 +159,6 @@ function PostView(props) {
               </a>
             </div>
           </Link>
-        </div>
-
-        <div className="hide-on-mobile">
-          <p style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}>
-            <small style={{ fontSize: "14px" }}>{details.name}</small>
-          </p>
           {parseCookies(null).__token ? (
             <div className="mt-4">
               <div title="Edit post">

@@ -40,6 +40,10 @@
       max-width: 100%;
     }
   }
+
+  .hide-on-desktop {
+    display: none;
+  }
 }
 
 /*width <= 480px*/
@@ -48,6 +52,12 @@
     /* $value / $font-size */
     margin: 0.667em;
     /*12px*/
+
+    &.post-view {
+      * {
+        max-width: 100%;
+      }
+    }
   }
 
   div.position-fixed.action-btn {
@@ -58,12 +68,12 @@
       display: none;
     }
 
-    .back-button {
-      position: absolute;
-      left: 15px;
-      top: 7px;
-      margin-bottom: 10px;
-    }
+    // .back-button {
+    //   position: absolute;
+    //   left: 15px;
+    //   top: 7px;
+    //   margin-bottom: 10px;
+    // }
   }
 
   .next-post-link {
