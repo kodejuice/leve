@@ -39,7 +39,7 @@ function PostView(props) {
   let { post } = props;
 
   useEffect(() => {
-    if (post?.slug) {
+    if (post?.slug && !parseCookies(null)[post.slug]) {
       update_views(props.id, scheme).then((yes) => {
         if (yes) {
           // store cookie so the 'views' field of this post gets updated once
