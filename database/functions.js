@@ -2,8 +2,9 @@
 /* eslint-disable no-async-promise-executor */
 /* eslint-disable no-console */
 import { sample, pick, extend } from "lodash";
-import mdParser from "../utils/mdParser";
 import { db_model } from "./connection";
+import mdParser from "../utils/mdParser";
+import { sitePages } from "../components/pages/list";
 
 const toObject = (payload) => JSON.parse(JSON.stringify(payload));
 
@@ -51,7 +52,8 @@ export async function createPost(post_id, post_fields) {
     Article.findOne({ slug: post_id }, (err, doc) => {
       if (err || doc) {
         if (err) resolve({ error: true, msg: err.message });
-        else if (doc) resolve({ error: true, msg: "slug not available!" });
+        else if (doc || sitePages.has(post_id))
+          resolve({ error: true, msg: "slug not available!" });
         return resolve();
       }
 
