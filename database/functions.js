@@ -82,6 +82,7 @@ export async function updatePost(post_id, post_fields) {
     "topic",
     "post_quote",
     "allow_comments",
+    "author_email",
     "post_image",
   ];
   const updates = pick(post_fields, ...writable);

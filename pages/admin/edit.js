@@ -43,6 +43,9 @@ export default function Edit(props) {
   const [slug, setSlug] = useState(post.slug);
   const [title, setTitle] = useState(post.title);
   const [excerpt, setExcerpt] = useState(post.excerpt);
+  const [author_email, setAuthorEmail] = useState(
+    post.author_email || details.email
+  );
   const [content, setContent] = useState(post.content);
   const [post_image, setPostImage] = useState(post.post_image);
   const [auto_slug, setAutoSlug] = useState("");
@@ -62,6 +65,7 @@ export default function Edit(props) {
     postquote,
     topic,
     draft,
+    author_email,
     allow_comments,
     isNew,
   };
@@ -486,6 +490,26 @@ export default function Edit(props) {
                       <option value={false}> No </option>
                     </select>
                   </div>
+
+                  {/* author email */}
+                  <div className="sub-block">
+                    <label htmlFor="Visibility">Authors Email</label>
+                    <input
+                      type="email"
+                      id="email-input"
+                      value={author_email}
+                      placeholder="enter email"
+                      disabled={isSaving === true}
+                      title="Authors email"
+                      style={
+                        post.author_email !== author_email ? highlight : {}
+                      }
+                      className="form-control"
+                      onChange={(e) => {
+                        setAuthorEmail(e.target.value);
+                      }}
+                    />
+                  </div>
                 </div>
 
                 {/*4th block (text stats) */}
@@ -548,6 +572,7 @@ async function savePost(params, setSaveState, redirect_url, url) {
     postquote,
     topic,
     draft,
+    author_email,
     allow_comments,
     isNew,
   } = params;
@@ -570,13 +595,13 @@ async function savePost(params, setSaveState, redirect_url, url) {
     title,
     excerpt,
     content,
-    allow_comments,
     post_image,
     post_quote: postquote,
     draft,
     topic: topic.split(","),
     author: details.name,
-    author_email: details.email,
+    author_email,
+    allow_comments,
   };
 
   let res;
