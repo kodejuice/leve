@@ -35,6 +35,10 @@
 
   div.home-main.post-view {
     max-width: 750px;
+
+    * {
+      max-width: 100%;
+    }
   }
 }
 
