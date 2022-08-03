@@ -1,9 +1,18 @@
 /* eslint-disable react/jsx-pascal-case */
+import dynamic from "next/dynamic";
 import { parseCookies, setCookie } from "nookies";
 import { useEffect, useState } from "react";
-import { Toggle as _Toggle } from "react-toggle-component";
 
 import { setTheme } from "../../utils";
+
+// import { Toggle as Toggler } from "react-toggle-component";
+const Toggler = dynamic(
+  () => import("react-toggle-component").then((t) => t.Toggle),
+  {
+    ssr: false,
+    loading: () => <p> 🌘️ </p>,
+  }
+);
 
 export default function Toggle(props) {
   const { onSwitch } = props;
@@ -15,8 +24,8 @@ export default function Toggle(props) {
 
   return (
     mounted && (
-      <div title="toggle">
-        <_Toggle
+      <div title="toggle" className="mb-3">
+        <Toggler
           leftBackgroundColor="#ccc"
           rightBackgroundColor="#333"
           borderColor="#282c34"

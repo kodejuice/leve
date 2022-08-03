@@ -1,9 +1,10 @@
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
+import { site_details as details } from "../../../site_config";
 
-const yearBorn = 2000;
-const monthBorn = 2; /*March*/
-const dayBorn = 5;
+const yearBorn = details.dob.year;
+const monthBorn = details.dob.month - 1; /*March*/
+const dayBorn = details.dob.day;
 
 function getAge() {
   const d = new Date();

@@ -7,24 +7,26 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import fetch from "node-fetch";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
 import { extend, isEmpty } from "lodash";
 import { format } from "date-fns";
 import { parseCookies, setCookie } from "nookies";
 import HRNumbers from "human-readable-numbers";
-
 import "highlight.js/styles/github.css";
 
 import Toggle from "../components/home/Toggle";
-import PageNotFound from "../components/PageNotFound";
-
+import { Page, sitePages } from "../components/pages/list";
 import { getBestMatch } from "../utils/string-similarity";
 import { getPost, getPosts } from "../database/functions";
-
 import { site_details as details } from "../site_config";
 
-import { Page, sitePages } from "../components/pages/list";
+// import PageNotFound from "../components/PageNotFound";
+const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
+  ssr: false,
+  loading: () => <p> Page Not Found </p>,
+});
 
 // DEBUG
 // global.log = (...x) => console.log(...x)

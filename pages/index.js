@@ -1,15 +1,18 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import HomeHead from "../components/home/sections/HomeHead";
 import { SideBar } from "../components/home/sections/SideBar";
-import PostList from "../components/home/sections/Posts";
-
 import SiteHeader from "../components/home/sections/SiteHeader";
-
-import { getPosts } from "../database/functions";
-
-import { site_details as details } from "../site_config";
 import Footer from "../components/home/sections/Footer";
+import { getPosts } from "../database/functions";
+import { site_details as details } from "../site_config";
+
+// import PostList from "../components/home/sections/Posts";
+const PostList = dynamic(() => import("../components/home/sections/Posts"), {
+  ssr: false,
+  loading: () => <p> Loading posts... </p>,
+});
 
 const { post_per_page } = details.site;
 
