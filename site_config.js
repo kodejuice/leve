@@ -13,6 +13,12 @@ export const site_details = {
     twitter: "kodejuice",
   },
 
+  dob: {
+    year: 2000,
+    month: 3,
+    day: 5,
+  },
+
   site: {
     post_per_page: 10,
   },
