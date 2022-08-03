@@ -25,7 +25,7 @@ export default function HomeHead(props) {
 
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <script
-        async
+        defer
         src={`https://www.googletagmanager.com/gtag/js?id=${ga_track_code}`}
       />
       <script

@@ -98,7 +98,7 @@ function PostView(props) {
         <meta property="twitter:domain" content={host} />
         <meta property="twitter:url" content={page_url} />
 
-        <script src="./js/benchmarkemail-signupform.js" />
+        <script defer src="./js/benchmarkemail-signupform.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -118,7 +118,7 @@ function PostView(props) {
           }}
         />
         <script
-          async
+          defer
           src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}
         />
         <script
