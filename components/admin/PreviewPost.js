@@ -27,6 +27,7 @@ export default function PreviewPost(props) {
 
         <div
           className="post-content mt-4 visible-text"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>
