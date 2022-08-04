@@ -12,9 +12,6 @@ import Footer from "../home/sections/Footer";
 function ReadingsPage(props) {
   const { host, scheme } = props;
 
-  // rss feed url (for header icons)
-  details.links.rss_url = `${scheme}://${host}/api/rss.xml`;
-
   return (
     <div className="container">
       <Head>

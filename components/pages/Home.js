@@ -17,9 +17,6 @@ function Home(props) {
   const { all_posts, recent_posts } = props;
   const { host, scheme } = props;
 
-  // rss feed url (for header icons)
-  details.links.rss_url = `${scheme}://${host}/api/rss.xml`;
-
   return (
     <div className="container">
       <Head>

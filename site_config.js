@@ -7,6 +7,7 @@ export const site_details = {
     twitter: "https://twitter.com/kodejuice",
     github: "https://github.com/kodejuice",
     linkedin: "https://linkedin.com/in/sochima",
+    rss_url: "/api/rss.xml",
   },
 
   handle: {
