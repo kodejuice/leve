@@ -45,19 +45,11 @@ export default function About() {
       )}
 
       <div>
-        {/* Hello, my name is Sochima. I am a King and a Priest of the Most High. I
-        also work as a software engineer. And a Google expert. I enjoy problem
-        solving as well as coming up with new ideas. I made this site
-        specifically to write about some of the things I've created or come up
-        with. I'll also write about some of the things that come to mind. I have
-        a diploma in Electrical Engineering and am currently enrolled at Oregon
-        State University for a B.Sc in Computer Science. */}
-        {/*  */}
         <span title={`${getAge()}yo`}>Hello, my name is Sochima.</span>
         <div> I&apos;m a King and a Priest of the Most High God. </div>
         <div> I also work as a Software Engineer. </div>
         <div title="😉️"> And an expert Googler. </div>
-        <p className="mt-2 ">
+        <p className="mt-2">
           I enjoy problem solving as well as coming up with new ideas. I made
           this site specifically to write about some of the things I've created
           or come up with. I'll also write about some of the things that come to
