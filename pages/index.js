@@ -1,61 +1,11 @@
-import Head from "next/head";
-import dynamic from "next/dynamic";
-
-import HomeHead from "../components/home/sections/HomeHead";
-import { SideBar } from "../components/home/sections/SideBar";
-import SiteHeader from "../components/home/sections/SiteHeader";
-import Footer from "../components/home/sections/Footer";
+import Home from "../components/pages/Home";
 import { getPosts } from "../database/functions";
 import { site_details as details } from "../site_config";
 
-// import PostList from "../components/home/sections/Posts";
-const PostList = dynamic(() => import("../components/home/sections/Posts"), {
-  ssr: false,
-  loading: () => <p> Loading posts... </p>,
-});
-
 const { post_per_page } = details.site;
 
-function Home(props) {
-  const { all_posts, recent_posts } = props;
-  const { host, scheme } = props;
-
-  // rss feed url (for header icons)
-  details.links.rss_url = `${scheme}://${host}/api/rss.xml`;
-
-  return (
-    <div className="container">
-      <Head>
-        <title> {details.name} </title>
-
-        <HomeHead
-          host={host}
-          scheme={scheme}
-          ga_track_code={props.ga_track_code}
-        />
-      </Head>
-
-      <SideBar home />
-
-      <div className="home-main mb-5 pl-2">
-        <section>
-          <header>
-            <SiteHeader details={details} />
-          </header>
-
-          <article>
-            <div className="home-posts ml-2">
-              <PostList recent_posts={recent_posts} all_posts={all_posts} />
-            </div>
-          </article>
-
-          <footer>
-            <Footer current="home" />
-          </footer>
-        </section>
-      </div>
-    </div>
-  );
+function App(props) {
+  return <Home {...props} />;
 }
 
 export async function getStaticProps() {
@@ -89,4 +39,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Home;
+export default App;
