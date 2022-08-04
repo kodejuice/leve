@@ -1,6 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 import { site_details as details } from "../../../site_config";
+
+import Projects from "./Projects";
 
 const yearBorn = details.dob.year;
 const monthBorn = details.dob.month - 1; /*March*/
@@ -42,16 +45,37 @@ export default function About() {
       )}
 
       <div>
-        <span title={`${getAge()}yo`}>Hi, i&apos;m Sochima.</span>
-        <p> I&apos;m a Software Engineer. </p>
-        <p>
-          I love solving problems, i also love coming up with new stuff. I
-          created this site specially for the purpose of writting about some of
-          the stuffs i&apos;ve created / some up with. I&apos;ll as well write
-          about some of the stuff that goes through my mind.
+        {/* Hello, my name is Sochima. I am a King and a Priest of the Most High. I
+        also work as a software engineer. And a Google expert. I enjoy problem
+        solving as well as coming up with new ideas. I made this site
+        specifically to write about some of the things I've created or come up
+        with. I'll also write about some of the things that come to mind. I have
+        a diploma in Electrical Engineering and am currently enrolled at Oregon
+        State University for a B.Sc in Computer Science. */}
+        {/*  */}
+        <span title={`${getAge()}yo`}>Hello, my name is Sochima.</span>
+        <div> I&apos;m a King and a Priest of the Most High God. </div>
+        <div> I also work as a Software Engineer. </div>
+        <div title="😉️"> And an expert Googler. </div>
+        <p className="mt-2 ">
+          I enjoy problem solving as well as coming up with new ideas. I made
+          this site specifically to write about some of the things I've created
+          or come up with. I'll also write about some of the things that come to
+          my mind.
         </p>
-        <pre> {`{name: "Biereagu Sochima Everton"}`} </pre>
-        <pre> {`{skill: "Google-fu", rank: "9dan"}`} </pre>
+        <p>
+          I have a diploma in Electrical Engineering and am currently enrolled
+          at Oregon State University for a B.Sc in Computer Science.
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          <b>Projects</b>
+        </h3>
+        <p>Here are some of the projects I&apos;ve worked on</p>
+
+        <Projects />
       </div>
     </div>
   );

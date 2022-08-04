@@ -8,8 +8,7 @@ function Item(props) {
     <div className="mt-3">
       <Link href={href} as={href}>
         <a className="post-title" rel="noreferrer" target="_blank">
-          {" "}
-          {title}{" "}
+          {title}
         </a>
       </Link>
       <div className="post-excerpt ml-3"> {excerpt} </div>
@@ -22,7 +21,7 @@ export default function Projects() {
 
   useEffect(() => {
     async function fetchData() {
-      const req = await fetch("/favorites.json");
+      const req = await fetch("/projects.json");
       const data = await req.json();
 
       if (Array.isArray(data)) {
@@ -34,9 +33,6 @@ export default function Projects() {
 
   return (
     <div>
-      <h2 className="section-title"> Software Projects </h2>
-      <em>some of my favorite projects</em>
-
       <div>
         {(projects && (
           <>
@@ -45,11 +41,14 @@ export default function Projects() {
             ))}
 
             <p className="pt-4">
-              {" "}
-              More on{" "}
-              <a href="https://github.com/kodejuice" title="Kodejuice">
-                Github
-              </a>{" "}
+              <a
+                href="https://github.com/kodejuice"
+                title="Kodejuice"
+                target="_blank"
+                rel="noreferrer"
+              >
+                More on Github
+              </a>
             </p>
           </>
         )) || <p className="pt-4"> Loading ... </p>}

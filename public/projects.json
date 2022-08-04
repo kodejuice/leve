@@ -2,7 +2,7 @@
     {
         "title": "localGoogoo",
         "href": "https://github.com/kodejuice/localgoogoo",
-        "excerpt": "A search engine for offline websites, saves you the hassle of manually looking for information in your local websites."
+        "excerpt": "A search engine for offline websites, saves you the hassle of manually looking for information in your local websites you saved offline."
     },
 
     {
@@ -26,6 +26,6 @@
     {
         "title": "JSmarka",
         "href": "https://jsmarka.herokuapp.com",
-        "excerpt": "a Javascript code performance benchmarking tool."
+        "excerpt": "A Javascript code performance benchmark tool."
     }
 ]
