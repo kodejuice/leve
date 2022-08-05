@@ -10,6 +10,8 @@ export const site_details = {
     rss_url: "/api/rss.xml",
   },
 
+  goodreads_userid: 115473285,
+
   handle: {
     twitter: "kodejuice",
   },

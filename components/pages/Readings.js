@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-// import About from "../home/sections/About";
+import Readings from "../home/sections/Readings";
 import HomeHead from "../home/sections/HomeHead";
 import { SideBar } from "../home/sections/SideBar";
 
@@ -35,7 +35,7 @@ function ReadingsPage(props) {
           <article>
             <div className="home-posts ml-2">
               <div>
-                <h2 className="section-title"> My Readings </h2>
+                <Readings {...props} />
               </div>
             </div>
           </article>

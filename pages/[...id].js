@@ -21,6 +21,7 @@ import { Page, sitePages } from "../components/pages/list";
 import { getBestMatch } from "../utils/string-similarity";
 import { getPost, getPosts } from "../database/functions";
 import { site_details as details } from "../site_config";
+import { getBookShelves } from "../components/home/sections/Readings";
 
 // import PageNotFound from "../components/PageNotFound";
 const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
@@ -409,6 +410,9 @@ export async function getStaticProps(ctx) {
   };
 
   if (sitePages.has(post_id)) {
+    if (post_id === "readings") {
+      props.readings = await getBookShelves();
+    }
     return {
       props: extend(props, {
         post: {},
