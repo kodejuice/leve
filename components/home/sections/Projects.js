@@ -1,5 +1,5 @@
-import { useState, useEffect, Fragment } from "react";
 import Link from "next/link";
+import useSWR from "../../../utils/swr";
 
 function Item(props) {
   const { title, excerpt, href } = props.info;
@@ -17,24 +17,24 @@ function Item(props) {
 }
 
 export default function Projects() {
-  const [projects, setProjects] = useState(null);
+  const { data, isError } = useSWR("./projects.json");
+  const loading = !data && !isError;
+  const projects = data || [];
 
-  useEffect(() => {
-    async function fetchData() {
-      const req = await fetch("/projects.json");
-      const data = await req.json();
-
-      if (Array.isArray(data)) {
-        setProjects(data);
-      }
-    }
-    fetchData();
-  }, []);
+  if (isError) {
+    return (
+      <p>
+        <em>Failed to load projects, refresh page</em>
+      </p>
+    );
+  }
 
   return (
     <div>
       <div>
-        {(projects && (
+        {loading ? (
+          <p className="pt-4"> Loading ... </p>
+        ) : (
           <>
             {projects.map((v) => (
               <Item key={v.title} info={v} />
@@ -43,7 +43,7 @@ export default function Projects() {
             <p className="pt-4">
               <a
                 href="https://github.com/kodejuice"
-                title="Kodejuice"
+                title="kodejuice"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -51,7 +51,7 @@ export default function Projects() {
               </a>
             </p>
           </>
-        )) || <p className="pt-4"> Loading ... </p>}
+        )}
       </div>
     </div>
   );
