@@ -36,7 +36,6 @@ export default function Toggle(props) {
           knobRadius="2px"
           checked={+parseCookies(null).__dark === 1}
           onToggle={(e) => {
-            if (onSwitch) onSwitch();
             const { checked } = e.target;
 
             setCookie(null, "__dark", checked ? 1 : 0, {
@@ -44,7 +43,13 @@ export default function Toggle(props) {
               maxAge: 86400 * 86400,
             });
 
+            // change theme
             setTheme(parseCookies(null).__dark);
+
+            // invoke callback after 50ms
+            setTimeout(() => {
+              if (onSwitch) onSwitch();
+            }, 50);
           }}
         />
       </div>
