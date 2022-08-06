@@ -25,6 +25,7 @@ function requestList(userId, shelf) {
               if (Array.isArray(items)) {
                 resolve(
                   items.map((i) => ({
+                    book_id: i.book_id,
                     user_read_at: i.user_read_at,
                     title: i.title,
                     link: i.link,
@@ -63,9 +64,10 @@ export async function getBookShelves() {
 
 function ShelfItem({ data }) {
   const isFav = data?.user_shelves?.includes("favorites");
+  const link = `https://www.goodreads.com/book/show/${data.book_id}`;
   return (
     <p>
-      <a rel="noreferrer" target="_blank" href={data.link}>
+      <a rel="noreferrer" target="_blank" href={link}>
         {data.title}
       </a>{" "}
       {isFav && "⭐️"} by{" "}
@@ -75,6 +77,7 @@ function ShelfItem({ data }) {
 }
 
 function ListShelf({ shelf, data }) {
+  // console.log(data);
   return (
     <>
       <h3 className="section-header">
@@ -89,7 +92,7 @@ function ListShelf({ shelf, data }) {
           <em>Nothing here!</em>
         </p>
       ) : (
-        data.map((book) => <ShelfItem key={book.link} data={book} />)
+        data.map((book) => <ShelfItem key={book.book_id} data={book} />)
       )}
     </>
   );
