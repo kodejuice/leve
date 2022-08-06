@@ -24,7 +24,9 @@ module.exports = {
         GA_TRACK_CODE: "G-QDSBDZSG0Z",
     },
     */
-  target: "experimental-serverless-trace",
+
+  swcMinify: true,
+  output: "standalone",
 
   // productionBrowserSourceMaps: true,
 };
