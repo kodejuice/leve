@@ -14,5 +14,6 @@ $ npm install
 Development mode:
 $ npm run dev
 
-Build:
+Build / Run:
 $ npm run build
+$ npm run start
