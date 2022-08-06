@@ -31,6 +31,10 @@ body.dark {
       &.br {
         border-right: 1.5px solid #ccc;
       }
+
+      a.active {
+        color: #fff !important;
+      }
     }
   }
 
