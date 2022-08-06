@@ -1,5 +1,20 @@
 import Link from "next/link";
 
+function LinkEl({ href, children, ...props }) {
+  if (href === "#") {
+    return (
+      <a href="#" className="active" {...props}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} {...props}>
+      {children}
+    </Link>
+  );
+}
+
 export default function Footer({ current }) {
   const [home, about, readings] = [
     current === "home",
@@ -7,43 +22,21 @@ export default function Footer({ current }) {
     current === "readings",
   ];
 
-  const active = (v) => (v ? "active" : "");
-
-  const About_home = (
-    <a title="Home" className={active(home)}>
-      Home
-    </a>
-  );
-
-  const About_a = (
-    <a title="About Me" className={active(about)}>
-      About
-    </a>
-  );
-
-  const About_readings = (
-    <a title="My readings" className={active(readings)}>
-      Readings
-    </a>
-  );
+  // const active = (v) => (v ? "active" : "");
 
   return (
     <>
       <div className="f-nav mt-5">
         <div className="f-link about pr-3">
-          {home ? About_home : <Link href="/">{About_home}</Link>}
+          <LinkEl href={home ? "#" : "/"}>Home</LinkEl>
         </div>
 
         <div className="f-link about pr-3">
-          {about ? About_a : <Link href="/about">{About_a}</Link>}
+          <LinkEl href={about ? "#" : "/about"}>About</LinkEl>
         </div>
 
         <div className="f-link projects">
-          {readings ? (
-            About_readings
-          ) : (
-            <Link href="/readings">{About_readings}</Link>
-          )}
+          <LinkEl href={readings ? "#" : "/readings"}>Readings</LinkEl>
         </div>
       </div>
 
