@@ -24,7 +24,7 @@ module.exports = {
         GA_TRACK_CODE: "G-QDSBDZSG0Z",
     },
     */
-  target: "serverless",
+  target: "experimental-serverless-trace",
 
-  productionBrowserSourceMaps: true,
+  // productionBrowserSourceMaps: true,
 };
