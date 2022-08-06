@@ -47,7 +47,7 @@ export default function About() {
       <div>
         <span title={`${getAge()}yo`}>Hello, my name is Sochima.</span>
         <div> I&apos;m a King and a Priest of the Most High God. </div>
-        <div> I also work as a Software Engineer. </div>
+        <div title="a craftsman"> I also work as a Software Engineer. </div>
         <div title="😉️"> And an expert Googler. </div>
         <p className="mt-2">
           I enjoy problem solving as well as coming up with new ideas. I made
@@ -56,8 +56,9 @@ export default function About() {
           my mind.
         </p>
         <p>
-          I have a diploma in Electrical Engineering and am currently enrolled
-          at Oregon State University for a B.Sc in Computer Science.
+          I have a <span title="ND">diploma</span> in Electrical Engineering
+          from Yaba College of Technology and am currently enrolled at Oregon
+          State University for a B.Sc in Computer Science.
         </p>
       </div>
 
@@ -65,7 +66,7 @@ export default function About() {
         <h3>
           <b>Projects</b>
         </h3>
-        <p>Here are some of the projects I&apos;ve worked on</p>
+        <p>As a craftsman here are some of the projects I&apos;ve worked on</p>
 
         <Projects />
       </div>
