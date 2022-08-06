@@ -13,7 +13,7 @@ function requestList(userId, shelf) {
       .request(
         {
           host: "www.goodreads.com",
-          path: `/review/list_rss/${userId}?shelf=${shelf}`,
+          path: `/review/list_rss/${userId}?shelf=${shelf}&sort=date_read`,
         },
         (response) => {
           let data = "";
@@ -23,18 +23,6 @@ function requestList(userId, shelf) {
               const o = parser.parse(data);
               const items = o?.rss?.channel?.item;
               if (Array.isArray(items)) {
-                items.sort((a, b) => {
-                  if (a.user_read_at && b.user_read_at) {
-                    return new Date(b.user_read_at) - new Date(a.user_read_at);
-                  }
-                  if (a.user_read_at) {
-                    return -1;
-                  }
-                  if (b.user_read_at) {
-                    return 1;
-                  }
-                  return 0;
-                });
                 resolve(
                   items.map((i) => ({
                     user_read_at: i.user_read_at,
@@ -77,10 +65,7 @@ function ShelfItem({ data }) {
   const isFav = data?.user_shelves?.includes("favorites");
   return (
     <p>
-      <a
-        title={data.user_read_at ? `Finished on ${data.user_read_at}` : ""}
-        href={data.link}
-      >
+      <a rel="noreferrer" target="_blank" href={data.link}>
         {data.title}
       </a>{" "}
       {isFav && "⭐️"} by{" "}
@@ -90,7 +75,6 @@ function ShelfItem({ data }) {
 }
 
 function ListShelf({ shelf, data }) {
-  console.log(data);
   return (
     <>
       <h3 className="section-header">
