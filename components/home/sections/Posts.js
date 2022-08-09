@@ -19,13 +19,16 @@ function Post(props) {
       <Link href="/[...id]" as={`/${slug}`}>
         <a className="post-title"> {title} </a>
       </Link>
-      <span
-        className="pl-3 post-date"
-        title={
-          display_last_updated ? `Last updated on ${last_modified_date}` : ""
-        }
-      >
-        {post_date}
+      <span className="pl-3">
+        <time
+          dateTime={pub_date}
+          className="post-date"
+          title={
+            display_last_updated ? `Last updated on ${last_modified_date}` : ""
+          }
+        >
+          {post_date}
+        </time>
       </span>
       <div className="post-excerpt ml-3"> {excerpt} </div>
     </div>

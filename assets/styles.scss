@@ -91,7 +91,7 @@
   }
 
   .home-posts {
-    span.post-date {
+    time.post-date {
       display: block;
     }
   }
@@ -134,8 +134,8 @@ a.profile-link {
 }
 
 .home-posts {
-  span.post-date {
-    color: #888;
+  time.post-date {
+    color: rgba(107, 114, 128, 0.8);
     font-size: 0.8em;
   }
 }
