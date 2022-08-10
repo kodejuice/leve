@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -50,10 +51,26 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
 
-          <script
+          <Script
             id="dsq-count-scr"
             src={`//${process.env.DISQUS_HOST}/count.js`}
             defer
+          />
+
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <Script
+            defer
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}
+          />
+          <Script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('post_config', '${process.env.GA_TRACK_CODE}');
+              `,
+            }}
           />
         </body>
       </Html>

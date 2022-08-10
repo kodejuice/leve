@@ -4,6 +4,7 @@
 /* eslint-disable no-use-before-define */
 import { useEffect } from "react";
 
+import Script from "next/script";
 import Link from "next/link";
 import Head from "next/head";
 import fetch from "node-fetch";
@@ -99,8 +100,8 @@ function PostView(props) {
         <meta property="twitter:domain" content={host} />
         <meta property="twitter:url" content={page_url} />
 
-        <script defer src="./js/benchmarkemail-signupform.js" />
-        <script
+        <Script defer src="./js/benchmarkemail-signupform.js" />
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
                 // Disqus config
@@ -116,20 +117,6 @@ function PostView(props) {
                     (d.head||d.body).appendChild(s);
                 })();
                 `,
-          }}
-        />
-        <script
-          defer
-          src={`https://www.googletagmanager.com/gtag/js?id=${props.ga_track_code}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('post_config', '${props.ga_track_code}');
-              `,
           }}
         />
       </Head>
