@@ -12,14 +12,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
-          />
-          <link
             rel="apple-touch-icon"
             sizes="180x180"
             href="/favicon/apple-touch-icon.png"
@@ -53,16 +45,18 @@ class MyDocument extends Document {
 
           <Script
             id="dsq-count-scr"
+            strategy="afterInteractive"
             src={`//${process.env.DISQUS_HOST}/count.js`}
             defer
           />
 
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <Script
-            defer
+            strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}
           />
           <Script
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];

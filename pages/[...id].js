@@ -100,8 +100,23 @@ function PostView(props) {
         <meta property="twitter:domain" content={host} />
         <meta property="twitter:url" content={page_url} />
 
-        <Script defer src="./js/benchmarkemail-signupform.js" />
+        {/* styles for katex */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
+        />
+
         <Script
+          strategy="lazyOnload"
+          defer
+          src="./js/benchmarkemail-signupform.js"
+        />
+        <Script
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
                 // Disqus config
