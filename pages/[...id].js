@@ -110,13 +110,8 @@ function PostView(props) {
           href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
         />
 
+        <Script defer src="./js/benchmarkemail-signupform.js" />
         <Script
-          strategy="lazyOnload"
-          defer
-          src="./js/benchmarkemail-signupform.js"
-        />
-        <Script
-          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
                 // Disqus config
@@ -445,6 +440,9 @@ export async function getStaticProps(ctx) {
     (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) ||
     null;
   // ...
+
+  // remove content, we dont need it here, we'll use html_content instead
+  data.content = null;
 
   return {
     props: extend(props, {
