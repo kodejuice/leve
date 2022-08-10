@@ -416,7 +416,7 @@ export async function getStaticProps(ctx) {
     // no post with slug '${post_id}'
     return {
       props: extend(props, {
-        corrections: await getBestMatch(ctx.params.id.join("/")),
+        corrections: await getBestMatch(post_id),
       }),
       revalidate: 1,
     };
