@@ -4,7 +4,6 @@
 /* eslint-disable no-use-before-define */
 import { useEffect } from "react";
 
-import Script from "next/script";
 import Link from "next/link";
 import Head from "next/head";
 import fetch from "node-fetch";
