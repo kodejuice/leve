@@ -110,8 +110,8 @@ function PostView(props) {
           href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
         />
 
-        <Script defer src="./js/benchmarkemail-signupform.js" />
-        <Script
+        <script src="./js/benchmarkemail-signupform.js" />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
                 // Disqus config
@@ -336,6 +336,8 @@ function reloadDisqusThread() {
       reload: true,
     });
   } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error(e);
     // ...
   }
 }
