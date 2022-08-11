@@ -24,7 +24,7 @@ export default connectDB((req, res, DB_Models) => {
   // const feed_url = `${site_url}/api/rss.xml`;
 
   return new Promise((resolve) => {
-    const db_query = Article.where("draft", false).sort({ views: "desc" });
+    const db_query = Article.where("draft", false).sort({ pub_date: "desc" });
 
     // execute query
     db_query.exec();
