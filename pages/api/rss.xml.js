@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import { format } from "date-fns";
+import { format } from "date-fns-tz";
 
 import connectDB from "../../database/connection";
 import { site_details as details } from "../../site_config";
@@ -21,7 +21,7 @@ export default connectDB((req, res, DB_Models) => {
   const { host } = req.headers;
   const scheme = process.env.SCHEME;
   const site_url = `${scheme}://${host}`;
-  const feed_url = `${site_url}/api/rss.xml`;
+  // const feed_url = `${site_url}/api/rss.xml`;
 
   return new Promise((resolve) => {
     const db_query = Article.where("draft", false).sort({ views: "desc" });
@@ -33,11 +33,11 @@ export default connectDB((req, res, DB_Models) => {
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>${details.name}</title>
-    <description>${details.description}</description>
     <link>${site_url}</link>
-    <atom:link href="${feed_url}" rel="self" type="application/rss+xml"/>
-    <pubDate>${last_modified_date} +0000</pubDate>
-    <lastBuildDate>${last_modified_date} +0000</lastBuildDate>
+    <language>en-us</language>
+    <description>${details.description}</description>
+    <pubDate>${last_modified_date}</pubDate>
+    <lastBuildDate>${last_modified_date}</lastBuildDate>
     <generator>Leve CMS</generator>
 `;
 
@@ -49,13 +49,12 @@ export default connectDB((req, res, DB_Models) => {
       <title>${post.title}</title>
       <link>${site_url}/${post.slug}/</link>
       <description> ${safeTags(post.html_content)} </description>
-      <pubDate>${formatDate(post.pub_date)} +0000</pubDate>
+      <pubDate>${formatDate(post.pub_date)}</pubDate>
       <lastBuildDate>${formatDate(post.last_modified)} </lastBuildDate>
-      <guid isPermaLink="true">${site_url}/${post.slug}/</guid>
+      <guid>${site_url}/${post.slug}/</guid>
       <comments> ${site_url}/${post.slug}#comments </comments>
       <category> ${post.topic.join(", ")} </category>
-      <language> en-NG </language>
-      <guid> ${post.slug} </guid>
+      <language> en-us </language>
     </item>
 `;
         });
@@ -64,6 +63,9 @@ export default connectDB((req, res, DB_Models) => {
 </rss>
 `;
 
+        res.setHeader("Content-Type", "text/xml; charset=utf-8");
+        res.setHeader("Date", formatDate(new Date()));
+        res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
         res.send(xml);
         resolve();
       })
