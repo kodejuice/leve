@@ -46,9 +46,9 @@ export default function About() {
 
       <div>
         <span title={`${getAge()}yo`}>Hello, my name is Sochima.</span>
-        <div> I&apos;m a King and a Priest of the Most High God. </div>
-        <div title="a craftsman"> I also work as a Software Engineer. </div>
-        <div title="😉️"> And an expert Googler. </div>
+        <div> I&apos;m a King and a Priest of the <span title="YHWH">Most High God</span>. </div>
+        <div title="a craftsman"> I work as a Software Engineer. </div>
+        <div title="😉️"> I&apos;m also an expert Googler. </div>
         <p className="mt-2">
           I enjoy problem solving as well as coming up with new ideas. I made
           this site specifically to write about some of the things I've created

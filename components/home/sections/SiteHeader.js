@@ -58,11 +58,9 @@ function SiteHeader(props) {
           </tbody>
         </table>
         <span className="site-email">
-          {" "}
           <a href={`mailto:${p.email}`} target="_blank" rel="noreferrer">
-            {" "}
-            {p.email}{" "}
-          </a>{" "}
+            {p.email}
+          </a>
         </span>
       </div>
     </div>
