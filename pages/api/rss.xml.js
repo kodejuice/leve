@@ -48,7 +48,9 @@ export default connectDB((req, res, DB_Models) => {
     <item>
       <title>${post.title}</title>
       <link>${site_url}/${post.slug}/</link>
-      <description> ${safeTags(post.html_content)} </description>
+      <description> ${post.excerpt} ${safeTags(
+            post.html_content
+          )} </description>
       <pubDate>${formatDate(post.pub_date)}</pubDate>
       <lastBuildDate>${formatDate(post.last_modified)} </lastBuildDate>
       <guid>${site_url}/${post.slug}/</guid>
