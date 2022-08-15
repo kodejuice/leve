@@ -46,7 +46,10 @@ export default function About() {
 
       <div>
         <span title={`${getAge()}yo`}>Hello, my name is Sochima.</span>
-        <div> I&apos;m a King and a Priest of the <span title="YHWH">Most High God</span>. </div>
+        <div>
+          I&apos;m a King and a Priest of the{" "}
+          <span title="YHWH">Most High God</span>.
+        </div>
         <div title="a craftsman"> I work as a Software Engineer. </div>
         <div title="😉️"> I&apos;m also an expert Googler. </div>
         <p className="mt-2">
