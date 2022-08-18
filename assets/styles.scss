@@ -219,18 +219,21 @@ div.post-view {
   }
 
   // email input field (view-post page)
-  input.email-input,
-  input.formbox-field_YPLMC {
-    padding: 0;
-    width: 60%;
-    color: #333;
-    font-size: 17px;
+  .newsletter-signup {
+    input.email-input {
+      padding: 0;
+      width: 69%;
+      min-width: 170px;
+      color: #333;
+      font-size: 17px;
 
-    &:focus {
-      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
 
-    + button.submit {
+    input.submit-button {
+      display: inline-block;
       border-radius: 0;
       border: 1px solid #ccc;
 
@@ -275,13 +278,6 @@ div.f-nav {
         background: none;
       }
     }
-
-    // a#inactive {
-    //     color: #333;
-    //     cursor: default;
-    //     font-weight: bold;
-    //     text-decoration: none !important;
-    // }
 
     &.br {
       border-right: 1.5px solid #333;

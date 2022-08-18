@@ -44,9 +44,8 @@ export default function Footer({ current }) {
         className="mt-4 pl-0 ml-0"
         title="Get an email whenever theres new content"
       >
-        <a href="https://lb.benchmarkemail.com//listbuilder/signupnew?UOpPXfYpHY5FgmNYouPUxP5pwVnAjsSIHDOR9QrPhDftO5iNRn8gS049TyW7spdJ">
-          {" "}
-          <b> Subscribe to newsletter ! </b>{" "}
+        <a href="http://eepurl.com/h8OUC5">
+          <b> Subscribe to newsletter ! </b>
         </a>
       </div>
     </>

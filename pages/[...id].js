@@ -22,6 +22,7 @@ import { getBestMatch } from "../utils/string-similarity";
 import { getPost, getPosts } from "../database/functions";
 import { site_details as details } from "../site_config";
 import { getBookShelves } from "../components/home/sections/Readings";
+import SignupForm from "../components/home/SignupForm";
 
 // import PageNotFound from "../components/PageNotFound";
 const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
@@ -265,8 +266,11 @@ function PostView(props) {
                   <legend id="subscribe" className="visible-text">
                     Get an email whenever theres a new article
                   </legend>
-                  <div className="form-row">
-                    <div
+                  <div className="form-row newsletter-signup">
+                    <div className="col">
+                      <SignupForm />
+                    </div>
+                    {/* <div
                       className="col"
                       dangerouslySetInnerHTML={{
                         __html: `
@@ -284,7 +288,7 @@ function PostView(props) {
                           </div>
                         `,
                       }}
-                    />
+                    /> */}
                   </div>
                 </div>
 
