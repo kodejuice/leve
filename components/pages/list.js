@@ -1,16 +1,17 @@
-import dynamic from "next/dynamic";
-// import AboutPage from "./About";
-// import ReadingsPage from "./Readings";
+// import dynamic from "next/dynamic";
+import { getBookShelves } from "../home/sections/Readings";
+import AboutPage from "./About";
+import ReadingsPage from "./Readings";
 
-const AboutPage = dynamic(() => import("./About"), {
-  ssr: false,
-  loading: () => <p>Loading page...</p>,
-});
+// const AboutPage = dynamic(() => import("./About"), {
+//   ssr: false,
+//   loading: () => <p>Loading page...</p>,
+// });
 
-const ReadingsPage = dynamic(() => import("./Readings"), {
-  ssr: false,
-  loading: () => <p>Loading page...</p>,
-});
+// const ReadingsPage = dynamic(() => import("./Readings"), {
+//   ssr: false,
+//   loading: () => <p>Loading page...</p>,
+// });
 
 export const Page = {
   about(props) {
@@ -18,6 +19,12 @@ export const Page = {
   },
   readings(props) {
     return <ReadingsPage {...props} />;
+  },
+};
+
+export const Init = {
+  async readings() {
+    return getBookShelves();
   },
 };
 
