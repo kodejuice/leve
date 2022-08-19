@@ -6,7 +6,7 @@ import { site_details as details } from "../../../site_config";
 import Projects from "./Projects";
 
 const yearBorn = details.dob.year;
-const monthBorn = details.dob.month - 1; /*March*/
+const monthBorn = details.dob.month - 1;
 const dayBorn = details.dob.day;
 
 function getAge() {
@@ -66,6 +66,20 @@ export default function About() {
       </div>
 
       <div>
+        <p className="mb-0">
+          Show <img className="pl-1" src="/icons/heart.png" alt="❤️" />
+        </p>
+        <p title="BTC">
+          <img src="/icons/bitcoin.png" alt="btc" />
+          <span className="d-inline-block pl-2">{details.crypto.btc}</span>
+        </p>
+        <p title="USDC">
+          <img src="/icons/usdc.png" width={24} height={24} alt="usdc" />
+          <span className="d-inline-block pl-2">{details.crypto.usdc}</span>
+        </p>
+      </div>
+
+      <div className="mt-4">
         <h3>
           <b>Projects</b>
         </h3>

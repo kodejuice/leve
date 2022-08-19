@@ -22,6 +22,11 @@ export const site_details = {
     day: 5,
   },
 
+  crypto: {
+    btc: "bc1qwaggtg4axpcw97d8ce3u0u4kcuqtgg83dwxafx",
+    usdc: "0xc81b32ce5281c5C2b5a53F6bd2425350F081d6bC",
+  },
+
   site: {
     post_per_page: 10,
   },
