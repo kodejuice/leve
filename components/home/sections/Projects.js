@@ -3,9 +3,19 @@ import useSWR from "../../../utils/swr";
 
 function Item(props) {
   const { title, excerpt, href } = props.info;
+  const { isPaper } = props;
 
   return (
-    <div className="mt-3">
+    <div className="mb-2">
+      {isPaper && (
+        <img
+          src="icons/pdf.png"
+          alt="📰️"
+          width="22"
+          height="22"
+          className="mr-2"
+        />
+      )}
       <Link href={href} as={href}>
         <a className="post-title" rel="noreferrer" target="_blank">
           {title}
@@ -16,10 +26,26 @@ function Item(props) {
   );
 }
 
+function ListProjects({ type, projects, brief, paper }) {
+  if (!projects?.length) return null;
+
+  return (
+    <div className="mb-4">
+      <span className="project-title">{type}</span>
+      {brief && <em className="small">{brief}</em>}
+      <div className="mt-1">
+        {projects.map((v) => (
+          <Item key={v.title} info={v} isPaper={paper} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Projects() {
   const { data, isError } = useSWR("./projects.json");
   const loading = !data && !isError;
-  const projects = data || [];
+  const works = data || {};
 
   if (isError) {
     return (
@@ -36,11 +62,14 @@ export default function Projects() {
           <p className="pt-4"> Loading ... </p>
         ) : (
           <>
-            {projects.map((v) => (
-              <Item key={v.title} info={v} />
-            ))}
-
-            <p className="pt-4">
+            <ListProjects type="Papers" projects={works.papers} paper />
+            <ListProjects
+              type="Posts"
+              projects={works.posts}
+              brief="Blog posts featuring a notable project"
+            />
+            <ListProjects type="Software" projects={works.projects} />
+            <p className="">
               <a
                 href="https://github.com/kodejuice"
                 title="kodejuice"
