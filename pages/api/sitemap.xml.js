@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+// import { format } from "date-fns";
 import { sitePages } from "../../components/pages/list";
 
 import connectDB from "../../database/connection";
@@ -8,6 +8,8 @@ import { formatDate } from "./rss.xml";
 
 export default connectDB((req, res, DB_Models) => {
   const { Article } = DB_Models;
+  const { host } = req.headers;
+  const scheme = process.env.SCHEME;
 
   return new Promise((resolve) => {
     const db_query = Article.where("draft", false).sort({ pub_date: "desc" });
@@ -16,15 +18,11 @@ export default connectDB((req, res, DB_Models) => {
     db_query.exec();
 
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc> ${process.env.SCHEME}://${req.headers.host}/ </loc>
-        <lastmod> ${format(new Date(), "yyyy-MM-d")} </lastmod>
-        <priority>1.00</priority>
+        <loc>${scheme}://${host}/</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <priority>0.4</priority>
     </url>
 `;
 
@@ -33,9 +31,9 @@ export default connectDB((req, res, DB_Models) => {
         posts.forEach((post) => {
           xml += `
 <url>
-    <loc> ${process.env.SCHEME}://${req.headers.host}/${post.slug} </loc>
-    <lastmod> ${format(new Date(post.last_modified), "yyyy-MM-d")} </lastmod>
-    <priority> 0.8 </priority>
+    <loc>${scheme}://${host}/${post.slug}</loc>
+    <lastmod>${new Date(post.last_modified).toISOString()}</lastmod>
+    <priority>0.8</priority>
 </url>
 `;
         });
@@ -43,9 +41,9 @@ export default connectDB((req, res, DB_Models) => {
         Array.from(sitePages).forEach((page) => {
           xml += `
 <url>
-    <loc> ${process.env.SCHEME}://${req.headers.host}/${page} </loc>
-    <lastmod> ${format(new Date(), "yyyy-MM-d")} </lastmod>
-    <priority> 0.8 </priority>
+    <loc>${scheme}://${host}/${page}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <priority>0.8</priority>
 </url>
 `;
         });
