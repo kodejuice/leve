@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { sitePages } from "../../components/pages/list";
 
 import connectDB from "../../database/connection";
+import { formatDate } from "./rss.xml";
 
 // https://www.google.com/ping?sitemap=FULL_URL_OF_SITEMAP
 
@@ -53,6 +54,9 @@ export default connectDB((req, res, DB_Models) => {
 </urlset>
 `;
 
+        res.setHeader("Content-Type", "text/xml; charset=utf-8");
+        res.setHeader("Date", formatDate(new Date()));
+        res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
         res.send(xml);
         resolve();
       })

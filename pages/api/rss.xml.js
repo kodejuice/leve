@@ -4,7 +4,7 @@ import { format } from "date-fns-tz";
 import connectDB from "../../database/connection";
 import { site_details as details } from "../../site_config";
 
-const formatDate = (s) => {
+export const formatDate = (s) => {
   // Tue, 02 Aug 2022 12:51:00 GMT+1
   return format(new Date(s), "E, d LLL yyyy HH:mm:ss z");
 };
