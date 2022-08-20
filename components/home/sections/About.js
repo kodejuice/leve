@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import { site_details as details } from "../../../site_config";
 
 import Projects from "./Projects";
@@ -29,6 +30,8 @@ function birthdayToday() {
 
   return currMonth === monthBorn && currDay === dayBorn;
 }
+
+const cryptoInfo = Object.entries(details.crypto);
 
 export default function About() {
   const { width, height } = useWindowSize();
@@ -65,18 +68,26 @@ export default function About() {
         </p>
       </div>
 
-      <div>
+      <div className="crypto-info">
         <p className="mb-0">
           Show <img className="pl-1" src="/icons/heart.png" alt="❤️" />
         </p>
-        <p title="BTC">
-          <img src="/icons/bitcoin.png" alt="btc" />
-          <span className="d-inline-block pl-2">{details.crypto.btc}</span>
-        </p>
-        <p title="USDC">
-          <img src="/icons/usdc.png" width={24} height={24} alt="usdc" />
-          <span className="d-inline-block pl-2">{details.crypto.usdc}</span>
-        </p>
+        {cryptoInfo.map(([coin, address]) => (
+          <div key={coin} title={coin.toUpperCase()} className="row mb-2 mt-2">
+            <div className="col-3 img-col">
+              <img
+                alt={coin}
+                width={24}
+                height={24}
+                className="coin-img"
+                src={`/icons/${coin}.png`}
+              />
+            </div>
+            <CopyToClipboard text={address}>
+              <span className="crypto-address col-9">{address}</span>
+            </CopyToClipboard>
+          </div>
+        ))}
       </div>
 
       <div className="mt-4">

@@ -136,6 +136,25 @@ span.project-title {
   font-size: 1.1em;
 }
 
+.crypto-info {
+  span.crypto-address {
+    display: inline-block;
+    padding-left: 4px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    cursor: pointer;
+  }
+
+  div.img-col {
+    max-width: 45px;
+  }
+
+  img.coin-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 a.profile-link {
   margin-right: 6px;
 }
