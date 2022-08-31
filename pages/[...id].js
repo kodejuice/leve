@@ -380,28 +380,30 @@ export async function getStaticPaths() {
 
 // fetch Post information from database
 export async function getStaticProps(ctx) {
-  const post_id = ctx.params.id.join("/"); // `/{slug}`
+  const post_id = ctx.params.id.join("/");
   const [host, scheme] = [process.env.HOST, process.env.SCHEME];
 
   const props = {
     host,
     scheme,
     id: post_id,
-    // id: ctx.params.id,
     ga_track_code: process.env.GA_TRACK_CODE,
     disqus_host: process.env.DISQUS_HOST,
+  };
+
+  const staticProps = {
+    revalidate: 1,
   };
 
   if (sitePages.has(post_id)) {
     if (Init[post_id]) {
       props[post_id] = await Init[post_id]();
     }
-    return {
+    return extend(staticProps, {
       props: extend(props, {
         post: {},
       }),
-      revalidate: 1,
-    };
+    });
   }
 
   // fetch post from DB
@@ -409,12 +411,11 @@ export async function getStaticProps(ctx) {
   const data = await getPost(post_id);
   if (data.error) {
     // no post with slug '${post_id}'
-    return {
+    return extend(staticProps, {
       props: extend(props, {
         corrections: await getBestMatch(post_id),
       }),
-      revalidate: 1,
-    };
+    });
   }
 
   // format date in post
@@ -429,12 +430,11 @@ export async function getStaticProps(ctx) {
   // remove content, we dont need it here, we'll use html_content instead
   data.content = null;
 
-  return {
+  return extend(staticProps, {
     props: extend(props, {
       post: data,
     }),
-    revalidate: 1,
-  };
+  });
 }
 
 export default PostView;
