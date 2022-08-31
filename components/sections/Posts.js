@@ -4,8 +4,8 @@ import { format } from "date-fns";
 
 import Pagination from "react-js-pagination";
 
-import { scrollToTop } from "../../../utils";
-import { site_details as details } from "../../../site_config";
+import { scrollToTop } from "../../utils";
+import { site_details as details } from "../../site_config";
 
 // single post component
 function Post(props) {

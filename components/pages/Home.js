@@ -1,14 +1,14 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-import HomeHead from "../home/sections/HomeHead";
-import { SideBar } from "../home/sections/SideBar";
-import SiteHeader from "../home/sections/SiteHeader";
-import Footer from "../home/sections/Footer";
+import HomeHead from "../sections/HomeHead";
+import { SideBar } from "../sections/SideBar";
+import SiteHeader from "../sections/SiteHeader";
+import Footer from "../sections/Footer";
 import { site_details as details } from "../../site_config";
 
-// import PostList from "../home/sections/Posts";
-const PostList = dynamic(() => import("../home/sections/Posts"), {
+// import PostList from "../sections/Posts";
+const PostList = dynamic(() => import("../sections/Posts"), {
   ssr: false,
   loading: () => <p> Loading posts... </p>,
 });

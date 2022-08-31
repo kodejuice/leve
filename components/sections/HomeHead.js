@@ -1,4 +1,4 @@
-import { site_details as details } from "../../../site_config";
+import { site_details as details } from "../../site_config";
 
 export default function HomeHead(props) {
   const { scheme, host } = props;

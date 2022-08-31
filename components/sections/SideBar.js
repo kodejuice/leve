@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { parseCookies } from "nookies";
-import Toggle from "../Toggle";
+import Toggle from "../home/Toggle";
 
 export function SideBar({ home }) {
   return (

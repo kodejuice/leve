@@ -3,7 +3,7 @@
 import _ from "lodash";
 import https from "https";
 import { XMLParser } from "fast-xml-parser";
-import { site_details as details } from "../../../site_config";
+import { site_details as details } from "../../site_config";
 
 const parser = new XMLParser();
 
@@ -21,10 +21,12 @@ function requestList(userId, shelf) {
           response.on("end", () => {
             try {
               const o = parser.parse(data);
-              const items = o?.rss?.channel?.item;
-              if (Array.isArray(items)) {
-                resolve(
-                  items.map((i) => ({
+              const all = o?.rss?.channel?.item;
+              const items = Array.isArray(all) ? all : [all];
+              resolve(
+                items
+                  .filter((i) => !!i.book_id)
+                  .map((i) => ({
                     book_id: i.book_id,
                     user_read_at: i.user_read_at,
                     title: i.title,
@@ -32,10 +34,7 @@ function requestList(userId, shelf) {
                     author_name: i.author_name,
                     user_shelves: i.user_shelves,
                   }))
-                );
-              } else {
-                resolve([]);
-              }
+              );
             } catch (err) {
               resolve(null);
             }
@@ -67,11 +66,11 @@ function ShelfItem({ data }) {
   const link = `https://www.goodreads.com/book/show/${data.book_id}`;
   return (
     <p>
+      {isFav && "⭐️ "}
       <a rel="noreferrer" target="_blank" href={link}>
         {data.title}
       </a>{" "}
-      {isFav && "⭐️"} by{" "}
-      <em style={{ fontSize: "1.1rem" }}>{data.author_name}</em>
+      by <em style={{ fontSize: "1.1rem" }}>{data.author_name}</em>
     </p>
   );
 }

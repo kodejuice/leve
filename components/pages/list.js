@@ -1,5 +1,5 @@
 // import dynamic from "next/dynamic";
-import { getBookShelves } from "../home/sections/Readings";
+import { getBookShelves } from "../sections/Readings";
 import AboutPage from "./About";
 import ReadingsPage from "./Readings";
 

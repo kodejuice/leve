@@ -1,13 +1,13 @@
 import Head from "next/head";
 
-import About from "../home/sections/About";
-import HomeHead from "../home/sections/HomeHead";
-import { SideBar } from "../home/sections/SideBar";
+import About from "../sections/About";
+import HomeHead from "../sections/HomeHead";
+import { SideBar } from "../sections/SideBar";
 
-import SiteHeader from "../home/sections/SiteHeader";
+import SiteHeader from "../sections/SiteHeader";
 
 import { site_details as details } from "../../site_config";
-import Footer from "../home/sections/Footer";
+import Footer from "../sections/Footer";
 
 function AboutPage(props) {
   const { host, scheme } = props;

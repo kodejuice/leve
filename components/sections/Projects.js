@@ -1,5 +1,5 @@
 import Link from "next/link";
-import useSWR from "../../../utils/swr";
+import useSWR from "../../utils/swr";
 
 function Item(props) {
   const { title, excerpt, href } = props.info;

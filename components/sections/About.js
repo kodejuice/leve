@@ -2,7 +2,7 @@
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { site_details as details } from "../../../site_config";
+import { site_details as details } from "../../site_config";
 
 import Projects from "./Projects";
 
