@@ -79,7 +79,7 @@ function ListShelf({ shelf, data }) {
   // console.log(data);
   return (
     <>
-      <h3 className="section-header">
+      <h3 className="mt-4 section-header">
         <b>{_.startCase(shelf)}</b>
       </h3>
       {!Array.isArray(data) ? (
