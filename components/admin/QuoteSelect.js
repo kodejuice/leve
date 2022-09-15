@@ -15,7 +15,10 @@ function getMatchingQuotes(kwords, selectQuotes) {
   const matches = []; // stores matching quotes
   const seen = {}; // stores the count of keywords a quote with a certain id has
 
-  kwords = kwords.trim().split(/[^a-zA-Z0-9]/);
+  kwords = kwords
+    .trim()
+    .toLowerCase()
+    .split(/[^a-zA-Z0-9]/);
   if (!kwords.length) {
     return alert("Enter keywords!");
   }
@@ -44,7 +47,7 @@ function getMatchingQuotes(kwords, selectQuotes) {
   matches.sort((x, y) => seen[y[0]] - seen[x[0]]);
 
   // updates view
-  selectQuotes(matches.map((q) => q[1]).slice(0, 16));
+  selectQuotes(matches.map((q) => q[1]).slice(0, 4 * 10));
 
   return null;
 }
