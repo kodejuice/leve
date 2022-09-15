@@ -11,6 +11,10 @@
   font-size: 19px;
 }
 
+.katex-html {
+  overflow: scroll;
+}
+
 /* printers */
 @media print {
   article {
