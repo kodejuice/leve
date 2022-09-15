@@ -10,8 +10,8 @@ import fetch from "node-fetch";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
+import readingTime from "reading-time";
 import { extend, isEmpty } from "lodash";
-import { format } from "date-fns";
 import { parseCookies, setCookie } from "nookies";
 import HRNumbers from "human-readable-numbers";
 import "highlight.js/styles/github.css";
@@ -22,6 +22,7 @@ import { getBestMatch } from "../utils/string-similarity";
 import { getPost, getPosts } from "../database/functions";
 import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
+import { getPostDate } from "../utils/date";
 
 // import PageNotFound from "../components/PageNotFound";
 const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
@@ -76,6 +77,11 @@ function PostView(props) {
   const page_description = post.is_loading
     ? "Post doesn't exist"
     : `${post.excerpt}, By: ${post.author}`;
+
+  const post_views = post.views | 0;
+
+  const post_content = post.html_content;
+  const timeToRead = readingTime(post_content.replace(/<[^>]+>/gi, ""));
 
   return (
     <div className="container">
@@ -177,7 +183,7 @@ function PostView(props) {
                 {(post.views && (
                   <small>
                     <em title="" className="mt-1">
-                      {HRNumbers.toHumanString(post.views | 0)} views
+                      {HRNumbers.toHumanString(post_views)} views
                     </em>
                   </small>
                 )) ||
@@ -229,7 +235,12 @@ function PostView(props) {
 
           <div className="article">
             <article>
-              <em className="pub_date"> {post.pub_date} </em>
+              {!post.is_loading && (
+                <p className="pub_date">
+                  <span className="mr-2">{post.pub_date}</span> ·{" "}
+                  <span className="ml-2">{timeToRead.text}</span>
+                </p>
+              )}
 
               {/* quote */}
               {post.post_quote != null ? (
@@ -247,7 +258,7 @@ function PostView(props) {
               <div
                 className="post-content mt-4 visible-text"
                 dangerouslySetInnerHTML={{
-                  __html: post.html_content,
+                  __html: post_content,
                 }}
               />
               <p className="pt-1 text-right updated-time">
@@ -418,13 +429,8 @@ export async function getStaticProps(ctx) {
   }
 
   // format date in post
-  const { pub_date, last_modified } = data;
-  data.pub_date =
-    (data.pub_date && format(new Date(pub_date), "MMMM dd, yyyy")) || null;
-  data.last_modified =
-    (data.last_modified && format(new Date(last_modified), "MMMM dd, yyyy")) ||
-    null;
-  // ...
+  data.pub_date = getPostDate(data.pub_date);
+  data.last_modified = getPostDate(data.last_modified, true);
 
   // remove content, we dont need it here, we'll use html_content instead
   data.content = null;
