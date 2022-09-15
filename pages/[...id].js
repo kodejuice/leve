@@ -109,7 +109,6 @@ function PostView(props) {
           href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
         />
 
-        <script src="./js/benchmarkemail-signupform.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
