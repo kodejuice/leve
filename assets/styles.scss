@@ -11,10 +11,6 @@
   font-size: 19px;
 }
 
-.katex-html {
-  overflow: scroll;
-}
-
 /* printers */
 @media print {
   article {
@@ -163,10 +159,25 @@ a.profile-link {
   margin-right: 6px;
 }
 
+p.clap-count {
+  font-size: 17px;
+}
+
 .home-posts {
   time.post-date {
     color: #656e75;
     font-size: 0.75em;
+  }
+}
+
+.katex-html {
+  overflow: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -227,9 +238,9 @@ div.post-view {
     display: block !important;
   }
 
-  em.pub_date,
+  .pub_date,
   p.updated-time {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   p.post-quote {
