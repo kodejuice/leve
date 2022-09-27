@@ -23,10 +23,20 @@ function Post(props) {
   );
 }
 
-// list posts
+/**
+ * List posts
+ *
+ * @param {Object} props
+ * @param {Object[]} props.posts Posts array
+ * @param {number} props.all_posts_count Total number of posts
+ * @param {string} props.title Header title of posts listing
+ * @param {boolean} props.show_all Show all posts? (default = false)
+ * @returns
+ */
 function Posts(props) {
   const { post_per_page } = details.site;
   const { posts, all_posts_count } = props;
+  const show_all = !!props.show_all;
   const title = props.title || "Most Recent";
 
   return (
@@ -43,7 +53,7 @@ function Posts(props) {
         <Post info={p} key={p._id} />
       ))}
 
-      {all_posts_count > post_per_page ? (
+      {!show_all && all_posts_count > post_per_page ? (
         <div className="mt-3">
           <Link href="/archives">
             <a className="post-title p-1">All posts</a>

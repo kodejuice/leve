@@ -34,10 +34,6 @@ export const Init = {
   async readings() {
     return getBookShelves();
   },
-  // async topic(category) {
-  //   // get posts with this category
-  //   return {};
-  // },
 };
 
 // We'd use this to prevent post slugs from being named one of these

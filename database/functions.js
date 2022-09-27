@@ -200,22 +200,43 @@ export async function getPosts(fields, draft = false) {
 }
 
 /**
- * Get all post topics
+ * Get unique post topics
  */
 export async function getTopics() {
   const posts = await getPosts(["topic"]);
   const topics = [];
+  const seen = new Set();
 
   posts.forEach((post) => {
     post.topic.forEach((t) => {
       const topic = t.trim();
-      if (topic?.length) {
+      if (topic?.length && !seen.has(topic)) {
         topics.push(topic);
+        seen.add(topic);
       }
     });
   });
 
   return topics;
+}
+
+/**
+ * Get posts with given topic/category
+ * @param {string} topic
+ */
+export async function getPostsByTopic(topic) {
+  if (!topic) return [];
+  const posts = await getPosts([
+    "topic",
+    "slug",
+    "title",
+    "excerpt",
+    "pub_date",
+  ]);
+  return posts.filter((post) => {
+    const topics = post.topic.join(",").toLowerCase();
+    return topics.includes(topic.toLowerCase());
+  });
 }
 
 // get "next post >>" suggestion
