@@ -94,7 +94,7 @@ export async function updatePost(post_id, post_fields) {
         return resolve({ error: true, msg: err });
       }
       if (!doc) {
-        return resolve({ error: true, msg: "that post doesnt exist!" });
+        return resolve({ error: true, msg: "that post doesn't exist!" });
       }
 
       // increment revisions and update `Last modified` date
@@ -105,7 +105,7 @@ export async function updatePost(post_id, post_fields) {
         doc.html_content = mdParser.render(updates.content);
       }
 
-      // is it beign published ?, update publication date
+      // is it being published ?, update publication date
       if (!updates.draft && !doc.pub_date) {
         // if (no_longer_a_draft AND not_published)
         doc.pub_date = new Date();

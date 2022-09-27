@@ -115,7 +115,7 @@ export function bytesToSize(byte) {
 /**
  * scroll to top
  * @param  {Function} cb    callback function, called after delay ms
- * @param  {Number}   delay milliseonds to invoke cb
+ * @param  {Number}   delay milliseconds to invoke cb
  * @param  {Number}   top   top position
  * @return {undefined}         [void]
  */

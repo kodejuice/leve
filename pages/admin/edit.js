@@ -586,7 +586,7 @@ async function savePost(params, setSaveState, redirect_url, url) {
   }
   // saveState
   // renders button disabled,
-  // dispays a spinner in Save-Button
+  // displays a spinner in Save-Button
   setSaveState(true);
 
   // extract params

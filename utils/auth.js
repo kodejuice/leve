@@ -10,7 +10,7 @@ export default async function verifyAuth(ctx) {
   try {
     jwt.verify(token, process.env.JWT_SECRET);
   } catch (err) {
-    // Error occured (invalid/expired token)
+    // Error occurred (invalid/expired token)
     // redirect to login
     // set redirect url `rdr` to this page
     ctx.res.writeHead(302, {
