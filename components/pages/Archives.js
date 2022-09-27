@@ -5,7 +5,7 @@ import HomeHead from "../sections/HomeHead";
 import { SideBar } from "../sections/SideBar";
 import SiteHeader from "../sections/SiteHeader";
 import Footer from "../sections/Footer";
-import Rss from "../Rss";
+import RSSIcon from "../RSSIcon";
 import { site_details as details } from "../../site_config";
 
 function MostPopular({ posts }) {
@@ -56,7 +56,7 @@ function PostsByTopic({ posts }) {
               href={`/api/rss/${topic.toLowerCase()}`}
               className="d-inline-block ml-2"
             >
-              <Rss />
+              <RSSIcon />
             </a>
           </li>
         ))}
