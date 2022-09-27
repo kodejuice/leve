@@ -5,7 +5,13 @@ export default function GoBack({ title }) {
       className="btn btn-link"
       onClick={(ev) => {
         ev.preventDefault();
-        history.go(-1);
+        if (history.length === 1) {
+          const home = "/";
+          history.replaceState(null, null, home);
+          location.href = home;
+        } else {
+          history.go(-1);
+        }
       }}
     >
       <span className="glyphicon glyphicon-chevron-left" /> {title || null}
