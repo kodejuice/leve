@@ -357,7 +357,7 @@ function getPlaceholder() {
     draft: 0,
     // content: "![Loading...](icons/spinner.svg)",
     html_content: "<img src='icons/spinner.svg' alt='Loading...'>",
-    title: "Post not found",
+    title: "Loading...",
     post_image: `https://tinyurl.com/y3x3hrzk`,
     author: details.name,
     author_email: details.email,
@@ -375,9 +375,19 @@ function getPlaceholder() {
 
 // get routes that should be pre-rendered
 export async function getStaticPaths() {
-  const data = (await getPosts(["slug"])) || [];
+  const data = (await getPosts(["slug", "topic"])) || [];
   const site_pages = Array.from(sitePages).map((p) => ({ slug: p }));
-  const all = data.concat(site_pages);
+  const post_topics = [];
+  data.forEach((post) => {
+    post.topic.forEach((t) => {
+      if (t?.length) {
+        post_topics.push({
+          slug: `/topic/${t.trim().toLowerCase()}`,
+        });
+      }
+    });
+  });
+  const all = data.concat(site_pages).concat(post_topics);
 
   return {
     paths: all.map((post) => ({
@@ -390,13 +400,14 @@ export async function getStaticPaths() {
 
 // fetch Post information from database
 export async function getStaticProps(ctx) {
-  const post_id = ctx.params.id.join("/");
+  const params = ctx.params.id;
+  const [path, id /* needed for multi-route pages */] = params;
   const [host, scheme] = [process.env.HOST, process.env.SCHEME];
 
   const props = {
     host,
     scheme,
-    id: post_id,
+    id: path,
     ga_track_code: process.env.GA_TRACK_CODE,
     disqus_host: process.env.DISQUS_HOST,
   };
@@ -405,9 +416,13 @@ export async function getStaticProps(ctx) {
     revalidate: 1,
   };
 
-  if (sitePages.has(post_id)) {
-    if (Init[post_id]) {
-      props[post_id] = await Init[post_id]();
+  if (sitePages.has(path)) {
+    props.paths = params;
+    if (Init[path]) {
+      props[path] = (await Init[path](id)) || {};
+    }
+    if (path === "archives") {
+      props.archives = await getPosts(["title", "slug", "topic", "excerpt"]);
     }
     return extend(staticProps, {
       props: extend(props, {
@@ -417,13 +432,12 @@ export async function getStaticProps(ctx) {
   }
 
   // fetch post from DB
-
-  const data = await getPost(post_id);
+  const data = await getPost(path);
   if (data.error) {
-    // no post with slug '${post_id}'
+    // no post with slug '${path}'
     return extend(staticProps, {
       props: extend(props, {
-        corrections: await getBestMatch(post_id),
+        corrections: await getBestMatch(path),
       }),
     });
   }
@@ -432,7 +446,7 @@ export async function getStaticProps(ctx) {
   data.pub_date = getPostDate(data.pub_date);
   data.last_modified = getPostDate(data.last_modified, true);
 
-  // remove content, we dont need it here, we'll use html_content instead
+  // remove content, we don't need it here, we'll use html_content instead
   data.content = null;
 
   return extend(staticProps, {

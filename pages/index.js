@@ -28,8 +28,8 @@ export async function getStaticProps() {
   // Pass data to the page via props
   return {
     props: {
-      all_posts: data,
       recent_posts,
+      all_posts_count: data.length,
       host: process.env.HOST,
       scheme: process.env.SCHEME,
       ga_track_code: process.env.GA_TRACK_CODE,

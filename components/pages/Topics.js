@@ -1,26 +1,23 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
 
+// import Readings from "../sections/Readings";
+import { startCase } from "lodash";
 import HomeHead from "../sections/HomeHead";
 import { SideBar } from "../sections/SideBar";
+
 import SiteHeader from "../sections/SiteHeader";
-import Footer from "../sections/Footer";
+
 import { site_details as details } from "../../site_config";
+import Footer from "../sections/Footer";
 
-// import PostList from "../sections/Posts";
-const PostList = dynamic(() => import("../sections/Posts"), {
-  ssr: false,
-  loading: () => <p> Loading posts... </p>,
-});
-
-function Home(props) {
-  const { recent_posts, all_posts_count } = props;
-  const { host, scheme } = props;
+function TopicsPage(props) {
+  const { host, scheme, paths } = props;
+  const route = paths[1];
 
   return (
     <div className="container">
       <Head>
-        <title> {details.name} </title>
+        <title> &quot;{startCase(route)}&quot; Posts </title>
 
         <HomeHead
           host={host}
@@ -29,7 +26,7 @@ function Home(props) {
         />
       </Head>
 
-      <SideBar home />
+      <SideBar />
 
       <div className="home-main mb-5 pl-2">
         <section>
@@ -39,15 +36,16 @@ function Home(props) {
 
           <article>
             <div className="home-posts ml-2">
-              <PostList
-                posts={recent_posts}
-                all_posts_count={all_posts_count}
-              />
+              <div>
+                Which?:
+                <p>{route}</p>
+                {/* <Readings {...props} /> */}
+              </div>
             </div>
           </article>
 
           <footer>
-            <Footer current="home" />
+            <Footer current="readings" />
           </footer>
         </section>
       </div>
@@ -55,4 +53,4 @@ function Home(props) {
   );
 }
 
-export default Home;
+export default TopicsPage;

@@ -2,6 +2,8 @@
 import { getBookShelves } from "../sections/Readings";
 import AboutPage from "./About";
 import ReadingsPage from "./Readings";
+import TopicsPage from "./Topics";
+import ArchivesPage from "./Archives";
 
 // const AboutPage = dynamic(() => import("./About"), {
 //   ssr: false,
@@ -20,12 +22,22 @@ export const Page = {
   readings(props) {
     return <ReadingsPage {...props} />;
   },
+  topic(props) {
+    return <TopicsPage {...props} />;
+  },
+  archives(props) {
+    return <ArchivesPage {...props} />;
+  },
 };
 
 export const Init = {
   async readings() {
     return getBookShelves();
   },
+  // async topic(category) {
+  //   // get posts with this category
+  //   return {};
+  // },
 };
 
 // We'd use this to prevent post slugs from being named one of these

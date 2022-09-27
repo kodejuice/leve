@@ -67,13 +67,6 @@
     .hide-on-mobile {
       display: none;
     }
-
-    // .back-button {
-    //   position: absolute;
-    //   left: 15px;
-    //   top: 7px;
-    //   margin-bottom: 10px;
-    // }
   }
 
   .next-post-link {
@@ -127,6 +120,10 @@ body.body {
   .visible-text {
     color: #333333 !important;
   }
+}
+
+small.em {
+  font-style: italic;
 }
 
 span.project-title {
