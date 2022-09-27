@@ -33,8 +33,8 @@ function PostsByTopic({ posts }) {
   // get all topics
   posts.forEach((post) => {
     post.topic.forEach((t) => {
-      if (t?.length) {
-        const topic = t.trim();
+      const topic = t.trim();
+      if (topic?.length) {
         count[topic] = (count[topic] || 0) + 1;
         topics.add(topic);
       }

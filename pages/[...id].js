@@ -373,9 +373,10 @@ export async function getStaticPaths() {
   const post_topics = [];
   data.forEach((post) => {
     post.topic.forEach((t) => {
-      if (t?.length) {
+      const topic = t.trim();
+      if (topic?.length) {
         post_topics.push({
-          slug: `/topic/${t.trim().toLowerCase()}`,
+          slug: `/topic/${topic.toLowerCase()}`,
         });
       }
     });
