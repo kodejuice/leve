@@ -23,6 +23,7 @@ import { getPost, getPosts } from "../database/functions";
 import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
 import { getPostDate } from "../utils/date";
+import GoBack from "../components/GoBack";
 
 // import PageNotFound from "../components/PageNotFound";
 const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
@@ -136,13 +137,9 @@ function PostView(props) {
       </Head>
 
       <div className="hide-on-desktop mt-4">
-        <Link href="/">
-          <div title="Go Home">
-            <a className="btn btn-link">
-              <span className="glyphicon glyphicon-chevron-left" /> Back
-            </a>
-          </div>
-        </Link>
+        <div title="Go Home">
+          <GoBack title="Back" />
+        </div>
       </div>
 
       <div className="position-fixed action-btn">
@@ -154,13 +151,9 @@ function PostView(props) {
           <p style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}>
             <small style={{ fontSize: "14px" }}>{details.name}</small>
           </p>
-          <Link href="/">
-            <div title="Go Home">
-              <a className="btn btn-link">
-                <span className="glyphicon glyphicon-chevron-left" />
-              </a>
-            </div>
-          </Link>
+          <div title="Go Home">
+            <GoBack />
+          </div>
           {parseCookies(null).__token ? (
             <div className="mt-4">
               <div title="Edit post">

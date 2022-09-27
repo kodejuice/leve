@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { parseCookies } from "nookies";
+import GoBack from "../GoBack";
 import Toggle from "../home/Toggle";
 
 export function SideBar({ home }) {
@@ -31,13 +32,9 @@ export function SideBar({ home }) {
       )}
 
       {!home && (
-        <Link href="/">
-          <div title="Go Home" className="pt-2">
-            <a className="btn btn-link">
-              <span className="glyphicon glyphicon-chevron-left" />
-            </a>
-          </div>
-        </Link>
+        <div title="Go Back" className="pt-2">
+          <GoBack />
+        </div>
       )}
     </div>
   );
