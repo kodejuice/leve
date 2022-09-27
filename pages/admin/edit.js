@@ -17,7 +17,7 @@ import PreviewPost from "../../components/admin/PreviewPost";
 import QuoteSelect from "../../components/admin/QuoteSelect";
 import { WordCount, LineCount, toSlug, getKeywords } from "../../utils";
 
-import { getPost } from "../../database/functions";
+import { getPost, getTopics } from "../../database/functions";
 import verifyAuth from "../../utils/auth";
 import { addPostToDB, deleteDBPost } from "../../utils/db_requests";
 
@@ -31,7 +31,7 @@ const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
 });
 
 export default function Edit(props) {
-  const { post, url, host } = props;
+  const { post, url, host, topics } = props;
   const isNew = post.slug === null;
 
   // modal states
@@ -193,7 +193,7 @@ export default function Edit(props) {
                       onChange={(v) => {
                         setTitle(v.target.value);
 
-                        // set a slug if there isnt one already
+                        // set a slug if there isn't one already
                         const _slug = slug || "";
                         if (_slug.length === 0) {
                           setAutoSlug(toSlug(v.target.value));
@@ -410,6 +410,37 @@ export default function Edit(props) {
                   {/*topic*/}
                   <div className="sub-block">
                     <label htmlFor="Post topic">Post keywords</label>
+
+                    {topics.length ? (
+                      <select
+                        className="d-block form-control w-25 p-0 mb-1"
+                        onChange={(e) => {
+                          const { value } = e.target;
+                          let curr_topics;
+                          if (topic.length === 0) {
+                            curr_topics = [];
+                            curr_topics.push(value);
+                          } else {
+                            curr_topics = topic.split(",");
+                            curr_topics.push(` ${value}`);
+                          }
+                          setTopic(curr_topics.join(","));
+                        }}
+                      >
+                        {topics.map((_topic) => (
+                          <option
+                            value={_topic}
+                            label={_topic}
+                            style={
+                              topic.toLowerCase().includes(_topic.toLowerCase())
+                                ? { color: "red" }
+                                : null
+                            }
+                          />
+                        ))}
+                      </select>
+                    ) : null}
+
                     <input
                       style={post_topic !== topic ? highlight : {}}
                       name="topic"
@@ -651,6 +682,7 @@ export async function getServerSideProps(ctx) {
 
   const post_id = ctx.query.slug;
   const data = await getPost(post_id, false, true);
+  const topics = (await getTopics()).sort();
 
   if (data.error) {
     // no post with slug '${post_id}'
@@ -661,6 +693,7 @@ export async function getServerSideProps(ctx) {
         disqus_host: process.env.DISQUS_HOST,
 
         post_id: post_id || null,
+        topics: [],
 
         // blank template, (new post)
         post: {
@@ -683,6 +716,7 @@ export async function getServerSideProps(ctx) {
       disqus_host: process.env.DISQUS_HOST,
       post_id,
       post: data,
+      topics,
     },
   };
 }
