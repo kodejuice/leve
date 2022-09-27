@@ -416,9 +416,16 @@ export default function Edit(props) {
                         className="d-block form-control w-25 p-0 mb-1"
                         onChange={(e) => {
                           const { value } = e.target;
-                          let curr_topics;
+
+                          // already included?
+                          if (
+                            topic.toLowerCase().includes(value.toLowerCase())
+                          ) {
+                            return;
+                          }
+
+                          let curr_topics = [];
                           if (topic.length === 0) {
-                            curr_topics = [];
                             curr_topics.push(value);
                           } else {
                             curr_topics = topic.split(",");
