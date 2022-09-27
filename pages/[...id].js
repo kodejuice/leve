@@ -180,7 +180,7 @@ function PostView(props) {
                     </em>
                   </small>
                 )) ||
-                  ""}
+                  null}
               </div>
 
               <div>
@@ -190,12 +190,12 @@ function PostView(props) {
                     <small>
                       <em title="This post isnt published yet" className="mt-1">
                         {" "}
-                        {post.draft ? "draft" : ""}
+                        {post.draft ? "draft" : null}
                       </em>
                     </small>
                   </>
                 )) ||
-                  ""}
+                  null}
               </div>
             </div>
           ) : (
