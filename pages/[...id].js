@@ -19,7 +19,7 @@ import "highlight.js/styles/github.css";
 import Toggle from "../components/home/Toggle";
 import { Init, Page, sitePages } from "../components/pages/list";
 import { getBestMatch } from "../utils/string-similarity";
-import { getPost, getPosts } from "../database/functions";
+import { getPost, getPosts, getTopics } from "../database/functions";
 import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
 import { getPostDate } from "../utils/date";
@@ -368,24 +368,23 @@ function getPlaceholder() {
 
 // get routes that should be pre-rendered
 export async function getStaticPaths() {
+  // posts
   const data = (await getPosts(["slug", "topic"])) || [];
+
+  // site pages
   const site_pages = Array.from(sitePages).map((p) => ({ slug: p }));
-  const post_topics = [];
-  data.forEach((post) => {
-    post.topic.forEach((t) => {
-      const topic = t.trim();
-      if (topic?.length) {
-        post_topics.push({
-          slug: `/topic/${topic.toLowerCase()}`,
-        });
-      }
-    });
-  });
+
+  // post topics
+  const post_topics = (await getTopics()).map((topic) => ({
+    slug: `topic/${topic.toLowerCase()}`,
+  }));
+
+  // collate
   const all = data.concat(site_pages).concat(post_topics);
 
   return {
     paths: all.map((post) => ({
-      params: { id: [post.slug] },
+      params: { id: post.slug.split("/") },
     })),
 
     fallback: true,

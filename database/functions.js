@@ -199,6 +199,25 @@ export async function getPosts(fields, draft = false) {
   });
 }
 
+/**
+ * Get all post topics
+ */
+export async function getTopics() {
+  const posts = await getPosts(["topic"]);
+  const topics = [];
+
+  posts.forEach((post) => {
+    post.topic.forEach((t) => {
+      const topic = t.trim();
+      if (topic?.length) {
+        topics.push(topic);
+      }
+    });
+  });
+
+  return topics;
+}
+
 // get "next post >>" suggestion
 async function getNextPosts(post, model) {
   return new Promise(async (resolve, reject) => {
