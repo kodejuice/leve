@@ -41,7 +41,7 @@ export default function Footer({ current }) {
       </div>
 
       <div
-        className="mt-4 pl-0 ml-0"
+        className="mt-4 pl-0 ml-0 d-inline-block"
         title="Get an email whenever theres new content"
       >
         <a href="http://eepurl.com/h8OUC5">
