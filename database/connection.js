@@ -69,25 +69,6 @@ const connectDB = (handler) => async (req, res) => {
   // ...
 
   return handler(req, res, await db_model());
-
-  // // mongoose connection already acquired
-  // if (mongoose.connections[0].readyState)
-  //   return handler(req, res, mongoose.connections.DB_Models);
-
-  // // else create new connection
-  // await mongoose.connect(uri, {
-  //   useNewUrlParser: true,
-  //   useFindAndModify: false,
-  //   useCreateIndex: true,
-  //   useUnifiedTopology: true,
-  //   autoIndex: false,
-  // });
-
-  // mongoose.connections.DB_Models = {
-  //   Article: DB_Models.Article(),
-  // };
-
-  // return handler(req, res, mongoose.connections.DB_Models);
 };
 
 export default connectDB;
