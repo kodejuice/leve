@@ -21,3 +21,12 @@ export function getPostDate(d, hideSameDay) {
 
   return format(new Date(date), MDY) || null;
 }
+
+/**
+ *
+ * @param {string|Date} dateString
+ * @returns
+ */
+export const formatRSSDate = (dateString) =>
+  // Tue, 02 Aug 2022 12:51:00 GMT+1
+  format(new Date(dateString), "E, d LLL yyyy HH:mm:ss z");

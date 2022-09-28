@@ -1,13 +1,16 @@
-import { getPosts } from "../../database/functions";
-import { formatRSSDate } from "../../utils/date";
-import { getRSSDocString } from "../../utils/rss_docstring";
+import { getPostsByTopic } from "../../../database/functions";
+import { formatRSSDate } from "../../../utils/date";
+import { getRSSDocString } from "../../../utils/rss_docstring";
 
 export default async function handler(req, res) {
   const { host } = req.headers;
   const scheme = process.env.SCHEME;
   const site_url = `${scheme}://${host}`;
 
-  const posts = await getPosts(
+  const { category } = req.query;
+
+  const posts = await getPostsByTopic(
+    category,
     [
       "slug",
       "title",
@@ -17,7 +20,6 @@ export default async function handler(req, res) {
       "excerpt",
       "html_content",
     ],
-    false,
     { pub_date: "desc" }
   );
 

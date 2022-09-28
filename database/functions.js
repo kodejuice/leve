@@ -4,7 +4,7 @@
 import { sample, pick, extend } from "lodash";
 import { db_model } from "./connection";
 import mdParser from "../utils/mdParser";
-import { sitePages } from "../components/pages/list";
+// import { sitePages } from "../components/pages/list";
 
 const toObject = (payload) => JSON.parse(JSON.stringify(payload));
 
@@ -52,7 +52,7 @@ export async function createPost(post_id, post_fields) {
     Article.findOne({ slug: post_id }, (err, doc) => {
       if (err || doc) {
         if (err) resolve({ error: true, msg: err.message });
-        else if (doc || sitePages.has(post_id))
+        else if (doc /*|| sitePages.has(post_id)*/)
           resolve({ error: true, msg: "slug not available!" });
         return resolve();
       }
@@ -176,16 +176,22 @@ export async function getPost(slug, next_post = true, draft = false) {
 /**
  * Fetch all posts from DB.
  *
- * @param      {string[]}  fields     Fields to select in the database model
+ * @param      {string[]}  fields       Fields to select in the database model
+ * @param      {boolean}   draft        Return draft posts
+ * @param      {Object}    sortCriteria Sort criteria
  * @return     {Promise}   The posts.
  */
-export async function getPosts(fields, draft = false) {
+export async function getPosts(
+  fields,
+  draft = false,
+  sortCriteria = { views: "desc" }
+) {
   const { Article } = await db_model();
 
   return new Promise((resolve) => {
     const query = Article.find()
       .select(fields.join(" "))
-      .sort({ views: "desc" })
+      .sort(sortCriteria)
       .where("draft", draft)
       .exec();
 
@@ -222,17 +228,21 @@ export async function getTopics() {
 
 /**
  * Get posts with given topic/category
- * @param {string} topic
+ * @param {string} topic post topic to fetch
+ * @param {string[]|undefined} fields Post fields to return
+ * @param {Object} sortCriteria Sort criteria
  */
-export async function getPostsByTopic(topic) {
+export async function getPostsByTopic(
+  topic,
+  fields = undefined,
+  sortCriteria = { views: "desc" }
+) {
   if (!topic) return [];
-  const posts = await getPosts([
-    "topic",
-    "slug",
-    "title",
-    "excerpt",
-    "pub_date",
-  ]);
+  const posts = await getPosts(
+    fields || ["topic", "slug", "title", "excerpt", "pub_date"],
+    false,
+    sortCriteria
+  );
   return posts.filter((post) => {
     const topics = post.topic.join(",").toLowerCase();
     return topics.includes(topic.toLowerCase());
