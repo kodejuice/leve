@@ -19,7 +19,12 @@ import "highlight.js/styles/github.css";
 import Toggle from "../components/home/Toggle";
 import { Init, Page, sitePages } from "../components/pages/list";
 import { getBestMatch } from "../utils/string-similarity";
-import { getPost, getPosts, getPostsByTopic, getTopics } from "../database/functions";
+import {
+  getPost,
+  getPosts,
+  getPostsByTopic,
+  getTopics,
+} from "../database/functions";
 import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
 import { getPostDate } from "../utils/date";
