@@ -1,66 +1,56 @@
-// import { format } from "date-fns";
+import { getPosts } from "../../database/functions";
 import { sitePages } from "../../components/pages/list";
-
-import connectDB from "../../database/connection";
-import { formatDate } from "./rss.xml";
+import { formatRSSDate } from "../../utils/date";
 
 // https://www.google.com/ping?sitemap=FULL_URL_OF_SITEMAP
 
-export default connectDB((req, res, DB_Models) => {
-  const { Article } = DB_Models;
+export default async function handler(req, res) {
   const { host } = req.headers;
   const scheme = process.env.SCHEME;
 
-  return new Promise((resolve) => {
-    const db_query = Article.where("draft", false).sort({ pub_date: "desc" });
+  const posts = await getPosts([
+    "slug",
+    "title",
+    "topic",
+    "pub_date",
+    "last_modified",
+    "excerpt",
+    "html_content",
+  ]);
 
-    // execute query
-    db_query.exec();
-
-    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+  const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>${scheme}://${host}/</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <priority>0.4</priority>
     </url>
-`;
-
-    db_query
-      .then((posts) => {
-        posts.forEach((post) => {
-          xml += `
-<url>
-    <loc>${scheme}://${host}/${post.slug}</loc>
-    <lastmod>${new Date(post.last_modified).toISOString()}</lastmod>
-    <priority>0.8</priority>
-</url>
-`;
-        });
-
-        Array.from(sitePages).forEach((page) => {
-          xml += `
-<url>
-    <loc>${scheme}://${host}/${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <priority>0.8</priority>
-</url>
-`;
-        });
-
-        xml += `
+      ${posts
+        .map(
+          (post) =>
+            `
+    <url>
+        <loc>${scheme}://${host}/${post.slug}</loc>
+        <lastmod>${new Date(post.last_modified).toISOString()}</lastmod>
+        <priority>0.8</priority>
+    </url>`
+        )
+        .join("\n")}
+      ${Array.from(sitePages)
+        .map(
+          (page) => `
+    <url>
+        <loc>${scheme}://${host}/${page}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <priority>0.8</priority>
+    </url>`
+        )
+        .join("\n")}
 </urlset>
-`;
+  `;
 
-        res.setHeader("Content-Type", "text/xml; charset=utf-8");
-        res.setHeader("Date", formatDate(new Date()));
-        res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
-        res.send(xml);
-        resolve();
-      })
-      .catch(() => {
-        res.send(`${xml}</urlset>`);
-        resolve();
-      });
-  });
-});
+  res.setHeader("Content-Type", "text/xml; charset=utf-8");
+  res.setHeader("Date", formatRSSDate(new Date()));
+  res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+  res.send(xmlString);
+}
