@@ -10,7 +10,7 @@ const DB_Models = require("./model");
 //we check if theres already a connection to the database already, if there is return it,
 //else create a new one,
 
-//we also store the database models in the connection object, to make sure the models aren't re-compiled everytime.
+//we also store the database models in the connection object, to make sure the models aren't re-compiled every time.
 
 const mongodb_uri = process.env.MONGODB_URI;
 

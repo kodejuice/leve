@@ -22,7 +22,7 @@ export async function deleteDBPost(slug, url) {
 
 /**
  * Post/Put Request to add Post to DB / Modify Post in DB
- * @param  {Object}          post paramaeters
+ * @param  {Object}          post parameters
  * @return {Promise}         resolved data is request's response
  */
 export async function addPostToDB(body, create, url) {
