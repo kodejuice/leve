@@ -19,6 +19,7 @@ import "highlight.js/styles/github.css";
 import Toggle from "../components/home/Toggle";
 import { Init, Page, sitePages } from "../components/pages/list";
 import { getBestMatch } from "../utils/string-similarity";
+import { WordCount } from "../utils/index";
 import {
   getPost,
   getPosts,
@@ -76,6 +77,7 @@ function PostView(props) {
     return <PageNotFound id={id} corrections={corrections} />;
   }
 
+  const site_url = post.is_loading ? "" : `${scheme}://${host}/`;
   const page_url = post.is_loading ? "" : `${scheme}://${host}/${post.slug}`;
   const post_keywords = isEmpty(post.topic.join())
     ? post.excerpt
@@ -87,7 +89,9 @@ function PostView(props) {
   const post_views = post.views | 0;
 
   const post_content = post.html_content;
-  const timeToRead = readingTime(post_content.replace(/<[^>]+>/gi, ""));
+  const stripped_content = post_content.replace(/<[^>]+>/gi, "");
+  const timeToRead = readingTime(stripped_content);
+  const words_in_post = WordCount(stripped_content);
 
   return (
     <div className="container">
@@ -119,6 +123,29 @@ function PostView(props) {
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "${post.title}",
+  "image": [
+    "${post.post_image}",
+    ],
+  "wordCount": "${words_in_post}",
+  "datePublished": "${new Date(post.pub_date).toISOString()}",
+  "dateModified": "${new Date(post.last_modified).toISOString()}",
+  "author": [{
+      "@type": "Person",
+      "name": "${post.author}",
+      "url": "${site_url}"
+    }]
+}
+`,
+          }}
         />
 
         <script
