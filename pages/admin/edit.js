@@ -436,6 +436,7 @@ export default function Edit(props) {
                       >
                         {topics.map((_topic) => (
                           <option
+                            key={_topic}
                             value={_topic}
                             label={_topic}
                             style={

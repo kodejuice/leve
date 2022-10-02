@@ -16,7 +16,7 @@ const log = (...x) => console.log(...x);
 const words = (string) =>
   new Set(
     string
-      .split(/[^a-zA-Z]/) // split string by non alphabet characters
+      .split(/[^a-zA-Z0-9]/) // split string by non alphabet characters
       .filter((w) => w.length > 1) // get non letters (.length > 1)
       .map((w) => w.toLowerCase()) // convert word to lowercase
   );
@@ -50,6 +50,11 @@ function createFile(fname, content) {
       q = quotes[i];
       wordlist = removeStop(words(q.quote));
 
+      // get words from quote author
+      q.author.toLowerCase().split(' ').map((word) => {
+        wordlist.add(word);
+      });
+
       for (const w of wordlist) {
         if (w in index) index[w].push(i);
         else index[w] = [i];
@@ -58,7 +63,7 @@ function createFile(fname, content) {
   }
 
   // Save file
-  const fname = "../indexed-quotes.js";
+  const fname = "./indexed-quotes.js";
   createFile(fname, `module.exports = ${JSON.stringify(index)}`);
 
   log(`Quotes indexed! '${fname}'`);

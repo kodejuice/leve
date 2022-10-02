@@ -7,27 +7,29 @@ import all_quotes from "../../data/quotes/quotes";
 
 /**
  *
- * @param {string} kwords
+ * @param {string} search_query
  * @param {(string[])=>void} selectQuotes
  * @returns
  */
-function getMatchingQuotes(kwords, selectQuotes) {
+function getMatchingQuotes(search_query, selectQuotes) {
   const matches = []; // stores matching quotes
   const seen = {}; // stores the count of keywords a quote with a certain id has
 
-  kwords = kwords
+  const search_keywords = search_query
     .trim()
     .toLowerCase()
-    .split(/[^a-zA-Z0-9]/);
-  if (!kwords.length) {
+    .split(/[^a-zA-Z0-9:]/)
+    .filter((s) => s.length > 0);
+
+  if (!search_keywords.length) {
     return alert("Enter keywords!");
   }
 
   // go through keywords and get quotes with those words
-  for (const k of kwords) {
+  for (const k of search_keywords) {
     if (k in indexed_quotes) {
       // indexed_quotes[k] is an array of quote ids
-      // these quote ids are indexes to quotes in the 'quoutes.js' file
+      // these quote ids are indexes to quotes in the 'quotes.js' file
       indexed_quotes[k].forEach((id) => {
         if (!(id in seen)) {
           // we've not added this yet
@@ -47,7 +49,7 @@ function getMatchingQuotes(kwords, selectQuotes) {
   matches.sort((x, y) => seen[y[0]] - seen[x[0]]);
 
   // updates view
-  selectQuotes(matches.map((q) => q[1]).slice(0, 4 * 10));
+  selectQuotes(matches.map((q) => q[1]).slice(0, 4 * 15));
 
   return null;
 }
@@ -56,7 +58,7 @@ export default function QuoteSelect(props) {
   const { keywords, setQuote, selected, fullText_kwrds } = props;
 
   // states
-  const [kwords, setKeywords] = useState(keywords || "");
+  const [search_keywords, setKeywords] = useState(keywords || "");
   const [quotes, selectQuotes] = useState([]);
 
   const [searchBy, setSearchBy] = useState("keywords");
@@ -78,7 +80,7 @@ export default function QuoteSelect(props) {
                 className="w-100 post-in keywords-in"
                 placeholder="Enter keywords to get matching quotes"
                 title="Enter keywords to get matching quotes"
-                value={kwords}
+                value={search_keywords}
                 style={{
                   color: "#333",
                   fontSize: "16px",
@@ -92,7 +94,7 @@ export default function QuoteSelect(props) {
               <button
                 onClick={() => {
                   setSearchBy("keywords");
-                  getMatchingQuotes(kwords, selectQuotes);
+                  getMatchingQuotes(search_keywords, selectQuotes);
                 }}
                 title="match keywords"
                 className={`kwrd-btn btn btn${
@@ -121,9 +123,9 @@ export default function QuoteSelect(props) {
       </div>
 
       <div className="quotes">
-        {quotes.map((q) => (
+        {quotes.map((q, i) => (
           <blockquote
-            key={q.quote}
+            key={`${i}:${q.quote}`}
             onClick={() => setQuote(q.quote !== selected.quote ? q : {})}
             className="dialog-quote-block btn w-25 blockquote mt-4"
             style={
