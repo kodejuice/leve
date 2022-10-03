@@ -123,9 +123,9 @@ export default function QuoteSelect(props) {
       </div>
 
       <div className="quotes">
-        {quotes.map((q, i) => (
+        {quotes.map((q) => (
           <blockquote
-            key={`${i}:${q.quote}`}
+            key={`${q.author}:${q.quote}`}
             onClick={() => setQuote(q.quote !== selected.quote ? q : {})}
             className="dialog-quote-block btn w-25 blockquote mt-4"
             style={
