@@ -136,8 +136,8 @@ function PostView(props) {
     "${post.post_image}",
     ],
   "wordCount": "${words_in_post}",
-  "datePublished": "${new Date(post.pub_date).toISOString()}",
-  "dateModified": "${new Date(post.last_modified).toISOString()}",
+  "datePublished": "${new Date(post._pub_date).toISOString()}",
+  "dateModified": "${new Date(post._last_modified).toISOString()}",
   "author": [{
       "@type": "Person",
       "name": "${post.author}",
@@ -469,6 +469,10 @@ export async function getStaticProps(ctx) {
       }),
     });
   }
+
+  // preserve original date object
+  data._pub_date = data.pub_date;
+  data._last_modified = data.last_modified;
 
   // format date in post
   data.pub_date = getPostDate(data.pub_date);
