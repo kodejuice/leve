@@ -136,8 +136,8 @@ function PostView(props) {
     "${post.post_image}",
     ],
   "wordCount": "${words_in_post}",
-  "datePublished": "${new Date(post._pub_date).toISOString()}",
-  "dateModified": "${new Date(post._last_modified).toISOString()}",
+  "datePublished": "${post.pub_date_iso}",
+  "dateModified": "${post.last_modified_iso}",
   "author": [{
       "@type": "Person",
       "name": "${post.author}",
@@ -388,6 +388,8 @@ function getPlaceholder() {
     author_email: details.email,
     pub_date: null,
     last_modified: null,
+    pub_date_iso: "",
+    last_modified_iso: "",
     allow_comments: false,
     post_quote: null, // {}
     next_post: null, // {}
@@ -471,8 +473,8 @@ export async function getStaticProps(ctx) {
   }
 
   // preserve original date object
-  data._pub_date = data.pub_date;
-  data._last_modified = data.last_modified;
+  data.pub_date_iso = new Date(data.pub_date).toISOString();
+  data.last_modified_iso = new Date(data.last_modified).toISOString();
 
   // format date in post
   data.pub_date = getPostDate(data.pub_date);
