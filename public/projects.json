@@ -5,7 +5,7 @@
     {
       "title": "localGoogoo",
       "href": "https://github.com/kodejuice/localgoogoo",
-      "excerpt": "A search engine for offline websites, saves you the hassle of manually looking for information in your local websites you saved offline."
+      "excerpt": "A search engine for offline websites, saves you the hassle of manually looking for information in your local websites you've saved offline."
     },
     {
       "title": "Kodra",
@@ -18,13 +18,8 @@
       "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language."
     },
     {
-      "title": "OpenWhot",
-      "href": "https://github.com/kodejuice/openwhot",
-      "excerpt": "An android application for a variation of the Naija Whot! Game (players cards aren't hidden from each other)."
-    },
-    {
       "title": "JSmarka",
-      "href": "https://jsmarka.herokuapp.com",
+      "href": "https://github.com/kodejuice/jsmarka",
       "excerpt": "A Javascript code performance benchmark tool."
     }
   ]
