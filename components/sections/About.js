@@ -43,12 +43,12 @@ export default function About() {
       {birthdayToday() && (
         <>
           <Confetti width={width} height={height} />
-          <p>I&apos;m +1 today ☺ </p>
+          <p title={`${getAge()}yo`}>I&apos;m +1 today ☺ </p>
         </>
       )}
 
       <div>
-        <span title={`${getAge()}yo`}>Hello, my name is Sochima.</span>
+        <span title={`${getAge()}yo`}>Hello, my name is Sochima</span>
         <div>
           I&apos;m a King and a Priest of the{" "}
           <span title="YHWH">Most High God</span>
@@ -56,10 +56,10 @@ export default function About() {
         <div title="a craftsman"> I work as a Software Engineer </div>
         <div title="😉️"> I&apos;m also an expert Googler. </div>
         <p className="mt-2">
-          I enjoy problem solving as well as coming up with new ideas. I made
-          this site specifically to write about some of the things I've created
-          or come up with. I'll also write about some of the things that come to
-          my mind.
+          I enjoy problem solving as well as coming up with new ideas (and
+          implementing them). I made this site specifically to write about some
+          of the things I've created or come up with. I'll also write about some
+          of the things that comes to my mind.
         </p>
         <p>
           I have a <span title="ND">diploma</span> in Electrical Engineering
