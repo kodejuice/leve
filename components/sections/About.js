@@ -58,8 +58,8 @@ export default function About() {
         <p className="mt-2">
           I hold a <span title="ND">diploma</span> in Electrical Engineering
           from Yaba College of Technology, and I am currently pursuing a B.Sc in
-          Computer Science at Oregon State University. As an avid learner and, I
-          am always seeking new opportunities to expand my knowledge and skills.
+          Computer Science at Oregon State University. As an avid learner I am
+          always seeking new opportunities to expand my knowledge and skills.
         </p>
         <p>
           In my free time, I enjoy coming up with new ideas and implementing
