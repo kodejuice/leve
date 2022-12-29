@@ -56,15 +56,16 @@ export default function About() {
         <div title="a craftsman"> I work as a Software Engineer </div>
         <div title="😉️"> I&apos;m also an expert Googler. </div>
         <p className="mt-2">
-          I enjoy problem solving as well as coming up with new ideas (and
-          implementing them). I made this site specifically to write about some
-          of the things I've created or come up with. I'll also write about some
-          of the things that comes to my mind.
+          I hold a <span title="ND">diploma</span> in Electrical Engineering
+          from Yaba College of Technology, and I am currently pursuing a B.Sc in
+          Computer Science at Oregon State University. As an avid learner and, I
+          am always seeking new opportunities to expand my knowledge and skills.
         </p>
         <p>
-          I have a <span title="ND">diploma</span> in Electrical Engineering
-          from Yaba College of Technology and am currently enrolled at Oregon
-          State University for a B.Sc in Computer Science.
+          In my free time, I enjoy coming up with new ideas and implementing
+          them. I created this site to share some of the things I have created
+          or come up with, as well as to share my thoughts and insights on
+          various topics. Thank you for visiting!
         </p>
       </div>
 
