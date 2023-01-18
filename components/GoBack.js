@@ -5,7 +5,7 @@ export default function GoBack({ title }) {
       className="btn btn-link"
       onClick={(ev) => {
         ev.preventDefault();
-        if (history.length === 1) {
+        if (history.length === 1 || !document.referrer) {
           const home = "/";
           history.replaceState(null, null, home);
           location.href = home;
