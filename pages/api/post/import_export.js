@@ -107,9 +107,10 @@ function Import(req, res) {
         // eslint-disable-next-line no-await-in-loop, no-use-before-define
         response = await createPost(post.slug, post);
 
-        if (response.success === true) added_count += 1;
-
-        responses.push(`${post.slug} -> ${JSON.stringify(response)}`);
+        if (response.success === true) {
+          added_count += 1;
+        }
+        responses.push(`${post.slug} -> ${post.title}`);
       }
     }
 
@@ -118,11 +119,11 @@ function Import(req, res) {
       return resolve();
     }
 
-    // bubble successful inserts to the top
-    responses.sort((a) => (a.success === true ? -1 : 1));
-
-    const res_string = `Added ${added_count} posts\n${"_".repeat(56)}\n\n`;
-    res.json(res_string + responses.join("\n\n"));
+    const res_string = `Added ${added_count} posts<br/>${"_".repeat(
+      56
+    )}<br/><br/>`;
+    res.setHeader("Content-Type", "text/html");
+    res.send(Buffer.from(res_string + responses.join("<br/>")));
     resolve();
   });
 }
