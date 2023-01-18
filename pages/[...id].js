@@ -9,6 +9,7 @@ import Head from "next/head";
 import fetch from "node-fetch";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import ProgressBar from "react-scroll-progress-bar";
 
 import readingTime from "reading-time";
 import { extend, isEmpty } from "lodash";
@@ -94,41 +95,47 @@ function PostView(props) {
   const words_in_post = WordCount(stripped_content);
 
   return (
-    <div className="container">
-      <Head>
-        <title> {post.title} </title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={page_description} />
-        <meta name="keywords" content={post_keywords} />
+    <>
+      <ProgressBar bgcolor="#888" />
 
-        {/*<!-- Facebook Meta Tags -->*/}
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content={post.post_image} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:url" content={page_url} />
-        <meta property="og:description" content={page_description} />
-        <meta property="og:site_name" content={details.description} />
+      <div className="container">
+        <Head>
+          <title> {post.title} </title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name="description" content={page_description} />
+          <meta name="keywords" content={post_keywords} />
 
-        {/*<!-- Twitter Meta Tags -->*/}
-        <meta name="twitter:creator" content={`@${details.handle.twitter}`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content={host} />
-        <meta property="twitter:url" content={page_url} />
+          {/*<!-- Facebook Meta Tags -->*/}
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content={post.post_image} />
+          <meta property="og:title" content={post.title} />
+          <meta property="og:url" content={page_url} />
+          <meta property="og:description" content={page_description} />
+          <meta property="og:site_name" content={details.description} />
 
-        {/* styles for katex */}
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
-        />
+          {/*<!-- Twitter Meta Tags -->*/}
+          <meta name="twitter:creator" content={`@${details.handle.twitter}`} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content={host} />
+          <meta property="twitter:url" content={page_url} />
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `{
+          {/* styles for katex */}
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
+          />
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: `{
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "${post.title}",
@@ -145,12 +152,12 @@ function PostView(props) {
     }]
 }
 `,
-          }}
-        />
+            }}
+          />
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                 // Disqus config
                 var disqus_config = function () {
                     this.page.url = "https://${host}/${post.slug}";
@@ -164,183 +171,189 @@ function PostView(props) {
                     (d.head||d.body).appendChild(s);
                 })();
                 `,
-          }}
-        />
-      </Head>
+            }}
+          />
+        </Head>
 
-      <div className="hide-on-desktop mt-4">
-        <div title="Go Home">
-          <GoBack title="Back" />
-        </div>
-      </div>
-
-      <div className="position-fixed action-btn">
-        <div className="toggler">
-          <Toggle onSwitch={() => reloadDisqusThread()} />
-        </div>
-
-        <div className="hide-on-mobile">
-          <p style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}>
-            <small style={{ fontSize: "14px" }}>{details.name}</small>
-          </p>
+        <div className="hide-on-desktop mt-4">
           <div title="Go Home">
-            <GoBack />
+            <GoBack title="Back" />
           </div>
-          {parseCookies(null).__token ? (
-            <div className="mt-4">
-              <div title="Edit post">
-                <Link href={`admin/edit?slug=${post.slug}`}>
-                  <a className="btn btn-link">
-                    <span className="glyphicon glyphicon-pencil" />
-                  </a>
-                </Link>
-              </div>
-
-              <div title="Add new post">
-                <Link href="admin/edit">
-                  <a className="btn btn-link">
-                    <span className="glyphicon glyphicon-plus" />
-                  </a>
-                </Link>
-              </div>
-
-              <div>
-                {(post.views && (
-                  <small>
-                    <em title="" className="mt-1">
-                      {HRNumbers.toHumanString(post_views)} views
-                    </em>
-                  </small>
-                )) ||
-                  null}
-              </div>
-
-              <div>
-                {(post.draft && (
-                  <>
-                    -
-                    <small>
-                      <em title="This post isnt published yet" className="mt-1">
-                        {" "}
-                        {post.draft ? "draft" : null}
-                      </em>
-                    </small>
-                  </>
-                )) ||
-                  null}
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
         </div>
-      </div>
 
-      <section>
-        <div className="home-main mt-5 post-view pl-2">
-          <header>
-            <h1 className="post-title"> {post.title} </h1>
-            <p className="info ml-3">
-              <Link href="/">
-                <a title="author" className="no-underline">
-                  {post.author}
-                </a>
-              </Link>
-              ,<span>&lt;</span>
-              <a
-                target="_blank"
-                href={`mailto:${post.author_email}`}
-                rel="noreferrer"
-              >
-                {post.author_email}
-              </a>
-              <span>/&gt;</span>
+        <div className="position-fixed action-btn">
+          <div className="toggler">
+            <Toggle onSwitch={() => reloadDisqusThread()} />
+          </div>
+
+          <div className="hide-on-mobile">
+            <p
+              style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}
+            >
+              <small style={{ fontSize: "14px" }}>{details.name}</small>
             </p>
-          </header>
-
-          <div className="article">
-            <article>
-              {!post.is_loading && (
-                <p className="pub_date">
-                  <span className="mr-2">{post.pub_date}</span> ·{" "}
-                  <span className="ml-2">{timeToRead.text}</span>
-                </p>
-              )}
-
-              {/* quote */}
-              {post.post_quote != null ? (
-                <blockquote className="blockquote text-right mt-4">
-                  <p className="mb-0 post-quote">{post.post_quote.quote}</p>
-                  <footer className="blockquote-footer p-quote">
-                    <cite title="Author">{post.post_quote.author}</cite>
-                  </footer>
-                </blockquote>
-              ) : (
-                ""
-              )}
-
-              {/* post content */}
-              <div
-                className="post-content mt-4 visible-text"
-                dangerouslySetInnerHTML={{
-                  __html: post_content,
-                }}
-              />
-              <p className="pt-1 text-right updated-time">
-                {" "}
-                {post.last_modified !== post.pub_date &&
-                  `Updated ${post.last_modified}`}{" "}
-              </p>
-            </article>
-
-            <footer>
-              <div className="row mb-5 _post_footer">
-                {/* subsribe to newsletter */}
-                <div className="col">
-                  <legend id="subscribe" className="visible-text">
-                    Get an email whenever theres a new article
-                  </legend>
-                  <div className="form-row newsletter-signup">
-                    <div className="col">
-                      <SignupForm />
-                    </div>
-                  </div>
+            <div title="Go Home">
+              <GoBack />
+            </div>
+            {parseCookies(null).__token ? (
+              <div className="mt-4">
+                <div title="Edit post">
+                  <Link href={`admin/edit?slug=${post.slug}`}>
+                    <a className="btn btn-link">
+                      <span className="glyphicon glyphicon-pencil" />
+                    </a>
+                  </Link>
                 </div>
 
-                {/* next post >> */}
-                {!isEmpty(post.next_post) ? (
-                  <div className="col-12 col-sm-6 text-right next-post-link">
-                    <Link href="[...id].js" as={`/${post.next_post.slug}`}>
-                      <a className="next-post-link">
-                        {post.next_post.title}{" "}
-                        <span className="glyphicon glyphicon-chevron-right" />
-                      </a>
-                    </Link>
-                  </div>
+                <div title="Add new post">
+                  <Link href="admin/edit">
+                    <a className="btn btn-link">
+                      <span className="glyphicon glyphicon-plus" />
+                    </a>
+                  </Link>
+                </div>
+
+                <div>
+                  {(post.views && (
+                    <small>
+                      <em title="" className="mt-1">
+                        {HRNumbers.toHumanString(post_views)} views
+                      </em>
+                    </small>
+                  )) ||
+                    null}
+                </div>
+
+                <div>
+                  {(post.draft && (
+                    <>
+                      -
+                      <small>
+                        <em
+                          title="This post isnt published yet"
+                          className="mt-1"
+                        >
+                          {" "}
+                          {post.draft ? "draft" : null}
+                        </em>
+                      </small>
+                    </>
+                  )) ||
+                    null}
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        </div>
+
+        <section>
+          <div className="home-main mt-5 post-view pl-2">
+            <header>
+              <h1 className="post-title"> {post.title} </h1>
+              <p className="info ml-3">
+                <Link href="/">
+                  <a title="author" className="no-underline">
+                    {post.author}
+                  </a>
+                </Link>
+                ,<span>&lt;</span>
+                <a
+                  target="_blank"
+                  href={`mailto:${post.author_email}`}
+                  rel="noreferrer"
+                >
+                  {post.author_email}
+                </a>
+                <span>/&gt;</span>
+              </p>
+            </header>
+
+            <div className="article">
+              <article>
+                {!post.is_loading && (
+                  <p className="pub_date">
+                    <span className="mr-2">{post.pub_date}</span> ·{" "}
+                    <span className="ml-2">{timeToRead.text}</span>
+                  </p>
+                )}
+
+                {/* quote */}
+                {post.post_quote != null ? (
+                  <blockquote className="blockquote text-right mt-4">
+                    <p className="mb-0 post-quote">{post.post_quote.quote}</p>
+                    <footer className="blockquote-footer p-quote">
+                      <cite title="Author">{post.post_quote.author}</cite>
+                    </footer>
+                  </blockquote>
                 ) : (
                   ""
                 )}
-              </div>
-            </footer>
 
-            {/*<!-- DISQUS HERE -->*/}
-            <div className="comments" id="comments">
-              {!post.allow_comments ? (
-                post.is_loading ? (
-                  ""
+                {/* post content */}
+                <div
+                  className="post-content mt-4 visible-text"
+                  dangerouslySetInnerHTML={{
+                    __html: post_content,
+                  }}
+                />
+                <p className="pt-1 text-right updated-time">
+                  {" "}
+                  {post.last_modified !== post.pub_date &&
+                    `Updated ${post.last_modified}`}{" "}
+                </p>
+              </article>
+
+              <footer>
+                <div className="row mb-5 _post_footer">
+                  {/* subsribe to newsletter */}
+                  <div className="col">
+                    <legend id="subscribe" className="visible-text">
+                      Get an email whenever theres a new article
+                    </legend>
+                    <div className="form-row newsletter-signup">
+                      <div className="col">
+                        <SignupForm />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* next post >> */}
+                  {!isEmpty(post.next_post) ? (
+                    <div className="col-12 col-sm-6 text-right next-post-link">
+                      <Link href="[...id].js" as={`/${post.next_post.slug}`}>
+                        <a className="next-post-link">
+                          {post.next_post.title}{" "}
+                          <span className="glyphicon glyphicon-chevron-right" />
+                        </a>
+                      </Link>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </footer>
+
+              {/*<!-- DISQUS HERE -->*/}
+              <div className="comments" id="comments">
+                {!post.allow_comments ? (
+                  post.is_loading ? (
+                    ""
+                  ) : (
+                    <b>
+                      <em> Comments Disabled </em>
+                    </b>
+                  )
                 ) : (
-                  <b>
-                    <em> Comments Disabled </em>
-                  </b>
-                )
-              ) : (
-                <div id="disqus_thread" />
-              )}
+                  <div id="disqus_thread" />
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
 
