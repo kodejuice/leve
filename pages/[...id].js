@@ -89,7 +89,7 @@ function PostView(props) {
   const post_views = post.views | 0;
 
   const post_content = post.html_content;
-  const stripped_content = post_content.replace(/<[^>]+>/gi, "");
+  const stripped_content = post_content.replace(/<[^>]+>/gi, ""); // remove tags
   const timeToRead = readingTime(stripped_content);
   const words_in_post = WordCount(stripped_content);
 
@@ -478,9 +478,10 @@ export async function getStaticProps(ctx) {
 
   // format date in post
   data.pub_date = getPostDate(data.pub_date);
-  data.last_modified = getPostDate(data.last_modified, true);
+  data.last_modified = getPostDate(data.last_modified);
 
   // remove content, we don't need it here, we'll use html_content instead
+  // if we dont, the HTML source will be bloated
   data.content = null;
 
   return extend(staticProps, {
