@@ -54,7 +54,7 @@ function PostView(props) {
           // store cookie so the 'views' field of this post gets updated once
           setCookie(null, post.slug, "1", {
             path: "/",
-            maxAge: 86400 * 31 /* 31 days */,
+            maxAge: 86400 * 62 /* 62 days */,
           });
         }
       });
