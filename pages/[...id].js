@@ -96,7 +96,7 @@ function PostView(props) {
 
   return (
     <>
-      <ProgressBar bgcolor="#888" />
+      <ProgressBar bgcolor="#999" height="5px" />
 
       <div className="container">
         <Head>
