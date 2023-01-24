@@ -63,9 +63,10 @@ export default function About() {
         </p>
         <p>
           In my free time, I enjoy coming up with new ideas and implementing
-          them. I created this site to share some of the things I have created
-          or come up with, as well as to share my thoughts and insights on
-          various topics. Thank you for visiting!
+          them. I have a passion for solving problems and finding solutions that
+          can make a difference in people's lives. I created this site to share
+          some of the things I have created or come up with, as well as to share
+          my thoughts and insights on various topics. Thank you for visiting!
         </p>
       </div>
 
