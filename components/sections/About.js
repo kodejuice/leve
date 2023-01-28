@@ -71,9 +71,7 @@ export default function About() {
       </div>
 
       <div className="crypto-info">
-        <p className="mb-0">
-          Show <img className="pl-1" src="/icons/heart.png" alt="❤️" />
-        </p>
+        <p className="mb-0">Buy me a coffee ☕</p>
         {cryptoInfo.map(([coin, address]) => (
           <div key={coin} title={coin.toUpperCase()} className="row mb-2 mt-2">
             <div className="col-3 img-col">
