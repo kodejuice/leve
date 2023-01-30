@@ -9,7 +9,8 @@
     },
     {
       "title": "Arithmetic Coding Library",
-      "href": "https://github.com/kodejuice/arithmetic-compressor"
+      "href": "https://github.com/kodejuice/arithmetic-compressor",
+      "excerpt": "An implementation of the Arithmetic Coding algorithm in Python, along with adaptive statistical data compression models like PPM, Context Mixing and Simple Adaptive models."
     },
     {
       "title": "Kodra",
