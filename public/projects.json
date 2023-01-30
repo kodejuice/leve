@@ -8,6 +8,10 @@
       "excerpt": "A search engine for offline websites, saves you the hassle of manually looking for information in your local websites you've saved offline."
     },
     {
+      "title": "Arithmetic Coding Library",
+      "href": "https://github.com/kodejuice/arithmetic-compressor"
+    },
+    {
       "title": "Kodra",
       "href": "https://github.com/kodejuice/kodra",
       "excerpt": "A checkers game engine playing the russian variation (Shashki) at master level, built for the CheckerBoard interface."
@@ -16,11 +20,6 @@
       "title": "Chip8 Emulator",
       "href": "https://github.com/kodejuice/chip8-emulator",
       "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language."
-    },
-    {
-      "title": "JSmarka",
-      "href": "https://github.com/kodejuice/jsmarka",
-      "excerpt": "A Javascript code performance benchmark tool."
     }
   ]
 }
