@@ -51,9 +51,13 @@ function createFile(fname, content) {
       wordlist = removeStop(words(q.quote));
 
       // get words from quote author
-      q.author.toLowerCase().split(' ').map((word) => {
-        wordlist.add(word);
-      });
+      q.author
+        .toLowerCase()
+        .split(" ")
+        // eslint-disable-next-line no-loop-func
+        .forEach((word) => {
+          wordlist.add(word);
+        });
 
       for (const w of wordlist) {
         if (w in index) index[w].push(i);
