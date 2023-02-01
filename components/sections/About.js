@@ -53,8 +53,10 @@ export default function About() {
           I&apos;m a King and a Priest of the{" "}
           <span title="YHWH">Most High God</span>
         </div>
-        <div title="a craftsman"> I work as a Software Engineer </div>
-        <div title="😉️"> I&apos;m also an expert Googler. </div>
+        <div title="a craftsman">
+          I work as a Software Engineer, and I have a passion for solving
+          complex problems and finding creative solutions.
+        </div>
         <p className="mt-2">
           I hold a <span title="ND">diploma</span> in Electrical Engineering
           from Yaba College of Technology, and I am currently pursuing a B.Sc in
