@@ -90,6 +90,26 @@ export default function About() {
             </CopyToClipboard>
           </div>
         ))}
+        <div title="Patreon" className="row mb-2 mt-2">
+          <div className="col-3 img-col">
+            <img
+              alt="patreon"
+              width={24}
+              height={24}
+              className="coin-img"
+              src="/icons/patreon.png"
+            />
+          </div>
+          <span className="support-link col-9">
+            <a
+              href="https://patreon.com/sochima_b"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Patreon
+            </a>
+          </span>
+        </div>
       </div>
 
       <div className="mt-4">
