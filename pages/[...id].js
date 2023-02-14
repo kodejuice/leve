@@ -160,8 +160,12 @@ function PostView(props) {
               __html: `
                 // Disqus config
                 var disqus_config = function () {
-                    this.page.url = "https://${host}/${post.slug}";
-                    this.page.identifier = "${details.name}:${post.slug}";
+                    var slug = "${
+                      post.draft ? `${post.slug}--draft` : post.slug
+                    }";
+                    this.page.url = '"'+location.href+'"';
+                    // this.page.url = "https://${host}/${post.slug}";
+                    this.page.identifier = "${details.name}:"+slug;
                     this.page.title = "${post.title}";
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
