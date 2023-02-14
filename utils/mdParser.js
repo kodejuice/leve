@@ -33,6 +33,13 @@ mdParser.use(tm, {
   katexOptions: { macros: { "\\RR": "\\mathbb{R}" } },
 });
 
+mdParser.renderer.rules.table_open = function () {
+  return '<div class="table-wrapper"><table class="table" style="width: auto;">';
+};
+mdParser.renderer.rules.table_close = function () {
+  return "</table></div>";
+};
+
 mdParser.render = memoize(mdParser.render);
 
 export default mdParser;
