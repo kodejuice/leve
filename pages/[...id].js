@@ -192,6 +192,7 @@ function PostView(props) {
 
           <div className="hide-on-mobile">
             <p
+              className="hide-on-lt-823"
               style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}
             >
               <small style={{ fontSize: "14px" }}>{details.name}</small>
