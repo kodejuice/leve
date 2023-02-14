@@ -46,6 +46,13 @@
   }
 }
 
+/* width < 823px */
+@media screen and (max-width: 823px) {
+  .hide-on-lt-823 {
+    display: none;
+  }
+}
+
 /*width <= 480px*/
 @media only screen and (max-width: 480px) {
   div.home-main {
