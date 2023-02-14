@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 import MarkdownIt from "markdown-it";
 import tm from "markdown-it-texmath";
 import hljs from "highlight.js";
@@ -9,6 +10,7 @@ const katex = require("katex");
 // Initialize a markdown parser
 const mdParser = new MarkdownIt({
   html: true,
+  breaks: true,
   highlight(str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
