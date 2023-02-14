@@ -153,7 +153,7 @@ export async function getPost(slug, next_post = true) {
           return resolve({ error: true, msg: "Not found" });
         }
 
-        if (next_post) {
+        if (next_post && !post.draft) {
           getNextPosts(post, Article)
             .then((nxt) => {
               post.next_post = nxt;
