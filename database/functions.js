@@ -139,10 +139,9 @@ export async function deletePost(post_id) {
  *
  * @param      {string}   slug              The slug of the post (post identifier) `http://{host}/{slug}`
  * @param      {boolean}  [next_post=true]  Should we get the next post suggestion?
- * @param      {boolean}  [draft=true]      Should we also show drafts?
  * @return     {Promise}  The post.
  */
-export async function getPost(slug, next_post = true, draft = false) {
+export async function getPost(slug, next_post = true) {
   const { Article } = await db_model();
 
   return new Promise((resolve) => {
@@ -150,7 +149,7 @@ export async function getPost(slug, next_post = true, draft = false) {
 
     query
       .then((post) => {
-        if (!post || (post.draft && !draft)) {
+        if (!post) {
           return resolve({ error: true, msg: "Not found" });
         }
 

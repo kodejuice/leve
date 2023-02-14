@@ -29,7 +29,7 @@ import {
 } from "../database/functions";
 import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
-import { getPostDate } from "../utils/date";
+import { getISOString, getPostDate } from "../utils/date";
 import GoBack from "../components/GoBack";
 
 // import PageNotFound from "../components/PageNotFound";
@@ -199,56 +199,49 @@ function PostView(props) {
             <div title="Go Home">
               <GoBack />
             </div>
-            {parseCookies(null).__token ? (
-              <div className="mt-4">
-                <div title="Edit post">
-                  <Link href={`admin/edit?slug=${post.slug}`}>
-                    <a className="btn btn-link">
-                      <span className="glyphicon glyphicon-pencil" />
-                    </a>
-                  </Link>
-                </div>
+            <div className="mt-4">
+              {parseCookies(null).__token ? (
+                <>
+                  <div title="Edit post">
+                    <Link href={`admin/edit?slug=${post.slug}`}>
+                      <a className="btn btn-link">
+                        <span className="glyphicon glyphicon-pencil" />
+                      </a>
+                    </Link>
+                  </div>
 
-                <div title="Add new post">
-                  <Link href="admin/edit">
-                    <a className="btn btn-link">
-                      <span className="glyphicon glyphicon-plus" />
-                    </a>
-                  </Link>
-                </div>
+                  <div title="Add new post">
+                    <Link href="admin/edit">
+                      <a className="btn btn-link">
+                        <span className="glyphicon glyphicon-plus" />
+                      </a>
+                    </Link>
+                  </div>
 
-                <div>
-                  {(post.views && (
-                    <small>
-                      <em title="" className="mt-1">
-                        {HRNumbers.toHumanString(post_views)} views
-                      </em>
-                    </small>
-                  )) ||
-                    null}
-                </div>
-
-                <div>
-                  {(post.draft && (
-                    <>
-                      -
+                  <div>
+                    {(post.views && (
                       <small>
-                        <em
-                          title="This post isnt published yet"
-                          className="mt-1"
-                        >
-                          {" "}
-                          {post.draft ? "draft" : null}
+                        <em title="" className="mt-1">
+                          {HRNumbers.toHumanString(post_views)} views
                         </em>
                       </small>
-                    </>
-                  )) ||
-                    null}
-                </div>
+                    )) ||
+                      null}
+                  </div>
+                </>
+              ) : null}
+              <div>
+                {(post.draft && (
+                  <div
+                    title="This post isnt published yet"
+                    className="mt-3 p-0 btn btn-secondary px-1"
+                  >
+                    DRAFT
+                  </div>
+                )) ||
+                  null}
               </div>
-            ) : (
-              ""
-            )}
+            </div>
           </div>
         </div>
 
@@ -342,9 +335,7 @@ function PostView(props) {
               {/*<!-- DISQUS HERE -->*/}
               <div className="comments" id="comments">
                 {!post.allow_comments ? (
-                  post.is_loading ? (
-                    ""
-                  ) : (
+                  post.is_loading ? null : (
                     <b>
                       <em> Comments Disabled </em>
                     </b>
@@ -490,15 +481,16 @@ export async function getStaticProps(ctx) {
   }
 
   // preserve original date object
-  data.pub_date_iso = new Date(data.pub_date).toISOString();
-  data.last_modified_iso = new Date(data.last_modified).toISOString();
+  data.pub_date_iso = getISOString(data.pub_date);
+  data.last_modified_iso = getISOString(data.last_modified);
 
   // format date in post
   data.pub_date = getPostDate(data.pub_date);
   data.last_modified = getPostDate(data.last_modified);
 
-  // remove content, we don't need it here, we'll use html_content instead
-  // if we dont, the HTML source will be bloated
+  // remove markdown content, we don't need it here, we'll use
+  // html_content instead if we dont do this, the HTML source
+  //  will be bloated and take longer to load
   data.content = null;
 
   return extend(staticProps, {

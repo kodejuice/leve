@@ -689,7 +689,7 @@ export async function getServerSideProps(ctx) {
   await verifyAuth(ctx);
 
   const post_id = ctx.query.slug;
-  const data = await getPost(post_id, false, true);
+  const data = await getPost(post_id, false);
   const topics = (await getTopics()).sort();
 
   if (data.error) {
