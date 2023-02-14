@@ -202,6 +202,29 @@ blockquote {
   border-left: 10px solid #d6dbdf;
 }
 
+div.table-wrapper {
+  max-width: 100%;
+  overflow: auto;
+
+  thead {
+    td,
+    th {
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+  td,
+  th {
+    border-right: 1px solid #dcdcdc;
+    padding: 8px 12px;
+  }
+
+  td:last-child,
+  th:last-child {
+    border-right: 0;
+  }
+}
 /*.home-header*/
 div.home-header {
   h1.site-name {
