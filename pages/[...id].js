@@ -390,7 +390,7 @@ function getPlaceholder() {
     views: 0,
     draft: 0,
     // content: "![Loading...](icons/spinner.svg)",
-    html_content: "<img src='icons/spinner.svg' alt='Loading...'>",
+    html_content: "<img src='icons/spinner.svg' alt='Loading...'/>",
     title: "Loading...",
     post_image: `https://tinyurl.com/y3x3hrzk`,
     author: details.name,
