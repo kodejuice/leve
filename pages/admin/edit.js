@@ -3,14 +3,13 @@
 /* eslint-disable no-param-reassign */
 import Script from "next/script";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 import { useEffect, useMemo, useState } from "react";
-import Head from "next/head";
-import { format } from "date-fns";
-
 import Modal from "react-modal";
-import ClipLoader from "react-spinners/ClipLoader";
 import { HotKeys } from "react-hotkeys";
+import ClipLoader from "react-spinners/ClipLoader";
+import { format } from "date-fns";
 
 import HeaderWrapper from "../../components/admin/Header";
 import PreviewPost from "../../components/admin/PreviewPost";
