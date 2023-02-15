@@ -122,15 +122,15 @@ function PostView(props) {
           <meta property="twitter:domain" content={host} />
           <meta property="twitter:url" content={page_url} />
 
-          {/* styles for katex */}
+          {/* styling for katex */}
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
           />
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
-          />
+          /> */}
 
           <script
             type="application/ld+json"

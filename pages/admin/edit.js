@@ -124,10 +124,10 @@ export default function Edit(props) {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
           />
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
-          />
+          /> */}
         </Head>
 
         <div className="admin">
