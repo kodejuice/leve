@@ -1,10 +1,10 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-bitwise */
 /* eslint-disable no-param-reassign */
+import Script from "next/script";
 import dynamic from "next/dynamic";
-import "react-markdown-editor-lite/lib/index.css";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Head from "next/head";
 import { format } from "date-fns";
 
@@ -12,9 +12,8 @@ import Modal from "react-modal";
 import ClipLoader from "react-spinners/ClipLoader";
 import { HotKeys } from "react-hotkeys";
 
-import Header from "../../components/admin/Header";
+import HeaderWrapper from "../../components/admin/Header";
 import PreviewPost from "../../components/admin/PreviewPost";
-import QuoteSelect from "../../components/admin/QuoteSelect";
 import { WordCount, LineCount, toSlug, getKeywords } from "../../utils";
 
 import { getPost, getTopics } from "../../database/functions";
@@ -23,12 +22,16 @@ import { addPostToDB, deleteDBPost } from "../../utils/db_requests";
 
 import { site_details as details } from "../../site_config";
 
-import mdParser from "../../utils/mdParser";
+const QuoteSelect = dynamic(
+  () => import("../../components/admin/QuoteSelect"),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  }
+);
 
-const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
-  ssr: false,
-  loading: () => <p> Loading editor... </p>,
-});
+let mdParser;
+let Editor = null;
 
 export default function Edit(props) {
   const { post, url, host, topics } = props;
@@ -72,6 +75,12 @@ export default function Edit(props) {
   //...
 
   useEffect(() => {
+    (async function LoadImports() {
+      const StackEdit = (await import("stackedit-js")).default; // import stackedit
+      mdParser = (await import("../../utils/mdParser")).default; // import markdown parser
+      Editor = new StackEdit();
+    })();
+
     document.querySelector("body").classList.remove("dark");
     document.querySelector("nav.navbar.fixed-top").classList.remove("bg-dark");
     document.querySelector("nav.navbar.fixed-top").classList.add("bg-light");
@@ -98,6 +107,31 @@ export default function Edit(props) {
     };
   });
 
+  // event to launch StackEdit modal
+  const launchEditor = useMemo(
+    () => () => {
+      if (!Editor) {
+        // eslint-disable-next-line no-console
+        console.warn("Editor not initialized");
+        return;
+      }
+
+      // Open the iframe
+      Editor.openFile({
+        name: "Filename", // with an optional filename
+        content: {
+          text: content, // and the Markdown content.
+        },
+      });
+
+      // Listen to StackEdit events and apply the changes to the textarea.
+      Editor.on("fileChange", (file) => {
+        setContent(file.content.text);
+      });
+    },
+    [content, setContent]
+  );
+
   const highlight = post.slug !== null ? { border: "1px solid orange" } : {};
   return (
     <HotKeys keyMap={{ SAVE: "ctrl+enter", PREVIEW: "ctrl+b" }}>
@@ -120,6 +154,7 @@ export default function Edit(props) {
             content="initial-scale=1.0, width=device-width"
           />
           <meta name="robots" content="noindex" />
+          <Script src="https://unpkg.com/stackedit-js@1.0.7/docs/lib/stackedit.min.js" />
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
@@ -221,17 +256,15 @@ export default function Edit(props) {
 
                 {/* markdown editor */}
                 <div className="mt-5">
-                  <MdEditor
-                    value={content}
+                  <button className="btn btn-info m-2" onClick={launchEditor}>
+                    OPEN EDITOR
+                  </button>
+                  <textarea
+                    id="editor"
+                    className="form-control"
                     style={{ height: "500px" }}
-                    renderHTML={(text) => {
-                      if (!isSaving) {
-                        setContent(text);
-                        return mdParser.render(text);
-                      }
-                      setContent(content);
-                      return mdParser.render(content);
-                    }}
+                    value={content}
+                    disabled
                   />
                 </div>
               </div>
