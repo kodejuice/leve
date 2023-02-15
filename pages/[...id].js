@@ -163,7 +163,7 @@ function PostView(props) {
                     var slug = "${
                       post.draft ? `${post.slug}--draft` : post.slug
                     }";
-                    this.page.url = '"'+location.href+'"';
+                    this.page.url = location.href;
                     // this.page.url = "https://${host}/${post.slug}";
                     this.page.identifier = "${details.name}:"+slug;
                     this.page.title = "${post.title}";
