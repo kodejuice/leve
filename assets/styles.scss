@@ -225,6 +225,17 @@ div.table-wrapper {
     border-right: 0;
   }
 }
+
+code.inline {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: Roboto Mono, Lucida Sans Typewriter, Lucida Console, monaco,
+    Courrier, monospace;
+  font-size: 0.85em;
+  color: #333 !important;
+}
+
 /*.home-header*/
 div.home-header {
   h1.site-name {

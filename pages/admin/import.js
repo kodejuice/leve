@@ -33,8 +33,7 @@ function Import(props) {
           </p>
 
           <pre>
-            <code>{`
-[{
+            <code>{`[{
     *author: String,
     *author_email: String,
 
@@ -57,7 +56,7 @@ function Import(props) {
 
     allow_comments: Boolean
 }, ...]
-                    `}</code>
+`}</code>
           </pre>
           <hr />
 

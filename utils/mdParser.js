@@ -4,6 +4,7 @@ import tm from "markdown-it-texmath";
 import hljs from "highlight.js";
 import "highlight.js/styles/github.css";
 import { memoize } from "lodash";
+import { escapeHtml } from "markdown-it/lib/common/utils";
 
 const katex = require("katex");
 
@@ -35,11 +36,25 @@ mdParser.use(tm, {
   katexOptions: { macros: { "\\RR": "\\mathbb{R}" } },
 });
 
+// table styling
 mdParser.renderer.rules.table_open = function () {
   return '<div class="table-wrapper"><table class="table" style="width: auto;">';
 };
 mdParser.renderer.rules.table_close = function () {
   return "</table></div>";
+};
+
+// inline blocks
+mdParser.renderer.rules.code_inline = function (
+  tokens,
+  idx
+  // options,
+  // env,
+  // slf
+) {
+  const token = tokens[idx];
+  // return `<code${slf.renderAttrs(token)}>${escapeHtml(token.content)}</code>`;
+  return `<code class="inline">${escapeHtml(token.content)}</code>`;
 };
 
 mdParser.render = memoize(mdParser.render);
