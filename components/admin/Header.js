@@ -28,7 +28,7 @@ const sidebarLinks = [
   },
 ];
 
-function Header(props) {
+function HeaderWrapper(props) {
   const { page, host, url } = props;
 
   const [saving, setSaving] = useState(false);
@@ -194,4 +194,4 @@ async function saveDraft(setSaving, url, [slug, title]) {
   setSaving(false);
 }
 
-export default Header;
+export default HeaderWrapper;

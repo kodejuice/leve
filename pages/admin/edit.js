@@ -170,7 +170,7 @@ export default function Edit(props) {
             )}
           </Modal>
 
-          <Header
+          <HeaderWrapper
             url={url}
             host={host}
             dark={false}
@@ -591,7 +591,7 @@ export default function Edit(props) {
             </div>
 
             <br />
-          </Header>
+          </HeaderWrapper>
         </div>
       </HotKeys>
     </HotKeys>

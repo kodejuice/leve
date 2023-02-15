@@ -6,7 +6,7 @@ import { parseCookies } from "nookies";
 import { format } from "date-fns";
 
 import Posts from "../../components/admin/Posts";
-import Header from "../../components/admin/Header";
+import HeaderWrapper from "../../components/admin/Header";
 import { site_details as details } from "../../site_config";
 
 import { getPosts } from "../../database/functions";
@@ -23,7 +23,7 @@ function List(props) {
       </Head>
 
       <div className="admin">
-        <Header
+        <HeaderWrapper
           url={props.url}
           is_dark={props.is_dark}
           host={props.host}
@@ -54,7 +54,7 @@ function List(props) {
               show_draft_on_load={props.show_draft_on_load}
             />
           </div>
-        </Header>
+        </HeaderWrapper>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { parseCookies } from "nookies";
 
-import Header from "../../components/admin/Header";
+import HeaderWrapper from "../../components/admin/Header";
 
 import { site_details as details } from "../../site_config";
 import verifyAuth from "../../utils/auth";
@@ -18,7 +18,7 @@ function Import(props) {
       </Head>
 
       <div className="admin">
-        <Header
+        <HeaderWrapper
           url={props.url}
           is_dark={props.is_dark}
           host={host}
@@ -97,7 +97,7 @@ function Import(props) {
                                 }
                         `}</style>
           </div>
-        </Header>
+        </HeaderWrapper>
       </div>
     </>
   );
