@@ -1,9 +1,6 @@
 import { site_details as details } from "../site_config";
 import { formatRSSDate } from "./date";
 
-const safeTags = (str) =>
-  str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
 /**
  *
  * @param {Object} post
@@ -29,9 +26,7 @@ export function getRSSDocString(posts, site_url) {
         <item>
           <title>${post.title}</title>
           <link>${site_url}/${post.slug}/</link>
-          <description> ${post.excerpt || ""} | ${safeTags(
-            post.html_content
-          )} </description>
+          <description> ${post.excerpt || ""}.</description>
           <pubDate>${formatRSSDate(post.pub_date)}</pubDate>
           <lastBuildDate>${formatRSSDate(post.last_modified)} </lastBuildDate>
           <guid>${site_url}/${post.slug}/</guid>
