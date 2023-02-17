@@ -31,7 +31,6 @@ import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
 import { getISOString, getPostDate } from "../utils/date";
 import GoBack from "../components/GoBack";
-import Comments from "../components/home/Comments";
 
 // import PageNotFound from "../components/PageNotFound";
 const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
@@ -89,7 +88,6 @@ function PostView(props) {
     : `${post.excerpt}, By: ${post.author}`;
 
   const post_views = post.views | 0;
-  const slug_id = post.draft ? `${post.slug}--draft` : post.slug;
 
   const post_content = post.html_content;
   const stripped_content = post_content.replace(/<[^>]+>/gi, ""); // remove tags
@@ -157,7 +155,7 @@ function PostView(props) {
             }}
           />
 
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 // Disqus config
@@ -178,7 +176,7 @@ function PostView(props) {
                 })();
                 `,
             }}
-          /> */}
+          />
         </Head>
 
         <div className="hide-on-desktop mt-4">
@@ -344,11 +342,7 @@ function PostView(props) {
                     </b>
                   )
                 ) : (
-                  <Comments
-                    title={post.title}
-                    identifier={`${details.name}:${slug_id}`}
-                  />
-                  // <div id="disqus_thread" />
+                  <div id="disqus_thread" />
                 )}
               </div>
             </div>
