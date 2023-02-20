@@ -17,9 +17,6 @@ module.exports = {
         // JWT token secret
         JWT_SECRET: "MY_JWT_SECRET",
 
-        // url host of disqus domain
-        DISQUS_HOST: "kodejuice.disqus.com",
-
         // google analytics track code
         GA_TRACK_CODE: "G-QDSBDZSG0Z",
     },

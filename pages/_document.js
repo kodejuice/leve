@@ -43,11 +43,10 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
 
+          {/* FastComments */}
           <Script
-            id="dsq-count-scr"
-            strategy="afterInteractive"
-            src={`//${process.env.DISQUS_HOST}/count.js`}
-            defer
+            strategy="beforeInteractive"
+            src="https://cdn.fastcomments.com/js/embed-v2.min.js"
           />
 
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}

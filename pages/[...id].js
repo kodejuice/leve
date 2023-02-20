@@ -155,41 +155,39 @@ function PostView(props) {
             }}
           />
 
-          {/* <script src="https://cdn.fastcomments.com/js/embed-v2.min.js" />
           <script
-            defer
             dangerouslySetInnerHTML={{
               __html: `
-window.onload = function () {
-  console.log(document.getElementById('fastcomments-widget'));
-  window.FastCommentsUI(document.getElementById('fastcomments-widget'), {
-      "tenantId": "demo"
-      // "tenantId": "pMDzWlCsGYX"
+function loadComments() {
+  var randomNumber = ~~(Math.random()*1e6)
+  var spinnerId = 'comments-spinner-'+randomNumber;
+
+  // add a spinner
+  var el = document.getElementById('fastcomments-widget');
+  if (!el) return;
+  el.innerHTML = "<img id='"+spinnerId+"' src='icons/spinner.svg' alt='Loading comments...'/>";
+
+  window.FastCommentsUI(el, {
+    // "tenantId": "demo",
+    "tenantId": "pMDzWlCsGYX",
+    absoluteAndRelativeDates: true,
+    useShowCommentsToggle: true,
+    onRender: function() {
+      // remove spinner
+      var spinner = document.getElementById(spinnerId);
+      if (spinner) {
+        el.removeChild(spinner);
+      }
+    }
   });
 }
+
+if (document.readyState === "complete") {
+  loadComments();
+} else {
+  window.addEventListener('load', loadComments);
+}
 `,
-            }}
-          /> */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                // Disqus config
-                var disqus_config = function () {
-                    var slug = "${
-                      post.draft ? `${post.slug}--draft` : post.slug
-                    }";
-                    this.page.url = location.href;
-                    // this.page.url = "https://${host}/${post.slug}";
-                    this.page.identifier = "${details.name}:"+slug;
-                    this.page.title = "${post.title}";
-                };
-                window.onload = function() {
-                  var d=document, s=d.createElement('script');
-                  s.src="https://${props.disqus_host}/embed.js";
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head||d.body).appendChild(s);
-              }
-                `,
             }}
           />
         </Head>
@@ -202,7 +200,7 @@ window.onload = function () {
 
         <div className="position-fixed action-btn">
           <div className="toggler">
-            <Toggle onSwitch={() => reloadDisqusThread()} />
+            <Toggle onSwitch={() => reloadCommentThread()} />
           </div>
 
           <div className="hide-on-mobile">
@@ -348,7 +346,7 @@ window.onload = function () {
                 </div>
               </footer>
 
-              {/*<!-- DISQUS HERE -->*/}
+              {/*<!-- COMMENTS HERE -->*/}
               <div className="comments" id="comments">
                 {!post.allow_comments ? (
                   post.is_loading ? null : (
@@ -357,8 +355,7 @@ window.onload = function () {
                     </b>
                   )
                 ) : (
-                  <div id="disqus_thread" />
-                  // <div id="fastcomments-widget" />
+                  <div id="fastcomments-widget" />
                 )}
               </div>
             </div>
@@ -369,19 +366,14 @@ window.onload = function () {
   );
 }
 
-// reload disqus thread
-function reloadDisqusThread() {
-  // DISQUS is a global variable,
-  // which comes with the embedded disqus embed.js script
+// reload comment thread
+function reloadCommentThread() {
   try {
     // eslint-disable-next-line no-undef
-    DISQUS.reset({
-      reload: true,
-    });
+    loadComments();
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e);
-    // ...
   }
 }
 
@@ -461,7 +453,6 @@ export async function getStaticProps(ctx) {
     scheme,
     id: path,
     ga_track_code: process.env.GA_TRACK_CODE,
-    disqus_host: process.env.DISQUS_HOST,
   };
 
   const staticProps = {

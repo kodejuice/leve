@@ -100,7 +100,6 @@ export async function getServerSideProps(ctx) {
       posts,
       url: `${process.env.SCHEME}://${ctx.req.headers.host}`,
       host: ctx.req.headers.host,
-      disqus_host: process.env.DISQUS_HOST,
       is_dark: parseCookies({ req: ctx.req }).__dark === "1",
       show_draft_on_load: ctx.req.url.includes("draft=1"),
     },

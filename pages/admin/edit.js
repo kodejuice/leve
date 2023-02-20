@@ -730,7 +730,6 @@ export async function getServerSideProps(ctx) {
       props: {
         host: ctx.req.headers.host,
         url: `${process.env.SCHEME}://${ctx.req.headers.host}`,
-        disqus_host: process.env.DISQUS_HOST,
 
         post_id: post_id || null,
         topics: [],
@@ -753,7 +752,6 @@ export async function getServerSideProps(ctx) {
     props: {
       host: ctx.req.headers.host,
       url: `${process.env.SCHEME}://${ctx.req.headers.host}`,
-      disqus_host: process.env.DISQUS_HOST,
       post_id,
       post: data,
       topics,
