@@ -156,6 +156,7 @@ function PostView(props) {
           />
 
           <script
+            defer
             dangerouslySetInnerHTML={{
               __html: `
                 // Disqus config
