@@ -155,8 +155,22 @@ function PostView(props) {
             }}
           />
 
+          {/* <script src="https://cdn.fastcomments.com/js/embed-v2.min.js" />
           <script
             defer
+            dangerouslySetInnerHTML={{
+              __html: `
+window.onload = function () {
+  console.log(document.getElementById('fastcomments-widget'));
+  window.FastCommentsUI(document.getElementById('fastcomments-widget'), {
+      "tenantId": "demo"
+      // "tenantId": "pMDzWlCsGYX"
+  });
+}
+`,
+            }}
+          /> */}
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 // Disqus config
@@ -169,12 +183,12 @@ function PostView(props) {
                     this.page.identifier = "${details.name}:"+slug;
                     this.page.title = "${post.title}";
                 };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                    var d=document, s=d.createElement('script');
-                    s.src="https://${props.disqus_host}/embed.js";
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head||d.body).appendChild(s);
-                })();
+                window.onload = function() {
+                  var d=document, s=d.createElement('script');
+                  s.src="https://${props.disqus_host}/embed.js";
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head||d.body).appendChild(s);
+              }
                 `,
             }}
           />
@@ -344,6 +358,7 @@ function PostView(props) {
                   )
                 ) : (
                   <div id="disqus_thread" />
+                  // <div id="fastcomments-widget" />
                 )}
               </div>
             </div>
