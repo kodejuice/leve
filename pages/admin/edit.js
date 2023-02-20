@@ -162,6 +162,25 @@ export default function Edit(props) {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
           /> */}
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+function getComments() {
+  FastCommentsCommentCount(document.getElementById('fastcomments-count'), {
+    tenantId: 'pMDzWlCsGYX',
+    urlId: "${`//${host}/${slug}`}"
+  });
+}
+
+if (document.readyState === "complete") {
+  getComments();
+} else {
+  window.addEventListener('load', getComments);
+}
+`,
+            }}
+          />
         </Head>
 
         <div className="admin">
@@ -344,13 +363,13 @@ export default function Edit(props) {
                       <div className="row">
                         <div className="col-4">Comments: </div>
                         <div className="col comment-div">
-                          {/* disqus commentcount */}
+                          {/* commentcount */}
                           <a
-                            href={`https://${host}/${slug}#disqus_thread`}
+                            id="fastcomments-count"
                             underline="underline"
+                            href={`//${host}/${slug}#comments`}
                           >
-                            {" "}
-                            Comments{" "}
+                            comments
                           </a>
                         </div>
                       </div>

@@ -48,6 +48,7 @@ class MyDocument extends Document {
             strategy="beforeInteractive"
             src="https://cdn.fastcomments.com/js/embed-v2.min.js"
           />
+          <script src="https://cdn.fastcomments.com/js/widget-comment-count.min.js" />
 
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <Script
