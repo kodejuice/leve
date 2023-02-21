@@ -20,6 +20,7 @@ import verifyAuth from "../../utils/auth";
 import { addPostToDB, deleteDBPost } from "../../utils/db_requests";
 
 import { site_details as details } from "../../site_config";
+import { LoadCommentsCount } from "../../components/CommentsLoader";
 
 const QuoteSelect = dynamic(
   () => import("../../components/admin/QuoteSelect"),
@@ -162,11 +163,15 @@ export default function Edit(props) {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
           /> */}
-          <script
+          <LoadCommentsCount
+            urlId={`//${host}/${slug}`}
+            elementId="fastcomments-count"
+          />
+          {/* <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `
-function getComments() {
+function getCommentsCount() {
   FastCommentsCommentCount(document.getElementById('fastcomments-count'), {
     tenantId: 'pMDzWlCsGYX',
     urlId: "${`//${host}/${slug}`}"
@@ -174,13 +179,13 @@ function getComments() {
 }
 
 if (document.readyState === "complete") {
-  getComments();
+  getCommentsCount();
 } else {
-  window.addEventListener('load', getComments);
+  window.addEventListener('load', getCommentsCount);
 }
 `,
             }}
-          />
+          /> */}
         </Head>
 
         <div className="admin">

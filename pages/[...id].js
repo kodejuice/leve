@@ -31,6 +31,7 @@ import { site_details as details } from "../site_config";
 import SignupForm from "../components/home/SignupForm";
 import { getISOString, getPostDate } from "../utils/date";
 import GoBack from "../components/GoBack";
+import { LoadComments, LoadCommentsCount } from "../components/CommentsLoader";
 
 // import PageNotFound from "../components/PageNotFound";
 const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
@@ -155,40 +156,10 @@ function PostView(props) {
             }}
           />
 
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-function loadComments() {
-  var randomNumber = ~~(Math.random()*1e6)
-  var spinnerId = 'comments-spinner-'+randomNumber;
-
-  // add a spinner
-  var el = document.getElementById('fastcomments-widget');
-  if (!el) return;
-  el.innerHTML = "<img id='"+spinnerId+"' src='icons/spinner.svg' alt='Loading comments...'/>";
-
-  window.FastCommentsUI(el, {
-    // "tenantId": "demo",
-    "tenantId": "pMDzWlCsGYX",
-    absoluteAndRelativeDates: true,
-    useShowCommentsToggle: true,
-    onRender: function() {
-      // remove spinner
-      var spinner = document.getElementById(spinnerId);
-      if (spinner) {
-        el.removeChild(spinner);
-      }
-    }
-  });
-}
-
-if (document.readyState === "complete") {
-  loadComments();
-} else {
-  window.addEventListener('load', loadComments);
-}
-`,
-            }}
+          <LoadComments elementId="fastcomments-widget" />
+          <LoadCommentsCount
+            elementId="fastcomments-count"
+            urlId={`//${host}/${post.slug}`}
           />
         </Head>
 
@@ -355,7 +326,15 @@ if (document.readyState === "complete") {
                     </b>
                   )
                 ) : (
-                  <div id="fastcomments-widget" />
+                  <div>
+                    <div
+                      id="fastcomments-count"
+                      className="post-comments-count"
+                    >
+                      Comments
+                    </div>
+                    <div id="fastcomments-widget" />
+                  </div>
                 )}
               </div>
             </div>
