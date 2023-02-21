@@ -1,13 +1,14 @@
 /* eslint-disable react/no-danger */
+import { useEffect } from "react";
 
 const tenantId = "pMDzWlCsGYX";
 
 // FastComment Initializer
 export function LoadComments({ elementId }) {
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.type = "text/javascript";
+    s.innerHTML = `
 function loadComments() {
   var randomNumber = ~~(Math.random()*1e6)
   var spinnerId = 'comments-spinner-'+randomNumber;
@@ -16,7 +17,7 @@ function loadComments() {
   if (!el) return;
 
   // add a spinner
-  el.innerHTML = "<img id='"+spinnerId+"' src='icons/spinner.svg' alt='Loading comments...'/>";
+  el.innerHTML = "<img class='comments-wait-spinner' id='"+spinnerId+"' src='icons/spinner.svg' alt='Loading comments...'/>";
 
   window.FastCommentsUI(el, {
     // "tenantId": "demo",
@@ -38,18 +39,23 @@ if (document.readyState === "complete") {
 } else {
   window.addEventListener('load', loadComments);
 }
-`,
-      }}
-    />
-  );
+    `;
+    document.body.appendChild(s);
+
+    return () => {
+      document.body.removeChild(s);
+    };
+  }, [elementId]);
+
+  return null;
 }
 
 // load comment count
 export function LoadCommentsCount({ elementId, urlId }) {
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.type = "text/javascript";
+    s.innerHTML = `
 function getCommentsCount() {
   FastCommentsCommentCount(document.getElementById('${elementId}'), {
     tenantId: "${tenantId}",
@@ -62,8 +68,13 @@ if (document.readyState === "complete") {
 } else {
   window.addEventListener('load', getCommentsCount);
 }
-`,
-      }}
-    />
-  );
+`;
+    document.body.appendChild(s);
+
+    return () => {
+      document.body.removeChild(s);
+    };
+  }, [elementId, urlId]);
+
+  return null;
 }

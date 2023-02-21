@@ -155,12 +155,6 @@ function PostView(props) {
 `,
             }}
           />
-
-          <LoadComments elementId="fastcomments-widget" />
-          <LoadCommentsCount
-            elementId="fastcomments-count"
-            urlId={`//${host}/${post.slug}`}
-          />
         </Head>
 
         <div className="hide-on-desktop mt-4">
@@ -341,6 +335,12 @@ function PostView(props) {
           </div>
         </section>
       </div>
+
+      <LoadComments elementId="fastcomments-widget" />
+      <LoadCommentsCount
+        elementId="fastcomments-count"
+        urlId={`//${host}/${post.slug}`}
+      />
     </>
   );
 }
