@@ -163,29 +163,6 @@ export default function Edit(props) {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
           /> */}
-          <LoadCommentsCount
-            urlId={`//${host}/${slug}`}
-            elementId="fastcomments-count"
-          />
-          {/* <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
-function getCommentsCount() {
-  FastCommentsCommentCount(document.getElementById('fastcomments-count'), {
-    tenantId: 'pMDzWlCsGYX',
-    urlId: "${`//${host}/${slug}`}"
-  });
-}
-
-if (document.readyState === "complete") {
-  getCommentsCount();
-} else {
-  window.addEventListener('load', getCommentsCount);
-}
-`,
-            }}
-          /> */}
         </Head>
 
         <div className="admin">
@@ -648,6 +625,11 @@ if (document.readyState === "complete") {
 
             <br />
           </HeaderWrapper>
+
+          <LoadCommentsCount
+            urlId={`//${host}/${slug}`}
+            elementId="fastcomments-count"
+          />
         </div>
       </HotKeys>
     </HotKeys>
