@@ -125,6 +125,10 @@ body.body {
     color: #444;
   }
 
+  .button-text {
+    color: #333 !important;
+  }
+
   .visible-text {
     color: #333333 !important;
   }
@@ -245,6 +249,13 @@ code.inline {
 div.home-header {
   h1.site-name {
     font-size: 35px;
+  }
+}
+
+footer {
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
+    font-size: 12px;
   }
 }
 

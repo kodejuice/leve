@@ -40,7 +40,7 @@ export default function SignupForm() {
             value="Subscribe"
             name="subscribe"
             id="mc-embedded-subscribe"
-            className="submit-button"
+            className="submit-button button-text"
           />
         </div>
       </form>
