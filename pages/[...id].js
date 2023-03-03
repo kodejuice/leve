@@ -282,7 +282,7 @@ function PostView(props) {
               </article>
 
               <footer>
-                <div className="row mb-5 _post_footer">
+                <div className="row mb-2 _post_footer">
                   {/* subsribe to newsletter */}
                   <div className="col">
                     <legend id="subscribe" className="visible-text">
@@ -308,6 +308,17 @@ function PostView(props) {
                   ) : (
                     ""
                   )}
+                </div>
+
+                <div className="mb-4">
+                  <div className="text-left">
+                    <Link href="/">
+                      <a className="">
+                        <span className="glyphicon glyphicon-chevron-left" />
+                        Home
+                      </a>
+                    </Link>
+                  </div>
                 </div>
               </footer>
 
