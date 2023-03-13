@@ -62,6 +62,8 @@ export async function getBookShelves() {
 }
 
 function ShelfItem({ data }) {
+  const noList = data?.user_shelves?.includes("nolist");
+  if (noList) return null;
   const isFav = data?.user_shelves?.includes("favorites");
   const link = `https://www.goodreads.com/book/show/${data.book_id}`;
   return (
