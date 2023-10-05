@@ -4,7 +4,7 @@ export const site_details = {
   description: "Sochima Biereagu's website",
 
   links: {
-    twitter: "https://twitter.com/kodejuice",
+    twitter: "https://twitter.com/sochima_b",
     github: "https://github.com/kodejuice",
     linkedin: "https://linkedin.com/in/sochima",
     rss_url: "/api/rss.xml",
@@ -13,7 +13,7 @@ export const site_details = {
   goodreads_userid: 115473285,
 
   handle: {
-    twitter: "kodejuice",
+    twitter: "sochima_b",
   },
 
   dob: {
