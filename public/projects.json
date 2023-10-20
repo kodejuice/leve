@@ -1,6 +1,12 @@
 {
-  "papers": [],
   "posts": [],
+  "papers": [
+    {
+      "title": "Introducing the Role of Shaping Order K in Set Shaping Theory",
+      "href": "https://doi.org/10.31730/osf.io/ywmsr",
+      "excerpt": "This article introduces the pivotal role of K in the Set Shaping Theory, shedding light on its implications for data compression and transformation dynamics."
+    }
+  ],
   "projects": [
     {
       "title": "localGoogoo",
