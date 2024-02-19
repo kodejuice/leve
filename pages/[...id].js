@@ -200,7 +200,7 @@ function PostView(props) {
                   <div>
                     {(post.views && (
                       <small>
-                        <em title="" className="mt-1">
+                        <em title={post_views} className="mt-1">
                           {HRNumbers.toHumanString(post_views)} views
                         </em>
                       </small>
@@ -208,7 +208,17 @@ function PostView(props) {
                       null}
                   </div>
                 </>
-              ) : null}
+              ) : (
+                !parseCookies(null).__token && post.views && (
+                  <div>
+                    <small>
+                      <em title="" className="mt-1">
+                        {HRNumbers.toHumanString(post_views)} views
+                      </em>
+                  </small>
+                </div>
+                )
+              )}
               <div>
                 {(post.draft && (
                   <div
