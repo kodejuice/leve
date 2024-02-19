@@ -212,7 +212,7 @@ function PostView(props) {
                 !parseCookies(null).__token && post.views && (
                   <div>
                     <small>
-                      <em title="" className="mt-1">
+                      <em title={post_views} className="mt-1">
                         {HRNumbers.toHumanString(post_views)} views
                       </em>
                   </small>
