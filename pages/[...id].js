@@ -209,14 +209,15 @@ function PostView(props) {
                   </div>
                 </>
               ) : (
-                !parseCookies(null).__token && post.views && (
+                !parseCookies(null).__token &&
+                post.views && (
                   <div>
                     <small>
                       <em title={post_views} className="mt-1">
                         {HRNumbers.toHumanString(post_views)} views
                       </em>
-                  </small>
-                </div>
+                    </small>
+                  </div>
                 )
               )}
               <div>
