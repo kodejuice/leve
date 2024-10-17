@@ -52,8 +52,8 @@ class MyDocument extends Document {
 
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACK_CODE}`}
+            strategy="beforeInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=G-QDSBDZSG0Z`}
           />
           <Script
             strategy="afterInteractive"
@@ -62,7 +62,7 @@ class MyDocument extends Document {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('post_config', '${process.env.GA_TRACK_CODE}');
+                gtag('post_config', 'G-QDSBDZSG0Z');
               `,
             }}
           />
