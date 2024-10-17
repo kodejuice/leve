@@ -53,7 +53,7 @@ class MyDocument extends Document {
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <Script
             strategy="beforeInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=G-QDSBDZSG0Z`}
+            src="https://www.googletagmanager.com/gtag/js?id=G-QDSBDZSG0Z"
           />
           <Script
             strategy="afterInteractive"
