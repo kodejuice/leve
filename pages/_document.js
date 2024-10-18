@@ -49,23 +49,6 @@ class MyDocument extends Document {
             src="https://cdn.fastcomments.com/js/embed-v2.min.js"
           />
           <script src="https://cdn.fastcomments.com/js/widget-comment-count.min.js" />
-
-          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-          <Script
-            strategy="beforeInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-QDSBDZSG0Z"
-          />
-          <Script
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('post_config', 'G-QDSBDZSG0Z');
-              `,
-            }}
-          />
         </body>
       </Html>
     );
