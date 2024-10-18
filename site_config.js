@@ -4,7 +4,7 @@ export const site_details = {
   description: "Sochima Biereagu's website",
 
   links: {
-    twitter: "https://twitter.com/sochima_b",
+    twitter: "https://x.com/sochima_b",
     github: "https://github.com/kodejuice",
     linkedin: "https://linkedin.com/in/sochima",
     rss_url: "/api/rss.xml",

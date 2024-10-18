@@ -1,7 +1,7 @@
 const iconURL = {
   // github: "https://img.icons8.com/dusk/21/000000/github.png",
   github: "/icons/github.png",
-  twitter: "/icons/twitter.png",
+  twitter: "/icons/x.png",
   linkedin: "/icons/linkedin.png",
   "rss feed": "/icons/rss.png",
 };
