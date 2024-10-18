@@ -1,9 +1,11 @@
-A very minimal cms i built to manage my personal website.
+# A very minimal CMS I built to manage my personal website.
+
 Built with Next.js
 
 See environment variables in .env.example / next.config.js file.
 
 Requirement:
+
 - MongoDB
 
 Site details in site_config.js file
