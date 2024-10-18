@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
-import { GoogleAnalytics } from '@next/third-parties/google'
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -26,25 +26,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-
-      {/* <!-- Google Analytics --> */}
-      <GoogleAnalytics gaId="G-QDSBDZSG0Z" />
-
-      {/* <Script
-            strategy="beforeInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-QDSBDZSG0Z"
-          />
-          <Script
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('post_config', 'G-QDSBDZSG0Z');
-              `,
-            }}
-          /> */}
+      <GoogleAnalytics />
     </>
   );
 }
