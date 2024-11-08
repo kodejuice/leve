@@ -3,11 +3,12 @@ const iconURL = {
   github: "/icons/github.png",
   twitter: "/icons/x.png",
   linkedin: "/icons/linkedin.png",
+  google_scholar: "/icons/google-scholar.svg",
   "rss feed": "/icons/rss.png",
 };
 
 function Icon(props) {
-  const size = 30;
+  const size = props.size || 30;
   return (
     <a
       className="no-bg-color profile-link"
@@ -52,7 +53,12 @@ function SiteHeader(props) {
               <td className="hidden" />
               <td className="hidden" />
               <td>
-                <Icon url={links.rss_url} name="rss feed" />{" "}
+                <Icon
+                  url={links.google_scholar}
+                  name="google_scholar"
+                  size={28}
+                  blank
+                />{" "}
               </td>
             </tr>
           </tbody>
