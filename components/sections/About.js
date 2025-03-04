@@ -54,8 +54,8 @@ export default function About() {
           <span title="YHWH">Most High God</span>
         </div>
         <div title="a craftsman">
-          I also create Software, and I have a passion for solving
-          complex problems and finding creative solutions.
+          I also create Software, and I have a passion for solving complex
+          problems and finding creative solutions.
         </div>
         <p className="mt-2">
           I hold a <span title="ND">diploma</span> in Electrical Engineering
@@ -66,9 +66,10 @@ export default function About() {
         <p>
           In my free time, I enjoy coming up with new ideas and implementing
           them. I have a passion for solving problems and finding solutions that
-          can make a difference in people's lives. I created this little site to share
-          some of the things I have created or come up with, as well as to share
-          my thoughts and insights on various topics. Thank you for visiting!
+          can make a difference in people's lives. I created this little site to
+          share some of the things I have created or come up with, as well as to
+          share my thoughts and insights on various topics. Thank you for
+          visiting!
         </p>
       </div>
 
