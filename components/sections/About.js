@@ -51,25 +51,31 @@ export default function About() {
         <span title={`${getAge()}yo`}>Hello, my name is Sochima</span>
         <div>
           I&apos;m a King and a Priest of the{" "}
-          <span title="YHWH">Most High God</span>
+          <span title="YHWH">Most High God, </span>
         </div>
-        <div title="a craftsman">
-          I also create Software, and I have a passion for solving complex
-          problems and finding creative solutions.
+        <div>
+          a Scientist in pursuit of truth, an Engineer in service of creation,
+          and a Priest in devotion to the eternal,
+          forging words at the frontier of spirit and reason.
         </div>
+        <p>
+          I build software, craft ideas, and solve complex problems with creative precision.
+        </p>
         <p className="mt-2">
           I hold a <span title="ND">diploma</span> in Electrical Engineering
           from Yaba College of Technology, and I am currently pursuing a B.Sc in
-          Computer Science at Oregon State University. As an avid learner I am
-          always seeking new opportunities to expand my knowledge and skills.
+          Computer Science at Oregon State University. 
         </p>
         <p>
-          In my free time, I enjoy coming up with new ideas and implementing
-          them. I have a passion for solving problems and finding solutions that
-          can make a difference in people's lives. I created this little site to
-          share some of the things I have created or come up with, as well as to
-          share my thoughts and insights on various topics. Thank you for
-          visiting!
+          An avid learner and explorer, I am always seeking new ways to expand my knowledge,
+          deepen my understanding, and create solutions that make a meaningful difference.
+        </p>
+        <p>
+          In my free time, I enjoy dreaming up new ideas, building projects, and sharing insights
+          that bridge technology, faith, and human experience.
+        </p>
+        <p>
+          Thank you for visiting this small corner of my world.
         </p>
       </div>
 
