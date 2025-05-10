@@ -55,28 +55,28 @@ export default function About() {
         </div>
         <div>
           a Scientist in pursuit of truth, an Engineer in service of creation,
-          and a Priest in devotion to the eternal,
-          forging words at the frontier of spirit and reason.
+          and a Priest in devotion to the eternal, forging words at the frontier
+          of spirit and reason.
         </div>
         <p>
-          I build software, craft ideas, and solve complex problems with creative precision.
+          I build software, craft ideas, and solve complex problems with
+          creative precision.
         </p>
         <p className="mt-2">
           I hold a <span title="ND">diploma</span> in Electrical Engineering
           from Yaba College of Technology, and I am currently pursuing a B.Sc in
-          Computer Science at Oregon State University. 
+          Computer Science at Oregon State University.
         </p>
         <p>
-          An avid learner and explorer, I am always seeking new ways to expand my knowledge,
-          deepen my understanding, and create solutions that make a meaningful difference.
+          An avid learner and explorer, I am always seeking new ways to expand
+          my knowledge, deepen my understanding, and create solutions that make
+          a meaningful difference.
         </p>
         <p>
-          In my free time, I enjoy dreaming up new ideas, building projects, and sharing insights
-          that bridge technology, faith, and human experience.
+          In my free time, I enjoy dreaming up new ideas, building projects, and
+          sharing insights that bridge technology, faith, and human experience.
         </p>
-        <p>
-          Thank you for visiting this small corner of my world.
-        </p>
+        <p>Thank you for visiting this small corner of my world.</p>
       </div>
 
       <div className="crypto-info">
