@@ -59,7 +59,7 @@ export default function About() {
           of spirit and reason.
         </div>
         <p>
-          I build software, craft ideas, and solve complex problems with
+          I build technology, craft ideas, and solve complex problems with
           creative precision.
         </p>
         <p className="mt-2">
