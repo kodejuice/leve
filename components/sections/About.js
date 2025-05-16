@@ -55,8 +55,7 @@ export default function About() {
         </div>
         <div>
           a Scientist in pursuit of truth, an Engineer in service of creation,
-          and a Priest in devotion to the eternal, forging words at the frontier
-          of spirit and reason.
+          and a Priest in devotion to the eternal.
         </div>
         <p>
           I build technology, craft ideas, and solve complex problems with
@@ -73,8 +72,9 @@ export default function About() {
           a meaningful difference.
         </p>
         <p>
-          In my free time, I enjoy dreaming up new ideas, building projects, and
-          sharing insights that bridge technology, faith, and human experience.
+          In my free time, I enjoy seeking truth, dreaming up new ideas,
+          building projects, and sharing insights that bridge technology, faith,
+          and human experience.
         </p>
         <p>Thank you for visiting this small corner of my world.</p>
       </div>
