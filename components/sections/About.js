@@ -58,8 +58,8 @@ export default function About() {
           and a Priest in devotion to the eternal.
         </div>
         <p>
-          I build technology, craft ideas, and solve complex problems with
-          creative precision.
+          I build technology, dream up ideas, and solve complex problems with
+          heavenly inspiration and creative precision.
         </p>
         <p className="mt-2">
           I hold a <span title="ND">diploma</span> in Electrical Engineering
@@ -72,7 +72,7 @@ export default function About() {
           a meaningful difference.
         </p>
         <p>
-          In my free time, I enjoy seeking truth, dreaming up new ideas,
+          In my free time, I enjoy <span title="koinonia with YHWH">seeking truth</span>, dreaming up new ideas,
           building projects, and sharing insights that bridge technology, faith,
           and human experience.
         </p>
@@ -123,7 +123,7 @@ export default function About() {
         <h3>
           <b>Projects</b>
         </h3>
-        <p>As a craftsman here are some of the projects I&apos;ve worked on</p>
+        <p>Here are some of the projects I&apos;ve worked on</p>
 
         <Projects />
       </div>
