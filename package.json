@@ -3,6 +3,9 @@
   "private": true,
   "description": "minimal cms for my personal website",
   "main": "index.js",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
