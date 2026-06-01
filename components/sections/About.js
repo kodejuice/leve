@@ -67,16 +67,14 @@ export default function About() {
           Computer Science at Oregon State University.
         </p>
         <p>
-          An avid learner and explorer, I am always seeking new ways to expand
-          my knowledge, deepen my understanding, and create solutions that make
-          a meaningful difference.
+          My trajectory is fueled by a constant drive to deepen my understanding
+          of complex systems and architect solutions that yield substantive impact.
         </p>
         <p>
-          In my free time, I enjoy <span title="koinonia with YHWH">seeking truth</span>, dreaming up new ideas,
-          building projects, and sharing insights that bridge technology, faith,
-          and human experience.
+          Beyond formal study, I dedicate myself to interrogating truth, engineering
+          new concepts, and sharing insights that bridge technology, faith, and
+          the human experience.
         </p>
-        <p>Thank you for visiting this small corner of my world.</p>
       </div>
 
       <div className="crypto-info">
