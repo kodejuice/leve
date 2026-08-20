@@ -71,9 +71,8 @@ export default function About() {
           of complex systems and architect solutions that yield substantive impact.
         </p>
         <p>
-          Beyond formal study, I dedicate myself to interrogating truth, engineering
-          new concepts, and sharing insights that bridge technology, faith, and
-          the human experience.
+          Beyond formal study, I dedicate myself to interrogating truth, download divine inspiration, engineering
+          new concepts, and sharing insights that bridge technology and faith.
         </p>
       </div>
 
@@ -121,7 +120,7 @@ export default function About() {
         <h3>
           <b>Projects</b>
         </h3>
-        <p>Here are some of the projects I&apos;ve worked on</p>
+        <p>Some of the projects I&apos;ve worked on</p>
 
         <Projects />
       </div>
