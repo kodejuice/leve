@@ -62,7 +62,7 @@ export default function About() {
           heavenly inspiration and creative precision.
         </p>
         <p className="mt-2">
-          I hold a <span title="ND">diploma</span> in Electrical Engineering
+          I hold a <span title="ND">National Diploma</span> in Electrical Engineering
           from Yaba College of Technology, and I am currently pursuing a B.Sc in
           Computer Science at Oregon State University.
         </p>
