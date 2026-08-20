@@ -71,8 +71,7 @@ export default function About() {
           of complex systems and architect solutions that yield substantive impact.
         </p>
         <p>
-          Beyond formal study, I dedicate myself to interrogating truth, download divine inspiration, engineering
-          new concepts, and sharing insights that bridge technology and faith.
+          Beyond formal study, I dedicate myself to interrogating truth, downloading divine inspiration, engineering new concepts, and sharing insights that bridge technology and faith.
         </p>
       </div>
 
