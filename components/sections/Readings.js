@@ -7,25 +7,60 @@ import { site_details as details } from "../../site_config";
 
 const parser = new XMLParser();
 
-function requestList(userId, shelf) {
+function requestList(userId, shelf, urlPath, redirectCount = 0) {
+  if (redirectCount > 3) return Promise.resolve(null);
+
+  const path =
+    urlPath || `/review/list_rss/${userId}?shelf=${shelf}&sort=date_read`;
+  const isFullUrl = path.startsWith("http");
+  const targetUrl = isFullUrl ? new URL(path) : null;
+
   return new Promise((resolve) => {
     https
       .request(
         {
-          host: "www.goodreads.com",
-          path: `/review/list_rss/${userId}?shelf=${shelf}&sort=date_read`,
+          host: targetUrl ? targetUrl.hostname : "www.goodreads.com",
+          path: targetUrl ? `${targetUrl.pathname}${targetUrl.search}` : path,
+          headers: {
+            "User-Agent":
+              "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            Accept: "application/rss+xml, application/xml, text/xml, */*",
+          },
         },
         (response) => {
+          if (
+            response.statusCode >= 300 &&
+            response.statusCode < 400 &&
+            response.headers.location
+          ) {
+            resolve(
+              requestList(
+                userId,
+                shelf,
+                response.headers.location,
+                redirectCount + 1
+              )
+            );
+            return;
+          }
+
+          if (response.statusCode !== 200) {
+            resolve(null);
+            return;
+          }
+
           let data = "";
-          response.on("data", (chunk) => (data += chunk));
+          response.on("data", (chunk) => {
+            data += chunk;
+          });
           response.on("end", () => {
             try {
               const o = parser.parse(data);
               const all = o?.rss?.channel?.item;
-              const items = Array.isArray(all) ? all : [all];
+              const items = Array.isArray(all) ? all : all ? [all] : [];
               resolve(
                 items
-                  .filter((i) => !!i.book_id)
+                  .filter((i) => Boolean(i?.book_id))
                   .map((i) => ({
                     book_id: i.book_id,
                     user_read_at: i.user_read_at,
@@ -49,15 +84,30 @@ function requestList(userId, shelf) {
   });
 }
 
+let cachedShelves = null;
+let lastFetchTime = 0;
+const CACHE_TTL = 1000 * 60 * 15; // 15 minutes
+
 export async function getBookShelves() {
+  if (cachedShelves && Date.now() - lastFetchTime < CACHE_TTL) {
+    return cachedShelves;
+  }
+
   const userId = details.goodreads_userid;
   const shelves = ["currently-reading", "read"];
   const d = {};
   await Promise.all(
     shelves.map(async (shelf) => {
-      d[shelf] = await requestList(userId, shelf);
+      const list = await requestList(userId, shelf);
+      d[shelf] = list !== null ? list : cachedShelves?.[shelf] ?? null;
     })
   );
+
+  if (d["currently-reading"] !== null || d.read !== null) {
+    cachedShelves = d;
+    lastFetchTime = Date.now();
+  }
+
   return d;
 }
 
@@ -107,9 +157,9 @@ export default function Readings(props) {
       <div className="mt-4 mb-4">
         <ListShelf
           shelf="currently-reading"
-          data={props.readings["currently-reading"]}
+          data={props.readings?.["currently-reading"]}
         />
-        <ListShelf shelf="read" data={props.readings.read} />
+        <ListShelf shelf="read" data={props.readings?.read} />
       </div>
     </div>
   );
