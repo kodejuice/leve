@@ -1,9 +1,8 @@
-/* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { site_details as details } from "../../site_config";
-
 import Projects from "./Projects";
 
 const yearBorn = details.dob.year;
@@ -17,7 +16,7 @@ function getAge() {
   const currDay = d.getDate();
 
   const birthdayReached = Number(
-    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn)
+    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn),
   );
 
   return currYear - yearBorn - 1 + birthdayReached;
@@ -33,96 +32,126 @@ function birthdayToday() {
 
 const cryptoInfo = Object.entries(details.crypto);
 
-export default function About() {
-  const { width, height } = useWindowSize();
+function CryptoRow({ coin, address }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
-    <div>
-      <h2 className="section-title"> About Me </h2>
+    <div className="crypto-row">
+      <div className="crypto-asset">
+        <span className="crypto-symbol">{coin.toUpperCase()}</span>
+      </div>
+      <code className="crypto-addr" title={address}>
+        {address}
+      </code>
+      <CopyToClipboard text={address} onCopy={handleCopy}>
+        <button
+          type="button"
+          className="copy-btn"
+          aria-label={`Copy ${coin} address`}
+        >
+          {copied ? "Copied ✓" : "Copy"}
+        </button>
+      </CopyToClipboard>
+    </div>
+  );
+}
 
-      {birthdayToday() && (
-        <>
-          <Confetti width={width} height={height} />
-          <p title={`${getAge()}yo`}>I&apos;m +1 today ☺ </p>
-        </>
+export default function About() {
+  const { width, height } = useWindowSize();
+  const isBirthday = birthdayToday();
+  const age = getAge();
+
+  return (
+    <div className="about-page-container">
+      {isBirthday && (
+        <div className="birthday-banner">
+          <Confetti width={width} height={height} recycle={false} />
+          <p className="birthday-note">
+            Giving thanks for another year — {age} today ☺
+          </p>
+        </div>
       )}
 
-      <div>
-        <span title={`${getAge()}yo`}>Hello, my name is Sochima</span>
-        <div>
-          I&apos;m a King and a Priest of the{" "}
-          <span title="YHWH">Most High God, </span>
-        </div>
-        <div>
-          a Scientist in pursuit of truth, an Engineer in service of creation,
-          and a Priest in devotion to the eternal.
-        </div>
-        <p>
-          I build technology, dream up ideas, and solve complex problems with
-          heavenly inspiration and creative precision.
-        </p>
-        <p className="mt-2">
-          I hold a <span title="ND">National Diploma</span> in Electrical Engineering
-          from Yaba College of Technology, and I am currently pursuing a B.Sc in
-          Computer Science at Oregon State University.
-        </p>
-        <p>
-          My trajectory is fueled by a constant drive to deepen my understanding
-          of complex systems and architect solutions that yield substantive impact.
-        </p>
-        <p>
-          Beyond formal study, I dedicate myself to interrogating truth, downloading divine inspiration, engineering new concepts, and sharing insights that bridge technology and faith.
-        </p>
-      </div>
+      {/* Manifest & Bio */}
+      <section className="about-bio-section">
+        <h1 className="about-heading">About &amp; Intellectual Statement</h1>
 
-      <div className="crypto-info">
-        <p className="mb-0">Buy me a coffee ☕</p>
-        {cryptoInfo.map(([coin, address]) => (
-          <div key={coin} title={coin.toUpperCase()} className="row mb-2 mt-2">
-            <div className="col-3 img-col">
-              <img
-                alt={coin}
-                width={24}
-                height={24}
-                className="coin-img"
-                src={`/icons/${coin}.png`}
-              />
-            </div>
-            <CopyToClipboard text={address}>
-              <span className="crypto-address col-9">{address}</span>
-            </CopyToClipboard>
+        <blockquote className="vocation-quote">
+          <p className="quote-line primary">
+            &ldquo;A King and a Priest of the Most High God —
+          </p>
+          <p className="quote-line secondary">
+            a Scientist in pursuit of truth, an Engineer in service of creation,
+            and a Priest in devotion to the eternal.&rdquo;
+          </p>
+        </blockquote>
+
+        <div className="bio-body-text">
+          <p className="lead-paragraph">
+            Hello, my name is <strong>Sochima</strong>. I build technology,
+            investigate systems, and architect foundational solutions with
+            heavenly inspiration and precision.
+          </p>
+          <p>
+            I hold a National Diploma in Electrical Engineering from{" "}
+            <strong>Yaba College of Technology</strong>, and I am currently
+            pursuing a B.Sc in Computer Science at{" "}
+            <strong>Oregon State University</strong>. My trajectory is fueled by
+            a constant drive to deepen my understanding of mathematical
+            abstractions, physical limits, and scalable systems.
+          </p>
+          <p>
+            Beyond formal study, my work is dedicated to interrogating truth,
+            engineering new concepts, and sharing insights that bridge
+            technology and faith.
+
+            {/* Beyond formal study, I dedicate myself to interrogating truth,
+             downloading divine inspiration, engineering new concepts,
+              and sharing insights that bridge technology and faith. */}
+          </p>
+        </div>
+      </section>
+
+      {/* Publications & Systems */}
+      <section className="about-works-section mt-5">
+        <Projects />
+      </section>
+
+      {/* Support / Patronage */}
+      <section className="about-support-section mt-5">
+        <div className="support-card">
+          <div className="support-header">
+            <h3 className="support-title">Patronage &amp; Support</h3>
+            <p className="support-desc">
+              If my writings, research, or open-source libraries have served or
+              inspired you, you can support my independent work below.
+            </p>
           </div>
-        ))}
-        <div title="Patreon" className="row mb-2 mt-2">
-          <div className="col-3 img-col">
-            <img
-              alt="patreon"
-              width={24}
-              height={24}
-              className="coin-img"
-              src="/icons/patreon.png"
-            />
+
+          <div className="crypto-addresses-list">
+            {cryptoInfo.map(([coin, address]) => (
+              <CryptoRow key={coin} coin={coin} address={address} />
+            ))}
           </div>
-          <span className="support-link col-9">
+
+          <div className="patreon-support-row">
+            <span className="patreon-label">Recurring Patronage:</span>
             <a
               href="https://patreon.com/sochima_b"
               target="_blank"
               rel="noreferrer"
+              className="patreon-link"
             >
-              Patreon
+              Support via Patreon &rarr;
             </a>
-          </span>
+          </div>
         </div>
-      </div>
-
-      <div className="mt-4">
-        <h3>
-          <b>Projects</b>
-        </h3>
-        <p>Some of the projects I&apos;ve worked on</p>
-
-        <Projects />
-      </div>
+      </section>
     </div>
   );
 }
