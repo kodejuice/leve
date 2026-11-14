@@ -48,6 +48,11 @@ body.dark {
   --accent-subtle: rgba(217, 119, 70, 0.12);
   --code-bg: rgba(230, 227, 220, 0.06);
   --selection: #2a2d34;
+
+  .badge-venture {
+    background: rgba(72, 187, 138, 0.14);
+    color: #5ecba0;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -573,7 +578,8 @@ div.home-main {
       margin-bottom: 0.5rem;
 
       .badge-academic,
-      .badge-system {
+      .badge-system,
+      .badge-venture {
         font-family: var(--font-sans);
         font-size: 0.7rem;
         text-transform: uppercase;
@@ -591,6 +597,11 @@ div.home-main {
       .badge-system {
         background: var(--bg-subtle);
         color: var(--text-secondary);
+      }
+
+      .badge-venture {
+        background: rgba(38, 102, 77, 0.1);
+        color: #26664d;
       }
 
       .arxiv-id {

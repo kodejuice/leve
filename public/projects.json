@@ -33,5 +33,19 @@
       "href": "https://github.com/kodejuice/chip8-emulator",
       "excerpt": "A chip8 emulator, an interpreter for the chip8 programming language."
     }
+  ],
+  "_ventures": [
+    {
+      "title": "KudiKeep",
+      "href": "https://kudikeep.app",
+      "badge": "Fintech & Escrow",
+      "excerpt": "A secure social commerce escrow platform for Nigeria, eliminating fraud between online buyers and sellers."
+    },
+    {
+      "title": "Wisdom for Kids",
+      "href": "https://wisdomforkids.app",
+      "badge": "AI EdTech",
+      "excerpt": "An AI-powered character education platform offering conversational mentorship and behavioral tools for K-5 schools."
+    }
   ]
 }

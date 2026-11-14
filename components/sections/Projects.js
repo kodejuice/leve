@@ -61,12 +61,41 @@ function ProjectCard({ item }) {
   );
 }
 
+function VentureCard({ item }) {
+  const { title, excerpt, href, badge } = item;
+
+  return (
+    <article className="academic-card venture-card">
+      <div className="card-meta">
+        <span className="badge-venture">{badge || "Commercial Venture"}</span>
+      </div>
+      <h4 className="card-title">
+        <a href={href} target="_blank" rel="noreferrer">
+          {title}
+        </a>
+      </h4>
+      <p className="card-excerpt">{excerpt}</p>
+      <div className="card-action">
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="external-link-btn"
+        >
+          Visit Platform &rarr;
+        </a>
+      </div>
+    </article>
+  );
+}
+
 export default function Projects() {
   const { data } = useSWR("/projects.json");
   const works = data || staticProjects;
 
   const papers = works.papers || [];
   const projects = works.projects || [];
+  const ventures = works.ventures || [];
 
   return (
     <div className="projects-showcase">
@@ -121,6 +150,22 @@ export default function Projects() {
             >
               View additional repositories &amp; open source on GitHub &rarr;
             </a>
+          </div>
+        </section>
+      )}
+
+      {ventures.length > 0 && (
+        <section className="works-category mt-5">
+          <div className="category-header">
+            <h3 className="category-title">Ventures &amp; Applied Products</h3>
+            <span className="category-subtitle">
+              Production software and applied consumer platforms
+            </span>
+          </div>
+          <div className="cards-grid">
+            {ventures.map((v) => (
+              <VentureCard key={v.title} item={v} />
+            ))}
           </div>
         </section>
       )}
