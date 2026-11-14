@@ -638,9 +638,11 @@ div.home-main {
     }
   }
 
-  .more-github-row {
+  .more-github-row,
+  .more-publications-row {
     margin-top: 1.5rem;
-    .github-profile-link {
+    .github-profile-link,
+    .scholar-profile-link {
       font-family: var(--font-sans);
       font-size: 0.88rem;
       color: var(--accent);
@@ -1409,6 +1411,7 @@ div.home-main {
     flex-wrap: wrap;
 
     .newsletter-text {
+      flex: 1 1 260px;
       .newsletter-title {
         font-size: 1.05rem;
         font-weight: 600;
@@ -1420,6 +1423,20 @@ div.home-main {
         font-size: 0.88rem;
         color: var(--text-secondary);
         margin: 0.2rem 0 0 0;
+      }
+    }
+
+    .footer-newsletter-form {
+      flex: 1 1 300px;
+      max-width: 440px;
+      width: 100%;
+
+      #mc_embed_signup {
+        form {
+          #mc_embed_signup_scroll {
+            margin: 0;
+          }
+        }
       }
     }
 

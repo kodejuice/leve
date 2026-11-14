@@ -75,13 +75,23 @@ export default function Projects() {
           <div className="category-header">
             <h3 className="category-title">Research Papers</h3>
             <span className="category-subtitle">
-              Preprints, mathematical foundations, and computational theory
+              Preprints, mathematical foundations, and computing systems
             </span>
           </div>
           <div className="cards-grid">
             {papers.map((p) => (
               <PaperCard key={p.title} item={p} />
             ))}
+          </div>
+          <div className="more-publications-row">
+            <a
+              href="https://scholar.google.com/citations?user=6mI5FV0AAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+              className="scholar-profile-link"
+            >
+              View all papers on Google Scholar &rarr;
+            </a>
           </div>
         </section>
       )}
@@ -93,7 +103,7 @@ export default function Projects() {
               Systems &amp; Algorithmic Engines
             </h3>
             <span className="category-subtitle">
-              Compressors, AI engines, search, and emulation
+              Compressors, AI engines, search ...
             </span>
           </div>
           <div className="cards-grid">

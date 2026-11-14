@@ -4,44 +4,27 @@ export default function SignupForm() {
   const [email, setEmail] = useState("");
 
   return (
-    <div id="mc_embed_signup">
+    <div id="mc_embed_signup" className="signup-form-container">
       <form
-        action="https://sochima.us13.list-manage.com/subscribe/post?u=59b59168364f415f6f1c05a6c&amp;id=c5d697a59e&amp;f_id=006cdce2f0"
+        action="https://api.follow.it/subscription-form/UXRlWW5xYWd4eUlURm9KQ0ZMMUFzUmtoTGRpWkRaOWp5VUpIckFkNFBqb2s5RFlCNDlZTkNHNXJhZU5aRmY3OWd3SUdYbVhncS91OHZ2dzVBQmNmTjVPZnZyZGxQRHdkczlBQytvbkhLYzNEVG0vSk9wVXZPVDZyNmoyTGdxdFF8dERFdFVkSHBGTTJ6c2ZqQ3piMlhvQVFJK1pzV2xlQzY5eWFCM3RmMS94ST0=/8"
         method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        className="validate"
         target="_blank"
+        className="signup-form"
       >
         <div id="mc_embed_signup_scroll">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            name="EMAIL"
+            name="email"
+            placeholder="Enter your email address..."
             className="email-input"
-            id="mce-EMAIL"
             required
+            spellCheck="false"
           />
-          <div
-            style={{ position: "absolute", left: "-5000px" }}
-            aria-hidden="true"
-          >
-            <input
-              type="text"
-              name="b_59b59168364f415f6f1c05a6c_c5d697a59e"
-              tabIndex="-1"
-              value=""
-              readOnly
-            />
-          </div>
-          <input
-            type="submit"
-            value="Subscribe"
-            name="subscribe"
-            id="mc-embedded-subscribe"
-            className="submit-button button-text"
-          />
+          <button type="submit" className="submit-button button-text">
+            Subscribe
+          </button>
         </div>
       </form>
     </div>

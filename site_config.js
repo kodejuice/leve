@@ -8,6 +8,7 @@ export const site_details = {
     github: "https://github.com/kodejuice",
     linkedin: "https://linkedin.com/in/sochima",
     rss_url: "/api/rss.xml",
+    newsletter: "https://follow.it/sochima-biereagu?leanpub",
     google_scholar:
       "https://scholar.google.com/citations?user=6mI5FV0AAAAJ&hl=en",
   },

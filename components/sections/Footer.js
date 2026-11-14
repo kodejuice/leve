@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site_details as details } from "../../site_config";
+import SignupForm from "../home/SignupForm";
 
 export default function Footer({ current }) {
   return (
@@ -14,14 +15,9 @@ export default function Footer({ current }) {
             faith.
           </p>
         </div>
-        <a
-          href="http://eepurl.com/h8OUC5"
-          target="_blank"
-          rel="noreferrer"
-          className="newsletter-btn"
-        >
-          Subscribe via Email
-        </a>
+        <div className="footer-newsletter-form">
+          <SignupForm />
+        </div>
       </div>
 
       <div className="footer-bottom">
@@ -45,6 +41,18 @@ export default function Footer({ current }) {
           </Link>
           <span className="sep">·</span>
           <a href={details.links.rss_url}>RSS</a>
+          {details.links.newsletter && (
+            <>
+              <span className="sep">·</span>
+              <a
+                href={details.links.newsletter}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Newsletter
+              </a>
+            </>
+          )}
         </div>
 
         <div className="footer-colophon">

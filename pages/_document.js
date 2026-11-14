@@ -36,6 +36,10 @@ class MyDocument extends Document {
             title="Sochima Biereagu"
             href={`https://${process.env.HOST}/api/rss.xml`}
           />
+          <meta
+            name="follow.it-verification-code"
+            content="utTSUNq7yLNkJl4s547U"
+          />
           <meta name="charset" content="utf-8" />
           <meta name="referrer" content="no-referrer-when-downgrade" />
 
