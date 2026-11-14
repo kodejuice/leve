@@ -68,7 +68,7 @@ export default function About() {
 
   return (
     <div className="about-page-container">
-      {!isBirthday && (
+      {isBirthday && (
         <div className="birthday-banner">
           <Confetti width={width} height={height} recycle={true} />
           <p className="birthday-note">
