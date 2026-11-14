@@ -16,7 +16,7 @@ function getAge() {
   const currDay = d.getDate();
 
   const birthdayReached = Number(
-    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn)
+    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn),
   );
 
   return currYear - yearBorn - 1 + birthdayReached;
@@ -122,29 +122,40 @@ export default function About() {
       <section className="about-support-section mt-5">
         <div className="support-card">
           <div className="support-header">
-            <h3 className="support-title">Patronage &amp; Support</h3>
-            <p className="support-desc">
-              If my writings, research, or open-source libraries have served or
-              inspired you, you can support my independent work below.
-            </p>
+            <h3 className="support-title">Private Notes &amp; Patronage</h3>
+            {/* <p className="support-desc">
+              Patreon members receive private research dispatches, working
+              notes, and early ideas not published on the open web. You can also
+              buy me a coffee or send a one-off tip via crypto below.
+            </p> */}
           </div>
 
-          <div className="crypto-addresses-list">
-            {cryptoInfo.map(([coin, address]) => (
-              <CryptoRow key={coin} coin={coin} address={address} />
-            ))}
-          </div>
-
-          <div className="patreon-support-row">
-            <span className="patreon-label">Recurring Patronage:</span>
+          <div className="patreon-support-box">
+            <div className="patreon-info">
+              <span className="patreon-name">Patreon Membership</span>
+              <span className="patreon-meta">
+                Exclusive behind-the-scenes research &amp; private essays
+              </span>
+            </div>
             <a
               href="https://patreon.com/sochima_b"
               target="_blank"
               rel="noreferrer"
-              className="patreon-link"
+              className="patreon-btn"
             >
-              Support via Patreon &rarr;
+              Join on Patreon &rarr;
             </a>
+          </div>
+
+          <div className="coffee-section">
+            <span className="coffee-label">
+              Buy me a coffee / tip (Crypto):
+            </span>
+            <div className="crypto-addresses-list">
+              {cryptoInfo.map(([coin, address]) => (
+                <CryptoRow key={coin} coin={coin} address={address} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

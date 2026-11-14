@@ -103,7 +103,8 @@ export default function Projects() {
               Systems &amp; Algorithmic Engines
             </h3>
             <span className="category-subtitle">
-              Compressors, AI engines, search ...
+              Computational systems, algorithmic architectures, and open-source
+              tooling
             </span>
           </div>
           <div className="cards-grid">
