@@ -106,13 +106,9 @@ export default function About() {
             abstractions, physical limits, and scalable systems.
           </p>
           <p>
-            Beyond formal study, my work is dedicated to interrogating truth,
-            engineering new concepts, and sharing insights that bridge
+            Beyond formal study, my work is dedicated to pursuing truth,
+            pioneering new technologies, and sharing insights that bridge
             technology and faith.
-
-            {/* Beyond formal study, I dedicate myself to interrogating truth,
-             downloading divine inspiration, engineering new concepts,
-              and sharing insights that bridge technology and faith. */}
           </p>
         </div>
       </section>
