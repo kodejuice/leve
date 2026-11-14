@@ -16,7 +16,7 @@ function getAge() {
   const currDay = d.getDate();
 
   const birthdayReached = Number(
-    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn),
+    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn)
   );
 
   return currYear - yearBorn - 1 + birthdayReached;
@@ -70,9 +70,9 @@ export default function About() {
     <div className="about-page-container">
       {isBirthday && (
         <div className="birthday-banner">
-          <Confetti width={width} height={height} recycle={true} />
-          <p className="birthday-note">
-            Giving thanks for another year — I'm +1 today 😊
+          <Confetti width={width} height={height} recycle />
+          <p className="birthday-note" title={`${age}yo`}>
+            Giving thanks for another year — I&apos;m +1 today 😊
           </p>
         </div>
       )}

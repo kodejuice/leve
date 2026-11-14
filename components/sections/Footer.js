@@ -11,8 +11,7 @@ export default function Footer({ current }) {
             Subscribe to occasional essays
           </span>
           <p className="newsletter-desc">
-            Dispatches on information theory, algorithms, engineering, and
-            faith.
+            Thoughts on technology, ideas, faith, and life.
           </p>
         </div>
         <div className="footer-newsletter-form">
