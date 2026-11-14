@@ -1,87 +1,118 @@
-import Link from "next/link";
+import staticProjects from "../../public/projects.json";
 import useSWR from "../../utils/swr";
 
-function Item(props) {
-  const { title, excerpt, href } = props.info;
-  const { isPaper } = props;
+function PaperCard({ item }) {
+  const { title, excerpt, href } = item;
+  // Extract arXiv ID if present in href
+  const arxivMatch = href.match(/abs\/([0-9.]+)/);
+  const arxivId = arxivMatch ? arxivMatch[1] : null;
 
   return (
-    <div className="mb-2">
-      {isPaper && (
-        <img
-          src="icons/pdf.png"
-          alt="📰️"
-          width="22"
-          height="22"
-          className="mr-2"
-        />
-      )}
-      <Link href={href} as={href}>
-        <a className="post-title" rel="noreferrer" target="_blank">
+    <article className="academic-card paper-card">
+      <div className="card-meta">
+        <span className="badge-academic">arXiv Preprint</span>
+        {arxivId && <span className="arxiv-id">arXiv:{arxivId} [cs.IT]</span>}
+      </div>
+      <h4 className="card-title">
+        <a href={href} target="_blank" rel="noreferrer">
           {title}
         </a>
-      </Link>
-      <div className="post-excerpt ml-3"> {excerpt} </div>
-    </div>
+      </h4>
+      <p className="card-excerpt">{excerpt}</p>
+      <div className="card-action">
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="external-link-btn"
+        >
+          View on arXiv &rarr;
+        </a>
+      </div>
+    </article>
   );
 }
 
-function ListProjects({ type, projects, brief, paper }) {
-  if (!projects?.length) return null;
+function ProjectCard({ item }) {
+  const { title, excerpt, href } = item;
 
   return (
-    <div className="mb-4">
-      <span className="project-title">{type}</span>
-      {brief && <em className="small">{brief}</em>}
-      <div className="mt-1">
-        {projects.map((v) => (
-          <Item key={v.title} info={v} isPaper={paper} />
-        ))}
+    <article className="academic-card project-card">
+      <div className="card-meta">
+        <span className="badge-system">Software &amp; Algorithms</span>
       </div>
-    </div>
+      <h4 className="card-title">
+        <a href={href} target="_blank" rel="noreferrer">
+          {title}
+        </a>
+      </h4>
+      <p className="card-excerpt">{excerpt}</p>
+      <div className="card-action">
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="external-link-btn"
+        >
+          Source Code on GitHub &rarr;
+        </a>
+      </div>
+    </article>
   );
 }
 
 export default function Projects() {
-  const { data, isError } = useSWR("./projects.json");
-  const loading = !data && !isError;
-  const works = data || {};
+  const { data } = useSWR("/projects.json");
+  const works = data || staticProjects;
 
-  if (isError) {
-    return (
-      <p>
-        <em>Failed to load projects, refresh page</em>
-      </p>
-    );
-  }
+  const papers = works.papers || [];
+  const projects = works.projects || [];
 
   return (
-    <div>
-      <div>
-        {loading ? (
-          <p className="pt-4"> Loading ... </p>
-        ) : (
-          <>
-            <ListProjects type="Papers" projects={works.papers} paper />
-            <ListProjects
-              type="Posts"
-              projects={works.posts}
-              brief="Blog posts featuring a notable project"
-            />
-            <ListProjects type="Software" projects={works.projects} />
-            <p className="">
-              <a
-                href="https://github.com/kodejuice"
-                title="kodejuice"
-                target="_blank"
-                rel="noreferrer"
-              >
-                More on Github
-              </a>
-            </p>
-          </>
-        )}
-      </div>
+    <div className="projects-showcase">
+      {papers.length > 0 && (
+        <section className="works-category">
+          <div className="category-header">
+            <h3 className="category-title">Research Papers</h3>
+            <span className="category-subtitle">
+              Preprints, mathematical foundations, and computational theory
+            </span>
+          </div>
+          <div className="cards-grid">
+            {papers.map((p) => (
+              <PaperCard key={p.title} item={p} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {projects.length > 0 && (
+        <section className="works-category mt-5">
+          <div className="category-header">
+            <h3 className="category-title">
+              Systems &amp; Algorithmic Engines
+            </h3>
+            <span className="category-subtitle">
+              Compressors, AI engines, search, and emulation
+            </span>
+          </div>
+          <div className="cards-grid">
+            {projects.map((p) => (
+              <ProjectCard key={p.title} item={p} />
+            ))}
+          </div>
+          <div className="more-github-row">
+            <a
+              href="https://github.com/kodejuice"
+              target="_blank"
+              rel="noreferrer"
+              className="github-profile-link"
+            >
+              View additional repositories &amp; open source on GitHub &rarr;
+            </a>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

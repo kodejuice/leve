@@ -1,67 +1,35 @@
-/* dark theme */
+/* ==========================================================================
+   DARK THEME: CODE SYNTAX & SYSTEM INTEGRATION
+   ========================================================================== */
+
 body.dark {
-  /* dark-bg */
-  * {
-    color: #ccc;
+  /* FastComments Dark Theme Styling */
+  #fastcomments-widget {
+    color: var(--text-primary);
   }
 
-  .rss-svg {
-    g {
-      fill: #ccc;
-    }
-  }
-
-  background-color: #282c34 !important;
-
-  .visible-text {
-    color: #ccc !important;
-  }
-
-  a,
-  a.link {
-    color: #0dfffc !important;
-
-    &:hover {
-      background: #282c34 !important;
-    }
-  }
-
-  div.post-comments-count {
-    border-bottom: 1.75px solid #ccc !important;
-  }
-
+  /* Inline Code */
   code.inline {
-    color: #ccc !important;
+    background-color: var(--code-bg);
+    color: var(--text-primary);
   }
 
-  .p-quote cite,
-  em cite {
-    //color: #ddd;
-    color: #bbb;
+  /* Highlight.js: Nord / Ocean Theme for Dark Mode */
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    background: var(--bg-card);
+    color: #c0c5ce;
+    padding: 0.85em 1em;
+    border-radius: var(--radius-md);
   }
 
-  div.f-nav {
-    .f-link {
-      &.br {
-        border-right: 1.5px solid #ccc;
-      }
-
-      a.active {
-        color: #fff !important;
-      }
-    }
-  }
-
-  /* highlight.js
-      Ocean color scheme*/
-
-  /* Ocean Comment */
   .hljs-comment,
   .hljs-quote {
     color: #65737e;
+    font-style: italic;
   }
 
-  /* Ocean Red */
   .hljs-variable,
   .hljs-template-variable,
   .hljs-tag,
@@ -73,7 +41,6 @@ body.dark {
     color: #bf616a;
   }
 
-  /* Ocean Orange */
   .hljs-number,
   .hljs-built_in,
   .hljs-builtin-name,
@@ -85,12 +52,10 @@ body.dark {
     color: #d08770;
   }
 
-  /* Ocean Yellow */
   .hljs-attribute {
     color: #ebcb8b;
   }
 
-  /* Ocean Green */
   .hljs-string,
   .hljs-symbol,
   .hljs-bullet,
@@ -98,24 +63,14 @@ body.dark {
     color: #a3be8c;
   }
 
-  /* Ocean Blue */
   .hljs-title,
   .hljs-section {
     color: #8fa1b3;
   }
 
-  /* Ocean Purple */
   .hljs-keyword,
   .hljs-selector-tag {
     color: #b48ead;
-  }
-
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    background: #2b303b;
-    color: #c0c5ce;
-    padding: 0.5em;
   }
 
   .hljs-emphasis {

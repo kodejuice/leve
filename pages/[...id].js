@@ -51,7 +51,7 @@ function PostView(props) {
 
   useEffect(() => {
     if (post?.slug && !parseCookies(null)[post.slug]) {
-      update_views(props.id, scheme).then((yes) => {
+      update_views(props.id).then((yes) => {
         if (yes) {
           // store cookie so the 'views' field of this post gets updated once
           setCookie(null, post.slug, "1", {
@@ -97,11 +97,13 @@ function PostView(props) {
 
   return (
     <>
-      <ProgressBar bgcolor="#999" height="5px" />
+      <ProgressBar bgcolor="#9e472a" height="3px" />
 
-      <div className="container">
+      <div className="page-wrapper post-page-wrapper">
         <Head>
-          <title> {post.title} </title>
+          <title>
+            {post.title} — {details.name}
+          </title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -128,10 +130,6 @@ function PostView(props) {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
           />
-          {/* <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"
-          /> */}
 
           <script
             type="application/ld+json"
@@ -157,205 +155,143 @@ function PostView(props) {
           />
         </Head>
 
-        <div className="hide-on-desktop mt-4">
-          <div title="Go Home">
-            <GoBack title="Back" />
-          </div>
-        </div>
-
-        <div className="position-fixed action-btn">
-          <div className="toggler">
-            <Toggle onSwitch={() => reloadCommentThread()} />
-          </div>
-
-          <div className="hide-on-mobile">
-            <p
-              className="hide-on-lt-823"
-              style={{ position: "fixed", top: 0, left: 2, fontFamily: "Fira" }}
-            >
-              <small style={{ fontSize: "14px" }}>{details.name}</small>
-            </p>
-            <div title="Go Home">
-              <GoBack />
+        <div className="page-container post-view-container">
+          {/* Post Top Bar: Breadcrumb + Author + Theme & Admin controls */}
+          <div className="post-top-bar">
+            <div className="post-top-left">
+              <GoBack title="All Writing" />
             </div>
-            <div className="mt-4">
-              {parseCookies(null).__token ? (
-                <>
-                  <div title="Edit post">
-                    <Link href={`admin/edit?slug=${post.slug}`}>
-                      <a className="btn btn-link">
-                        <span className="glyphicon glyphicon-pencil" />
-                      </a>
-                    </Link>
-                  </div>
 
-                  <div title="Add new post">
-                    <Link href="admin/edit">
-                      <a className="btn btn-link">
-                        <span className="glyphicon glyphicon-plus" />
-                      </a>
-                    </Link>
-                  </div>
-
-                  <div>
-                    {(post.views && (
-                      <small>
-                        <em title={post_views} className="mt-1">
-                          {HRNumbers.toHumanString(post_views)} views
-                        </em>
-                      </small>
-                    )) ||
-                      null}
-                  </div>
-                </>
-              ) : (
-                !parseCookies(null).__token &&
-                post.views && (
-                  <div>
-                    <small>
-                      <em title={post_views} className="mt-1">
-                        {HRNumbers.toHumanString(post_views)} views
-                      </em>
-                    </small>
-                  </div>
-                )
+            <div className="post-top-right">
+              {parseCookies(null).__token && (
+                <div className="admin-post-actions">
+                  <Link href={`admin/edit?slug=${post.slug}`}>
+                    <a className="admin-btn" title="Edit Post">
+                      Edit
+                    </a>
+                  </Link>
+                  <Link href="admin/edit">
+                    <a className="admin-btn" title="New Post">
+                      + New
+                    </a>
+                  </Link>
+                </div>
               )}
-              <div>
-                {(post.draft && (
-                  <div
-                    title="This post isnt published yet"
-                    className="mt-3 p-0 btn btn-secondary px-1"
-                  >
-                    DRAFT
-                  </div>
-                )) ||
-                  null}
-              </div>
+              <Toggle onSwitch={() => reloadCommentThread()} />
             </div>
           </div>
-        </div>
 
-        <section>
-          <div className="home-main mt-5 post-view pl-2">
-            <header>
-              <h1 className="post-title"> {post.title} </h1>
-              <p className="info ml-3">
-                <Link href="/">
-                  <a title="author" className="no-underline">
-                    {post.author}
-                  </a>
-                </Link>
-                ,<span>&lt;</span>
-                <a
-                  target="_blank"
-                  href={`mailto:${post.author_email}`}
-                  rel="noreferrer"
+          <article className="post-main-article">
+            <header className="post-header">
+              {post.draft ? (
+                <div
+                  className="post-draft-badge"
+                  title="This post isn't published yet"
                 >
-                  {post.author_email}
-                </a>
-                <span>/&gt;</span>
-              </p>
+                  DRAFT
+                </div>
+              ) : null}
+
+              <h1 className="post-main-title">{post.title}</h1>
+
+              <div className="post-meta-byline">
+                <span className="post-author-name">{post.author}</span>
+                <span className="meta-sep">&bull;</span>
+                {!post.is_loading && (
+                  <>
+                    <time
+                      dateTime={post.pub_date_iso}
+                      className="post-pub-date"
+                    >
+                      {post.pub_date}
+                    </time>
+                    <span className="meta-sep">&bull;</span>
+                    <span className="post-read-time">{timeToRead.text}</span>
+                  </>
+                )}
+                {post.views ? (
+                  <>
+                    <span className="meta-sep">&bull;</span>
+                    <span className="post-view-count">
+                      {HRNumbers.toHumanString(post_views)} views
+                    </span>
+                  </>
+                ) : null}
+              </div>
             </header>
 
-            <div className="article">
-              <article>
-                {!post.is_loading && (
-                  <p className="pub_date">
-                    <span className="mr-2">{post.pub_date}</span> ·{" "}
-                    <span className="ml-2">{timeToRead.text}</span>
-                  </p>
-                )}
-
-                {/* quote */}
-                {post.post_quote != null ? (
-                  <blockquote className="blockquote text-right mt-4">
-                    <p className="mb-0 post-quote">{post.post_quote.quote}</p>
-                    <footer className="blockquote-footer p-quote">
-                      <cite title="Author">{post.post_quote.author}</cite>
-                    </footer>
-                  </blockquote>
-                ) : (
-                  ""
-                )}
-
-                {/* post content */}
-                <div
-                  className="post-content mt-4 visible-text"
-                  dangerouslySetInnerHTML={{
-                    __html: post_content,
-                  }}
-                />
-                <p className="pt-1 text-right updated-time">
-                  {" "}
-                  {post.last_modified !== post.pub_date &&
-                    `Updated ${post.last_modified}`}{" "}
+            {/* Featured Quote */}
+            {post.post_quote != null ? (
+              <blockquote className="featured-post-quote">
+                <p className="quote-text">
+                  &ldquo;{post.post_quote.quote}&rdquo;
                 </p>
-              </article>
+                <cite className="quote-cite">
+                  &mdash; {post.post_quote.author}
+                </cite>
+              </blockquote>
+            ) : null}
 
-              <footer>
-                <div className="row mb-2 _post_footer">
-                  {/* subsribe to newsletter */}
-                  <div className="col">
-                    <legend id="subscribe" className="visible-text">
-                      Get an email whenever theres a new article
-                    </legend>
-                    <div className="form-row newsletter-signup">
-                      <div className="col">
-                        <SignupForm />
-                      </div>
-                    </div>
-                  </div>
+            {/* Post Content */}
+            <div
+              className="post-content"
+              dangerouslySetInnerHTML={{
+                __html: post_content,
+              }}
+            />
 
-                  {/* next post >> */}
-                  {!isEmpty(post.next_post) ? (
-                    <div className="col-12 col-sm-6 text-right next-post-link">
-                      <Link href="[...id].js" as={`/${post.next_post.slug}`}>
-                        <a className="next-post-link">
-                          {post.next_post.title}{" "}
-                          <span className="glyphicon glyphicon-chevron-right" />
-                        </a>
-                      </Link>
-                    </div>
-                  ) : (
-                    ""
-                  )}
+            {post.last_modified && post.last_modified !== post.pub_date && (
+              <p className="post-updated-time">
+                <em>Updated: {post.last_modified}</em>
+              </p>
+            )}
+
+            {/* Post Footer & Next Article */}
+            <footer className="post-article-footer">
+              <div className="post-newsletter-box">
+                <span className="newsletter-box-title">
+                  Receive new essays in your inbox
+                </span>
+                <div className="post-newsletter-form">
+                  <SignupForm />
                 </div>
-
-                <div className="mb-4">
-                  <div className="text-left">
-                    <Link href="/">
-                      <a className="">
-                        <span className="glyphicon glyphicon-chevron-left" />
-                        Home
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </footer>
-
-              {/*<!-- COMMENTS HERE -->*/}
-              <div className="comments" id="comments">
-                {!post.allow_comments ? (
-                  post.is_loading ? null : (
-                    <b>
-                      <em> Comments Disabled </em>
-                    </b>
-                  )
-                ) : (
-                  <div>
-                    <div
-                      id="fastcomments-count"
-                      className="post-comments-count"
-                    >
-                      Comments
-                    </div>
-                    <div id="fastcomments-widget" />
-                  </div>
-                )}
               </div>
+
+              {!isEmpty(post.next_post) && (
+                <div className="next-post-card">
+                  <span className="next-post-label">Next Essay &rarr;</span>
+                  <Link href="[...id].js" as={`/${post.next_post.slug}`}>
+                    <a className="next-post-title">{post.next_post.title}</a>
+                  </Link>
+                </div>
+              )}
+
+              <div className="post-back-home">
+                <Link href="/">
+                  <a className="back-home-link">&larr; Return to Homepage</a>
+                </Link>
+              </div>
+            </footer>
+
+            {/* Comments */}
+            <div className="post-comments-wrapper" id="comments">
+              {!post.allow_comments ? (
+                post.is_loading ? null : (
+                  <p className="comments-disabled">
+                    <em>Comments are closed for this essay.</em>
+                  </p>
+                )
+              ) : (
+                <div className="comments-box">
+                  <div id="fastcomments-count" className="comments-header">
+                    Discussion
+                  </div>
+                  <div id="fastcomments-widget" />
+                </div>
+              )}
             </div>
-          </div>
-        </section>
+          </article>
+        </div>
       </div>
 
       <LoadComments elementId="fastcomments-widget" />
@@ -380,13 +316,17 @@ function reloadCommentThread() {
 
 // this update the `views` property of a post
 // in the database
-async function update_views(slug, scheme) {
-  if (!slug) return;
-  const url = `${scheme}://${location.host}/api/post/${slug}`;
-  await fetch(url, {
-    headers: { cookie: parseCookies(null) },
-  });
-  return true;
+async function update_views(slug) {
+  if (!slug) return false;
+  try {
+    const url = `/api/post/${slug}`;
+    await fetch(url, {
+      headers: { cookie: parseCookies(null) },
+    });
+    return true;
+  } catch (err) {
+    return false;
+  }
 }
 
 // placeholder data

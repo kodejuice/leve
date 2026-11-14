@@ -1,7 +1,6 @@
 /* eslint-disable no-use-before-define */
 import Link from "next/link";
 import Head from "next/head";
-import fetch from "node-fetch";
 import { useState } from "react";
 import { setCookie } from "nookies";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -9,11 +8,9 @@ import queryString from "query-string";
 
 import { site_details as details } from "../../site_config";
 
-function LoginPage(props) {
+function LoginPage() {
   const [pwd, setPwd] = useState("");
   const [isLoading, beginAuth] = useState(false);
-
-  const { scheme } = props;
 
   return (
     <>
@@ -24,29 +21,93 @@ function LoginPage(props) {
         <meta name="description" content={details.name} />
       </Head>
 
-      <div className="container">
-        <div className="position-fixed back-btn">
-          <Link href="../">
-            <a title="Go home" className="home-link btn btn-link">
-              <b>&lt;&lt;&lt;</b>
-            </a>
-          </Link>
-        </div>
+      <div className="page-wrapper">
+        <div
+          className="page-container"
+          style={{ maxWidth: 440, paddingTop: "4rem" }}
+        >
+          <div className="login-box">
+            <div style={{ marginBottom: "2rem" }}>
+              <Link href="/">
+                <a
+                  style={{
+                    color: "var(--text-secondary)",
+                    textDecoration: "none",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  &larr; Back to site
+                </a>
+              </Link>
+            </div>
 
-        <div className="home-main mb-5">
-          <h1> LOGIN </h1>
-          <div className="mt-5">
-            <form onSubmit={(ev) => Login(ev, pwd, beginAuth, scheme)}>
-              <div className="form-group mt-5">
+            <h1
+              style={{
+                fontSize: "1.75rem",
+                fontFamily: "var(--font-serif)",
+                fontWeight: 600,
+                marginBottom: "0.5rem",
+              }}
+            >
+              Admin Access
+            </h1>
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                fontSize: "0.95rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              Authenticate to manage publications, drafts, and archives.
+            </p>
+
+            <form onSubmit={(ev) => Login(ev, pwd, beginAuth)}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
+                }}
+              >
                 <input
                   type="password"
-                  className="form-control w-50 mr-2 input-login-pwd"
-                  placeholder="Enter password"
+                  placeholder="Enter administrator password"
                   value={pwd}
                   onChange={(ev) => setPwd(ev.target.value)}
-                  style={{ display: "inline-block" }}
+                  style={{
+                    padding: "0.75rem 1rem",
+                    borderRadius: "6px",
+                    border: "1px solid var(--border)",
+                    backgroundColor: "var(--bg)",
+                    color: "var(--text-primary)",
+                    fontSize: "1rem",
+                    outline: "none",
+                  }}
                 />
-                <ClipLoader size={15} color="#123abc" loading={isLoading} />
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.5rem",
+                    padding: "0.75rem 1.25rem",
+                    borderRadius: "6px",
+                    border: "none",
+                    backgroundColor: "var(--accent)",
+                    color: "#ffffff",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    cursor: isLoading ? "not-allowed" : "pointer",
+                  }}
+                >
+                  {isLoading ? (
+                    <ClipLoader size={16} color="#ffffff" loading={isLoading} />
+                  ) : (
+                    "Sign In"
+                  )}
+                </button>
               </div>
             </form>
           </div>
@@ -56,49 +117,39 @@ function LoginPage(props) {
   );
 }
 
-async function Login(ev, pwd, beginAuth, scheme) {
+async function Login(ev, pwd, beginAuth) {
   ev.preventDefault();
 
-  const { rdr } = queryString.parse(location.href.split("?")[1]);
+  const queryPart =
+    typeof location !== "undefined" ? location.href.split("?")[1] : "";
+  const { rdr } = queryString.parse(queryPart || "");
 
-  // render spinner active
   beginAuth(true);
 
-  const baseUrl = `${scheme}://${location.host}`;
-  const res = await fetch(`${baseUrl}/api/auth/login`, {
-    method: "POST",
-    body: JSON.stringify({ password: pwd }),
-    headers: { "Content-type": "application/json" },
-  });
-  const json = await res.json();
-
-  //
-  if (json.success !== true) {
-    // lol, lets confuse someones child
-    alert("Correct!");
-  } else {
-    // password correct
-    // set token in cookie
-
-    setCookie(null, "__token", json.token, {
-      path: "/",
-      maxAge: 86400 * 31, // 31 days
+  try {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      body: JSON.stringify({ password: pwd }),
+      headers: { "Content-Type": "application/json" },
     });
+    const json = await res.json();
 
-    // redirect page
-    window.location = rdr || `${scheme}://${location.host}`;
+    if (json.success !== true) {
+      alert("Invalid password.");
+    } else {
+      setCookie(null, "__token", json.token, {
+        path: "/",
+        maxAge: 86400 * 31, // 31 days
+      });
+
+      window.location = rdr || "/admin/list";
+      return;
+    }
+  } catch (err) {
+    alert("Network or server error while logging in.");
+  } finally {
+    beginAuth(false);
   }
-
-  // stops spinner (if page not redirected)
-  beginAuth(false);
-}
-
-export function getStaticProps() {
-  return {
-    props: {
-      scheme: process.env.SCHEME,
-    },
-  };
 }
 
 export default LoginPage;

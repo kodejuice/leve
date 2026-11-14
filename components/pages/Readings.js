@@ -1,22 +1,17 @@
 import Head from "next/head";
-
-import Readings from "../sections/Readings";
 import HomeHead from "../sections/HomeHead";
-import { SideBar } from "../sections/SideBar";
-
 import SiteHeader from "../sections/SiteHeader";
-
-import { site_details as details } from "../../site_config";
 import Footer from "../sections/Footer";
+import Readings from "../sections/Readings";
+import { site_details as details } from "../../site_config";
 
-function ReadingsPage(props) {
+export default function ReadingsPage(props) {
   const { host, scheme } = props;
 
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <Head>
-        <title> Readings | {details.name} </title>
-
+        <title>Reading Shelf | {details.name}</title>
         <HomeHead
           host={host}
           scheme={scheme}
@@ -24,29 +19,15 @@ function ReadingsPage(props) {
         />
       </Head>
 
-      <SideBar />
+      <div className="page-container">
+        <SiteHeader details={details} current="readings" />
 
-      <div className="home-main mb-5 pl-2">
-        <section>
-          <header>
-            <SiteHeader details={details} />
-          </header>
+        <main className="main-content">
+          <Readings {...props} />
+        </main>
 
-          <article>
-            <div className="home-posts ml-2">
-              <div>
-                <Readings {...props} />
-              </div>
-            </div>
-          </article>
-
-          <footer>
-            <Footer current="readings" />
-          </footer>
-        </section>
+        <Footer current="readings" />
       </div>
     </div>
   );
 }
-
-export default ReadingsPage;

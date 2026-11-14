@@ -33,9 +33,7 @@ function Export(props) {
           page="export"
         >
           <div className="mt-4">
-            <a
-              href={`${props.scheme}://${host}/api/post/import_export?type=export`}
-            >
+            <a href="/api/post/import_export?type=export">
               {" "}
               Download site data ({props.total_size}){" "}
             </a>

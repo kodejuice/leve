@@ -1,26 +1,19 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-
-// import Readings from "../sections/Readings";
 import { startCase } from "lodash";
 import HomeHead from "../sections/HomeHead";
-import { SideBar } from "../sections/SideBar";
-
 import SiteHeader from "../sections/SiteHeader";
-
-import { site_details as details } from "../../site_config";
 import Footer from "../sections/Footer";
+import { site_details as details } from "../../site_config";
 
-// import PostList from "../sections/Posts";
 const PostList = dynamic(() => import("../sections/Posts"), {
   ssr: false,
-  loading: () => <p> Loading posts... </p>,
+  loading: () => <p className="loading-notice">Loading writing...</p>,
 });
 
-// get the topic name as its stored in the post
 function getTopicName(post, topicFromURL) {
   if (!post) return topicFromURL;
-  const topics = post.topic;
+  const topics = post.topic || [];
   for (let i = 0; i < topics.length; i += 1) {
     const topic = topics[i].trim().toLowerCase();
     if (topic === topicFromURL) return topics[i].trim();
@@ -28,22 +21,23 @@ function getTopicName(post, topicFromURL) {
   return topicFromURL;
 }
 
-function TopicsPage(props) {
-  const { host, scheme, paths, posts } = props;
-  const route = paths[1];
+export default function TopicsPage(props) {
+  const { host, scheme, paths, posts = [] } = props;
+  const route = paths?.[1];
 
   if (!route) {
     if (typeof window !== "undefined") window.location = "/";
     return null;
   }
 
+  const topicName = getTopicName(posts[0], route);
+
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <Head>
         <title>
-          &quot;{startCase(route)}&quot; Posts | {details.description}
+          &ldquo;{startCase(route)}&rdquo; Essays | {details.name}
         </title>
-
         <HomeHead
           host={host}
           scheme={scheme}
@@ -51,32 +45,26 @@ function TopicsPage(props) {
         />
       </Head>
 
-      <SideBar />
+      <div className="page-container">
+        <SiteHeader details={details} current="topic" />
 
-      <div className="home-main mb-5 pl-2">
-        <section>
-          <header>
-            <SiteHeader details={details} />
-          </header>
+        <main className="main-content">
+          <div className="topic-header-bar mb-4">
+            <span className="topic-pretitle">Topic Collection</span>
+            <h1 className="topic-title">{topicName}</h1>
+          </div>
 
-          <article>
-            <div className="home-posts ml-2">
-              <PostList
-                show_all
-                posts={posts}
-                limit={false}
-                title={`"${getTopicName(posts[0], route)}" Posts`}
-              />
-            </div>
-          </article>
+          <PostList
+            show_all
+            posts={posts}
+            title={`${posts.length} ${
+              posts.length === 1 ? "Essay" : "Essays"
+            } on ${topicName}`}
+          />
+        </main>
 
-          <footer>
-            <Footer />
-          </footer>
-        </section>
+        <Footer current="archives" />
       </div>
     </div>
   );
 }
-
-export default TopicsPage;

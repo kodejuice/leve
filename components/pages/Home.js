@@ -1,27 +1,28 @@
 import Head from "next/head";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 import HomeHead from "../sections/HomeHead";
-import { SideBar } from "../sections/SideBar";
 import SiteHeader from "../sections/SiteHeader";
 import Footer from "../sections/Footer";
 import { site_details as details } from "../../site_config";
 
-// import PostList from "../sections/Posts";
 const PostList = dynamic(() => import("../sections/Posts"), {
   ssr: false,
-  loading: () => <p> Loading posts... </p>,
+  loading: () => <p className="loading-notice">Loading writing...</p>,
 });
 
-function Home(props) {
+export default function Home(props) {
   const { recent_posts, all_posts_count } = props;
   const { host, scheme } = props;
 
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <Head>
-        <title> {details.name} </title>
-
+        <title>
+          {details.name} — Computer Science, Information Theory &amp;
+          Engineering
+        </title>
         <HomeHead
           host={host}
           scheme={scheme}
@@ -29,30 +30,42 @@ function Home(props) {
         />
       </Head>
 
-      <SideBar home />
+      <div className="page-container">
+        <SiteHeader details={details} current="home" />
 
-      <div className="home-main mb-5 pl-2">
-        <section>
-          <header>
-            <SiteHeader details={details} />
-          </header>
-
-          <article>
-            <div className="home-posts ml-2">
-              <PostList
-                posts={recent_posts}
-                all_posts_count={all_posts_count}
-              />
+        <main className="main-content">
+          <section className="intro-hero">
+            <p className="hero-lead">
+              Engineer and research scientist turning first-principles discovery
+              into real-world technology. Committed to disciplined execution and
+              the pursuit of truth.
+            </p>
+            <div className="hero-quick-links">
+              <Link href="/about">
+                <a className="hero-pill-link">
+                  <span className="pill-badge">Research</span>
+                  <span>Selected Publications &rarr;</span>
+                </a>
+              </Link>
+              <Link href="/readings">
+                <a className="hero-pill-link secondary">
+                  <span>Reading Shelf &rarr;</span>
+                </a>
+              </Link>
             </div>
-          </article>
+          </section>
 
-          <footer>
-            <Footer current="home" />
-          </footer>
-        </section>
+          <section className="home-writing-section">
+            <PostList
+              posts={recent_posts}
+              all_posts_count={all_posts_count}
+              title="Recent Writing"
+            />
+          </section>
+        </main>
+
+        <Footer current="home" />
       </div>
     </div>
   );
 }
-
-export default Home;

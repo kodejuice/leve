@@ -1,22 +1,17 @@
 import Head from "next/head";
-
-import About from "../sections/About";
 import HomeHead from "../sections/HomeHead";
-import { SideBar } from "../sections/SideBar";
-
 import SiteHeader from "../sections/SiteHeader";
-
-import { site_details as details } from "../../site_config";
 import Footer from "../sections/Footer";
+import About from "../sections/About";
+import { site_details as details } from "../../site_config";
 
-function AboutPage(props) {
+export default function AboutPage(props) {
   const { host, scheme } = props;
 
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <Head>
-        <title> About | {details.name} </title>
-
+        <title>About &amp; Research | {details.name}</title>
         <HomeHead
           host={host}
           scheme={scheme}
@@ -24,27 +19,15 @@ function AboutPage(props) {
         />
       </Head>
 
-      <SideBar />
+      <div className="page-container">
+        <SiteHeader details={details} current="about" />
 
-      <div className="home-main mb-5 pl-2">
-        <section>
-          <header>
-            <SiteHeader details={details} />
-          </header>
+        <main className="main-content">
+          <About />
+        </main>
 
-          <article>
-            <div className="home-posts ml-2">
-              <About />
-            </div>
-          </article>
-
-          <footer>
-            <Footer current="about" />
-          </footer>
-        </section>
+        <Footer current="about" />
       </div>
     </div>
   );
 }
-
-export default AboutPage;

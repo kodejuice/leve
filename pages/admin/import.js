@@ -7,7 +7,7 @@ import { site_details as details } from "../../site_config";
 import verifyAuth from "../../utils/auth";
 
 function Import(props) {
-  const { host, scheme } = props;
+  const { host } = props;
 
   return (
     <>
@@ -65,7 +65,7 @@ function Import(props) {
               method="post"
               encType="multipart/form-data"
               className="mt-4 mb-5 wp-upload-form"
-              action={`${scheme}://${host}/api/post/import_export?type=import`}
+              action="/api/post/import_export?type=import"
             >
               <label
                 className="screen-reader-text file-label"

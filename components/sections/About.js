@@ -16,7 +16,7 @@ function getAge() {
   const currDay = d.getDate();
 
   const birthdayReached = Number(
-    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn),
+    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn)
   );
 
   return currYear - yearBorn - 1 + birthdayReached;

@@ -38,6 +38,18 @@ class MyDocument extends Document {
           />
           <meta name="charset" content="utf-8" />
           <meta name="referrer" content="no-referrer-when-downgrade" />
+
+          {/* Typography: Newsreader (Editorial Serif), Inter (Sans UI), JetBrains Mono (Code/Math) */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body className="body">
           <Main />
