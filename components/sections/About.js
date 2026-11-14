@@ -68,18 +68,18 @@ export default function About() {
 
   return (
     <div className="about-page-container">
-      {isBirthday && (
+      {!isBirthday && (
         <div className="birthday-banner">
-          <Confetti width={width} height={height} recycle={false} />
+          <Confetti width={width} height={height} recycle={true} />
           <p className="birthday-note">
-            Giving thanks for another year — {age} today ☺
+            Giving thanks for another year — I'm +1 today 😊
           </p>
         </div>
       )}
 
       {/* Manifest & Bio */}
       <section className="about-bio-section">
-        <h1 className="about-heading">About &amp; Intellectual Statement</h1>
+        <h1 className="about-heading">About Me</h1>
 
         <blockquote className="vocation-quote">
           <p className="quote-line primary">
@@ -93,8 +93,9 @@ export default function About() {
 
         <div className="bio-body-text">
           <p className="lead-paragraph">
-            Hello, my name is <strong>Sochima</strong>. I build technology,
-            investigate systems, and architect foundational solutions with
+            Hello, my name is <strong>Sochima</strong>. I build technology, and
+            architect foundational solutions bringing{" "}
+            <strong>light and order</strong> to hard problems through with
             heavenly inspiration and precision.
           </p>
           <p>
@@ -107,8 +108,8 @@ export default function About() {
           </p>
           <p>
             Beyond formal study, my work is dedicated to pursuing truth,
-            pioneering new technologies, and sharing insights that bridge
-            technology and faith.
+            pioneering new technologies, and sharing insights that bring light
+            to both technology and faith.
           </p>
         </div>
       </section>
