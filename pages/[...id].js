@@ -18,7 +18,8 @@ import HRNumbers from "human-readable-numbers";
 import "highlight.js/styles/github.css";
 
 import Toggle from "../components/home/Toggle";
-import { Init, Page, sitePages } from "../components/pages/list";
+import { Page, sitePages } from "../components/pages/list";
+import { getBookShelves } from "../utils/goodreads";
 import { getBestMatch } from "../utils/string-similarity";
 import { WordCount } from "../utils/index";
 import {
@@ -402,8 +403,8 @@ export async function getStaticProps(ctx) {
 
   if (sitePages.has(path)) {
     props.paths = params;
-    if (Init[path]) {
-      props[path] = (await Init[path](id)) || {};
+    if (path === "readings") {
+      props.readings = (await getBookShelves()) || {};
     }
     if (path === "archives") {
       props.archives = await getPosts(["title", "slug", "topic", "excerpt"]);
