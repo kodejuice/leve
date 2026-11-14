@@ -16,7 +16,7 @@ function getAge() {
   const currDay = d.getDate();
 
   const birthdayReached = Number(
-    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn)
+    currMonth > monthBorn || (currMonth === monthBorn && currDay >= dayBorn),
   );
 
   return currYear - yearBorn - 1 + birthdayReached;
@@ -95,8 +95,8 @@ export default function About() {
           <p className="lead-paragraph">
             Hello, my name is <strong>Sochima</strong>. I build technology, and
             architect foundational solutions bringing{" "}
-            <strong>light and order</strong> to hard problems through with
-            heavenly inspiration and precision.
+            <strong>light and order</strong> to technical problems through
+            divine inspiration and precision.
           </p>
           <p>
             I hold a National Diploma in Electrical Engineering from{" "}
