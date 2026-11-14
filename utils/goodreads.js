@@ -3,33 +3,50 @@ import os from "os";
 import path from "path";
 import https from "https";
 import { URL } from "url";
-import { site_details as details } from "../site_config";
+import { site_details as details } from "../site_config.js";
 
-const DISK_CACHE_FILE = path.join(os.tmpdir(), "goodreads-shelf-cache.json");
+const PRIMARY_CACHE_FILE = path.join(
+  process.cwd(),
+  "data",
+  "goodreads-cache.json"
+);
+const TMP_CACHE_FILE = path.join(os.tmpdir(), "goodreads-shelf-cache.json");
 
-function readDiskCache(ignoreExpiration = false) {
+function readDiskCache() {
+  // 1. Try TMP cache first (has recent runtime updates)
   try {
-    if (!fs.existsSync(DISK_CACHE_FILE)) return null;
-    const raw = fs.readFileSync(DISK_CACHE_FILE, "utf8");
-    const data = JSON.parse(raw);
-    const isFresh =
-      data?.timestamp && Date.now() - data.timestamp < 1000 * 60 * 60 * 24; // 24 hours
-    if (isFresh || ignoreExpiration) {
-      return data?.shelves || null;
+    if (fs.existsSync(TMP_CACHE_FILE)) {
+      const raw = fs.readFileSync(TMP_CACHE_FILE, "utf8");
+      const data = JSON.parse(raw);
+      if (data?.shelves) return data.shelves;
     }
   } catch (e) {
     // ignore
   }
+
+  // 2. Fallback to project-committed cache file
+  try {
+    if (fs.existsSync(PRIMARY_CACHE_FILE)) {
+      const raw = fs.readFileSync(PRIMARY_CACHE_FILE, "utf8");
+      const data = JSON.parse(raw);
+      if (data?.shelves) return data.shelves;
+    }
+  } catch (e) {
+    // ignore
+  }
+
   return null;
 }
 
 function writeDiskCache(shelves) {
+  const payload = JSON.stringify({ timestamp: Date.now(), shelves }, null, 2);
   try {
-    fs.writeFileSync(
-      DISK_CACHE_FILE,
-      JSON.stringify({ timestamp: Date.now(), shelves }),
-      "utf8"
-    );
+    fs.writeFileSync(TMP_CACHE_FILE, payload, "utf8");
+  } catch (e) {
+    // ignore
+  }
+  try {
+    fs.writeFileSync(PRIMARY_CACHE_FILE, payload, "utf8");
   } catch (e) {
     // ignore
   }
@@ -167,6 +184,74 @@ function parseProfileBooks(html) {
   return result;
 }
 
+function parseWidgetBooks(html) {
+  if (!html) return [];
+  const books = [];
+  const unescaped = html
+    .replace(/\\"/g, '"')
+    .replace(/\\'/g, "'")
+    .replace(/\\n/g, "\n")
+    .replace(/\\\//g, "/");
+
+  // Pattern 1: custom widget containers
+  if (unescaped.includes("gr_custom_each_container_")) {
+    const blocks = unescaped.split("gr_custom_each_container_").slice(1);
+    blocks.forEach((b) => {
+      const titleMatch = b.match(
+        /class="gr_custom_title_"[^>]*>[\s\S]*?<a[^>]*>([^<]+)<\/a>/i
+      );
+      const authorMatch = b.match(
+        /class="gr_custom_author_"[^>]*>[\s\S]*?<a[^>]*>([^<]+)<\/a>/i
+      );
+      const idMatch =
+        b.match(/\/books\/[0-9]+[a-z0-9_-]*\/([0-9]+)/i) ||
+        b.match(/l\/([0-9]+)\./i) ||
+        b.match(/show\/([0-9]+)/i);
+
+      if (titleMatch && idMatch) {
+        books.push({
+          book_id: idMatch[1],
+          title: cleanText(titleMatch[1]),
+          author_name: cleanText(authorMatch ? authorMatch[1] : ""),
+          user_shelves: ["favorites", "read"],
+        });
+      }
+    });
+  }
+
+  // Pattern 2: grid widget containers
+  if (unescaped.includes("gr_grid_book_container")) {
+    const gridMatches = [
+      ...unescaped.matchAll(
+        /<div class="gr_grid_book_container"><a title="([^"]+)"[^>]*href="https:\/\/www\.goodreads\.com\/review\/show\/([0-9]+)[^"]*"><img[^>]*src="https:\/\/i\.gr-assets\.com\/images\/[^\/]+\/[^\/]+\/books\/[0-9]+l\/([0-9]+)[^"]*"/gi
+      ),
+    ];
+    gridMatches.forEach((m) => {
+      const rawTitle = m[1];
+      const book_id = m[3];
+      let title = rawTitle;
+      let author_name = "";
+      if (rawTitle.includes(" by ")) {
+        const parts = rawTitle.split(" by ");
+        title = parts[0].trim();
+        author_name = parts.slice(1).join(" by ").trim();
+      } else if (rawTitle.includes(" By ")) {
+        const parts = rawTitle.split(" By ");
+        title = parts[0].trim();
+        author_name = parts.slice(1).join(" By ").trim();
+      }
+      books.push({
+        book_id,
+        title: cleanText(title),
+        author_name: cleanText(author_name),
+        user_shelves: ["favorites", "read"],
+      });
+    });
+  }
+
+  return books;
+}
+
 function parseYearBooks(html) {
   const books = [];
   if (!html) return books;
@@ -191,60 +276,118 @@ function parseYearBooks(html) {
 
 let cachedShelves = null;
 let lastFetchTime = 0;
-const CACHE_TTL = 1000 * 60 * 30; // 30 minutes
+const CACHE_TTL = 1000 * 60 * 60; // 1 hour in-memory throttle
 
 export async function getBookShelves() {
+  // If memory cache is fresh, serve it immediately
   if (cachedShelves && Date.now() - lastFetchTime < CACHE_TTL) {
     return cachedShelves;
   }
 
-  // Check persistent disk cache first (fresh for 24h)
-  const diskData = readDiskCache(false);
-  if (diskData) {
+  // Load baseline from persistent disk cache (never expires)
+  const diskData = readDiskCache();
+  if (diskData && !cachedShelves) {
     cachedShelves = diskData;
-    lastFetchTime = Date.now();
-    return diskData;
   }
 
   const userId = details.goodreads_userid;
 
   try {
+    const START_YEAR = 2020;
     const currentYear = new Date().getFullYear();
-    const years = [currentYear, 2025, 2024, 2023, 2022, 2021, 2020];
+    const years = [];
+    for (let y = currentYear; y >= START_YEAR; y--) {
+      years.push(y);
+    }
 
-    // Fetch profile and years in parallel from Goodreads
-    const [profileHtml, ...yearHtmls] = await Promise.all([
-      fetchGoodreadsProfile(userId),
-      ...years.map((y) =>
-        fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${y}/${userId}`)
-      ),
-    ]);
+    // Fetch profile, favorite widgets, and years in parallel from Goodreads
+    const [profileHtml, customWidgetHtml, gridWidgetHtml, ...yearHtmls] =
+      await Promise.all([
+        fetchGoodreadsProfile(userId),
+        fetchGoodreadsProfile(
+          userId,
+          0,
+          `/review/custom_widget/${userId}?shelf=favorites`
+        ),
+        fetchGoodreadsProfile(
+          userId,
+          0,
+          `/review/grid_widget/${userId}?shelf=favorites&num_books=100&order=d&sort=date_added`
+        ),
+        ...years.map((y) =>
+          fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${y}/${userId}`)
+        ),
+      ]);
 
     const parsed = parseProfileBooks(profileHtml) || {
       "currently-reading": [],
       read: [],
     };
 
+    // Initialize Map with diskData books so NO existing book is ever lost!
     const readMap = new Map();
-    // 1. Add favorite books from profile first (marked as favorites)
-    (parsed.read || []).forEach((b) => {
-      readMap.set(b.book_id, b);
-    });
-
-    // 2. Add books from Year in Books
-    yearHtmls.forEach((yHtml) => {
-      const yBooks = parseYearBooks(yHtml);
-      yBooks.forEach((b) => {
-        if (!readMap.has(b.book_id)) {
-          readMap.set(b.book_id, b);
+    if (diskData?.read) {
+      diskData.read.forEach((b) => {
+        if (b?.book_id) {
+          readMap.set(b.book_id, { ...b });
         }
       });
+    }
+
+    function upsertBook(b, isFav = false) {
+      if (!b || !b.book_id) return;
+      const existing = readMap.get(b.book_id);
+      if (!existing) {
+        const shelves = [...(b.user_shelves || ["read"])];
+        if (isFav && !shelves.includes("favorites")) shelves.push("favorites");
+        readMap.set(b.book_id, {
+          book_id: b.book_id,
+          title: b.title,
+          author_name: b.author_name || "",
+          user_shelves: shelves,
+        });
+      } else {
+        if (isFav && !existing.user_shelves.includes("favorites")) {
+          existing.user_shelves.push("favorites");
+        }
+        if (!existing.author_name && b.author_name) {
+          existing.author_name = b.author_name;
+        }
+        if (
+          b.title &&
+          (!existing.title || existing.title.length < b.title.length)
+        ) {
+          existing.title = b.title;
+        }
+      }
+    }
+
+    // 1. Profile favorites & read
+    (parsed.read || []).forEach((b) => upsertBook(b, true));
+
+    // 2. Custom widget favorites
+    const customWidgetBooks = parseWidgetBooks(customWidgetHtml);
+    customWidgetBooks.forEach((b) => upsertBook(b, true));
+
+    // 3. Grid widget favorites
+    const gridWidgetBooks = parseWidgetBooks(gridWidgetHtml);
+    gridWidgetBooks.forEach((b) => upsertBook(b, true));
+
+    // 4. Year in Books
+    yearHtmls.forEach((yHtml) => {
+      const yBooks = parseYearBooks(yHtml);
+      yBooks.forEach((b) => upsertBook(b, false));
     });
+
+    const currentlyReading =
+      parsed["currently-reading"]?.length > 0
+        ? parsed["currently-reading"]
+        : diskData?.["currently-reading"] || [];
 
     const combinedRead = Array.from(readMap.values());
 
     const result = {
-      "currently-reading": parsed["currently-reading"] || [],
+      "currently-reading": currentlyReading,
       read: combinedRead,
     };
 
@@ -258,12 +401,10 @@ export async function getBookShelves() {
     // network / parse error
   }
 
-  // Fallback to expired disk cache before giving up
-  const expiredDiskData = readDiskCache(true);
-  if (expiredDiskData) {
-    return expiredDiskData;
+  // If live fetch failed or network was down, return diskData or cachedShelves
+  if (diskData) {
+    return diskData;
   }
-
   if (cachedShelves) {
     return cachedShelves;
   }
