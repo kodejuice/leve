@@ -80,4 +80,9 @@ body.dark {
   .hljs-strong {
     font-weight: bold;
   }
+
+  /* Admin dark mode table hover */
+  div.admin .admin-posts-table tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+  }
 }

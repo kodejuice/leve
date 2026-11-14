@@ -2,162 +2,154 @@
 import { useState } from "react";
 import Link from "next/link";
 import ClipLoader from "react-spinners/ClipLoader";
-import { parseCookies } from "nookies";
 
 import { addPostToDB } from "../../utils/db_requests";
 import { site_details as details } from "../../site_config";
 
-const sidebarLinks = [
+const navLinks = [
   {
-    icon: "book",
     href: "/admin/list",
     page: "list",
     name: "Posts",
   },
   {
-    icon: "floppy-disk",
-    href: "/admin/export",
-    page: "export",
-    name: "Export Data",
+    href: "/admin/edit",
+    page: "edit",
+    name: "+ New Post",
   },
   {
-    icon: "floppy-disk",
+    href: "/admin/export",
+    page: "export",
+    name: "Export",
+  },
+  {
     href: "/admin/import",
     page: "import",
-    name: "Import Data",
+    name: "Import",
   },
 ];
 
 function HeaderWrapper(props) {
-  const { page, host, url } = props;
+  const { page, url } = props;
 
   const [saving, setSaving] = useState(false);
   const [newPostTitle, setNewPostTitle] = useState("");
   const [newPostSlug, setNewPostSlug] = useState("");
 
-  const theme =
-    parseCookies(null).__dark === "1" || props.is_dark ? "bg-dark" : "bg-light";
-
   return (
-    <div className="container-fluid">
-      {/* navbar */}
-      <nav
-        className={`navbar ${theme} fixed-top flex-md-nowrap p-0 shadow`}
-        style={{ zIndex: 999 }}
-      >
-        <a
-          title="Visit website"
-          className="no-bg-color navbar-brand col-sm-3 col-md-2 mr-0"
-          href={`http://${host}`}
-        >
-          {details.name}
-        </a>
-        <ul className="navbar-nav px-3">
-          <li className="nav-item text-nowrap">
-            <a
-              className="nav-link btn btn-link no-bg-color"
+    <div className="admin-layout">
+      {/* Top Navigation Bar */}
+      <header className="admin-nav-bar navbar">
+        <div className="admin-nav-inner">
+          <div className="admin-brand-group">
+            <Link href="/admin/list">
+              <a className="admin-brand-title">
+                {details.name}
+                <span className="admin-badge">Admin</span>
+              </a>
+            </Link>
+          </div>
+
+          <nav className="admin-nav-links" aria-label="Admin Navigation">
+            {navLinks.map((item) => (
+              <Link href={item.href} key={item.name}>
+                <a
+                  className={`admin-nav-link ${
+                    page === item.page ? "active" : ""
+                  }`}
+                >
+                  {item.name}
+                </a>
+              </Link>
+            ))}
+          </nav>
+
+          <div className="admin-nav-actions">
+            <Link href="/">
+              <a
+                className="admin-site-link"
+                target="_blank"
+                rel="noreferrer"
+                title="Open live website"
+              >
+                View Site &rarr;
+              </a>
+            </Link>
+            <button
+              type="button"
+              className="admin-signout-btn"
               onClick={() => {
-                if (confirm("Sign out?")) {
-                  document.cookie = "__token=; path=/; maxAge=0;";
-                  location.reload();
+                if (confirm("Sign out of admin?")) {
+                  document.cookie = "__token=; path=/; max-age=0;";
+                  window.location = "/admin/login";
                 }
               }}
             >
-              {" "}
               Sign Out
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div className="row">
-        {/* sidebar */}
-        <nav className="col-md-2 d-none d-md-block sidebar position-relative">
-          <div className="sidebar-sticky">
-            <ul className="nav flex-column mt-5">
-              {sidebarLinks.map((obj) => (
-                <li className="nav-item" key={obj.href}>
-                  <Link href={obj.href} key={obj.name}>
-                    <a
-                      className={`nav-link${
-                        page === obj.page ? " active" : ""
-                      } no-bg-color`}
-                    >
-                      <span
-                        className={`mr-2 glyphicon glyphicon-${obj.icon}`}
-                      />
-                      {obj.name} <span className="sr-only">(current)</span>
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            </button>
           </div>
-        </nav>
+        </div>
+      </header>
 
-        <main
-          style={{ paddingTop: "60px" }}
-          role="main"
-          className="col-md-9 ml-sm-auto col-lg-10 px-4 position-relative"
-        >
-          <div className="position-relative main mb-4">
-            {props.quick_draft && (
-              <div className="border-bottom quick-draft">
-                <h4>Quick draft</h4>
-                <form className="form-inline">
-                  <div className="form-row align-items-center">
-                    <div className="col-auto" title="post title">
-                      <label className="sr-only" htmlFor="title">
-                        Title
-                      </label>
-                      <input
-                        type="text"
-                        name="qtitle"
-                        className="form-control mb-2"
-                        placeholder="post title"
-                        value={newPostTitle}
-                        onChange={(e) => setNewPostTitle(e.target.value)}
-                      />
-                    </div>
-                    <div className="col-auto" title="post slug">
-                      <label className="sr-only" htmlFor="slug">
-                        Slug
-                      </label>
-                      <input
-                        type="text"
-                        name="qslug"
-                        className="form-control mb-2"
-                        placeholder="post slug"
-                        value={newPostSlug}
-                        onChange={(e) => setNewPostSlug(e.target.value)}
-                      />
-                    </div>
-                    <div className="col-auto">
-                      <button
-                        type="submit"
-                        className="mb-2 btn btn-outline-secondary"
-                        onClick={(ev) => {
-                          ev.preventDefault();
-                          saveDraft(setSaving, url, [
-                            newPostSlug,
-                            newPostTitle,
-                          ]);
-                        }}
-                      >
-                        <ClipLoader size={14} color="#333" loading={saving} />{" "}
-                        Save Draft
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            )}
-          </div>
+      {/* Main Container */}
+      <main className="admin-main-wrap">
+        <div className="admin-content-shell">
+          {props.quick_draft && (
+            <div className="admin-quick-draft-box">
+              <h3 className="quick-draft-title">Quick Draft</h3>
+              <form
+                className="quick-draft-form"
+                onSubmit={(ev) => {
+                  ev.preventDefault();
+                  saveDraft(setSaving, url, [newPostSlug, newPostTitle]);
+                }}
+              >
+                <div className="draft-inputs">
+                  <input
+                    type="text"
+                    name="qtitle"
+                    className="admin-input"
+                    placeholder="Working post title..."
+                    value={newPostTitle}
+                    onChange={(e) => {
+                      setNewPostTitle(e.target.value);
+                      if (!newPostSlug || newPostSlug.length < 3) {
+                        setNewPostSlug(
+                          e.target.value
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, "-")
+                            .replace(/^-+|-+$/g, "")
+                        );
+                      }
+                    }}
+                  />
+                  <input
+                    type="text"
+                    name="qslug"
+                    className="admin-input"
+                    placeholder="url-slug"
+                    value={newPostSlug}
+                    onChange={(e) => setNewPostSlug(e.target.value)}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="admin-btn-save"
+                  disabled={saving}
+                >
+                  {saving ? (
+                    <ClipLoader size={14} color="#ffffff" loading={saving} />
+                  ) : (
+                    "Create Draft"
+                  )}
+                </button>
+              </form>
+            </div>
+          )}
 
-          {/* page content */}
-          <div className="page-content">{props.children}</div>
-        </main>
-      </div>
+          <div className="admin-body-content">{props.children}</div>
+        </div>
+      </main>
     </div>
   );
 }
@@ -170,15 +162,14 @@ function HeaderWrapper(props) {
  * @returns
  */
 async function saveDraft(setSaving, url, [slug, title]) {
-  if (!title.length || !slug.length) return;
+  if (!title.trim().length || !slug.trim().length) return;
 
-  // set SavingState
   setSaving(true);
 
   const res = await addPostToDB(
     {
-      slug,
-      title,
+      slug: slug.trim(),
+      title: title.trim(),
       author: details.name,
       author_email: details.email,
     },
@@ -187,7 +178,7 @@ async function saveDraft(setSaving, url, [slug, title]) {
   );
 
   if (res.success) {
-    location.search = "?draft=1";
+    window.location.search = "?draft=1";
   } else {
     alert(JSON.stringify(res));
   }

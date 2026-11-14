@@ -411,11 +411,16 @@ export async function getStaticProps(ctx) {
     if (path === "topic") {
       props.posts = await getPostsByTopic(id);
     }
-    return extend(staticProps, {
-      props: extend(props, {
-        post: {},
-      }),
-    });
+    // Readings cached for 24h (86400s); other site pages for 1h (3600s)
+    const pageRevalidate = path === "readings" ? 86400 : 3600;
+    return extend(
+      { revalidate: pageRevalidate },
+      {
+        props: extend(props, {
+          post: {},
+        }),
+      }
+    );
   }
 
   // fetch post from DB

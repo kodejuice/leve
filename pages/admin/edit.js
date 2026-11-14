@@ -81,9 +81,12 @@ export default function Edit(props) {
       Editor = new StackEdit();
     })();
 
-    document.querySelector("body").classList.remove("dark");
-    document.querySelector("nav.navbar.fixed-top").classList.remove("bg-dark");
-    document.querySelector("nav.navbar.fixed-top").classList.add("bg-light");
+    document.querySelector("body")?.classList.remove("dark");
+    const nav = document.querySelector("nav.navbar.fixed-top");
+    if (nav) {
+      nav.classList.remove("bg-dark");
+      nav.classList.add("bg-light");
+    }
 
     // before unload event
     window.onbeforeunload = function beforeunload(e) {

@@ -1,8 +1,41 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/no-unescaped-entities */
+import fs from "fs";
+import os from "os";
+import path from "path";
 import https from "https";
 import { URL } from "url";
 import { site_details as details } from "../../site_config";
+
+const DISK_CACHE_FILE = path.join(os.tmpdir(), "goodreads-shelf-cache.json");
+
+function readDiskCache(ignoreExpiration = false) {
+  try {
+    if (!fs.existsSync(DISK_CACHE_FILE)) return null;
+    const raw = fs.readFileSync(DISK_CACHE_FILE, "utf8");
+    const data = JSON.parse(raw);
+    const isFresh =
+      data?.timestamp && Date.now() - data.timestamp < 1000 * 60 * 60 * 24; // 24 hours
+    if (isFresh || ignoreExpiration) {
+      return data?.shelves || null;
+    }
+  } catch (e) {
+    // ignore
+  }
+  return null;
+}
+
+function writeDiskCache(shelves) {
+  try {
+    fs.writeFileSync(
+      DISK_CACHE_FILE,
+      JSON.stringify({ timestamp: Date.now(), shelves }),
+      "utf8"
+    );
+  } catch (e) {
+    // ignore
+  }
+}
 
 function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
   if (redirectCount > 3) return Promise.resolve(null);
@@ -59,6 +92,18 @@ function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
   });
 }
 
+function cleanText(str) {
+  if (!str) return "";
+  return str
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .trim();
+}
+
 function parseProfileBooks(html) {
   if (!html) return null;
 
@@ -83,8 +128,8 @@ function parseProfileBooks(html) {
       if (idMatch && titleMatch) {
         result["currently-reading"].push({
           book_id: idMatch[1],
-          title: titleMatch[1].trim(),
-          author_name: authorMatch ? authorMatch[1].trim() : "Unknown",
+          title: cleanText(titleMatch[1]),
+          author_name: cleanText(authorMatch ? authorMatch[1] : "Unknown"),
           user_shelves: ["currently-reading"],
         });
       }
@@ -114,8 +159,8 @@ function parseProfileBooks(html) {
       }
       result.read.push({
         book_id,
-        title,
-        author_name,
+        title: cleanText(title),
+        author_name: cleanText(author_name),
         user_shelves: ["favorites", "read"],
       });
     });
@@ -124,31 +169,101 @@ function parseProfileBooks(html) {
   return result;
 }
 
+function parseYearBooks(html) {
+  const books = [];
+  if (!html) return books;
+  const matches = [
+    ...html.matchAll(
+      /<a[^>]*href="\/book\/show\/([0-9]+)[^"]*"[^>]*>\s*<img[^>]*alt="([^"]+ by [^"]+)"/gi
+    ),
+  ];
+  matches.forEach((m) => {
+    const book_id = m[1];
+    const raw = m[2];
+    const parts = raw.split(" by ");
+    books.push({
+      book_id,
+      title: cleanText(parts[0]),
+      author_name: cleanText(parts.slice(1).join(" by ")),
+      user_shelves: ["read"],
+    });
+  });
+  return books;
+}
+
 let cachedShelves = null;
 let lastFetchTime = 0;
-const CACHE_TTL = 1000 * 60 * 15; // 15 minutes
+const CACHE_TTL = 1000 * 60 * 30; // 30 minutes
 
 export async function getBookShelves() {
   if (cachedShelves && Date.now() - lastFetchTime < CACHE_TTL) {
     return cachedShelves;
   }
 
+  // Check persistent disk cache first (fresh for 24h)
+  const diskData = readDiskCache(false);
+  if (diskData) {
+    cachedShelves = diskData;
+    lastFetchTime = Date.now();
+    return diskData;
+  }
+
   const userId = details.goodreads_userid;
 
   try {
-    const html = await fetchGoodreadsProfile(userId);
-    const parsed = parseProfileBooks(html);
+    const currentYear = new Date().getFullYear();
+    const years = [currentYear, 2025, 2024, 2023, 2022, 2021, 2020];
 
-    if (
-      parsed &&
-      (parsed["currently-reading"]?.length > 0 || parsed.read?.length > 0)
-    ) {
-      cachedShelves = parsed;
+    // Fetch profile and years in parallel from Goodreads
+    const [profileHtml, ...yearHtmls] = await Promise.all([
+      fetchGoodreadsProfile(userId),
+      ...years.map((y) =>
+        fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${y}/${userId}`)
+      ),
+    ]);
+
+    const parsed = parseProfileBooks(profileHtml) || {
+      "currently-reading": [],
+      read: [],
+    };
+
+    const readMap = new Map();
+    // 1. Add favorite books from profile first (marked as favorites)
+    (parsed.read || []).forEach((b) => {
+      readMap.set(b.book_id, b);
+    });
+
+    // 2. Add books from Year in Books
+    yearHtmls.forEach((yHtml) => {
+      const yBooks = parseYearBooks(yHtml);
+      yBooks.forEach((b) => {
+        if (!readMap.has(b.book_id)) {
+          readMap.set(b.book_id, b);
+        }
+      });
+    });
+
+    const combinedRead = Array.from(readMap.values());
+
+    const result = {
+      "currently-reading": parsed["currently-reading"] || [],
+      read: combinedRead,
+    };
+
+    if (result["currently-reading"].length > 0 || result.read.length > 0) {
+      cachedShelves = result;
       lastFetchTime = Date.now();
-      return parsed;
+      writeDiskCache(result);
+      return result;
     }
   } catch (err) {
     // network / parse error
+  }
+
+  // Fallback to expired disk cache before giving up
+  const expiredDiskData = readDiskCache(true);
+  if (expiredDiskData) {
+    return expiredDiskData;
   }
 
   if (cachedShelves) {

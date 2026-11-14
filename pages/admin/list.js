@@ -30,20 +30,16 @@ function List(props) {
           page="list"
           quick_draft
         >
-          <div className="row" style={{ width: "250px" }}>
-            <div className="col-6">
-              {" "}
-              <h2> Posts </h2>{" "}
+          <div className="admin-page-header">
+            <div>
+              <h1 className="admin-page-title">Publications &amp; Drafts</h1>
+              <p className="admin-page-subtitle">
+                Manage your writings, scholarly preprints, and drafts.
+              </p>
             </div>
-            <div className="col-6">
-              <h2>
-                <Link href="edit">
-                  <a className="no-bg-color btn btn-sm btn-outline-secondary">
-                    Add New
-                  </a>
-                </Link>
-              </h2>
-            </div>
+            <Link href="/admin/edit">
+              <a className="admin-action-btn primary">+ Write New Post</a>
+            </Link>
           </div>
 
           <div className="posts">
