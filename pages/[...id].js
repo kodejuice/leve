@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import fetch from "node-fetch";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import ProgressBar from "react-scroll-progress-bar";
 
@@ -34,11 +33,7 @@ import { getISOString, getPostDate } from "../utils/date";
 import GoBack from "../components/GoBack";
 import { LoadComments, LoadCommentsCount } from "../components/CommentsLoader";
 
-// import PageNotFound from "../components/PageNotFound";
-const PageNotFound = dynamic(() => import("../components/PageNotFound"), {
-  ssr: false,
-  loading: () => <p> Page Not Found </p>,
-});
+import PageNotFound from "../components/PageNotFound";
 
 // DEBUG
 // global.log = (...x) => console.log(...x)
