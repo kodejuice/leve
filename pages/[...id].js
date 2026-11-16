@@ -407,8 +407,8 @@ export async function getStaticProps(ctx) {
     if (path === "topic") {
       props.posts = await getPostsByTopic(id);
     }
-    // Readings cached for 24h (86400s); other site pages for 1h (3600s)
-    const pageRevalidate = path === "readings" ? 86400 : 3600;
+    // Readings and site pages cached for 1h (3600s)
+    const pageRevalidate = 3600;
     return extend(
       { revalidate: pageRevalidate },
       {

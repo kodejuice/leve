@@ -1785,7 +1785,75 @@ div.home-main {
 
   .footer-newsletter {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    padding: 1.25rem;
+    gap: 1rem;
+
+    .newsletter-text {
+      flex: none;
+      width: 100%;
+
+      .newsletter-title {
+        font-size: 1.05rem;
+      }
+
+      .newsletter-desc {
+        font-size: 0.88rem;
+      }
+    }
+
+    .footer-newsletter-form {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+
+      #mc_embed_signup {
+        width: 100%;
+
+        form {
+          width: 100%;
+
+          #mc_embed_signup_scroll {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            width: 100%;
+
+            .email-input {
+              width: 100%;
+              min-width: 0;
+              padding: 0.65rem 0.85rem;
+            }
+
+            .submit-button {
+              width: 100%;
+              text-align: center;
+              padding: 0.65rem 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .post-newsletter-box {
+    padding: 1.25rem;
+
+    #mc_embed_signup_scroll {
+      flex-direction: column;
+
+      .email-input {
+        width: 100%;
+        min-width: 0;
+        padding: 0.65rem 0.85rem;
+      }
+
+      .submit-button {
+        width: 100%;
+        text-align: center;
+        padding: 0.65rem 1rem;
+      }
+    }
   }
 
   .page-not-found-showcase {

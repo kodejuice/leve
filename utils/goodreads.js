@@ -300,19 +300,19 @@ export async function getBookShelves() {
       years.push(y);
     }
 
-    // Fetch profile, favorite widgets, and years in parallel from Goodreads
+    // Fetch profile, read widgets (sorted by date_read descending), and years in parallel from Goodreads
     const [profileHtml, customWidgetHtml, gridWidgetHtml, ...yearHtmls] =
       await Promise.all([
         fetchGoodreadsProfile(userId),
         fetchGoodreadsProfile(
           userId,
           0,
-          `/review/custom_widget/${userId}?shelf=favorites`
+          `/review/custom_widget/${userId}?shelf=read&sort=date_read&order=d&num_books=200`
         ),
         fetchGoodreadsProfile(
           userId,
           0,
-          `/review/grid_widget/${userId}?shelf=favorites&num_books=100&order=d&sort=date_added`
+          `/review/grid_widget/${userId}?shelf=read&sort=date_read&order=d&num_books=200`
         ),
         ...years.map((y) =>
           fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${y}/${userId}`)
@@ -324,32 +324,20 @@ export async function getBookShelves() {
       read: [],
     };
 
-    // Initialize Map with diskData books so NO existing book is ever lost!
+    // Chronological order Map: preserves the exact order books were read (most recent first)
     const readMap = new Map();
-    if (diskData?.read) {
-      diskData.read.forEach((b) => {
-        if (b?.book_id) {
-          readMap.set(b.book_id, { ...b });
-        }
-      });
-    }
 
-    function upsertBook(b, isFav = false) {
+    function appendBook(b) {
       if (!b || !b.book_id) return;
       const existing = readMap.get(b.book_id);
       if (!existing) {
-        const shelves = [...(b.user_shelves || ["read"])];
-        if (isFav && !shelves.includes("favorites")) shelves.push("favorites");
         readMap.set(b.book_id, {
           book_id: b.book_id,
           title: b.title,
           author_name: b.author_name || "",
-          user_shelves: shelves,
+          user_shelves: ["read"],
         });
       } else {
-        if (isFav && !existing.user_shelves.includes("favorites")) {
-          existing.user_shelves.push("favorites");
-        }
         if (!existing.author_name && b.author_name) {
           existing.author_name = b.author_name;
         }
@@ -362,22 +350,24 @@ export async function getBookShelves() {
       }
     }
 
-    // 1. Profile favorites & read
-    (parsed.read || []).forEach((b) => upsertBook(b, true));
-
-    // 2. Custom widget favorites
+    // 1. Most recently read books from custom widget (in exact date_read descending order)
     const customWidgetBooks = parseWidgetBooks(customWidgetHtml);
-    customWidgetBooks.forEach((b) => upsertBook(b, true));
+    customWidgetBooks.forEach((b) => appendBook(b));
 
-    // 3. Grid widget favorites
+    // 2. Grid widget read books
     const gridWidgetBooks = parseWidgetBooks(gridWidgetHtml);
-    gridWidgetBooks.forEach((b) => upsertBook(b, true));
+    gridWidgetBooks.forEach((b) => appendBook(b));
 
-    // 4. Year in Books
+    // 3. Year in Books (descending from current year to START_YEAR)
     yearHtmls.forEach((yHtml) => {
       const yBooks = parseYearBooks(yHtml);
-      yBooks.forEach((b) => upsertBook(b, false));
+      yBooks.forEach((b) => appendBook(b));
     });
+
+    // 4. Any remaining historical books from diskData (appended at the end)
+    if (diskData?.read) {
+      diskData.read.forEach((b) => appendBook(b));
+    }
 
     const currentlyReading =
       parsed["currently-reading"]?.length > 0
