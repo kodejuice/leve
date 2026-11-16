@@ -2,9 +2,9 @@
 import MarkdownIt from "markdown-it";
 import tm from "markdown-it-texmath";
 import hljs from "highlight.js";
-import "highlight.js/styles/github.css";
-import { memoize } from "lodash";
-import { escapeHtml } from "markdown-it/lib/common/utils";
+import lodash from "lodash";
+const { memoize } = lodash;
+import { escapeHtml } from "markdown-it/lib/common/utils.js";
 
 const katex = require("katex");
 

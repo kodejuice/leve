@@ -1,12 +1,68 @@
 /* eslint-disable no-use-before-define */
-/* eslint-disable no-async-promise-executor */
 /* eslint-disable no-console */
-import { sample, pick, extend } from "lodash";
-import { db_model } from "./connection";
-import mdParser from "../utils/mdParser";
-// import { sitePages } from "../components/pages/list";
+import lodash from "lodash";
+import { getPrisma } from "./connection.js";
+import mdParser from "../utils/mdParser.js";
 
-const toObject = (payload) => JSON.parse(JSON.stringify(payload));
+const { sample, pick } = lodash;
+
+async function withRetry(fn, maxRetries = 4, initialDelay = 500) {
+  let lastError;
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastError = err;
+      const isConnError =
+        err?.code === "P1001" ||
+        err?.code === "P1017" ||
+        err?.message?.includes("closed the connection") ||
+        err?.message?.includes("Can't reach database") ||
+        err?.message?.includes("ECONNRESET") ||
+        err?.message?.includes("ETIMEDOUT") ||
+        err?.message?.includes("timeout expired");
+
+      if (isConnError && attempt < maxRetries - 1) {
+        const delay = initialDelay * Math.pow(1.8, attempt);
+        await new Promise((r) => setTimeout(r, delay));
+        continue;
+      }
+      throw err;
+    }
+  }
+  throw lastError;
+}
+
+function formatArticle(a) {
+  if (!a) return null;
+  return {
+    _id: String(a.id),
+    id: a.id,
+    slug: a.slug,
+    title: a.title,
+    excerpt: a.excerpt || "",
+    content: a.content || "",
+    html_content: a.html_content || "",
+    author: a.author || "Sochima Biereagu",
+    author_email: a.author_email || "sochima.eb@gmail.com",
+    post_image: a.post_image || "https://i.ibb.co/gyYtF0f/sb.png",
+    post_quote: a.post_quote || null,
+    topic: Array.isArray(a.topic) ? a.topic : [],
+    pub_date: a.pub_date ? new Date(a.pub_date).toISOString() : null,
+    creation_date: a.creation_date
+      ? new Date(a.creation_date).toISOString()
+      : null,
+    last_modified: a.last_modified
+      ? new Date(a.last_modified).toISOString()
+      : null,
+    next_post: a.next_post || null,
+    views: Number(a.views || 0),
+    draft: Boolean(a.draft),
+    draft_revisions: Number(a.draft_revisions || 0),
+    allow_comments:
+      a.allow_comments !== undefined ? Boolean(a.allow_comments) : true,
+  };
+}
 
 /**
  * Create new post in DB
@@ -15,8 +71,7 @@ const toObject = (payload) => JSON.parse(JSON.stringify(payload));
  * @param {Object} post_fields  Data fields
  */
 export async function createPost(post_id, post_fields) {
-  const { Article } = await db_model();
-
+  const prisma = getPrisma();
   const _fields = [
     "author",
     "author_email",
@@ -27,14 +82,11 @@ export async function createPost(post_id, post_fields) {
     "topic",
     "post_quote",
     "post_image",
-
-    // being imported?
     "creation_date",
     "last_modified",
     "pub_date",
   ];
   const newItem = pick(post_fields, ..._fields);
-
   const now = new Date();
 
   newItem.slug = post_id;
@@ -47,22 +99,51 @@ export async function createPost(post_id, post_fields) {
 
   newItem.html_content = mdParser.render(newItem.content || "");
 
-  return new Promise((resolve) => {
-    // create post if slug isn't in use already
-    Article.findOne({ slug: post_id }, (err, doc) => {
-      if (err || doc) {
-        if (err) resolve({ error: true, msg: err.message });
-        else if (doc /*|| sitePages.has(post_id)*/)
-          resolve({ error: true, msg: "slug not available!" });
-        return resolve();
-      }
-
-      Article.create(newItem, (_err, _doc) => {
-        if (_err) resolve({ error: true, msg: _err.message });
-        else resolve({ success: true, _doc });
-      });
+  try {
+    const existing = await prisma.article.findUnique({
+      where: { slug: post_id },
+      select: { id: true },
     });
-  });
+    if (existing) {
+      return { error: true, msg: "slug not available!" };
+    }
+
+    const topicArr = Array.isArray(newItem.topic)
+      ? newItem.topic.map((t) => t.trim()).filter(Boolean)
+      : [];
+
+    const created = await prisma.article.create({
+      data: {
+        slug: newItem.slug,
+        title: newItem.title || "",
+        excerpt: newItem.excerpt || "",
+        content: newItem.content || "",
+        html_content: newItem.html_content || "",
+        author: newItem.author || "Sochima Biereagu",
+        author_email: newItem.author_email || "sochima.eb@gmail.com",
+        post_image: newItem.post_image || "https://i.ibb.co/gyYtF0f/sb.png",
+        post_quote: newItem.post_quote || null,
+        topic: topicArr,
+        pub_date: newItem.pub_date ? new Date(newItem.pub_date) : null,
+        creation_date: newItem.creation_date
+          ? new Date(newItem.creation_date)
+          : now,
+        last_modified: newItem.last_modified
+          ? new Date(newItem.last_modified)
+          : now,
+        draft: newItem.draft !== undefined ? Boolean(newItem.draft) : true,
+        draft_revisions: 0,
+        allow_comments:
+          newItem.allow_comments !== undefined
+            ? Boolean(newItem.allow_comments)
+            : true,
+      },
+    });
+
+    return { success: true, _doc: formatArticle(created) };
+  } catch (err) {
+    return { error: true, msg: err.message };
+  }
 }
 
 /**
@@ -72,50 +153,79 @@ export async function createPost(post_id, post_fields) {
  * @param {Object} post_fields
  */
 export async function updatePost(post_id, post_fields) {
-  const { Article } = await db_model();
-
-  const writable = [
-    "title",
-    "excerpt",
-    "content",
-    "draft",
-    "topic",
-    "post_quote",
-    "allow_comments",
-    "author_email",
-    "post_image",
-  ];
-  const updates = pick(post_fields, ...writable);
-
-  return new Promise((resolve) => {
-    // find post to update
-    Article.findOne({ slug: post_id }, (err, doc) => {
-      if (err) {
-        return resolve({ error: true, msg: err });
-      }
-      if (!doc) {
-        return resolve({ error: true, msg: "that post doesn't exist!" });
-      }
-
-      // increment revisions and update `Last modified` date
-      // if content was modified
-      if ("content" in updates && updates.content !== doc.content) {
-        doc.draft_revisions += 1;
-        doc.last_modified = new Date();
-        doc.html_content = mdParser.render(updates.content);
-      }
-
-      // is it being published ?, update publication date
-      if (!updates.draft && !doc.pub_date) {
-        // if (no_longer_a_draft AND not_published)
-        doc.pub_date = new Date();
-      }
-
-      extend(doc, updates).save();
-
-      return resolve({ success: true });
+  const prisma = getPrisma();
+  try {
+    const doc = await prisma.article.findUnique({
+      where: { slug: post_id },
     });
-  });
+    if (!doc) {
+      return { error: true, msg: "that post doesn't exist!" };
+    }
+
+    const writable = [
+      "title",
+      "excerpt",
+      "content",
+      "draft",
+      "topic",
+      "post_quote",
+      "allow_comments",
+      "author_email",
+      "post_image",
+    ];
+    const updates = pick(post_fields, ...writable);
+
+    let draft_revisions = doc.draft_revisions || 0;
+    let { last_modified } = doc;
+    let { html_content } = doc;
+
+    if ("content" in updates && updates.content !== doc.content) {
+      draft_revisions += 1;
+      last_modified = new Date();
+      html_content = mdParser.render(updates.content || "");
+    }
+
+    let { pub_date } = doc;
+    if (updates.draft === false && !doc.pub_date) {
+      pub_date = new Date();
+    }
+
+    const topicArr = Array.isArray(updates.topic)
+      ? updates.topic.map((t) => t.trim()).filter(Boolean)
+      : doc.topic;
+
+    await prisma.article.update({
+      where: { slug: post_id },
+      data: {
+        title: updates.title !== undefined ? updates.title : doc.title,
+        excerpt: updates.excerpt !== undefined ? updates.excerpt : doc.excerpt,
+        content: updates.content !== undefined ? updates.content : doc.content,
+        html_content,
+        draft: updates.draft !== undefined ? Boolean(updates.draft) : doc.draft,
+        topic: topicArr,
+        post_quote: updates.post_quote ? updates.post_quote : doc.post_quote,
+        allow_comments:
+          updates.allow_comments !== undefined
+            ? Boolean(updates.allow_comments)
+            : doc.allow_comments,
+        author_email:
+          updates.author_email !== undefined
+            ? updates.author_email
+            : doc.author_email,
+        post_image:
+          updates.post_image !== undefined
+            ? updates.post_image
+            : doc.post_image,
+        draft_revisions,
+        last_modified,
+        pub_date,
+      },
+    });
+
+    return { success: true };
+  } catch (err) {
+    return { error: true, msg: err.message };
+  }
 }
 
 /**
@@ -124,14 +234,15 @@ export async function updatePost(post_id, post_fields) {
  * @param {string} post_id
  */
 export async function deletePost(post_id) {
-  const { Article } = await db_model();
-
-  return new Promise((resolve) => {
-    Article.findOneAndDelete({ slug: post_id }, (err) => {
-      if (err) resolve({ error: true, msg: err });
-      else resolve({ success: true });
+  const prisma = getPrisma();
+  try {
+    await prisma.article.delete({
+      where: { slug: post_id },
     });
-  });
+    return { success: true };
+  } catch (err) {
+    return { error: true, msg: err.message };
+  }
 }
 
 /**
@@ -142,34 +253,66 @@ export async function deletePost(post_id) {
  * @return     {Promise}  The post.
  */
 export async function getPost(slug, next_post = true) {
-  const { Article } = await db_model();
-
-  return new Promise((resolve) => {
-    const query = Article.findOne({ slug }).exec();
-
-    query
-      .then((post) => {
-        if (!post) {
-          return resolve({ error: true, msg: "Not found" });
-        }
-
-        if (next_post && !post.draft) {
-          getNextPosts(post, Article)
-            .then((nxt) => {
-              post.next_post = nxt;
-              resolve(toObject(post));
-            })
-            .catch(() => {
-              resolve(toObject(post));
-            });
-        } else {
-          return resolve(toObject(post));
-        }
+  const prisma = getPrisma();
+  try {
+    const raw = await withRetry(() =>
+      prisma.article.findUnique({
+        where: { slug },
       })
-      .catch(() => {
-        resolve({ error: true });
-      });
-  });
+    );
+    if (!raw) {
+      return { error: true, msg: "Not found" };
+    }
+
+    const post = formatArticle(raw);
+
+    if (next_post && !post.draft && raw.pub_date) {
+      try {
+        const nextDoc = await withRetry(() =>
+          prisma.article.findFirst({
+            where: {
+              draft: false,
+              pub_date: { gt: raw.pub_date },
+            },
+            orderBy: { pub_date: "asc" },
+            select: { slug: true, title: true },
+          })
+        );
+
+        if (nextDoc) {
+          post.next_post = {
+            slug: nextDoc.slug,
+            title: nextDoc.title,
+          };
+        } else {
+          // random past post
+          const pastPosts = await withRetry(() =>
+            prisma.article.findMany({
+              where: {
+                draft: false,
+                pub_date: { lt: raw.pub_date },
+              },
+              select: { slug: true, title: true },
+            })
+          );
+          if (pastPosts.length > 0) {
+            const picked = sample(pastPosts);
+            post.next_post = {
+              slug: picked.slug,
+              title: picked.title,
+            };
+          }
+        }
+      } catch (e) {
+        // ignore next post error
+      }
+    }
+
+    return post;
+  } catch (err) {
+    console.error(`getPost error for slug "${slug}":`, err);
+    return { error: true };
+  }
 }
 
 /**
@@ -185,23 +328,47 @@ export async function getPosts(
   draft = false,
   sortCriteria = { views: "desc" }
 ) {
-  const { Article } = await db_model();
+  const prisma = getPrisma();
+  let orderBy = { views: "desc" };
+  if (sortCriteria) {
+    if (typeof sortCriteria === "string") {
+      const [k, d] = sortCriteria.split(" ");
+      orderBy = { [k]: d?.toLowerCase() === "asc" ? "asc" : "desc" };
+    } else if (sortCriteria.pub_date) {
+      orderBy = {
+        pub_date:
+          sortCriteria.pub_date === "asc" || sortCriteria.pub_date === 1
+            ? "asc"
+            : "desc",
+      };
+    } else if (sortCriteria.views) {
+      orderBy = {
+        views:
+          sortCriteria.views === "asc" || sortCriteria.views === 1
+            ? "asc"
+            : "desc",
+      };
+    }
+  }
 
-  return new Promise((resolve) => {
-    const query = Article.find()
-      .select(fields.join(" "))
-      .sort(sortCriteria)
-      .where("draft", draft)
-      .exec();
-
-    query
-      .then((posts) => {
-        resolve(toObject(posts));
+  try {
+    const rows = await withRetry(() =>
+      prisma.article.findMany({
+        where: { draft: Boolean(draft) },
+        orderBy,
       })
-      .catch(() => {
-        resolve([]);
-      });
-  });
+    );
+
+    const posts = rows.map(formatArticle);
+
+    if (Array.isArray(fields) && fields.length > 0) {
+      return posts.map((p) => pick(p, ...fields, "_id", "slug", "title"));
+    }
+    return posts;
+  } catch (err) {
+    console.error("getPosts error:", err);
+    return [];
+  }
 }
 
 /**
@@ -213,13 +380,15 @@ export async function getTopics() {
   const seen = new Set();
 
   posts.forEach((post) => {
-    post.topic.forEach((t) => {
-      const topic = t.trim();
-      if (topic?.length && !seen.has(topic)) {
-        topics.push(topic);
-        seen.add(topic);
-      }
-    });
+    if (Array.isArray(post.topic)) {
+      post.topic.forEach((t) => {
+        const topic = t.trim();
+        if (topic?.length && !seen.has(topic)) {
+          topics.push(topic);
+          seen.add(topic);
+        }
+      });
+    }
   });
 
   return topics;
@@ -243,32 +412,8 @@ export async function getPostsByTopic(
     sortCriteria
   );
   return posts.filter((post) => {
+    if (!Array.isArray(post.topic)) return false;
     const topics = post.topic.join(",").toLowerCase();
     return topics.includes(topic.toLowerCase());
-  });
-}
-
-// get "next post >>" suggestion
-async function getNextPosts(post, model) {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const nxt_doc = await model.findOne({
-        pub_date: { $gt: post.pub_date },
-        draft: false,
-      });
-
-      if (nxt_doc) {
-        return resolve(nxt_doc);
-      }
-
-      // no next post, get a random post from the past
-      const all_posts = await model
-        .find({ pub_date: { $lt: post.pub_date }, draft: false })
-        .sort({ pub_date: "asc" });
-
-      return resolve(sample(all_posts));
-    } catch (e) {
-      reject(e);
-    }
   });
 }

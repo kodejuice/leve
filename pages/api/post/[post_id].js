@@ -2,11 +2,12 @@
 import _ from "lodash";
 import { parseCookies, setCookie } from "nookies";
 
-import connectDB from "../../../database/connection";
+import connectDB, { getPrisma } from "../../../database/connection";
 import {
   createPost,
   deletePost,
   updatePost,
+  getPost,
 } from "../../../database/functions";
 
 const handlers = {};
@@ -16,46 +17,42 @@ const handle = (method, fn) => (handlers[method.toUpperCase()] = fn);
 /* Handle API calls to manage posts, create/update/delete */
 
 // get post content
-handle("get", (req, res, slug /*post_id*/, { Article }) => {
+handle("get", async (req, res, slug) => {
   const cookies = parseCookies({ req });
+  const prisma = getPrisma();
 
   const __fields =
     "author post_image author_email title content html_content post_quote pub_date last_modified next_post slug draft excerpt ";
 
-  const db_query = Article.findOne({ slug }).exec();
-  return new Promise((resolve) => {
-    db_query
-      .then(async (post) => {
-        if (!post) {
-          res.json({ error: true, msg: "Not found" });
-          return resolve();
-        }
+  try {
+    const post = await getPost(slug);
+    if (!post || post.error) {
+      return res.json({ error: true, msg: "Not found" });
+    }
 
-        // update 'views' count
-        if (!(post.slug in cookies)) {
-          post.views += 1;
-          setCookie({ res }, post.slug, "1", {
-            path: "/",
-            maxAge: 86400 * 31, // 31 days
-          });
-          post.save();
-        }
-
-        const fields = (__fields + (req.query.include || "")).split(" ");
-        post = _.pick(post, fields);
-
-        if (post.draft === true && !req.isAuthenticated) {
-          res.json({ error: true, msg: "Not found" });
-          return resolve();
-        }
-        res.json(post);
-        return resolve();
-      })
-      .catch((err) => {
-        res.json({ error: true, msg: err });
-        resolve();
+    // update 'views' count
+    if (!(post.slug in cookies)) {
+      post.views = (post.views || 0) + 1;
+      setCookie({ res }, post.slug, "1", {
+        path: "/",
+        maxAge: 86400 * 31, // 31 days
       });
-  });
+      await prisma.article.update({
+        where: { slug: post.slug },
+        data: { views: { increment: 1 } },
+      });
+    }
+
+    const fields = (__fields + (req.query.include || "")).trim().split(/\s+/);
+    const filtered = _.pick(post, fields);
+
+    if (filtered.draft === true && !req.isAuthenticated) {
+      return res.json({ error: true, msg: "Not found" });
+    }
+    return res.json(filtered);
+  } catch (err) {
+    return res.json({ error: true, msg: err.message });
+  }
 });
 
 // create new post

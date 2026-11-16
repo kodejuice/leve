@@ -1,5 +1,5 @@
 {
-  "timestamp": 1794825906852,
+  "timestamp": 1794848839194,
   "shelves": {
     "currently-reading": [
       {
@@ -29,6 +29,31 @@
     ],
     "read": [
       {
+        "book_id": "51350400",
+        "title": "The Practice of Presense of God.",
+        "author_name": "Brother Lawrence",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "246358670",
+        "title": "The Book of Elon",
+        "author_name": "Eric Jorgenson",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "34460583",
+        "title": "Building a StoryBrand",
+        "author_name": "Donald Miller",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
         "book_id": "252054467",
         "title": "PILLARS OF SOLOMON'S WISDOM & WEALTH",
         "author_name": "Dr. David Ogbueli",
@@ -37,16 +62,8 @@
         ]
       },
       {
-        "book_id": "51350400",
-        "title": "The Practice of Presense of God.: A Fantastic Story of Religion (Annotated) By Brother Lawrence.",
-        "author_name": "Brother Lawrence",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
         "book_id": "1199913",
-        "title": "The Triumphant Church: Dominion Over All the Powers of Darkness",
+        "title": "The Triumphant Church",
         "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read"
@@ -57,21 +74,22 @@
         "title": "Love the Way to Victory",
         "author_name": "Kenneth E. Hagin Sr.",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
-        "book_id": "246358670",
-        "title": "The Book of Elon: A Guide to Purpose and Success",
-        "author_name": "Eric Jorgenson",
+        "book_id": "106244348",
+        "title": "Puzzle of the Spirit",
+        "author_name": "Iloanugo Chijioke",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "34460583",
-        "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
-        "author_name": "Donald Miller",
+        "book_id": "231439081",
+        "title": "THE LAW OF PROPER SPEECH",
+        "author_name": "David Ogbueli",
         "user_shelves": [
           "read"
         ]
@@ -81,20 +99,45 @@
         "title": "Understanding the Anointing",
         "author_name": "Hagin Kenneth E",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
-        "book_id": "24794763",
-        "title": "The Dominion Mandate",
-        "author_name": "David Ogbueli",
+        "book_id": "2767510",
+        "title": "A Fresh Anointing",
+        "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "231439081",
-        "title": "THE LAW OF PROPER SPEECH",
+        "book_id": "364895",
+        "title": "The Mega Church",
+        "author_name": "Dag Heward-Mills",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "18568684",
+        "title": "They Saw It Happen The dramatic Story of Men of",
+        "author_name": "Gordon Lindsay",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "51136340",
+        "title": "Entrepreneurship",
+        "author_name": "Brian Tracy",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "18478686",
+        "title": "The essence of Life David Ogbueli",
         "author_name": "David Ogbueli",
         "user_shelves": [
           "read"
@@ -109,83 +152,12 @@
         ]
       },
       {
-        "book_id": "4855789855",
-        "title": "The essence of Life David Ogbueli",
+        "book_id": "24794763",
+        "title": "The Dominion Mandate",
         "author_name": "David Ogbueli",
         "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "51136340",
-        "title": "Entrepreneurship: How to Start and Grow Your Own Business",
-        "author_name": "Brian Tracy",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "7382558543",
-        "title": "They Saw It Happen The dramatic Story of Men of",
-        "author_name": "Gordon Lindsay",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "364895",
-        "title": "The Mega Church: How to Make Your Church Grow",
-        "author_name": "Dag Heward-Mills",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "2767510",
-        "title": "A Fresh Anointing",
-        "author_name": "Kenneth E. Hagin",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "106244348",
-        "title": "Puzzle of the Spirit",
-        "author_name": "Iloanugo Chijioke",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "164042",
-        "title": "They Shall Expel Demons: What You Need to Know about Demons—Your Invisible Enemies",
-        "author_name": "Derek Prince",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "316929",
-        "title": "Kingdom Principles: Preparing for Kingdom Experience and Expansion (Understanding the Kingdom)",
-        "author_name": "Myles Munroe",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "998",
-        "title": "The Millionaire Next Door: The Surprising Secrets of America's Wealthy",
-        "author_name": "Thomas J. Stanley",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "43097201",
-        "title": "The Richest Man in Babylon",
-        "author_name": "George S. Clason",
-        "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -197,24 +169,25 @@
         ]
       },
       {
-        "book_id": "1399430",
-        "title": "I Saw Heaven",
-        "author_name": "Roberts Liardon",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
         "book_id": "6732019",
         "title": "Rework",
         "author_name": "Jason Fried",
         "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "43097201",
+        "title": "The Richest Man in Babylon",
+        "author_name": "George S. Clason",
+        "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "6218543657",
-        "title": "How to Cast Out Demons or Evil Spirits: A Most Authoritative Practical Guide to Deliverance",
+        "book_id": "168449904",
+        "title": "How to Cast Out Demons or Evil Spirits",
         "author_name": "Dr. Heaven U. Heaven",
         "user_shelves": [
           "read"
@@ -225,85 +198,38 @@
         "title": "Operating in the Courts of Heaven",
         "author_name": "Robert Henderson",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
-        "book_id": "4894",
-        "title": "Who Moved My Cheese?",
-        "author_name": "Spencer Johnson",
+        "book_id": "1399430",
+        "title": "I Saw Heaven",
+        "author_name": "Roberts Liardon",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "55303271",
-        "title": "AN EPISTLE TO THE APOSTLES IN THE MARKETPLACE",
-        "author_name": "AROME OSAYI",
+        "book_id": "998",
+        "title": "The Millionaire Next Door",
+        "author_name": "Thomas J. Stanley",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "56495",
-        "title": "The Purpose Driven Life: What on Earth Am I Here for?",
-        "author_name": "Rick Warren",
+        "book_id": "316929",
+        "title": "Kingdom Principles",
+        "author_name": "Myles Munroe",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "34865188",
-        "title": "Principles Of Answered Prayer",
-        "author_name": "Prophet Daniel Christian Badiambile",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "1812483",
-        "title": "Anagkazo: Compelling Power",
-        "author_name": "Dag Heward-Mills",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "38726894",
-        "title": "Receiving Healing from the Courts of Heaven: Removing Hindrances that Delay or Deny Healing",
-        "author_name": "Robert Henderson",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "34328984",
-        "title": "Accessing the Courts of Heaven: How to Position Yourself for Breakthrough in Prayer (The Official Courts of Heaven Series)",
-        "author_name": "Robert Henderson",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "801285",
-        "title": "Angels on Assignment: Exploring the Role Angels Play in Believers' Lives Today",
-        "author_name": "Roland Buck",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "124996565",
-        "title": "BUILDING A WORD FOUNDATION",
-        "author_name": "David Ogbueli",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "5498569947",
-        "title": "Instruction of Amenemope",
-        "author_name": "Amenemope",
+        "book_id": "164042",
+        "title": "They Shall Expel Demons",
+        "author_name": "Derek Prince",
         "user_shelves": [
           "read"
         ]
@@ -317,41 +243,26 @@
         ]
       },
       {
-        "book_id": "28698795",
-        "title": "The Complete Book of Enoch",
-        "author_name": "Enoch",
+        "book_id": "55303271",
+        "title": "AN EPISTLE TO THE APOSTLES IN THE MARKETPLACE",
+        "author_name": "AROME OSAYI",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "4894",
+        "title": "Who Moved My Cheese?",
+        "author_name": "Spencer Johnson",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "121298706",
-        "title": "The Story Of Ahikar",
-        "author_name": "Rutherford H. Platt",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "2591613",
-        "title": "The Testament of the Twelve Patriarchs",
-        "author_name": "R.H. Charles",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "44093505",
-        "title": "Tools of prophetic Dominion",
-        "author_name": "David Ogbueli",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "18599553",
-        "title": "Atomic Power with God with Fasting and Prayer",
-        "author_name": "Franklin Hall",
+        "book_id": "34865188",
+        "title": "Principles Of Answered Prayer",
+        "author_name": "Prophet Daniel Christian Ba...",
         "user_shelves": [
           "read"
         ]
@@ -365,57 +276,118 @@
         ]
       },
       {
-        "book_id": "705892",
-        "title": "The Art of Prayer: A Handbook On How To Pray",
-        "author_name": "Kenneth E. Hagin",
+        "book_id": "44093505",
+        "title": "Tools of prophetic Dominion",
+        "author_name": "David Ogbueli",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "18599553",
+        "title": "Atomic Power with God with Fasting and Prayer",
+        "author_name": "Franklin Hall",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "50221",
-        "title": "God's Debris: A Thought Experiment",
-        "author_name": "Scott Adams",
+        "book_id": "2591613",
+        "title": "The Testament of the Twelve Patriarchs",
+        "author_name": "R.H. Charles",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "1560146",
-        "title": "Growing Up, Spiritually",
-        "author_name": "Kenneth E. Hagin",
+        "book_id": "121298706",
+        "title": "The Story Of Ahikar",
+        "author_name": "Rutherford H. Platt",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "34629095",
-        "title": "The Miracle of Seed-Faith",
-        "author_name": "Oral Roberts",
+        "book_id": "28698795",
+        "title": "The Complete Book of Enoch",
+        "author_name": "Enoch",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "1812472",
-        "title": "Loyalty and Disloyalty",
+        "book_id": "34356898",
+        "title": "Instruction of Amenemope",
+        "author_name": "Amenemope",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "124996565",
+        "title": "BUILDING A WORD FOUNDATION",
+        "author_name": "David Ogbueli",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "801285",
+        "title": "Angels on Assignment",
+        "author_name": "Roland Buck",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "34328984",
+        "title": "Accessing the Courts of Heaven",
+        "author_name": "Robert Henderson",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "38726894",
+        "title": "Receiving Healing from the Courts of Heaven",
+        "author_name": "Robert Henderson",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "1812483",
+        "title": "Anagkazo",
         "author_name": "Dag Heward-Mills",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "51295329",
-        "title": "He That is Born of God: Fundamental truths to transform the life and experience of the believer in Christ",
-        "author_name": "Pade Tokun",
+        "book_id": "56495",
+        "title": "The Purpose Driven Life",
+        "author_name": "Rick Warren",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "18878319",
+        "title": "Obedience in Finances",
+        "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "1402526",
-        "title": "The Spirit Within & The Spirit Upon: The Holy Spirit's Twofold Work for the Believer",
-        "author_name": "Kenneth E. Hagin",
+        "book_id": "51295329",
+        "title": "He That is Born of God",
+        "author_name": "Pade Tokun",
         "user_shelves": [
           "read"
         ]
@@ -429,6 +401,23 @@
         ]
       },
       {
+        "book_id": "588544",
+        "title": "Authority of the Believer",
+        "author_name": "Kenneth E. Hagin",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "1474118",
+        "title": "Fasting",
+        "author_name": "Derek Prince",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
         "book_id": "6388831",
         "title": "How God Taught Me About Prosperity",
         "author_name": "Kenneth E. Hagin",
@@ -437,43 +426,69 @@
         ]
       },
       {
-        "book_id": "18878319",
-        "title": "Obedience in Finances",
+        "book_id": "1402526",
+        "title": "The Spirit Within & The Spirit Upon",
         "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "588544",
-        "title": "Authority of the Believer",
+        "book_id": "1812472",
+        "title": "Loyalty and Disloyalty",
+        "author_name": "Dag Heward-Mills",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "34629095",
+        "title": "The Miracle of Seed-Faith",
+        "author_name": "Oral Roberts",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "1560146",
+        "title": "Growing Up, Spiritually",
         "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "1474118",
-        "title": "Fasting: The Key to Releasing God's Power in Your Life",
-        "author_name": "Derek Prince",
+        "book_id": "50221",
+        "title": "God's Debris",
+        "author_name": "Scott Adams",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
+        "book_id": "705892",
+        "title": "The Art of Prayer",
+        "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read"
         ]
       },
       {
         "book_id": "192221",
-        "title": "How to Solve It: A New Aspect of Mathematical Method (Princeton Science Library)",
+        "title": "How to Solve It",
         "author_name": "George Pólya",
         "user_shelves": [
           "read"
         ]
       },
       {
-        "book_id": "4242488576",
+        "book_id": "2773074",
         "title": "The Data Compression Book",
         "author_name": "Mark Nelson",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -489,15 +504,8 @@
         "title": "Programming from the Ground Up",
         "author_name": "Jonathan Bartlett",
         "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "4242485538",
-        "title": "Effective Go",
-        "author_name": "Google",
-        "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -510,24 +518,17 @@
       },
       {
         "book_id": "13661492",
-        "title": "Computer Networking: A Top-Down Approach",
+        "title": "Computer Networking",
         "author_name": "James F. Kurose",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
-        "book_id": "17374825",
-        "title": "Operating Systems: Three Easy Pieces",
-        "author_name": "Remzi H. Arpaci-Dusseau",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "13588385",
-        "title": "There Was a Country: A Personal History of Biafra",
-        "author_name": "Chinua Achebe",
+        "book_id": "28765689",
+        "title": "Effective Go",
+        "author_name": "Google",
         "user_shelves": [
           "read"
         ]
@@ -536,6 +537,51 @@
         "book_id": "19277381",
         "title": "The Tao te Ching of Lao Tzu",
         "author_name": "Lao Tzu",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "13838796",
+        "title": "Data Structures and Algorithms in Python",
+        "author_name": "Michael T. Goodrich",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "8910666",
+        "title": "Eloquent JavaScript: A Modern Introduction to Programming",
+        "author_name": "Marijn Haverbeke",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "120642",
+        "title": "C Primer Plus",
+        "author_name": "Stephen Prata",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "17374825",
+        "title": "Operating Systems: Three Easy Pieces",
+        "author_name": "Remzi H. Arpaci-Dusseau",
+        "user_shelves": [
+          "read",
+          "favorites"
+        ]
+      },
+      {
+        "book_id": "13588385",
+        "title": "There Was a Country: A Personal History of Biafra",
+        "author_name": "Chinua Achebe",
         "user_shelves": [
           "read"
         ]
@@ -551,7 +597,7 @@
       {
         "book_id": "742586",
         "title": "Accelerated C++: Practical Programming by Example",
-        "author_name": "Mike Hendrickson",
+        "author_name": "Example",
         "user_shelves": [
           "read"
         ]
@@ -581,14 +627,6 @@
         ]
       },
       {
-        "book_id": "120642",
-        "title": "C Primer Plus",
-        "author_name": "Stephen Prata",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
         "book_id": "12544648",
         "title": "Cracking the Coding Interview: 150 Programming Questions and Solutions",
         "author_name": "Gayle Laakmann McDowell",
@@ -600,14 +638,6 @@
         "book_id": "23020812",
         "title": "Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development)",
         "author_name": "Brett Slatkin",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "13838796",
-        "title": "Data Structures and Algorithms in Python",
-        "author_name": "Michael T. Goodrich",
         "user_shelves": [
           "read"
         ]
@@ -661,14 +691,6 @@
         ]
       },
       {
-        "book_id": "8910666",
-        "title": "Eloquent JavaScript: A Modern Introduction to Programming",
-        "author_name": "Marijn Haverbeke",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
         "book_id": "995627",
         "title": "Presenting to Win: The Art of Telling Your Story (Financial Times Prentice Hall Books)",
         "author_name": "Jerry Weissman",
@@ -677,49 +699,9 @@
         ]
       },
       {
-        "book_id": "18568684",
-        "title": "They Saw It Happen The dramatic Story of Men of",
-        "author_name": "Gordon Lindsay",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "18478686",
-        "title": "The essence of Life David Ogbueli",
-        "author_name": "David Ogbueli",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "168449904",
-        "title": "How to Cast Out Demons or Evil Spirits",
+        "book_id": "6218543657",
+        "title": "How to Cast Out Demons or Evil Spirits: A Most Authoritative Practical Guide to Deliverance",
         "author_name": "Dr. Heaven U. Heaven",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "34356898",
-        "title": "Instruction of Amenemope",
-        "author_name": "Amenemope",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "2773074",
-        "title": "The Data Compression Book",
-        "author_name": "Mark Nelson",
-        "user_shelves": [
-          "read"
-        ]
-      },
-      {
-        "book_id": "28765689",
-        "title": "Effective Go",
-        "author_name": "Google",
         "user_shelves": [
           "read"
         ]

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { parseCookies } from "nookies";
@@ -117,8 +118,11 @@ function RssIcon() {
 export default function SiteHeader({ details, current }) {
   const router = useRouter();
   const path = current || router.asPath || "/";
-  const token =
-    typeof window !== "undefined" ? parseCookies(null).__token : null;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setIsLoggedIn(Boolean(parseCookies(null).__token));
+  }, []);
 
   const isWriting = path === "/" || path === "home";
   const isAbout = path.startsWith("/about") || path === "about";
@@ -142,7 +146,7 @@ export default function SiteHeader({ details, current }) {
         </div>
 
         <div className="site-controls">
-          {token && (
+          {isLoggedIn && (
             <div className="admin-quick-links">
               <Link href="/admin/list">
                 <a className="admin-btn" title="Dashboard">

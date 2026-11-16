@@ -1,74 +1,65 @@
-import mongoose from "mongoose";
+import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { Pool } from "pg";
 import jwt from "jsonwebtoken";
 import { parseCookies } from "nookies";
 
-const DB_Models = require("./model");
+let prismaInstance;
 
-//This script maintains a connection to the database, since Next.js re-runs every script during development,
-// heres a safe place to put it
-//
-//we check if theres already a connection to the database already, if there is return it,
-//else create a new one,
+export function getPrisma() {
+  if (!prismaInstance) {
+    if (global.prisma) {
+      prismaInstance = global.prisma;
+    } else {
+      let connectionString =
+        process.env.DATABASE_URL_POOLED || process.env.DATABASE_URL;
 
-//we also store the database models in the connection object, to make sure the models aren't re-compiled every time.
+      if (connectionString && !connectionString.includes("uselibpqcompat")) {
+        connectionString +=
+          (connectionString.includes("?") ? "&" : "?") + "uselibpqcompat=true";
+      }
 
-const mongodb_uri = process.env.MONGODB_URI;
+      const pool = new Pool({
+        connectionString,
+        ssl: { rejectUnauthorized: false },
+        max: 10,
+        idleTimeoutMillis: 60000,
+        connectionTimeoutMillis: 20000,
+      });
 
-////////////////
-// DB Connect //
-////////////////
+      pool.on("error", (err) => {
+        // Suppress unhandled pool socket drop errors when serverless DB scales to zero
+        if (err.code !== "ECONNRESET") {
+          console.error("Postgres pool error:", err.message);
+        }
+      });
 
-/**
- * Connect to database
- *
- * @return     {Promise}          The database Article model
- */
-export async function db_model() {
-  // if we connected already then just return the model
-  // we stored in the mongoose.connections[] array
-  if (mongoose.connections[0].readyState) return mongoose.connections.DB_Models;
+      const adapter = new PrismaPg(pool);
+      prismaInstance = new PrismaClient({ adapter });
 
-  // else create new connection
-  await mongoose.connect(mongodb_uri, {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    autoIndex: false,
-  });
-
-  mongoose.connections.DB_Models = {
-    Article: DB_Models.Article(),
-  };
-
-  return mongoose.connections.DB_Models;
+      if (process.env.NODE_ENV !== "production") {
+        global.prisma = prismaInstance;
+      }
+    }
+  }
+  return prismaInstance;
 }
 
-/*
-const connectDB = function(handler) {
-    return async function(req, res) {
-        return handler(req, res);
-    }
-}*/
+export async function db_model() {
+  return { prisma: getPrisma() };
+}
 
-/**
- * Curry http request
- *
- * Pass database connection data to http request
- */
 const connectDB = (handler) => async (req, res) => {
-  // firstly check for authentication token in cookie,
-  // if valid, set req.isAuthenticated = true
   const token = parseCookies({ req }).__token;
   try {
     jwt.verify(token, process.env.JWT_SECRET);
     req.isAuthenticated = true;
   } catch (err) {
-    res.isAuthenticated = false;
+    req.isAuthenticated = false;
   }
-  // ...
 
-  return handler(req, res, await db_model());
+  const p = getPrisma();
+  return handler(req, res, { prisma: p });
 };
 
 export default connectDB;

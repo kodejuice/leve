@@ -1,0 +1,36 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+model Article {
+  id              Int       @id @default(autoincrement())
+  slug            String    @unique
+  title           String
+  excerpt         String?
+  content         String?   @default("")
+  html_content    String?   @default("")
+  author          String?
+  author_email    String?
+  post_image      String?   @default("https://i.ibb.co/gyYtF0f/sb.png")
+  post_quote      Json?
+  topic           String[]  @default([])
+  pub_date        DateTime?
+  creation_date   DateTime? @default(now())
+  last_modified   DateTime? @default(now())
+  next_post       Json?
+  views           Int       @default(0)
+  draft           Boolean   @default(true)
+  draft_revisions Int       @default(0)
+  allow_comments  Boolean   @default(true)
+
+  @@index([slug])
+  @@index([draft, views(sort: Desc)])
+  @@index([pub_date(sort: Desc)])
+  @@map("articles")
+}

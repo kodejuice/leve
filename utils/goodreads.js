@@ -125,6 +125,7 @@ function parseProfileBooks(html) {
   const result = {
     "currently-reading": [],
     read: [],
+    favorites: [],
   };
 
   // 1. Parse Currently Reading
@@ -151,7 +152,7 @@ function parseProfileBooks(html) {
     });
   }
 
-  // 2. Parse Favorite / Read Books
+  // 2. Parse Favorite Books from profile grid
   const favMatch = html.match(
     /favorite books<\/a><\/h2>[\s\S]*?<div class="imgGrid"[\s\S]*?>([\s\S]*?)<\/div>/i
   );
@@ -172,11 +173,10 @@ function parseProfileBooks(html) {
         title = parts[0].trim();
         author_name = parts.slice(1).join(" by ").trim();
       }
-      result.read.push({
+      result.favorites.push({
         book_id,
         title: cleanText(title),
         author_name: cleanText(author_name),
-        user_shelves: ["favorites", "read"],
       });
     });
   }
@@ -274,6 +274,14 @@ function parseYearBooks(html) {
   return books;
 }
 
+function normalizeTitle(t) {
+  if (!t) return "";
+  return t
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "")
+    .slice(0, 40);
+}
+
 let cachedShelves = null;
 let lastFetchTime = 0;
 const CACHE_TTL = 1000 * 60 * 60; // 1 hour in-memory throttle
@@ -300,71 +308,69 @@ export async function getBookShelves() {
       years.push(y);
     }
 
-    // Fetch profile, read widgets (sorted by date_read descending), and years in parallel from Goodreads
-    const [profileHtml, customWidgetHtml, gridWidgetHtml, ...yearHtmls] =
-      await Promise.all([
-        fetchGoodreadsProfile(userId),
-        fetchGoodreadsProfile(
-          userId,
-          0,
-          `/review/custom_widget/${userId}?shelf=read&sort=date_read&order=d&num_books=200`
-        ),
-        fetchGoodreadsProfile(
-          userId,
-          0,
-          `/review/grid_widget/${userId}?shelf=read&sort=date_read&order=d&num_books=200`
-        ),
-        ...years.map((y) =>
-          fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${y}/${userId}`)
-        ),
-      ]);
+    // Fetch profile, live favorites widget, and year-by-year reading history in parallel
+    const [profileHtml, favWidgetHtml, ...yearHtmls] = await Promise.all([
+      fetchGoodreadsProfile(userId),
+      fetchGoodreadsProfile(userId, 0, `/review/custom_widget/${userId}`),
+      ...years.map((y) =>
+        fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${y}/${userId}`)
+      ),
+    ]);
 
     const parsed = parseProfileBooks(profileHtml) || {
       "currently-reading": [],
       read: [],
     };
 
-    // Chronological order Map: preserves the exact order books were read (most recent first)
-    const readMap = new Map();
+    // 1. Authoritative favorite books from live custom widget
+    const favWidgetBooks = parseWidgetBooks(favWidgetHtml);
+    let favIdSet;
+    let favTitleSet;
 
-    function appendBook(b) {
-      if (!b || !b.book_id) return;
-      const existing = readMap.get(b.book_id);
-      if (!existing) {
-        readMap.set(b.book_id, {
-          book_id: b.book_id,
-          title: b.title,
-          author_name: b.author_name || "",
-          user_shelves: ["read"],
-        });
-      } else {
-        if (!existing.author_name && b.author_name) {
-          existing.author_name = b.author_name;
-        }
-        if (
-          b.title &&
-          (!existing.title || existing.title.length < b.title.length)
-        ) {
-          existing.title = b.title;
-        }
-      }
+    if (favWidgetBooks.length > 0) {
+      favIdSet = new Set(favWidgetBooks.map((b) => String(b.book_id)));
+      favTitleSet = new Set(
+        favWidgetBooks.map((b) => normalizeTitle(b.title))
+      );
+    } else {
+      const diskFavs = (diskData?.read || []).filter((b) =>
+        b.user_shelves?.includes("favorites")
+      );
+      favIdSet = new Set(diskFavs.map((b) => String(b.book_id)));
+      favTitleSet = new Set(diskFavs.map((b) => normalizeTitle(b.title)));
     }
 
-    // 1. Most recently read books from custom widget (in exact date_read descending order)
-    const customWidgetBooks = parseWidgetBooks(customWidgetHtml);
-    customWidgetBooks.forEach((b) => appendBook(b));
+    // 2. Build strictly chronological reading list (most recent first) without duplicates
+    const seenTitles = new Set();
+    const seenIds = new Set();
+    const readList = [];
 
-    // 2. Grid widget read books
-    const gridWidgetBooks = parseWidgetBooks(gridWidgetHtml);
-    gridWidgetBooks.forEach((b) => appendBook(b));
+    function appendBook(b) {
+      if (!b || !b.title) return;
+      const norm = normalizeTitle(b.title);
+      const id = String(b.book_id || "");
 
-    // 3. Year in Books (descending from current year to START_YEAR)
+      // Deduplicate across edition IDs and identical book titles
+      if (seenTitles.has(norm) || (id && seenIds.has(id))) return;
+      seenTitles.add(norm);
+      if (id) seenIds.add(id);
+
+      const isFav = favIdSet.has(id) || favTitleSet.has(norm);
+      readList.push({
+        book_id: id,
+        title: b.title,
+        author_name: b.author_name || "",
+        user_shelves: isFav ? ["read", "favorites"] : ["read"],
+      });
+    }
+
+    // A. Add books chronologically from years descending (2026 down to START_YEAR)
     yearHtmls.forEach((yHtml) => {
       const yBooks = parseYearBooks(yHtml);
       yBooks.forEach((b) => appendBook(b));
     });
 
-    // 4. Any remaining historical books from diskData (appended at the end)
+    // B. Add any older historical books from persistent cache (no duplicates)
     if (diskData?.read) {
       diskData.read.forEach((b) => appendBook(b));
     }
@@ -374,11 +380,9 @@ export async function getBookShelves() {
         ? parsed["currently-reading"]
         : diskData?.["currently-reading"] || [];
 
-    const combinedRead = Array.from(readMap.values());
-
     const result = {
       "currently-reading": currentlyReading,
-      read: combinedRead,
+      read: readList,
     };
 
     if (result["currently-reading"].length > 0 || result.read.length > 0) {

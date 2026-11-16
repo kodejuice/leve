@@ -6,7 +6,7 @@ import { IncomingForm } from "formidable";
 
 import connectDB from "../../../database/connection";
 import { bytesToSize } from "../../../utils";
-import { createPost } from "../../../database/functions";
+import { createPost, getPosts } from "../../../database/functions";
 
 const handlers = {};
 const handle = (method, fn) => (handlers[method.toUpperCase()] = fn);
@@ -20,34 +20,21 @@ export const config = {
 /** Import data into site via JSON / Export site data as json **/
 
 // export
-function Export(req, res, Article) {
-  return new Promise((resolve) => {
-    const size_only = req.query.size_only === "true";
-    const db_query = Article.find().exec();
+async function Export(req, res) {
+  const size_only = req.query.size_only === "true";
+  try {
+    const posts = await getPosts([], false, { pub_date: "desc" });
+    const str = JSON.stringify(posts);
 
-    db_query
-      .then((posts) => {
-        const str = JSON.stringify(posts);
-
-        if (size_only) {
-          // report size data file size
-          res.json({ size: bytesToSize(str.length) });
-        } else {
-          // send site data as attachment
-          res.setHeader(
-            "Content-disposition",
-            "attachment; filename=site_data.json"
-          );
-          res.setHeader("Content-type", "text/plain");
-          res.send(str);
-        }
-        resolve();
-      })
-      .catch(() => {
-        res.json({ size: null, err: "Failed to fetch data" });
-        resolve();
-      });
-  });
+    if (size_only) {
+      return res.json({ size: bytesToSize(str.length) });
+    }
+    res.setHeader("Content-disposition", "attachment; filename=site_data.json");
+    res.setHeader("Content-type", "text/plain");
+    return res.send(str);
+  } catch (err) {
+    return res.json({ size: null, err: "Failed to fetch data" });
+  }
 }
 
 // import
