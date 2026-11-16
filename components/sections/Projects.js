@@ -10,7 +10,7 @@ function PaperCard({ item }) {
   return (
     <article className="academic-card paper-card">
       <div className="card-meta">
-        <span className="badge-academic">arXiv Preprint</span>
+        {arxivId && <span className="badge-academic">arXiv Preprint</span>}
         {arxivId && <span className="arxiv-id">arXiv:{arxivId} [cs.IT]</span>}
       </div>
       <h4 className="card-title">
