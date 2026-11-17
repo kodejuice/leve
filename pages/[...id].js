@@ -2,7 +2,7 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-use-before-define */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -44,6 +44,11 @@ function PostView(props) {
 
   const { id, host, scheme, corrections } = props;
   let { post } = props;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setIsLoggedIn(Boolean(parseCookies(null).__token));
+  }, []);
 
   useEffect(() => {
     if (post?.slug && !parseCookies(null)[post.slug]) {
@@ -159,14 +164,14 @@ function PostView(props) {
             </div>
 
             <div className="post-top-right">
-              {parseCookies(null).__token && (
+              {isLoggedIn && (
                 <div className="admin-post-actions">
-                  <Link href={`admin/edit?slug=${post.slug}`}>
+                  <Link href={`/admin/edit?slug=${post.slug}`}>
                     <a className="admin-btn" title="Edit Post">
                       Edit
                     </a>
                   </Link>
-                  <Link href="admin/edit">
+                  <Link href="/admin/edit">
                     <a className="admin-btn" title="New Post">
                       + New
                     </a>

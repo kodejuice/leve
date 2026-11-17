@@ -1115,23 +1115,10 @@ div.home-main {
       gap: 0.75rem;
 
       .admin-post-actions {
-        display: flex;
-        gap: 0.35rem;
-
-        .admin-btn {
-          font-family: var(--font-sans);
-          font-size: 0.75rem;
-          padding: 0.2rem 0.5rem;
-          border: 1px solid var(--border);
-          border-radius: var(--radius-sm);
-          text-decoration: none;
-          color: var(--text-secondary);
-
-          &:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-          }
-        }
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        flex-wrap: nowrap;
       }
     }
   }
