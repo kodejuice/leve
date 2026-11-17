@@ -13,12 +13,15 @@ const PRIMARY_CACHE_FILE = path.join(
 const TMP_CACHE_FILE = path.join(os.tmpdir(), "goodreads-shelf-cache.json");
 
 function readDiskCache() {
+  let tmpData = null;
+  let primaryData = null;
+
   // 1. Try TMP cache first (has recent runtime updates)
   try {
     if (fs.existsSync(TMP_CACHE_FILE)) {
       const raw = fs.readFileSync(TMP_CACHE_FILE, "utf8");
       const data = JSON.parse(raw);
-      if (data?.shelves) return data.shelves;
+      if (data?.shelves) tmpData = data;
     }
   } catch (e) {
     // ignore
@@ -29,13 +32,19 @@ function readDiskCache() {
     if (fs.existsSync(PRIMARY_CACHE_FILE)) {
       const raw = fs.readFileSync(PRIMARY_CACHE_FILE, "utf8");
       const data = JSON.parse(raw);
-      if (data?.shelves) return data.shelves;
+      if (data?.shelves) primaryData = data;
     }
   } catch (e) {
     // ignore
   }
 
-  return null;
+  if (tmpData && primaryData) {
+    return (tmpData.timestamp || 0) >= (primaryData.timestamp || 0)
+      ? tmpData
+      : primaryData;
+  }
+
+  return tmpData || primaryData || null;
 }
 
 function writeDiskCache(shelves) {
@@ -285,6 +294,7 @@ function normalizeTitle(t) {
 let cachedShelves = null;
 let lastFetchTime = 0;
 const CACHE_TTL = 1000 * 60 * 60; // 1 hour in-memory throttle
+const DISK_CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours disk cache expiration
 
 export async function getBookShelves(forceRefresh = false) {
   // 1. If memory cache is fresh, serve it immediately
@@ -293,8 +303,14 @@ export async function getBookShelves(forceRefresh = false) {
   }
 
   // 2. Load baseline from persistent disk cache
-  const diskData = readDiskCache();
-  if (!forceRefresh && diskData?.read?.length > 0) {
+  const diskCache = readDiskCache();
+  const diskData = diskCache?.shelves || null;
+  const isDiskFresh =
+    Boolean(diskCache?.timestamp) &&
+    Date.now() - Number(diskCache.timestamp) < DISK_CACHE_TTL;
+
+  // Serve disk cache immediately if it is fresh (< 24h old) and has books
+  if (!forceRefresh && isDiskFresh && diskData?.read?.length > 0) {
     cachedShelves = diskData;
     lastFetchTime = Date.now();
     return diskData;
@@ -386,6 +402,8 @@ export async function getBookShelves(forceRefresh = false) {
   }
 
   if (diskData) {
+    cachedShelves = diskData;
+    lastFetchTime = Date.now();
     return diskData;
   }
   if (cachedShelves) {
