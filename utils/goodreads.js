@@ -320,11 +320,13 @@ export async function getBookShelves(forceRefresh = false) {
 
   try {
     const currentYear = new Date().getFullYear();
+    const prevYear = currentYear - 1;
 
-    // Check profile (for currently-reading) and current year (for newly finished books)
-    const [profileHtml, yearHtml] = await Promise.all([
+    // Check profile (for currently-reading) and recent years (to seamlessly bridge year boundaries)
+    const [profileHtml, currentYearHtml, prevYearHtml] = await Promise.all([
       fetchGoodreadsProfile(userId),
       fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${currentYear}/${userId}`),
+      fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${prevYear}/${userId}`),
     ]);
 
     const parsed = parseProfileBooks(profileHtml) || {
@@ -343,6 +345,12 @@ export async function getBookShelves(forceRefresh = false) {
         .filter((b) => b.user_shelves?.includes("favorites"))
         .map((b) => normalizeTitle(b.title))
     );
+
+    // Also pick up any new favorite books from your Goodreads profile showcase
+    (parsed.favorites || []).forEach((b) => {
+      if (b?.book_id) existingFavIdSet.add(String(b.book_id));
+      if (b?.title) existingFavTitleSet.add(normalizeTitle(b.title));
+    });
 
     // Build deduplicated chronological list
     const seenTitles = new Set();
@@ -372,9 +380,11 @@ export async function getBookShelves(forceRefresh = false) {
       });
     }
 
-    // A. Add latest books from current year in books (captures newly finished books)
-    const latestYearBooks = parseYearBooks(yearHtml);
-    latestYearBooks.forEach((b) => appendBook(b));
+    // A. Add latest books from current and previous year in books (captures newly finished books)
+    const currentYearBooks = parseYearBooks(currentYearHtml);
+    const prevYearBooks = parseYearBooks(prevYearHtml);
+    currentYearBooks.forEach((b) => appendBook(b));
+    prevYearBooks.forEach((b) => appendBook(b));
 
     // B. Maintain existing chronological reading order from disk cache
     if (diskData?.read) {
