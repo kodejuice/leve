@@ -35,7 +35,8 @@ export async function getStaticProps() {
       ga_track_code: process.env.GA_TRACK_CODE,
     },
 
-    revalidate: 1,
+    // Cache homepage for 1 hour (3600s) to absorb high traffic at the edge
+    revalidate: 3600,
   };
 }
 

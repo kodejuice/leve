@@ -398,7 +398,8 @@ export async function getStaticProps(ctx) {
   };
 
   const staticProps = {
-    revalidate: 1,
+    // Cache articles and pages on the edge CDN for 1 hour (3600s)
+    revalidate: 3600,
   };
 
   if (sitePages.has(path)) {
