@@ -16,6 +16,10 @@ export async function deleteDBPost(slug, url) {
   const res = await fetch(`${baseUrl}/api/post/${slug}`, {
     method: "DELETE",
   });
+  if (!res.ok) {
+    const text = await res.text();
+    return { error: true, msg: `Server error (${res.status}): ${text}` };
+  }
   const data = await res.json();
   return data;
 }
@@ -34,6 +38,10 @@ export async function addPostToDB(body, create, url) {
     body: JSON.stringify(body),
     headers: { "Content-type": "application/json" },
   });
+  if (!res.ok) {
+    const text = await res.text();
+    return { error: true, msg: `Server error (${res.status}): ${text}` };
+  }
   const data = await res.json();
   return data;
 }
