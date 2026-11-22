@@ -38,8 +38,6 @@ export default function Footer({ current }) {
           <Link href="/archives">
             <a className={current === "archives" ? "active" : ""}>Archives</a>
           </Link>
-          <span className="sep">·</span>
-          <a href={details.links.rss_url}>RSS</a>
           {details.links.newsletter && (
             <>
               <span className="sep">·</span>
