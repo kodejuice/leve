@@ -1518,6 +1518,7 @@ div.home-main {
     font-family: var(--font-sans);
     font-size: 0.82rem;
     color: var(--text-muted);
+    overflow: hidden;;;
 
     .footer-links {
       display: flex;
