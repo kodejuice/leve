@@ -17,7 +17,7 @@ model Article {
   html_content    String?   @default("")
   author          String?
   author_email    String?
-  post_image      String?   @default("https://i.ibb.co/gyYtF0f/sb.png")
+  post_image      String?   @default("")
   post_quote      Json?
   topic           String[]  @default([])
   pub_date        DateTime?

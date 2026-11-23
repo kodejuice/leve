@@ -96,6 +96,25 @@ function PostView(props) {
   const timeToRead = readingTime(stripped_content);
   const words_in_post = WordCount(stripped_content);
 
+  const hasCustomImage =
+    Boolean(post.post_image) &&
+    !/\/sb\.png(?:$|\?)/i.test(post.post_image) &&
+    !/i\.ibb\.co\/gyYtF0f\/sb\.png/i.test(post.post_image);
+
+  const ogParams = new URLSearchParams({
+    title: post.title || details.name,
+    topic: (Array.isArray(post.topic) && post.topic[0]) || "Essay",
+    excerpt: post.excerpt || "",
+    date: post.pub_date || "",
+    readTime: timeToRead?.text || "",
+  });
+
+  const og_image_url = post.is_loading
+    ? `${scheme}://${host}/og-image.png`
+    : hasCustomImage
+    ? post.post_image
+    : `${scheme}://${host}/api/og?${ogParams.toString()}`;
+
   return (
     <>
       <ProgressBar bgcolor="#9e472a" height="3px" />
@@ -112,19 +131,30 @@ function PostView(props) {
           <meta name="description" content={page_description} />
           <meta name="keywords" content={post_keywords} />
 
-          {/*<!-- Facebook Meta Tags -->*/}
+          {/*<!-- Open Graph / Facebook Meta Tags -->*/}
           <meta property="og:type" content="article" />
-          <meta property="og:image" content={post.post_image} />
+          <meta property="og:image" content={og_image_url} />
+          {!hasCustomImage && (
+            <>
+              <meta property="og:image:width" content="1200" />
+              <meta property="og:image:height" content="630" />
+              <meta property="og:image:type" content="image/png" />
+            </>
+          )}
+          <meta property="og:image:alt" content={post.title} />
           <meta property="og:title" content={post.title} />
           <meta property="og:url" content={page_url} />
           <meta property="og:description" content={page_description} />
-          <meta property="og:site_name" content={details.description} />
+          <meta property="og:site_name" content={details.name} />
 
           {/*<!-- Twitter Meta Tags -->*/}
           <meta name="twitter:creator" content={`@${details.handle.twitter}`} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="twitter:domain" content={host} />
           <meta property="twitter:url" content={page_url} />
+          <meta name="twitter:title" content={post.title} />
+          <meta name="twitter:description" content={page_description} />
+          <meta name="twitter:image" content={og_image_url} />
 
           {/* styling for katex */}
           <link
