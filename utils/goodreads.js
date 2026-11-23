@@ -81,7 +81,7 @@ function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
   const targetUrl = isFull ? new URL(targetPath) : null;
 
   return new Promise((resolve) => {
-    https
+    const req = https
       .get(
         {
           hostname: targetUrl ? targetUrl.hostname : "www.goodreads.com",
@@ -101,6 +101,7 @@ function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
             res.statusCode < 400 &&
             res.headers.location
           ) {
+            res.resume();
             resolve(
               fetchGoodreadsProfile(
                 userId,
@@ -112,6 +113,7 @@ function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
           }
 
           if (res.statusCode !== 200) {
+            res.resume();
             resolve(null);
             return;
           }
@@ -125,6 +127,11 @@ function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
         }
       )
       .on("error", () => resolve(null));
+
+    req.setTimeout(10000, () => {
+      req.destroy();
+      resolve(null);
+    });
   });
 }
 
@@ -322,17 +329,32 @@ export async function getBookShelves(forceRefresh = false) {
     const currentYear = new Date().getFullYear();
     const prevYear = currentYear - 1;
 
-    // Check profile (for currently-reading) and recent years (to seamlessly bridge year boundaries)
-    const [profileHtml, currentYearHtml, prevYearHtml] = await Promise.all([
-      fetchGoodreadsProfile(userId),
-      fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${currentYear}/${userId}`),
-      fetchGoodreadsProfile(userId, 0, `/user/year_in_books/${prevYear}/${userId}`),
-    ]);
+    // Check profile (for currently-reading), favorites widget (for live favorites shelf), and recent years (for newly finished books)
+    const [profileHtml, favWidgetHtml, currentYearHtml, prevYearHtml] =
+      await Promise.all([
+        fetchGoodreadsProfile(userId),
+        fetchGoodreadsProfile(
+          userId,
+          0,
+          `/review/custom_widget/${userId}?shelf=favorites&num_books=100&sort=date_added&order=d`
+        ),
+        fetchGoodreadsProfile(
+          userId,
+          0,
+          `/user/year_in_books/${currentYear}/${userId}`
+        ),
+        fetchGoodreadsProfile(
+          userId,
+          0,
+          `/user/year_in_books/${prevYear}/${userId}`
+        ),
+      ]);
 
     const parsed = parseProfileBooks(profileHtml) || {
       "currently-reading": [],
       read: [],
     };
+    const favWidgetBooks = parseWidgetBooks(favWidgetHtml);
 
     // Existing curated favorites from diskData MUST NEVER be wiped or un-favorited
     const existingFavIdSet = new Set(
@@ -346,8 +368,8 @@ export async function getBookShelves(forceRefresh = false) {
         .map((b) => normalizeTitle(b.title))
     );
 
-    // Also pick up any new favorite books from your Goodreads profile showcase
-    (parsed.favorites || []).forEach((b) => {
+    // Pick up all favorite books from live Goodreads favorites widget + profile showcase
+    [...favWidgetBooks, ...(parsed.favorites || [])].forEach((b) => {
       if (b?.book_id) existingFavIdSet.add(String(b.book_id));
       if (b?.title) existingFavTitleSet.add(normalizeTitle(b.title));
     });
@@ -390,6 +412,9 @@ export async function getBookShelves(forceRefresh = false) {
     if (diskData?.read) {
       diskData.read.forEach((b) => appendBook(b));
     }
+
+    // C. Include any newly favorited books not yet present in year_in_books or disk cache
+    favWidgetBooks.forEach((b) => appendBook(b, true));
 
     const currentlyReading =
       parsed["currently-reading"]?.length > 0

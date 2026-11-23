@@ -1,19 +1,11 @@
 {
-  "timestamp": 1794899453009,
+  "timestamp": 1795419161976,
   "shelves": {
     "currently-reading": [
       {
         "book_id": "1462584",
         "title": "The Midas Touch: A Balanced Approach to Biblical Prosperity",
         "author_name": "Kenneth E. Hagin",
-        "user_shelves": [
-          "currently-reading"
-        ]
-      },
-      {
-        "book_id": "18050143",
-        "title": "Zero to One: Notes on Startups, or How to Build the Future",
-        "author_name": "Peter Thiel",
         "user_shelves": [
           "currently-reading"
         ]
@@ -46,11 +38,12 @@
         ]
       },
       {
-        "book_id": "34460583",
-        "title": "Building a StoryBrand",
-        "author_name": "Donald Miller",
+        "book_id": "18050143",
+        "title": "Zero to One",
+        "author_name": "Peter Thiel",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -79,6 +72,14 @@
         ]
       },
       {
+        "book_id": "34460583",
+        "title": "Building a StoryBrand",
+        "author_name": "Donald Miller",
+        "user_shelves": [
+          "read"
+        ]
+      },
+      {
         "book_id": "106244348",
         "title": "Puzzle of the Spirit",
         "author_name": "Iloanugo Chijioke",
@@ -97,7 +98,7 @@
       {
         "book_id": "1560143",
         "title": "Understanding the Anointing",
-        "author_name": "Hagin Kenneth E",
+        "author_name": "Kenneth E. Hagin",
         "user_shelves": [
           "read",
           "favorites"
@@ -116,7 +117,8 @@
         "title": "The Mega Church",
         "author_name": "Dag Heward-Mills",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -148,7 +150,8 @@
         "title": "Mountain Moving Faith",
         "author_name": "Kenneth E. Hagin",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -182,7 +185,8 @@
         "title": "The Richest Man in Babylon",
         "author_name": "George S. Clason",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -231,7 +235,8 @@
         "title": "They Shall Expel Demons",
         "author_name": "Derek Prince",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -397,7 +402,8 @@
         "title": "Good Morning, Holy Spirit",
         "author_name": "Benny Hinn",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -471,7 +477,8 @@
         "title": "The Art of Prayer",
         "author_name": "Kenneth E. Hagin",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -513,7 +520,8 @@
         "title": "No More Mr. Nice Guy",
         "author_name": "Robert A. Glover",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
@@ -615,7 +623,8 @@
         "title": "Five Dialogues: Euthyphro, Apology, Crito, Meno, Phaedo",
         "author_name": "Plato",
         "user_shelves": [
-          "read"
+          "read",
+          "favorites"
         ]
       },
       {
