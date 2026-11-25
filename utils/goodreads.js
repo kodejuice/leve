@@ -128,7 +128,7 @@ function fetchGoodreadsProfile(userId, redirectCount = 0, customPath = null) {
       )
       .on("error", () => resolve(null));
 
-    req.setTimeout(10000, () => {
+    req.setTimeout(4500, () => {
       req.destroy();
       resolve(null);
     });

@@ -6,32 +6,28 @@ import connectDB from "../../../database/connection";
 const handlers = {};
 const handle = (method, fn) => (handlers[method.toUpperCase()] = fn);
 
-handle(
-  "post",
-  async (req, res) =>
-    // eslint-disable-next-line consistent-return
-    new Promise((resolve) => {
-      const { password } = req.body;
+handle("post", async (req, res) => {
+  const { password } = req.body || {};
 
-      let token;
-      const h = hash.sha256().update(password).digest("hex");
+  if (!password) {
+    return res.json({ success: false });
+  }
 
-      if (h === process.env.PASSWORD_HASH) {
-        token = jwt.sign(
-          { password },
-          process.env.JWT_SECRET,
-          { expiresIn: 86400 * 31 } // 31 days token
-        );
+  const h = hash.sha256().update(password).digest("hex");
 
-        res.json({ success: true, token });
-        return;
-      }
+  if (h === process.env.PASSWORD_HASH) {
+    const token = jwt.sign(
+      { password },
+      process.env.JWT_SECRET,
+      { expiresIn: 86400 * 31 } // 31 days token
+    );
 
-      // wrong password
-      res.json({ success: false });
-      resolve();
-    })
-);
+    return res.json({ success: true, token });
+  }
+
+  // wrong password
+  return res.json({ success: false });
+});
 
 export default connectDB((req, res, DB_Models) => {
   const { method } = req;

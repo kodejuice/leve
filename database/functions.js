@@ -6,7 +6,7 @@ import mdParser from "../utils/mdParser.js";
 
 const { sample, pick } = lodash;
 
-async function withRetry(fn, maxRetries = 4, initialDelay = 500) {
+async function withRetry(fn, maxRetries = 3, initialDelay = 300) {
   let lastError;
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
